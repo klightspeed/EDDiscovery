@@ -499,30 +499,21 @@ namespace EDDiscovery
                 {
                     EDSMClass edsm = new EDSMClass();
                     EDDBClass eddb = new EDDBClass();
-                    string lstdist = _db.GetSettingString("EDSCLastDist", "2010-01-01 00:00:00");
-                    string json;
+                    string lastdiststr = _db.GetSettingString("EDSCLastDist", "2010-01-01 00:00:00");
+                    DateTime lastdist = DateTime.Parse(lastdiststr, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
 
                     // Get distances
-                    lstdist = _db.GetSettingString("EDSCLastDist", "2010-01-01 00:00:00");
                     List<DistanceClass> dists = new List<DistanceClass>();
 
-                    if (lstdist.Equals("2010-01-01 00:00:00"))
+                    if (lastdiststr.Equals("2010-01-01 00:00:00"))
                     {
                         LogText("Downloading mirrored EDSM distance data. (Might take some time)" + Environment.NewLine);
-                        eddb.GetEDSMDistances();
-                        json = LoadJsonFile(_fileEDSMDistances);
-                        if (json != null)
-                        {
-                            LogText("Adding mirrored EDSM distance data." + Environment.NewLine);
+                        dists = edsm.GetAllDistances(ref lastdist);
+                        LogText("Found " + dists.Count.ToString() + " distances." + Environment.NewLine);
 
-                            dists = new List<DistanceClass>();
-                            dists = DistanceClass.ParseEDSM(json, ref lstdist);
-                            LogText("Found " + dists.Count.ToString() + " distances." + Environment.NewLine);
-
-                            Application.DoEvents();
-                            DistanceClass.Store(dists);
-                            _db.PutSettingString("EDSCLastDist", lstdist);
-                        }
+                        Application.DoEvents();
+                        DistanceClass.Store(dists);
+                        _db.PutSettingString("EDSCLastDist", lastdist.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
                     }
 
                     try
@@ -533,14 +524,11 @@ namespace EDDiscovery
 
 
                     Application.DoEvents();
-                    json = edsm.RequestDistances(lstdist);
-
-                    dists = new List<DistanceClass>();
-                    dists = DistanceClass.ParseEDSM(json, ref lstdist);
+                    dists = edsm.GetDistances(lastdist, ref lastdist);
 
                     try
                     { 
-                        if (json == null)
+                        if (dists == null)
                             LogText("No response from server." + Environment.NewLine);
                         else
                             LogText("Found " + dists.Count.ToString() + " new distances." + Environment.NewLine);
@@ -550,7 +538,7 @@ namespace EDDiscovery
 
                     Application.DoEvents();
                     DistanceClass.Store(dists);
-                    _db.PutSettingString("EDSCLastDist", lstdist);
+                    _db.PutSettingString("EDSCLastDist", lastdist.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
                 }
                 _db.GetAllDistances(EDDConfig.UseDistances);  // Load user added distances
                 OnDistancesLoaded();

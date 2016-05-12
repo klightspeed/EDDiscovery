@@ -86,43 +86,6 @@ namespace EDDiscovery.DB
             return listDistances;
         }
 
-        public static List<DistanceClass> ParseEDSM(string json, ref string date)
-        {
-            List<DistanceClass> listDistances;
-
-            JArray edsm = null;
-            if (json != null)
-                edsm = (JArray)JArray.Parse(json);
-
-            listDistances = new List<DistanceClass>();
-            DateTime maxdate = DateTime.Parse(date, new CultureInfo("sv-SE"));
-
-            if (edsm == null)
-                return listDistances;
-
-            if (edsm != null)
-            {
-                foreach (JObject jo in edsm)
-                {
-                    DistanceClass dist = ParseEDSM(jo, date);
-
-                    if (dist.NameA != null && dist.NameB != null)
-                    {
-                        listDistances.Add(dist);
-                        if (dist.CreateTime.Subtract(maxdate).TotalSeconds > 0)
-                            maxdate = dist.CreateTime;
-                    }
-                }
-            }
-
-            // date = edscdata["date"].Value<string>();
-            date = maxdate.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
-            edsm = null;
-
-            return listDistances;
-        }
-
-
         public static List<DistanceClass> Parse(JObject jo, string date)
         {
             List<DistanceClass> dists = new List<DistanceClass>();
@@ -205,7 +168,7 @@ namespace EDDiscovery.DB
 
 
 
-        public static DistanceClass ParseEDSM(JObject jo, string date)
+        public static DistanceClass ParseEDSM(JObject jo)
         {
             DistanceClass dist = new DistanceClass();
 

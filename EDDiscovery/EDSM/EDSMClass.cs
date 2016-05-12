@@ -147,8 +147,8 @@ namespace EDDiscovery2.EDSM
             if (date.Subtract(new DateTime(2015, 5, 10)).TotalDays < 0)
                 date = new DateTime(2015, 5, 10, 0, 0, 0, DateTimeKind.Utc);
 
-            string query = "?startdatetime=" + HttpUtility.UrlEncode(date.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
-            return GetSystems("api-v1/systems" + query + "&coords=1&submitted=1&known=1", ref maxdate);
+            string datestr = HttpUtility.UrlEncode(date.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
+            return GetSystems("api-v1/systems?startdatetime=" + datestr + "&coords=1&submitted=1&known=1", ref maxdate);
         }
 
         public List<SystemClass> GetAllSystems(ref DateTime maxdate, string savefile = null)
@@ -156,14 +156,55 @@ namespace EDDiscovery2.EDSM
             return GetSystems("dump/systemsWithCoordinates.json", ref maxdate, savefile);
         }
 
-        public string RequestDistances(string date)
+        private List<DistanceClass> GetDistances(string request, ref DateTime maxdate, string savefile = null)
         {
-            string query;
-            query = "?startdatetime=" + HttpUtility.UrlEncode(date);
+            var response = RequestGet(request);
 
-            var response = RequestGet("api-v1/distances" + query + "coords=1 & submitted=1");
-            var data = response.Body;
-            return response.Body;
+            if (savefile != null)
+            {
+                File.WriteAllText(savefile, response.Body);
+            }
+
+            var json = JArray.Parse(response.Body);
+            List<DistanceClass> listDistances = new List<DistanceClass>();
+            foreach (JObject jo in json)
+            {
+                var submittedby = jo["submitted_by"] as JArray;
+                var createdby = submittedby == null ? null : submittedby.FirstOrDefault();
+
+                DistanceClass dist = new DistanceClass
+                {
+                    NameA = jo["sys1"]["name"].Value<string>(),
+                    NameB = jo["sys2"]["name"].Value<string>(),
+                    Dist = jo["distance"].Value<float>(),
+                    CommanderCreate = createdby == null ? "" : createdby["cmdrname"].Value<string>(),
+                    CreateTime = jo["date"].Value<DateTime>(),
+                    Status = DistancsEnum.EDSC
+                };
+
+                if (dist.NameA != null && dist.NameB != null)
+                {
+                    listDistances.Add(dist);
+                    if (dist.CreateTime.Subtract(maxdate).TotalSeconds > 0)
+                        maxdate = dist.CreateTime;
+                }
+            }
+
+            return listDistances;
+        }
+
+        public List<DistanceClass> GetDistances(DateTime date, ref DateTime maxdate)
+        {
+            if (date.Subtract(new DateTime(2015, 5, 10)).TotalDays < 0)
+                date = new DateTime(2015, 5, 10, 0, 0, 0, DateTimeKind.Utc);
+
+            string datestr = HttpUtility.UrlEncode(date.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
+            return GetDistances("api-v1/distances?startdatetime=" + datestr + "&submitted=1", ref maxdate);
+        }
+
+        public List<DistanceClass> GetAllDistances(ref DateTime maxdate, string savefile = null)
+        {
+            return GetDistances("dump/distances.json", ref maxdate, savefile);
         }
 
         public string GetNewSystems(SQLiteDBClass db)
