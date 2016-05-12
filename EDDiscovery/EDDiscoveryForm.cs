@@ -1106,29 +1106,8 @@ namespace EDDiscovery
         {
             LogText("Get hidden systems from EDSM." + Environment.NewLine);
 
-            _db.GetAllSystems();
-            string strhiddensystems = edsm.GetHiddenSystems();
-
-            if (strhiddensystems == null || strhiddensystems.Length < 6)
-                return;
-
-
-            JArray hiddensystems = (JArray)JArray.Parse(strhiddensystems);
-
-            foreach (JObject hsys in hiddensystems)
-            {
-                // Check if sys exists first
-                SystemClass sys = SystemData.GetSystem(hsys["system"].Value<string>());
-                if (sys != null)
-                {
-                    SystemClass.Delete(sys.name);
-                }
-            }
-            
-
-
-
-            }
+            edsm.RemoveHiddenSystems();
+        }
 
         #endregion
 

@@ -248,29 +248,22 @@ namespace EDDiscovery2.EDSM
             return retstr;
         }
 
-
-        internal string GetHiddenSystems()
+        public void RemoveHiddenSystems()
         {
-            EDDBClass eddb = new EDDBClass();
+            var db = new SQLiteDBClass();
+            db.GetAllSystems();
 
-            try
+            var response = RequestGet("api-v1/hidden-systems");
+            var json = JArray.Parse(response.Body);
+            foreach (JObject hsys in json)
             {
-                string edsmhiddensystems = Path.Combine(Tools.GetAppDataDirectory(), "edsmhiddensystems.json");
-                bool newfile = false;
-                eddb.DownloadFile("http://www.edsm.net/api-v1/hidden-systems", edsmhiddensystems, out newfile);
-
-                string json = EDDiscovery.EDDiscoveryForm.LoadJsonFile(edsmhiddensystems);
-
-                return json;
+                // Check if sys exists first
+                SystemClass sys = SystemData.GetSystem(hsys["system"].Value<string>());
+                if (sys != null)
+                {
+                    SystemClass.Delete(sys.name);
+                }
             }
-            
-            catch (Exception ex)
-            {
-                Trace.WriteLine($"Exception: {ex.Message}");
-                Trace.WriteLine($"ETrace: {ex.StackTrace}");
-                return null;
-            }
-        
         }
 
         public List<DistanceClass> GetDistances(string systemname)
