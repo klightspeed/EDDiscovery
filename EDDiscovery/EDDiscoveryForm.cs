@@ -1061,22 +1061,17 @@ namespace EDDiscovery
                 EDSMClass edsm = new EDSMClass();
 
                 string edsmsystems = Path.Combine(Tools.GetAppDataDirectory(), "edsmsystems.json");
-                bool newfile = false;
-                string rwsysfiletime = "2014-01-01 00:00:00";
+                DateTime rwsysfiletime = new DateTime(2014, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
                 RemoveHiddenSystems(edsm);
 
                 LogText("Get systems from EDSM." + Environment.NewLine);
 
-                eddb.DownloadFile("http://www.edsm.net/dump/systemsWithCoordinates.json", edsmsystems, out newfile);
-
-                if (newfile)
+                if (!File.Exists(edsmsystems))
                 {
                     LogText("Adding EDSM systems." + Environment.NewLine);
                     _db.GetAllSystems();
-                    string json = LoadJsonFile(edsmsystems);
-                    List<SystemClass> systems = SystemClass.ParseEDSM(json, ref rwsysfiletime);
-
+                    var systems = edsm.GetAllSystems(ref rwsysfiletime, edsmsystems);
 
                     List<SystemClass> systems2Store = new List<SystemClass>();
 
@@ -1094,9 +1089,8 @@ namespace EDDiscovery
                     systems = null;
                     systems2Store.Clear();
                     systems2Store = null;
-                    json = null;
 
-                    _db.PutSettingString("EDSMLastSystems", rwsysfiletime);
+                    _db.PutSettingString("EDSMLastSystems", rwsysfiletime.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
                     _db.GetAllSystems();
                 }
                 else

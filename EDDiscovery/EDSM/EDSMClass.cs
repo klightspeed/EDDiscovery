@@ -114,22 +114,46 @@ namespace EDDiscovery2.EDSM
             }
         }
 
-        
-
-     public string RequestSystems(string date)
+        private List<SystemClass> GetSystems(string request, ref DateTime maxdate, string savefile = null)
         {
-            string query;
-            //string datestr = date.ToString("yyyy-MM-dd hh:mm:ss");
-            DateTime dtDate = DateTime.ParseExact(date, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToLocalTime();
+            var response = RequestGet(request);
 
-            if (dtDate.Subtract(new DateTime(2015, 5, 10)).TotalDays < 0)
-                date = "2015-05-10 00:00:00";
+            if (savefile != null)
+            {
+                File.WriteAllText(savefile, response.Body);
+            }
 
-            query = "?startdatetime=" + HttpUtility.UrlEncode(date);
-            //json1= RequestGet("systems" + query + "&coords=1&submitted=1");
-            var response = RequestGet("api-v1/systems" + query + "&coords=1&submitted=1&known=1");
-            var data = response.Body;
-            return response.Body;
+            var json = JArray.Parse(response.Body);
+            List<SystemClass> listSystems = new List<SystemClass>();
+
+            foreach (JObject jo in json)
+            {
+                string name = jo["name"].Value<string>();
+
+                SystemClass system = new SystemClass(jo, SystemInfoSource.EDSM);
+
+                if (system.UpdateDate.Subtract(maxdate).TotalSeconds > 0)
+                    maxdate = system.UpdateDate;
+
+                if (system.HasCoordinate)
+                    listSystems.Add(system);
+            }
+
+            return listSystems;
+        }
+
+        public List<SystemClass> GetSystems(DateTime date, ref DateTime maxdate)
+        {
+            if (date.Subtract(new DateTime(2015, 5, 10)).TotalDays < 0)
+                date = new DateTime(2015, 5, 10, 0, 0, 0, DateTimeKind.Utc);
+
+            string query = "?startdatetime=" + HttpUtility.UrlEncode(date.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
+            return GetSystems("api-v1/systems" + query + "&coords=1&submitted=1&known=1", ref maxdate);
+        }
+
+        public List<SystemClass> GetAllSystems(ref DateTime maxdate, string savefile = null)
+        {
+            return GetSystems("dump/systemsWithCoordinates.json", ref maxdate, savefile);
         }
 
         public string RequestDistances(string date)
@@ -142,47 +166,26 @@ namespace EDDiscovery2.EDSM
             return response.Body;
         }
 
-
-
-        internal string GetNewSystems(SQLiteDBClass db)
+        public string GetNewSystems(SQLiteDBClass db)
         {
-            string json;
-            string date = "2010-01-01 00:00:00";
-            string lstsyst;
+            DateTime date = new DateTime(2010, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            DateTime lastsyst = date;
 
             string retstr = "";
 
-
-            Application.DoEvents();
-
             db.GetAllSystems();
 
-            //if (lstsys)
-
-
-            DateTime NewSystemTime;
-
-            if (SQLiteDBClass.globalSystems == null || SQLiteDBClass.globalSystems.Count ==0)
+            if (SQLiteDBClass.globalSystems != null && SQLiteDBClass.globalSystems.Count != 0)
             {
-                lstsyst = "2010-01-01 00:00:00";
+                DateTime NewSysTime = SQLiteDBClass.globalSystems.Max(x => x.UpdateDate);
+                string lastsyststr = db.GetSettingString("EDSMLastSystems", NewSysTime.ToString("yyyy-MM-dd HH:mm:mm", CultureInfo.InvariantCulture));
+
+                if (lastsyststr.Equals("2010-01-01 00:00:00") || !DateTime.TryParseExact(lastsyststr, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out lastsyst))
+                {
+                    lastsyst = NewSysTime;
+                }
             }
-            else
-            {
-                NewSystemTime = SQLiteDBClass.globalSystems.Max(x => x.UpdateDate);
-                lstsyst = NewSystemTime.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
-                lstsyst = db.GetSettingString("EDSMLastSystems", lstsyst);
-
-                if (lstsyst.Equals("2010-01-01 00:00:00"))
-                    lstsyst = NewSystemTime.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
-
-
-            }
-            json = RequestSystems(lstsyst);
-
-
-            List<SystemClass> listNewSystems = SystemClass.ParseEDSM(json, ref date);
-
-
+            List<SystemClass> listNewSystems = GetSystems(lastsyst, ref date);
 
             List<SystemClass> systems2Store = new List<SystemClass>();
 
@@ -198,10 +201,8 @@ namespace EDDiscovery2.EDSM
             SystemClass.Store(systems2Store);
 
             retstr = systems2Store.Count.ToString() + " new systems from EDSM." + Environment.NewLine;
-            Application.DoEvents();
 
-
-            db.PutSettingString("EDSMLastSystems", date);
+            db.PutSettingString("EDSMLastSystems", date.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture));
 
             return retstr;
         }

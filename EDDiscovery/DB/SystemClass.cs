@@ -371,46 +371,6 @@ namespace EDDiscovery.DB
             return listSystems;
         }
 
-
-        public static List<SystemClass> ParseEDSM(string json, ref string date)
-        {
-            JArray edsc = null;
-            if (json != null && json.Length > 5)
-                edsc = (JArray)JArray.Parse(json);
-
-            List<SystemClass> listSystems = new List<SystemClass>();
-
-            if (edsc == null)
-                return listSystems;
-
-
-            DateTime maxdate = DateTime.Parse(date,  new CultureInfo("sv-SE"));
-
-//            date = edscdata["date"].Value<string>();
-
-
-
-
-            foreach (JObject jo in edsc)
-            {
-                string name = jo["name"].Value<string>();
-
-                SystemClass system = new SystemClass(jo, SystemInfoSource.EDSM);
-
-                if (system.UpdateDate.Subtract(maxdate).TotalSeconds>0)
-                    maxdate = system.UpdateDate;
-
-
-
-                if (system.HasCoordinate)
-                    listSystems.Add(system);
-            }
-
-            date = maxdate.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
-            return listSystems;
-        }
-
-
         public static bool Store(List<SystemClass> systems)
         {
             if (systems == null)

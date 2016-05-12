@@ -80,7 +80,9 @@ namespace EDDiscovery
         {
             SQLiteDBClass db = new SQLiteDBClass();
             EDSMClass edsm = new EDSMClass();
+            Application.DoEvents();
             edsm.GetNewSystems(db);
+            Application.DoEvents();
             db.GetAllSystems();
         }
 
