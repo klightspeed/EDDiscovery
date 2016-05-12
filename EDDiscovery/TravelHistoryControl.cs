@@ -737,27 +737,12 @@ namespace EDDiscovery
 
             foreach (var dist in dists)
             {
-                string json;
-
                 if (dist.Dist > 0)
                 {
                     LogText("Add distance: " + dist.NameA + " => " + dist.NameB + " :" + dist.Dist.ToString("0.00") + "ly" + Environment.NewLine);
-                    json = edsm.SubmitDistances(EDDiscoveryForm.EDDConfig.CurrentCommander.Name, dist.NameA, dist.NameB, dist.Dist);
-                }
-                else
-                {
-                    if (dist.Dist < 0)  // Can removedistance by adding negative value
-                        dist.Delete();
-                    else
-                    {
-                        dist.Status = DistancsEnum.EDDiscoverySubmitted;
-                        dist.Update();
-                    }
-                    json = null;
-                }
-                if (json != null)
-                {
-                    string str="";
+                    var json = edsm.SubmitDistances(EDDiscoveryForm.EDDConfig.CurrentCommander.Name, dist.NameA, dist.NameB, dist.Dist);
+
+                    string str = "";
                     bool trilok;
                     if (edsm.ShowDistanceResponse(json, out str, out trilok))
                     {
@@ -768,6 +753,16 @@ namespace EDDiscovery
                     else
                     {
                         LogText(str);
+                    }
+                }
+                else
+                {
+                    if (dist.Dist < 0)  // Can removedistance by adding negative value
+                        dist.Delete();
+                    else
+                    {
+                        dist.Status = DistancsEnum.EDDiscoverySubmitted;
+                        dist.Update();
                     }
                 }
             }

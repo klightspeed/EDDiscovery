@@ -38,57 +38,40 @@ namespace EDDiscovery2.EDSM
             fromSoftwareVersion = assemblyFullName.Split(',')[1].Split('=')[1];
         }
 
-
-
-
-        public string SubmitDistances(string cmdr, string from, string to, double dist)
+        public JObject SubmitDistances(string cmdr, string from, string to, double dist)
         {
             return SubmitDistances(cmdr, from, new Dictionary<string, double> { { to, dist } });
         }
 
-        public string SubmitDistances(string cmdr, string from, Dictionary<string, double> distances)
+        public JObject SubmitDistances(string cmdr, string from, Dictionary<string, double> distances)
         {
-            CultureInfo culture = new CultureInfo("en-US");
-            string query = "{\"ver\":2," + " \"commander\":\"" + cmdr + "\", \"fromSoftware\":\"" + fromSoftware + "\",  \"fromSoftwareVersion\":\"" + fromSoftwareVersion + "\", \"p0\": { \"name\": \"" + from + "\" },   \"refs\": [";
-
-            var counter = 0;
-            foreach (var item in distances)
+            JObject query = new JObject
             {
-                if (counter++ > 0)
-                {
-                    query += ",";
-                }
+                { "data", new JObject {
+                    { "ver", 2 },
+                    { "commander", cmdr },
+                    { "fromSoftware", fromSoftware },
+                    { "fromSoftwareVersion", fromSoftwareVersion },
+                    { "p0", new JObject {
+                        { "name", from }
+                    }},
+                    { "refs", new JArray(distances.Select(kvp => new JObject { { "name", kvp.Key }, { "dist", kvp.Value } }).ToArray()) }
+                }}
+            };
 
-                var to = item.Key;
-                var distance = item.Value.ToString("0.00", culture);
-
-                query += " { \"name\": \"" + to + "\",  \"dist\": " + distance + " } ";
-            }
-
-
-            query += "] } ";
-
-            var response = RequestPost("{ \"data\": " + query + " }", "api-v1/submit-distances");
-            var data = response.Body;
-            return response.Body;
+            var response = RequestPost(query.ToString(), "api-v1/submit-distances");
+            return JObject.Parse(response.Body);
         }
 
-
-        public bool ShowDistanceResponse(string json, out string respstr, out Boolean trilOK)
+        public bool ShowDistanceResponse(JObject edsm, out string respstr, out Boolean trilOK)
         {
             bool retval = true;
-            JObject edsm = null;
             trilOK = false;
 
             respstr = "";
 
             try
             {
-                if (json == null)
-                    return false;
-
-                edsm = (JObject)JObject.Parse(json);
-
                 if (edsm == null)
                     return false;
 
