@@ -62,7 +62,8 @@ namespace EDDiscovery
         private Point _window_dragWindowPos = Point.Empty;
         public EDDTheme theme;
 
-        public AutoCompleteStringCollection SystemNames;       
+        public AutoCompleteStringCollection SystemNames;
+        public Dictionary<string, List<string>> SystemNamesByRegion;
 
         public string CommanderName { get; private set; }
         static public EDDConfig EDDConfig { get; private set; }
@@ -579,6 +580,7 @@ namespace EDDiscovery
 
             reportProgress(-1, "Creating name list of systems");
             SystemClass.GetSystemNames(ref SystemNames);            // fill this up, used to speed up if system is present..
+            SystemNamesByRegion = SystemClass.GetSystemsByRegion();
         }
 
         private void _checkSystemsWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)

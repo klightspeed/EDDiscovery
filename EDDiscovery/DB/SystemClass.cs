@@ -610,6 +610,234 @@ namespace EDDiscovery.DB
             }
         }
 
+        // Function to get region name from procgen systems - e.g. cepheus dark region a sector xy-z a1-0
+        private static string GetProcGenRegionNameFromSystemName(string s)
+        {
+            int i = s.Length - 1;
+
+            if (i < 9) return null;                                  // a bc-d e0
+            if (s[i] < '0' || s[i] > '9') return null;               // cepheus dark region a sector xy-z a1-[0]
+            while (i > 8 && s[i] >= '0' && s[i] <= '9') i--;
+            if (s[i] == '-')                                         // cepheus dark region a sector xy-z a1[-]0
+            {
+                i--;
+                while (i > 8 && s[i] >= '0' && s[i] <= '9') i--;     // cepheus dark region a sector xy-z a[1]-0
+            }
+            if (s[i] < 'a' || s[i] > 'h') return null;               // cepheus dark region a sector xy-z [a]1-0
+            i--;
+            if (s[i] != ' ') return null;                            // cepheus dark region a sector xy-z[ ]a1-0
+            i--;
+            if (s[i] < 'a' || s[i] > 'z') return null;               // cepheus dark region a sector xy-[z] a1-0
+            i--;
+            if (s[i] != '-') return null;                            // cepheus dark region a sector xy[-]z a1-0
+            i--;
+            if (s[i] < 'a' || s[i] > 'z') return null;               // cepheus dark region a sector x[y]-z a1-0
+            i--;
+            if (s[i] < 'a' || s[i] > 'z') return null;               // cepheus dark region a sector [x]y-z a1-0
+            i--;
+            if (s[i] != ' ') return null;                            // cepheus dark region a sector[ ]xy-z a1-0
+            i--;
+            if (i > 7 && s.Substring(i - 7, 7) == " sector")         // cepheus dark region a[ sector] xy-z a1-0
+                i -= 7;
+            if (i > 9 && s.Substring(i - 9, 8) == " region ")        // cepheus dark[ region a] sector xy-z a1-0
+            {
+                if (s[i] < 'a' || s[i] > 'c') return null;           // cepheus dark region [a] sector xy-z a1-0
+                i -= 9;
+                if (i > 5 && s.Substring(i - 5, 5) == " dark")       // cepheus[ dark] region a sector xy-z a1-0
+                    i -= 5;
+            }
+            else if (i > 7 && s.Substring(i - 7, 7) == " region")    // cepheus dark[ region] xy-z a1-0
+            {
+                i -= 7;
+                if (i > 5 && s.Substring(i - 5, 5) == " dark")       // cepheus[ dark] region xy-z a1-0
+                    i -= 5;
+            }
+            return s.Substring(0, i);                                // [cepheus] dark region a sector xy-z a1-0
+        }
+
+        public static Dictionary<string, List<string>> GetSystemsByRegion()
+        {
+            Dictionary<string, List<string>> systemsByRegion = new Dictionary<string, List<string>>();
+            Dictionary<string, string> matchtype = new Dictionary<string, string>();
+            List<string> unprefixed = new List<string>();
+            List<string> catprefixes = new List<string>
+            {
+                "2mass",
+                "alpha",
+                "bd",
+                "beta",
+                "cd",
+                "cpd",
+                "csi",
+                "delta",
+                "dm99",
+                "epsilon",
+                "gamma",
+                "gcrv",
+                "gmb2010",
+                "gmm2007",
+                "gmm2008",
+                "gmm2009",
+                "gliese",
+                "gsc",
+                "h97b",
+                "hd",
+                "hip",
+                "hr",
+                "ic ",
+                "iha2007",
+                "iota",
+                "lalande",
+                "lambda",
+                "lawd",
+                "lft",
+                "lhs",
+                "lp",
+                "ltt",
+                "mcc",
+                "melotte",
+                "ngc ",
+                "nltt",
+                "ojv2009",
+                "parenago",
+                "pcyc",
+                "pmd2009",
+                "psr",
+                "pw2010",
+                "ross",
+                "s171",
+                "spocs",
+                "stkm",
+                "stock 1",
+                "theta",
+                "tyc",
+                "ugcs",
+                "ugp",
+                "wise",
+                "wmw2010",
+                "wolf",
+                "zeta",
+            };
+
+            int regionmatches = 0;
+            int catmatches = 0;
+
+            using (SQLiteConnectionED cn = new SQLiteConnectionED())
+            {
+                using (DbCommand cmd = cn.CreateCommand("SELECT DISTINCT Name FROM Systems ORDER BY Name ASC"))
+                {
+                    using (DbDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string name = ((string)reader["Name"]).ToLowerInvariant();
+                            string regionname = GetProcGenRegionNameFromSystemName(name);
+
+                            string rprefix = name;
+
+                            if (regionname != null)
+                            {
+                                string prefix = regionname;
+                                if (!systemsByRegion.ContainsKey(prefix))
+                                {
+                                    systemsByRegion[prefix] = new List<string>();
+                                }
+                                systemsByRegion[prefix].Add(name);
+                                rprefix = prefix;
+                                regionmatches++;
+                                matchtype[prefix] = "region";
+                            }
+                            else
+                            {
+                                int catmatchidx = catprefixes.BinarySearch(name);
+
+                                if (catmatchidx < 0)
+                                {
+                                    catmatchidx = ~catmatchidx - 1;
+                                }
+
+                                if (catmatchidx >= 0)
+                                {
+                                    string prefix = catprefixes[catmatchidx];
+
+                                    if (name.StartsWith(prefix))
+                                    {
+                                        if (prefix == "ngc " || prefix == "ic ")
+                                        {
+                                            // Take the number as part of the prefix
+                                            int i = prefix.Length;
+                                            while (i < name.Length && name[i] >= '0' && name[i] <= '9')
+                                                i++;
+                                            if (i < name.Length && name[i] == ' ')
+                                                prefix = name.Substring(0, i);
+                                        }
+
+                                        if (!systemsByRegion.ContainsKey(prefix))
+                                        {
+                                            systemsByRegion[prefix] = new List<string>();
+                                        }
+                                        systemsByRegion[prefix].Add(name);
+                                        rprefix = prefix;
+                                        catmatches++;
+                                        matchtype[prefix] = "cat";
+                                    }
+                                }
+                            }
+
+                            for (int i = 1; i < rprefix.Length; i++)
+                            {
+                                string prefix = rprefix.Substring(0, i);
+
+                                if (systemsByRegion.ContainsKey(prefix))
+                                {
+                                    if (systemsByRegion[prefix].Count >= 10)
+                                    {
+                                        systemsByRegion[prefix].Add(name);
+                                        rprefix = prefix;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        switch (matchtype[prefix])
+                                        {
+                                            case "region": regionmatches -= systemsByRegion[prefix].Count; break;
+                                            case "cat": catmatches -= systemsByRegion[prefix].Count; break;
+                                        }
+
+                                        unprefixed.AddRange(systemsByRegion[prefix]);
+                                        systemsByRegion.Remove(prefix);
+                                    }
+                                }
+                            }
+
+                            if (rprefix == name)
+                            {
+                                unprefixed.Add(name);
+                            }
+                        }
+                    }
+                }
+            }
+
+            foreach (string name in unprefixed)
+            {
+                if (systemsByRegion.ContainsKey(name))
+                {
+                    if (systemsByRegion[name] != null)
+                    {
+                        systemsByRegion[name].Add(name);
+                    }
+                }
+                else
+                {
+                    systemsByRegion.Add(name, null);
+                }
+            }
+
+            systemsByRegion = systemsByRegion.OrderBy(k => k.Key).ToDictionary(k => k.Key, k => k.Value);
+
+            return systemsByRegion;
+        }
 
         public static List<Point3D> GetStarPositions()  // return star positions..
         {
@@ -675,7 +903,7 @@ namespace EDDiscovery.DB
             {
                 using (SQLiteConnectionED cn = new SQLiteConnectionED())
                 {
-                    using (DbCommand cmd = cn.CreateCommand("select name from Systems"))
+                    using (DbCommand cmd = cn.CreateCommand("select name, id from Systems"))
                     {
                         using (DbDataReader reader = cmd.ExecuteReader())
                         {
@@ -683,7 +911,7 @@ namespace EDDiscovery.DB
                             {
                                 string name = ((string)reader["name"]).ToUpper();
                                 if (!dict.ContainsKey(name))
-                                    dict.Add(name, (int)reader["id"]);
+                                    dict.Add(name, (int)(long)reader["id"]);
                             }
                         }
 
