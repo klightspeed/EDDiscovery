@@ -33,7 +33,7 @@ namespace EDDiscovery2
 
         private void MoveToCommander_Load(object sender, EventArgs e)
         {
-            List<EDCommander>  commanders = EDDiscovery.EDDiscoveryForm.EDDConfig.ListOfCommanders;
+            List<EDCommander>  commanders = EDDConfig.Instance.ListOfCommanders;
 
             comboBoxCommanders.DataSource = commanders;
             comboBoxCommanders.DisplayMember = "Name";

@@ -311,7 +311,7 @@ namespace EDDiscovery
 
         public void ProcessWithUserDb(EliteDangerous.JournalEntry je, HistoryEntry prev, SQLiteConnectionUser conn )      // called after above with a USER connection
         {
-            materialscommodities = MaterialCommoditiesList.Process(je, prev?.materialscommodities, conn, EDDiscoveryForm.EDDConfig.ClearMaterials, EDDiscoveryForm.EDDConfig.ClearCommodities);
+            materialscommodities = MaterialCommoditiesList.Process(je, prev?.materialscommodities, conn, EDDConfig.Instance.ClearMaterials, EDDConfig.Instance.ClearCommodities);
         }
 
         #endregion

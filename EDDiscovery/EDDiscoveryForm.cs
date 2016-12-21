@@ -211,7 +211,7 @@ namespace EDDiscovery
 
             ApplyTheme();
 
-            DisplayedCommander = EDDiscoveryForm.EDDConfig.CurrentCommander.Nr;
+            DisplayedCommander = EDDConfig.Instance.CurrentCommander.Nr;
         }
 
         private void Dbinitworker_DoWork(object sender, DoWorkEventArgs e)
@@ -807,7 +807,7 @@ namespace EDDiscovery
 
                 if (EDDN.EDDNClass.CheckforEDMC()) // EDMC is running
                 {
-                    if (EDDiscoveryForm.EDDConfig.CurrentCommander.SyncToEddn)  // Both EDD and EDMC should not sync to EDDN.
+                    if (EDDConfig.Instance.CurrentCommander.SyncToEddn)  // Both EDD and EDMC should not sync to EDDN.
                     {
                         LogLineHighlight("EDDiscovery and EDMarketConnector should not both sync to EDDN. Stop EDMC or uncheck 'send to EDDN' in settings tab!");
                     }
@@ -1472,7 +1472,7 @@ namespace EDDiscovery
         {
             AboutForm frm = new AboutForm();
             frm.labelVersion.Text = this.Text;
-            frm.TopMost = EDDiscoveryForm.EDDConfig.KeepOnTop;
+            frm.TopMost = EDDConfig.Instance.KeepOnTop;
             frm.ShowDialog(this);
         }
 

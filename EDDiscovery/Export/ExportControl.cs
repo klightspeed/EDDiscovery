@@ -12,6 +12,7 @@ using System.Diagnostics;
 using EDDiscovery.EliteDangerous.JournalEvents;
 using System.IO;
 using System.Globalization;
+using EDDiscovery2;
 
 namespace EDDiscovery
 {
@@ -123,7 +124,7 @@ namespace EDDiscovery
            String exportfilename = Path.Combine(folder, "ImportStars.txt");
 
 
-            scans = JournalEntry.GetByEventType(JournalTypeEnum.FSDJump, EDDiscoveryForm.EDDConfig.CurrentCmdrID, new DateTime (2014, 1,1), DateTime.UtcNow) ;
+            scans = JournalEntry.GetByEventType(JournalTypeEnum.FSDJump, EDDConfig.Instance.CurrentCmdrID, new DateTime (2014, 1,1), DateTime.UtcNow) ;
 
             var tscans = scans.ConvertAll<JournalFSDJump>(x=>(JournalFSDJump)x);
 

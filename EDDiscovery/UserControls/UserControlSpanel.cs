@@ -14,6 +14,7 @@ using EDDiscovery.DB;
 using EMK.LightGeometry;
 using EDDiscovery2.DB;
 using ExtendedControls;
+using EDDiscovery2;
 
 namespace EDDiscovery.UserControls
 {
@@ -271,7 +272,7 @@ namespace EDDiscovery.UserControls
             List<int> tooltipattach = new List<int>();
 
             if (Config(Configuration.showTime))
-                coldata.Add((EDDiscoveryForm.EDDConfig.DisplayUTC ? he.EventTimeUTC : he.EventTimeLocal).ToString("HH:mm.ss"));
+                coldata.Add((EDDConfig.Instance.DisplayUTC ? he.EventTimeUTC : he.EventTimeLocal).ToString("HH:mm.ss"));
 
             if (Config(Configuration.showDescription))
             {

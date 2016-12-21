@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDiscovery.Controls;
 using EDDiscovery2.DB;
+using EDDiscovery2;
 
 namespace EDDiscovery.UserControls
 {
@@ -70,7 +71,7 @@ namespace EDDiscovery.UserControls
         void SetCheckBoxes()
         {
             checkBoxClear.Enabled = false;
-            checkBoxClear.Checked = (materials) ? EDDiscoveryForm.EDDConfig.ClearMaterials : EDDiscoveryForm.EDDConfig.ClearCommodities;
+            checkBoxClear.Checked = (materials) ? EDDConfig.Instance.ClearMaterials : EDDConfig.Instance.ClearCommodities;
             checkBoxClear.Enabled = true;
         }
 
@@ -196,9 +197,9 @@ namespace EDDiscovery.UserControls
             if (checkBoxClear.Enabled)
             {
                 if (materials)
-                    EDDiscoveryForm.EDDConfig.ClearMaterials = checkBoxClear.Checked;
+                    EDDConfig.Instance.ClearMaterials = checkBoxClear.Checked;
                 else
-                    EDDiscoveryForm.EDDConfig.ClearCommodities = checkBoxClear.Checked;
+                    EDDConfig.Instance.ClearCommodities = checkBoxClear.Checked;
 
                 discoveryform.RecalculateHistoryDBs();
             }

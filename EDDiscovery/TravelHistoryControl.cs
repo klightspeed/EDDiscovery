@@ -139,7 +139,7 @@ namespace EDDiscovery
 
             textBoxTarget.SetAutoCompletor(EDDiscovery.DB.SystemClass.ReturnSystemListForAutoComplete);
 
-            buttonSync.Enabled = EDDiscoveryForm.EDDConfig.CurrentCommander.SyncToEdsm | EDDiscoveryForm.EDDConfig.CurrentCommander.SyncFromEdsm;
+            buttonSync.Enabled = EDDConfig.Instance.CurrentCommander.SyncToEdsm | EDDConfig.Instance.CurrentCommander.SyncFromEdsm;
         }
 
         public void LoadControl()
@@ -432,7 +432,7 @@ namespace EDDiscovery
         void MaterialCommodityChangeCount(List<MaterialCommodities> changelist)
         {
             HistoryEntry he = userControlTravelGrid.GetCurrentHistoryEntry;
-            long jid = JournalEntry.AddEDDItemSet(EDDiscoveryForm.EDDConfig.CurrentCommander.Nr, he.EventTimeUTC, (he.EntryType == JournalTypeEnum.EDDItemSet) ? he.Journalid : 0, changelist);
+            long jid = JournalEntry.AddEDDItemSet(EDDConfig.Instance.CurrentCommander.Nr, he.EventTimeUTC, (he.EntryType == JournalTypeEnum.EDDItemSet) ? he.Journalid : 0, changelist);
             userControlTravelGrid.SetPreferredJIDAfterRefresh(jid);         // tell the main grid, please find and move here
             MaterialCommodities.LoadCacheList();        // in case we did anything..
             _discoveryForm.RefreshHistoryAsync();
@@ -468,7 +468,7 @@ namespace EDDiscovery
 
                     System.Diagnostics.Trace.WriteLine("Arrived at system: " + he.System.name + " " + count + ":th visit.");
 
-                    if (EDDiscoveryForm.EDDConfig.CurrentCommander.SyncToEdsm == true)
+                    if (EDDConfig.Instance.CurrentCommander.SyncToEdsm == true)
                         EDSMSync.SendTravelLog(he);
                 }
                 if (he.IsFuelScoop)
@@ -480,7 +480,7 @@ namespace EDDiscovery
 
                 if (he.ISEDDNMessage)
                 {
-                    if (EDDiscoveryForm.EDDConfig.CurrentCommander.SyncToEddn == true)
+                    if (EDDConfig.Instance.CurrentCommander.SyncToEddn == true)
                     {
                         EDDNSync.SendEDDNEvents(_discoveryForm, he);
                     }
@@ -493,7 +493,7 @@ namespace EDDiscovery
                 {
                     RefreshTargetDisplay();                                     // tell the target system its changed the latest system
 
-                    if (EDDiscoveryForm.EDDConfig.FocusOnNewSystem)   // Move focus to new row
+                    if (EDDConfig.Instance.FocusOnNewSystem)   // Move focus to new row
                     {
                         userControlTravelGrid.SelectTopRow();
                         ShowSystemInformation(userControlTravelGrid.GetCurrentRow);
@@ -631,7 +631,7 @@ namespace EDDiscovery
             commanders = new List<EDCommander>();
 
             commanders.Add(new EDCommander(-1, "Hidden log", "", false, false, false));
-            commanders.AddRange(EDDiscoveryForm.EDDConfig.ListOfCommanders);
+            commanders.AddRange(EDDConfig.Instance.ListOfCommanders);
 
             comboBoxCommander.DataSource = null;
             comboBoxCommander.DataSource = commanders;
@@ -641,7 +641,7 @@ namespace EDDiscovery
             if (_discoveryForm.DisplayedCommander == -1)
                 comboBoxCommander.SelectedIndex = 0;
             else
-                comboBoxCommander.SelectedItem = EDDiscoveryForm.EDDConfig.CurrentCommander;
+                comboBoxCommander.SelectedItem = EDDConfig.Instance.CurrentCommander;
 
             comboBoxCommander.Enabled = true;
         }
@@ -653,9 +653,9 @@ namespace EDDiscovery
                 var itm = (EDCommander)comboBoxCommander.SelectedItem;
                 _discoveryForm.DisplayedCommander = itm.Nr;
                 if (itm.Nr >= 0)
-                    EDDiscoveryForm.EDDConfig.CurrentCmdrID = itm.Nr;
+                    EDDConfig.Instance.CurrentCmdrID = itm.Nr;
 
-                buttonSync.Enabled = EDDiscoveryForm.EDDConfig.CurrentCommander.SyncToEdsm | EDDiscoveryForm.EDDConfig.CurrentCommander.SyncFromEdsm;
+                buttonSync.Enabled = EDDConfig.Instance.CurrentCommander.SyncToEdsm | EDDConfig.Instance.CurrentCommander.SyncFromEdsm;
 
                 _discoveryForm.RefreshHistoryAsync();                                   // which will cause DIsplay to be called as some point
             }
@@ -759,7 +759,7 @@ namespace EDDiscovery
 
                     userControlTravelGrid.UpdateCurrentNote(txt);
 
-                    if (EDDiscoveryForm.EDDConfig.CurrentCommander.SyncToEdsm && sys.IsFSDJump )       // only send on FSD jumps
+                    if (EDDConfig.Instance.CurrentCommander.SyncToEdsm && sys.IsFSDJump )       // only send on FSD jumps
                         EDSMSync.SendComments(sn.Name,sn.Note,sn.EdsmId);
 
                     _discoveryForm.Map.UpdateNote();
@@ -787,7 +787,7 @@ namespace EDDiscovery
 
             try
             {
-                _discoveryForm.EdsmSync.StartSync(edsm, EDDiscoveryForm.EDDConfig.CurrentCommander.SyncToEdsm, EDDiscoveryForm.EDDConfig.CurrentCommander.SyncFromEdsm, EDDConfig.Instance.DefaultMapColour);
+                _discoveryForm.EdsmSync.StartSync(edsm, EDDConfig.Instance.CurrentCommander.SyncToEdsm, EDDConfig.Instance.CurrentCommander.SyncFromEdsm, EDDConfig.Instance.DefaultMapColour);
             }
             catch (Exception ex)
             {

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDiscovery.Controls;
 using EDDiscovery2.DB;
+using EDDiscovery2;
 
 namespace EDDiscovery.UserControls
 {
@@ -75,7 +76,7 @@ namespace EDDiscovery.UserControls
         public void Display(MaterialCommoditiesLedger mc)
         {
             dataGridViewLedger.Rows.Clear();
-            bool utctime = EDDiscoveryForm.EDDConfig.DisplayUTC;
+            bool utctime = EDDConfig.Instance.DisplayUTC;
 
             current_mc = mc;
             

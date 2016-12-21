@@ -1,5 +1,6 @@
 ﻿using EDDiscovery.EliteDangerous;
 using EDDiscovery.EliteDangerous.JournalEvents;
+using EDDiscovery2;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,7 +23,7 @@ namespace EDDiscovery.Export
 
             scans = new List<JournalEntry>();
 
-            scans = JournalEntry.GetByEventType(JournalTypeEnum.FSDJump, EDDiscoveryForm.EDDConfig.CurrentCmdrID, _discoveryForm.history.GetMinDate, _discoveryForm.history.GetMaxDate);
+            scans = JournalEntry.GetByEventType(JournalTypeEnum.FSDJump, EDDConfig.Instance.CurrentCmdrID, _discoveryForm.history.GetMinDate, _discoveryForm.history.GetMaxDate);
 
             return true;
         }
