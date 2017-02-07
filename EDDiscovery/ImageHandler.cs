@@ -29,6 +29,7 @@ using EDDiscovery2.DB;
 using EDDiscovery.EliteDangerous;
 using EDDiscovery.EliteDangerous.JournalEvents;
 using Newtonsoft.Json.Linq;
+using System.Globalization;
 
 namespace EDDiscovery2.ImageHandler
 {
@@ -45,30 +46,38 @@ namespace EDDiscovery2.ImageHandler
         public delegate void ScreenShot(string path, Point size);
         public event ScreenShot OnScreenShot;
 
+        private static List<KeyValuePair<string, string>> standardFileNameFormats = new Dictionary<string, string>
+        {
+            { "Sysname (YYYYMMDD-HHMMSS)", "%(StarSystem) (%(timestamp:yyyyMMdd-HHmmss))%(HighRes)" },
+            { "Sysname (Windows dateformat)", "%(StarSystem) (%(timestamp:G))%(HighRes)" },
+            { "YYYY-MM-DD HH-MM-SS Sysname", "%(timestamp:yyyy-MM-dd HH-mm-ss) %(StarSystem)%(HighRes)" },
+            { "DD-MM-YYYY HH-MM-SS Sysname", "%(timestamp:dd-MM-yyyy HH-mm-ss) %(StarSystem)%(HighRes)" },
+            { "MM-DD-YYYY HH-MM-SS Sysname", "%(timestamp:MM-dd-yyyy HH-mm-ss) %(StarSystem)%(HighRes)" },
+            { "HH-MM-SS Sysname", "%(timestamp:HH-mm-ss) %(StarSystem)%(HighRes)" },
+            { "Sysname", "%(StarSystem)%(HighRes)" },
+            { "Keep original", "%(InputFilename)" }
+        }.ToList();
+
+        private static List<KeyValuePair<string, string>> standardFolderNameFormats = new Dictionary<string, string>
+        {
+            { "None", "" },
+            { "System Name", "%(StarSystem)" },
+            { "YYYY-MM-DD", "%(timestamp:yyyy-MM-dd)" },
+            { "DD-MM-YYYY", "%(timestamp:dd-MM-yyyy)" },
+            { "MM-DD-YYYY", "%(timestamp:MM-dd-yyyy)" },
+            { "YYYY-MM-DD Sysname", "%(timestamp:yyyy-MM-dd) %(StarSystem)" },
+            { "DD-MM-YYYY Sysname", "%(timestamp:dd-MM-yyyy) %(StarSystem)" },
+            { "MM-DD-YYYY Sysname", "%(timestamp:MM-dd-yyyy) %(StarSystem)" }
+        }.ToList();
+
         public ImageHandler()
         {
             InitializeComponent();
             this.comboBoxFormat.Items.AddRange(new string[] { "png", "jpg", "bmp", "tiff" });
-            this.comboBoxFileNameFormat.Items.AddRange(new string[] {
-            "Sysname (YYYYMMDD-HHMMSS)",
-            "Sysname (Windows dateformat)",
-            "YYYY-MM-DD HH-MM-SS Sysname",
-            "DD-MM-YYYY HH-MM-SS Sysname",
-            "MM-DD-YYYY HH-MM-SS Sysname",
-            "HH-MM-SS Sysname",
-            "HH-MM-SS",
-            "Sysname",
-            "Keep original"});
-            this.comboBoxSubFolder.Items.AddRange(new string[] {
-            "None",
-            "System Name",
-            "YYYY-MM-DD",
-            "DD-MM-YYYY",
-            "MM-DD-YYYY",
-            "YYYY-MM-DD Sysname",
-            "DD-MM-YYYY Sysname",
-            "MM-DD-YYYY Sysname"
-            });
+            this.comboBoxFileNameFormat.Items.AddRange(standardFileNameFormats.Select(kvp => kvp.Key));
+            //this.comboBoxFileNameFormat.Items.Add("Custom");
+            this.comboBoxSubFolder.Items.AddRange(standardFolderNameFormats.Select(kvp => kvp.Key));
+            //this.comboBoxSubFolder.Items.Add("Custom");
 
             this.comboBoxScanFor.Items.AddRange(new string[] { "bmp -ED Launcher", "jpg -Steam" , "png -Steam" });
         }
@@ -122,7 +131,7 @@ namespace EDDiscovery2.ImageHandler
             numericUpDownWidth.Value = SQLiteDBClass.GetSettingInt("ImageHandlerCropWidth", 0);
             numericUpDownHeight.Value = SQLiteDBClass.GetSettingInt("ImageHandlerCropHeight", 0);
 
-            textBoxFileNameExample.Text = CreateFileName("Sol", "HighResScreenshot_0000.bmp", comboBoxFileNameFormat.SelectedIndex, checkBoxHires.Checked, DateTime.Now);
+            textBoxFileNameExample.Text = CreateFileName("Sol", "HighResScreenshot_0000.bmp", comboBoxFileNameFormat.SelectedIndex, checkBoxHires.Checked, DateTime.Now, 0);
 
             numericUpDownTop.Enabled = numericUpDownWidth.Enabled = numericUpDownLeft.Enabled = numericUpDownHeight.Enabled = checkBoxCropImage.Checked;
 
@@ -311,7 +320,7 @@ namespace EDDiscovery2.ImageHandler
                 {
                     DateTime filetime = fi.CreationTimeUtc;
 
-                    ConvertParams cp = GetConversionParams(cur_sysname, filetime);
+                    ConvertParams cp = GetConversionParams(cur_sysname, filetime, ss.CommanderId);
 
                     if (cp.cannotexecute)
                     {
@@ -500,7 +509,7 @@ namespace EDDiscovery2.ImageHandler
             public bool reconvert = true;
         }
 
-        private ConvertParams GetConversionParams(string cur_sysname, DateTime timestamp)
+        private ConvertParams GetConversionParams(string cur_sysname, DateTime timestamp, int cmdrid)
         {
             ConvertParams p = new ConvertParams();
 
@@ -510,33 +519,11 @@ namespace EDDiscovery2.ImageHandler
                                                                 // other items are also picked up here in one go.
                 p.output_folder = textBoxOutputDir.Text;
 
-                switch (comboBoxSubFolder.SelectedIndex)
+                string foldername = CreateFolderName(cur_sysname, comboBoxSubFolder.SelectedIndex, timestamp, cmdrid);
+
+                if (foldername != "")
                 {
-                    case 1:     // system name
-                        p.output_folder += "\\" + Tools.SafeFileString(cur_sysname);
-                        break;
-
-                    case 2:     // "YYYY-MM-DD"
-                        p.output_folder += "\\" + timestamp.ToString("yyyy-MM-dd");
-                        break;
-                    case 3:     // "DD-MM-YYYY"
-                        p.output_folder += "\\" + timestamp.ToString("dd-MM-yyyy");
-                        break;
-                    case 4:     // "MM-DD-YYYY"
-                        p.output_folder += "\\" + timestamp.ToString("MM-dd-yyyy");
-                        break;
-
-                    case 5:  //"YYYY-MM-DD Sysname",
-                        p.output_folder += "\\" + timestamp.ToString("yyyy-MM-dd") + " " + Tools.SafeFileString(cur_sysname);
-                        break;
-
-                    case 6:  //"DD-MM-YYYY Sysname",
-                        p.output_folder += "\\" + timestamp.ToString("dd-MM-yyyy") + " " + Tools.SafeFileString(cur_sysname);
-                        break;
-
-                    case 7: //"MM-DD-YYYY Sysname"
-                        p.output_folder += "\\" + timestamp.ToString("MM-dd-yyyy") + " " + Tools.SafeFileString(cur_sysname);
-                        break;
+                    p.output_folder = Path.Combine(p.output_folder, foldername);
                 }
 
                 if (!Directory.Exists(p.output_folder))
@@ -564,7 +551,7 @@ namespace EDDiscovery2.ImageHandler
             int index = 0;
             do                                          // add _N on the filename for index>0, to make them unique.
             {
-                store_name = Path.Combine(cp.output_folder, CreateFileName(cur_sysname, inputfile, cp.formatindex, cp.hires, timestamp) + (index == 0 ? "" : "_" + index) + cp.extension);
+                store_name = Path.Combine(cp.output_folder, CreateFileName(cur_sysname, inputfile, cp.formatindex, cp.hires, timestamp, cmdrid) + (index == 0 ? "" : "_" + index) + cp.extension);
                 index++;
             } while (File.Exists(store_name));          // if name exists, pick another
 
@@ -606,61 +593,175 @@ namespace EDDiscovery2.ImageHandler
             return croppedbmp;
         }
 
-        private string CreateFileName(string cur_sysname, string orignalfile, int formatindex, bool hires, DateTime timestamp)
+        /// <summary>
+        /// Gets the filename using the selected filename format
+        /// </summary>
+        /// <param name="cur_sysname">System name</param>
+        /// <param name="orignalfile">Original filename</param>
+        /// <param name="formatindex">Index in standard filename formats</param>
+        /// <param name="hires">True if screenshot was high resolution screenshot</param>
+        /// <param name="timestamp">Timestamp of screenshot</param>
+        /// <returns></returns>
+        private string CreateFileName(string cur_sysname, string orignalfile, int formatindex, bool hires, DateTime timestamp, int cmdrid)
         {
             cur_sysname = Tools.SafeFileString(cur_sysname);
+            EDCommander cmdr = EDDConfig.Instance.Commander(cmdrid);
 
             string postfix = (hires && Path.GetFileName(orignalfile).Contains("HighRes")) ? " (HighRes)" : "";
 
-            switch (formatindex)
+            Dictionary<string, object> parameters = new Dictionary<string, object>(StringComparer.InvariantCultureIgnoreCase)
             {
-                case 0:
-                    return cur_sysname + " (" + timestamp.ToString("yyyyMMdd-HHmmss") + ")" + postfix;
+                { "StarSystem", cur_sysname },
+                { "InputFilename", Path.GetFileNameWithoutExtension(orignalfile) },
+                { "HighRes", postfix },
+                { "timestamp", timestamp },
+                { "utctime", timestamp.ToUniversalTime() },
+                { "localtime", timestamp.ToLocalTime() },
+                { "Commander", cmdr == null ? "Unknown CMDR" : cmdr.Name }
+            };
 
-                case 1:
-                    {
-                        string time = timestamp.ToString();
-                        time = time.Replace(":", "-");
-                        time = time.Replace("/", "-");          // Rob found it was outputting 21/2/2020 on mine, so we need more replaces
-                        time = time.Replace("\\", "-");
-                        return cur_sysname + " (" + time + ")" + postfix;
-                    }
-                case 2:
-                    {
-                        string time = timestamp.ToString("yyyy-MM-dd HH-mm-ss");
-                        return time + " " + cur_sysname + postfix;
-                    }
-                case 3:
-                    {
-                        string time = timestamp.ToString("dd-MM-yyyy HH-mm-ss");
-                        return time + " " + cur_sysname + postfix;
-                    }
-                case 4:
-                    {
-                        string time = timestamp.ToString("MM-dd-yyyy HH-mm-ss");
-                        return time + " " + cur_sysname + postfix;
-                    }
+            string filename = "";
 
-                case 5:
-                    {
-                        string time = timestamp.ToString("HH-mm-ss");
-                        return time + " " + cur_sysname + postfix;
-                    }
-
-                case 6:
-                    {
-                        string time = timestamp.ToString("HH-mm-ss");
-                        return time + postfix;
-                    }
-
-                case 7:
-                    {
-                        return cur_sysname + postfix;
-                    }
-
-                default:
-                    return Path.GetFileNameWithoutExtension(orignalfile);
+            if (formatindex < standardFileNameFormats.Count)
+            {
+                filename = FormatString(standardFileNameFormats[formatindex].Value, parameters);
             }
+
+            foreach (char c in Path.GetInvalidFileNameChars())
+            {
+                filename = filename.Replace(c, '-');
+            }
+
+            if (filename == "")
+            {
+                filename = Path.GetFileNameWithoutExtension(orignalfile);
+            }
+
+            return filename;
+        }
+
+        /// <summary>
+        /// Gets the folder name using the selected folder name format
+        /// </summary>
+        /// <param name="cur_sysname">System name</param>
+        /// <param name="formatindex">Index in standard folder name formats</param>
+        /// <param name="timestamp">Timestamp of screenshot</param>
+        /// <returns></returns>
+        private string CreateFolderName(string cur_sysname, int formatindex, DateTime timestamp, int cmdrid)
+        {
+            cur_sysname = Tools.SafeFileString(cur_sysname);
+
+            EDCommander cmdr = EDDConfig.Instance.Commander(cmdrid);
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>(StringComparer.InvariantCultureIgnoreCase)
+            {
+                { "StarSystem", cur_sysname },
+                { "timestamp", timestamp },
+                { "utctime", timestamp.ToUniversalTime() },
+                { "localtime", timestamp.ToLocalTime() },
+                { "Commander", cmdr == null ? "Unknown CMDR" : cmdr.Name }
+            };
+
+            string foldername = "";
+
+            if (formatindex < standardFolderNameFormats.Count)
+            {
+                foldername = FormatString(standardFolderNameFormats[formatindex].Value, parameters);
+            }
+
+            foreach (char c in Path.GetInvalidFileNameChars())
+            {
+                foldername = foldername.Replace(c, '-');
+            }
+
+            return foldername;
+        }
+
+        /// <summary>
+        /// Formats a string using replacement parameters
+        /// </summary>
+        /// <param name="format">Format string</param>
+        /// <param name="parameters">Parameters to be used in format string</param>
+        /// <returns></returns>
+        private string FormatString(string format, Dictionary<string, object> parameters)
+        {
+            StringBuilder sb = new StringBuilder();
+            int pos = 0;
+
+            while (pos < format.Length)
+            {
+                int end = format.IndexOf('%', pos);
+
+                if (end < 0 || end == format.Length - 1)
+                {
+                    sb.Append(format.Substring(pos));
+                    pos = format.Length;
+                }
+                else
+                {
+                    sb.Append(format.Substring(pos, end - pos));
+                    pos = end;
+
+                    if (format[pos] == '%')
+                    {
+                        sb.Append('%');
+                        pos++;
+                    }
+                    else if (format[pos] == '(')
+                    {
+                        pos++;
+                        end = format.IndexOf(')', pos);
+
+                        if (end < 0)
+                        {
+                            pos = format.Length;
+                        }
+                        else
+                        {
+                            string varname = format.Substring(pos, end - pos);
+                            string varfmt = null;
+                            IFormatProvider varfprov = CultureInfo.CurrentCulture;
+                            pos = end + 1;
+                            string[] varp = varname.Split(new[] { ':' }, 3);
+
+                            if (varp.Length >= 2 && varp[0].Length != 0)
+                            {
+                                varname = varp[0];
+
+                                if (varp.Length == 3)
+                                {
+                                    if (varp[1] == "ci")
+                                    {
+                                        varfprov = CultureInfo.InvariantCulture;
+                                    }
+
+                                    varfmt = varp[2];
+                                }
+                                else
+                                {
+                                    varfmt = varp[1];
+                                }
+                            }
+
+                            object varval = parameters.ContainsKey(varname) ? parameters[varname] : null;
+
+                            if (varval != null)
+                            {
+                                if (varfmt != null && varval is IFormattable)
+                                {
+                                    sb.Append(((IFormattable)varval).ToString(varfmt, varfprov));
+                                }
+                                else
+                                {
+                                    sb.Append(varval.ToString());
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return sb.ToString();
         }
 
         private void ImageHandler_Load(object sender, EventArgs e)
@@ -681,7 +782,7 @@ namespace EDDiscovery2.ImageHandler
             {
                 SQLiteDBClass.PutSettingBool("checkBoxHires", checkBoxHires.Checked);
             }
-            textBoxFileNameExample.Text = CreateFileName("Sol", "HighResScreenshot_0000.bmp", comboBoxFileNameFormat.SelectedIndex, checkBoxHires.Checked, DateTime.Now);
+            textBoxFileNameExample.Text = CreateFileName("Sol", "HighResScreenshot_0000.bmp", comboBoxFileNameFormat.SelectedIndex, checkBoxHires.Checked, DateTime.Now, 0);
         }
 
         private void comboBoxFileNameFormat_SelectedIndexChanged(object sender, EventArgs e)
@@ -690,7 +791,7 @@ namespace EDDiscovery2.ImageHandler
             {
                 SQLiteDBClass.PutSettingInt("comboBoxFileNameFormat", comboBoxFileNameFormat.SelectedIndex);
             }
-            textBoxFileNameExample.Text = CreateFileName("Sol", "HighResScreenshot_0000.bmp", comboBoxFileNameFormat.SelectedIndex, checkBoxHires.Checked, DateTime.Now);
+            textBoxFileNameExample.Text = CreateFileName("Sol", "HighResScreenshot_0000.bmp", comboBoxFileNameFormat.SelectedIndex, checkBoxHires.Checked, DateTime.Now, 0);
         }
 
         private void checkBoxCropImage_CheckedChanged(object sender, EventArgs e)
