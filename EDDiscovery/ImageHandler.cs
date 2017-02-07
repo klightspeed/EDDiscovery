@@ -67,7 +67,11 @@ namespace EDDiscovery2.ImageHandler
             { "MM-DD-YYYY", "%(timestamp:MM-dd-yyyy)" },
             { "YYYY-MM-DD Sysname", "%(timestamp:yyyy-MM-dd) %(StarSystem)" },
             { "DD-MM-YYYY Sysname", "%(timestamp:dd-MM-yyyy) %(StarSystem)" },
-            { "MM-DD-YYYY Sysname", "%(timestamp:MM-dd-yyyy) %(StarSystem)" }
+            { "MM-DD-YYYY Sysname", "%(timestamp:MM-dd-yyyy) %(StarSystem)" },
+            { "Commander", "%(Commander)" },
+            { "YYYY-MM-DD Commander", "%(timestamp:yyyy-MM-dd) %(Commander)" },
+            { "DD-MM-YYYY Commander", "%(timestamp:dd-MM-yyyy) %(Commander)" },
+            { "MM-DD-YYYY Commander", "%(timestamp:MM-dd-yyyy) %(Commander)" }
         }.ToList();
 
         public ImageHandler()
