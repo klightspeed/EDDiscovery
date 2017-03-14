@@ -26,6 +26,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Net;
+using EDDiscovery2;
 
 namespace EDDiscovery
 {
@@ -299,7 +300,7 @@ namespace EDDiscovery
                 }
             }
 
-            if (ourcode)
+            if (ourcode || EDDConfig.Options.LogAllExceptions)
                 WriteLine($"First chance exception: {e.Exception.Message}\n{trace.ToString()}");
         }
     }

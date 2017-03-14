@@ -446,6 +446,7 @@ namespace EDDiscovery2
             public bool Debug { get; private set; }
             public bool TraceLog { get; private set; }
             public bool LogExceptions { get; private set; }
+            public bool LogAllExceptions { get; private set; }
             public EDSMServerType EDSMServerType { get; private set; } = EDSMServerType.Normal;
             public bool DisableBetaCheck { get; private set; }
             public string ReadJournal { get; private set; }
@@ -613,6 +614,7 @@ namespace EDDiscovery2
                         case "debug": Debug = true; break;
                         case "tracelog": TraceLog = true; break;
                         case "logexceptions": LogExceptions = true; break;
+                        case "logallexceptions": LogAllExceptions = true; break;
                         case "edsmbeta": EDSMServerType = EDSMServerType.Beta; break;
                         case "edsmnull": EDSMServerType = EDSMServerType.Null; break;
                         case "disablebetacheck": DisableBetaCheck = true; break;
