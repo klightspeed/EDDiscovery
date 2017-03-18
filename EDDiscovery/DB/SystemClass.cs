@@ -1608,6 +1608,32 @@ namespace EDDiscovery.DB
             }
         }
 
+        protected static long PerformEDSMFullSync(bool newfile, Stream stream, Func<bool> cancelRequested, Action<int, string> reportProgress, Action<string> logLine, Action<string> logError)
+        {
+            long updates = 0;
+
+            SQLiteConnectionSystem.CreateTempSystemsTable();
+
+            string rwsysfiletime = "2014-01-01 00:00:00";
+            bool outoforder = false;
+            using (var reader = new StreamReader(stream))
+                updates = SystemClass.ParseEDSMUpdateSystemsStream(reader, ref rwsysfiletime, ref outoforder, true, cancelRequested, reportProgress, useCache: false, useTempSystems: true);
+            if (!cancelRequested())       // abort, without saving time, to make it do it again
+            {
+                SQLiteConnectionSystem.PutSettingString("EDSMLastSystems", rwsysfiletime);
+                logLine("Replacing old systems table with new systems table and re-indexing - please wait");
+                reportProgress(-1, "Replacing old systems table with new systems table and re-indexing - please wait");
+                SQLiteConnectionSystem.ReplaceSystemsTable();
+                SQLiteConnectionSystem.PutSettingBool("EDSMSystemsOutOfOrder", outoforder);
+                reportProgress(-1, "");
+                return updates;
+            }
+            else
+            {
+                throw new OperationCanceledException();
+            }
+        }
+
         public static bool PerformEDSMFullSync(Func<bool> cancelRequested, Action<int, string> reportProgress, Action<string> logLine, Action<string> logError)
         {
             string rwsystime = SQLiteConnectionSystem.GetSettingString("EDSMLastSystems", "2000-01-01 00:00:00"); // Latest time from RW file.
@@ -1640,28 +1666,45 @@ namespace EDDiscovery.DB
             logLine("Resyncing all downloaded EDSM systems with local database." + Environment.NewLine + "This will take a while.");
 
             bool newfile;
-            bool success = EDDiscovery2.HTTP.DownloadFileHandler.DownloadFile(EDSMClass.ServerAddress + "dump/systemsWithCoordinates.json", edsmsystems, out newfile, (n, s) =>
-            {
-                SQLiteConnectionSystem.CreateTempSystemsTable();
+            bool downloadBeforeSync = Environment.OSVersion.Platform != PlatformID.Win32NT;
+            bool success;
 
-                string rwsysfiletime = "2014-01-01 00:00:00";
-                bool outoforder = false;
-                using (var reader = new StreamReader(s))
-                    updates = SystemClass.ParseEDSMUpdateSystemsStream(reader, ref rwsysfiletime, ref outoforder, true, cancelRequested, reportProgress, useCache: false, useTempSystems: true);
-                if (!cancelRequested())       // abort, without saving time, to make it do it again
+            if (downloadBeforeSync)
+            {
+                success = EDDiscovery2.HTTP.DownloadFileHandler.DownloadFile(EDSMClass.ServerAddress + "dump/systemsWithCoordinates.json", edsmsystems, out newfile, (n, s) =>
                 {
-                    SQLiteConnectionSystem.PutSettingString("EDSMLastSystems", rwsysfiletime);
-                    logLine("Replacing old systems table with new systems table and re-indexing - please wait");
-                    reportProgress(-1, "Replacing old systems table with new systems table and re-indexing - please wait");
-                    SQLiteConnectionSystem.ReplaceSystemsTable();
-                    SQLiteConnectionSystem.PutSettingBool("EDSMSystemsOutOfOrder", outoforder);
-                    reportProgress(-1, "");
-                }
-                else
+                    byte[] data = new byte[1048576];
+                    int bytesread = 0;
+                    while (!cancelRequested())
+                    {
+                        int rsize = s.Read(data, 0, data.Length);
+
+                        if (rsize == 0)
+                        {
+                            break;
+                        }
+
+                        bytesread += rsize;
+
+                        reportProgress(-1, $"Downloading systemsWithCoordinates.json: {bytesread} bytes downloaded");
+                    }
+                });
+
+                if (success)
                 {
-                    throw new OperationCanceledException();
+                    using (Stream stream = File.Open(edsmsystems, FileMode.Open, FileAccess.Read, FileShare.Read))
+                    {
+                        updates = PerformEDSMFullSync(newfile, stream, cancelRequested, reportProgress, logLine, logError);
+                    }
                 }
-            });
+            }
+            else
+            {
+                success = EDDiscovery2.HTTP.DownloadFileHandler.DownloadFile(EDSMClass.ServerAddress + "dump/systemsWithCoordinates.json", edsmsystems, out newfile, (n, s) =>
+                {
+                    updates = PerformEDSMFullSync(n, s, cancelRequested, reportProgress, logLine, logError);
+                });
+            }
 
             if (!success)
             {
