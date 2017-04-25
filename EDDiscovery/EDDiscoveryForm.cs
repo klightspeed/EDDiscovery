@@ -934,12 +934,19 @@ namespace EDDiscovery
             {
                 // Update the System Note; and if the text was changed, save our Note for sending and storing later
                 // Also notify various "quick" listeners
+                bool? sendnote = false;
+
                 if (he.UpdateSystemNote(txt, send))
                 {
-                    if (_uncommittedNoteHistoryEntry == null)
+                    if (_uncommittedNoteHistoryEntry == null && !send)
                     {
                         _uncommittedNoteHistoryEntry = he;
                     }
+                    else
+                    {
+                        sendnote = send;
+                    }
+
                     travelHistoryControl1.UpdateNoteJID(he.Journalid, txt);
                     PopOuts.UpdateNoteJID(he.Journalid, txt);
                     // MKW TODO: Update the Note editor SPanel.
@@ -950,6 +957,24 @@ namespace EDDiscovery
                 if (_uncommittedNoteHistoryEntry != null && (send || _uncommittedNoteHistoryEntry != he))
                 {
                     StoreUncommittedNote();
+
+                    if (sendnote != true)
+                    {
+                        Map.UpdateNote();
+                    }
+                }
+
+                // If we previously had an uncommitted note (which we have now sent),
+                // store the new note as an uncommitted note if it shouldn't be sent
+                if (sendnote == false)
+                {
+                    _uncommittedNoteHistoryEntry = he;
+                }
+                // If note storage was successful, and the note is to be sent, then
+                // send the note.
+                else if (sendnote == true)
+                {
+                    SendSystemNote(he);
                     Map.UpdateNote();
                 }
             }
@@ -960,10 +985,15 @@ namespace EDDiscovery
             if (_uncommittedNoteHistoryEntry != null)
             {
                 _uncommittedNoteHistoryEntry.CommitSystemNote();
-                    if (EDCommander.Current.SyncToEdsm && _uncommittedNoteHistoryEntry.IsFSDJump)       // only send on FSD jumps
-                        EDSMSync.SendComments(_uncommittedNoteHistoryEntry.snc.Name, _uncommittedNoteHistoryEntry.snc.Note, _uncommittedNoteHistoryEntry.snc.EdsmId);
+                SendSystemNote(_uncommittedNoteHistoryEntry);
                 _uncommittedNoteHistoryEntry = null;
             }
+        }
+
+        private void SendSystemNote(HistoryEntry he)
+        {
+            if (EDCommander.Current.SyncToEdsm && he.IsFSDJump)       // only send on FSD jumps
+                EDSMSync.SendComments(he.snc.Name, he.snc.Note, he.snc.EdsmId);
         }
 
         private void sendUnsuncedEDDNEventsToolStripMenuItem_Click(object sender, EventArgs e)
