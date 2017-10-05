@@ -272,6 +272,113 @@ namespace EliteDangerousCore.EDSM
             }
         }
 
+        private struct PGSystem
+        {
+            private static Dictionary<string, ushort> RegionNameIndexes = new Dictionary<string, ushort>(StringComparer.InvariantCultureIgnoreCase);
+            private static List<string> RegionNames = new List<string>();
+            private static HashSet<string> RegionNameHS = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
+
+            public static bool GetPGSystemFromSystemName(string s, long edsmid, double x, double y, double z, out PGSystem p)
+            {
+                int i = s.Length - 1;
+                int blknum = 0;
+                p = new PGSystem();
+
+                p.Sequence = 0;
+                p.MassCode = 0;
+
+                string _s = s.ToLowerInvariant();
+
+                if (i < 9) return false;                                    // a bc-d e0
+                if (_s[i] < '0' || _s[i] > '9') return false;               // cepheus dark region a sector xy-z a1-[0]
+                while (i > 8 && _s[i] >= '0' && _s[i] <= '9') i--;
+                if (i < _s.Length - 6) return false;
+                if (!UInt16.TryParse(_s.Substring(i + 1), out p.Sequence)) return false;
+                if (_s[i] == '-')                                          // cepheus dark region a sector xy-z a1[-]0
+                {
+                    i--;
+                    int vend = i;
+                    while (i > 8 && _s[i] >= '0' && _s[i] <= '9') i--;     // cepheus dark region a sector xy-z a[1]-0
+                    if (i < vend - 4) return false;
+                    if (!Int32.TryParse(_s.Substring(i + 1, vend - i), out blknum)) return false;
+                    if (blknum >= 120) return false;
+                }
+                if (_s[i] < 'a' || _s[i] > 'h') return false;               // cepheus dark region a sector xy-z [a]1-0
+                p.MassCode = (byte)('h' - _s[i]);
+                i--;
+                if (_s[i] != ' ') return false;                             // cepheus dark region a sector xy-z[ ]a1-0
+                i--;
+                if (_s[i] < 'a' || _s[i] > 'z') return false;               // cepheus dark region a sector xy-[z] a1-0
+                blknum = blknum * 26 + _s[i] - 'a';
+                i--;
+                if (_s[i] != '-') return false;                             // cepheus dark region a sector xy[-]z a1-0
+                i--;
+                if (_s[i] < 'a' || _s[i] > 'z') return false;               // cepheus dark region a sector x[y]-z a1-0
+                blknum = blknum * 26 + _s[i] - 'a';
+                i--;
+                if (_s[i] < 'a' || _s[i] > 'z') return false;               // cepheus dark region a sector [x]y-z a1-0
+                blknum = blknum * 26 + _s[i] - 'a';
+                i--;
+                if (_s[i] != ' ') return false;                             // cepheus dark region a sector[ ]xy-z a1-0
+                i--;
+                p.RelX = (sbyte)(blknum & 127);
+                p.RelY = (sbyte)((blknum >> 7) & 127);
+                p.RelZ = (sbyte)((blknum >> 14) & 127);
+                p.EdsmId = edsmid;
+                p.X_Int = (int)Math.Floor(x * 32.0 + 0.5);
+                p.Y_Int = (int)Math.Floor(y * 32.0 + 0.5);
+                p.Z_Int = (int)Math.Floor(z * 32.0 + 0.5);
+
+                string regionname = s.Substring(0, i + 1);                  // [cepheus dark region a sector] xy-z a1-0
+
+                if (!RegionNameIndexes.ContainsKey(regionname))
+                {
+                    p.RegionNameIndex = (ushort)RegionNames.Count;
+                    RegionNames.Add(regionname);
+                    RegionNameIndexes[regionname] = p.RegionNameIndex;
+                }
+                else
+                {
+                    p.RegionNameIndex = RegionNameIndexes[regionname];
+                }
+
+                return true;
+            }
+
+            private string GetPgSuffix()
+            {
+                int blocknr = RelX + ((int)RelY << 7) + ((int)RelZ << 14);
+                char v1 = (char)((blocknr % 26) + 'A');
+                blocknr /= 26;
+                char v2 = (char)((blocknr % 26) + 'A');
+                blocknr /= 26;
+                char v3 = (char)((blocknr % 26) + 'A');
+                blocknr /= 26;
+                char sc = (char)('h' - MassCode);
+                string v4 = blocknr == 0 ? "" : $"{blocknr}-";
+                return $"{v1}{v2}-{v3} {sc}{v4}{Sequence}";
+            }
+
+
+            public ushort RegionNameIndex;
+            public sbyte RelX;
+            public sbyte RelY;
+            public sbyte RelZ;
+            public byte MassCode;
+            public ushort Sequence;
+            public int X_Int;
+            public int Y_Int;
+            public int Z_Int;
+            public long EdsmId;
+
+            public string RegionName { get { return RegionNames[RegionNameIndex]; } }
+
+            public string name { get { return RegionName + " " + GetPgSuffix(); } }
+            public double x { get { return X_Int / 32.0; } }
+            public double y { get { return Y_Int / 32.0; } }
+            public double z { get { return Z_Int / 32.0; } }
+        }
+
         private class EDSMDumpSystemCoords
         {
             public static EDSMDumpSystemCoords Deserialize(JsonReader rdr)
@@ -344,6 +451,7 @@ namespace EliteDangerousCore.EDSM
             }
 
             Dictionary<long, SystemClassBase> systemsByEdsmId = useCache ? GetEdsmSystemsLite() : new Dictionary<long, SystemClassBase>();
+            Dictionary<string, List<PGSystem>> pgsystems = new Dictionary<string, List<PGSystem>>(StringComparer.InvariantCultureIgnoreCase);
             int count = 0;
             int updatecount = 0;
             int insertcount = 0;
@@ -473,6 +581,18 @@ namespace EliteDangerousCore.EDSM
                                         int randomid = rnd.Next(0, 99);
                                         DateTime updatedate = jo.date;
                                         histogramsystems[gridid]++;
+
+                                        PGSystem ps;
+
+                                        if (PGSystem.GetPGSystemFromSystemName(name, edsmid, x, y, z, out ps))
+                                        {
+                                            if (!pgsystems.ContainsKey(ps.RegionName))
+                                            {
+                                                pgsystems[ps.RegionName] = new List<PGSystem>();
+                                            }
+
+                                            pgsystems[ps.RegionName].Add(ps);
+                                        }
 
                                         if (updatedate > maxdate)
                                             maxdate = updatedate;
