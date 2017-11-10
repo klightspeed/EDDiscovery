@@ -36,6 +36,9 @@ namespace EliteDangerousCore
         int DefaultMapColour { get; }
         bool ClearCommodities { get; }
         bool ClearMaterials { get; }
+        Dictionary<EDStar, System.Drawing.Image> StarTypeIcons { get; }
+        Dictionary<EDPlanet, System.Drawing.Image> PlanetTypeIcons { get; }
+        Dictionary<JournalTypeEnum, System.Drawing.Image> JournalTypeIcons { get; }
     }
 
     public static class EliteConfigInstance
