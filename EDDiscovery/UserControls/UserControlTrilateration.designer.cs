@@ -119,21 +119,21 @@ namespace EDDiscovery.UserControls
             // 
             this.addToWantedSystemsToolStripMenuItem.Name = "addToWantedSystemsToolStripMenuItem";
             this.addToWantedSystemsToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.addToWantedSystemsToolStripMenuItem.Text = "Add to wanted systems";
+            this.addToWantedSystemsToolStripMenuItem.Text = Properties.Strings.Trilateration_AddToWanted;
             this.addToWantedSystemsToolStripMenuItem.Click += new System.EventHandler(this.addToWantedSystemsToolStripMenuItem_Click);
             // 
             // viewOnEDSMToolStripMenuItem
             // 
             this.viewOnEDSMToolStripMenuItem.Name = "viewOnEDSMToolStripMenuItem";
             this.viewOnEDSMToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.viewOnEDSMToolStripMenuItem.Text = "View on EDSM";
+            this.viewOnEDSMToolStripMenuItem.Text = Properties.Strings.Trilateration_ViewOnEDSM;
             this.viewOnEDSMToolStripMenuItem.Click += new System.EventHandler(this.viewOnEDSMToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Text = Properties.Strings.Trilateration_Paste;
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // wantedContextMenu
@@ -151,35 +151,35 @@ namespace EDDiscovery.UserControls
             // 
             this.removeFromWantedSystemsToolStripMenuItem.Name = "removeFromWantedSystemsToolStripMenuItem";
             this.removeFromWantedSystemsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.removeFromWantedSystemsToolStripMenuItem.Text = "Remove from wanted systems";
+            this.removeFromWantedSystemsToolStripMenuItem.Text = Properties.Strings.Trilateration_RemoveFromWanted;
             this.removeFromWantedSystemsToolStripMenuItem.Click += new System.EventHandler(this.removeFromWantedSystemsToolStripMenuItem_Click);
             // 
             // viewOnEDSMToolStripMenuItem1
             // 
             this.viewOnEDSMToolStripMenuItem1.Name = "viewOnEDSMToolStripMenuItem1";
             this.viewOnEDSMToolStripMenuItem1.Size = new System.Drawing.Size(233, 22);
-            this.viewOnEDSMToolStripMenuItem1.Text = "View on EDSM";
+            this.viewOnEDSMToolStripMenuItem1.Text = Properties.Strings.Trilateration_ViewOnEDSM;
             this.viewOnEDSMToolStripMenuItem1.Click += new System.EventHandler(this.viewOnEDSMToolStripMenuItem1_Click);
             // 
             // deleteAllWithKnownPositionToolStripMenuItem
             // 
             this.deleteAllWithKnownPositionToolStripMenuItem.Name = "deleteAllWithKnownPositionToolStripMenuItem";
             this.deleteAllWithKnownPositionToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.deleteAllWithKnownPositionToolStripMenuItem.Text = "Delete all with known position";
+            this.deleteAllWithKnownPositionToolStripMenuItem.Text = Properties.Strings.Trilateration_DeleteKnown;
             this.deleteAllWithKnownPositionToolStripMenuItem.Click += new System.EventHandler(this.deleteAllWithKnownPositionToolStripMenuItem_Click);
             // 
             // addAllLocalSystemsToolStripMenuItem
             // 
             this.addAllLocalSystemsToolStripMenuItem.Name = "addAllLocalSystemsToolStripMenuItem";
             this.addAllLocalSystemsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.addAllLocalSystemsToolStripMenuItem.Text = "Add all local systems";
+            this.addAllLocalSystemsToolStripMenuItem.Text = Properties.Strings.Trilateration_AddLocal;
             this.addAllLocalSystemsToolStripMenuItem.Click += new System.EventHandler(this.addAllLocalSystemsToolStripMenuItem_Click);
             // 
             // addAllEDSMSystemsToolStripMenuItem
             // 
             this.addAllEDSMSystemsToolStripMenuItem.Name = "addAllEDSMSystemsToolStripMenuItem";
             this.addAllEDSMSystemsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.addAllEDSMSystemsToolStripMenuItem.Text = "Add all EDSM systems";
+            this.addAllEDSMSystemsToolStripMenuItem.Text = Properties.Strings.Trilateration_AddEDSM;
             this.addAllEDSMSystemsToolStripMenuItem.Click += new System.EventHandler(this.addAllEDSMSystemsToolStripMenuItem_Click);
             // 
             // panel_controls
@@ -219,7 +219,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonSubmitDistances.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonSubmitDistances.Name = "toolStripButtonSubmitDistances";
             this.toolStripButtonSubmitDistances.Size = new System.Drawing.Size(118, 22);
-            this.toolStripButtonSubmitDistances.Text = "&Submit Distances";
+            this.toolStripButtonSubmitDistances.Text = Properties.Strings.Trilateration_SubmitDistances;
             this.toolStripButtonSubmitDistances.Click += new System.EventHandler(this.toolStripButtonSubmitDistances_Click);
             // 
             // toolStripButtonNew
@@ -228,8 +228,8 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNew.Name = "toolStripButtonNew";
             this.toolStripButtonNew.Size = new System.Drawing.Size(76, 22);
-            this.toolStripButtonNew.Text = "Start &new";
-            this.toolStripButtonNew.ToolTipText = "Calculate coordinates for current system";
+            this.toolStripButtonNew.Text = Properties.Strings.Trilateration_StartNew;
+            this.toolStripButtonNew.ToolTipText = Properties.Strings.Trilateration_StartNew_ToolTip;
             this.toolStripButtonNew.Click += new System.EventHandler(this.buttonStartNew_Click);
             // 
             // toolStripSeparator1
@@ -244,8 +244,8 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonRemoveUnused.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonRemoveUnused.Name = "toolStripButtonRemoveUnused";
             this.toolStripButtonRemoveUnused.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonRemoveUnused.Text = "toolStripButtonRemoveUnused";
-            this.toolStripButtonRemoveUnused.ToolTipText = "Remove unused";
+            this.toolStripButtonRemoveUnused.Text = Properties.Strings.Trilateration_RemoveUnused;
+            this.toolStripButtonRemoveUnused.ToolTipText = Properties.Strings.Trilateration_RemoveUnused_ToolTip;
             this.toolStripButtonRemoveUnused.Click += new System.EventHandler(this.toolStripButtonRemoveUnused_Click);
             // 
             // toolStripButtonRemoveAll
@@ -255,8 +255,8 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonRemoveAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonRemoveAll.Name = "toolStripButtonRemoveAll";
             this.toolStripButtonRemoveAll.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonRemoveAll.Text = "toolStripButton1";
-            this.toolStripButtonRemoveAll.ToolTipText = "Remove all";
+            this.toolStripButtonRemoveAll.Text = Properties.Strings.Trilateration_RemoveAll;
+            this.toolStripButtonRemoveAll.ToolTipText = Properties.Strings.Trilateration_RemoveAll_ToolTip;
             this.toolStripButtonRemoveAll.Click += new System.EventHandler(this.toolStripButtonRemoveAll_Click);
             // 
             // toolStripButtonMap
@@ -266,8 +266,8 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonMap.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonMap.Name = "toolStripButtonMap";
             this.toolStripButtonMap.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonMap.Text = "3d map";
-            this.toolStripButtonMap.ToolTipText = "Show 3d map";
+            this.toolStripButtonMap.Text = Properties.Strings.Trilateration_ShowOnMap;
+            this.toolStripButtonMap.ToolTipText = Properties.Strings.Trilateration_ShowOnMap_ToolTip;
             this.toolStripButtonMap.Click += new System.EventHandler(this.toolStripButtonMap_Click);
             // 
             // toolStripSeparator2
@@ -279,7 +279,7 @@ namespace EDDiscovery.UserControls
             // 
             this.toolStripLabelSystem.Name = "toolStripLabelSystem";
             this.toolStripLabelSystem.Size = new System.Drawing.Size(79, 22);
-            this.toolStripLabelSystem.Text = "From System:";
+            this.toolStripLabelSystem.Text = Properties.Strings.Trilateration_FromSystem;
             // 
             // toolStripTextBoxSystem
             // 
@@ -291,8 +291,8 @@ namespace EDDiscovery.UserControls
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(154, 22);
-            this.toolStripLabel1.Text = "Visited without coordinates:";
-            this.toolStripLabel1.ToolTipText = "Start New to update count";
+            this.toolStripLabel1.Text = Properties.Strings.Trilateration_VisitedWithoutCoords;
+            this.toolStripLabel1.ToolTipText = Properties.Strings.Trilateration_VisitedWithoutCoords_ToolTip;
             // 
             // toolStripLabelNoCoords
             // 
@@ -305,8 +305,8 @@ namespace EDDiscovery.UserControls
             this.toolStripAddFromHistory.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripAddFromHistory.Name = "toolStripAddFromHistory";
             this.toolStripAddFromHistory.Size = new System.Drawing.Size(48, 22);
-            this.toolStripAddFromHistory.Text = "Add 20";
-            this.toolStripAddFromHistory.ToolTipText = "Add the oldest 20 unknown systems from history to wanted list";
+            this.toolStripAddFromHistory.Text = Properties.Strings.Trilateration_Add20;
+            this.toolStripAddFromHistory.ToolTipText = Properties.Strings.Trilateration_Add20_ToolTip;
             this.toolStripAddFromHistory.Click += new System.EventHandler(this.toolStripAddFromHistory_Click);
             // 
             // splitContainerCustom1

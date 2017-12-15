@@ -85,13 +85,13 @@ namespace EDDiscovery
             // 
             this.toolStripComboBoxTime.DropDownWidth = 140;
             this.toolStripComboBoxTime.Items.AddRange(new object[] {
-            "Distant Worlds Expedition",
-            "FGE Expedition start",
-            "Last Week",
-            "Last Month",
-            "Last Year",
-            "All",
-            "Custom"});
+            Properties.Strings.TimeRange_DistantWorlds,
+            Properties.Strings.TimeRange_FGE_Start,
+            Properties.Strings.TimeRange_LastWeek,
+            Properties.Strings.TimeRange_LastMonth,
+            Properties.Strings.TimeRange_LastYear,
+            Properties.Strings.TimeRange_All,
+            Properties.Strings.TimeRange_Custom});
             this.toolStripComboBoxTime.Name = "toolStripComboBoxTime";
             this.toolStripComboBoxTime.Size = new System.Drawing.Size(140, 29);
             this.toolStripComboBoxTime.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxTime_SelectedIndexChanged);
@@ -104,8 +104,8 @@ namespace EDDiscovery
             this.toolStripButtonZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonZoomIn.Name = "toolStripButtonZoomIn";
             this.toolStripButtonZoomIn.Size = new System.Drawing.Size(26, 26);
-            this.toolStripButtonZoomIn.Text = "toolStripButton1";
-            this.toolStripButtonZoomIn.ToolTipText = "Zoom in";
+            this.toolStripButtonZoomIn.Text = Properties.Strings.Map2D_ZoomIn;
+            this.toolStripButtonZoomIn.ToolTipText = Properties.Strings.Map2D_ZoomIn_ToolTip;
             this.toolStripButtonZoomIn.Click += new System.EventHandler(this.toolStripButtonZoomIn_Click);
             // 
             // toolStripButtonZoomOut
@@ -115,8 +115,8 @@ namespace EDDiscovery
             this.toolStripButtonZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonZoomOut.Name = "toolStripButtonZoomOut";
             this.toolStripButtonZoomOut.Size = new System.Drawing.Size(26, 26);
-            this.toolStripButtonZoomOut.Text = "toolStripButtonZoomOut";
-            this.toolStripButtonZoomOut.ToolTipText = "Zoom out";
+            this.toolStripButtonZoomOut.Text = Properties.Strings.Map2D_ZoomOut;
+            this.toolStripButtonZoomOut.ToolTipText = Properties.Strings.Map2D_ZoomOut_ToolTip;
             this.toolStripButtonZoomOut.Click += new System.EventHandler(this.toolStripButtonZoomOut_Click);
             // 
             // toolStripButtonZoomtoFit
@@ -126,8 +126,8 @@ namespace EDDiscovery
             this.toolStripButtonZoomtoFit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonZoomtoFit.Name = "toolStripButtonZoomtoFit";
             this.toolStripButtonZoomtoFit.Size = new System.Drawing.Size(26, 26);
-            this.toolStripButtonZoomtoFit.Text = "toolStripButtonZoomtoFit";
-            this.toolStripButtonZoomtoFit.ToolTipText = "Zoom to best fit";
+            this.toolStripButtonZoomtoFit.Text = Properties.Strings.Map2D_BestFit;
+            this.toolStripButtonZoomtoFit.ToolTipText = Properties.Strings.Map2D_BestFit_ToolTip;
             this.toolStripButtonZoomtoFit.Click += new System.EventHandler(this.toolStripButtonZoomtoFit_Click);
             // 
             // toolStripButtonStars
@@ -138,8 +138,8 @@ namespace EDDiscovery
             this.toolStripButtonStars.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonStars.Name = "toolStripButtonStars";
             this.toolStripButtonStars.Size = new System.Drawing.Size(26, 26);
-            this.toolStripButtonStars.Text = "Stars";
-            this.toolStripButtonStars.ToolTipText = "Show all stars";
+            this.toolStripButtonStars.Text = Properties.Strings.Map2D_ShowAllStars;
+            this.toolStripButtonStars.ToolTipText = Properties.Strings.Map2D_ShowAllStars_ToolTip;
             this.toolStripButtonStars.Click += new System.EventHandler(this.toolStripButtonStars_Click);
             // 
             // panel1
@@ -166,7 +166,7 @@ namespace EDDiscovery
             // 
             // saveFileDialog1
             // 
-            this.saveFileDialog1.Filter = "PNG Image|*.png|Bitmap Image|*.bmp|JPEG Image|*.jpg";
+            this.saveFileDialog1.Filter = Properties.Strings.Map2D_SaveFilter;
             // 
             // imageViewer1
             // 
@@ -189,7 +189,7 @@ namespace EDDiscovery
             this.Icon = global::EDDiscovery.Properties.Resources.edlogo_3mo_icon;
             this.Name = "Form2DMap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2D Map";
+            this.Text = Properties.Strings.Map2D_Title;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSagCarinaMission_FormClosing);
             this.Load += new System.EventHandler(this.FormSagCarinaMission_Load);
             this.toolStrip1.ResumeLayout(false);

@@ -110,7 +110,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNew.Name = "toolStripButtonNew";
             this.toolStripButtonNew.Size = new System.Drawing.Size(85, 22);
-            this.toolStripButtonNew.Text = "New Route";
+            this.toolStripButtonNew.Text = Properties.Strings.Expedition_New;
             this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
             // toolStripButtonImportFile
@@ -119,7 +119,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonImportFile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonImportFile.Name = "toolStripButtonImportFile";
             this.toolStripButtonImportFile.Size = new System.Drawing.Size(82, 22);
-            this.toolStripButtonImportFile.Text = "Import file";
+            this.toolStripButtonImportFile.Text = Properties.Strings.Expedition_ImportFile;
             this.toolStripButtonImportFile.Click += new System.EventHandler(this.toolStripButtonImportFile_Click);
             // 
             // toolStripButtonImportRoute
@@ -128,8 +128,8 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonImportRoute.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonImportRoute.Name = "toolStripButtonImportRoute";
             this.toolStripButtonImportRoute.Size = new System.Drawing.Size(94, 22);
-            this.toolStripButtonImportRoute.Text = "Import route";
-            this.toolStripButtonImportRoute.ToolTipText = "Import from route tab";
+            this.toolStripButtonImportRoute.Text = Properties.Strings.Expedition_ImportRoute;
+            this.toolStripButtonImportRoute.ToolTipText = Properties.Strings.Expedition_ImportRoute_ToolTip;
             this.toolStripButtonImportRoute.Click += new System.EventHandler(this.toolStripButtonImportRoute_Click);
             // 
             // toolStripButtonSave
@@ -138,7 +138,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.Size = new System.Drawing.Size(85, 22);
-            this.toolStripButtonSave.Text = "Save Route";
+            this.toolStripButtonSave.Text = Properties.Strings.Expedition_Save;
             this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
             // toolStripButtonExport
@@ -147,8 +147,8 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonExport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonExport.Name = "toolStripButtonExport";
             this.toolStripButtonExport.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButtonExport.Text = "Export";
-            this.toolStripButtonExport.ToolTipText = "Export to file";
+            this.toolStripButtonExport.Text = Properties.Strings.Expedition_Export;
+            this.toolStripButtonExport.ToolTipText = Properties.Strings.Expedition_Export_ToolTip;
             this.toolStripButtonExport.Click += new System.EventHandler(this.toolStripButtonExport_Click);
             // 
             // toolStripButtonDelete
@@ -157,7 +157,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
             this.toolStripButtonDelete.Size = new System.Drawing.Size(94, 22);
-            this.toolStripButtonDelete.Text = "Delete Route";
+            this.toolStripButtonDelete.Text = Properties.Strings.Expedition_Delete;
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
             // 
             // toolStripButtonShowOn3DMap
@@ -165,7 +165,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonShowOn3DMap.Image = global::EDDiscovery.Icons.Controls.Expedition_ShowOnMap;
             this.toolStripButtonShowOn3DMap.Name = "toolStripButtonShowOn3DMap";
             this.toolStripButtonShowOn3DMap.Size = new System.Drawing.Size(117, 20);
-            this.toolStripButtonShowOn3DMap.Text = "Show on 3D Map";
+            this.toolStripButtonShowOn3DMap.Text = Properties.Strings.Expedition_ShowOnMap;
             this.toolStripButtonShowOn3DMap.Click += new System.EventHandler(this.toolStripButtonShowOn3DMap_Click);
             // 
             // toolStripComboBoxRouteSelection
@@ -458,42 +458,42 @@ namespace EDDiscovery.UserControls
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Text = Properties.Strings.Table_Copy;
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Text = Properties.Strings.Table_Paste;
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // insertCopiedToolStripMenuItem
             // 
             this.insertCopiedToolStripMenuItem.Name = "insertCopiedToolStripMenuItem";
             this.insertCopiedToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.insertCopiedToolStripMenuItem.Text = "Insert Copied Rows";
+            this.insertCopiedToolStripMenuItem.Text = Properties.Strings.Table_InsertCopiedRows;
             this.insertCopiedToolStripMenuItem.Click += new System.EventHandler(this.insertCopiedToolStripMenuItem_Click);
             // 
             // deleteRowsToolStripMenuItem
             // 
             this.deleteRowsToolStripMenuItem.Name = "deleteRowsToolStripMenuItem";
             this.deleteRowsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.deleteRowsToolStripMenuItem.Text = "Delete Rows";
+            this.deleteRowsToolStripMenuItem.Text = Properties.Strings.Table_DeleteRows;
             this.deleteRowsToolStripMenuItem.Click += new System.EventHandler(this.deleteRowsToolStripMenuItem_Click);
             // 
             // setTargetToolStripMenuItem
             // 
             this.setTargetToolStripMenuItem.Name = "setTargetToolStripMenuItem";
             this.setTargetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.setTargetToolStripMenuItem.Text = "Set Target";
+            this.setTargetToolStripMenuItem.Text = Properties.Strings.Table_SetTarget;
             this.setTargetToolStripMenuItem.Click += new System.EventHandler(this.setTargetToolStripMenuItem_Click);
             // 
             // editBookmarkToolStripMenuItem
             // 
             this.editBookmarkToolStripMenuItem.Name = "editBookmarkToolStripMenuItem";
             this.editBookmarkToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.editBookmarkToolStripMenuItem.Text = "Edit bookmark";
+            this.editBookmarkToolStripMenuItem.Text = Properties.Strings.Table_EditBookmark;
             this.editBookmarkToolStripMenuItem.Click += new System.EventHandler(this.editBookmarkToolStripMenuItem_Click);
             // 
             // ctxMenuCombo
@@ -507,7 +507,7 @@ namespace EDDiscovery.UserControls
             // 
             this.ctxMenuItemUndelete.Name = "ctxMenuItemUndelete";
             this.ctxMenuItemUndelete.Size = new System.Drawing.Size(121, 22);
-            this.ctxMenuItemUndelete.Text = "&Undelete";
+            this.ctxMenuItemUndelete.Text = Properties.Strings.Expedition_Undelete;
             // 
             // UserControlExpedition
             // 

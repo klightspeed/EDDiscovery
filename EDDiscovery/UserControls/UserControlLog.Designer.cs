@@ -74,7 +74,7 @@ namespace EDDiscovery.UserControls
             // 
             this.clearLogToolStripMenuItem.Name = "clearLogToolStripMenuItem";
             this.clearLogToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.clearLogToolStripMenuItem.Text = "Clear Log";
+            this.clearLogToolStripMenuItem.Text = Properties.Strings.Log_Clear;
             this.clearLogToolStripMenuItem.Click += new System.EventHandler(this.clearLogToolStripMenuItem_Click);
             // 
             // UserControlLog

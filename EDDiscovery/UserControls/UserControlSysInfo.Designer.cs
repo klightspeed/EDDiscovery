@@ -152,7 +152,7 @@ namespace EDDiscovery.UserControls
             this.toolStripSystem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripSystem.Name = "toolStripSystem";
             this.toolStripSystem.Size = new System.Drawing.Size(255, 22);
-            this.toolStripSystem.Text = "Display System Name";
+            this.toolStripSystem.Text = Properties.Strings.SysInfo_ShowSysName;
             this.toolStripSystem.Click += new System.EventHandler(this.toolStripSystem_Click);
             // 
             // toolStripEDSM
@@ -162,7 +162,7 @@ namespace EDDiscovery.UserControls
             this.toolStripEDSM.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripEDSM.Name = "toolStripEDSM";
             this.toolStripEDSM.Size = new System.Drawing.Size(255, 22);
-            this.toolStripEDSM.Text = "Display EDSM Buttons";
+            this.toolStripEDSM.Text = Properties.Strings.SysInfo_ShowEDSM;
             this.toolStripEDSM.Click += new System.EventHandler(this.toolStripEDSM_Click);
             // 
             // toolStripEDSMDownLine
@@ -172,7 +172,7 @@ namespace EDDiscovery.UserControls
             this.toolStripEDSMDownLine.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripEDSMDownLine.Name = "toolStripEDSMDownLine";
             this.toolStripEDSMDownLine.Size = new System.Drawing.Size(255, 22);
-            this.toolStripEDSMDownLine.Text = "EDSM buttons on separate line";
+            this.toolStripEDSMDownLine.Text = Properties.Strings.SysInfo_ShowEDSMSepLine;
             this.toolStripEDSMDownLine.Click += new System.EventHandler(this.toolStripEDSMButtons_Click);
             // 
             // toolStripVisits
@@ -182,7 +182,7 @@ namespace EDDiscovery.UserControls
             this.toolStripVisits.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripVisits.Name = "toolStripVisits";
             this.toolStripVisits.Size = new System.Drawing.Size(255, 22);
-            this.toolStripVisits.Text = "Display Visits";
+            this.toolStripVisits.Text = Properties.Strings.SysInfo_ShowVisits;
             this.toolStripVisits.Click += new System.EventHandler(this.toolStripVisits_Click);
             // 
             // toolStripBody
@@ -192,7 +192,7 @@ namespace EDDiscovery.UserControls
             this.toolStripBody.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripBody.Name = "toolStripBody";
             this.toolStripBody.Size = new System.Drawing.Size(255, 22);
-            this.toolStripBody.Text = "Display Body Name";
+            this.toolStripBody.Text = Properties.Strings.SysInfo_ShowBody;
             this.toolStripBody.Click += new System.EventHandler(this.toolStripBody_Click);
             // 
             // toolStripPosition
@@ -202,7 +202,7 @@ namespace EDDiscovery.UserControls
             this.toolStripPosition.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripPosition.Name = "toolStripPosition";
             this.toolStripPosition.Size = new System.Drawing.Size(255, 22);
-            this.toolStripPosition.Text = "Display Position";
+            this.toolStripPosition.Text = Properties.Strings.SysInfo_ShowCoords;
             this.toolStripPosition.Click += new System.EventHandler(this.toolStripPosition_Click);
             // 
             // toolStripDistanceFrom
@@ -212,7 +212,7 @@ namespace EDDiscovery.UserControls
             this.toolStripDistanceFrom.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripDistanceFrom.Name = "toolStripDistanceFrom";
             this.toolStripDistanceFrom.Size = new System.Drawing.Size(255, 22);
-            this.toolStripDistanceFrom.Text = "Display Distance From";
+            this.toolStripDistanceFrom.Text = Properties.Strings.SysInfo_ShowDist;
             this.toolStripDistanceFrom.Click += new System.EventHandler(this.enableDistanceFromToolStripMenuItem_Click);
             // 
             // toolStripSystemState
@@ -222,7 +222,7 @@ namespace EDDiscovery.UserControls
             this.toolStripSystemState.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripSystemState.Name = "toolStripSystemState";
             this.toolStripSystemState.Size = new System.Drawing.Size(255, 22);
-            this.toolStripSystemState.Text = "Display System State";
+            this.toolStripSystemState.Text = Properties.Strings.SysInfo_ShowState;
             this.toolStripSystemState.Click += new System.EventHandler(this.toolStripSystemState_Click);
             // 
             // toolStripNotes
@@ -232,7 +232,7 @@ namespace EDDiscovery.UserControls
             this.toolStripNotes.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripNotes.Name = "toolStripNotes";
             this.toolStripNotes.Size = new System.Drawing.Size(255, 22);
-            this.toolStripNotes.Text = "Display Notes";
+            this.toolStripNotes.Text = Properties.Strings.SysInfo_ShowNotes;
             this.toolStripNotes.Click += new System.EventHandler(this.toolStripNotes_Click);
             // 
             // toolStripTarget
@@ -242,7 +242,7 @@ namespace EDDiscovery.UserControls
             this.toolStripTarget.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripTarget.Name = "toolStripTarget";
             this.toolStripTarget.Size = new System.Drawing.Size(255, 22);
-            this.toolStripTarget.Text = "Display Target";
+            this.toolStripTarget.Text = Properties.Strings.SysInfo_ShowTarget;
             this.toolStripTarget.Click += new System.EventHandler(this.toolStripTarget_Click);
             // 
             // toolStripShip
@@ -252,7 +252,7 @@ namespace EDDiscovery.UserControls
             this.toolStripShip.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripShip.Name = "toolStripShip";
             this.toolStripShip.Size = new System.Drawing.Size(255, 22);
-            this.toolStripShip.Text = "Display Ship Information";
+            this.toolStripShip.Text = Properties.Strings.SysInfo_ShowShipInfo;
             this.toolStripShip.Click += new System.EventHandler(this.toolStripShip_Click);
             // 
             // toolStripFuel
@@ -261,7 +261,7 @@ namespace EDDiscovery.UserControls
             this.toolStripFuel.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripFuel.Name = "toolStripFuel";
             this.toolStripFuel.Size = new System.Drawing.Size(255, 22);
-            this.toolStripFuel.Text = "Display Fuel Level";
+            this.toolStripFuel.Text = Properties.Strings.SysInfo_ShowFuel;
             this.toolStripFuel.Click += new System.EventHandler(this.toolStripFuel_Click);
             // 
             // toolStripCargo
@@ -271,7 +271,7 @@ namespace EDDiscovery.UserControls
             this.toolStripCargo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripCargo.Name = "toolStripCargo";
             this.toolStripCargo.Size = new System.Drawing.Size(255, 22);
-            this.toolStripCargo.Text = "Display Cargo Count";
+            this.toolStripCargo.Text = Properties.Strings.SysInfo_ShowCargo;
             this.toolStripCargo.Click += new System.EventHandler(this.toolStripCargo_Click);
             // 
             // toolStripDataCount
@@ -280,7 +280,7 @@ namespace EDDiscovery.UserControls
             this.toolStripDataCount.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripDataCount.Name = "toolStripDataCount";
             this.toolStripDataCount.Size = new System.Drawing.Size(255, 22);
-            this.toolStripDataCount.Text = "Display Data Count";
+            this.toolStripDataCount.Text = Properties.Strings.SysInfo_ShowData;
             this.toolStripDataCount.Click += new System.EventHandler(this.toolStripDataCount_Click);
             // 
             // toolStripMaterialCounts
@@ -289,14 +289,14 @@ namespace EDDiscovery.UserControls
             this.toolStripMaterialCounts.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMaterialCounts.Name = "toolStripMaterialCounts";
             this.toolStripMaterialCounts.Size = new System.Drawing.Size(255, 22);
-            this.toolStripMaterialCounts.Text = "Display Material Count";
+            this.toolStripMaterialCounts.Text = Properties.Strings.SysInfo_ShowMats;
             this.toolStripMaterialCounts.Click += new System.EventHandler(this.toolStripMaterialCount_Click);
             // 
             // toolStripCredits
             // 
             this.toolStripCredits.Name = "toolStripCredits";
             this.toolStripCredits.Size = new System.Drawing.Size(255, 22);
-            this.toolStripCredits.Text = "Display Credits";
+            this.toolStripCredits.Text = Properties.Strings.SysInfo_ShowCredits;
             this.toolStripCredits.Click += new System.EventHandler(this.toolStripCredits_Click);
             // 
             // toolStripGameMode
@@ -306,7 +306,7 @@ namespace EDDiscovery.UserControls
             this.toolStripGameMode.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripGameMode.Name = "toolStripGameMode";
             this.toolStripGameMode.Size = new System.Drawing.Size(255, 22);
-            this.toolStripGameMode.Text = "Display Game Mode";
+            this.toolStripGameMode.Text = Properties.Strings.SysInfo_ShowMode;
             this.toolStripGameMode.Click += new System.EventHandler(this.toolStripGameMode_Click);
             // 
             // toolStripTravel
@@ -316,7 +316,7 @@ namespace EDDiscovery.UserControls
             this.toolStripTravel.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripTravel.Name = "toolStripTravel";
             this.toolStripTravel.Size = new System.Drawing.Size(255, 22);
-            this.toolStripTravel.Text = "Display Travel Trip Statistics";
+            this.toolStripTravel.Text = Properties.Strings.SysInfo_ShowTrip;
             this.toolStripTravel.Click += new System.EventHandler(this.toolStripTravel_Click);
             // 
             // toolStripSkinny
@@ -326,21 +326,21 @@ namespace EDDiscovery.UserControls
             this.toolStripSkinny.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripSkinny.Name = "toolStripSkinny";
             this.toolStripSkinny.Size = new System.Drawing.Size(255, 22);
-            this.toolStripSkinny.Text = "When transparent, use skinny look";
+            this.toolStripSkinny.Text = Properties.Strings.SysInfo_Skinny;
             this.toolStripSkinny.Click += new System.EventHandler(this.whenTransparentUseSkinnyLookToolStripMenuItem_Click);
             // 
             // toolStripReset
             // 
             this.toolStripReset.Name = "toolStripReset";
             this.toolStripReset.Size = new System.Drawing.Size(255, 22);
-            this.toolStripReset.Text = "Reset";
+            this.toolStripReset.Text = Properties.Strings.SysInfo_Reset;
             this.toolStripReset.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
             // toolStripRemoveAll
             // 
             this.toolStripRemoveAll.Name = "toolStripRemoveAll";
             this.toolStripRemoveAll.Size = new System.Drawing.Size(255, 22);
-            this.toolStripRemoveAll.Text = "Remove All";
+            this.toolStripRemoveAll.Text = Properties.Strings.SysInfo_RemoveAll;
             this.toolStripRemoveAll.Click += new System.EventHandler(this.toolStripRemoveAll_Click);
             // 
             // textBoxBody

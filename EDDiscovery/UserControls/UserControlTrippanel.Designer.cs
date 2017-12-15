@@ -74,14 +74,14 @@ namespace EDDiscovery.UserControls
             // 
             this.setJumpRangeToolStripMenuItem.Name = "setJumpRangeToolStripMenuItem";
             this.setJumpRangeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.setJumpRangeToolStripMenuItem.Text = "Set ship details";
+            this.setJumpRangeToolStripMenuItem.Text = Properties.Strings.TripPanel_ShipDetails;
             this.setJumpRangeToolStripMenuItem.Click += new System.EventHandler(this.setShipDetailsToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
             this.refreshToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Text = Properties.Strings.TripPanel_Refresh;
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // UserControlTrippanel

@@ -1,0 +1,1299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Commander_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Commander_CMDRName" xml:space="preserve">
+    <value>Commander Name:</value>
+  </data>
+  <data name="Commander_CMDRName_ToolTip" xml:space="preserve">
+    <value>Enter commander name as used in Elite Dangerous</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmAbandon" xml:space="preserve">
+    <value>You have entered text in the CAPI login or password fields, do you want to abandon CAPI credential check?</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmAbandon_Title" xml:space="preserve">
+    <value>Warning CAPI Information</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmClear" xml:space="preserve">
+    <value>Confirm you wish to delete the credentials stored for this commander</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmClear_Title" xml:space="preserve">
+    <value>Companion API Clear Credentials</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmCode" xml:space="preserve">
+    <value>Confirm Code:</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmCode_ToolTip" xml:space="preserve">
+    <value>Enter the confirmation code you just received via email from Frontier</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmFailed" xml:space="preserve">
+    <value>Confirm Failed:</value>
+  </data>
+  <data name="Commander_CompanionLogin_ConfirmFailed_Title" xml:space="preserve">
+    <value>Companion API Login</value>
+  </data>
+  <data name="Commander_CompanionLogin_Enable" xml:space="preserve">
+    <value>Enable Login</value>
+  </data>
+  <data name="Commander_CompanionLogin_Group" xml:space="preserve">
+    <value>Frontier Companion API (optional)</value>
+  </data>
+  <data name="Commander_CompanionLogin_LoginFailed" xml:space="preserve">
+    <value>Failed to login to Frontier Companion API:</value>
+  </data>
+  <data name="Commander_CompanionLogin_LoginFailed_Title" xml:space="preserve">
+    <value>Companion API Login</value>
+  </data>
+  <data name="Commander_CompanionLogin_Password" xml:space="preserve">
+    <value>Login Password:</value>
+  </data>
+  <data name="Commander_CompanionLogin_Password_ToolTip" xml:space="preserve">
+    <value>Enter your Frontier Password</value>
+  </data>
+  <data name="Commander_CompanionLogin_State_Confirmed" xml:space="preserve">
+    <value>Confirmed Credentials</value>
+  </data>
+  <data name="Commander_CompanionLogin_State_NeedConfirmation" xml:space="preserve">
+    <value>Require Confirmation</value>
+  </data>
+  <data name="Commander_CompanionLogin_State_NoCreds" xml:space="preserve">
+    <value>No Credentials</value>
+  </data>
+  <data name="Commander_CompanionLogin_State_None" xml:space="preserve">
+    <value>CAPI current state</value>
+  </data>
+  <data name="Commander_CompanionLogin_Submit_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Commander_CompanionLogin_Submit_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Commander_CompanionLogin_Submit_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Commander_CompanionLogin_Username" xml:space="preserve">
+    <value>Login ID:</value>
+  </data>
+  <data name="Commander_CompanionLogin_Username_ToolTip" xml:space="preserve">
+    <value>Enter you Frontier ID, which is the email you registered with Frontier. Does not work for Steam installs</value>
+  </data>
+  <data name="Commander_EDDN_Group" xml:space="preserve">
+    <value>EDDN</value>
+  </data>
+  <data name="Commander_EDSMApiKey" xml:space="preserve">
+    <value>EDSM API Key:</value>
+  </data>
+  <data name="Commander_EDSMApiKey_ToolTip" xml:space="preserve">
+    <value>Enter the API key from the EDSM Website</value>
+  </data>
+  <data name="Commander_EDSMInfo" xml:space="preserve">
+    <value>Get an EDSM API key from https://www.edsm.net in "My account" menu</value>
+  </data>
+  <data name="Commander_EDSMName" xml:space="preserve">
+    <value>EDSM Name:</value>
+  </data>
+  <data name="Commander_EDSMName_ToolTip" xml:space="preserve">
+    <value>Give the name this commander is known as in EDSM</value>
+  </data>
+  <data name="Commander_EDSM_Group" xml:space="preserve">
+    <value>EDSM Information (optional)</value>
+  </data>
+  <data name="Commander_EGOApiKey" xml:space="preserve">
+    <value>EGO API Key:</value>
+  </data>
+  <data name="Commander_EGOApiKey_Info" xml:space="preserve">
+    <value>Get an EGO API key from https://www.elitegalaxyonline.com in the account menu</value>
+  </data>
+  <data name="Commander_EGOApiKey_ToolTip" xml:space="preserve">
+    <value>Enter the API key from the EGO Website</value>
+  </data>
+  <data name="Commander_EGOName" xml:space="preserve">
+    <value>EGO Name:</value>
+  </data>
+  <data name="Commander_EGOName_ToolTip" xml:space="preserve">
+    <value>Give the user name for this commander on EGO</value>
+  </data>
+  <data name="Commander_EGO_Info" xml:space="preserve">
+    <value>Elite Galaxy Online Information (optional)</value>
+  </data>
+  <data name="Commander_JournalBrowse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="Commander_JournalBrowse_ToolTip" xml:space="preserve">
+    <value>Browse to the the journal folder</value>
+  </data>
+  <data name="Commander_JournalDir" xml:space="preserve">
+    <value>Journal Location:</value>
+  </data>
+  <data name="Commander_JournalDir_Desc" xml:space="preserve">
+    <value>Select folder where Journal*.log files are stored by Frontier in</value>
+  </data>
+  <data name="Commander_JournalDir_Info" xml:space="preserve">
+    <value>Leave override journal location blank to use the standard Frontier location for journals</value>
+  </data>
+  <data name="Commander_JournalDir_ToolTip" xml:space="preserve">
+    <value>Enter the journal folder location.  Normally leave this field blank unless you are using EDD on another computer than your play computer</value>
+  </data>
+  <data name="Commander_Journal_Group" xml:space="preserve">
+    <value>Journal Related Information</value>
+  </data>
+  <data name="Commander_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Commander_SendToEDDN" xml:space="preserve">
+    <value>Send Event Information to EDDN</value>
+  </data>
+  <data name="Commander_SendToEDDN_ToolTip" xml:space="preserve">
+    <value>Check to send journal information to EDDN. EDDN feeds tools such as EDDB, EDSM, Inara with data from commanders. All data is made anonymised</value>
+  </data>
+  <data name="Commander_SyncFromEDSM" xml:space="preserve">
+    <value>Sync From EDSM</value>
+  </data>
+  <data name="Commander_SyncFromEDSM_ToolTip" xml:space="preserve">
+    <value>Receive any FSD jumps from EDSM that are on their database but not in EDDiscovery</value>
+  </data>
+  <data name="Commander_SyncToEDSM" xml:space="preserve">
+    <value>Sync to EDSM</value>
+  </data>
+  <data name="Commander_SyncToEDSM_ToolTip" xml:space="preserve">
+    <value>Send your travel and ship data to EDSM</value>
+  </data>
+  <data name="Commander_SyncToEGO" xml:space="preserve">
+    <value>Sync to EGO</value>
+  </data>
+  <data name="Commander_SyncToEGO_ToolTip" xml:space="preserve">
+    <value>Send your scan data to EGO</value>
+  </data>
+  <data name="Commander_Title" xml:space="preserve">
+    <value>Commander Settings</value>
+  </data>
+  <data name="EDSM_ShowOn3DMap" xml:space="preserve">
+    <value>Go to star on 3D Map</value>
+  </data>
+  <data name="EDSM_ViewOnEDSM" xml:space="preserve">
+    <value>View on EDSM</value>
+  </data>
+  <data name="Expedition_Delete" xml:space="preserve">
+    <value>Delete Route</value>
+  </data>
+  <data name="Expedition_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Expedition_Export_ToolTip" xml:space="preserve">
+    <value>Export to file</value>
+  </data>
+  <data name="Expedition_ImportFile" xml:space="preserve">
+    <value>Import file</value>
+  </data>
+  <data name="Expedition_ImportRoute" xml:space="preserve">
+    <value>Import route</value>
+  </data>
+  <data name="Expedition_ImportRoute_ToolTip" xml:space="preserve">
+    <value>Import from route tab</value>
+  </data>
+  <data name="Expedition_New" xml:space="preserve">
+    <value>New Route</value>
+  </data>
+  <data name="Expedition_Save" xml:space="preserve">
+    <value>Save Route</value>
+  </data>
+  <data name="Expedition_ShowOnMap" xml:space="preserve">
+    <value>Show on 3D Map</value>
+  </data>
+  <data name="Expedition_Undelete" xml:space="preserve">
+    <value>&amp;Undelete</value>
+  </data>
+  <data name="Exploration_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Exploration_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Exploration_Export_ToolTip" xml:space="preserve">
+    <value>Export to file</value>
+  </data>
+  <data name="Exploration_ImportFile" xml:space="preserve">
+    <value>Import File</value>
+  </data>
+  <data name="Exploration_ImportSphere" xml:space="preserve">
+    <value>Import Sphere</value>
+  </data>
+  <data name="Exploration_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Exploration_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Exploration_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="JournalGrid_CopyEntry" xml:space="preserve">
+    <value>Copy journal entry to clipboard</value>
+  </data>
+  <data name="JournalGrid_RunActions" xml:space="preserve">
+    <value>Run Actions on this entry</value>
+  </data>
+  <data name="JournalGrid_SendUnsyncedEDDN" xml:space="preserve">
+    <value>Send unsynced scan to EDDN</value>
+  </data>
+  <data name="JournalGrid_SetStartStop" xml:space="preserve">
+    <value>Set Start/Stop point for travel calculations</value>
+  </data>
+  <data name="JournalGrid_ShowOnMap" xml:space="preserve">
+    <value>Go to star on 3D Map</value>
+  </data>
+  <data name="JournalGrid_ViewOnEDSM" xml:space="preserve">
+    <value>View on EDSM</value>
+  </data>
+  <data name="Ledger_GoToEntry" xml:space="preserve">
+    <value>Go to entry on grid</value>
+  </data>
+  <data name="Log_Clear" xml:space="preserve">
+    <value>Clear Log</value>
+  </data>
+  <data name="Main_Addons_ConfigureAddOnActions" xml:space="preserve">
+    <value>&amp;Edit Add-On Action Files</value>
+  </data>
+  <data name="Main_Addons_EditLastActionPack" xml:space="preserve">
+    <value>Edit Last Action Pack</value>
+  </data>
+  <data name="Main_Addons_ManageAddOns" xml:space="preserve">
+    <value>&amp;Manage Add-Ons</value>
+  </data>
+  <data name="Main_Addons_Menu" xml:space="preserve">
+    <value>&amp;Add-Ons</value>
+  </data>
+  <data name="Main_Addons_StopCurrentAction" xml:space="preserve">
+    <value>&amp;Stop current running Action Program</value>
+  </data>
+  <data name="Main_Admin_ClearEDSMIDs" xml:space="preserve">
+    <value>Clear EDSM IDs assigned to all records for current commander</value>
+  </data>
+  <data name="Main_Admin_DeleteDupFSDJumps" xml:space="preserve">
+    <value>Delete duplicate FSD Jump entries</value>
+  </data>
+  <data name="Main_Admin_EDDBSystemsSync" xml:space="preserve">
+    <value>Synchronise with EDDB</value>
+  </data>
+  <data name="Main_Admin_EDSMSystemsSync" xml:space="preserve">
+    <value>Synchronise with EDSM Stars</value>
+  </data>
+  <data name="Main_Admin_ExportVisitedStars" xml:space="preserve">
+    <value>Export Visited Stars List to Elite Dangerous</value>
+  </data>
+  <data name="Main_Admin_ForceReadNetlogs" xml:space="preserve">
+    <value>Force reload logs</value>
+  </data>
+  <data name="Main_Admin_Menu" xml:space="preserve">
+    <value>A&amp;dmin</value>
+  </data>
+  <data name="Main_Admin_ReadNetLogs" xml:space="preserve">
+    <value>Read 2.1 and former log files</value>
+  </data>
+  <data name="Main_Admin_RescanJournals" xml:space="preserve">
+    <value>Re-scan all journal files</value>
+  </data>
+  <data name="Main_Admin_ResetHistory" xml:space="preserve">
+    <value>Reset all history to current commander</value>
+  </data>
+  <data name="Main_Admin_SendUnsyncedEDDN" xml:space="preserve">
+    <value>Send unsynced EDDN events</value>
+  </data>
+  <data name="Main_Admin_SendUnsyncedEGO" xml:space="preserve">
+    <value>Send unsynced EGO scans</value>
+  </data>
+  <data name="Main_Admin_ShowLogFiles" xml:space="preserve">
+    <value>Show journal files directory of current commander</value>
+  </data>
+  <data name="Main_Help_About" xml:space="preserve">
+    <value>&amp;About</value>
+  </data>
+  <data name="Main_Help_CheckForNewRelease" xml:space="preserve">
+    <value>&amp;Check for Updates</value>
+  </data>
+  <data name="Main_Help_DiscordChat" xml:space="preserve">
+    <value>&amp;Discord - EDD Community Chat</value>
+  </data>
+  <data name="Main_Help_FrontierForumThread" xml:space="preserve">
+    <value>&amp;Frontier Forum Thread</value>
+  </data>
+  <data name="Main_Help_Github" xml:space="preserve">
+    <value>&amp;Project Page (GitHub)</value>
+  </data>
+  <data name="Main_Help_Help" xml:space="preserve">
+    <value>&amp;View Help</value>
+  </data>
+  <data name="Main_Help_Menu" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="Main_Help_ReportIssue" xml:space="preserve">
+    <value>&amp;Report Issue / Idea</value>
+  </data>
+  <data name="Main_Help_SafeModeHelp" xml:space="preserve">
+    <value>How to Run in Safe Mode to reset various parameters</value>
+  </data>
+  <data name="Main_Tabs_AddTab" xml:space="preserve">
+    <value>Insert Tab with panel..</value>
+  </data>
+  <data name="Main_Tabs_RemoveTab" xml:space="preserve">
+    <value>Remove Tab</value>
+  </data>
+  <data name="Main_Title" xml:space="preserve">
+    <value>EDDiscovery</value>
+  </data>
+  <data name="Main_Tools_Exit" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="Main_Tools_Menu" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="Main_Tools_Popouts_DisableTransparency" xml:space="preserve">
+    <value>&amp;Turn Off All Transparency</value>
+  </data>
+  <data name="Main_Tools_Popouts_Menu" xml:space="preserve">
+    <value>&amp;Pop-outs</value>
+  </data>
+  <data name="Main_Tools_Popouts_ShowInTaskbar" xml:space="preserve">
+    <value>&amp;Show All In Task Bar</value>
+  </data>
+  <data name="Main_Tools_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Main_Tools_Show2DMaps" xml:space="preserve">
+    <value>Show &amp;2D maps</value>
+  </data>
+  <data name="Main_Tools_Show3DMaps" xml:space="preserve">
+    <value>Show &amp;3D maps</value>
+  </data>
+  <data name="Main_TrayIcon_Exit" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="Main_TrayIcon_Hide" xml:space="preserve">
+    <value>&amp;Hide Tray Icon</value>
+  </data>
+  <data name="Main_TrayIcon_Open" xml:space="preserve">
+    <value>&amp;Open EDDiscovery</value>
+  </data>
+  <data name="Map2D_BestFit" xml:space="preserve">
+    <value>Zoom to best fit</value>
+  </data>
+  <data name="Map2D_BestFit_ToolTip" xml:space="preserve">
+    <value>Zoom to best fit</value>
+  </data>
+  <data name="Map2D_NoMapsAvailable" xml:space="preserve">
+    <value>No maps available</value>
+  </data>
+  <data name="Map2D_SaveFilter" xml:space="preserve">
+    <value>PNG Image|*.png|Bitmap Image|*.bmp|JPEG Image|*.jpg</value>
+  </data>
+  <data name="Map2D_ShowAllStars" xml:space="preserve">
+    <value>Show all stars</value>
+  </data>
+  <data name="Map2D_ShowAllStars_ToolTip" xml:space="preserve">
+    <value>Show all stars</value>
+  </data>
+  <data name="Map2D_Title" xml:space="preserve">
+    <value>2D Map</value>
+  </data>
+  <data name="Map2D_ZoomIn" xml:space="preserve">
+    <value>Zoom in</value>
+  </data>
+  <data name="Map2D_ZoomIn_ToolTip" xml:space="preserve">
+    <value>Zoom in</value>
+  </data>
+  <data name="Map2D_ZoomOut" xml:space="preserve">
+    <value>Zoom out</value>
+  </data>
+  <data name="Map2D_ZoomOut_ToolTip" xml:space="preserve">
+    <value>Zoom out</value>
+  </data>
+  <data name="Map3D_Bookmarks_AddRegionBookmark" xml:space="preserve">
+    <value>New Region Bookmark</value>
+  </data>
+  <data name="Map3D_Bookmarks_AddRegionBookmark_ToolTip" xml:space="preserve">
+    <value>New Region Bookmark</value>
+  </data>
+  <data name="Map3D_Bookmarks_Menu" xml:space="preserve">
+    <value>Bookmarks</value>
+  </data>
+  <data name="Map3D_Bookmarks_Menu_ToolTip" xml:space="preserve">
+    <value>Display or disable display of bookmarks and add a new region bookmark</value>
+  </data>
+  <data name="Map3D_Bookmarks_ShowBookmarks" xml:space="preserve">
+    <value>Show Bookmarks</value>
+  </data>
+  <data name="Map3D_Bookmarks_ShowBookmarks_ToolTip" xml:space="preserve">
+    <value>Show Bookmarks</value>
+  </data>
+  <data name="Map3D_Bookmarks_ShowNotemarks" xml:space="preserve">
+    <value>Show Note marks</value>
+  </data>
+  <data name="Map3D_Bookmarks_ShowNotemarks_ToolTip" xml:space="preserve">
+    <value>Show Note marks</value>
+  </data>
+  <data name="Map3D_CenterSystemName_ToolTip" xml:space="preserve">
+    <value>Enter system to centre on</value>
+  </data>
+  <data name="Map3D_CentreSystemCoords_NoSystem" xml:space="preserve">
+    <value>No centre system</value>
+  </data>
+  <data name="Map3D_ClickedSystemCoords_Help" xml:space="preserve">
+    <value>Click a star to select/copy, double-click to center</value>
+  </data>
+  <data name="Map3D_EliteMovement" xml:space="preserve">
+    <value>Elite Movement</value>
+  </data>
+  <data name="Map3D_EliteMovement_ToolTip" xml:space="preserve">
+    <value>W/A/S/D move within plane; R/F move perpendicular to plane (perspective mode only)</value>
+  </data>
+  <data name="Map3D_FilterDate" xml:space="preserve">
+    <value>Date Range</value>
+  </data>
+  <data name="Map3D_FilterDate_ToolTip" xml:space="preserve">
+    <value>Filter by Expedition or date</value>
+  </data>
+  <data name="Map3D_Filter_Menu" xml:space="preserve">
+    <value>Filter Stars</value>
+  </data>
+  <data name="Map3D_Filter_Menu_ToolTip" xml:space="preserve">
+    <value>Select what stars to display</value>
+  </data>
+  <data name="Map3D_Filter_ShowAllStars" xml:space="preserve">
+    <value>Show All Stars</value>
+  </data>
+  <data name="Map3D_Filter_ShowAllStars_ToolTip" xml:space="preserve">
+    <value>Show all stars</value>
+  </data>
+  <data name="Map3D_Filter_ShowPopSystems" xml:space="preserve">
+    <value>Show Populated Systems</value>
+  </data>
+  <data name="Map3D_Filter_ShowPopSystems_ToolTip" xml:space="preserve">
+    <value>Show populated systems</value>
+  </data>
+  <data name="Map3D_GalObjects" xml:space="preserve">
+    <value>Points of Interest</value>
+  </data>
+  <data name="Map3D_GalObjects_ToggleAll" xml:space="preserve">
+    <value>Toggle All</value>
+  </data>
+  <data name="Map3D_GalObjects_ToggleRegionColours" xml:space="preserve">
+    <value>Toggle Region Colouring</value>
+  </data>
+  <data name="Map3D_GalObjects_ToggleStarNaming" xml:space="preserve">
+    <value>Toggle Star Naming</value>
+  </data>
+  <data name="Map3D_GalObjects_ToolTip" xml:space="preserve">
+    <value>Display or Disable the Display of Galactic Objects and other POIs</value>
+  </data>
+  <data name="Map3D_Grid_Coords" xml:space="preserve">
+    <value>Show Coordinates</value>
+  </data>
+  <data name="Map3D_Grid_Coords_ToolTip" xml:space="preserve">
+    <value>Show Grid Coordinates</value>
+  </data>
+  <data name="Map3D_Grid_FineGrid" xml:space="preserve">
+    <value>Fine Grid</value>
+  </data>
+  <data name="Map3D_Grid_FineGrid_ToolTip" xml:space="preserve">
+    <value>Show Fine Grid</value>
+  </data>
+  <data name="Map3D_Grid_Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="Map3D_Grid_Grid_ToolTip" xml:space="preserve">
+    <value>Show Coarse Grid</value>
+  </data>
+  <data name="Map3D_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Map3D_Help_Title" xml:space="preserve">
+    <value>3D Map Help</value>
+  </data>
+  <data name="Map3D_Help_ToolTip" xml:space="preserve">
+    <value>Show Help</value>
+  </data>
+  <data name="Map3D_Info_Allegiance" xml:space="preserve">
+    <value>Allegiance: {0}</value>
+  </data>
+  <data name="Map3D_Info_BookmarkNotes" xml:space="preserve">
+    <value>Bookmark Notes: {0}</value>
+  </data>
+  <data name="Map3D_Info_DistanceFrom" xml:space="preserve">
+    <value>Distance from {0}: {1:0.0}</value>
+  </data>
+  <data name="Map3D_Info_Economy" xml:space="preserve">
+    <value>Economy: {0}</value>
+  </data>
+  <data name="Map3D_Info_Government" xml:space="preserve">
+    <value>Government: {0}</value>
+  </data>
+  <data name="Map3D_Info_Notes" xml:space="preserve">
+    <value>Notes: {0}</value>
+  </data>
+  <data name="Map3D_Info_Population" xml:space="preserve">
+    <value>Population: {0}</value>
+  </data>
+  <data name="Map3D_Info_State" xml:space="preserve">
+    <value>State: {0}</value>
+  </data>
+  <data name="Map3D_MapNames" xml:space="preserve">
+    <value>Select Maps</value>
+  </data>
+  <data name="Map3D_MapNames_ToolTip" xml:space="preserve">
+    <value>Select which 2D maps to display</value>
+  </data>
+  <data name="Map3D_Navigation_CenterOnSystem_ToolTip" xml:space="preserve">
+    <value>Centre map on system</value>
+  </data>
+  <data name="Map3D_Navigation_GoBackward" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Map3D_Navigation_GoBackward_ToolTip" xml:space="preserve">
+    <value>Go Backward in Travel History</value>
+  </data>
+  <data name="Map3D_Navigation_GoForward" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Map3D_Navigation_GoForwardOnJump" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Map3D_Navigation_GoForwardOnJump_ToolTip" xml:space="preserve">
+    <value>Go Forward Automatically on Jump</value>
+  </data>
+  <data name="Map3D_Navigation_GoForward_ToolTip" xml:space="preserve">
+    <value>Go Forward in Travel History</value>
+  </data>
+  <data name="Map3D_Navigation_GoToHistorySelection" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="Map3D_Navigation_GoToHistorySelection_ToolTip" xml:space="preserve">
+    <value>Go to system selected in travelled history window</value>
+  </data>
+  <data name="Map3D_Navigation_GoToHomeSystem" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Map3D_Navigation_GoToHomeSystem_ToolTip" xml:space="preserve">
+    <value>Go to Home System</value>
+  </data>
+  <data name="Map3D_Navigation_GoToTarget" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="Map3D_Navigation_GoToTarget_ToolTip" xml:space="preserve">
+    <value>Go to target designator</value>
+  </data>
+  <data name="Map3D_Navigation_LastKnownPosition" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="Map3D_Navigation_LastKnownPosition_ToolTip" xml:space="preserve">
+    <value>Go to latest position from travel history</value>
+  </data>
+  <data name="Map3D_Navigation_LookAtSystem_ToolTip" xml:space="preserve">
+    <value>Look at System</value>
+  </data>
+  <data name="Map3D_NoTarget" xml:space="preserve">
+    <value>No target designated, create a bookmark or region mark, or use a Note mark, right click on it and set it as the target</value>
+  </data>
+  <data name="Map3D_NoTravelHistory" xml:space="preserve">
+    <value>No travel history is available</value>
+  </data>
+  <data name="Map3D_NoTravelHistoryWithCoords" xml:space="preserve">
+    <value>No stars with defined co-ordinates available in travel history</value>
+  </data>
+  <data name="Map3D_OrangeDot_ToolTip" xml:space="preserve">
+    <value>Centre map on this system</value>
+  </data>
+  <data name="Map3D_Perspective" xml:space="preserve">
+    <value>Perspective</value>
+  </data>
+  <data name="Map3D_Perspective_ToolTip" xml:space="preserve">
+    <value>Show Perspective View</value>
+  </data>
+  <data name="Map3D_Recorder_Clear" xml:space="preserve">
+    <value>Clear Recording</value>
+  </data>
+  <data name="Map3D_Recorder_Clear_Confirm" xml:space="preserve">
+    <value>Confirm you wish to clear the current recording</value>
+  </data>
+  <data name="Map3D_Recorder_Clear_Confirm_Title" xml:space="preserve">
+    <value>WARNING</value>
+  </data>
+  <data name="Map3D_Recorder_Clear_ToolTip" xml:space="preserve">
+    <value>Clear Recording</value>
+  </data>
+  <data name="Map3D_Recorder_Load" xml:space="preserve">
+    <value>Load flight from file</value>
+  </data>
+  <data name="Map3D_Recorder_LoadFailed" xml:space="preserve">
+    <value>Failed to load flight {0}. Check file path and file contents</value>
+  </data>
+  <data name="Map3D_Recorder_Load_ToolTip" xml:space="preserve">
+    <value>Load flight from file</value>
+  </data>
+  <data name="Map3D_Recorder_Menu" xml:space="preserve">
+    <value>Recorder</value>
+  </data>
+  <data name="Map3D_Recorder_Menu_ToolTip" xml:space="preserve">
+    <value>Record or Playback animations</value>
+  </data>
+  <data name="Map3D_Recorder_NewRecordStep" xml:space="preserve">
+    <value>New Record Step (F7)</value>
+  </data>
+  <data name="Map3D_Recorder_NewRecordStep_ToolTip" xml:space="preserve">
+    <value>New Record Step (F7)</value>
+  </data>
+  <data name="Map3D_Recorder_Pause" xml:space="preserve">
+    <value>Pause Record (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_PausePlay" xml:space="preserve">
+    <value>Pause Playback (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_PausePlay_ToolTip" xml:space="preserve">
+    <value>Pause Playback (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_PauseRecord" xml:space="preserve">
+    <value>Pause Recording (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_PauseRecord_ToolTip" xml:space="preserve">
+    <value>Pause Recording (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_Pause_ToolTip" xml:space="preserve">
+    <value>Pause Record (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_Play" xml:space="preserve">
+    <value>Start Playback (F9)</value>
+  </data>
+  <data name="Map3D_Recorder_Play_ToolTip" xml:space="preserve">
+    <value>Start Playback (F9)</value>
+  </data>
+  <data name="Map3D_Recorder_Record" xml:space="preserve">
+    <value>Start Recording (F5)</value>
+  </data>
+  <data name="Map3D_Recorder_RecordStep" xml:space="preserve">
+    <value>Start Step Recording (F6)</value>
+  </data>
+  <data name="Map3D_Recorder_RecordStep_ToolTip" xml:space="preserve">
+    <value>Start Step Recording (F6)</value>
+  </data>
+  <data name="Map3D_Recorder_Record_ToolTip" xml:space="preserve">
+    <value>Start Recording (F5)</value>
+  </data>
+  <data name="Map3D_Recorder_ResumeRecord" xml:space="preserve">
+    <value>Resume Recording (F5)</value>
+  </data>
+  <data name="Map3D_Recorder_ResumeRecordStep" xml:space="preserve">
+    <value>Resume Step Recording (F6)</value>
+  </data>
+  <data name="Map3D_Recorder_ResumeRecordStep_ToolTip" xml:space="preserve">
+    <value>Resume Step Recording (F6)</value>
+  </data>
+  <data name="Map3D_Recorder_ResumeRecord_ToolTip" xml:space="preserve">
+    <value>Resume Recording (F5)</value>
+  </data>
+  <data name="Map3D_Recorder_Save" xml:space="preserve">
+    <value>Save flight to file</value>
+  </data>
+  <data name="Map3D_Recorder_Save_ToolTip" xml:space="preserve">
+    <value>Save flight to file</value>
+  </data>
+  <data name="Map3D_Recorder_StopPlay" xml:space="preserve">
+    <value>Stop Playback (F9)</value>
+  </data>
+  <data name="Map3D_Recorder_StopPlay_ToolTip" xml:space="preserve">
+    <value>Stop Playback (F9)</value>
+  </data>
+  <data name="Map3D_Recorder_StopRecord" xml:space="preserve">
+    <value>Stop Recording (F5)</value>
+  </data>
+  <data name="Map3D_Recorder_StopRecordStep" xml:space="preserve">
+    <value>Stop Step Recording (F6)</value>
+  </data>
+  <data name="Map3D_Recorder_StopRecordStep_ToolTip" xml:space="preserve">
+    <value>Stop Step Recording (F6)</value>
+  </data>
+  <data name="Map3D_Recorder_StopRecord_ToolTip" xml:space="preserve">
+    <value>Stop Recording (F5)</value>
+  </data>
+  <data name="Map3D_Recorder_UnpausePlay" xml:space="preserve">
+    <value>Resume Playback (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_UnpausePlay_ToolTip" xml:space="preserve">
+    <value>Resume Playback (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_UnpauseRecord" xml:space="preserve">
+    <value>Resume Recording (F8)</value>
+  </data>
+  <data name="Map3D_Recorder_UnpauseRecord_ToolTip" xml:space="preserve">
+    <value>Resume Recording (F8)</value>
+  </data>
+  <data name="Map3D_Stars_DisplayColours" xml:space="preserve">
+    <value>Display Colours</value>
+  </data>
+  <data name="Map3D_Stars_DisplayColours_ToolTip" xml:space="preserve">
+    <value>Show star colours</value>
+  </data>
+  <data name="Map3D_Stars_Menu" xml:space="preserve">
+    <value>Star Display</value>
+  </data>
+  <data name="Map3D_Stars_Menu_ToolTip" xml:space="preserve">
+    <value>Select how stars are displayed</value>
+  </data>
+  <data name="Map3D_Stars_ShowDiscs" xml:space="preserve">
+    <value>Show Discs</value>
+  </data>
+  <data name="Map3D_Stars_ShowDiscs_ToolTip" xml:space="preserve">
+    <value>Show discs for nearby stars</value>
+  </data>
+  <data name="Map3D_Stars_ShowNames" xml:space="preserve">
+    <value>Show Names</value>
+  </data>
+  <data name="Map3D_Stars_ShowNames_ToolTip" xml:space="preserve">
+    <value>Show names for nearby systems</value>
+  </data>
+  <data name="Map3D_Status_Direction" xml:space="preserve">
+    <value>Direction x={0,-6:0.0} y={1,-6:0.0} z={2,-6:0.0}</value>
+  </data>
+  <data name="Map3D_Status_FPSoff" xml:space="preserve">
+    <value>x:{0,-6:0} y:{1,-6:0} z:{2,-6:0} Zoom:{3,-4:0.00} FOV:{4,-3:0} Use F1 for help</value>
+  </data>
+  <data name="Map3D_Status_FPSon" xml:space="preserve">
+    <value>x:{0,-6:0} y:{1,-6:0} z:{2,-6:0} Zoom:{3,-4:0.00} FOV:{4,-3:0} FPS:{5,-4:0.0} Use F1 for help</value>
+  </data>
+  <data name="Map3D_SystemOrObjectNotFound" xml:space="preserve">
+    <value>System or Object {0} not found</value>
+  </data>
+  <data name="Map3D_Title" xml:space="preserve">
+    <value>3D Star Map</value>
+  </data>
+  <data name="Map3D_Travel_DrawLines" xml:space="preserve">
+    <value>Draw lines</value>
+  </data>
+  <data name="Map3D_Travel_DrawLines_ToolTip" xml:space="preserve">
+    <value>Lines connect, in the Map Colour, the stars with known position</value>
+  </data>
+  <data name="Map3D_Travel_DrawStars" xml:space="preserve">
+    <value>Draw stars</value>
+  </data>
+  <data name="Map3D_Travel_DrawStars_ToolTip" xml:space="preserve">
+    <value>Stars with position are shown as discs</value>
+  </data>
+  <data name="Map3D_Travel_Menu" xml:space="preserve">
+    <value>Travel</value>
+  </data>
+  <data name="Map3D_Travel_Menu_ToolTip" xml:space="preserve">
+    <value>Select how your travel history is displayed</value>
+  </data>
+  <data name="Map3D_Travel_WhiteStars" xml:space="preserve">
+    <value>White stars</value>
+  </data>
+  <data name="Map3D_Travel_WhiteStars_ToolTip" xml:space="preserve">
+    <value>Instead of using the map colour, use white. Useful when you have the lines on at the same time</value>
+  </data>
+  <data name="Map3D_ViewOnEDSM" xml:space="preserve">
+    <value>View on EDSM</value>
+  </data>
+  <data name="Map3D_YellowDot_ToolTip" xml:space="preserve">
+    <value>Centre map on this system</value>
+  </data>
+  <data name="NotePanel_DisplayGMPNotes" xml:space="preserve">
+    <value>Display galactic mapping notes</value>
+  </data>
+  <data name="NotePanel_DisplaySystemNotes" xml:space="preserve">
+    <value>Display system notes</value>
+  </data>
+  <data name="RouteTracker_AutoCopy" xml:space="preserve">
+    <value>Auto copy waypoint</value>
+  </data>
+  <data name="RouteTracker_AutoSet" xml:space="preserve">
+    <value>Auto set target</value>
+  </data>
+  <data name="RouteTracker_SetRoute" xml:space="preserve">
+    <value>Set route</value>
+  </data>
+  <data name="Route_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Route_ShowOnEDSM" xml:space="preserve">
+    <value>Show in EDSM</value>
+  </data>
+  <data name="Scan_ShowHideToolbar" xml:space="preserve">
+    <value>Show/Hide Toolbar</value>
+  </data>
+  <data name="ShoppingList_HistoricCounts" xml:space="preserve">
+    <value>Use Historic Material Counts</value>
+  </data>
+  <data name="ShoppingList_IncludeMaterialPercent" xml:space="preserve">
+    <value>Include Material percentage on Landed Body in Shopping List</value>
+  </data>
+  <data name="ShoppingList_MaxFSDInjections" xml:space="preserve">
+    <value>Show Max FSD Injections</value>
+  </data>
+  <data name="ShoppingList_ShowLandedBodyMats" xml:space="preserve">
+    <value>Show Body Materials When Landed</value>
+  </data>
+  <data name="SPanel_BlackBorder" xml:space="preserve">
+    <value>Show black box around text</value>
+  </data>
+  <data name="SPanel_ColumnOrder_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="SPanel_ColumnOrder_DistCoordNotes" xml:space="preserve">
+    <value>Target Distance,XYZ,Notes</value>
+  </data>
+  <data name="SPanel_ColumnOrder_Menu" xml:space="preserve">
+    <value>Column Order..</value>
+  </data>
+  <data name="SPanel_ColumnOrder_NotesAfterCoords" xml:space="preserve">
+    <value>Notes after XYZ</value>
+  </data>
+  <data name="SPanel_DontShow_GalMap" xml:space="preserve">
+    <value>.. when in Galaxy Panel</value>
+  </data>
+  <data name="SPanel_DontShow_Landed" xml:space="preserve">
+    <value>.. when docked or landed</value>
+  </data>
+  <data name="SPanel_DontShow_Menu" xml:space="preserve">
+    <value>Don't show information when..</value>
+  </data>
+  <data name="SPanel_DontShow_SysMap" xml:space="preserve">
+    <value>.. when in System Map Panel</value>
+  </data>
+  <data name="SPanel_EDSM" xml:space="preserve">
+    <value>EDSM Button</value>
+  </data>
+  <data name="SPanel_EventFilter" xml:space="preserve">
+    <value>Configure Event Filter..</value>
+  </data>
+  <data name="SPanel_EventIcon" xml:space="preserve">
+    <value>Show Event Icon</value>
+  </data>
+  <data name="SPanel_ExpandText" xml:space="preserve">
+    <value>Expand text over empty columns</value>
+  </data>
+  <data name="SPanel_FieldFilter" xml:space="preserve">
+    <value>Configure Field Filter..</value>
+  </data>
+  <data name="SPanel_FSDCoords" xml:space="preserve">
+    <value>Show Distances/Coords on FSD Jumps Only</value>
+  </data>
+  <data name="SPanel_ScanDisplay_15s" xml:space="preserve">
+    <value>Show for 15s</value>
+  </data>
+  <data name="SPanel_ScanDisplay_30s" xml:space="preserve">
+    <value>Show for 30s</value>
+  </data>
+  <data name="SPanel_ScanDisplay_60s" xml:space="preserve">
+    <value>Show for 60s</value>
+  </data>
+  <data name="SPanel_ScanDisplay_DontShow" xml:space="preserve">
+    <value>Do Not Show</value>
+  </data>
+  <data name="SPanel_ScanDisplay_Menu" xml:space="preserve">
+    <value>Configure Scan Display..</value>
+  </data>
+  <data name="SPanel_ScanDisplay_UntilNext" xml:space="preserve">
+    <value>Show until next scan</value>
+  </data>
+  <data name="SPanel_ScanPosition_Above" xml:space="preserve">
+    <value>Above</value>
+  </data>
+  <data name="SPanel_ScanPosition_Below" xml:space="preserve">
+    <value>Below</value>
+  </data>
+  <data name="SPanel_ScanPosition_Menu" xml:space="preserve">
+    <value>Set Scan Position..</value>
+  </data>
+  <data name="SPanel_ScanPosition_OnTop" xml:space="preserve">
+    <value>On top</value>
+  </data>
+  <data name="SPanel_ScanPosition_ToLeft" xml:space="preserve">
+    <value>To left</value>
+  </data>
+  <data name="SPanel_ScanPosition_ToRight" xml:space="preserve">
+    <value>To right</value>
+  </data>
+  <data name="SPanel_ShowDesc" xml:space="preserve">
+    <value>Show Description</value>
+  </data>
+  <data name="SPanel_ShowHabitZone" xml:space="preserve">
+    <value>Show Habitation Minimum and Maximum Distance</value>
+  </data>
+  <data name="SPanel_ShowInfo" xml:space="preserve">
+    <value>Show Information</value>
+  </data>
+  <data name="SPanel_ShowNotes" xml:space="preserve">
+    <value>Show Notes</value>
+  </data>
+  <data name="SPanel_ShowSysInfo" xml:space="preserve">
+    <value>Show System Information</value>
+  </data>
+  <data name="SPanel_ShowTargetLine" xml:space="preserve">
+    <value>Show Target Line</value>
+  </data>
+  <data name="SPanel_ShowXYZ" xml:space="preserve">
+    <value>Show XYZ</value>
+  </data>
+  <data name="SPanel_TargetDist" xml:space="preserve">
+    <value>Show Target Distance per Star</value>
+  </data>
+  <data name="SPanel_Time" xml:space="preserve">
+    <value>Show Time</value>
+  </data>
+  <data name="StarDistance_AddToTrilat" xml:space="preserve">
+    <value>Add to Trilateration</value>
+  </data>
+  <data name="StarDistance_ViewOnEDSM" xml:space="preserve">
+    <value>View on EDSM</value>
+  </data>
+  <data name="StarList_SetNote" xml:space="preserve">
+    <value>Set Note</value>
+  </data>
+  <data name="StarList_ShowOnMap" xml:space="preserve">
+    <value>Go to star on 3D Map</value>
+  </data>
+  <data name="StarList_ViewOnEDSM" xml:space="preserve">
+    <value>View on EDSM</value>
+  </data>
+  <data name="SysInfo_RemoveAll" xml:space="preserve">
+    <value>Remove All</value>
+  </data>
+  <data name="SysInfo_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="SysInfo_ShowBody" xml:space="preserve">
+    <value>Display Body Name</value>
+  </data>
+  <data name="SysInfo_ShowCargo" xml:space="preserve">
+    <value>Display Cargo Count</value>
+  </data>
+  <data name="SysInfo_ShowCoords" xml:space="preserve">
+    <value>Display Position</value>
+  </data>
+  <data name="SysInfo_ShowCredits" xml:space="preserve">
+    <value>Display Credits</value>
+  </data>
+  <data name="SysInfo_ShowData" xml:space="preserve">
+    <value>Display Data Count</value>
+  </data>
+  <data name="SysInfo_ShowDist" xml:space="preserve">
+    <value>Display Distance From</value>
+  </data>
+  <data name="SysInfo_ShowEDSM" xml:space="preserve">
+    <value>Display EDSM Buttons</value>
+  </data>
+  <data name="SysInfo_ShowEDSMSepLine" xml:space="preserve">
+    <value>EDSM buttons on separate line</value>
+  </data>
+  <data name="SysInfo_ShowFuel" xml:space="preserve">
+    <value>Display Fuel Level</value>
+  </data>
+  <data name="SysInfo_ShowMats" xml:space="preserve">
+    <value>Display Material Count</value>
+  </data>
+  <data name="SysInfo_ShowMode" xml:space="preserve">
+    <value>Display Game Mode</value>
+  </data>
+  <data name="SysInfo_ShowNotes" xml:space="preserve">
+    <value>Display Notes</value>
+  </data>
+  <data name="SysInfo_ShowShipInfo" xml:space="preserve">
+    <value>Display Ship Information</value>
+  </data>
+  <data name="SysInfo_ShowState" xml:space="preserve">
+    <value>Display System State</value>
+  </data>
+  <data name="SysInfo_ShowSysName" xml:space="preserve">
+    <value>Display System Name</value>
+  </data>
+  <data name="SysInfo_ShowTarget" xml:space="preserve">
+    <value>Display Target</value>
+  </data>
+  <data name="SysInfo_ShowTrip" xml:space="preserve">
+    <value>Display Travel Trip Statistics</value>
+  </data>
+  <data name="SysInfo_ShowVisits" xml:space="preserve">
+    <value>Display Visits</value>
+  </data>
+  <data name="SysInfo_Skinny" xml:space="preserve">
+    <value>When transparent, use skinny look</value>
+  </data>
+  <data name="Table_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Table_DeleteRows" xml:space="preserve">
+    <value>Delete Rows</value>
+  </data>
+  <data name="Table_EditBookmark" xml:space="preserve">
+    <value>Edit bookmark</value>
+  </data>
+  <data name="Table_InsertCopiedRows" xml:space="preserve">
+    <value>Insert Copied Rows</value>
+  </data>
+  <data name="Table_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Table_SetTarget" xml:space="preserve">
+    <value>Set Target</value>
+  </data>
+  <data name="TimeRange_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="TimeRange_Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="TimeRange_DistantWorlds" xml:space="preserve">
+    <value>Distant Worlds Expedition</value>
+  </data>
+  <data name="TimeRange_FGE_Start" xml:space="preserve">
+    <value>FGE Expedition start</value>
+  </data>
+  <data name="TimeRange_LastMonth" xml:space="preserve">
+    <value>Last Month</value>
+  </data>
+  <data name="TimeRange_LastWeek" xml:space="preserve">
+    <value>Last Week</value>
+  </data>
+  <data name="TimeRange_LastYear" xml:space="preserve">
+    <value>Last Year</value>
+  </data>
+  <data name="TravelGrid_AddTo_Expedition" xml:space="preserve">
+    <value>Expedition Panel</value>
+  </data>
+  <data name="TravelGrid_AddTo_Menu" xml:space="preserve">
+    <value>Add to ...</value>
+  </data>
+  <data name="TravelGrid_AddTo_Trilat" xml:space="preserve">
+    <value>System on Trilateration Panel</value>
+  </data>
+  <data name="TravelGrid_AddTo_TrilatAndWanted" xml:space="preserve">
+    <value>Both of the above</value>
+  </data>
+  <data name="TravelGrid_AddTo_Wanted" xml:space="preserve">
+    <value>Wanted Systems on Trilateration Panel</value>
+  </data>
+  <data name="TravelGrid_AssignSystem" xml:space="preserve">
+    <value>Assign new system</value>
+  </data>
+  <data name="TravelGrid_ChangeCmdr" xml:space="preserve">
+    <value>Move Entries to another Commander</value>
+  </data>
+  <data name="TravelGrid_Colour" xml:space="preserve">
+    <value>Star Map Colour...</value>
+  </data>
+  <data name="TravelGrid_CopyEntry" xml:space="preserve">
+    <value>Copy journal entry to clipboard</value>
+  </data>
+  <data name="TravelGrid_HideEntries" xml:space="preserve">
+    <value>Hide Entries</value>
+  </data>
+  <data name="TravelGrid_Remove" xml:space="preserve">
+    <value>Remove Journal Entry</value>
+  </data>
+  <data name="TravelGrid_RunActions" xml:space="preserve">
+    <value>Run Actions on this entry</value>
+  </data>
+  <data name="TravelGrid_SendToEDDN" xml:space="preserve">
+    <value>Send unsynced scan to EDDN</value>
+  </data>
+  <data name="TravelGrid_SetNote" xml:space="preserve">
+    <value>Set Note</value>
+  </data>
+  <data name="TravelGrid_SetStartStop" xml:space="preserve">
+    <value>Set Start/Stop point for travel calculations</value>
+  </data>
+  <data name="TravelGrid_ShowOnMap" xml:space="preserve">
+    <value>Go to star on 3D Map</value>
+  </data>
+  <data name="TravelGrid_ViewOnEDSM" xml:space="preserve">
+    <value>View on EDSM</value>
+  </data>
+  <data name="TravelGrid_WriteToLog" xml:space="preserve">
+    <value>Write event info to Log (Debug)</value>
+  </data>
+  <data name="Trilateration_Add20" xml:space="preserve">
+    <value>Add 20</value>
+  </data>
+  <data name="Trilateration_Add20_ToolTip" xml:space="preserve">
+    <value>Add the oldest 20 unknown systems from history to wanted list</value>
+  </data>
+  <data name="Trilateration_AddEDSM" xml:space="preserve">
+    <value>Add all EDSM systems</value>
+  </data>
+  <data name="Trilateration_AddLocal" xml:space="preserve">
+    <value>Add all local systems</value>
+  </data>
+  <data name="Trilateration_AddToWanted" xml:space="preserve">
+    <value>Add to wanted systems</value>
+  </data>
+  <data name="Trilateration_DeleteKnown" xml:space="preserve">
+    <value>Delete all with known position</value>
+  </data>
+  <data name="Trilateration_FromSystem" xml:space="preserve">
+    <value>From System:</value>
+  </data>
+  <data name="Trilateration_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Trilateration_RemoveAll" xml:space="preserve">
+    <value>Remove All</value>
+  </data>
+  <data name="Trilateration_RemoveAll_ToolTip" xml:space="preserve">
+    <value>Remove all</value>
+  </data>
+  <data name="Trilateration_RemoveFromWanted" xml:space="preserve">
+    <value>Remove from wanted systems</value>
+  </data>
+  <data name="Trilateration_RemoveUnused" xml:space="preserve">
+    <value>Remove Unused</value>
+  </data>
+  <data name="Trilateration_RemoveUnused_ToolTip" xml:space="preserve">
+    <value>Remove unused</value>
+  </data>
+  <data name="Trilateration_ShowOnMap" xml:space="preserve">
+    <value>3d map</value>
+  </data>
+  <data name="Trilateration_ShowOnMap_ToolTip" xml:space="preserve">
+    <value>Show 3d map</value>
+  </data>
+  <data name="Trilateration_StartNew" xml:space="preserve">
+    <value>Start &amp;new</value>
+  </data>
+  <data name="Trilateration_StartNew_ToolTip" xml:space="preserve">
+    <value>Calculate coordinates for current system</value>
+  </data>
+  <data name="Trilateration_SubmitDistances" xml:space="preserve">
+    <value>&amp;Submit Distances</value>
+  </data>
+  <data name="Trilateration_ViewOnEDSM" xml:space="preserve">
+    <value>View on EDSM</value>
+  </data>
+  <data name="Trilateration_VisitedWithoutCoords" xml:space="preserve">
+    <value>Visited without coordinates:</value>
+  </data>
+  <data name="Trilateration_VisitedWithoutCoords_ToolTip" xml:space="preserve">
+    <value>Start New to update count</value>
+  </data>
+  <data name="TripPanel_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="TripPanel_ShipDetails" xml:space="preserve">
+    <value>Set ship details</value>
+  </data>
+</root>

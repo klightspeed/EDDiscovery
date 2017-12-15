@@ -192,15 +192,15 @@ namespace EDDiscovery
                         toolStripDropDownButtonGalObjects.DropDownItems.Add(AddGalMapButton(tp.Description, tp, tp.Enabled));
                         if (tp.Group == GalMapType.GalMapGroup.Regions)
                         {
-                            _toolstripToggleRegionColouringButton = AddGalMapButton("Toggle Region Colouring", 2, SQLiteDBClass.GetSettingBool("Map3DGMORegionColouring", true));
+                            _toolstripToggleRegionColouringButton = AddGalMapButton(Properties.Strings.Map3D_GalObjects_ToggleRegionColours, 2, SQLiteDBClass.GetSettingBool("Map3DGMORegionColouring", true));
                             toolStripDropDownButtonGalObjects.DropDownItems.Add(_toolstripToggleRegionColouringButton);
                         }
                     }
                 }
 
-                toolStripDropDownButtonGalObjects.DropDownItems.Add(AddGalMapButton("Toggle All", 0, null));
+                toolStripDropDownButtonGalObjects.DropDownItems.Add(AddGalMapButton(Properties.Strings.Map3D_GalObjects_ToggleAll, 0, null));
 
-                _toolstripToggleNamingButton = AddGalMapButton("Toggle Star Naming", 1, SQLiteDBClass.GetSettingBool("Map3DGMONaming", true));
+                _toolstripToggleNamingButton = AddGalMapButton(Properties.Strings.Map3D_GalObjects_ToggleStarNaming, 1, SQLiteDBClass.GetSettingBool("Map3DGMONaming", true));
                 toolStripDropDownButtonGalObjects.DropDownItems.Add(_toolstripToggleNamingButton);
             }
 
@@ -350,7 +350,7 @@ namespace EDDiscovery
             LoadMapImages();
             FillExpeditions();
             SetCenterSystemLabel();
-            labelClickedSystemCoords.Text = "Click a star to select/copy, double-click to center";
+            labelClickedSystemCoords.Text = Properties.Strings.Map3D_ClickedSystemCoords_Help;
 
             posdir.SetCameraPos(new Vector3((float)_centerSystem.x, -(float)_centerSystem.y, (float)_centerSystem.z));
 
@@ -730,11 +730,11 @@ namespace EDDiscovery
             string txt;
             
             if ( _fpson )
-                txt = string.Format("x:{0,-6:0} y:{1,-6:0} z:{2,-6:0} Zoom:{3,-4:0.00} FOV:{4,-3:0} FPS:{5,-4:0.0} Use F1 for help", posdir.Position.X, posdir.Position.Y, posdir.Position.Z, zoomfov.Zoom, zoomfov.FovDeg, _fps);
+                txt = string.Format(Properties.Strings.Map3D_Status_FPSon, posdir.Position.X, posdir.Position.Y, posdir.Position.Z, zoomfov.Zoom, zoomfov.FovDeg, _fps);
             else
-                txt = string.Format("x:{0,-6:0} y:{1,-6:0} z:{2,-6:0} Zoom:{3,-4:0.00} FOV:{4,-3:0} Use F1 for help", posdir.Position.X, posdir.Position.Y, posdir.Position.Z, zoomfov.Zoom, zoomfov.FovDeg);
+                txt = string.Format(Properties.Strings.Map3D_Status_FPSoff, posdir.Position.X, posdir.Position.Y, posdir.Position.Z, zoomfov.Zoom, zoomfov.FovDeg);
 #if DEBUG
-            txt += string.Format("   Direction x={0,-6:0.0} y={1,-6:0.0} z={2,-6:0.0}", posdir.CameraDirection.X, posdir.CameraDirection.Y, posdir.CameraDirection.Z);
+            txt += string.Format("   " + Properties.Strings.Map3D_Status_Direction, posdir.CameraDirection.X, posdir.CameraDirection.Y, posdir.CameraDirection.Z);
 #endif
             statusLabel.Text = txt;
         }
@@ -1061,7 +1061,7 @@ namespace EDDiscovery
             if (_centerSystem != null)
                 labelSystemCoords.Text = string.Format("{0} x:{1} y:{2} z:{3}", _centerSystem.name, _centerSystem.x.ToString("0.00"), _centerSystem.y.ToString("0.00"), _centerSystem.z.ToString("0.00"));
             else
-                labelSystemCoords.Text = "No centre system";
+                labelSystemCoords.Text = Properties.Strings.Map3D_CentreSystemCoords_NoSystem;
         }
 
         public bool SetCenterSystemTo(string name)
@@ -1140,7 +1140,7 @@ namespace EDDiscovery
                     item.Checked = false;
                 }
             }
-            SQLiteDBClass.PutSettingString("Map3DFilter", sel.Text);
+            SQLiteDBClass.PutSettingString("Map3DFilter", (sel.Tag as string) ?? sel.Text);
             startTime = startfunc();
             endTime = endfunc == null ? DateTime.Now.AddDays(1) : endfunc();
             startPickerHost.Visible = false;
@@ -1179,7 +1179,7 @@ namespace EDDiscovery
                     posdir.CameraLookAt(loc,zoomfov.Zoom, 2F);
             }
             else
-                ExtendedControls.MessageBoxTheme.Show(this, "System or Object " + textboxFrom.Text + " not found");
+                ExtendedControls.MessageBoxTheme.Show(this, String.Format(Properties.Strings.Map3D_SystemOrObjectNotFound, textboxFrom.Text));
 
             glControl.Focus();
         }
@@ -1192,7 +1192,7 @@ namespace EDDiscovery
                 SetCenterSystemTo((he == null) ? _centerSystem.name : he.System.name);
             }
             else
-                ExtendedControls.MessageBoxTheme.Show(this, "No travel history is available");
+                ExtendedControls.MessageBoxTheme.Show(this, Properties.Strings.Map3D_NoTravelHistory);
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -1203,7 +1203,7 @@ namespace EDDiscovery
         private void buttonHistory_Click(object sender, EventArgs e)
         {
             if (_historySelection == null)
-                ExtendedControls.MessageBoxTheme.Show(this, "No travel history is available");
+                ExtendedControls.MessageBoxTheme.Show(this, Properties.Strings.Map3D_NoTravelHistory);
             else
                 SetCenterSystemTo(_historySelection);
         }
@@ -1219,7 +1219,7 @@ namespace EDDiscovery
             }
             else
             {
-                ExtendedControls.MessageBoxTheme.Show(this, "No target designated, create a bookmark or region mark, or use a Note mark, right click on it and set it as the target");
+                ExtendedControls.MessageBoxTheme.Show(this, Properties.Strings.Map3D_NoTarget);
             }
         }
         
@@ -1231,7 +1231,7 @@ namespace EDDiscovery
                 SetCenterSystemTo((he == null) ? _centerSystem.name : he.System.name);
             }
             else
-                ExtendedControls.MessageBoxTheme.Show(this, "No travel history is available");
+                ExtendedControls.MessageBoxTheme.Show(this, Properties.Strings.Map3D_NoTravelHistory);
         }
 
         private void toolStripButtonAutoForward_Click(object sender, EventArgs e)
@@ -1247,10 +1247,10 @@ namespace EDDiscovery
                 if (he != null )
                     SetCenterSystemTo(FindSystem(he.System.name));
                 else
-                    ExtendedControls.MessageBoxTheme.Show(this, "No stars with defined co-ordinates available in travel history");
+                    ExtendedControls.MessageBoxTheme.Show(this, Properties.Strings.Map3D_NoTravelHistoryWithCoords);
             }
             else
-                ExtendedControls.MessageBoxTheme.Show(this, "No travel history is available");
+                ExtendedControls.MessageBoxTheme.Show(this, Properties.Strings.Map3D_NoTravelHistory);
         }
 
         private void drawLinesBetweenStarsWithPositionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1416,7 +1416,7 @@ namespace EDDiscovery
             if (helpDialog == null)
             {
                 helpDialog = new ExtendedControls.InfoForm() { TopMost = this.TopMost };
-                helpDialog.Info("3D Map Help", Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetExecutingAssembly().Location),
+                helpDialog.Info(Properties.Strings.Map3D_Help_Title, Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetExecutingAssembly().Location),
                             Properties.Resources.maphelp3d, new Font("Microsoft Sans Serif", 10), new int[] { 50, 200, 400 });
                 helpDialog.Show();
                 helpDialog.Disposed += (s, ea) => helpDialog = null;
@@ -1479,7 +1479,7 @@ namespace EDDiscovery
 
         private void toolStripMenuItemClearRecording_Click(object sender, EventArgs e)
         {
-            if (ExtendedControls.MessageBoxTheme.Show(this, "Confirm you wish to clear the current recording", "WARNING", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (ExtendedControls.MessageBoxTheme.Show(this, Properties.Strings.Map3D_Recorder_Clear_Confirm, Properties.Strings.Map3D_Recorder_Clear_Confirm_Title, MessageBoxButtons.OKCancel) == DialogResult.OK)
                 maprecorder.Clear();
 
             SetDropDownRecordImage();
@@ -1501,11 +1501,13 @@ namespace EDDiscovery
 
         private void toolStripDropDownRecord_DropDownOpening(object sender, EventArgs e)
         {
-            recordToolStripMenuItem.Text = maprecorder.Recording ? "Stop Recording (F5)" : maprecorder.Entries ? "Resume Recording (F5)" : "Start Recording (F5)";
+            recordToolStripMenuItem.Text = maprecorder.Recording ? Properties.Strings.Map3D_Recorder_StopRecord : maprecorder.Entries ? Properties.Strings.Map3D_Recorder_ResumeRecord : Properties.Strings.Map3D_Recorder_Record;
+            recordToolStripMenuItem.ToolTipText = maprecorder.Recording ? Properties.Strings.Map3D_Recorder_StopRecord_ToolTip : maprecorder.Entries ? Properties.Strings.Map3D_Recorder_ResumeRecord_ToolTip : Properties.Strings.Map3D_Recorder_Record_ToolTip;
             recordToolStripMenuItem.Image = maprecorder.Recording ? Icons.Controls.Map3D_Recorder_StopRecord : Icons.Controls.Map3D_Recorder_Record;
             recordToolStripMenuItem.Enabled = !maprecorder.InPlayBack && !maprecorder.RecordingStep;
 
-            recordStepToStepToolStripMenuItem.Text = maprecorder.Recording ? "Stop Step Recording (F6)" : maprecorder.Entries ? "Resume Step Recording (F6)" : "Start Step Recording (F6)";
+            recordStepToStepToolStripMenuItem.Text = maprecorder.Recording ? Properties.Strings.Map3D_Recorder_StopRecordStep : maprecorder.Entries ? Properties.Strings.Map3D_Recorder_ResumeRecordStep : Properties.Strings.Map3D_Recorder_RecordStep;
+            recordStepToStepToolStripMenuItem.ToolTipText = maprecorder.Recording ? Properties.Strings.Map3D_Recorder_StopRecordStep_ToolTip : maprecorder.Entries ? Properties.Strings.Map3D_Recorder_ResumeRecordStep_ToolTip : Properties.Strings.Map3D_Recorder_RecordStep_ToolTip;
             recordStepToStepToolStripMenuItem.Image = maprecorder.Recording ? Icons.Controls.Map3D_Recorder_StopRecord : Icons.Controls.Map3D_Recorder_RecordStep;
             recordStepToStepToolStripMenuItem.Enabled = !maprecorder.InPlayBack && !maprecorder.RecordingNormal;
 
@@ -1513,23 +1515,27 @@ namespace EDDiscovery
 
             toolStripMenuItemClearRecording.Enabled = maprecorder.Entries;
 
-            playbackToolStripMenuItem.Text = maprecorder.InPlayBack ? "Stop Playback (F9)" : "Start Playback (F9)";
+            playbackToolStripMenuItem.Text = maprecorder.InPlayBack ? Properties.Strings.Map3D_Recorder_StopPlay : Properties.Strings.Map3D_Recorder_Play;
+            playbackToolStripMenuItem.ToolTipText = maprecorder.InPlayBack ? Properties.Strings.Map3D_Recorder_StopPlay_ToolTip : Properties.Strings.Map3D_Recorder_Play_ToolTip;
             playbackToolStripMenuItem.Image = maprecorder.InPlayBack ? Icons.Controls.Map3D_Recorder_StopPlay : Icons.Controls.Map3D_Recorder_Play;
             playbackToolStripMenuItem.Enabled = maprecorder.Entries;
 
             if (maprecorder.InPlayBack)
             {
-                pauseRecordToolStripMenuItem.Text = maprecorder.Paused ? "Resume Playback (F8)" : "Pause Playback (F8)";
+                pauseRecordToolStripMenuItem.Text = maprecorder.Paused ? Properties.Strings.Map3D_Recorder_UnpausePlay : Properties.Strings.Map3D_Recorder_PausePlay;
+                pauseRecordToolStripMenuItem.ToolTipText = maprecorder.Paused ? Properties.Strings.Map3D_Recorder_UnpausePlay_ToolTip : Properties.Strings.Map3D_Recorder_PausePlay_ToolTip;
                 pauseRecordToolStripMenuItem.Image = Icons.Controls.Map3D_Recorder_PausePlay;
             }
             else if (maprecorder.Recording)
             {
-                pauseRecordToolStripMenuItem.Text = maprecorder.Paused ? "Resume Recording (F8)" : "Pause Recording (F8)";
+                pauseRecordToolStripMenuItem.Text = maprecorder.Paused ? Properties.Strings.Map3D_Recorder_UnpauseRecord : Properties.Strings.Map3D_Recorder_PauseRecord;
+                pauseRecordToolStripMenuItem.ToolTipText = maprecorder.Paused ? Properties.Strings.Map3D_Recorder_UnpauseRecord_ToolTip : Properties.Strings.Map3D_Recorder_PauseRecord_ToolTip;
                 pauseRecordToolStripMenuItem.Image = Icons.Controls.Map3D_Recorder_PauseRecord;
             }
             else
             {
-                pauseRecordToolStripMenuItem.Text = "Pause (F8)";
+                pauseRecordToolStripMenuItem.Text = Properties.Strings.Map3D_Recorder_Pause;
+                pauseRecordToolStripMenuItem.ToolTipText = Properties.Strings.Map3D_Recorder_Pause_ToolTip;
                 pauseRecordToolStripMenuItem.Image = Icons.Controls.Map3D_Recorder_Pause;
             }
 
@@ -1555,7 +1561,7 @@ namespace EDDiscovery
             string file = (string)tmsi.Tag;
             if ( !maprecorder.ReadFromFile(file) )
             {
-                ExtendedControls.MessageBoxTheme.Show(this, "Failed to load flight " + file + ". Check file path and file contents");
+                ExtendedControls.MessageBoxTheme.Show(this, String.Format(Properties.Strings.Map3D_Recorder_LoadFailed, file));
             }
         }
 
@@ -1831,23 +1837,20 @@ namespace EDDiscovery
                 if (sysclass != null)
                 {
                     if (sysclass.allegiance != EDAllegiance.Unknown)
-                        info += Environment.NewLine + "Allegiance: " + sysclass.allegiance;
+                        info += Environment.NewLine + Properties.Strings.Map3D_Info_Allegiance + " " + sysclass.allegiance;
 
                     if (sysclass.primary_economy != EDEconomy.Unknown)
-                        info += Environment.NewLine + "Economy: " + sysclass.primary_economy;
+                        info += Environment.NewLine + Properties.Strings.Map3D_Info_Economy + " " + sysclass.primary_economy;
 
                     if (sysclass.government != EDGovernment.Unknown)
-                        info += Environment.NewLine + "Government: " + sysclass.allegiance;
+                        info += Environment.NewLine + Properties.Strings.Map3D_Info_Government + " " + sysclass.government;
 
                     if (sysclass.state != EDState.Unknown)
-                        info += Environment.NewLine + "State: " + sysclass.state;
-
-                    if (sysclass.allegiance != EDAllegiance.Unknown)
-                        info += Environment.NewLine + "Allegiance: " + sysclass.allegiance;
+                        info += Environment.NewLine + Properties.Strings.Map3D_Info_State + " " + sysclass.state;
                 }
 
                 if (hoversystem.population != 0)
-                    info += Environment.NewLine + "Population: " + hoversystem.population;
+                    info += Environment.NewLine + Properties.Strings.Map3D_Info_Population + " " + hoversystem.population.ToString("N");
             }
             else if (curbookmark != null && curbookmark.Heading != null)     // region bookmark (second check should be redundant but its protection).
             {
@@ -1868,41 +1871,41 @@ namespace EDDiscovery
                 if (!sysname.Equals(_centerSystem.name))
                 {
                     Vector3d cs = new Vector3d(_centerSystem.x, _centerSystem.y, _centerSystem.z);
-                    info += Environment.NewLine + "Distance from " + _centerSystem.name + ": " + (cs-pos).Length.ToString("0.0");
+                    info += Environment.NewLine + String.Format(Properties.Strings.Map3D_Info_DistanceFrom, _centerSystem.name, (cs-pos).Length);
                 }
                 // if exists, history not hover, history not centre
                 if (_historySelection != null && !sysname.Equals(_historySelection.name) && !_historySelection.name.Equals(_centerSystem.name))
                 {
                     Vector3d hs = new Vector3d(_historySelection.x, _historySelection.y, _historySelection.z);
-                    info += Environment.NewLine + "Distance from " + _historySelection.name + ": " + (hs-pos).Length.ToString("0.0");
+                    info += Environment.NewLine + String.Format(Properties.Strings.Map3D_Info_DistanceFrom, _historySelection.name, (hs-pos).Length);
                 }
                 // home not centre, home not history or history null
                 if (!_homeSystem.name.Equals(_centerSystem.name) && (_historySelection == null || !_historySelection.name.Equals(_homeSystem.name)))
                 {
                     double dist = ((new Vector3d(_homeSystem.x, _homeSystem.y, _homeSystem.z)) - pos).Length;
-                    info += Environment.NewLine + "Distance from " + _homeSystem.name + ": " + dist.ToString("0.0");
+                    info += Environment.NewLine + String.Format(Properties.Strings.Map3D_Info_DistanceFrom, _homeSystem.name, dist);
                 }
 
                 if (_clickedSystem != null && _clickedSystem != _centerSystem && _clickedSystem != _historySelection && _clickedSystem != _homeSystem && _clickedSystem!=hoversystem)
                 {
                     double dist = ((new Vector3d(_clickedSystem.x, _clickedSystem.y, _clickedSystem.z)) - pos).Length;
-                    info += Environment.NewLine + "Distance from " + _clickedSystem.name + ": " + dist.ToString("0.0");
+                    info += Environment.NewLine + String.Format(Properties.Strings.Map3D_Info_DistanceFrom, _clickedSystem.name, dist);
                 }
 
                 if (_clickedGMO != null && _clickedGMO != gmo )
                 {
                     double dist = ((new Vector3d(_clickedGMO.points[0].X, _clickedGMO.points[0].Y, _clickedGMO.points[0].Z)) - pos).Length;
-                    info += Environment.NewLine + "Distance from " + _clickedGMO.name + ": " + dist.ToString("0.0");
+                    info += Environment.NewLine + String.Format(Properties.Strings.Map3D_Info_DistanceFrom, _clickedGMO.name, dist);
                 }
 
                 SystemNoteClass sn = SystemNoteClass.GetNoteOnSystem(sysname, hoversystem == null ? 0 : hoversystem.id_edsm);   // may be null
                 if (sn != null && sn.Note.Trim().Length>0 )
                 {
-                    info += Environment.NewLine + "Notes: " + sn.Note.Trim();
+                    info += Environment.NewLine + String.Format(Properties.Strings.Map3D_Info_Notes, sn.Note.Trim());
                 }
 
                 if (curbookmark != null && curbookmark.Note != null && curbookmark.Note.Trim().Length>0 )
-                    info += Environment.NewLine + "Bookmark Notes: " + curbookmark.Note.Trim();
+                    info += Environment.NewLine + String.Format(Properties.Strings.Map3D_Info_BookmarkNotes, curbookmark.Note.Trim());
 
                 _mousehovertooltip = new System.Windows.Forms.ToolTip();
                 _mousehovertooltip.InitialDelay = 0;
@@ -2311,21 +2314,22 @@ namespace EDDiscovery
             }
         }
 
-        public void AddExpedition(string name, Func<DateTime> starttime, Func<DateTime> endtime)
+        public void AddExpedition(string name, Func<DateTime> starttime, Func<DateTime> endtime, string localname = null)
         {
-            _AddExpedition(name, starttime, endtime);
+            _AddExpedition(name, localname ?? name, starttime, endtime);
         }
 
-        public void AddExpedition(string name, DateTime starttime, DateTime? endtime)
+        public void AddExpedition(string name, DateTime starttime, DateTime? endtime, string localname = null)
         {
-            _AddExpedition(name, () => starttime, endtime == null ? null : new Func<DateTime>(() => (DateTime)endtime));
+            _AddExpedition(name, localname ?? name, () => starttime, endtime == null ? null : new Func<DateTime>(() => (DateTime)endtime));
         }
 
-        private ToolStripButton _AddExpedition(string name, Func<DateTime> starttime, Func<DateTime> endtime)
+        private ToolStripButton _AddExpedition(string name, string localname, Func<DateTime> starttime, Func<DateTime> endtime)
         {
             var item = new ToolStripButton
             {
-                Text = name,
+                Tag = name,
+                Text = localname,
                 CheckOnClick = true,
                 DisplayStyle = ToolStripItemDisplayStyle.Text
             };
@@ -2342,6 +2346,14 @@ namespace EDDiscovery
                 { "Last Week", () => DateTime.Now.AddDays(-7) },
                 { "Last Month", () => DateTime.Now.AddMonths(-1) },
                 { "Last Year", () => DateTime.Now.AddYears(-1) }
+            };
+
+            Dictionary<string, string> localised = new Dictionary<string, string>
+            {
+                { "All", Properties.Strings.TimeRange_All },
+                { "Last Week", Properties.Strings.TimeRange_LastWeek },
+                { "Last Month", Properties.Strings.TimeRange_LastMonth },
+                { "Last Year", Properties.Strings.TimeRange_LastYear }
             };
 
             Dictionary<string, Func<DateTime>> endtimes = new Dictionary<string, Func<DateTime>>();
@@ -2374,11 +2386,12 @@ namespace EDDiscovery
             foreach (var kvp in starttimes)
             {
                 var name = kvp.Key;
+                var localname = localised.ContainsKey(kvp.Key) ? localised[kvp.Key] : kvp.Key;
                 var startfunc = kvp.Value;
                 var endfunc = endtimes.ContainsKey(name) ? endtimes[name] : () => DateTime.Now.AddDays(1);
-                var item = _AddExpedition(name, startfunc, endfunc);
+                var item = _AddExpedition(name, localname, startfunc, endfunc);
 
-                if (item.Text.Equals(lastsel))              // if a standard one, restore.  WE are not saving custom.
+                if (kvp.Key.Equals(lastsel))              // if a standard one, restore.  WE are not saving custom.
                 {                                           // if custom is selected, we don't restore a tick.
                     item.Checked = true;
                     startTime = startfunc();
@@ -2388,7 +2401,8 @@ namespace EDDiscovery
 
             var citem = new ToolStripButton
             {
-                Text = "Custom",
+                Tag = "Custom",
+                Text = Properties.Strings.TimeRange_Custom,
                 CheckOnClick = true,
                 DisplayStyle = ToolStripItemDisplayStyle.Text
             };

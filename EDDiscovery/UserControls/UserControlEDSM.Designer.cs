@@ -176,14 +176,14 @@ namespace EDDiscovery.UserControls
             // 
             this.mapGotoStartoolStripMenuItem.Name = "mapGotoStartoolStripMenuItem";
             this.mapGotoStartoolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.mapGotoStartoolStripMenuItem.Text = "Go to star on 3D Map";
+            this.mapGotoStartoolStripMenuItem.Text = Properties.Strings.EDSM_ShowOn3DMap;
             this.mapGotoStartoolStripMenuItem.Click += new System.EventHandler(this.mapGotoStartoolStripMenuItem_Click);
             // 
             // viewOnEDSMToolStripMenuItem
             // 
             this.viewOnEDSMToolStripMenuItem.Name = "viewOnEDSMToolStripMenuItem";
             this.viewOnEDSMToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.viewOnEDSMToolStripMenuItem.Text = "View on EDSM";
+            this.viewOnEDSMToolStripMenuItem.Text = Properties.Strings.EDSM_ViewOnEDSM;
             this.viewOnEDSMToolStripMenuItem.Click += new System.EventHandler(this.viewOnEDSMToolStripMenuItem_Click);
             // 
             // panelTop

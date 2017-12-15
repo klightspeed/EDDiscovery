@@ -109,7 +109,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonNew.Name = "toolStripButtonNew";
             this.toolStripButtonNew.Size = new System.Drawing.Size(51, 22);
-            this.toolStripButtonNew.Text = "New";
+            this.toolStripButtonNew.Text = Properties.Strings.Exploration_New;
             this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
             // toolStripButtonImportFile
@@ -118,7 +118,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonImportFile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonImportFile.Name = "toolStripButtonImportFile";
             this.toolStripButtonImportFile.Size = new System.Drawing.Size(82, 22);
-            this.toolStripButtonImportFile.Text = "Import file";
+            this.toolStripButtonImportFile.Text = Properties.Strings.Exploration_ImportFile;
             this.toolStripButtonImportFile.Click += new System.EventHandler(this.toolStripButtonImportFile_Click);
             // 
             // tsbImportSphere
@@ -127,7 +127,7 @@ namespace EDDiscovery.UserControls
             this.tsbImportSphere.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbImportSphere.Name = "tsbImportSphere";
             this.tsbImportSphere.Size = new System.Drawing.Size(102, 22);
-            this.tsbImportSphere.Text = "Import Sphere";
+            this.tsbImportSphere.Text = Properties.Strings.Exploration_ImportSphere;
             this.tsbImportSphere.Click += new System.EventHandler(this.tsbImportSphere_Click);
             // 
             // toolStripButtonLoad
@@ -136,7 +136,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonLoad.Name = "toolStripButtonLoad";
             this.toolStripButtonLoad.Size = new System.Drawing.Size(53, 22);
-            this.toolStripButtonLoad.Text = "Load";
+            this.toolStripButtonLoad.Text = Properties.Strings.Exploration_Load;
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
             // toolStripButtonSave
@@ -145,7 +145,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.Size = new System.Drawing.Size(51, 22);
-            this.toolStripButtonSave.Text = "Save";
+            this.toolStripButtonSave.Text = Properties.Strings.Exploration_Save;
             this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
             // toolStripButtonExport
@@ -154,8 +154,8 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonExport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonExport.Name = "toolStripButtonExport";
             this.toolStripButtonExport.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButtonExport.Text = "Export";
-            this.toolStripButtonExport.ToolTipText = "Export to file";
+            this.toolStripButtonExport.Text = Properties.Strings.Exploration_Export;
+            this.toolStripButtonExport.ToolTipText = Properties.Strings.Exploration_Export_ToolTip;
             this.toolStripButtonExport.Click += new System.EventHandler(this.toolStripButtonExport_Click);
             // 
             // toolStripButtonDelete
@@ -164,7 +164,7 @@ namespace EDDiscovery.UserControls
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
             this.toolStripButtonDelete.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButtonDelete.Text = "Delete";
+            this.toolStripButtonDelete.Text = Properties.Strings.Exploration_Delete;
             this.toolStripButtonDelete.Visible = false;
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
             // 
@@ -239,42 +239,42 @@ namespace EDDiscovery.UserControls
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Text = Properties.Strings.Table_Copy;
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Text = Properties.Strings.Table_Paste;
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // insertCopiedToolStripMenuItem
             // 
             this.insertCopiedToolStripMenuItem.Name = "insertCopiedToolStripMenuItem";
             this.insertCopiedToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.insertCopiedToolStripMenuItem.Text = "Insert Copied Rows";
+            this.insertCopiedToolStripMenuItem.Text = Properties.Strings.Table_InsertCopiedRows;
             this.insertCopiedToolStripMenuItem.Click += new System.EventHandler(this.insertCopiedToolStripMenuItem_Click);
             // 
             // deleteRowsToolStripMenuItem
             // 
             this.deleteRowsToolStripMenuItem.Name = "deleteRowsToolStripMenuItem";
             this.deleteRowsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.deleteRowsToolStripMenuItem.Text = "Delete Rows";
+            this.deleteRowsToolStripMenuItem.Text = Properties.Strings.Table_DeleteRows;
             this.deleteRowsToolStripMenuItem.Click += new System.EventHandler(this.deleteRowsToolStripMenuItem_Click);
             // 
             // setTargetToolStripMenuItem
             // 
             this.setTargetToolStripMenuItem.Name = "setTargetToolStripMenuItem";
             this.setTargetToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.setTargetToolStripMenuItem.Text = "Set Target";
+            this.setTargetToolStripMenuItem.Text = Properties.Strings.Table_SetTarget;
             this.setTargetToolStripMenuItem.Click += new System.EventHandler(this.setTargetToolStripMenuItem_Click);
             // 
             // editBookmarkToolStripMenuItem
             // 
             this.editBookmarkToolStripMenuItem.Name = "editBookmarkToolStripMenuItem";
             this.editBookmarkToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.editBookmarkToolStripMenuItem.Text = "Edit bookmark";
+            this.editBookmarkToolStripMenuItem.Text = Properties.Strings.Table_EditBookmark;
             this.editBookmarkToolStripMenuItem.Click += new System.EventHandler(this.editBookmarkToolStripMenuItem_Click);
             // 
             // dataGridViewExplore

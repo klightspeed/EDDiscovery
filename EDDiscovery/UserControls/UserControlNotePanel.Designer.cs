@@ -77,7 +77,7 @@ namespace EDDiscovery.UserControls
             this.miGMPNotes.CheckState = System.Windows.Forms.CheckState.Checked;
             this.miGMPNotes.Name = "miGMPNotes";
             this.miGMPNotes.Size = new System.Drawing.Size(239, 22);
-            this.miGMPNotes.Text = "Display galactic mapping notes";
+            this.miGMPNotes.Text = Properties.Strings.NotePanel_DisplayGMPNotes;
             this.miGMPNotes.Click += new System.EventHandler(this.miGMPNotes_Click);
             // 
             // miSystemNotes
@@ -87,7 +87,7 @@ namespace EDDiscovery.UserControls
             this.miSystemNotes.CheckState = System.Windows.Forms.CheckState.Checked;
             this.miSystemNotes.Name = "miSystemNotes";
             this.miSystemNotes.Size = new System.Drawing.Size(239, 22);
-            this.miSystemNotes.Text = "Display system notes";
+            this.miSystemNotes.Text = Properties.Strings.NotePanel_DisplaySystemNotes;
             this.miSystemNotes.Click += new System.EventHandler(this.miSystemNotes_Click);
             // 
             // UserControlNotePanel

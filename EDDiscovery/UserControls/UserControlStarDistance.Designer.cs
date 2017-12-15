@@ -70,14 +70,14 @@ namespace EDDiscovery.UserControls
             // 
             this.addToTrilaterationToolStripMenuItem1.Name = "addToTrilaterationToolStripMenuItem1";
             this.addToTrilaterationToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
-            this.addToTrilaterationToolStripMenuItem1.Text = "Add to Trilateration";
+            this.addToTrilaterationToolStripMenuItem1.Text = Properties.Strings.StarDistance_AddToTrilat;
             this.addToTrilaterationToolStripMenuItem1.Click += new System.EventHandler(this.addToTrilaterationToolStripMenuItem1_Click);
             // 
             // viewOnEDSMToolStripMenuItem1
             // 
             this.viewOnEDSMToolStripMenuItem1.Name = "viewOnEDSMToolStripMenuItem1";
             this.viewOnEDSMToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
-            this.viewOnEDSMToolStripMenuItem1.Text = "View on EDSM";
+            this.viewOnEDSMToolStripMenuItem1.Text = Properties.Strings.StarDistance_ViewOnEDSM;
             this.viewOnEDSMToolStripMenuItem1.Click += new System.EventHandler(this.viewOnEDSMToolStripMenuItem1_Click);
             // 
             // dataViewScrollerPanel2
