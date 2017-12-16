@@ -129,7 +129,7 @@ namespace EDDiscovery.UserControls
             // 
             // cColName
             // 
-            this.cColName.HeaderText = "Name";
+            this.cColName.HeaderText = Strings.Controls.Missions_cColName_Header;
             this.cColName.MinimumWidth = 50;
             this.cColName.Name = "cColName";
             this.cColName.ReadOnly = true;
@@ -137,7 +137,7 @@ namespace EDDiscovery.UserControls
             // cColStartDate
             // 
             this.cColStartDate.FillWeight = 75F;
-            this.cColStartDate.HeaderText = "Start Date";
+            this.cColStartDate.HeaderText = Strings.Controls.Missions_cColStartDate_Header;
             this.cColStartDate.MinimumWidth = 50;
             this.cColStartDate.Name = "cColStartDate";
             this.cColStartDate.ReadOnly = true;
@@ -145,7 +145,7 @@ namespace EDDiscovery.UserControls
             // cColEndDate
             // 
             this.cColEndDate.FillWeight = 75F;
-            this.cColEndDate.HeaderText = "End Date";
+            this.cColEndDate.HeaderText = Strings.Controls.Missions_cColEndDate_Header;
             this.cColEndDate.MinimumWidth = 50;
             this.cColEndDate.Name = "cColEndDate";
             this.cColEndDate.ReadOnly = true;
@@ -153,14 +153,14 @@ namespace EDDiscovery.UserControls
             // cColOrigin
             // 
             this.cColOrigin.FillWeight = 80F;
-            this.cColOrigin.HeaderText = "Origin";
+            this.cColOrigin.HeaderText = Strings.Controls.Missions_cColOrigin_Header;
             this.cColOrigin.Name = "cColOrigin";
             this.cColOrigin.ReadOnly = true;
             // 
             // cColFromFaction
             // 
             this.cColFromFaction.FillWeight = 50F;
-            this.cColFromFaction.HeaderText = "Faction";
+            this.cColFromFaction.HeaderText = Strings.Controls.Missions_cColFromFaction_Header;
             this.cColFromFaction.MinimumWidth = 50;
             this.cColFromFaction.Name = "cColFromFaction";
             this.cColFromFaction.ReadOnly = true;
@@ -168,7 +168,7 @@ namespace EDDiscovery.UserControls
             // cColDestSystem
             // 
             this.cColDestSystem.FillWeight = 80F;
-            this.cColDestSystem.HeaderText = "Destination";
+            this.cColDestSystem.HeaderText = Strings.Controls.Missions_cColDestSystem_Header;
             this.cColDestSystem.MinimumWidth = 50;
             this.cColDestSystem.Name = "cColDestSystem";
             this.cColDestSystem.ReadOnly = true;
@@ -176,7 +176,7 @@ namespace EDDiscovery.UserControls
             // cColTargetFaction
             // 
             this.cColTargetFaction.FillWeight = 50F;
-            this.cColTargetFaction.HeaderText = "Target Faction";
+            this.cColTargetFaction.HeaderText = Strings.Controls.Missions_cColTargetFaction_Header;
             this.cColTargetFaction.MinimumWidth = 50;
             this.cColTargetFaction.Name = "cColTargetFaction";
             this.cColTargetFaction.ReadOnly = true;
@@ -184,7 +184,7 @@ namespace EDDiscovery.UserControls
             // cColInfo
             // 
             this.cColInfo.FillWeight = 150F;
-            this.cColInfo.HeaderText = "Info";
+            this.cColInfo.HeaderText = Strings.Controls.Missions_cColInfo_Header;
             this.cColInfo.MinimumWidth = 50;
             this.cColInfo.Name = "cColInfo";
             this.cColInfo.ReadOnly = true;
@@ -210,7 +210,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomCur.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomCur.SmallChange = 1;
             this.vScrollBarCustomCur.TabIndex = 0;
-            this.vScrollBarCustomCur.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomCur.Text = Strings.Controls.Missions_vScrollBarCustomCur;
             this.vScrollBarCustomCur.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomCur.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomCur.ThumbColorScaling = 0.5F;
@@ -270,7 +270,7 @@ namespace EDDiscovery.UserControls
             // 
             // PcolName
             // 
-            this.PcolName.HeaderText = "Name";
+            this.PcolName.HeaderText = Strings.Controls.Missions_PcolName_Header;
             this.PcolName.MinimumWidth = 50;
             this.PcolName.Name = "PcolName";
             this.PcolName.ReadOnly = true;
@@ -278,7 +278,7 @@ namespace EDDiscovery.UserControls
             // pColStart
             // 
             this.pColStart.FillWeight = 75F;
-            this.pColStart.HeaderText = "Start Date";
+            this.pColStart.HeaderText = Strings.Controls.Missions_pColStart_Header;
             this.pColStart.MinimumWidth = 50;
             this.pColStart.Name = "pColStart";
             this.pColStart.ReadOnly = true;
@@ -286,7 +286,7 @@ namespace EDDiscovery.UserControls
             // pColEnd
             // 
             this.pColEnd.FillWeight = 75F;
-            this.pColEnd.HeaderText = "End Date";
+            this.pColEnd.HeaderText = Strings.Controls.Missions_pColEnd_Header;
             this.pColEnd.MinimumWidth = 50;
             this.pColEnd.Name = "pColEnd";
             this.pColEnd.ReadOnly = true;
@@ -294,7 +294,7 @@ namespace EDDiscovery.UserControls
             // pColOrigin
             // 
             this.pColOrigin.FillWeight = 80F;
-            this.pColOrigin.HeaderText = "Origin";
+            this.pColOrigin.HeaderText = Strings.Controls.Missions_pColOrigin_Header;
             this.pColOrigin.MinimumWidth = 50;
             this.pColOrigin.Name = "pColOrigin";
             this.pColOrigin.ReadOnly = true;
@@ -302,7 +302,7 @@ namespace EDDiscovery.UserControls
             // pColFromFaction
             // 
             this.pColFromFaction.FillWeight = 50F;
-            this.pColFromFaction.HeaderText = "Faction";
+            this.pColFromFaction.HeaderText = Strings.Controls.Missions_pColFromFaction_Header;
             this.pColFromFaction.MinimumWidth = 50;
             this.pColFromFaction.Name = "pColFromFaction";
             this.pColFromFaction.ReadOnly = true;
@@ -310,7 +310,7 @@ namespace EDDiscovery.UserControls
             // pColDestSys
             // 
             this.pColDestSys.FillWeight = 80F;
-            this.pColDestSys.HeaderText = "Destination";
+            this.pColDestSys.HeaderText = Strings.Controls.Missions_pColDestSys_Header;
             this.pColDestSys.MinimumWidth = 50;
             this.pColDestSys.Name = "pColDestSys";
             this.pColDestSys.ReadOnly = true;
@@ -318,7 +318,7 @@ namespace EDDiscovery.UserControls
             // pColTargetFaction
             // 
             this.pColTargetFaction.FillWeight = 50F;
-            this.pColTargetFaction.HeaderText = "Target Faction";
+            this.pColTargetFaction.HeaderText = Strings.Controls.Missions_pColTargetFaction_Header;
             this.pColTargetFaction.MinimumWidth = 50;
             this.pColTargetFaction.Name = "pColTargetFaction";
             this.pColTargetFaction.ReadOnly = true;
@@ -326,7 +326,7 @@ namespace EDDiscovery.UserControls
             // pColResult
             // 
             this.pColResult.FillWeight = 50F;
-            this.pColResult.HeaderText = "Result";
+            this.pColResult.HeaderText = Strings.Controls.Missions_pColResult_Header;
             this.pColResult.MinimumWidth = 25;
             this.pColResult.Name = "pColResult";
             this.pColResult.ReadOnly = true;
@@ -334,7 +334,7 @@ namespace EDDiscovery.UserControls
             // pColInfo
             // 
             this.pColInfo.FillWeight = 150F;
-            this.pColInfo.HeaderText = "Info";
+            this.pColInfo.HeaderText = Strings.Controls.Missions_pColInfo_Header;
             this.pColInfo.MinimumWidth = 50;
             this.pColInfo.Name = "pColInfo";
             this.pColInfo.ReadOnly = true;
@@ -360,7 +360,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomPrev.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomPrev.SmallChange = 1;
             this.vScrollBarCustomPrev.TabIndex = 0;
-            this.vScrollBarCustomPrev.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomPrev.Text = Strings.Controls.Missions_vScrollBarCustomPrev;
             this.vScrollBarCustomPrev.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomPrev.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomPrev.ThumbColorScaling = 0.5F;
@@ -379,7 +379,7 @@ namespace EDDiscovery.UserControls
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(800, 32);
             this.panelButtons.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.panelButtons, "Left click and drag on grid to reorder");
+            this.toolTip1.SetToolTip(this.panelButtons, Strings.Controls.Missions_panelButtons_ToolTip);
             // 
             // labelValue
             // 
@@ -396,7 +396,7 @@ namespace EDDiscovery.UserControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "to";
+            this.label1.Text = Strings.Controls.Missions_label1;
             // 
             // customDateTimePickerEnd
             // 
@@ -412,7 +412,7 @@ namespace EDDiscovery.UserControls
             this.customDateTimePickerEnd.ShowUpDown = false;
             this.customDateTimePickerEnd.Size = new System.Drawing.Size(218, 20);
             this.customDateTimePickerEnd.TabIndex = 0;
-            this.customDateTimePickerEnd.Text = "customDateTimePicker1";
+            this.customDateTimePickerEnd.Text = Strings.Controls.Missions_customDateTimePickerEnd;
             this.customDateTimePickerEnd.TextBackColor = System.Drawing.SystemColors.ControlLight;
             this.customDateTimePickerEnd.Value = new System.DateTime(2017, 4, 7, 9, 2, 29, 549);
             this.customDateTimePickerEnd.ValueChanged += new System.EventHandler(this.customDateTimePickerEnd_ValueChanged);
@@ -431,7 +431,7 @@ namespace EDDiscovery.UserControls
             this.customDateTimePickerStart.ShowUpDown = false;
             this.customDateTimePickerStart.Size = new System.Drawing.Size(220, 20);
             this.customDateTimePickerStart.TabIndex = 0;
-            this.customDateTimePickerStart.Text = "customDateTimePicker1";
+            this.customDateTimePickerStart.Text = Strings.Controls.Missions_customDateTimePickerStart;
             this.customDateTimePickerStart.TextBackColor = System.Drawing.SystemColors.ControlLight;
             this.customDateTimePickerStart.Value = new System.DateTime(2017, 4, 7, 9, 2, 29, 549);
             this.customDateTimePickerStart.ValueChanged += new System.EventHandler(this.customDateTimePickerStart_ValueChanged);

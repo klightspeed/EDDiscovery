@@ -128,7 +128,7 @@
             this.buttonExtExcel.Name = "buttonExtExcel";
             this.buttonExtExcel.Size = new System.Drawing.Size(24, 24);
             this.buttonExtExcel.TabIndex = 59;
-            this.toolTip.SetToolTip(this.buttonExtExcel, "Send data on grid to excel");
+            this.toolTip.SetToolTip(this.buttonExtExcel, Strings.Controls.Route_buttonExtExcel_ToolTip);
             this.buttonExtExcel.UseVisualStyleBackColor = true;
             this.buttonExtExcel.Click += new System.EventHandler(this.buttonExtExcel_Click);
             // 
@@ -150,7 +150,7 @@
             this.textBox_ToName.Size = new System.Drawing.Size(234, 20);
             this.textBox_ToName.TabIndex = 58;
             this.textBox_ToName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_ToName, "Alternate Name");
+            this.toolTip.SetToolTip(this.textBox_ToName, Strings.Controls.Route_textBox_ToName_ToolTip);
             this.textBox_ToName.WordWrap = true;
             // 
             // textBox_FromName
@@ -171,7 +171,7 @@
             this.textBox_FromName.Size = new System.Drawing.Size(234, 20);
             this.textBox_FromName.TabIndex = 57;
             this.textBox_FromName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_FromName, "Alternate name");
+            this.toolTip.SetToolTip(this.textBox_FromName, Strings.Controls.Route_textBox_FromName_ToolTip);
             this.textBox_FromName.WordWrap = true;
             // 
             // comboBoxRoutingMetric
@@ -198,7 +198,7 @@
             this.comboBoxRoutingMetric.SelectedValue = null;
             this.comboBoxRoutingMetric.Size = new System.Drawing.Size(234, 21);
             this.comboBoxRoutingMetric.TabIndex = 41;
-            this.toolTip.SetToolTip(this.comboBoxRoutingMetric, "Pick the metric to use when searching for a route");
+            this.toolTip.SetToolTip(this.comboBoxRoutingMetric, Strings.Controls.Route_comboBoxRoutingMetric_ToolTip);
             this.comboBoxRoutingMetric.ValueMember = "";
             // 
             // buttonExtTravelTo
@@ -210,8 +210,8 @@
             this.buttonExtTravelTo.Name = "buttonExtTravelTo";
             this.buttonExtTravelTo.Size = new System.Drawing.Size(53, 23);
             this.buttonExtTravelTo.TabIndex = 56;
-            this.buttonExtTravelTo.Text = "History";
-            this.toolTip.SetToolTip(this.buttonExtTravelTo, "Copy the entry in the main travel grid to end route entry");
+            this.buttonExtTravelTo.Text = Strings.Controls.Route_buttonExtTravelTo;
+            this.toolTip.SetToolTip(this.buttonExtTravelTo, Strings.Controls.Route_buttonExtTravelTo_ToolTip);
             this.buttonExtTravelTo.UseVisualStyleBackColor = true;
             this.buttonExtTravelTo.Click += new System.EventHandler(this.buttonExtTravelTo_Click);
             // 
@@ -224,8 +224,8 @@
             this.buttonExtTravelFrom.Name = "buttonExtTravelFrom";
             this.buttonExtTravelFrom.Size = new System.Drawing.Size(53, 23);
             this.buttonExtTravelFrom.TabIndex = 55;
-            this.buttonExtTravelFrom.Text = "History";
-            this.toolTip.SetToolTip(this.buttonExtTravelFrom, "Copy the entry in the main travel grid to start route entry");
+            this.buttonExtTravelFrom.Text = Strings.Controls.Route_buttonExtTravelFrom;
+            this.toolTip.SetToolTip(this.buttonExtTravelFrom, Strings.Controls.Route_buttonExtTravelFrom_ToolTip);
             this.buttonExtTravelFrom.UseVisualStyleBackColor = true;
             this.buttonExtTravelFrom.Click += new System.EventHandler(this.buttonExtTravelFrom_Click);
             // 
@@ -238,8 +238,8 @@
             this.buttonExtTargetTo.Name = "buttonExtTargetTo";
             this.buttonExtTargetTo.Size = new System.Drawing.Size(53, 23);
             this.buttonExtTargetTo.TabIndex = 54;
-            this.buttonExtTargetTo.Text = "Target";
-            this.toolTip.SetToolTip(this.buttonExtTargetTo, "Copy the target system to end route entry");
+            this.buttonExtTargetTo.Text = Strings.Controls.Route_buttonExtTargetTo;
+            this.toolTip.SetToolTip(this.buttonExtTargetTo, Strings.Controls.Route_buttonExtTargetTo_ToolTip);
             this.buttonExtTargetTo.UseVisualStyleBackColor = true;
             this.buttonExtTargetTo.Click += new System.EventHandler(this.buttonTargetTo_Click);
             // 
@@ -252,8 +252,8 @@
             this.buttonToEDSM.Name = "buttonToEDSM";
             this.buttonToEDSM.Size = new System.Drawing.Size(53, 23);
             this.buttonToEDSM.TabIndex = 53;
-            this.buttonToEDSM.Text = "EDSM";
-            this.toolTip.SetToolTip(this.buttonToEDSM, "Open this end route system in EDSM");
+            this.buttonToEDSM.Text = Strings.Controls.Route_buttonToEDSM;
+            this.toolTip.SetToolTip(this.buttonToEDSM, Strings.Controls.Route_buttonToEDSM_ToolTip);
             this.buttonToEDSM.UseVisualStyleBackColor = true;
             this.buttonToEDSM.Click += new System.EventHandler(this.buttonToEDSM_Click);
             // 
@@ -266,8 +266,8 @@
             this.buttonFromEDSM.Name = "buttonFromEDSM";
             this.buttonFromEDSM.Size = new System.Drawing.Size(53, 23);
             this.buttonFromEDSM.TabIndex = 52;
-            this.buttonFromEDSM.Text = "EDSM";
-            this.toolTip.SetToolTip(this.buttonFromEDSM, "Open this start route system in EDSM");
+            this.buttonFromEDSM.Text = Strings.Controls.Route_buttonFromEDSM;
+            this.toolTip.SetToolTip(this.buttonFromEDSM, Strings.Controls.Route_buttonFromEDSM_ToolTip);
             this.buttonFromEDSM.UseVisualStyleBackColor = true;
             this.buttonFromEDSM.Click += new System.EventHandler(this.buttonFromEDSM_Click);
             // 
@@ -280,8 +280,8 @@
             this.buttonTargetFrom.Name = "buttonTargetFrom";
             this.buttonTargetFrom.Size = new System.Drawing.Size(53, 23);
             this.buttonTargetFrom.TabIndex = 51;
-            this.buttonTargetFrom.Text = "Target";
-            this.toolTip.SetToolTip(this.buttonTargetFrom, "Copy the target system to start route entry");
+            this.buttonTargetFrom.Text = Strings.Controls.Route_buttonTargetFrom;
+            this.toolTip.SetToolTip(this.buttonTargetFrom, Strings.Controls.Route_buttonTargetFrom_ToolTip);
             this.buttonTargetFrom.UseVisualStyleBackColor = true;
             this.buttonTargetFrom.Click += new System.EventHandler(this.buttonTargetFrom_Click);
             // 
@@ -294,8 +294,8 @@
             this.cmd3DMap.Name = "cmd3DMap";
             this.cmd3DMap.Size = new System.Drawing.Size(111, 26);
             this.cmd3DMap.TabIndex = 50;
-            this.cmd3DMap.Text = "3D Map";
-            this.toolTip.SetToolTip(this.cmd3DMap, "Show route on 3D Map");
+            this.cmd3DMap.Text = Strings.Controls.Route_cmd3DMap;
+            this.toolTip.SetToolTip(this.cmd3DMap, Strings.Controls.Route_cmd3DMap_ToolTip);
             this.cmd3DMap.UseVisualStyleBackColor = true;
             this.cmd3DMap.Click += new System.EventHandler(this.cmd3DMap_Click);
             // 
@@ -326,7 +326,7 @@
             this.textBox_From.Size = new System.Drawing.Size(234, 20);
             this.textBox_From.TabIndex = 31;
             this.textBox_From.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_From, "Select system to start the route");
+            this.toolTip.SetToolTip(this.textBox_From, Strings.Controls.Route_textBox_From_ToolTip);
             this.textBox_From.WordWrap = true;
             this.textBox_From.TextChanged += new System.EventHandler(this.textBox_From_TextChanged);
             this.textBox_From.Enter += new System.EventHandler(this.textBox_From_Enter);
@@ -349,7 +349,7 @@
             this.textBox_Range.Size = new System.Drawing.Size(57, 20);
             this.textBox_Range.TabIndex = 33;
             this.textBox_Range.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_Range, "Give your jump range, or search range for long jumps");
+            this.toolTip.SetToolTip(this.textBox_Range, Strings.Controls.Route_textBox_Range_ToolTip);
             this.textBox_Range.WordWrap = true;
             this.textBox_Range.Click += new System.EventHandler(this.textBox_Clicked);
             this.textBox_Range.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Range_KeyPress);
@@ -381,7 +381,7 @@
             this.textBox_To.Size = new System.Drawing.Size(234, 20);
             this.textBox_To.TabIndex = 32;
             this.textBox_To.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_To, "Select the system to end in");
+            this.toolTip.SetToolTip(this.textBox_To, Strings.Controls.Route_textBox_To_ToolTip);
             this.textBox_To.WordWrap = true;
             this.textBox_To.TextChanged += new System.EventHandler(this.textBox_To_TextChanged);
             this.textBox_To.Enter += new System.EventHandler(this.textBox_To_Enter);
@@ -393,7 +393,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 43;
-            this.label1.Text = "ly";
+            this.label1.Text = Strings.Controls.Route_label1;
             // 
             // label9
             // 
@@ -402,7 +402,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 13);
             this.label9.TabIndex = 44;
-            this.label9.Text = "ly";
+            this.label9.Text = Strings.Controls.Route_label9;
             // 
             // textBox_Distance
             // 
@@ -423,7 +423,7 @@
             this.textBox_Distance.TabIndex = 40;
             this.textBox_Distance.TabStop = false;
             this.textBox_Distance.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_Distance, "Distance between start and end");
+            this.toolTip.SetToolTip(this.textBox_Distance, Strings.Controls.Route_textBox_Distance_ToolTip);
             this.textBox_Distance.WordWrap = true;
             this.textBox_Distance.Click += new System.EventHandler(this.textBox_Clicked);
             // 
@@ -434,7 +434,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 13);
             this.label4.TabIndex = 49;
-            this.label4.Text = "To";
+            this.label4.Text = Strings.Controls.Route_label4;
             // 
             // textBox_ToZ
             // 
@@ -454,7 +454,7 @@
             this.textBox_ToZ.Size = new System.Drawing.Size(72, 20);
             this.textBox_ToZ.TabIndex = 39;
             this.textBox_ToZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_ToZ, "Z Co-ord");
+            this.toolTip.SetToolTip(this.textBox_ToZ, Strings.Controls.Route_textBox_ToZ_ToolTip);
             this.textBox_ToZ.WordWrap = true;
             this.textBox_ToZ.TextChanged += new System.EventHandler(this.textBox_ToXYZ_TextChanged);
             this.textBox_ToZ.Click += new System.EventHandler(this.textBox_Clicked);
@@ -467,7 +467,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 45;
-            this.label2.Text = "Max jump";
+            this.label2.Text = Strings.Controls.Route_label2;
             // 
             // textBox_ToY
             // 
@@ -487,7 +487,7 @@
             this.textBox_ToY.Size = new System.Drawing.Size(72, 20);
             this.textBox_ToY.TabIndex = 38;
             this.textBox_ToY.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_ToY, "Y (Vertical) Co-ord");
+            this.toolTip.SetToolTip(this.textBox_ToY, Strings.Controls.Route_textBox_ToY_ToolTip);
             this.textBox_ToY.WordWrap = true;
             this.textBox_ToY.TextChanged += new System.EventHandler(this.textBox_ToXYZ_TextChanged);
             this.textBox_ToY.Click += new System.EventHandler(this.textBox_Clicked);
@@ -500,7 +500,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 46;
-            this.label7.Text = "Distance";
+            this.label7.Text = Strings.Controls.Route_label7;
             // 
             // textBox_ToX
             // 
@@ -520,7 +520,7 @@
             this.textBox_ToX.Size = new System.Drawing.Size(72, 20);
             this.textBox_ToX.TabIndex = 37;
             this.textBox_ToX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_ToX, "X Co-Ord");
+            this.toolTip.SetToolTip(this.textBox_ToX, Strings.Controls.Route_textBox_ToX_ToolTip);
             this.textBox_ToX.WordWrap = true;
             this.textBox_ToX.TextChanged += new System.EventHandler(this.textBox_ToXYZ_TextChanged);
             this.textBox_ToX.Click += new System.EventHandler(this.textBox_Clicked);
@@ -533,7 +533,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 47;
-            this.label6.Text = "Metric";
+            this.label6.Text = Strings.Controls.Route_label6;
             // 
             // textBox_FromZ
             // 
@@ -553,7 +553,7 @@
             this.textBox_FromZ.Size = new System.Drawing.Size(72, 20);
             this.textBox_FromZ.TabIndex = 36;
             this.textBox_FromZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_FromZ, "Z Co-ord");
+            this.toolTip.SetToolTip(this.textBox_FromZ, Strings.Controls.Route_textBox_FromZ_ToolTip);
             this.textBox_FromZ.WordWrap = true;
             this.textBox_FromZ.TextChanged += new System.EventHandler(this.textBox_FromXYZ_TextChanged);
             this.textBox_FromZ.Click += new System.EventHandler(this.textBox_Clicked);
@@ -569,8 +569,8 @@
             this.button_Route.Name = "button_Route";
             this.button_Route.Size = new System.Drawing.Size(111, 27);
             this.button_Route.TabIndex = 42;
-            this.button_Route.Text = "Find route";
-            this.toolTip.SetToolTip(this.button_Route, "Compute the route");
+            this.button_Route.Text = Strings.Controls.Route_button_Route;
+            this.toolTip.SetToolTip(this.button_Route, Strings.Controls.Route_button_Route_ToolTip);
             this.button_Route.UseVisualStyleBackColor = true;
             this.button_Route.Click += new System.EventHandler(this.button_Route_Click);
             // 
@@ -592,7 +592,7 @@
             this.textBox_FromY.Size = new System.Drawing.Size(72, 20);
             this.textBox_FromY.TabIndex = 35;
             this.textBox_FromY.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_FromY, "Y (Vertical) Co-ord");
+            this.toolTip.SetToolTip(this.textBox_FromY, Strings.Controls.Route_textBox_FromY_ToolTip);
             this.textBox_FromY.WordWrap = true;
             this.textBox_FromY.TextChanged += new System.EventHandler(this.textBox_FromXYZ_TextChanged);
             this.textBox_FromY.Click += new System.EventHandler(this.textBox_Clicked);
@@ -605,7 +605,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 48;
-            this.label3.Text = "From";
+            this.label3.Text = Strings.Controls.Route_label3;
             // 
             // textBox_FromX
             // 
@@ -625,7 +625,7 @@
             this.textBox_FromX.Size = new System.Drawing.Size(72, 20);
             this.textBox_FromX.TabIndex = 34;
             this.textBox_FromX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBox_FromX, "X Co-ord");
+            this.toolTip.SetToolTip(this.textBox_FromX, Strings.Controls.Route_textBox_FromX_ToolTip);
             this.textBox_FromX.WordWrap = true;
             this.textBox_FromX.TextChanged += new System.EventHandler(this.textBox_FromXYZ_TextChanged);
             this.textBox_FromX.Click += new System.EventHandler(this.textBox_Clicked);
@@ -668,44 +668,44 @@
             // SystemCol
             // 
             this.SystemCol.FillWeight = 200F;
-            this.SystemCol.HeaderText = "System";
+            this.SystemCol.HeaderText = Strings.Controls.Route_SystemCol_Header;
             this.SystemCol.MinimumWidth = 50;
             this.SystemCol.Name = "SystemCol";
             this.SystemCol.ReadOnly = true;
             // 
             // DistanceCol
             // 
-            this.DistanceCol.HeaderText = "Distance";
+            this.DistanceCol.HeaderText = Strings.Controls.Route_DistanceCol_Header;
             this.DistanceCol.Name = "DistanceCol";
             this.DistanceCol.ReadOnly = true;
             // 
             // XCol
             // 
-            this.XCol.HeaderText = "X";
+            this.XCol.HeaderText = Strings.Controls.Route_XCol_Header;
             this.XCol.Name = "XCol";
             this.XCol.ReadOnly = true;
             // 
             // YCol
             // 
-            this.YCol.HeaderText = "Y";
+            this.YCol.HeaderText = Strings.Controls.Route_YCol_Header;
             this.YCol.Name = "YCol";
             this.YCol.ReadOnly = true;
             // 
             // ZCol
             // 
-            this.ZCol.HeaderText = "Z";
+            this.ZCol.HeaderText = Strings.Controls.Route_ZCol_Header;
             this.ZCol.Name = "ZCol";
             this.ZCol.ReadOnly = true;
             // 
             // WayPointDistCol
             // 
-            this.WayPointDistCol.HeaderText = "Dist. Waypoint";
+            this.WayPointDistCol.HeaderText = Strings.Controls.Route_WayPointDistCol_Header;
             this.WayPointDistCol.Name = "WayPointDistCol";
             this.WayPointDistCol.ReadOnly = true;
             // 
             // DeviationCol
             // 
-            this.DeviationCol.HeaderText = "Deviation";
+            this.DeviationCol.HeaderText = Strings.Controls.Route_DeviationCol_Header;
             this.DeviationCol.Name = "DeviationCol";
             this.DeviationCol.ReadOnly = true;
             // 
@@ -765,7 +765,7 @@
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 4;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.Route_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;

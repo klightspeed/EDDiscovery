@@ -110,7 +110,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 7;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.JournalGrid_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;
@@ -143,7 +143,7 @@ namespace EDDiscovery.UserControls
             // 
             // ColumnTime
             // 
-            this.ColumnTime.HeaderText = "Time";
+            this.ColumnTime.HeaderText = Strings.Controls.JournalGrid_ColumnTime_Header;
             this.ColumnTime.MinimumWidth = 50;
             this.ColumnTime.Name = "ColumnTime";
             this.ColumnTime.ReadOnly = true;
@@ -151,7 +151,7 @@ namespace EDDiscovery.UserControls
             // Event
             // 
             this.Event.FillWeight = 50F;
-            this.Event.HeaderText = "Event";
+            this.Event.HeaderText = Strings.Controls.JournalGrid_Event_Header;
             this.Event.MinimumWidth = 50;
             this.Event.Name = "Event";
             this.Event.ReadOnly = true;
@@ -159,7 +159,7 @@ namespace EDDiscovery.UserControls
             // ColumnType
             // 
             this.ColumnType.FillWeight = 125F;
-            this.ColumnType.HeaderText = "Description";
+            this.ColumnType.HeaderText = Strings.Controls.JournalGrid_ColumnType_Header;
             this.ColumnType.MinimumWidth = 50;
             this.ColumnType.Name = "ColumnType";
             this.ColumnType.ReadOnly = true;
@@ -167,7 +167,7 @@ namespace EDDiscovery.UserControls
             // ColumnText
             // 
             this.ColumnText.FillWeight = 300F;
-            this.ColumnText.HeaderText = "Information";
+            this.ColumnText.HeaderText = Strings.Controls.JournalGrid_ColumnText_Header;
             this.ColumnText.MinimumWidth = 50;
             this.ColumnText.Name = "ColumnText";
             this.ColumnText.ReadOnly = true;
@@ -258,9 +258,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxMoveToTop.Name = "checkBoxMoveToTop";
             this.checkBoxMoveToTop.Size = new System.Drawing.Size(90, 17);
             this.checkBoxMoveToTop.TabIndex = 31;
-            this.checkBoxMoveToTop.Text = "Cursor to Top";
+            this.checkBoxMoveToTop.Text = Strings.Controls.JournalGrid_checkBoxMoveToTop;
             this.checkBoxMoveToTop.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxMoveToTop, "Select if cursor moves to top entry when a new entry is received");
+            this.toolTip.SetToolTip(this.checkBoxMoveToTop, Strings.Controls.JournalGrid_checkBoxMoveToTop_ToolTip);
             this.checkBoxMoveToTop.UseVisualStyleBackColor = true;
             // 
             // buttonExtExcel
@@ -274,7 +274,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtExcel.Name = "buttonExtExcel";
             this.buttonExtExcel.Size = new System.Drawing.Size(24, 24);
             this.buttonExtExcel.TabIndex = 30;
-            this.toolTip.SetToolTip(this.buttonExtExcel, "Send data on grid to excel");
+            this.toolTip.SetToolTip(this.buttonExtExcel, Strings.Controls.JournalGrid_buttonExtExcel_ToolTip);
             this.buttonExtExcel.UseVisualStyleBackColor = true;
             this.buttonExtExcel.Click += new System.EventHandler(this.buttonExtExcel_Click);
             // 
@@ -295,7 +295,7 @@ namespace EDDiscovery.UserControls
             this.drawnPanelPopOut.Name = "drawnPanelPopOut";
             this.drawnPanelPopOut.Size = new System.Drawing.Size(24, 24);
             this.drawnPanelPopOut.TabIndex = 28;
-            this.toolTip.SetToolTip(this.drawnPanelPopOut, "Click to pop out another journal grid into a window");
+            this.toolTip.SetToolTip(this.drawnPanelPopOut, Strings.Controls.JournalGrid_drawnPanelPopOut_ToolTip);
             this.drawnPanelPopOut.Click += new System.EventHandler(this.drawnPanelPopOut_Click);
             // 
             // buttonField
@@ -307,7 +307,7 @@ namespace EDDiscovery.UserControls
             this.buttonField.Name = "buttonField";
             this.buttonField.Size = new System.Drawing.Size(75, 23);
             this.buttonField.TabIndex = 25;
-            this.buttonField.Text = "Field Filter";
+            this.buttonField.Text = Strings.Controls.JournalGrid_buttonField;
             this.buttonField.UseVisualStyleBackColor = true;
             this.buttonField.Click += new System.EventHandler(this.buttonField_Click);
             // 
@@ -329,7 +329,7 @@ namespace EDDiscovery.UserControls
             this.textBoxFilter.Size = new System.Drawing.Size(148, 20);
             this.textBoxFilter.TabIndex = 1;
             this.textBoxFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxFilter, "Enter text to search in any fields for an item");
+            this.toolTip.SetToolTip(this.textBoxFilter, Strings.Controls.JournalGrid_textBoxFilter_ToolTip);
             this.textBoxFilter.WordWrap = true;
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
@@ -340,7 +340,7 @@ namespace EDDiscovery.UserControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Search";
+            this.label1.Text = Strings.Controls.JournalGrid_label1;
             // 
             // buttonFilter
             // 
@@ -351,8 +351,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilter.Name = "buttonFilter";
             this.buttonFilter.Size = new System.Drawing.Size(75, 23);
             this.buttonFilter.TabIndex = 4;
-            this.buttonFilter.Text = "Event Filter";
-            this.toolTip.SetToolTip(this.buttonFilter, "Filter out entries based on event type");
+            this.buttonFilter.Text = Strings.Controls.JournalGrid_buttonFilter;
+            this.toolTip.SetToolTip(this.buttonFilter, Strings.Controls.JournalGrid_buttonFilter_ToolTip);
             this.buttonFilter.UseVisualStyleBackColor = true;
             this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
@@ -379,7 +379,7 @@ namespace EDDiscovery.UserControls
             this.comboBoxJournalWindow.SelectedValue = null;
             this.comboBoxJournalWindow.Size = new System.Drawing.Size(100, 21);
             this.comboBoxJournalWindow.TabIndex = 0;
-            this.toolTip.SetToolTip(this.comboBoxJournalWindow, "Select the entries selected by age");
+            this.toolTip.SetToolTip(this.comboBoxJournalWindow, Strings.Controls.JournalGrid_comboBoxJournalWindow_ToolTip);
             this.comboBoxJournalWindow.ValueMember = "";
             this.comboBoxJournalWindow.SelectedIndexChanged += new System.EventHandler(this.comboBoxJournalWindow_SelectedIndexChanged);
             // 
@@ -390,7 +390,7 @@ namespace EDDiscovery.UserControls
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(30, 13);
             this.labelTime.TabIndex = 0;
-            this.labelTime.Text = "Time";
+            this.labelTime.Text = Strings.Controls.JournalGrid_labelTime;
             // 
             // toolTip
             // 

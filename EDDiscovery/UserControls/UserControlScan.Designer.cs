@@ -155,7 +155,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom.SmallChange = 1;
             this.vScrollBarCustom.TabIndex = 2;
-            this.vScrollBarCustom.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom.Text = Strings.Controls.Scan_vScrollBarCustom;
             this.vScrollBarCustom.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom.ThumbColorScaling = 0.5F;
@@ -192,7 +192,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxSmall.Size = new System.Drawing.Size(32, 32);
             this.checkBoxSmall.TabIndex = 2;
             this.checkBoxSmall.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxSmall, "Image size small");
+            this.toolTip.SetToolTip(this.checkBoxSmall, Strings.Controls.Scan_checkBoxSmall_ToolTip);
             this.checkBoxSmall.UseVisualStyleBackColor = false;
             this.checkBoxSmall.CheckedChanged += new System.EventHandler(this.checkBoxSmall_CheckedChanged);
             // 
@@ -219,7 +219,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxMedium.Size = new System.Drawing.Size(32, 32);
             this.checkBoxMedium.TabIndex = 2;
             this.checkBoxMedium.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxMedium, "Image size medium");
+            this.toolTip.SetToolTip(this.checkBoxMedium, Strings.Controls.Scan_checkBoxMedium_ToolTip);
             this.checkBoxMedium.UseVisualStyleBackColor = false;
             this.checkBoxMedium.CheckedChanged += new System.EventHandler(this.checkBoxMedium_CheckedChanged);
             // 
@@ -246,7 +246,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxLarge.Size = new System.Drawing.Size(32, 32);
             this.checkBoxLarge.TabIndex = 2;
             this.checkBoxLarge.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxLarge, "Image size large");
+            this.toolTip.SetToolTip(this.checkBoxLarge, Strings.Controls.Scan_checkBoxLarge_ToolTip);
             this.checkBoxLarge.UseVisualStyleBackColor = false;
             this.checkBoxLarge.CheckedChanged += new System.EventHandler(this.checkBoxLarge_CheckedChanged);
             // 
@@ -273,7 +273,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxMoons.Size = new System.Drawing.Size(32, 32);
             this.checkBoxMoons.TabIndex = 2;
             this.checkBoxMoons.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxMoons, "Show/Hide Moons");
+            this.toolTip.SetToolTip(this.checkBoxMoons, Strings.Controls.Scan_checkBoxMoons_ToolTip);
             this.checkBoxMoons.UseVisualStyleBackColor = false;
             this.checkBoxMoons.CheckedChanged += new System.EventHandler(this.checkBoxMoons_CheckedChanged);
             // 
@@ -300,7 +300,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxMaterials.Size = new System.Drawing.Size(32, 32);
             this.checkBoxMaterials.TabIndex = 2;
             this.checkBoxMaterials.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxMaterials, "Show/Hide Materials");
+            this.toolTip.SetToolTip(this.checkBoxMaterials, Strings.Controls.Scan_checkBoxMaterials_ToolTip);
             this.checkBoxMaterials.UseVisualStyleBackColor = false;
             this.checkBoxMaterials.CheckedChanged += new System.EventHandler(this.checkBoxMaterials_CheckedChanged);
             // 
@@ -327,7 +327,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxMaterialsRare.Size = new System.Drawing.Size(32, 32);
             this.checkBoxMaterialsRare.TabIndex = 2;
             this.checkBoxMaterialsRare.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxMaterialsRare, "Show rare materials only");
+            this.toolTip.SetToolTip(this.checkBoxMaterialsRare, Strings.Controls.Scan_checkBoxMaterialsRare_ToolTip);
             this.checkBoxMaterialsRare.UseVisualStyleBackColor = false;
             this.checkBoxMaterialsRare.CheckedChanged += new System.EventHandler(this.checkBoxMaterialsRare_CheckedChanged);
             // 
@@ -354,7 +354,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxTiny.Size = new System.Drawing.Size(32, 32);
             this.checkBoxTiny.TabIndex = 2;
             this.checkBoxTiny.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxTiny, "Image size teeny tiny");
+            this.toolTip.SetToolTip(this.checkBoxTiny, Strings.Controls.Scan_checkBoxTiny_ToolTip);
             this.checkBoxTiny.UseVisualStyleBackColor = false;
             this.checkBoxTiny.CheckedChanged += new System.EventHandler(this.checkBoxTiny_CheckedChanged);
             // 
@@ -377,7 +377,7 @@ namespace EDDiscovery.UserControls
             this.panelControls.Name = "panelControls";
             this.panelControls.Size = new System.Drawing.Size(748, 32);
             this.panelControls.TabIndex = 4;
-            this.toolTip.SetToolTip(this.panelControls, "Right click on panel to show/hide the toolbar");
+            this.toolTip.SetToolTip(this.panelControls, Strings.Controls.Scan_panelControls_ToolTip);
             // 
             // lblSystemInfo
             // 
@@ -386,7 +386,7 @@ namespace EDDiscovery.UserControls
             this.lblSystemInfo.Name = "lblSystemInfo";
             this.lblSystemInfo.Size = new System.Drawing.Size(35, 13);
             this.lblSystemInfo.TabIndex = 30;
-            this.lblSystemInfo.Text = "label1";
+            this.lblSystemInfo.Text = Strings.Controls.Scan_lblSystemInfo;
             // 
             // buttonExtExcel
             // 
@@ -399,7 +399,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtExcel.Name = "buttonExtExcel";
             this.buttonExtExcel.Size = new System.Drawing.Size(24, 24);
             this.buttonExtExcel.TabIndex = 29;
-            this.toolTip.SetToolTip(this.buttonExtExcel, "Send data on grid to excel");
+            this.toolTip.SetToolTip(this.buttonExtExcel, Strings.Controls.Scan_buttonExtExcel_ToolTip);
             this.buttonExtExcel.UseVisualStyleBackColor = true;
             this.buttonExtExcel.Click += new System.EventHandler(this.buttonExtExcel_Click);
             // 
@@ -426,7 +426,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxEDSM.Size = new System.Drawing.Size(32, 32);
             this.checkBoxEDSM.TabIndex = 3;
             this.checkBoxEDSM.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxEDSM, "Show/Hide Body data from EDSM");
+            this.toolTip.SetToolTip(this.checkBoxEDSM, Strings.Controls.Scan_checkBoxEDSM_ToolTip);
             this.checkBoxEDSM.UseVisualStyleBackColor = false;
             this.checkBoxEDSM.CheckedChanged += new System.EventHandler(this.checkBoxEDSM_CheckedChanged);
             // 
@@ -453,7 +453,7 @@ namespace EDDiscovery.UserControls
             this.chkShowOverlays.Size = new System.Drawing.Size(32, 32);
             this.chkShowOverlays.TabIndex = 31;
             this.chkShowOverlays.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.chkShowOverlays, "Show/Hide body status icons");
+            this.toolTip.SetToolTip(this.chkShowOverlays, Strings.Controls.Scan_chkShowOverlays_ToolTip);
             this.chkShowOverlays.UseVisualStyleBackColor = false;
             this.chkShowOverlays.CheckedChanged += new System.EventHandler(this.chkShowOverlays_CheckedChanged);
             // 

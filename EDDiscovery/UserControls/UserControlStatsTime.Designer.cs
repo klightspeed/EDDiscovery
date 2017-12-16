@@ -89,7 +89,7 @@ namespace EDDiscovery.UserControls
             this.CustomDateTimePickerTo.ShowUpDown = false;
             this.CustomDateTimePickerTo.Size = new System.Drawing.Size(75, 23);
             this.CustomDateTimePickerTo.TabIndex = 8;
-            this.CustomDateTimePickerTo.Text = "customDateTimePicker2";
+            this.CustomDateTimePickerTo.Text = Strings.Controls.StatsTime_CustomDateTimePickerTo;
             this.CustomDateTimePickerTo.TextBackColor = System.Drawing.Color.DarkBlue;
             this.CustomDateTimePickerTo.Value = new System.DateTime(2017, 7, 10, 21, 10, 15, 925);
             this.CustomDateTimePickerTo.ValueChanged += new System.EventHandler(this.customDateTimePickerTo_ValueChanged);
@@ -108,7 +108,7 @@ namespace EDDiscovery.UserControls
             this.CustomDateTimePickerFrom.ShowUpDown = false;
             this.CustomDateTimePickerFrom.Size = new System.Drawing.Size(75, 23);
             this.CustomDateTimePickerFrom.TabIndex = 7;
-            this.CustomDateTimePickerFrom.Text = "customDateTimePicker1";
+            this.CustomDateTimePickerFrom.Text = Strings.Controls.StatsTime_CustomDateTimePickerFrom;
             this.CustomDateTimePickerFrom.TextBackColor = System.Drawing.Color.DarkBlue;
             this.CustomDateTimePickerFrom.Value = new System.DateTime(2017, 7, 10, 21, 10, 15, 925);
             this.CustomDateTimePickerFrom.ValueChanged += new System.EventHandler(this.customDateTimePickerFrom_ValueChanged);
@@ -221,7 +221,7 @@ namespace EDDiscovery.UserControls
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(30, 13);
             this.labelTime.TabIndex = 2;
-            this.labelTime.Text = "Time";
+            this.labelTime.Text = Strings.Controls.StatsTime_labelTime;
             // 
             // UserControlStatsTime
             // 

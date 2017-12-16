@@ -101,7 +101,7 @@ namespace EDDiscovery.UserControls
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(817, 25);
             this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Text = Strings.Controls.Exploration_toolStrip1;
             // 
             // toolStripButtonNew
             // 
@@ -202,7 +202,7 @@ namespace EDDiscovery.UserControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Filename";
+            this.label1.Text = Strings.Controls.Exploration_label1;
             // 
             // textBoxRouteName
             // 
@@ -220,7 +220,7 @@ namespace EDDiscovery.UserControls
             this.labelRouteName.Name = "labelRouteName";
             this.labelRouteName.Size = new System.Drawing.Size(79, 13);
             this.labelRouteName.TabIndex = 0;
-            this.labelRouteName.Text = "Exploration set:";
+            this.labelRouteName.Text = Strings.Controls.Exploration_labelRouteName;
             // 
             // contextMenuCopyPaste
             // 
@@ -335,7 +335,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 3;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.Exploration_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;
@@ -346,21 +346,21 @@ namespace EDDiscovery.UserControls
             // ColumnSystemName
             // 
             this.ColumnSystemName.FillWeight = 150F;
-            this.ColumnSystemName.HeaderText = "System Name";
+            this.ColumnSystemName.HeaderText = Strings.Controls.Exploration_ColumnSystemName_Header;
             this.ColumnSystemName.MinimumWidth = 50;
             this.ColumnSystemName.Name = "ColumnSystemName";
             // 
             // ColumnDist
             // 
             this.ColumnDist.FillWeight = 75F;
-            this.ColumnDist.HeaderText = "Dist";
+            this.ColumnDist.HeaderText = Strings.Controls.Exploration_ColumnDist_Header;
             this.ColumnDist.MinimumWidth = 25;
             this.ColumnDist.Name = "ColumnDist";
             // 
             // ColumnX
             // 
             this.ColumnX.FillWeight = 50F;
-            this.ColumnX.HeaderText = "X";
+            this.ColumnX.HeaderText = Strings.Controls.Exploration_ColumnX_Header;
             this.ColumnX.MinimumWidth = 25;
             this.ColumnX.Name = "ColumnX";
             this.ColumnX.ReadOnly = true;
@@ -368,7 +368,7 @@ namespace EDDiscovery.UserControls
             // ColumnY
             // 
             this.ColumnY.FillWeight = 50F;
-            this.ColumnY.HeaderText = "Y";
+            this.ColumnY.HeaderText = Strings.Controls.Exploration_ColumnY_Header;
             this.ColumnY.MinimumWidth = 25;
             this.ColumnY.Name = "ColumnY";
             this.ColumnY.ReadOnly = true;
@@ -376,7 +376,7 @@ namespace EDDiscovery.UserControls
             // ColumnZ
             // 
             this.ColumnZ.FillWeight = 50F;
-            this.ColumnZ.HeaderText = "Z";
+            this.ColumnZ.HeaderText = Strings.Controls.Exploration_ColumnZ_Header;
             this.ColumnZ.MinimumWidth = 25;
             this.ColumnZ.Name = "ColumnZ";
             this.ColumnZ.ReadOnly = true;
@@ -384,7 +384,7 @@ namespace EDDiscovery.UserControls
             // ColumnVisits
             // 
             this.ColumnVisits.FillWeight = 50F;
-            this.ColumnVisits.HeaderText = "Visists";
+            this.ColumnVisits.HeaderText = Strings.Controls.Exploration_ColumnVisits_Header;
             this.ColumnVisits.MinimumWidth = 25;
             this.ColumnVisits.Name = "ColumnVisits";
             this.ColumnVisits.ReadOnly = true;
@@ -393,7 +393,7 @@ namespace EDDiscovery.UserControls
             // ColumnScans
             // 
             this.ColumnScans.FillWeight = 50F;
-            this.ColumnScans.HeaderText = "Scans";
+            this.ColumnScans.HeaderText = Strings.Controls.Exploration_ColumnScans_Header;
             this.ColumnScans.MinimumWidth = 25;
             this.ColumnScans.Name = "ColumnScans";
             this.ColumnScans.ReadOnly = true;
@@ -401,21 +401,21 @@ namespace EDDiscovery.UserControls
             // ColumnPrimaryStar
             // 
             this.ColumnPrimaryStar.FillWeight = 75F;
-            this.ColumnPrimaryStar.HeaderText = "Pri star";
+            this.ColumnPrimaryStar.HeaderText = Strings.Controls.Exploration_ColumnPrimaryStar_Header;
             this.ColumnPrimaryStar.MinimumWidth = 50;
             this.ColumnPrimaryStar.Name = "ColumnPrimaryStar";
             this.ColumnPrimaryStar.ReadOnly = true;
             // 
             // ColumnInfo
             // 
-            this.ColumnInfo.HeaderText = "Info";
+            this.ColumnInfo.HeaderText = Strings.Controls.Exploration_ColumnInfo_Header;
             this.ColumnInfo.MinimumWidth = 50;
             this.ColumnInfo.Name = "ColumnInfo";
             this.ColumnInfo.ReadOnly = true;
             // 
             // ColumnNote
             // 
-            this.ColumnNote.HeaderText = "Note";
+            this.ColumnNote.HeaderText = Strings.Controls.Exploration_ColumnNote_Header;
             this.ColumnNote.MinimumWidth = 50;
             this.ColumnNote.Name = "ColumnNote";
             this.ColumnNote.ReadOnly = true;

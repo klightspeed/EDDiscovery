@@ -91,7 +91,7 @@ namespace EDDiscovery.UserControls
             this.labelNoItems.Name = "labelNoItems";
             this.labelNoItems.Size = new System.Drawing.Size(82, 13);
             this.labelNoItems.TabIndex = 2;
-            this.labelNoItems.Text = "No Items Found";
+            this.labelNoItems.Text = Strings.Controls.Ledger_labelNoItems;
             // 
             // dataGridViewLedger
             // 
@@ -119,14 +119,14 @@ namespace EDDiscovery.UserControls
             // 
             // TimeCol
             // 
-            this.TimeCol.HeaderText = "Time";
+            this.TimeCol.HeaderText = Strings.Controls.Ledger_TimeCol_Header;
             this.TimeCol.MinimumWidth = 50;
             this.TimeCol.Name = "TimeCol";
             this.TimeCol.ReadOnly = true;
             // 
             // Type
             // 
-            this.Type.HeaderText = "Type";
+            this.Type.HeaderText = Strings.Controls.Ledger_Type_Header;
             this.Type.MinimumWidth = 80;
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
@@ -134,35 +134,35 @@ namespace EDDiscovery.UserControls
             // Notes
             // 
             this.Notes.FillWeight = 200F;
-            this.Notes.HeaderText = "Notes";
+            this.Notes.HeaderText = Strings.Controls.Ledger_Notes_Header;
             this.Notes.MinimumWidth = 80;
             this.Notes.Name = "Notes";
             this.Notes.ReadOnly = true;
             // 
             // Credits
             // 
-            this.Credits.HeaderText = "Credits";
+            this.Credits.HeaderText = Strings.Controls.Ledger_Credits_Header;
             this.Credits.MinimumWidth = 80;
             this.Credits.Name = "Credits";
             this.Credits.ReadOnly = true;
             // 
             // Debits
             // 
-            this.Debits.HeaderText = "Debits";
+            this.Debits.HeaderText = Strings.Controls.Ledger_Debits_Header;
             this.Debits.MinimumWidth = 80;
             this.Debits.Name = "Debits";
             this.Debits.ReadOnly = true;
             // 
             // Balance
             // 
-            this.Balance.HeaderText = "Balance";
+            this.Balance.HeaderText = Strings.Controls.Ledger_Balance_Header;
             this.Balance.MinimumWidth = 80;
             this.Balance.Name = "Balance";
             this.Balance.ReadOnly = true;
             // 
             // NormProfit
             // 
-            this.NormProfit.HeaderText = "Profit Per Unit";
+            this.NormProfit.HeaderText = Strings.Controls.Ledger_NormProfit_Header;
             this.NormProfit.MinimumWidth = 20;
             this.NormProfit.Name = "NormProfit";
             // 
@@ -201,7 +201,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomMC.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomMC.SmallChange = 1;
             this.vScrollBarCustomMC.TabIndex = 0;
-            this.vScrollBarCustomMC.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomMC.Text = Strings.Controls.Ledger_vScrollBarCustomMC;
             this.vScrollBarCustomMC.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomMC.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomMC.ThumbColorScaling = 0.5F;
@@ -229,7 +229,7 @@ namespace EDDiscovery.UserControls
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(30, 13);
             this.labelTime.TabIndex = 26;
-            this.labelTime.Text = "Time";
+            this.labelTime.Text = Strings.Controls.Ledger_labelTime;
             // 
             // buttonFilter
             // 
@@ -240,8 +240,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilter.Name = "buttonFilter";
             this.buttonFilter.Size = new System.Drawing.Size(75, 23);
             this.buttonFilter.TabIndex = 25;
-            this.buttonFilter.Text = "Event Filter";
-            this.toolTip.SetToolTip(this.buttonFilter, "Display entries matching this event type filter");
+            this.buttonFilter.Text = Strings.Controls.Ledger_buttonFilter;
+            this.toolTip.SetToolTip(this.buttonFilter, Strings.Controls.Ledger_buttonFilter_ToolTip);
             this.buttonFilter.UseVisualStyleBackColor = true;
             this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
@@ -263,7 +263,7 @@ namespace EDDiscovery.UserControls
             this.textBoxFilter.Size = new System.Drawing.Size(148, 20);
             this.textBoxFilter.TabIndex = 1;
             this.textBoxFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxFilter, "Search to particular items");
+            this.toolTip.SetToolTip(this.textBoxFilter, Strings.Controls.Ledger_textBoxFilter_ToolTip);
             this.textBoxFilter.WordWrap = true;
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
@@ -274,7 +274,7 @@ namespace EDDiscovery.UserControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Search";
+            this.label1.Text = Strings.Controls.Ledger_label1;
             // 
             // comboBoxHistoryWindow
             // 
@@ -299,7 +299,7 @@ namespace EDDiscovery.UserControls
             this.comboBoxHistoryWindow.SelectedValue = null;
             this.comboBoxHistoryWindow.Size = new System.Drawing.Size(100, 21);
             this.comboBoxHistoryWindow.TabIndex = 0;
-            this.toolTip.SetToolTip(this.comboBoxHistoryWindow, "Select the entries by age");
+            this.toolTip.SetToolTip(this.comboBoxHistoryWindow, Strings.Controls.Ledger_comboBoxHistoryWindow_ToolTip);
             this.comboBoxHistoryWindow.ValueMember = "";
             this.comboBoxHistoryWindow.SelectedIndexChanged += new System.EventHandler(this.comboBoxHistoryWindow_SelectedIndexChanged);
             // 

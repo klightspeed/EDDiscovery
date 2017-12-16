@@ -109,7 +109,7 @@ namespace EDDiscovery.UserControls
             // 
             // UpgradeCol
             // 
-            this.UpgradeCol.HeaderText = "Upgrade/Mat";
+            this.UpgradeCol.HeaderText = Strings.Controls.Synthesis_UpgradeCol_Header;
             this.UpgradeCol.MinimumWidth = 50;
             this.UpgradeCol.Name = "UpgradeCol";
             this.UpgradeCol.ReadOnly = true;
@@ -117,13 +117,13 @@ namespace EDDiscovery.UserControls
             // 
             // Level
             // 
-            this.Level.HeaderText = "Level";
+            this.Level.HeaderText = Strings.Controls.Synthesis_Level_Header;
             this.Level.Name = "Level";
             // 
             // MaxCol
             // 
             this.MaxCol.FillWeight = 25F;
-            this.MaxCol.HeaderText = "Max";
+            this.MaxCol.HeaderText = Strings.Controls.Synthesis_MaxCol_Header;
             this.MaxCol.MinimumWidth = 50;
             this.MaxCol.Name = "MaxCol";
             this.MaxCol.ReadOnly = true;
@@ -132,7 +132,7 @@ namespace EDDiscovery.UserControls
             // WantedCol
             // 
             this.WantedCol.FillWeight = 25F;
-            this.WantedCol.HeaderText = "Wanted";
+            this.WantedCol.HeaderText = Strings.Controls.Synthesis_WantedCol_Header;
             this.WantedCol.MinimumWidth = 50;
             this.WantedCol.Name = "WantedCol";
             this.WantedCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -140,7 +140,7 @@ namespace EDDiscovery.UserControls
             // Available
             // 
             this.Available.FillWeight = 25F;
-            this.Available.HeaderText = "Avail.";
+            this.Available.HeaderText = Strings.Controls.Synthesis_Available_Header;
             this.Available.MinimumWidth = 50;
             this.Available.Name = "Available";
             this.Available.ReadOnly = true;
@@ -149,7 +149,7 @@ namespace EDDiscovery.UserControls
             // Notes
             // 
             this.Notes.FillWeight = 150F;
-            this.Notes.HeaderText = "Notes";
+            this.Notes.HeaderText = Strings.Controls.Synthesis_Notes_Header;
             this.Notes.MinimumWidth = 50;
             this.Notes.Name = "Notes";
             this.Notes.ReadOnly = true;
@@ -158,7 +158,7 @@ namespace EDDiscovery.UserControls
             // Recipe
             // 
             this.Recipe.FillWeight = 50F;
-            this.Recipe.HeaderText = "Recipe";
+            this.Recipe.HeaderText = Strings.Controls.Synthesis_Recipe_Header;
             this.Recipe.MinimumWidth = 15;
             this.Recipe.Name = "Recipe";
             this.Recipe.ReadOnly = true;
@@ -185,7 +185,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomMC.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomMC.SmallChange = 1;
             this.vScrollBarCustomMC.TabIndex = 0;
-            this.vScrollBarCustomMC.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomMC.Text = Strings.Controls.Synthesis_vScrollBarCustomMC;
             this.vScrollBarCustomMC.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomMC.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomMC.ThumbColorScaling = 0.5F;
@@ -205,7 +205,7 @@ namespace EDDiscovery.UserControls
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(800, 32);
             this.panelButtons.TabIndex = 2;
-            this.toolTip.SetToolTip(this.panelButtons, "Left click and drag on grid to reorder");
+            this.toolTip.SetToolTip(this.panelButtons, Strings.Controls.Synthesis_panelButtons_ToolTip);
             // 
             // chkHistoric
             // 
@@ -220,7 +220,7 @@ namespace EDDiscovery.UserControls
             this.chkHistoric.Name = "chkHistoric";
             this.chkHistoric.Size = new System.Drawing.Size(118, 17);
             this.chkHistoric.TabIndex = 7;
-            this.chkHistoric.Text = "Use Cursor Position";
+            this.chkHistoric.Text = Strings.Controls.Synthesis_chkHistoric;
             this.chkHistoric.TickBoxReductionSize = 10;
             this.toolTip.SetToolTip(this.chkHistoric, "When clicked on, use the materials at the cursor to estimate, when off always use" +
         " the latest materials.");
@@ -233,8 +233,8 @@ namespace EDDiscovery.UserControls
             this.buttonMaterialFilter.Name = "buttonMaterialFilter";
             this.buttonMaterialFilter.Size = new System.Drawing.Size(100, 23);
             this.buttonMaterialFilter.TabIndex = 4;
-            this.buttonMaterialFilter.Text = "Filter By Material";
-            this.toolTip.SetToolTip(this.buttonMaterialFilter, "Filter the table by the material type");
+            this.buttonMaterialFilter.Text = Strings.Controls.Synthesis_buttonMaterialFilter;
+            this.toolTip.SetToolTip(this.buttonMaterialFilter, Strings.Controls.Synthesis_buttonMaterialFilter_ToolTip);
             this.buttonMaterialFilter.UseVisualStyleBackColor = true;
             this.buttonMaterialFilter.Click += new System.EventHandler(this.buttonMaterialFilter_Click);
             // 
@@ -244,8 +244,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilterLevel.Name = "buttonFilterLevel";
             this.buttonFilterLevel.Size = new System.Drawing.Size(100, 23);
             this.buttonFilterLevel.TabIndex = 3;
-            this.buttonFilterLevel.Text = "Filter By Level";
-            this.toolTip.SetToolTip(this.buttonFilterLevel, "Filter the table by the synthesis level");
+            this.buttonFilterLevel.Text = Strings.Controls.Synthesis_buttonFilterLevel;
+            this.toolTip.SetToolTip(this.buttonFilterLevel, Strings.Controls.Synthesis_buttonFilterLevel_ToolTip);
             this.buttonFilterLevel.UseVisualStyleBackColor = true;
             this.buttonFilterLevel.Click += new System.EventHandler(this.buttonFilterLevel_Click);
             // 
@@ -255,8 +255,8 @@ namespace EDDiscovery.UserControls
             this.buttonRecipeFilter.Name = "buttonRecipeFilter";
             this.buttonRecipeFilter.Size = new System.Drawing.Size(100, 23);
             this.buttonRecipeFilter.TabIndex = 2;
-            this.buttonRecipeFilter.Text = "Filter By Synthesis";
-            this.toolTip.SetToolTip(this.buttonRecipeFilter, "Filter the table by the synthesis type");
+            this.buttonRecipeFilter.Text = Strings.Controls.Synthesis_buttonRecipeFilter;
+            this.toolTip.SetToolTip(this.buttonRecipeFilter, Strings.Controls.Synthesis_buttonRecipeFilter_ToolTip);
             this.buttonRecipeFilter.UseVisualStyleBackColor = true;
             this.buttonRecipeFilter.Click += new System.EventHandler(this.buttonRecipeFilter_Click);
             // 
@@ -267,8 +267,8 @@ namespace EDDiscovery.UserControls
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(100, 23);
             this.buttonClear.TabIndex = 1;
-            this.buttonClear.Text = "Clear Wanted";
-            this.toolTip.SetToolTip(this.buttonClear, "Set all wanted values to zero");
+            this.buttonClear.Text = Strings.Controls.Synthesis_buttonClear;
+            this.toolTip.SetToolTip(this.buttonClear, Strings.Controls.Synthesis_buttonClear_ToolTip);
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 

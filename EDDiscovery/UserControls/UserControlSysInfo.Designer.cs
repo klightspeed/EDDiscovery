@@ -374,7 +374,7 @@ namespace EDDiscovery.UserControls
             this.labelBodyName.Name = "labelBodyName";
             this.labelBodyName.Size = new System.Drawing.Size(31, 13);
             this.labelBodyName.TabIndex = 3;
-            this.labelBodyName.Text = "Body";
+            this.labelBodyName.Text = Strings.Controls.SysInfo_labelBodyName;
             this.labelBodyName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelBodyName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelBodyName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -410,7 +410,7 @@ namespace EDDiscovery.UserControls
             this.labelPosition.Name = "labelPosition";
             this.labelPosition.Size = new System.Drawing.Size(25, 13);
             this.labelPosition.TabIndex = 7;
-            this.labelPosition.Text = "Pos";
+            this.labelPosition.Text = Strings.Controls.SysInfo_labelPosition;
             this.labelPosition.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelPosition.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelPosition.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -447,7 +447,7 @@ namespace EDDiscovery.UserControls
             this.labelVisits.Name = "labelVisits";
             this.labelVisits.Size = new System.Drawing.Size(31, 13);
             this.labelVisits.TabIndex = 9;
-            this.labelVisits.Text = "Visits";
+            this.labelVisits.Text = Strings.Controls.SysInfo_labelVisits;
             this.labelVisits.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelVisits.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelVisits.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -460,7 +460,7 @@ namespace EDDiscovery.UserControls
             this.labelAllegiance.Name = "labelAllegiance";
             this.labelAllegiance.Size = new System.Drawing.Size(56, 13);
             this.labelAllegiance.TabIndex = 13;
-            this.labelAllegiance.Text = "Allegiance";
+            this.labelAllegiance.Text = Strings.Controls.SysInfo_labelAllegiance;
             this.labelAllegiance.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelAllegiance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelAllegiance.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -473,7 +473,7 @@ namespace EDDiscovery.UserControls
             this.labelEconomy.Name = "labelEconomy";
             this.labelEconomy.Size = new System.Drawing.Size(51, 13);
             this.labelEconomy.TabIndex = 34;
-            this.labelEconomy.Text = "Economy";
+            this.labelEconomy.Text = Strings.Controls.SysInfo_labelEconomy;
             this.labelEconomy.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelEconomy.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelEconomy.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -534,7 +534,7 @@ namespace EDDiscovery.UserControls
             this.labelGov.Name = "labelGov";
             this.labelGov.Size = new System.Drawing.Size(27, 13);
             this.labelGov.TabIndex = 36;
-            this.labelGov.Text = "Gov";
+            this.labelGov.Text = Strings.Controls.SysInfo_labelGov;
             this.labelGov.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelGov.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelGov.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -547,7 +547,7 @@ namespace EDDiscovery.UserControls
             this.labelState.Name = "labelState";
             this.labelState.Size = new System.Drawing.Size(32, 13);
             this.labelState.TabIndex = 38;
-            this.labelState.Text = "State";
+            this.labelState.Text = Strings.Controls.SysInfo_labelState;
             this.labelState.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelState.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelState.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -664,7 +664,7 @@ namespace EDDiscovery.UserControls
             this.labelHomeDist.Name = "labelHomeDist";
             this.labelHomeDist.Size = new System.Drawing.Size(35, 13);
             this.labelHomeDist.TabIndex = 43;
-            this.labelHomeDist.Text = "Home";
+            this.labelHomeDist.Text = Strings.Controls.SysInfo_labelHomeDist;
             this.labelHomeDist.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelHomeDist.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelHomeDist.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -674,7 +674,7 @@ namespace EDDiscovery.UserControls
             // 
             this.buttonEDSM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEDSM.ImageSelected = ExtendedControls.DrawnPanel.ImageType.InverseText;
-            this.buttonEDSM.ImageText = "EDSM";
+            this.buttonEDSM.ImageText = Strings.Controls.SysInfo_buttonEDSM_Image;
             this.buttonEDSM.Location = new System.Drawing.Point(53, 30);
             this.buttonEDSM.MarginSize = 0;
             this.buttonEDSM.Name = "buttonEDSM";
@@ -716,7 +716,7 @@ namespace EDDiscovery.UserControls
             this.labelSolDist.Name = "labelSolDist";
             this.labelSolDist.Size = new System.Drawing.Size(22, 13);
             this.labelSolDist.TabIndex = 45;
-            this.labelSolDist.Text = "Sol";
+            this.labelSolDist.Text = Strings.Controls.SysInfo_labelSolDist;
             this.labelSolDist.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelSolDist.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelSolDist.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -729,7 +729,7 @@ namespace EDDiscovery.UserControls
             this.labelNote.Name = "labelNote";
             this.labelNote.Size = new System.Drawing.Size(30, 13);
             this.labelNote.TabIndex = 28;
-            this.labelNote.Text = "Note";
+            this.labelNote.Text = Strings.Controls.SysInfo_labelNote;
             this.labelNote.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelNote.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelNote.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -772,7 +772,7 @@ namespace EDDiscovery.UserControls
             this.labelTarget.Name = "labelTarget";
             this.labelTarget.Size = new System.Drawing.Size(38, 13);
             this.labelTarget.TabIndex = 16;
-            this.labelTarget.Text = "Target";
+            this.labelTarget.Text = Strings.Controls.SysInfo_labelTarget;
             this.labelTarget.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelTarget.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelTarget.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -781,7 +781,7 @@ namespace EDDiscovery.UserControls
             // 
             this.buttonEDSMTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEDSMTarget.ImageSelected = ExtendedControls.DrawnPanel.ImageType.InverseText;
-            this.buttonEDSMTarget.ImageText = "EDSM";
+            this.buttonEDSMTarget.ImageText = Strings.Controls.SysInfo_buttonEDSMTarget_Image;
             this.buttonEDSMTarget.Location = new System.Drawing.Point(216, 335);
             this.buttonEDSMTarget.MarginSize = 0;
             this.buttonEDSMTarget.Name = "buttonEDSMTarget";
@@ -820,7 +820,7 @@ namespace EDDiscovery.UserControls
             this.textBoxTarget.TabIndex = 15;
             this.textBoxTarget.TabStop = false;
             this.textBoxTarget.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxTarget, "Sets the target");
+            this.toolTip1.SetToolTip(this.textBoxTarget, Strings.Controls.SysInfo_textBoxTarget_ToolTip);
             this.textBoxTarget.WordWrap = true;
             this.textBoxTarget.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxTarget_KeyUp);
             this.textBoxTarget.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
@@ -847,7 +847,7 @@ namespace EDDiscovery.UserControls
             this.textBoxTargetDist.TabIndex = 15;
             this.textBoxTargetDist.TabStop = false;
             this.textBoxTargetDist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxTargetDist, "Distance to target");
+            this.toolTip1.SetToolTip(this.textBoxTargetDist, Strings.Controls.SysInfo_textBoxTargetDist_ToolTip);
             this.textBoxTargetDist.WordWrap = true;
             this.textBoxTargetDist.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.textBoxTargetDist.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
@@ -888,7 +888,7 @@ namespace EDDiscovery.UserControls
             this.labelSysName.Name = "labelSysName";
             this.labelSysName.Size = new System.Drawing.Size(41, 13);
             this.labelSysName.TabIndex = 4;
-            this.labelSysName.Text = "System";
+            this.labelSysName.Text = Strings.Controls.SysInfo_labelSysName;
             this.labelSysName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelSysName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelSysName.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -900,7 +900,7 @@ namespace EDDiscovery.UserControls
             this.labelOpen.Name = "labelOpen";
             this.labelOpen.Size = new System.Drawing.Size(33, 13);
             this.labelOpen.TabIndex = 3;
-            this.labelOpen.Text = "Open";
+            this.labelOpen.Text = Strings.Controls.SysInfo_labelOpen;
             this.labelOpen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelOpen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelOpen.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -912,7 +912,7 @@ namespace EDDiscovery.UserControls
             this.labelGamemode.Name = "labelGamemode";
             this.labelGamemode.Size = new System.Drawing.Size(34, 13);
             this.labelGamemode.TabIndex = 16;
-            this.labelGamemode.Text = "Mode";
+            this.labelGamemode.Text = Strings.Controls.SysInfo_labelGamemode;
             this.labelGamemode.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelGamemode.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelGamemode.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -924,7 +924,7 @@ namespace EDDiscovery.UserControls
             this.labelTravel.Name = "labelTravel";
             this.labelTravel.Size = new System.Drawing.Size(37, 13);
             this.labelTravel.TabIndex = 16;
-            this.labelTravel.Text = "Travel";
+            this.labelTravel.Text = Strings.Controls.SysInfo_labelTravel;
             this.labelTravel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelTravel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelTravel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -1032,7 +1032,7 @@ namespace EDDiscovery.UserControls
             this.labelCargo.Name = "labelCargo";
             this.labelCargo.Size = new System.Drawing.Size(35, 13);
             this.labelCargo.TabIndex = 16;
-            this.labelCargo.Text = "Cargo";
+            this.labelCargo.Text = Strings.Controls.SysInfo_labelCargo;
             this.labelCargo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelCargo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelCargo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -1092,7 +1092,7 @@ namespace EDDiscovery.UserControls
             this.labelMaterials.Name = "labelMaterials";
             this.labelMaterials.Size = new System.Drawing.Size(49, 13);
             this.labelMaterials.TabIndex = 16;
-            this.labelMaterials.Text = "Materials";
+            this.labelMaterials.Text = Strings.Controls.SysInfo_labelMaterials;
             this.labelMaterials.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelMaterials.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelMaterials.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -1104,7 +1104,7 @@ namespace EDDiscovery.UserControls
             this.labelData.Name = "labelData";
             this.labelData.Size = new System.Drawing.Size(30, 13);
             this.labelData.TabIndex = 16;
-            this.labelData.Text = "Data";
+            this.labelData.Text = Strings.Controls.SysInfo_labelData;
             this.labelData.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelData.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -1140,7 +1140,7 @@ namespace EDDiscovery.UserControls
             this.labelShip.Name = "labelShip";
             this.labelShip.Size = new System.Drawing.Size(28, 13);
             this.labelShip.TabIndex = 16;
-            this.labelShip.Text = "Ship";
+            this.labelShip.Text = Strings.Controls.SysInfo_labelShip;
             this.labelShip.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelShip.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelShip.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -1176,7 +1176,7 @@ namespace EDDiscovery.UserControls
             this.labelFuel.Name = "labelFuel";
             this.labelFuel.Size = new System.Drawing.Size(27, 13);
             this.labelFuel.TabIndex = 16;
-            this.labelFuel.Text = "Fuel";
+            this.labelFuel.Text = Strings.Controls.SysInfo_labelFuel;
             this.labelFuel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelFuel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelFuel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);
@@ -1236,7 +1236,7 @@ namespace EDDiscovery.UserControls
             this.labelCredits.Name = "labelCredits";
             this.labelCredits.Size = new System.Drawing.Size(39, 13);
             this.labelCredits.TabIndex = 16;
-            this.labelCredits.Text = "Credits";
+            this.labelCredits.Text = Strings.Controls.SysInfo_labelCredits;
             this.labelCredits.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlMouseDown);
             this.labelCredits.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlMouseMove);
             this.labelCredits.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlMouseUp);

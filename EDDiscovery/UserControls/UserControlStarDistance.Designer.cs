@@ -115,7 +115,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom2.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom2.SmallChange = 1;
             this.vScrollBarCustom2.TabIndex = 24;
-            this.vScrollBarCustom2.Text = "vScrollBarCustom2";
+            this.vScrollBarCustom2.Text = Strings.Controls.StarDistance_vScrollBarCustom2;
             this.vScrollBarCustom2.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom2.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom2.ThumbColorScaling = 0.5F;
@@ -147,21 +147,21 @@ namespace EDDiscovery.UserControls
             // 
             // Col1
             // 
-            this.Col1.HeaderText = "Name";
+            this.Col1.HeaderText = Strings.Controls.StarDistance_Col1_Header;
             this.Col1.MinimumWidth = 50;
             this.Col1.Name = "Col1";
             // 
             // Distance
             // 
             this.Distance.FillWeight = 25F;
-            this.Distance.HeaderText = "Distance";
+            this.Distance.HeaderText = Strings.Controls.StarDistance_Distance_Header;
             this.Distance.MinimumWidth = 50;
             this.Distance.Name = "Distance";
             // 
             // Visited
             // 
             this.Visited.FillWeight = 25F;
-            this.Visited.HeaderText = "Visited";
+            this.Visited.HeaderText = Strings.Controls.StarDistance_Visited_Header;
             this.Visited.Name = "Visited";
             // 
             // UserControlStarDistance

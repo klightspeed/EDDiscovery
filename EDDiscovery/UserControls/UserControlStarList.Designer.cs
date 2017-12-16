@@ -128,9 +128,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxMoveToTop.Name = "checkBoxMoveToTop";
             this.checkBoxMoveToTop.Size = new System.Drawing.Size(90, 17);
             this.checkBoxMoveToTop.TabIndex = 29;
-            this.checkBoxMoveToTop.Text = "Cursor to Top";
+            this.checkBoxMoveToTop.Text = Strings.Controls.StarList_checkBoxMoveToTop;
             this.checkBoxMoveToTop.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxMoveToTop, "Select if cursor moves to top entry when a new entry is received");
+            this.toolTip.SetToolTip(this.checkBoxMoveToTop, Strings.Controls.StarList_checkBoxMoveToTop_ToolTip);
             this.checkBoxMoveToTop.UseVisualStyleBackColor = true;
             // 
             // buttonExtExcel
@@ -141,7 +141,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtExcel.Name = "buttonExtExcel";
             this.buttonExtExcel.Size = new System.Drawing.Size(24, 24);
             this.buttonExtExcel.TabIndex = 28;
-            this.toolTip.SetToolTip(this.buttonExtExcel, "Send data on grid to excel");
+            this.toolTip.SetToolTip(this.buttonExtExcel, Strings.Controls.StarList_buttonExtExcel_ToolTip);
             this.buttonExtExcel.UseVisualStyleBackColor = true;
             this.buttonExtExcel.Click += new System.EventHandler(this.buttonExtExcel_Click);
             // 
@@ -172,7 +172,7 @@ namespace EDDiscovery.UserControls
             this.textBoxFilter.Size = new System.Drawing.Size(148, 20);
             this.textBoxFilter.TabIndex = 1;
             this.textBoxFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxFilter, "Enter text to search in any fields for an item");
+            this.toolTip.SetToolTip(this.textBoxFilter, Strings.Controls.StarList_textBoxFilter_ToolTip);
             this.textBoxFilter.WordWrap = true;
             this.textBoxFilter.TextChanged += new System.EventHandler(this.textBoxFilter_TextChanged);
             // 
@@ -183,7 +183,7 @@ namespace EDDiscovery.UserControls
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(41, 13);
             this.labelSearch.TabIndex = 24;
-            this.labelSearch.Text = "Search";
+            this.labelSearch.Text = Strings.Controls.StarList_labelSearch;
             // 
             // comboBoxHistoryWindow
             // 
@@ -208,7 +208,7 @@ namespace EDDiscovery.UserControls
             this.comboBoxHistoryWindow.SelectedValue = null;
             this.comboBoxHistoryWindow.Size = new System.Drawing.Size(100, 21);
             this.comboBoxHistoryWindow.TabIndex = 0;
-            this.toolTip.SetToolTip(this.comboBoxHistoryWindow, "Select the entries by age");
+            this.toolTip.SetToolTip(this.comboBoxHistoryWindow, Strings.Controls.StarList_comboBoxHistoryWindow_ToolTip);
             this.comboBoxHistoryWindow.ValueMember = "";
             this.comboBoxHistoryWindow.SelectedIndexChanged += new System.EventHandler(this.comboBoxHistoryWindow_SelectedIndexChanged);
             // 
@@ -219,7 +219,7 @@ namespace EDDiscovery.UserControls
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(30, 13);
             this.labelTime.TabIndex = 0;
-            this.labelTime.Text = "Time";
+            this.labelTime.Text = Strings.Controls.StarList_labelTime;
             // 
             // dataViewScrollerPanel1
             // 
@@ -255,7 +255,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 4;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.StarList_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;
@@ -332,14 +332,14 @@ namespace EDDiscovery.UserControls
             // ColumnTime
             // 
             this.ColumnTime.FillWeight = 80F;
-            this.ColumnTime.HeaderText = "Last Visit";
+            this.ColumnTime.HeaderText = Strings.Controls.StarList_ColumnTime_Header;
             this.ColumnTime.MinimumWidth = 50;
             this.ColumnTime.Name = "ColumnTime";
             this.ColumnTime.ReadOnly = true;
             // 
             // Icon
             // 
-            this.Icon.HeaderText = "System";
+            this.Icon.HeaderText = Strings.Controls.StarList_Icon_Header;
             this.Icon.MinimumWidth = 50;
             this.Icon.Name = "Icon";
             this.Icon.ReadOnly = true;
@@ -347,7 +347,7 @@ namespace EDDiscovery.UserControls
             // ColumnSystem
             // 
             this.ColumnSystem.FillWeight = 40F;
-            this.ColumnSystem.HeaderText = "Visits";
+            this.ColumnSystem.HeaderText = Strings.Controls.StarList_ColumnSystem_Header;
             this.ColumnSystem.MinimumWidth = 50;
             this.ColumnSystem.Name = "ColumnSystem";
             this.ColumnSystem.ReadOnly = true;
@@ -355,7 +355,7 @@ namespace EDDiscovery.UserControls
             // ColumnDistance
             // 
             this.ColumnDistance.FillWeight = 200F;
-            this.ColumnDistance.HeaderText = "Information";
+            this.ColumnDistance.HeaderText = Strings.Controls.StarList_ColumnDistance_Header;
             this.ColumnDistance.MinimumWidth = 50;
             this.ColumnDistance.Name = "ColumnDistance";
             this.ColumnDistance.ReadOnly = true;

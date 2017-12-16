@@ -116,7 +116,7 @@ namespace EDDiscovery.UserControls
             // 
             // UpgradeCol
             // 
-            this.UpgradeCol.HeaderText = "Upgrade/Mat";
+            this.UpgradeCol.HeaderText = Strings.Controls.Engineering_UpgradeCol_Header;
             this.UpgradeCol.MinimumWidth = 50;
             this.UpgradeCol.Name = "UpgradeCol";
             this.UpgradeCol.ReadOnly = true;
@@ -124,7 +124,7 @@ namespace EDDiscovery.UserControls
             // 
             // Module
             // 
-            this.Module.HeaderText = "Module";
+            this.Module.HeaderText = Strings.Controls.Engineering_Module_Header;
             this.Module.MinimumWidth = 50;
             this.Module.Name = "Module";
             this.Module.ReadOnly = true;
@@ -133,7 +133,7 @@ namespace EDDiscovery.UserControls
             // Level
             // 
             this.Level.FillWeight = 25F;
-            this.Level.HeaderText = "Level";
+            this.Level.HeaderText = Strings.Controls.Engineering_Level_Header;
             this.Level.MinimumWidth = 50;
             this.Level.Name = "Level";
             this.Level.ReadOnly = true;
@@ -142,7 +142,7 @@ namespace EDDiscovery.UserControls
             // MaxCol
             // 
             this.MaxCol.FillWeight = 25F;
-            this.MaxCol.HeaderText = "Max";
+            this.MaxCol.HeaderText = Strings.Controls.Engineering_MaxCol_Header;
             this.MaxCol.MinimumWidth = 50;
             this.MaxCol.Name = "MaxCol";
             this.MaxCol.ReadOnly = true;
@@ -151,7 +151,7 @@ namespace EDDiscovery.UserControls
             // WantedCol
             // 
             this.WantedCol.FillWeight = 25F;
-            this.WantedCol.HeaderText = "Wanted";
+            this.WantedCol.HeaderText = Strings.Controls.Engineering_WantedCol_Header;
             this.WantedCol.MinimumWidth = 50;
             this.WantedCol.Name = "WantedCol";
             this.WantedCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -159,7 +159,7 @@ namespace EDDiscovery.UserControls
             // Available
             // 
             this.Available.FillWeight = 25F;
-            this.Available.HeaderText = "Avail.";
+            this.Available.HeaderText = Strings.Controls.Engineering_Available_Header;
             this.Available.MinimumWidth = 50;
             this.Available.Name = "Available";
             this.Available.ReadOnly = true;
@@ -168,7 +168,7 @@ namespace EDDiscovery.UserControls
             // Notes
             // 
             this.Notes.FillWeight = 150F;
-            this.Notes.HeaderText = "Notes";
+            this.Notes.HeaderText = Strings.Controls.Engineering_Notes_Header;
             this.Notes.MinimumWidth = 50;
             this.Notes.Name = "Notes";
             this.Notes.ReadOnly = true;
@@ -177,7 +177,7 @@ namespace EDDiscovery.UserControls
             // Recipe
             // 
             this.Recipe.FillWeight = 50F;
-            this.Recipe.HeaderText = "Recipe";
+            this.Recipe.HeaderText = Strings.Controls.Engineering_Recipe_Header;
             this.Recipe.MinimumWidth = 15;
             this.Recipe.Name = "Recipe";
             this.Recipe.ReadOnly = true;
@@ -185,7 +185,7 @@ namespace EDDiscovery.UserControls
             // 
             // Engineers
             // 
-            this.Engineers.HeaderText = "Engineers";
+            this.Engineers.HeaderText = Strings.Controls.Engineering_Engineers_Header;
             this.Engineers.MinimumWidth = 50;
             this.Engineers.Name = "Engineers";
             this.Engineers.ReadOnly = true;
@@ -212,7 +212,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomMC.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomMC.SmallChange = 1;
             this.vScrollBarCustomMC.TabIndex = 0;
-            this.vScrollBarCustomMC.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomMC.Text = Strings.Controls.Engineering_vScrollBarCustomMC;
             this.vScrollBarCustomMC.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomMC.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomMC.ThumbColorScaling = 0.5F;
@@ -234,7 +234,7 @@ namespace EDDiscovery.UserControls
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(800, 32);
             this.panelButtons.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.panelButtons, "Left click and drag on grid to reorder");
+            this.toolTip1.SetToolTip(this.panelButtons, Strings.Controls.Engineering_panelButtons_ToolTip);
             // 
             // chkHistoric
             // 
@@ -249,7 +249,7 @@ namespace EDDiscovery.UserControls
             this.chkHistoric.Name = "chkHistoric";
             this.chkHistoric.Size = new System.Drawing.Size(116, 17);
             this.chkHistoric.TabIndex = 6;
-            this.chkHistoric.Text = "Use Cursor Positon";
+            this.chkHistoric.Text = Strings.Controls.Engineering_chkHistoric;
             this.chkHistoric.TickBoxReductionSize = 10;
             this.toolTip1.SetToolTip(this.chkHistoric, "When clicked on, use the materials at the cursor to estimate, when off always use" +
         " the latest materials.");
@@ -263,8 +263,8 @@ namespace EDDiscovery.UserControls
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(88, 23);
             this.buttonClear.TabIndex = 5;
-            this.buttonClear.Text = "Clear Wanted";
-            this.toolTip1.SetToolTip(this.buttonClear, "Set all wanted values to zero");
+            this.buttonClear.Text = Strings.Controls.Engineering_buttonClear;
+            this.toolTip1.SetToolTip(this.buttonClear, Strings.Controls.Engineering_buttonClear_ToolTip);
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
@@ -274,8 +274,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilterMaterial.Name = "buttonFilterMaterial";
             this.buttonFilterMaterial.Size = new System.Drawing.Size(100, 23);
             this.buttonFilterMaterial.TabIndex = 4;
-            this.buttonFilterMaterial.Text = "Filter By Material";
-            this.toolTip1.SetToolTip(this.buttonFilterMaterial, "Filter the table by material");
+            this.buttonFilterMaterial.Text = Strings.Controls.Engineering_buttonFilterMaterial;
+            this.toolTip1.SetToolTip(this.buttonFilterMaterial, Strings.Controls.Engineering_buttonFilterMaterial_ToolTip);
             this.buttonFilterMaterial.UseVisualStyleBackColor = true;
             this.buttonFilterMaterial.Click += new System.EventHandler(this.buttonFilterMaterial_Click);
             // 
@@ -285,8 +285,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilterUpgrade.Name = "buttonFilterUpgrade";
             this.buttonFilterUpgrade.Size = new System.Drawing.Size(100, 23);
             this.buttonFilterUpgrade.TabIndex = 3;
-            this.buttonFilterUpgrade.Text = "Filter By Upgrade";
-            this.toolTip1.SetToolTip(this.buttonFilterUpgrade, "Filter the table by upgrade type");
+            this.buttonFilterUpgrade.Text = Strings.Controls.Engineering_buttonFilterUpgrade;
+            this.toolTip1.SetToolTip(this.buttonFilterUpgrade, Strings.Controls.Engineering_buttonFilterUpgrade_ToolTip);
             this.buttonFilterUpgrade.UseVisualStyleBackColor = true;
             this.buttonFilterUpgrade.Click += new System.EventHandler(this.buttonFilterUpgrade_Click);
             // 
@@ -296,8 +296,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilterLevel.Name = "buttonFilterLevel";
             this.buttonFilterLevel.Size = new System.Drawing.Size(100, 23);
             this.buttonFilterLevel.TabIndex = 2;
-            this.buttonFilterLevel.Text = "Filter By Level";
-            this.toolTip1.SetToolTip(this.buttonFilterLevel, "Filter the table by level");
+            this.buttonFilterLevel.Text = Strings.Controls.Engineering_buttonFilterLevel;
+            this.toolTip1.SetToolTip(this.buttonFilterLevel, Strings.Controls.Engineering_buttonFilterLevel_ToolTip);
             this.buttonFilterLevel.UseVisualStyleBackColor = true;
             this.buttonFilterLevel.Click += new System.EventHandler(this.buttonFilterLevel_Click);
             // 
@@ -307,8 +307,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilterEngineer.Name = "buttonFilterEngineer";
             this.buttonFilterEngineer.Size = new System.Drawing.Size(100, 23);
             this.buttonFilterEngineer.TabIndex = 1;
-            this.buttonFilterEngineer.Text = "Filter By Engineer";
-            this.toolTip1.SetToolTip(this.buttonFilterEngineer, "Filter the table by engineer");
+            this.buttonFilterEngineer.Text = Strings.Controls.Engineering_buttonFilterEngineer;
+            this.toolTip1.SetToolTip(this.buttonFilterEngineer, Strings.Controls.Engineering_buttonFilterEngineer_ToolTip);
             this.buttonFilterEngineer.UseVisualStyleBackColor = true;
             this.buttonFilterEngineer.Click += new System.EventHandler(this.buttonFilterEngineer_Click);
             // 
@@ -318,8 +318,8 @@ namespace EDDiscovery.UserControls
             this.buttonFilterModule.Name = "buttonFilterModule";
             this.buttonFilterModule.Size = new System.Drawing.Size(100, 23);
             this.buttonFilterModule.TabIndex = 0;
-            this.buttonFilterModule.Text = "Filter By Module";
-            this.toolTip1.SetToolTip(this.buttonFilterModule, "Filter the table by module type");
+            this.buttonFilterModule.Text = Strings.Controls.Engineering_buttonFilterModule;
+            this.toolTip1.SetToolTip(this.buttonFilterModule, Strings.Controls.Engineering_buttonFilterModule_ToolTip);
             this.buttonFilterModule.UseVisualStyleBackColor = true;
             this.buttonFilterModule.Click += new System.EventHandler(this.buttonFilterModule_Click);
             // 

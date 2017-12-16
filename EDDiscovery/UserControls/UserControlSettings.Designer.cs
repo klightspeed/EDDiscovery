@@ -119,9 +119,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxKeepOnTop.Name = "checkBoxKeepOnTop";
             this.checkBoxKeepOnTop.Size = new System.Drawing.Size(88, 17);
             this.checkBoxKeepOnTop.TabIndex = 5;
-            this.checkBoxKeepOnTop.Text = "Keep on Top";
+            this.checkBoxKeepOnTop.Text = Strings.Controls.Settings_checkBoxKeepOnTop;
             this.checkBoxKeepOnTop.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxKeepOnTop, "This window, and its children, top");
+            this.toolTip.SetToolTip(this.checkBoxKeepOnTop, Strings.Controls.Settings_checkBoxKeepOnTop_ToolTip);
             this.checkBoxKeepOnTop.UseVisualStyleBackColor = true;
             this.checkBoxKeepOnTop.CheckedChanged += new System.EventHandler(this.checkBoxKeepOnTop_CheckedChanged);
             // 
@@ -149,7 +149,7 @@ namespace EDDiscovery.UserControls
             this.comboBoxTheme.SelectedValue = null;
             this.comboBoxTheme.Size = new System.Drawing.Size(209, 21);
             this.comboBoxTheme.TabIndex = 0;
-            this.toolTip.SetToolTip(this.comboBoxTheme, "Select the theme to use");
+            this.toolTip.SetToolTip(this.comboBoxTheme, Strings.Controls.Settings_comboBoxTheme_ToolTip);
             this.comboBoxTheme.ValueMember = "";
             // 
             // button_edittheme
@@ -161,8 +161,8 @@ namespace EDDiscovery.UserControls
             this.button_edittheme.Name = "button_edittheme";
             this.button_edittheme.Size = new System.Drawing.Size(95, 23);
             this.button_edittheme.TabIndex = 10;
-            this.button_edittheme.Text = "Edit Theme";
-            this.toolTip.SetToolTip(this.button_edittheme, "Edit theme and change colours fonts");
+            this.button_edittheme.Text = Strings.Controls.Settings_button_edittheme;
+            this.toolTip.SetToolTip(this.button_edittheme, Strings.Controls.Settings_button_edittheme_ToolTip);
             this.button_edittheme.UseVisualStyleBackColor = true;
             this.button_edittheme.Click += new System.EventHandler(this.button_edittheme_Click);
             // 
@@ -175,8 +175,8 @@ namespace EDDiscovery.UserControls
             this.buttonSaveTheme.Name = "buttonSaveTheme";
             this.buttonSaveTheme.Size = new System.Drawing.Size(95, 23);
             this.buttonSaveTheme.TabIndex = 7;
-            this.buttonSaveTheme.Text = "Save Theme";
-            this.toolTip.SetToolTip(this.buttonSaveTheme, "Save theme to disk");
+            this.buttonSaveTheme.Text = Strings.Controls.Settings_buttonSaveTheme;
+            this.toolTip.SetToolTip(this.buttonSaveTheme, Strings.Controls.Settings_buttonSaveTheme_ToolTip);
             this.buttonSaveTheme.UseVisualStyleBackColor = true;
             this.buttonSaveTheme.Click += new System.EventHandler(this.buttonSaveTheme_Click);
             // 
@@ -189,7 +189,7 @@ namespace EDDiscovery.UserControls
             this.panel_defaultmapcolor.Size = new System.Drawing.Size(28, 20);
             this.panel_defaultmapcolor.TabIndex = 5;
             this.panel_defaultmapcolor.Tag = "";
-            this.toolTip.SetToolTip(this.panel_defaultmapcolor, "New travel entries get this colour on the map");
+            this.toolTip.SetToolTip(this.panel_defaultmapcolor, Strings.Controls.Settings_panel_defaultmapcolor_ToolTip);
             this.panel_defaultmapcolor.Click += new System.EventHandler(this.panel_defaultmapcolor_Click);
             // 
             // checkBoxMinimizeToNotifyIcon
@@ -205,9 +205,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxMinimizeToNotifyIcon.Name = "checkBoxMinimizeToNotifyIcon";
             this.checkBoxMinimizeToNotifyIcon.Size = new System.Drawing.Size(179, 17);
             this.checkBoxMinimizeToNotifyIcon.TabIndex = 6;
-            this.checkBoxMinimizeToNotifyIcon.Text = "Minimize to notification area icon";
+            this.checkBoxMinimizeToNotifyIcon.Text = Strings.Controls.Settings_checkBoxMinimizeToNotifyIcon;
             this.checkBoxMinimizeToNotifyIcon.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxMinimizeToNotifyIcon, "Minimize the main window to the system notification area (system tray) icon.");
+            this.toolTip.SetToolTip(this.checkBoxMinimizeToNotifyIcon, Strings.Controls.Settings_checkBoxMinimizeToNotifyIcon_ToolTip);
             this.checkBoxMinimizeToNotifyIcon.UseVisualStyleBackColor = true;
             this.checkBoxMinimizeToNotifyIcon.CheckedChanged += new System.EventHandler(this.checkBoxMinimizeToNotifyIcon_CheckedChanged);
             // 
@@ -224,9 +224,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxUseNotifyIcon.Name = "checkBoxUseNotifyIcon";
             this.checkBoxUseNotifyIcon.Size = new System.Drawing.Size(154, 17);
             this.checkBoxUseNotifyIcon.TabIndex = 5;
-            this.checkBoxUseNotifyIcon.Text = "Show notification area icon";
+            this.checkBoxUseNotifyIcon.Text = Strings.Controls.Settings_checkBoxUseNotifyIcon;
             this.checkBoxUseNotifyIcon.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxUseNotifyIcon, "Show a system notification area (system tray) icon for EDDiscovery.");
+            this.toolTip.SetToolTip(this.checkBoxUseNotifyIcon, Strings.Controls.Settings_checkBoxUseNotifyIcon_ToolTip);
             this.checkBoxUseNotifyIcon.UseVisualStyleBackColor = true;
             this.checkBoxUseNotifyIcon.CheckedChanged += new System.EventHandler(this.checkBoxUseNotifyIcon_CheckedChanged);
             // 
@@ -243,9 +243,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxUTC.Name = "checkBoxUTC";
             this.checkBoxUTC.Size = new System.Drawing.Size(209, 17);
             this.checkBoxUTC.TabIndex = 0;
-            this.checkBoxUTC.Text = "Display Game time instead of local time";
+            this.checkBoxUTC.Text = Strings.Controls.Settings_checkBoxUTC;
             this.checkBoxUTC.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxUTC, "Display game time (UTC) instead of your local time");
+            this.toolTip.SetToolTip(this.checkBoxUTC, Strings.Controls.Settings_checkBoxUTC_ToolTip);
             this.checkBoxUTC.UseVisualStyleBackColor = true;
             this.checkBoxUTC.CheckedChanged += new System.EventHandler(this.checkBoxUTC_CheckedChanged);
             // 
@@ -262,9 +262,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxOrderRowsInverted.Name = "checkBoxOrderRowsInverted";
             this.checkBoxOrderRowsInverted.Size = new System.Drawing.Size(196, 17);
             this.checkBoxOrderRowsInverted.TabIndex = 2;
-            this.checkBoxOrderRowsInverted.Text = "Number Rows Lastest Entry Highest";
+            this.checkBoxOrderRowsInverted.Text = Strings.Controls.Settings_checkBoxOrderRowsInverted;
             this.checkBoxOrderRowsInverted.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxOrderRowsInverted, "Number oldest entry 1, latest entry highest");
+            this.toolTip.SetToolTip(this.checkBoxOrderRowsInverted, Strings.Controls.Settings_checkBoxOrderRowsInverted_ToolTip);
             this.checkBoxOrderRowsInverted.UseVisualStyleBackColor = true;
             this.checkBoxOrderRowsInverted.CheckedChanged += new System.EventHandler(this.checkBoxOrderRowsInverted_CheckedChanged);
             // 
@@ -281,9 +281,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxEDSMLog.Name = "checkBoxEDSMLog";
             this.checkBoxEDSMLog.Size = new System.Drawing.Size(119, 17);
             this.checkBoxEDSMLog.TabIndex = 1;
-            this.checkBoxEDSMLog.Text = "Log HTTP requests";
+            this.checkBoxEDSMLog.Text = Strings.Controls.Settings_checkBoxEDSMLog;
             this.checkBoxEDSMLog.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxEDSMLog, "Store EDSM queries in a log file");
+            this.toolTip.SetToolTip(this.checkBoxEDSMLog, Strings.Controls.Settings_checkBoxEDSMLog_ToolTip);
             this.checkBoxEDSMLog.UseVisualStyleBackColor = true;
             this.checkBoxEDSMLog.CheckStateChanged += new System.EventHandler(this.checkBoxEDSMLog_CheckStateChanged);
             // 
@@ -310,14 +310,14 @@ namespace EDDiscovery.UserControls
             this.dataGridViewCommanders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCommanders.Size = new System.Drawing.Size(671, 150);
             this.dataGridViewCommanders.TabIndex = 2;
-            this.toolTip.SetToolTip(this.dataGridViewCommanders, "Configure commanders");
+            this.toolTip.SetToolTip(this.dataGridViewCommanders, Strings.Controls.Settings_dataGridViewCommanders_ToolTip);
             // 
             // ColumnCommander
             // 
             this.ColumnCommander.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnCommander.DataPropertyName = "Name";
             this.ColumnCommander.FillWeight = 120F;
-            this.ColumnCommander.HeaderText = "Commander";
+            this.ColumnCommander.HeaderText = Strings.Controls.Settings_ColumnCommander_Header;
             this.ColumnCommander.MinimumWidth = 50;
             this.ColumnCommander.Name = "ColumnCommander";
             this.ColumnCommander.ReadOnly = true;
@@ -326,7 +326,7 @@ namespace EDDiscovery.UserControls
             // 
             this.EdsmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.EdsmName.DataPropertyName = "EdsmName";
-            this.EdsmName.HeaderText = "EDSM Name";
+            this.EdsmName.HeaderText = Strings.Controls.Settings_EdsmName_Header;
             this.EdsmName.MinimumWidth = 50;
             this.EdsmName.Name = "EdsmName";
             this.EdsmName.ReadOnly = true;
@@ -335,7 +335,7 @@ namespace EDDiscovery.UserControls
             // 
             this.JournalDirCol.DataPropertyName = "JournalDir";
             this.JournalDirCol.FillWeight = 120F;
-            this.JournalDirCol.HeaderText = "Journal Dir";
+            this.JournalDirCol.HeaderText = Strings.Controls.Settings_JournalDirCol_Header;
             this.JournalDirCol.MinimumWidth = 50;
             this.JournalDirCol.Name = "JournalDirCol";
             this.JournalDirCol.ReadOnly = true;
@@ -344,7 +344,7 @@ namespace EDDiscovery.UserControls
             // 
             this.NotesCol.DataPropertyName = "Info";
             this.NotesCol.FillWeight = 180F;
-            this.NotesCol.HeaderText = "Notes";
+            this.NotesCol.HeaderText = Strings.Controls.Settings_NotesCol_Header;
             this.NotesCol.MinimumWidth = 50;
             this.NotesCol.Name = "NotesCol";
             this.NotesCol.ReadOnly = true;
@@ -358,8 +358,8 @@ namespace EDDiscovery.UserControls
             this.btnDeleteCommander.Name = "btnDeleteCommander";
             this.btnDeleteCommander.Size = new System.Drawing.Size(71, 23);
             this.btnDeleteCommander.TabIndex = 3;
-            this.btnDeleteCommander.Text = "Delete";
-            this.toolTip.SetToolTip(this.btnDeleteCommander, "Delete selected commander");
+            this.btnDeleteCommander.Text = Strings.Controls.Settings_btnDeleteCommander;
+            this.toolTip.SetToolTip(this.btnDeleteCommander, Strings.Controls.Settings_btnDeleteCommander_ToolTip);
             this.btnDeleteCommander.UseVisualStyleBackColor = true;
             this.btnDeleteCommander.Click += new System.EventHandler(this.btnDeleteCommander_Click);
             // 
@@ -372,8 +372,8 @@ namespace EDDiscovery.UserControls
             this.buttonAddCommander.Name = "buttonAddCommander";
             this.buttonAddCommander.Size = new System.Drawing.Size(71, 23);
             this.buttonAddCommander.TabIndex = 0;
-            this.buttonAddCommander.Text = "Add";
-            this.toolTip.SetToolTip(this.buttonAddCommander, "Add a new commander");
+            this.buttonAddCommander.Text = Strings.Controls.Settings_buttonAddCommander;
+            this.toolTip.SetToolTip(this.buttonAddCommander, Strings.Controls.Settings_buttonAddCommander_ToolTip);
             this.buttonAddCommander.UseVisualStyleBackColor = true;
             this.buttonAddCommander.Click += new System.EventHandler(this.buttonAddCommander_Click);
             // 
@@ -395,7 +395,7 @@ namespace EDDiscovery.UserControls
             this.textBoxDefaultZoom.Size = new System.Drawing.Size(51, 20);
             this.textBoxDefaultZoom.TabIndex = 6;
             this.textBoxDefaultZoom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxDefaultZoom, "Set the zoom level of the map. 1 is normal");
+            this.toolTip.SetToolTip(this.textBoxDefaultZoom, Strings.Controls.Settings_textBoxDefaultZoom_ToolTip);
             this.textBoxDefaultZoom.WordWrap = true;
             this.textBoxDefaultZoom.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxDefaultZoom_Validating);
             // 
@@ -426,7 +426,7 @@ namespace EDDiscovery.UserControls
             this.textBoxHomeSystem.Size = new System.Drawing.Size(230, 20);
             this.textBoxHomeSystem.TabIndex = 0;
             this.textBoxHomeSystem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxHomeSystem, "Pick a home system");
+            this.toolTip.SetToolTip(this.textBoxHomeSystem, Strings.Controls.Settings_textBoxHomeSystem_ToolTip);
             this.textBoxHomeSystem.WordWrap = true;
             this.textBoxHomeSystem.Validated += new System.EventHandler(this.textBoxHomeSystem_Validated);
             // 
@@ -439,8 +439,8 @@ namespace EDDiscovery.UserControls
             this.buttonReloadSaved.Name = "buttonReloadSaved";
             this.buttonReloadSaved.Size = new System.Drawing.Size(126, 23);
             this.buttonReloadSaved.TabIndex = 3;
-            this.buttonReloadSaved.Text = "Open Saved Setup";
-            this.toolTip.SetToolTip(this.buttonReloadSaved, "Open now the saved setup of pop outs");
+            this.buttonReloadSaved.Text = Strings.Controls.Settings_buttonReloadSaved;
+            this.toolTip.SetToolTip(this.buttonReloadSaved, Strings.Controls.Settings_buttonReloadSaved_ToolTip);
             this.buttonReloadSaved.UseVisualStyleBackColor = true;
             this.buttonReloadSaved.Click += new System.EventHandler(this.buttonReloadSaved_Click);
             // 
@@ -453,8 +453,8 @@ namespace EDDiscovery.UserControls
             this.buttonSaveSetup.Name = "buttonSaveSetup";
             this.buttonSaveSetup.Size = new System.Drawing.Size(126, 23);
             this.buttonSaveSetup.TabIndex = 2;
-            this.buttonSaveSetup.Text = "Save Current Setup";
-            this.toolTip.SetToolTip(this.buttonSaveSetup, "Save now the current pop out state");
+            this.buttonSaveSetup.Text = Strings.Controls.Settings_buttonSaveSetup;
+            this.toolTip.SetToolTip(this.buttonSaveSetup, Strings.Controls.Settings_buttonSaveSetup_ToolTip);
             this.buttonSaveSetup.UseVisualStyleBackColor = true;
             this.buttonSaveSetup.Click += new System.EventHandler(this.buttonSaveSetup_Click);
             // 
@@ -471,9 +471,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxAutoSave.Name = "checkBoxAutoSave";
             this.checkBoxAutoSave.Size = new System.Drawing.Size(86, 17);
             this.checkBoxAutoSave.TabIndex = 1;
-            this.checkBoxAutoSave.Text = "Save on Exit";
+            this.checkBoxAutoSave.Text = Strings.Controls.Settings_checkBoxAutoSave;
             this.checkBoxAutoSave.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxAutoSave, "Save pop out state on exit");
+            this.toolTip.SetToolTip(this.checkBoxAutoSave, Strings.Controls.Settings_checkBoxAutoSave_ToolTip);
             this.checkBoxAutoSave.UseVisualStyleBackColor = true;
             // 
             // checkBoxAutoLoad
@@ -489,9 +489,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxAutoLoad.Name = "checkBoxAutoLoad";
             this.checkBoxAutoLoad.Size = new System.Drawing.Size(87, 17);
             this.checkBoxAutoLoad.TabIndex = 0;
-            this.checkBoxAutoLoad.Text = "Load at Start";
+            this.checkBoxAutoLoad.Text = Strings.Controls.Settings_checkBoxAutoLoad;
             this.checkBoxAutoLoad.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxAutoLoad, "Auto show pop outs");
+            this.toolTip.SetToolTip(this.checkBoxAutoLoad, Strings.Controls.Settings_checkBoxAutoLoad_ToolTip);
             this.checkBoxAutoLoad.UseVisualStyleBackColor = true;
             // 
             // radioButtonHistorySelection
@@ -508,8 +508,8 @@ namespace EDDiscovery.UserControls
             this.radioButtonHistorySelection.Size = new System.Drawing.Size(126, 17);
             this.radioButtonHistorySelection.TabIndex = 4;
             this.radioButtonHistorySelection.TabStop = true;
-            this.radioButtonHistorySelection.Text = "History Grid Selection";
-            this.toolTip.SetToolTip(this.radioButtonHistorySelection, "Select history entry as opening location");
+            this.radioButtonHistorySelection.Text = Strings.Controls.Settings_radioButtonHistorySelection;
+            this.toolTip.SetToolTip(this.radioButtonHistorySelection, Strings.Controls.Settings_radioButtonHistorySelection_ToolTip);
             this.radioButtonHistorySelection.UseVisualStyleBackColor = true;
             // 
             // radioButtonCentreHome
@@ -526,8 +526,8 @@ namespace EDDiscovery.UserControls
             this.radioButtonCentreHome.Size = new System.Drawing.Size(90, 17);
             this.radioButtonCentreHome.TabIndex = 3;
             this.radioButtonCentreHome.TabStop = true;
-            this.radioButtonCentreHome.Text = "Home System";
-            this.toolTip.SetToolTip(this.radioButtonCentreHome, "Select home system as opening location");
+            this.radioButtonCentreHome.Text = Strings.Controls.Settings_radioButtonCentreHome;
+            this.toolTip.SetToolTip(this.radioButtonCentreHome, Strings.Controls.Settings_radioButtonCentreHome_ToolTip);
             this.radioButtonCentreHome.UseVisualStyleBackColor = true;
             this.radioButtonCentreHome.CheckedChanged += new System.EventHandler(this.radioButtonCentreHome_CheckedChanged);
             // 
@@ -540,8 +540,8 @@ namespace EDDiscovery.UserControls
             this.buttonEditCommander.Name = "buttonEditCommander";
             this.buttonEditCommander.Size = new System.Drawing.Size(71, 23);
             this.buttonEditCommander.TabIndex = 5;
-            this.buttonEditCommander.Text = "Edit";
-            this.toolTip.SetToolTip(this.buttonEditCommander, "Edit selected commander");
+            this.buttonEditCommander.Text = Strings.Controls.Settings_buttonEditCommander;
+            this.toolTip.SetToolTip(this.buttonEditCommander, Strings.Controls.Settings_buttonEditCommander_ToolTip);
             this.buttonEditCommander.UseVisualStyleBackColor = true;
             this.buttonEditCommander.Click += new System.EventHandler(this.buttonEditCommander_Click);
             // 
@@ -558,7 +558,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxShowUIEvents.Name = "checkBoxShowUIEvents";
             this.checkBoxShowUIEvents.Size = new System.Drawing.Size(170, 17);
             this.checkBoxShowUIEvents.TabIndex = 6;
-            this.checkBoxShowUIEvents.Text = "Show Elite UI Events in history";
+            this.checkBoxShowUIEvents.Text = Strings.Controls.Settings_checkBoxShowUIEvents;
             this.checkBoxShowUIEvents.TickBoxReductionSize = 10;
             this.toolTip.SetToolTip(this.checkBoxShowUIEvents, "Show the UI events (such as Music) in the history. The quantity of them can be ve" +
         "ry large");
@@ -609,7 +609,7 @@ namespace EDDiscovery.UserControls
             this.groupBoxPopOuts.Size = new System.Drawing.Size(379, 109);
             this.groupBoxPopOuts.TabIndex = 19;
             this.groupBoxPopOuts.TabStop = false;
-            this.groupBoxPopOuts.Text = "Pop Out Window Options";
+            this.groupBoxPopOuts.Text = Strings.Controls.Settings_groupBoxPopOuts;
             this.groupBoxPopOuts.TextPadding = 0;
             this.groupBoxPopOuts.TextStartPosition = -1;
             // 
@@ -620,7 +620,7 @@ namespace EDDiscovery.UserControls
             this.labelTKey.Name = "labelTKey";
             this.labelTKey.Size = new System.Drawing.Size(178, 13);
             this.labelTKey.TabIndex = 5;
-            this.labelTKey.Text = "Key to activate transparent windows";
+            this.labelTKey.Text = Strings.Controls.Settings_labelTKey;
             // 
             // groupBoxTheme
             // 
@@ -638,7 +638,7 @@ namespace EDDiscovery.UserControls
             this.groupBoxTheme.Size = new System.Drawing.Size(426, 108);
             this.groupBoxTheme.TabIndex = 18;
             this.groupBoxTheme.TabStop = false;
-            this.groupBoxTheme.Text = "Theme";
+            this.groupBoxTheme.Text = Strings.Controls.Settings_groupBoxTheme;
             this.groupBoxTheme.TextPadding = 0;
             this.groupBoxTheme.TextStartPosition = -1;
             // 
@@ -663,7 +663,7 @@ namespace EDDiscovery.UserControls
             this.groupBox3dmap.Size = new System.Drawing.Size(379, 100);
             this.groupBox3dmap.TabIndex = 17;
             this.groupBox3dmap.TabStop = false;
-            this.groupBox3dmap.Text = "3D Map Settings";
+            this.groupBox3dmap.Text = Strings.Controls.Settings_groupBox3dmap;
             this.groupBox3dmap.TextPadding = 0;
             this.groupBox3dmap.TextStartPosition = -1;
             // 
@@ -674,7 +674,7 @@ namespace EDDiscovery.UserControls
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(92, 13);
             this.label17.TabIndex = 7;
-            this.label17.Text = "Default Map Color";
+            this.label17.Text = Strings.Controls.Settings_label17;
             // 
             // label5
             // 
@@ -683,7 +683,7 @@ namespace EDDiscovery.UserControls
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Default Zoom";
+            this.label5.Text = Strings.Controls.Settings_label5;
             // 
             // label4
             // 
@@ -692,7 +692,7 @@ namespace EDDiscovery.UserControls
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Open Centred On";
+            this.label4.Text = Strings.Controls.Settings_label4;
             // 
             // label3
             // 
@@ -701,7 +701,7 @@ namespace EDDiscovery.UserControls
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Home System";
+            this.label3.Text = Strings.Controls.Settings_label3;
             // 
             // groupBoxOptions
             // 
@@ -721,7 +721,7 @@ namespace EDDiscovery.UserControls
             this.groupBoxOptions.Size = new System.Drawing.Size(426, 100);
             this.groupBoxOptions.TabIndex = 16;
             this.groupBoxOptions.TabStop = false;
-            this.groupBoxOptions.Text = "Options";
+            this.groupBoxOptions.Text = Strings.Controls.Settings_groupBoxOptions;
             this.groupBoxOptions.TextPadding = 0;
             this.groupBoxOptions.TextStartPosition = -1;
             // 
@@ -741,7 +741,7 @@ namespace EDDiscovery.UserControls
             this.groupBoxCommanders.Size = new System.Drawing.Size(819, 176);
             this.groupBoxCommanders.TabIndex = 15;
             this.groupBoxCommanders.TabStop = false;
-            this.groupBoxCommanders.Text = "Commanders";
+            this.groupBoxCommanders.Text = Strings.Controls.Settings_groupBoxCommanders;
             this.groupBoxCommanders.TextPadding = 0;
             this.groupBoxCommanders.TextStartPosition = -1;
             // 
@@ -778,7 +778,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 3;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.Settings_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;
@@ -803,7 +803,7 @@ namespace EDDiscovery.UserControls
             this.groupBoxCustomScreenShots.Size = new System.Drawing.Size(425, 100);
             this.groupBoxCustomScreenShots.TabIndex = 20;
             this.groupBoxCustomScreenShots.TabStop = false;
-            this.groupBoxCustomScreenShots.Text = "Screenshots";
+            this.groupBoxCustomScreenShots.Text = Strings.Controls.Settings_groupBoxCustomScreenShots;
             this.groupBoxCustomScreenShots.TextPadding = 0;
             this.groupBoxCustomScreenShots.TextStartPosition = -1;
             // 
@@ -820,7 +820,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxCustomCopyToClipboard.Name = "checkBoxCustomCopyToClipboard";
             this.checkBoxCustomCopyToClipboard.Size = new System.Drawing.Size(108, 17);
             this.checkBoxCustomCopyToClipboard.TabIndex = 5;
-            this.checkBoxCustomCopyToClipboard.Text = "Copy to clipboard";
+            this.checkBoxCustomCopyToClipboard.Text = Strings.Controls.Settings_checkBoxCustomCopyToClipboard;
             this.checkBoxCustomCopyToClipboard.TickBoxReductionSize = 10;
             this.checkBoxCustomCopyToClipboard.UseVisualStyleBackColor = true;
             // 
@@ -837,7 +837,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxCustomMarkHiRes.Name = "checkBoxCustomMarkHiRes";
             this.checkBoxCustomMarkHiRes.Size = new System.Drawing.Size(103, 17);
             this.checkBoxCustomMarkHiRes.TabIndex = 5;
-            this.checkBoxCustomMarkHiRes.Text = "Mark HiRes files";
+            this.checkBoxCustomMarkHiRes.Text = Strings.Controls.Settings_checkBoxCustomMarkHiRes;
             this.checkBoxCustomMarkHiRes.TickBoxReductionSize = 10;
             this.checkBoxCustomMarkHiRes.UseVisualStyleBackColor = true;
             // 
@@ -854,7 +854,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxCustomRemoveOriginals.Name = "checkBoxCustomRemoveOriginals";
             this.checkBoxCustomRemoveOriginals.Size = new System.Drawing.Size(109, 17);
             this.checkBoxCustomRemoveOriginals.TabIndex = 5;
-            this.checkBoxCustomRemoveOriginals.Text = "Remove Originals";
+            this.checkBoxCustomRemoveOriginals.Text = Strings.Controls.Settings_checkBoxCustomRemoveOriginals;
             this.checkBoxCustomRemoveOriginals.TickBoxReductionSize = 10;
             this.checkBoxCustomRemoveOriginals.UseVisualStyleBackColor = true;
             // 
@@ -867,7 +867,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtScreenshot.Name = "buttonExtScreenshot";
             this.buttonExtScreenshot.Size = new System.Drawing.Size(95, 23);
             this.buttonExtScreenshot.TabIndex = 10;
-            this.buttonExtScreenshot.Text = "Configure";
+            this.buttonExtScreenshot.Text = Strings.Controls.Settings_buttonExtScreenshot;
             this.buttonExtScreenshot.UseVisualStyleBackColor = true;
             this.buttonExtScreenshot.Click += new System.EventHandler(this.buttonExtScreenshot_Click);
             // 
@@ -884,7 +884,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxCustomEnableScreenshots.Name = "checkBoxCustomEnableScreenshots";
             this.checkBoxCustomEnableScreenshots.Size = new System.Drawing.Size(169, 17);
             this.checkBoxCustomEnableScreenshots.TabIndex = 5;
-            this.checkBoxCustomEnableScreenshots.Text = "Enable screenshot conversion";
+            this.checkBoxCustomEnableScreenshots.Text = Strings.Controls.Settings_checkBoxCustomEnableScreenshots;
             this.checkBoxCustomEnableScreenshots.TickBoxReductionSize = 10;
             this.checkBoxCustomEnableScreenshots.UseVisualStyleBackColor = true;
             // 

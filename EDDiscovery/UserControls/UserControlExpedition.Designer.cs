@@ -102,7 +102,7 @@ namespace EDDiscovery.UserControls
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(787, 25);
             this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Text = Strings.Controls.Expedition_toolStrip1;
             // 
             // toolStripButtonNew
             // 
@@ -220,7 +220,7 @@ namespace EDDiscovery.UserControls
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Cml Distance:";
+            this.label2.Text = Strings.Controls.Expedition_label2;
             // 
             // label1
             // 
@@ -229,7 +229,7 @@ namespace EDDiscovery.UserControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 11;
-            this.label1.Text = "P2P Distance:";
+            this.label1.Text = Strings.Controls.Expedition_label1;
             // 
             // txtP2PDIstance
             // 
@@ -280,7 +280,7 @@ namespace EDDiscovery.UserControls
             this.buttonReverseRoute.Name = "buttonReverseRoute";
             this.buttonReverseRoute.Size = new System.Drawing.Size(59, 23);
             this.buttonReverseRoute.TabIndex = 8;
-            this.buttonReverseRoute.Text = "Reverse";
+            this.buttonReverseRoute.Text = Strings.Controls.Expedition_buttonReverseRoute;
             this.buttonReverseRoute.UseVisualStyleBackColor = true;
             this.buttonReverseRoute.Click += new System.EventHandler(this.buttonReverseRoute_Click);
             // 
@@ -325,7 +325,7 @@ namespace EDDiscovery.UserControls
             this.labelEndDate.Name = "labelEndDate";
             this.labelEndDate.Size = new System.Drawing.Size(55, 13);
             this.labelEndDate.TabIndex = 5;
-            this.labelEndDate.Text = "End Date:";
+            this.labelEndDate.Text = Strings.Controls.Expedition_labelEndDate;
             // 
             // dateTimePickerStartTime
             // 
@@ -368,7 +368,7 @@ namespace EDDiscovery.UserControls
             this.labelDateStart.Name = "labelDateStart";
             this.labelDateStart.Size = new System.Drawing.Size(58, 13);
             this.labelDateStart.TabIndex = 2;
-            this.labelDateStart.Text = "Start Date:";
+            this.labelDateStart.Text = Strings.Controls.Expedition_labelDateStart;
             // 
             // textBoxRouteName
             // 
@@ -397,7 +397,7 @@ namespace EDDiscovery.UserControls
             this.labelRouteName.Name = "labelRouteName";
             this.labelRouteName.Size = new System.Drawing.Size(70, 13);
             this.labelRouteName.TabIndex = 0;
-            this.labelRouteName.Text = "Route Name:";
+            this.labelRouteName.Text = Strings.Controls.Expedition_labelRouteName;
             // 
             // dataGridViewRouteSystems
             // 
@@ -423,13 +423,13 @@ namespace EDDiscovery.UserControls
             // 
             // SystemName
             // 
-            this.SystemName.HeaderText = "System Name";
+            this.SystemName.HeaderText = Strings.Controls.Expedition_SystemName_Header;
             this.SystemName.Name = "SystemName";
             this.SystemName.Width = 200;
             // 
             // Distance
             // 
-            this.Distance.HeaderText = "Dist.";
+            this.Distance.HeaderText = Strings.Controls.Expedition_Distance_Header;
             this.Distance.Name = "Distance";
             this.Distance.ReadOnly = true;
             this.Distance.Width = 75;
@@ -437,7 +437,7 @@ namespace EDDiscovery.UserControls
             // Note
             // 
             this.Note.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Note.HeaderText = "Note";
+            this.Note.HeaderText = Strings.Controls.Expedition_Note_Header;
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
             // 

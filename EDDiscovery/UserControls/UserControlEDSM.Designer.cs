@@ -103,7 +103,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 7;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.EDSM_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;
@@ -135,7 +135,7 @@ namespace EDDiscovery.UserControls
             // 
             // ColumnStar
             // 
-            this.ColumnStar.HeaderText = "Star";
+            this.ColumnStar.HeaderText = Strings.Controls.EDSM_ColumnStar_Header;
             this.ColumnStar.MinimumWidth = 50;
             this.ColumnStar.Name = "ColumnStar";
             this.ColumnStar.ReadOnly = true;
@@ -143,7 +143,7 @@ namespace EDDiscovery.UserControls
             // ColumnDistance
             // 
             this.ColumnDistance.FillWeight = 23F;
-            this.ColumnDistance.HeaderText = "Distance";
+            this.ColumnDistance.HeaderText = Strings.Controls.EDSM_ColumnDistance_Header;
             this.ColumnDistance.MinimumWidth = 50;
             this.ColumnDistance.Name = "ColumnDistance";
             this.ColumnDistance.ReadOnly = true;
@@ -151,7 +151,7 @@ namespace EDDiscovery.UserControls
             // ColumnPosition
             // 
             this.ColumnPosition.FillWeight = 75F;
-            this.ColumnPosition.HeaderText = "Position";
+            this.ColumnPosition.HeaderText = Strings.Controls.EDSM_ColumnPosition_Header;
             this.ColumnPosition.MinimumWidth = 50;
             this.ColumnPosition.Name = "ColumnPosition";
             this.ColumnPosition.ReadOnly = true;
@@ -159,7 +159,7 @@ namespace EDDiscovery.UserControls
             // ColumnID
             // 
             this.ColumnID.FillWeight = 25F;
-            this.ColumnID.HeaderText = "ID";
+            this.ColumnID.HeaderText = Strings.Controls.EDSM_ColumnID_Header;
             this.ColumnID.MinimumWidth = 50;
             this.ColumnID.Name = "ColumnID";
             this.ColumnID.ReadOnly = true;
@@ -210,7 +210,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtDBLookup.Name = "buttonExtDBLookup";
             this.buttonExtDBLookup.Size = new System.Drawing.Size(176, 23);
             this.buttonExtDBLookup.TabIndex = 31;
-            this.buttonExtDBLookup.Text = "From DB Find Systems ";
+            this.buttonExtDBLookup.Text = Strings.Controls.EDSM_buttonExtDBLookup;
             this.buttonExtDBLookup.UseVisualStyleBackColor = true;
             this.buttonExtDBLookup.Click += new System.EventHandler(this.buttonExtDBLookup_Click);
             // 
@@ -223,7 +223,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtEDSMSphere.Name = "buttonExtEDSMSphere";
             this.buttonExtEDSMSphere.Size = new System.Drawing.Size(176, 23);
             this.buttonExtEDSMSphere.TabIndex = 31;
-            this.buttonExtEDSMSphere.Text = "From EDSM Sphere Systems";
+            this.buttonExtEDSMSphere.Text = Strings.Controls.EDSM_buttonExtEDSMSphere;
             this.buttonExtEDSMSphere.UseVisualStyleBackColor = true;
             this.buttonExtEDSMSphere.Click += new System.EventHandler(this.buttonExtEDSMSphere_Click);
             // 
@@ -238,7 +238,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtExcel.Name = "buttonExtExcel";
             this.buttonExtExcel.Size = new System.Drawing.Size(24, 24);
             this.buttonExtExcel.TabIndex = 30;
-            this.toolTip.SetToolTip(this.buttonExtExcel, "Send data on grid to excel");
+            this.toolTip.SetToolTip(this.buttonExtExcel, Strings.Controls.EDSM_buttonExtExcel_ToolTip);
             this.buttonExtExcel.UseVisualStyleBackColor = true;
             this.buttonExtExcel.Click += new System.EventHandler(this.buttonExtExcel_Click);
             // 
@@ -280,7 +280,7 @@ namespace EDDiscovery.UserControls
             this.textBoxSystemName.Size = new System.Drawing.Size(148, 20);
             this.textBoxSystemName.TabIndex = 1;
             this.textBoxSystemName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxSystemName, "Enter text to search in any fields for an item");
+            this.toolTip.SetToolTip(this.textBoxSystemName, Strings.Controls.EDSM_textBoxSystemName_ToolTip);
             this.textBoxSystemName.WordWrap = true;
             // 
             // label1
@@ -290,7 +290,7 @@ namespace EDDiscovery.UserControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Radius ly";
+            this.label1.Text = Strings.Controls.EDSM_label1;
             // 
             // labelFilter
             // 
@@ -299,7 +299,7 @@ namespace EDDiscovery.UserControls
             this.labelFilter.Name = "labelFilter";
             this.labelFilter.Size = new System.Drawing.Size(60, 13);
             this.labelFilter.TabIndex = 24;
-            this.labelFilter.Text = "Name Filter";
+            this.labelFilter.Text = Strings.Controls.EDSM_labelFilter;
             // 
             // toolTip
             // 

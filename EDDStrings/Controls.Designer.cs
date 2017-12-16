@@ -565,11 +565,128 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove selected panel.
+        /// </summary>
+        public static string ContainerGrid_buttonExtDelete_ToolTip {
+            get {
+                return ResourceManager.GetString("ContainerGrid_buttonExtDelete_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click to select a pop out panel to display.
+        /// </summary>
+        public static string ContainerGrid_buttonExtPopOut_ToolTip {
+            get {
+                return ResourceManager.GetString("ContainerGrid_buttonExtPopOut_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tile the grid panels.
+        /// </summary>
+        public static string ContainerGrid_buttonExtTile_ToolTip {
+            get {
+                return ResourceManager.GetString("ContainerGrid_buttonExtTile_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From DB Find Systems .
+        /// </summary>
+        public static string EDSM_buttonExtDBLookup {
+            get {
+                return ResourceManager.GetString("EDSM_buttonExtDBLookup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From EDSM Sphere Systems.
+        /// </summary>
+        public static string EDSM_buttonExtEDSMSphere {
+            get {
+                return ResourceManager.GetString("EDSM_buttonExtEDSMSphere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send data on grid to excel.
+        /// </summary>
+        public static string EDSM_buttonExtExcel_ToolTip {
+            get {
+                return ResourceManager.GetString("EDSM_buttonExtExcel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance.
+        /// </summary>
+        public static string EDSM_ColumnDistance_Header {
+            get {
+                return ResourceManager.GetString("EDSM_ColumnDistance_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string EDSM_ColumnID_Header {
+            get {
+                return ResourceManager.GetString("EDSM_ColumnID_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position.
+        /// </summary>
+        public static string EDSM_ColumnPosition_Header {
+            get {
+                return ResourceManager.GetString("EDSM_ColumnPosition_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Star.
+        /// </summary>
+        public static string EDSM_ColumnStar_Header {
+            get {
+                return ResourceManager.GetString("EDSM_ColumnStar_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Radius ly.
+        /// </summary>
+        public static string EDSM_label1 {
+            get {
+                return ResourceManager.GetString("EDSM_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name Filter.
+        /// </summary>
+        public static string EDSM_labelFilter {
+            get {
+                return ResourceManager.GetString("EDSM_labelFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Go to star on 3D Map.
         /// </summary>
         public static string EDSM_ShowOn3DMap {
             get {
                 return ResourceManager.GetString("EDSM_ShowOn3DMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter text to search in any fields for an item.
+        /// </summary>
+        public static string EDSM_textBoxSystemName_ToolTip {
+            get {
+                return ResourceManager.GetString("EDSM_textBoxSystemName_ToolTip", resourceCulture);
             }
         }
         
@@ -583,11 +700,281 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string EDSM_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("EDSM_vScrollBarCustom1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avail..
+        /// </summary>
+        public static string Engineering_Available_Header {
+            get {
+                return ResourceManager.GetString("Engineering_Available_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Wanted.
+        /// </summary>
+        public static string Engineering_buttonClear {
+            get {
+                return ResourceManager.GetString("Engineering_buttonClear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set all wanted values to zero.
+        /// </summary>
+        public static string Engineering_buttonClear_ToolTip {
+            get {
+                return ResourceManager.GetString("Engineering_buttonClear_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Engineer.
+        /// </summary>
+        public static string Engineering_buttonFilterEngineer {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterEngineer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by engineer.
+        /// </summary>
+        public static string Engineering_buttonFilterEngineer_ToolTip {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterEngineer_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Level.
+        /// </summary>
+        public static string Engineering_buttonFilterLevel {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by level.
+        /// </summary>
+        public static string Engineering_buttonFilterLevel_ToolTip {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterLevel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Material.
+        /// </summary>
+        public static string Engineering_buttonFilterMaterial {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by material.
+        /// </summary>
+        public static string Engineering_buttonFilterMaterial_ToolTip {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterMaterial_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Module.
+        /// </summary>
+        public static string Engineering_buttonFilterModule {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterModule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by module type.
+        /// </summary>
+        public static string Engineering_buttonFilterModule_ToolTip {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterModule_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Upgrade.
+        /// </summary>
+        public static string Engineering_buttonFilterUpgrade {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterUpgrade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by upgrade type.
+        /// </summary>
+        public static string Engineering_buttonFilterUpgrade_ToolTip {
+            get {
+                return ResourceManager.GetString("Engineering_buttonFilterUpgrade_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use Cursor Positon.
+        /// </summary>
+        public static string Engineering_chkHistoric {
+            get {
+                return ResourceManager.GetString("Engineering_chkHistoric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engineers.
+        /// </summary>
+        public static string Engineering_Engineers_Header {
+            get {
+                return ResourceManager.GetString("Engineering_Engineers_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Level.
+        /// </summary>
+        public static string Engineering_Level_Header {
+            get {
+                return ResourceManager.GetString("Engineering_Level_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max.
+        /// </summary>
+        public static string Engineering_MaxCol_Header {
+            get {
+                return ResourceManager.GetString("Engineering_MaxCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Module.
+        /// </summary>
+        public static string Engineering_Module_Header {
+            get {
+                return ResourceManager.GetString("Engineering_Module_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string Engineering_Notes_Header {
+            get {
+                return ResourceManager.GetString("Engineering_Notes_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Left click and drag on grid to reorder.
+        /// </summary>
+        public static string Engineering_panelButtons_ToolTip {
+            get {
+                return ResourceManager.GetString("Engineering_panelButtons_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recipe.
+        /// </summary>
+        public static string Engineering_Recipe_Header {
+            get {
+                return ResourceManager.GetString("Engineering_Recipe_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrade/Mat.
+        /// </summary>
+        public static string Engineering_UpgradeCol_Header {
+            get {
+                return ResourceManager.GetString("Engineering_UpgradeCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Engineering_vScrollBarCustomMC {
+            get {
+                return ResourceManager.GetString("Engineering_vScrollBarCustomMC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wanted.
+        /// </summary>
+        public static string Engineering_WantedCol_Header {
+            get {
+                return ResourceManager.GetString("Engineering_WantedCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Body Name.
+        /// </summary>
+        public static string EstimatedValues_BodyName_Header {
+            get {
+                return ResourceManager.GetString("EstimatedValues_BodyName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Est Value.
+        /// </summary>
+        public static string EstimatedValues_EstValue_Header {
+            get {
+                return ResourceManager.GetString("EstimatedValues_EstValue_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom2.
+        /// </summary>
+        public static string EstimatedValues_vScrollBarCustom2 {
+            get {
+                return ResourceManager.GetString("EstimatedValues_vScrollBarCustom2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reverse.
+        /// </summary>
+        public static string Expedition_buttonReverseRoute {
+            get {
+                return ResourceManager.GetString("Expedition_buttonReverseRoute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Route.
         /// </summary>
         public static string Expedition_Delete {
             get {
                 return ResourceManager.GetString("Expedition_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dist..
+        /// </summary>
+        public static string Expedition_Distance_Header {
+            get {
+                return ResourceManager.GetString("Expedition_Distance_Header", resourceCulture);
             }
         }
         
@@ -637,11 +1024,65 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to P2P Distance:.
+        /// </summary>
+        public static string Expedition_label1 {
+            get {
+                return ResourceManager.GetString("Expedition_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cml Distance:.
+        /// </summary>
+        public static string Expedition_label2 {
+            get {
+                return ResourceManager.GetString("Expedition_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Date:.
+        /// </summary>
+        public static string Expedition_labelDateStart {
+            get {
+                return ResourceManager.GetString("Expedition_labelDateStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Date:.
+        /// </summary>
+        public static string Expedition_labelEndDate {
+            get {
+                return ResourceManager.GetString("Expedition_labelEndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route Name:.
+        /// </summary>
+        public static string Expedition_labelRouteName {
+            get {
+                return ResourceManager.GetString("Expedition_labelRouteName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New Route.
         /// </summary>
         public static string Expedition_New {
             get {
                 return ResourceManager.GetString("Expedition_New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string Expedition_Note_Header {
+            get {
+                return ResourceManager.GetString("Expedition_Note_Header", resourceCulture);
             }
         }
         
@@ -664,11 +1105,119 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to System Name.
+        /// </summary>
+        public static string Expedition_SystemName_Header {
+            get {
+                return ResourceManager.GetString("Expedition_SystemName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to toolStrip1.
+        /// </summary>
+        public static string Expedition_toolStrip1 {
+            get {
+                return ResourceManager.GetString("Expedition_toolStrip1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Undelete.
         /// </summary>
         public static string Expedition_Undelete {
             get {
                 return ResourceManager.GetString("Expedition_Undelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dist.
+        /// </summary>
+        public static string Exploration_ColumnDist_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnDist_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Info.
+        /// </summary>
+        public static string Exploration_ColumnInfo_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnInfo_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string Exploration_ColumnNote_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnNote_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pri star.
+        /// </summary>
+        public static string Exploration_ColumnPrimaryStar_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnPrimaryStar_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scans.
+        /// </summary>
+        public static string Exploration_ColumnScans_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnScans_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System Name.
+        /// </summary>
+        public static string Exploration_ColumnSystemName_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnSystemName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visists.
+        /// </summary>
+        public static string Exploration_ColumnVisits_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnVisits_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X.
+        /// </summary>
+        public static string Exploration_ColumnX_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnX_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y.
+        /// </summary>
+        public static string Exploration_ColumnY_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnY_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Z.
+        /// </summary>
+        public static string Exploration_ColumnZ_Header {
+            get {
+                return ResourceManager.GetString("Exploration_ColumnZ_Header", resourceCulture);
             }
         }
         
@@ -718,6 +1267,24 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filename.
+        /// </summary>
+        public static string Exploration_label1 {
+            get {
+                return ResourceManager.GetString("Exploration_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exploration set:.
+        /// </summary>
+        public static string Exploration_labelRouteName {
+            get {
+                return ResourceManager.GetString("Exploration_labelRouteName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load.
         /// </summary>
         public static string Exploration_Load {
@@ -745,11 +1312,155 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to toolStrip1.
+        /// </summary>
+        public static string Exploration_toolStrip1 {
+            get {
+                return ResourceManager.GetString("Exploration_toolStrip1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Exploration_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("Exploration_vScrollBarCustom1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send data on grid to excel.
+        /// </summary>
+        public static string JournalGrid_buttonExtExcel_ToolTip {
+            get {
+                return ResourceManager.GetString("JournalGrid_buttonExtExcel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field Filter.
+        /// </summary>
+        public static string JournalGrid_buttonField {
+            get {
+                return ResourceManager.GetString("JournalGrid_buttonField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Filter.
+        /// </summary>
+        public static string JournalGrid_buttonFilter {
+            get {
+                return ResourceManager.GetString("JournalGrid_buttonFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter out entries based on event type.
+        /// </summary>
+        public static string JournalGrid_buttonFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("JournalGrid_buttonFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cursor to Top.
+        /// </summary>
+        public static string JournalGrid_checkBoxMoveToTop {
+            get {
+                return ResourceManager.GetString("JournalGrid_checkBoxMoveToTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select if cursor moves to top entry when a new entry is received.
+        /// </summary>
+        public static string JournalGrid_checkBoxMoveToTop_ToolTip {
+            get {
+                return ResourceManager.GetString("JournalGrid_checkBoxMoveToTop_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string JournalGrid_ColumnText_Header {
+            get {
+                return ResourceManager.GetString("JournalGrid_ColumnText_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string JournalGrid_ColumnTime_Header {
+            get {
+                return ResourceManager.GetString("JournalGrid_ColumnTime_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string JournalGrid_ColumnType_Header {
+            get {
+                return ResourceManager.GetString("JournalGrid_ColumnType_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the entries selected by age.
+        /// </summary>
+        public static string JournalGrid_comboBoxJournalWindow_ToolTip {
+            get {
+                return ResourceManager.GetString("JournalGrid_comboBoxJournalWindow_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy journal entry to clipboard.
         /// </summary>
         public static string JournalGrid_CopyEntry {
             get {
                 return ResourceManager.GetString("JournalGrid_CopyEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click to pop out another journal grid into a window.
+        /// </summary>
+        public static string JournalGrid_drawnPanelPopOut_ToolTip {
+            get {
+                return ResourceManager.GetString("JournalGrid_drawnPanelPopOut_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event.
+        /// </summary>
+        public static string JournalGrid_Event_Header {
+            get {
+                return ResourceManager.GetString("JournalGrid_Event_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string JournalGrid_label1 {
+            get {
+                return ResourceManager.GetString("JournalGrid_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string JournalGrid_labelTime {
+            get {
+                return ResourceManager.GetString("JournalGrid_labelTime", resourceCulture);
             }
         }
         
@@ -790,6 +1501,15 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter text to search in any fields for an item.
+        /// </summary>
+        public static string JournalGrid_textBoxFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("JournalGrid_textBoxFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
         public static string JournalGrid_ViewOnEDSM {
@@ -799,11 +1519,155 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string JournalGrid_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("JournalGrid_vScrollBarCustom1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Balance.
+        /// </summary>
+        public static string Ledger_Balance_Header {
+            get {
+                return ResourceManager.GetString("Ledger_Balance_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Filter.
+        /// </summary>
+        public static string Ledger_buttonFilter {
+            get {
+                return ResourceManager.GetString("Ledger_buttonFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display entries matching this event type filter.
+        /// </summary>
+        public static string Ledger_buttonFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("Ledger_buttonFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the entries by age.
+        /// </summary>
+        public static string Ledger_comboBoxHistoryWindow_ToolTip {
+            get {
+                return ResourceManager.GetString("Ledger_comboBoxHistoryWindow_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credits.
+        /// </summary>
+        public static string Ledger_Credits_Header {
+            get {
+                return ResourceManager.GetString("Ledger_Credits_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debits.
+        /// </summary>
+        public static string Ledger_Debits_Header {
+            get {
+                return ResourceManager.GetString("Ledger_Debits_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Go to entry on grid.
         /// </summary>
         public static string Ledger_GoToEntry {
             get {
                 return ResourceManager.GetString("Ledger_GoToEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string Ledger_label1 {
+            get {
+                return ResourceManager.GetString("Ledger_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Items Found.
+        /// </summary>
+        public static string Ledger_labelNoItems {
+            get {
+                return ResourceManager.GetString("Ledger_labelNoItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string Ledger_labelTime {
+            get {
+                return ResourceManager.GetString("Ledger_labelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profit Per Unit.
+        /// </summary>
+        public static string Ledger_NormProfit_Header {
+            get {
+                return ResourceManager.GetString("Ledger_NormProfit_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string Ledger_Notes_Header {
+            get {
+                return ResourceManager.GetString("Ledger_Notes_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search to particular items.
+        /// </summary>
+        public static string Ledger_textBoxFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("Ledger_textBoxFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string Ledger_TimeCol_Header {
+            get {
+                return ResourceManager.GetString("Ledger_TimeCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string Ledger_Type_Header {
+            get {
+                return ResourceManager.GetString("Ledger_Type_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Ledger_vScrollBarCustomMC {
+            get {
+                return ResourceManager.GetString("Ledger_vScrollBarCustomMC", resourceCulture);
             }
         }
         
@@ -2446,6 +3310,618 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Buy.
+        /// </summary>
+        public static string MarketData_BuyCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_BuyCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cargo.
+        /// </summary>
+        public static string MarketData_CargoCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_CargoCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string MarketData_CategoryCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_CategoryCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AutoSwap.
+        /// </summary>
+        public static string MarketData_checkBoxAutoSwap {
+            get {
+                return ResourceManager.GetString("MarketData_checkBoxAutoSwap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buy Only.
+        /// </summary>
+        public static string MarketData_checkBoxBuyOnly {
+            get {
+                return ResourceManager.GetString("MarketData_checkBoxBuyOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show items you can buy only.
+        /// </summary>
+        public static string MarketData_checkBoxBuyOnly_ToolTip {
+            get {
+                return ResourceManager.GetString("MarketData_checkBoxBuyOnly_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click to select between tracking the cursor or a particular market data set.
+        /// </summary>
+        public static string MarketData_comboBoxCustomFrom_ToolTip {
+            get {
+                return ResourceManager.GetString("MarketData_comboBoxCustomFrom_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click to select a comparision market data set.
+        /// </summary>
+        public static string MarketData_comboBoxCustomTo_ToolTip {
+            get {
+                return ResourceManager.GetString("MarketData_comboBoxCustomTo_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demand.
+        /// </summary>
+        public static string MarketData_DemandCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_DemandCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Galactic Avg.
+        /// </summary>
+        public static string MarketData_GalAvgCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_GalAvgCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vs.
+        /// </summary>
+        public static string MarketData_label1 {
+            get {
+                return ResourceManager.GetString("MarketData_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Data.
+        /// </summary>
+        public static string MarketData_labelLocation {
+            get {
+                return ResourceManager.GetString("MarketData_labelLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string MarketData_NameCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_NameCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profit From cr/t.
+        /// </summary>
+        public static string MarketData_ProfitFromCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_ProfitFromCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profit To cr/t.
+        /// </summary>
+        public static string MarketData_ProfitToCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_ProfitToCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sell.
+        /// </summary>
+        public static string MarketData_SellCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_SellCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supply.
+        /// </summary>
+        public static string MarketData_SupplyCol_Header {
+            get {
+                return ResourceManager.GetString("MarketData_SupplyCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string MarketData_vScrollBarCustomMC {
+            get {
+                return ResourceManager.GetString("MarketData_vScrollBarCustomMC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string MaterialCommodities_Category_Header {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_Category_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove zero items.
+        /// </summary>
+        public static string MaterialCommodities_checkBoxClear {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_checkBoxClear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove zero items the time after they go to zero.
+        /// </summary>
+        public static string MaterialCommodities_checkBoxClear_ToolTip {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_checkBoxClear_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to label1.
+        /// </summary>
+        public static string MaterialCommodities_labelItems1 {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_labelItems1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to label1.
+        /// </summary>
+        public static string MaterialCommodities_labelItems2 {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_labelItems2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Items Found.
+        /// </summary>
+        public static string MaterialCommodities_labelNoItems {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_labelNoItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string MaterialCommodities_NameCol_Header {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_NameCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number.
+        /// </summary>
+        public static string MaterialCommodities_Number_Header {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_Number_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avg. Price.
+        /// </summary>
+        public static string MaterialCommodities_Price_Header {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_Price_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abv.
+        /// </summary>
+        public static string MaterialCommodities_ShortName_Header {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_ShortName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Count of Items.
+        /// </summary>
+        public static string MaterialCommodities_textBoxItems1_ToolTip {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_textBoxItems1_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Count of Items.
+        /// </summary>
+        public static string MaterialCommodities_textBoxItems2_ToolTip {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_textBoxItems2_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string MaterialCommodities_Type_Header {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_Type_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string MaterialCommodities_vScrollBarCustomMC {
+            get {
+                return ResourceManager.GetString("MaterialCommodities_vScrollBarCustomMC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destination.
+        /// </summary>
+        public static string Missions_cColDestSystem_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColDestSystem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Date.
+        /// </summary>
+        public static string Missions_cColEndDate_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColEndDate_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faction.
+        /// </summary>
+        public static string Missions_cColFromFaction_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColFromFaction_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Info.
+        /// </summary>
+        public static string Missions_cColInfo_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColInfo_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Missions_cColName_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origin.
+        /// </summary>
+        public static string Missions_cColOrigin_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColOrigin_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        public static string Missions_cColStartDate_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColStartDate_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target Faction.
+        /// </summary>
+        public static string Missions_cColTargetFaction_Header {
+            get {
+                return ResourceManager.GetString("Missions_cColTargetFaction_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to customDateTimePicker1.
+        /// </summary>
+        public static string Missions_customDateTimePickerEnd {
+            get {
+                return ResourceManager.GetString("Missions_customDateTimePickerEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to customDateTimePicker1.
+        /// </summary>
+        public static string Missions_customDateTimePickerStart {
+            get {
+                return ResourceManager.GetString("Missions_customDateTimePickerStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to to.
+        /// </summary>
+        public static string Missions_label1 {
+            get {
+                return ResourceManager.GetString("Missions_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Left click and drag on grid to reorder.
+        /// </summary>
+        public static string Missions_panelButtons_ToolTip {
+            get {
+                return ResourceManager.GetString("Missions_panelButtons_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destination.
+        /// </summary>
+        public static string Missions_pColDestSys_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColDestSys_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End Date.
+        /// </summary>
+        public static string Missions_pColEnd_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColEnd_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Faction.
+        /// </summary>
+        public static string Missions_pColFromFaction_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColFromFaction_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Info.
+        /// </summary>
+        public static string Missions_pColInfo_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColInfo_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Missions_PcolName_Header {
+            get {
+                return ResourceManager.GetString("Missions_PcolName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origin.
+        /// </summary>
+        public static string Missions_pColOrigin_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColOrigin_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        public static string Missions_pColResult_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColResult_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        public static string Missions_pColStart_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColStart_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target Faction.
+        /// </summary>
+        public static string Missions_pColTargetFaction_Header {
+            get {
+                return ResourceManager.GetString("Missions_pColTargetFaction_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Missions_vScrollBarCustomCur {
+            get {
+                return ResourceManager.GetString("Missions_vScrollBarCustomCur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Missions_vScrollBarCustomPrev {
+            get {
+                return ResourceManager.GetString("Missions_vScrollBarCustomPrev", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ammo.
+        /// </summary>
+        public static string Modules_Ammo_Header {
+            get {
+                return ResourceManager.GetString("Modules_Ammo_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BluePrint.
+        /// </summary>
+        public static string Modules_BluePrint_Header {
+            get {
+                return ResourceManager.GetString("Modules_BluePrint_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send to Corolis.
+        /// </summary>
+        public static string Modules_buttonExtCoriolis_ToolTip {
+            get {
+                return ResourceManager.GetString("Modules_buttonExtCoriolis_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select ship to view.
+        /// </summary>
+        public static string Modules_comboBoxShips_ToolTip {
+            get {
+                return ResourceManager.GetString("Modules_comboBoxShips_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item.
+        /// </summary>
+        public static string Modules_ItemCol_Header {
+            get {
+                return ResourceManager.GetString("Modules_ItemCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Modules_ItemLocalised_Header {
+            get {
+                return ResourceManager.GetString("Modules_ItemLocalised_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ship.
+        /// </summary>
+        public static string Modules_labelShip {
+            get {
+                return ResourceManager.GetString("Modules_labelShip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string Modules_labelVehicle {
+            get {
+                return ResourceManager.GetString("Modules_labelVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle.
+        /// </summary>
+        public static string Modules_LabelVehicleText {
+            get {
+                return ResourceManager.GetString("Modules_LabelVehicleText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to P/E.
+        /// </summary>
+        public static string Modules_PriorityEnable_Header {
+            get {
+                return ResourceManager.GetString("Modules_PriorityEnable_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slot.
+        /// </summary>
+        public static string Modules_SlotCol_Header {
+            get {
+                return ResourceManager.GetString("Modules_SlotCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        public static string Modules_Value_Header {
+            get {
+                return ResourceManager.GetString("Modules_Value_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Modules_vScrollBarCustomMC {
+            get {
+                return ResourceManager.GetString("Modules_vScrollBarCustomMC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Display galactic mapping notes.
         /// </summary>
         public static string NotePanel_DisplayGMPNotes {
@@ -2464,6 +3940,168 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Find route.
+        /// </summary>
+        public static string Route_button_Route {
+            get {
+                return ResourceManager.GetString("Route_button_Route", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compute the route.
+        /// </summary>
+        public static string Route_button_Route_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_button_Route_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send data on grid to excel.
+        /// </summary>
+        public static string Route_buttonExtExcel_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_buttonExtExcel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target.
+        /// </summary>
+        public static string Route_buttonExtTargetTo {
+            get {
+                return ResourceManager.GetString("Route_buttonExtTargetTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy the target system to end route entry.
+        /// </summary>
+        public static string Route_buttonExtTargetTo_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_buttonExtTargetTo_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        public static string Route_buttonExtTravelFrom {
+            get {
+                return ResourceManager.GetString("Route_buttonExtTravelFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy the entry in the main travel grid to start route entry.
+        /// </summary>
+        public static string Route_buttonExtTravelFrom_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_buttonExtTravelFrom_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        public static string Route_buttonExtTravelTo {
+            get {
+                return ResourceManager.GetString("Route_buttonExtTravelTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy the entry in the main travel grid to end route entry.
+        /// </summary>
+        public static string Route_buttonExtTravelTo_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_buttonExtTravelTo_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM.
+        /// </summary>
+        public static string Route_buttonFromEDSM {
+            get {
+                return ResourceManager.GetString("Route_buttonFromEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open this start route system in EDSM.
+        /// </summary>
+        public static string Route_buttonFromEDSM_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_buttonFromEDSM_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target.
+        /// </summary>
+        public static string Route_buttonTargetFrom {
+            get {
+                return ResourceManager.GetString("Route_buttonTargetFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy the target system to start route entry.
+        /// </summary>
+        public static string Route_buttonTargetFrom_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_buttonTargetFrom_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM.
+        /// </summary>
+        public static string Route_buttonToEDSM {
+            get {
+                return ResourceManager.GetString("Route_buttonToEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open this end route system in EDSM.
+        /// </summary>
+        public static string Route_buttonToEDSM_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_buttonToEDSM_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Map.
+        /// </summary>
+        public static string Route_cmd3DMap {
+            get {
+                return ResourceManager.GetString("Route_cmd3DMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show route on 3D Map.
+        /// </summary>
+        public static string Route_cmd3DMap_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_cmd3DMap_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick the metric to use when searching for a route.
+        /// </summary>
+        public static string Route_comboBoxRoutingMetric_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_comboBoxRoutingMetric_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
         public static string Route_Copy {
@@ -2473,11 +4111,254 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deviation.
+        /// </summary>
+        public static string Route_DeviationCol_Header {
+            get {
+                return ResourceManager.GetString("Route_DeviationCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance.
+        /// </summary>
+        public static string Route_DistanceCol_Header {
+            get {
+                return ResourceManager.GetString("Route_DistanceCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ly.
+        /// </summary>
+        public static string Route_label1 {
+            get {
+                return ResourceManager.GetString("Route_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max jump.
+        /// </summary>
+        public static string Route_label2 {
+            get {
+                return ResourceManager.GetString("Route_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string Route_label3 {
+            get {
+                return ResourceManager.GetString("Route_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string Route_label4 {
+            get {
+                return ResourceManager.GetString("Route_label4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Metric.
+        /// </summary>
+        public static string Route_label6 {
+            get {
+                return ResourceManager.GetString("Route_label6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance.
+        /// </summary>
+        public static string Route_label7 {
+            get {
+                return ResourceManager.GetString("Route_label7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ly.
+        /// </summary>
+        public static string Route_label9 {
+            get {
+                return ResourceManager.GetString("Route_label9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show in EDSM.
         /// </summary>
         public static string Route_ShowOnEDSM {
             get {
                 return ResourceManager.GetString("Route_ShowOnEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        public static string Route_SystemCol_Header {
+            get {
+                return ResourceManager.GetString("Route_SystemCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance between start and end.
+        /// </summary>
+        public static string Route_textBox_Distance_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_Distance_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select system to start the route.
+        /// </summary>
+        public static string Route_textBox_From_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_From_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alternate name.
+        /// </summary>
+        public static string Route_textBox_FromName_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_FromName_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X Co-ord.
+        /// </summary>
+        public static string Route_textBox_FromX_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_FromX_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y (Vertical) Co-ord.
+        /// </summary>
+        public static string Route_textBox_FromY_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_FromY_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Z Co-ord.
+        /// </summary>
+        public static string Route_textBox_FromZ_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_FromZ_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Give your jump range, or search range for long jumps.
+        /// </summary>
+        public static string Route_textBox_Range_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_Range_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the system to end in.
+        /// </summary>
+        public static string Route_textBox_To_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_To_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alternate Name.
+        /// </summary>
+        public static string Route_textBox_ToName_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_ToName_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X Co-Ord.
+        /// </summary>
+        public static string Route_textBox_ToX_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_ToX_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y (Vertical) Co-ord.
+        /// </summary>
+        public static string Route_textBox_ToY_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_ToY_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Z Co-ord.
+        /// </summary>
+        public static string Route_textBox_ToZ_ToolTip {
+            get {
+                return ResourceManager.GetString("Route_textBox_ToZ_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Route_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("Route_vScrollBarCustom1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dist. Waypoint.
+        /// </summary>
+        public static string Route_WayPointDistCol_Header {
+            get {
+                return ResourceManager.GetString("Route_WayPointDistCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X.
+        /// </summary>
+        public static string Route_XCol_Header {
+            get {
+                return ResourceManager.GetString("Route_XCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Y.
+        /// </summary>
+        public static string Route_YCol_Header {
+            get {
+                return ResourceManager.GetString("Route_YCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Z.
+        /// </summary>
+        public static string Route_ZCol_Header {
+            get {
+                return ResourceManager.GetString("Route_ZCol_Header", resourceCulture);
             }
         }
         
@@ -2509,11 +4390,731 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send data on grid to excel.
+        /// </summary>
+        public static string Scan_buttonExtExcel_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_buttonExtExcel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show/Hide Body data from EDSM.
+        /// </summary>
+        public static string Scan_checkBoxEDSM_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxEDSM_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image size large.
+        /// </summary>
+        public static string Scan_checkBoxLarge_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxLarge_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show/Hide Materials.
+        /// </summary>
+        public static string Scan_checkBoxMaterials_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxMaterials_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show rare materials only.
+        /// </summary>
+        public static string Scan_checkBoxMaterialsRare_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxMaterialsRare_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image size medium.
+        /// </summary>
+        public static string Scan_checkBoxMedium_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxMedium_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show/Hide Moons.
+        /// </summary>
+        public static string Scan_checkBoxMoons_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxMoons_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image size small.
+        /// </summary>
+        public static string Scan_checkBoxSmall_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxSmall_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image size teeny tiny.
+        /// </summary>
+        public static string Scan_checkBoxTiny_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_checkBoxTiny_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show/Hide body status icons.
+        /// </summary>
+        public static string Scan_chkShowOverlays_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_chkShowOverlays_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to label1.
+        /// </summary>
+        public static string Scan_lblSystemInfo {
+            get {
+                return ResourceManager.GetString("Scan_lblSystemInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Right click on panel to show/hide the toolbar.
+        /// </summary>
+        public static string Scan_panelControls_ToolTip {
+            get {
+                return ResourceManager.GetString("Scan_panelControls_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show/Hide Toolbar.
         /// </summary>
         public static string Scan_ShowHideToolbar {
             get {
                 return ResourceManager.GetString("Scan_ShowHideToolbar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Scan_vScrollBarCustom {
+            get {
+                return ResourceManager.GetString("Scan_vScrollBarCustom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Briefing.
+        /// </summary>
+        public static string ScanGrid_colBriefing_Header {
+            get {
+                return ResourceManager.GetString("ScanGrid_colBriefing_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Class.
+        /// </summary>
+        public static string ScanGrid_colClass_Header {
+            get {
+                return ResourceManager.GetString("ScanGrid_colClass_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string ScanGrid_colName_Header {
+            get {
+                return ResourceManager.GetString("ScanGrid_colName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance.
+        /// </summary>
+        public static string ScanGrid_Distance_Header {
+            get {
+                return ResourceManager.GetString("ScanGrid_Distance_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ScanGrid_ImageColumn_Header {
+            get {
+                return ResourceManager.GetString("ScanGrid_ImageColumn_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom2.
+        /// </summary>
+        public static string ScanGrid_vScrollBarCustom2 {
+            get {
+                return ResourceManager.GetString("ScanGrid_vScrollBarCustom2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string Settings_btnDeleteCommander {
+            get {
+                return ResourceManager.GetString("Settings_btnDeleteCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete selected commander.
+        /// </summary>
+        public static string Settings_btnDeleteCommander_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_btnDeleteCommander_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Theme.
+        /// </summary>
+        public static string Settings_button_edittheme {
+            get {
+                return ResourceManager.GetString("Settings_button_edittheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit theme and change colours fonts.
+        /// </summary>
+        public static string Settings_button_edittheme_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_button_edittheme_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string Settings_buttonAddCommander {
+            get {
+                return ResourceManager.GetString("Settings_buttonAddCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add a new commander.
+        /// </summary>
+        public static string Settings_buttonAddCommander_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_buttonAddCommander_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string Settings_buttonEditCommander {
+            get {
+                return ResourceManager.GetString("Settings_buttonEditCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit selected commander.
+        /// </summary>
+        public static string Settings_buttonEditCommander_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_buttonEditCommander_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configure.
+        /// </summary>
+        public static string Settings_buttonExtScreenshot {
+            get {
+                return ResourceManager.GetString("Settings_buttonExtScreenshot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Saved Setup.
+        /// </summary>
+        public static string Settings_buttonReloadSaved {
+            get {
+                return ResourceManager.GetString("Settings_buttonReloadSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open now the saved setup of pop outs.
+        /// </summary>
+        public static string Settings_buttonReloadSaved_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_buttonReloadSaved_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Current Setup.
+        /// </summary>
+        public static string Settings_buttonSaveSetup {
+            get {
+                return ResourceManager.GetString("Settings_buttonSaveSetup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save now the current pop out state.
+        /// </summary>
+        public static string Settings_buttonSaveSetup_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_buttonSaveSetup_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Theme.
+        /// </summary>
+        public static string Settings_buttonSaveTheme {
+            get {
+                return ResourceManager.GetString("Settings_buttonSaveTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save theme to disk.
+        /// </summary>
+        public static string Settings_buttonSaveTheme_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_buttonSaveTheme_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load at Start.
+        /// </summary>
+        public static string Settings_checkBoxAutoLoad {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxAutoLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto show pop outs.
+        /// </summary>
+        public static string Settings_checkBoxAutoLoad_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxAutoLoad_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save on Exit.
+        /// </summary>
+        public static string Settings_checkBoxAutoSave {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxAutoSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save pop out state on exit.
+        /// </summary>
+        public static string Settings_checkBoxAutoSave_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxAutoSave_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy to clipboard.
+        /// </summary>
+        public static string Settings_checkBoxCustomCopyToClipboard {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxCustomCopyToClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable screenshot conversion.
+        /// </summary>
+        public static string Settings_checkBoxCustomEnableScreenshots {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxCustomEnableScreenshots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mark HiRes files.
+        /// </summary>
+        public static string Settings_checkBoxCustomMarkHiRes {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxCustomMarkHiRes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Originals.
+        /// </summary>
+        public static string Settings_checkBoxCustomRemoveOriginals {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxCustomRemoveOriginals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log HTTP requests.
+        /// </summary>
+        public static string Settings_checkBoxEDSMLog {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxEDSMLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Store EDSM queries in a log file.
+        /// </summary>
+        public static string Settings_checkBoxEDSMLog_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxEDSMLog_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keep on Top.
+        /// </summary>
+        public static string Settings_checkBoxKeepOnTop {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxKeepOnTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This window, and its children, top.
+        /// </summary>
+        public static string Settings_checkBoxKeepOnTop_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxKeepOnTop_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimize to notification area icon.
+        /// </summary>
+        public static string Settings_checkBoxMinimizeToNotifyIcon {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxMinimizeToNotifyIcon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimize the main window to the system notification area (system tray) icon..
+        /// </summary>
+        public static string Settings_checkBoxMinimizeToNotifyIcon_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxMinimizeToNotifyIcon_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number Rows Lastest Entry Highest.
+        /// </summary>
+        public static string Settings_checkBoxOrderRowsInverted {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxOrderRowsInverted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number oldest entry 1, latest entry highest.
+        /// </summary>
+        public static string Settings_checkBoxOrderRowsInverted_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxOrderRowsInverted_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Elite UI Events in history.
+        /// </summary>
+        public static string Settings_checkBoxShowUIEvents {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxShowUIEvents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show notification area icon.
+        /// </summary>
+        public static string Settings_checkBoxUseNotifyIcon {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxUseNotifyIcon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show a system notification area (system tray) icon for EDDiscovery..
+        /// </summary>
+        public static string Settings_checkBoxUseNotifyIcon_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxUseNotifyIcon_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display Game time instead of local time.
+        /// </summary>
+        public static string Settings_checkBoxUTC {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxUTC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display game time (UTC) instead of your local time.
+        /// </summary>
+        public static string Settings_checkBoxUTC_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_checkBoxUTC_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commander.
+        /// </summary>
+        public static string Settings_ColumnCommander_Header {
+            get {
+                return ResourceManager.GetString("Settings_ColumnCommander_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the theme to use.
+        /// </summary>
+        public static string Settings_comboBoxTheme_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_comboBoxTheme_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configure commanders.
+        /// </summary>
+        public static string Settings_dataGridViewCommanders_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_dataGridViewCommanders_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM Name.
+        /// </summary>
+        public static string Settings_EdsmName_Header {
+            get {
+                return ResourceManager.GetString("Settings_EdsmName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Map Settings.
+        /// </summary>
+        public static string Settings_groupBox3dmap {
+            get {
+                return ResourceManager.GetString("Settings_groupBox3dmap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commanders.
+        /// </summary>
+        public static string Settings_groupBoxCommanders {
+            get {
+                return ResourceManager.GetString("Settings_groupBoxCommanders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Screenshots.
+        /// </summary>
+        public static string Settings_groupBoxCustomScreenShots {
+            get {
+                return ResourceManager.GetString("Settings_groupBoxCustomScreenShots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Options.
+        /// </summary>
+        public static string Settings_groupBoxOptions {
+            get {
+                return ResourceManager.GetString("Settings_groupBoxOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pop Out Window Options.
+        /// </summary>
+        public static string Settings_groupBoxPopOuts {
+            get {
+                return ResourceManager.GetString("Settings_groupBoxPopOuts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme.
+        /// </summary>
+        public static string Settings_groupBoxTheme {
+            get {
+                return ResourceManager.GetString("Settings_groupBoxTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Journal Dir.
+        /// </summary>
+        public static string Settings_JournalDirCol_Header {
+            get {
+                return ResourceManager.GetString("Settings_JournalDirCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Map Color.
+        /// </summary>
+        public static string Settings_label17 {
+            get {
+                return ResourceManager.GetString("Settings_label17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home System.
+        /// </summary>
+        public static string Settings_label3 {
+            get {
+                return ResourceManager.GetString("Settings_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Centred On.
+        /// </summary>
+        public static string Settings_label4 {
+            get {
+                return ResourceManager.GetString("Settings_label4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Zoom.
+        /// </summary>
+        public static string Settings_label5 {
+            get {
+                return ResourceManager.GetString("Settings_label5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key to activate transparent windows.
+        /// </summary>
+        public static string Settings_labelTKey {
+            get {
+                return ResourceManager.GetString("Settings_labelTKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string Settings_NotesCol_Header {
+            get {
+                return ResourceManager.GetString("Settings_NotesCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New travel entries get this colour on the map.
+        /// </summary>
+        public static string Settings_panel_defaultmapcolor_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_panel_defaultmapcolor_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home System.
+        /// </summary>
+        public static string Settings_radioButtonCentreHome {
+            get {
+                return ResourceManager.GetString("Settings_radioButtonCentreHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select home system as opening location.
+        /// </summary>
+        public static string Settings_radioButtonCentreHome_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_radioButtonCentreHome_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History Grid Selection.
+        /// </summary>
+        public static string Settings_radioButtonHistorySelection {
+            get {
+                return ResourceManager.GetString("Settings_radioButtonHistorySelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select history entry as opening location.
+        /// </summary>
+        public static string Settings_radioButtonHistorySelection_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_radioButtonHistorySelection_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set the zoom level of the map. 1 is normal.
+        /// </summary>
+        public static string Settings_textBoxDefaultZoom_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_textBoxDefaultZoom_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick a home system.
+        /// </summary>
+        public static string Settings_textBoxHomeSystem_ToolTip {
+            get {
+                return ResourceManager.GetString("Settings_textBoxHomeSystem_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Settings_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("Settings_vScrollBarCustom1", resourceCulture);
             }
         }
         
@@ -2887,11 +5488,137 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string StarDistance_Col1_Header {
+            get {
+                return ResourceManager.GetString("StarDistance_Col1_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance.
+        /// </summary>
+        public static string StarDistance_Distance_Header {
+            get {
+                return ResourceManager.GetString("StarDistance_Distance_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
         public static string StarDistance_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("StarDistance_ViewOnEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visited.
+        /// </summary>
+        public static string StarDistance_Visited_Header {
+            get {
+                return ResourceManager.GetString("StarDistance_Visited_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom2.
+        /// </summary>
+        public static string StarDistance_vScrollBarCustom2 {
+            get {
+                return ResourceManager.GetString("StarDistance_vScrollBarCustom2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send data on grid to excel.
+        /// </summary>
+        public static string StarList_buttonExtExcel_ToolTip {
+            get {
+                return ResourceManager.GetString("StarList_buttonExtExcel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cursor to Top.
+        /// </summary>
+        public static string StarList_checkBoxMoveToTop {
+            get {
+                return ResourceManager.GetString("StarList_checkBoxMoveToTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select if cursor moves to top entry when a new entry is received.
+        /// </summary>
+        public static string StarList_checkBoxMoveToTop_ToolTip {
+            get {
+                return ResourceManager.GetString("StarList_checkBoxMoveToTop_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string StarList_ColumnDistance_Header {
+            get {
+                return ResourceManager.GetString("StarList_ColumnDistance_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visits.
+        /// </summary>
+        public static string StarList_ColumnSystem_Header {
+            get {
+                return ResourceManager.GetString("StarList_ColumnSystem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Visit.
+        /// </summary>
+        public static string StarList_ColumnTime_Header {
+            get {
+                return ResourceManager.GetString("StarList_ColumnTime_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the entries by age.
+        /// </summary>
+        public static string StarList_comboBoxHistoryWindow_ToolTip {
+            get {
+                return ResourceManager.GetString("StarList_comboBoxHistoryWindow_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        public static string StarList_Icon_Header {
+            get {
+                return ResourceManager.GetString("StarList_Icon_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string StarList_labelSearch {
+            get {
+                return ResourceManager.GetString("StarList_labelSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string StarList_labelTime {
+            get {
+                return ResourceManager.GetString("StarList_labelTime", resourceCulture);
             }
         }
         
@@ -2914,11 +5641,524 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter text to search in any fields for an item.
+        /// </summary>
+        public static string StarList_textBoxFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("StarList_textBoxFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
         public static string StarList_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("StarList_ViewOnEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string StarList_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("StarList_vScrollBarCustom1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item.
+        /// </summary>
+        public static string Stats_dataGridViewTextBoxColumn1_Header {
+            get {
+                return ResourceManager.GetString("Stats_dataGridViewTextBoxColumn1_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string Stats_dataGridViewTextBoxColumn2_Header {
+            get {
+                return ResourceManager.GetString("Stats_dataGridViewTextBoxColumn2_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item.
+        /// </summary>
+        public static string Stats_dataGridViewTextBoxColumn3_Header {
+            get {
+                return ResourceManager.GetString("Stats_dataGridViewTextBoxColumn3_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string Stats_dataGridViewTextBoxColumn4_Header {
+            get {
+                return ResourceManager.GetString("Stats_dataGridViewTextBoxColumn4_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string Stats_Information_Header {
+            get {
+                return ResourceManager.GetString("Stats_Information_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item.
+        /// </summary>
+        public static string Stats_ItemName_Header {
+            get {
+                return ResourceManager.GetString("Stats_ItemName_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Most Visited.
+        /// </summary>
+        public static string Stats_mostVisited {
+            get {
+                return ResourceManager.GetString("Stats_mostVisited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        public static string Stats_tabPageGeneral {
+            get {
+                return ResourceManager.GetString("Stats_tabPageGeneral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scan.
+        /// </summary>
+        public static string Stats_tabPageScan {
+            get {
+                return ResourceManager.GetString("Stats_tabPageScan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travel.
+        /// </summary>
+        public static string Stats_tabPageTravel {
+            get {
+                return ResourceManager.GetString("Stats_tabPageTravel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Stats_vScrollBarCustom {
+            get {
+                return ResourceManager.GetString("Stats_vScrollBarCustom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to customDateTimePicker1.
+        /// </summary>
+        public static string StatsTime_CustomDateTimePickerFrom {
+            get {
+                return ResourceManager.GetString("StatsTime_CustomDateTimePickerFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to customDateTimePicker2.
+        /// </summary>
+        public static string StatsTime_CustomDateTimePickerTo {
+            get {
+                return ResourceManager.GetString("StatsTime_CustomDateTimePickerTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string StatsTime_labelTime {
+            get {
+                return ResourceManager.GetString("StatsTime_labelTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avail..
+        /// </summary>
+        public static string Synthesis_Available_Header {
+            get {
+                return ResourceManager.GetString("Synthesis_Available_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Wanted.
+        /// </summary>
+        public static string Synthesis_buttonClear {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonClear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set all wanted values to zero.
+        /// </summary>
+        public static string Synthesis_buttonClear_ToolTip {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonClear_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Level.
+        /// </summary>
+        public static string Synthesis_buttonFilterLevel {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonFilterLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by the synthesis level.
+        /// </summary>
+        public static string Synthesis_buttonFilterLevel_ToolTip {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonFilterLevel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Material.
+        /// </summary>
+        public static string Synthesis_buttonMaterialFilter {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonMaterialFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by the material type.
+        /// </summary>
+        public static string Synthesis_buttonMaterialFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonMaterialFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter By Synthesis.
+        /// </summary>
+        public static string Synthesis_buttonRecipeFilter {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonRecipeFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter the table by the synthesis type.
+        /// </summary>
+        public static string Synthesis_buttonRecipeFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("Synthesis_buttonRecipeFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use Cursor Position.
+        /// </summary>
+        public static string Synthesis_chkHistoric {
+            get {
+                return ResourceManager.GetString("Synthesis_chkHistoric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Level.
+        /// </summary>
+        public static string Synthesis_Level_Header {
+            get {
+                return ResourceManager.GetString("Synthesis_Level_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max.
+        /// </summary>
+        public static string Synthesis_MaxCol_Header {
+            get {
+                return ResourceManager.GetString("Synthesis_MaxCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string Synthesis_Notes_Header {
+            get {
+                return ResourceManager.GetString("Synthesis_Notes_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Left click and drag on grid to reorder.
+        /// </summary>
+        public static string Synthesis_panelButtons_ToolTip {
+            get {
+                return ResourceManager.GetString("Synthesis_panelButtons_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recipe.
+        /// </summary>
+        public static string Synthesis_Recipe_Header {
+            get {
+                return ResourceManager.GetString("Synthesis_Recipe_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrade/Mat.
+        /// </summary>
+        public static string Synthesis_UpgradeCol_Header {
+            get {
+                return ResourceManager.GetString("Synthesis_UpgradeCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Synthesis_vScrollBarCustomMC {
+            get {
+                return ResourceManager.GetString("Synthesis_vScrollBarCustomMC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wanted.
+        /// </summary>
+        public static string Synthesis_WantedCol_Header {
+            get {
+                return ResourceManager.GetString("Synthesis_WantedCol_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM.
+        /// </summary>
+        public static string SysInfo_buttonEDSM_Image {
+            get {
+                return ResourceManager.GetString("SysInfo_buttonEDSM_Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM.
+        /// </summary>
+        public static string SysInfo_buttonEDSMTarget_Image {
+            get {
+                return ResourceManager.GetString("SysInfo_buttonEDSMTarget_Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allegiance.
+        /// </summary>
+        public static string SysInfo_labelAllegiance {
+            get {
+                return ResourceManager.GetString("SysInfo_labelAllegiance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Body.
+        /// </summary>
+        public static string SysInfo_labelBodyName {
+            get {
+                return ResourceManager.GetString("SysInfo_labelBodyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cargo.
+        /// </summary>
+        public static string SysInfo_labelCargo {
+            get {
+                return ResourceManager.GetString("SysInfo_labelCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Credits.
+        /// </summary>
+        public static string SysInfo_labelCredits {
+            get {
+                return ResourceManager.GetString("SysInfo_labelCredits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data.
+        /// </summary>
+        public static string SysInfo_labelData {
+            get {
+                return ResourceManager.GetString("SysInfo_labelData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Economy.
+        /// </summary>
+        public static string SysInfo_labelEconomy {
+            get {
+                return ResourceManager.GetString("SysInfo_labelEconomy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fuel.
+        /// </summary>
+        public static string SysInfo_labelFuel {
+            get {
+                return ResourceManager.GetString("SysInfo_labelFuel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mode.
+        /// </summary>
+        public static string SysInfo_labelGamemode {
+            get {
+                return ResourceManager.GetString("SysInfo_labelGamemode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gov.
+        /// </summary>
+        public static string SysInfo_labelGov {
+            get {
+                return ResourceManager.GetString("SysInfo_labelGov", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string SysInfo_labelHomeDist {
+            get {
+                return ResourceManager.GetString("SysInfo_labelHomeDist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Materials.
+        /// </summary>
+        public static string SysInfo_labelMaterials {
+            get {
+                return ResourceManager.GetString("SysInfo_labelMaterials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string SysInfo_labelNote {
+            get {
+                return ResourceManager.GetString("SysInfo_labelNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string SysInfo_labelOpen {
+            get {
+                return ResourceManager.GetString("SysInfo_labelOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pos.
+        /// </summary>
+        public static string SysInfo_labelPosition {
+            get {
+                return ResourceManager.GetString("SysInfo_labelPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ship.
+        /// </summary>
+        public static string SysInfo_labelShip {
+            get {
+                return ResourceManager.GetString("SysInfo_labelShip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sol.
+        /// </summary>
+        public static string SysInfo_labelSolDist {
+            get {
+                return ResourceManager.GetString("SysInfo_labelSolDist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        public static string SysInfo_labelState {
+            get {
+                return ResourceManager.GetString("SysInfo_labelState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        public static string SysInfo_labelSysName {
+            get {
+                return ResourceManager.GetString("SysInfo_labelSysName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target.
+        /// </summary>
+        public static string SysInfo_labelTarget {
+            get {
+                return ResourceManager.GetString("SysInfo_labelTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travel.
+        /// </summary>
+        public static string SysInfo_labelTravel {
+            get {
+                return ResourceManager.GetString("SysInfo_labelTravel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visits.
+        /// </summary>
+        public static string SysInfo_labelVisits {
+            get {
+                return ResourceManager.GetString("SysInfo_labelVisits", resourceCulture);
             }
         }
         
@@ -3112,6 +6352,24 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sets the target.
+        /// </summary>
+        public static string SysInfo_textBoxTarget_ToolTip {
+            get {
+                return ResourceManager.GetString("SysInfo_textBoxTarget_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance to target.
+        /// </summary>
+        public static string SysInfo_textBoxTargetDist_ToolTip {
+            get {
+                return ResourceManager.GetString("SysInfo_textBoxTargetDist_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
         public static string Table_Copy {
@@ -3283,11 +6541,74 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send data on grid to excel.
+        /// </summary>
+        public static string TravelGrid_buttonExtExcel_ToolTip {
+            get {
+                return ResourceManager.GetString("TravelGrid_buttonExtExcel_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field Filter.
+        /// </summary>
+        public static string TravelGrid_buttonField {
+            get {
+                return ResourceManager.GetString("TravelGrid_buttonField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter out entries matching the field selection.
+        /// </summary>
+        public static string TravelGrid_buttonField_ToolTip {
+            get {
+                return ResourceManager.GetString("TravelGrid_buttonField_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event Filter.
+        /// </summary>
+        public static string TravelGrid_buttonFilter {
+            get {
+                return ResourceManager.GetString("TravelGrid_buttonFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter out entries based on event type.
+        /// </summary>
+        public static string TravelGrid_buttonFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("TravelGrid_buttonFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Move Entries to another Commander.
         /// </summary>
         public static string TravelGrid_ChangeCmdr {
             get {
                 return ResourceManager.GetString("TravelGrid_ChangeCmdr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cursor to Top.
+        /// </summary>
+        public static string TravelGrid_checkBoxMoveToTop {
+            get {
+                return ResourceManager.GetString("TravelGrid_checkBoxMoveToTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select if cursor moves to top entry when a new entry is received.
+        /// </summary>
+        public static string TravelGrid_checkBoxMoveToTop_ToolTip {
+            get {
+                return ResourceManager.GetString("TravelGrid_checkBoxMoveToTop_ToolTip", resourceCulture);
             }
         }
         
@@ -3301,6 +6622,51 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string TravelGrid_ColumnDistance_Header {
+            get {
+                return ResourceManager.GetString("TravelGrid_ColumnDistance_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string TravelGrid_ColumnNote_Header {
+            get {
+                return ResourceManager.GetString("TravelGrid_ColumnNote_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string TravelGrid_ColumnSystem_Header {
+            get {
+                return ResourceManager.GetString("TravelGrid_ColumnSystem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string TravelGrid_ColumnTime_Header {
+            get {
+                return ResourceManager.GetString("TravelGrid_ColumnTime_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the entries by age.
+        /// </summary>
+        public static string TravelGrid_comboBoxHistoryWindow_ToolTip {
+            get {
+                return ResourceManager.GetString("TravelGrid_comboBoxHistoryWindow_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy journal entry to clipboard.
         /// </summary>
         public static string TravelGrid_CopyEntry {
@@ -3310,11 +6676,47 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click to pop out another travel grid into a window.
+        /// </summary>
+        public static string TravelGrid_drawnPanelPopOut_ToolTip {
+            get {
+                return ResourceManager.GetString("TravelGrid_drawnPanelPopOut_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hide Entries.
         /// </summary>
         public static string TravelGrid_HideEntries {
             get {
                 return ResourceManager.GetString("TravelGrid_HideEntries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event.
+        /// </summary>
+        public static string TravelGrid_Icon_Header {
+            get {
+                return ResourceManager.GetString("TravelGrid_Icon_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string TravelGrid_labelSearch {
+            get {
+                return ResourceManager.GetString("TravelGrid_labelSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string TravelGrid_labelTime {
+            get {
+                return ResourceManager.GetString("TravelGrid_labelTime", resourceCulture);
             }
         }
         
@@ -3373,11 +6775,29 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter text to search in any fields for an item.
+        /// </summary>
+        public static string TravelGrid_textBoxFilter_ToolTip {
+            get {
+                return ResourceManager.GetString("TravelGrid_textBoxFilter_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
         public static string TravelGrid_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("TravelGrid_ViewOnEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string TravelGrid_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("TravelGrid_vScrollBarCustom1", resourceCulture);
             }
         }
         

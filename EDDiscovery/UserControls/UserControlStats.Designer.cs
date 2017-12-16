@@ -94,7 +94,7 @@ namespace EDDiscovery.UserControls
             // 
             // ItemName
             // 
-            this.ItemName.HeaderText = "Item";
+            this.ItemName.HeaderText = Strings.Controls.Stats_ItemName_Header;
             this.ItemName.MinimumWidth = 50;
             this.ItemName.Name = "ItemName";
             this.ItemName.ReadOnly = true;
@@ -102,7 +102,7 @@ namespace EDDiscovery.UserControls
             // Information
             // 
             this.Information.FillWeight = 400F;
-            this.Information.HeaderText = "Information";
+            this.Information.HeaderText = Strings.Controls.Stats_Information_Header;
             this.Information.MinimumWidth = 50;
             this.Information.Name = "Information";
             this.Information.ReadOnly = true;
@@ -119,7 +119,7 @@ namespace EDDiscovery.UserControls
             this.mostVisited.Series.Add(series1);
             this.mostVisited.Size = new System.Drawing.Size(159, 148);
             this.mostVisited.TabIndex = 5;
-            this.mostVisited.Text = "Most Visited";
+            this.mostVisited.Text = Strings.Controls.Stats_mostVisited;
             // 
             // panelData
             // 
@@ -158,7 +158,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom.SmallChange = 1;
             this.vScrollBarCustom.TabIndex = 8;
-            this.vScrollBarCustom.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom.Text = Strings.Controls.Stats_vScrollBarCustom;
             this.vScrollBarCustom.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom.ThumbColorScaling = 0.5F;
@@ -199,7 +199,7 @@ namespace EDDiscovery.UserControls
             this.tabPageGeneral.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageGeneral.Size = new System.Drawing.Size(790, 726);
             this.tabPageGeneral.TabIndex = 0;
-            this.tabPageGeneral.Text = "General";
+            this.tabPageGeneral.Text = Strings.Controls.Stats_tabPageGeneral;
             this.tabPageGeneral.UseVisualStyleBackColor = true;
             // 
             // tabPageTravel
@@ -210,7 +210,7 @@ namespace EDDiscovery.UserControls
             this.tabPageTravel.Name = "tabPageTravel";
             this.tabPageTravel.Size = new System.Drawing.Size(790, 726);
             this.tabPageTravel.TabIndex = 4;
-            this.tabPageTravel.Text = "Travel";
+            this.tabPageTravel.Text = Strings.Controls.Stats_tabPageTravel;
             this.tabPageTravel.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTravel
@@ -232,7 +232,7 @@ namespace EDDiscovery.UserControls
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Item";
+            this.dataGridViewTextBoxColumn1.HeaderText = Strings.Controls.Stats_dataGridViewTextBoxColumn1_Header;
             this.dataGridViewTextBoxColumn1.MinimumWidth = 50;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -240,7 +240,7 @@ namespace EDDiscovery.UserControls
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.FillWeight = 400F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Information";
+            this.dataGridViewTextBoxColumn2.HeaderText = Strings.Controls.Stats_dataGridViewTextBoxColumn2_Header;
             this.dataGridViewTextBoxColumn2.MinimumWidth = 50;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -268,7 +268,7 @@ namespace EDDiscovery.UserControls
             this.tabPageScan.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageScan.Size = new System.Drawing.Size(790, 726);
             this.tabPageScan.TabIndex = 1;
-            this.tabPageScan.Text = "Scan";
+            this.tabPageScan.Text = Strings.Controls.Stats_tabPageScan;
             this.tabPageScan.UseVisualStyleBackColor = true;
             // 
             // dataGridViewScan
@@ -290,7 +290,7 @@ namespace EDDiscovery.UserControls
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Item";
+            this.dataGridViewTextBoxColumn3.HeaderText = Strings.Controls.Stats_dataGridViewTextBoxColumn3_Header;
             this.dataGridViewTextBoxColumn3.MinimumWidth = 50;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -298,7 +298,7 @@ namespace EDDiscovery.UserControls
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.FillWeight = 400F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Information";
+            this.dataGridViewTextBoxColumn4.HeaderText = Strings.Controls.Stats_dataGridViewTextBoxColumn4_Header;
             this.dataGridViewTextBoxColumn4.MinimumWidth = 50;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;

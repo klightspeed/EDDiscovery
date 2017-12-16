@@ -111,13 +111,13 @@ namespace EDDiscovery.UserControls
             // CategoryCol
             // 
             this.CategoryCol.FillWeight = 50F;
-            this.CategoryCol.HeaderText = "Category";
+            this.CategoryCol.HeaderText = Strings.Controls.MarketData_CategoryCol_Header;
             this.CategoryCol.MinimumWidth = 50;
             this.CategoryCol.Name = "CategoryCol";
             // 
             // NameCol
             // 
-            this.NameCol.HeaderText = "Name";
+            this.NameCol.HeaderText = Strings.Controls.MarketData_NameCol_Header;
             this.NameCol.MinimumWidth = 100;
             this.NameCol.Name = "NameCol";
             this.NameCol.ReadOnly = true;
@@ -125,7 +125,7 @@ namespace EDDiscovery.UserControls
             // SellCol
             // 
             this.SellCol.FillWeight = 30F;
-            this.SellCol.HeaderText = "Sell";
+            this.SellCol.HeaderText = Strings.Controls.MarketData_SellCol_Header;
             this.SellCol.MinimumWidth = 50;
             this.SellCol.Name = "SellCol";
             this.SellCol.ReadOnly = true;
@@ -133,7 +133,7 @@ namespace EDDiscovery.UserControls
             // BuyCol
             // 
             this.BuyCol.FillWeight = 30F;
-            this.BuyCol.HeaderText = "Buy";
+            this.BuyCol.HeaderText = Strings.Controls.MarketData_BuyCol_Header;
             this.BuyCol.MinimumWidth = 50;
             this.BuyCol.Name = "BuyCol";
             this.BuyCol.ReadOnly = true;
@@ -141,7 +141,7 @@ namespace EDDiscovery.UserControls
             // CargoCol
             // 
             this.CargoCol.FillWeight = 30F;
-            this.CargoCol.HeaderText = "Cargo";
+            this.CargoCol.HeaderText = Strings.Controls.MarketData_CargoCol_Header;
             this.CargoCol.MinimumWidth = 50;
             this.CargoCol.Name = "CargoCol";
             this.CargoCol.ReadOnly = true;
@@ -149,7 +149,7 @@ namespace EDDiscovery.UserControls
             // DemandCol
             // 
             this.DemandCol.FillWeight = 30F;
-            this.DemandCol.HeaderText = "Demand";
+            this.DemandCol.HeaderText = Strings.Controls.MarketData_DemandCol_Header;
             this.DemandCol.MinimumWidth = 50;
             this.DemandCol.Name = "DemandCol";
             this.DemandCol.ReadOnly = true;
@@ -157,7 +157,7 @@ namespace EDDiscovery.UserControls
             // SupplyCol
             // 
             this.SupplyCol.FillWeight = 30F;
-            this.SupplyCol.HeaderText = "Supply";
+            this.SupplyCol.HeaderText = Strings.Controls.MarketData_SupplyCol_Header;
             this.SupplyCol.MinimumWidth = 50;
             this.SupplyCol.Name = "SupplyCol";
             this.SupplyCol.ReadOnly = true;
@@ -165,7 +165,7 @@ namespace EDDiscovery.UserControls
             // GalAvgCol
             // 
             this.GalAvgCol.FillWeight = 30F;
-            this.GalAvgCol.HeaderText = "Galactic Avg";
+            this.GalAvgCol.HeaderText = Strings.Controls.MarketData_GalAvgCol_Header;
             this.GalAvgCol.MinimumWidth = 50;
             this.GalAvgCol.Name = "GalAvgCol";
             this.GalAvgCol.ReadOnly = true;
@@ -173,7 +173,7 @@ namespace EDDiscovery.UserControls
             // ProfitToCol
             // 
             this.ProfitToCol.FillWeight = 30F;
-            this.ProfitToCol.HeaderText = "Profit To cr/t";
+            this.ProfitToCol.HeaderText = Strings.Controls.MarketData_ProfitToCol_Header;
             this.ProfitToCol.MinimumWidth = 50;
             this.ProfitToCol.Name = "ProfitToCol";
             this.ProfitToCol.ReadOnly = true;
@@ -181,7 +181,7 @@ namespace EDDiscovery.UserControls
             // ProfitFromCol
             // 
             this.ProfitFromCol.FillWeight = 30F;
-            this.ProfitFromCol.HeaderText = "Profit From cr/t";
+            this.ProfitFromCol.HeaderText = Strings.Controls.MarketData_ProfitFromCol_Header;
             this.ProfitFromCol.MinimumWidth = 50;
             this.ProfitFromCol.Name = "ProfitFromCol";
             this.ProfitFromCol.ReadOnly = true;
@@ -207,7 +207,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomMC.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomMC.SmallChange = 1;
             this.vScrollBarCustomMC.TabIndex = 0;
-            this.vScrollBarCustomMC.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomMC.Text = Strings.Controls.MarketData_vScrollBarCustomMC;
             this.vScrollBarCustomMC.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomMC.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomMC.ThumbColorScaling = 0.5F;
@@ -244,9 +244,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxBuyOnly.Name = "checkBoxBuyOnly";
             this.checkBoxBuyOnly.Size = new System.Drawing.Size(68, 17);
             this.checkBoxBuyOnly.TabIndex = 29;
-            this.checkBoxBuyOnly.Text = "Buy Only";
+            this.checkBoxBuyOnly.Text = Strings.Controls.MarketData_checkBoxBuyOnly;
             this.checkBoxBuyOnly.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxBuyOnly, "Show items you can buy only");
+            this.toolTip.SetToolTip(this.checkBoxBuyOnly, Strings.Controls.MarketData_checkBoxBuyOnly_ToolTip);
             this.checkBoxBuyOnly.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -256,7 +256,7 @@ namespace EDDiscovery.UserControls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 13);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Vs";
+            this.label1.Text = Strings.Controls.MarketData_label1;
             // 
             // comboBoxCustomTo
             // 
@@ -281,7 +281,7 @@ namespace EDDiscovery.UserControls
             this.comboBoxCustomTo.SelectedValue = null;
             this.comboBoxCustomTo.Size = new System.Drawing.Size(176, 21);
             this.comboBoxCustomTo.TabIndex = 27;
-            this.toolTip.SetToolTip(this.comboBoxCustomTo, "Click to select a comparision market data set");
+            this.toolTip.SetToolTip(this.comboBoxCustomTo, Strings.Controls.MarketData_comboBoxCustomTo_ToolTip);
             this.comboBoxCustomTo.ValueMember = "";
             this.comboBoxCustomTo.SelectedIndexChanged += new System.EventHandler(this.comboBoxCustomTo_SelectedIndexChanged);
             // 
@@ -308,7 +308,7 @@ namespace EDDiscovery.UserControls
             this.comboBoxCustomFrom.SelectedValue = null;
             this.comboBoxCustomFrom.Size = new System.Drawing.Size(176, 21);
             this.comboBoxCustomFrom.TabIndex = 27;
-            this.toolTip.SetToolTip(this.comboBoxCustomFrom, "Click to select between tracking the cursor or a particular market data set");
+            this.toolTip.SetToolTip(this.comboBoxCustomFrom, Strings.Controls.MarketData_comboBoxCustomFrom_ToolTip);
             this.comboBoxCustomFrom.ValueMember = "";
             this.comboBoxCustomFrom.SelectedIndexChanged += new System.EventHandler(this.comboBoxCustomFrom_SelectedIndexChanged);
             // 
@@ -319,7 +319,7 @@ namespace EDDiscovery.UserControls
             this.labelLocation.Name = "labelLocation";
             this.labelLocation.Size = new System.Drawing.Size(47, 13);
             this.labelLocation.TabIndex = 26;
-            this.labelLocation.Text = "No Data";
+            this.labelLocation.Text = Strings.Controls.MarketData_labelLocation;
             // 
             // toolTip
             // 
@@ -338,7 +338,7 @@ namespace EDDiscovery.UserControls
             this.checkBoxAutoSwap.Name = "checkBoxAutoSwap";
             this.checkBoxAutoSwap.Size = new System.Drawing.Size(75, 17);
             this.checkBoxAutoSwap.TabIndex = 29;
-            this.checkBoxAutoSwap.Text = "AutoSwap";
+            this.checkBoxAutoSwap.Text = Strings.Controls.MarketData_checkBoxAutoSwap;
             this.checkBoxAutoSwap.TickBoxReductionSize = 10;
             this.checkBoxAutoSwap.UseVisualStyleBackColor = true;
             // 

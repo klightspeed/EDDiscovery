@@ -87,7 +87,7 @@ namespace EDDiscovery.UserControls
             this.labelNoItems.Name = "labelNoItems";
             this.labelNoItems.Size = new System.Drawing.Size(82, 13);
             this.labelNoItems.TabIndex = 2;
-            this.labelNoItems.Text = "No Items Found";
+            this.labelNoItems.Text = Strings.Controls.MaterialCommodities_labelNoItems;
             // 
             // dataGridViewMC
             // 
@@ -112,42 +112,42 @@ namespace EDDiscovery.UserControls
             // 
             // NameCol
             // 
-            this.NameCol.HeaderText = "Name";
+            this.NameCol.HeaderText = Strings.Controls.MaterialCommodities_NameCol_Header;
             this.NameCol.MinimumWidth = 50;
             this.NameCol.Name = "NameCol";
             this.NameCol.ReadOnly = true;
             // 
             // ShortName
             // 
-            this.ShortName.HeaderText = "Abv";
+            this.ShortName.HeaderText = Strings.Controls.MaterialCommodities_ShortName_Header;
             this.ShortName.MinimumWidth = 25;
             this.ShortName.Name = "ShortName";
             this.ShortName.ReadOnly = true;
             // 
             // Category
             // 
-            this.Category.HeaderText = "Category";
+            this.Category.HeaderText = Strings.Controls.MaterialCommodities_Category_Header;
             this.Category.MinimumWidth = 50;
             this.Category.Name = "Category";
             this.Category.ReadOnly = true;
             // 
             // Type
             // 
-            this.Type.HeaderText = "Type";
+            this.Type.HeaderText = Strings.Controls.MaterialCommodities_Type_Header;
             this.Type.MinimumWidth = 50;
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
             // 
             // Number
             // 
-            this.Number.HeaderText = "Number";
+            this.Number.HeaderText = Strings.Controls.MaterialCommodities_Number_Header;
             this.Number.MinimumWidth = 50;
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
             // 
             // Price
             // 
-            this.Price.HeaderText = "Avg. Price";
+            this.Price.HeaderText = Strings.Controls.MaterialCommodities_Price_Header;
             this.Price.MinimumWidth = 50;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -173,7 +173,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomMC.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomMC.SmallChange = 1;
             this.vScrollBarCustomMC.TabIndex = 0;
-            this.vScrollBarCustomMC.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomMC.Text = Strings.Controls.MaterialCommodities_vScrollBarCustomMC;
             this.vScrollBarCustomMC.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomMC.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomMC.ThumbColorScaling = 0.5F;
@@ -212,7 +212,7 @@ namespace EDDiscovery.UserControls
             this.textBoxItems2.Size = new System.Drawing.Size(75, 20);
             this.textBoxItems2.TabIndex = 4;
             this.textBoxItems2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxItems2, "Count of Items");
+            this.toolTip.SetToolTip(this.textBoxItems2, Strings.Controls.MaterialCommodities_textBoxItems2_ToolTip);
             this.textBoxItems2.WordWrap = true;
             // 
             // textBoxItems1
@@ -233,7 +233,7 @@ namespace EDDiscovery.UserControls
             this.textBoxItems1.Size = new System.Drawing.Size(75, 20);
             this.textBoxItems1.TabIndex = 4;
             this.textBoxItems1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip.SetToolTip(this.textBoxItems1, "Count of Items");
+            this.toolTip.SetToolTip(this.textBoxItems1, Strings.Controls.MaterialCommodities_textBoxItems1_ToolTip);
             this.textBoxItems1.WordWrap = true;
             // 
             // labelItems2
@@ -243,7 +243,7 @@ namespace EDDiscovery.UserControls
             this.labelItems2.Name = "labelItems2";
             this.labelItems2.Size = new System.Drawing.Size(35, 13);
             this.labelItems2.TabIndex = 3;
-            this.labelItems2.Text = "label1";
+            this.labelItems2.Text = Strings.Controls.MaterialCommodities_labelItems2;
             // 
             // labelItems1
             // 
@@ -252,7 +252,7 @@ namespace EDDiscovery.UserControls
             this.labelItems1.Name = "labelItems1";
             this.labelItems1.Size = new System.Drawing.Size(35, 13);
             this.labelItems1.TabIndex = 3;
-            this.labelItems1.Text = "label1";
+            this.labelItems1.Text = Strings.Controls.MaterialCommodities_labelItems1;
             // 
             // checkBoxClear
             // 
@@ -267,9 +267,9 @@ namespace EDDiscovery.UserControls
             this.checkBoxClear.Name = "checkBoxClear";
             this.checkBoxClear.Size = new System.Drawing.Size(116, 17);
             this.checkBoxClear.TabIndex = 2;
-            this.checkBoxClear.Text = "Remove zero items";
+            this.checkBoxClear.Text = Strings.Controls.MaterialCommodities_checkBoxClear;
             this.checkBoxClear.TickBoxReductionSize = 10;
-            this.toolTip.SetToolTip(this.checkBoxClear, "Remove zero items the time after they go to zero");
+            this.toolTip.SetToolTip(this.checkBoxClear, Strings.Controls.MaterialCommodities_checkBoxClear_ToolTip);
             this.checkBoxClear.UseVisualStyleBackColor = true;
             this.checkBoxClear.CheckStateChanged += new System.EventHandler(this.checkBoxClear_CheckStateChanged);
             // 

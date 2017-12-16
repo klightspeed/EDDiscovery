@@ -127,7 +127,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom2.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom2.SmallChange = 1;
             this.vScrollBarCustom2.TabIndex = 24;
-            this.vScrollBarCustom2.Text = "vScrollBarCustom2";
+            this.vScrollBarCustom2.Text = Strings.Controls.ScanGrid_vScrollBarCustom2;
             this.vScrollBarCustom2.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom2.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom2.ThumbColorScaling = 0.5F;
@@ -138,7 +138,7 @@ namespace EDDiscovery.UserControls
             // ImageColumn
             // 
             this.ImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ImageColumn.HeaderText = "";
+            this.ImageColumn.HeaderText = Strings.Controls.ScanGrid_ImageColumn_Header;
             this.ImageColumn.MinimumWidth = 36;
             this.ImageColumn.Name = "ImageColumn";
             this.ImageColumn.ReadOnly = true;
@@ -148,7 +148,7 @@ namespace EDDiscovery.UserControls
             // colName
             // 
             this.colName.FillWeight = 37.56873F;
-            this.colName.HeaderText = "Name";
+            this.colName.HeaderText = Strings.Controls.ScanGrid_colName_Header;
             this.colName.MinimumWidth = 20;
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
@@ -156,7 +156,7 @@ namespace EDDiscovery.UserControls
             // colClass
             // 
             this.colClass.FillWeight = 46.96092F;
-            this.colClass.HeaderText = "Class";
+            this.colClass.HeaderText = Strings.Controls.ScanGrid_colClass_Header;
             this.colClass.MinimumWidth = 20;
             this.colClass.Name = "colClass";
             this.colClass.ReadOnly = true;
@@ -164,14 +164,14 @@ namespace EDDiscovery.UserControls
             // Distance
             // 
             this.Distance.FillWeight = 23.39628F;
-            this.Distance.HeaderText = "Distance";
+            this.Distance.HeaderText = Strings.Controls.ScanGrid_Distance_Header;
             this.Distance.Name = "Distance";
             this.Distance.ReadOnly = true;
             // 
             // colBriefing
             // 
             this.colBriefing.FillWeight = 93.92184F;
-            this.colBriefing.HeaderText = "Briefing";
+            this.colBriefing.HeaderText = Strings.Controls.ScanGrid_colBriefing_Header;
             this.colBriefing.MinimumWidth = 20;
             this.colBriefing.Name = "colBriefing";
             this.colBriefing.ReadOnly = true;

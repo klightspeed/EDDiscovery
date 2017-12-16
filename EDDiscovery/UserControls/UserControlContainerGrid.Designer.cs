@@ -68,7 +68,7 @@
             this.buttonExtTile.Name = "buttonExtTile";
             this.buttonExtTile.Size = new System.Drawing.Size(24, 24);
             this.buttonExtTile.TabIndex = 3;
-            this.toolTip.SetToolTip(this.buttonExtTile, "Tile the grid panels");
+            this.toolTip.SetToolTip(this.buttonExtTile, Strings.Controls.ContainerGrid_buttonExtTile_ToolTip);
             this.buttonExtTile.UseVisualStyleBackColor = true;
             this.buttonExtTile.Click += new System.EventHandler(this.buttonExtTile_Click);
             // 
@@ -82,7 +82,7 @@
             this.buttonExtDelete.Name = "buttonExtDelete";
             this.buttonExtDelete.Size = new System.Drawing.Size(24, 24);
             this.buttonExtDelete.TabIndex = 3;
-            this.toolTip.SetToolTip(this.buttonExtDelete, "Remove selected panel");
+            this.toolTip.SetToolTip(this.buttonExtDelete, Strings.Controls.ContainerGrid_buttonExtDelete_ToolTip);
             this.buttonExtDelete.UseVisualStyleBackColor = true;
             this.buttonExtDelete.Click += new System.EventHandler(this.buttonExtDelete_Click);
             // 
@@ -114,7 +114,7 @@
             this.buttonExtPopOut.Name = "buttonExtPopOut";
             this.buttonExtPopOut.Size = new System.Drawing.Size(24, 24);
             this.buttonExtPopOut.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.buttonExtPopOut, "Click to select a pop out panel to display");
+            this.toolTip1.SetToolTip(this.buttonExtPopOut, Strings.Controls.ContainerGrid_buttonExtPopOut_ToolTip);
             this.buttonExtPopOut.UseVisualStyleBackColor = false;
             this.buttonExtPopOut.Click += new System.EventHandler(this.buttonExtPopOut_Click);
             // 

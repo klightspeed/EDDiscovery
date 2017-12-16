@@ -1296,4 +1296,1144 @@
   <data name="TripPanel_ShipDetails" xml:space="preserve">
     <value>Set ship details</value>
   </data>
+  <data name="EDSM_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="EDSM_ColumnStar_Header" xml:space="preserve">
+    <value>Star</value>
+  </data>
+  <data name="EDSM_ColumnDistance_Header" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="EDSM_ColumnPosition_Header" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="EDSM_ColumnID_Header" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="EDSM_buttonExtDBLookup" xml:space="preserve">
+    <value>From DB Find Systems </value>
+  </data>
+  <data name="EDSM_buttonExtEDSMSphere" xml:space="preserve">
+    <value>From EDSM Sphere Systems</value>
+  </data>
+  <data name="EDSM_label1" xml:space="preserve">
+    <value>Radius ly</value>
+  </data>
+  <data name="EDSM_labelFilter" xml:space="preserve">
+    <value>Name Filter</value>
+  </data>
+  <data name="Engineering_UpgradeCol_Header" xml:space="preserve">
+    <value>Upgrade/Mat</value>
+  </data>
+  <data name="Engineering_Module_Header" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="Engineering_Level_Header" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Engineering_MaxCol_Header" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="Engineering_WantedCol_Header" xml:space="preserve">
+    <value>Wanted</value>
+  </data>
+  <data name="Engineering_Available_Header" xml:space="preserve">
+    <value>Avail.</value>
+  </data>
+  <data name="Engineering_Notes_Header" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Engineering_Recipe_Header" xml:space="preserve">
+    <value>Recipe</value>
+  </data>
+  <data name="Engineering_Engineers_Header" xml:space="preserve">
+    <value>Engineers</value>
+  </data>
+  <data name="Engineering_vScrollBarCustomMC" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Engineering_chkHistoric" xml:space="preserve">
+    <value>Use Cursor Positon</value>
+  </data>
+  <data name="Engineering_buttonClear" xml:space="preserve">
+    <value>Clear Wanted</value>
+  </data>
+  <data name="Engineering_buttonFilterMaterial" xml:space="preserve">
+    <value>Filter By Material</value>
+  </data>
+  <data name="Engineering_buttonFilterUpgrade" xml:space="preserve">
+    <value>Filter By Upgrade</value>
+  </data>
+  <data name="Engineering_buttonFilterLevel" xml:space="preserve">
+    <value>Filter By Level</value>
+  </data>
+  <data name="Engineering_buttonFilterEngineer" xml:space="preserve">
+    <value>Filter By Engineer</value>
+  </data>
+  <data name="Engineering_buttonFilterModule" xml:space="preserve">
+    <value>Filter By Module</value>
+  </data>
+  <data name="EstimatedValues_vScrollBarCustom2" xml:space="preserve">
+    <value>vScrollBarCustom2</value>
+  </data>
+  <data name="EstimatedValues_BodyName_Header" xml:space="preserve">
+    <value>Body Name</value>
+  </data>
+  <data name="EstimatedValues_EstValue_Header" xml:space="preserve">
+    <value>Est Value</value>
+  </data>
+  <data name="Expedition_toolStrip1" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="Expedition_label2" xml:space="preserve">
+    <value>Cml Distance:</value>
+  </data>
+  <data name="Expedition_label1" xml:space="preserve">
+    <value>P2P Distance:</value>
+  </data>
+  <data name="Expedition_buttonReverseRoute" xml:space="preserve">
+    <value>Reverse</value>
+  </data>
+  <data name="Expedition_labelEndDate" xml:space="preserve">
+    <value>End Date:</value>
+  </data>
+  <data name="Expedition_labelDateStart" xml:space="preserve">
+    <value>Start Date:</value>
+  </data>
+  <data name="Expedition_labelRouteName" xml:space="preserve">
+    <value>Route Name:</value>
+  </data>
+  <data name="Expedition_SystemName_Header" xml:space="preserve">
+    <value>System Name</value>
+  </data>
+  <data name="Expedition_Distance_Header" xml:space="preserve">
+    <value>Dist.</value>
+  </data>
+  <data name="Expedition_Note_Header" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="Exploration_toolStrip1" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="Exploration_label1" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="Exploration_labelRouteName" xml:space="preserve">
+    <value>Exploration set:</value>
+  </data>
+  <data name="Exploration_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Exploration_ColumnSystemName_Header" xml:space="preserve">
+    <value>System Name</value>
+  </data>
+  <data name="Exploration_ColumnDist_Header" xml:space="preserve">
+    <value>Dist</value>
+  </data>
+  <data name="Exploration_ColumnX_Header" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="Exploration_ColumnY_Header" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="Exploration_ColumnZ_Header" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="Exploration_ColumnVisits_Header" xml:space="preserve">
+    <value>Visists</value>
+  </data>
+  <data name="Exploration_ColumnScans_Header" xml:space="preserve">
+    <value>Scans</value>
+  </data>
+  <data name="Exploration_ColumnPrimaryStar_Header" xml:space="preserve">
+    <value>Pri star</value>
+  </data>
+  <data name="Exploration_ColumnInfo_Header" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Exploration_ColumnNote_Header" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="JournalGrid_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="JournalGrid_ColumnTime_Header" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="JournalGrid_Event_Header" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="JournalGrid_ColumnType_Header" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="JournalGrid_ColumnText_Header" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="JournalGrid_checkBoxMoveToTop" xml:space="preserve">
+    <value>Cursor to Top</value>
+  </data>
+  <data name="JournalGrid_buttonField" xml:space="preserve">
+    <value>Field Filter</value>
+  </data>
+  <data name="JournalGrid_label1" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="JournalGrid_buttonFilter" xml:space="preserve">
+    <value>Event Filter</value>
+  </data>
+  <data name="JournalGrid_labelTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Ledger_labelNoItems" xml:space="preserve">
+    <value>No Items Found</value>
+  </data>
+  <data name="Ledger_TimeCol_Header" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Ledger_Type_Header" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Ledger_Notes_Header" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Ledger_Credits_Header" xml:space="preserve">
+    <value>Credits</value>
+  </data>
+  <data name="Ledger_Debits_Header" xml:space="preserve">
+    <value>Debits</value>
+  </data>
+  <data name="Ledger_Balance_Header" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="Ledger_NormProfit_Header" xml:space="preserve">
+    <value>Profit Per Unit</value>
+  </data>
+  <data name="Ledger_vScrollBarCustomMC" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Ledger_labelTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Ledger_buttonFilter" xml:space="preserve">
+    <value>Event Filter</value>
+  </data>
+  <data name="Ledger_label1" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="MarketData_CategoryCol_Header" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="MarketData_NameCol_Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MarketData_SellCol_Header" xml:space="preserve">
+    <value>Sell</value>
+  </data>
+  <data name="MarketData_BuyCol_Header" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="MarketData_CargoCol_Header" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="MarketData_DemandCol_Header" xml:space="preserve">
+    <value>Demand</value>
+  </data>
+  <data name="MarketData_SupplyCol_Header" xml:space="preserve">
+    <value>Supply</value>
+  </data>
+  <data name="MarketData_GalAvgCol_Header" xml:space="preserve">
+    <value>Galactic Avg</value>
+  </data>
+  <data name="MarketData_ProfitToCol_Header" xml:space="preserve">
+    <value>Profit To cr/t</value>
+  </data>
+  <data name="MarketData_ProfitFromCol_Header" xml:space="preserve">
+    <value>Profit From cr/t</value>
+  </data>
+  <data name="MarketData_vScrollBarCustomMC" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="MarketData_checkBoxBuyOnly" xml:space="preserve">
+    <value>Buy Only</value>
+  </data>
+  <data name="MarketData_label1" xml:space="preserve">
+    <value>Vs</value>
+  </data>
+  <data name="MarketData_labelLocation" xml:space="preserve">
+    <value>No Data</value>
+  </data>
+  <data name="MarketData_checkBoxAutoSwap" xml:space="preserve">
+    <value>AutoSwap</value>
+  </data>
+  <data name="MaterialCommodities_labelNoItems" xml:space="preserve">
+    <value>No Items Found</value>
+  </data>
+  <data name="MaterialCommodities_NameCol_Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MaterialCommodities_ShortName_Header" xml:space="preserve">
+    <value>Abv</value>
+  </data>
+  <data name="MaterialCommodities_Category_Header" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="MaterialCommodities_Type_Header" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="MaterialCommodities_Number_Header" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="MaterialCommodities_Price_Header" xml:space="preserve">
+    <value>Avg. Price</value>
+  </data>
+  <data name="MaterialCommodities_vScrollBarCustomMC" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="MaterialCommodities_labelItems2" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="MaterialCommodities_labelItems1" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="MaterialCommodities_checkBoxClear" xml:space="preserve">
+    <value>Remove zero items</value>
+  </data>
+  <data name="Missions_cColName_Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Missions_cColStartDate_Header" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Missions_cColEndDate_Header" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Missions_cColOrigin_Header" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="Missions_cColFromFaction_Header" xml:space="preserve">
+    <value>Faction</value>
+  </data>
+  <data name="Missions_cColDestSystem_Header" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Missions_cColTargetFaction_Header" xml:space="preserve">
+    <value>Target Faction</value>
+  </data>
+  <data name="Missions_cColInfo_Header" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Missions_vScrollBarCustomCur" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Missions_PcolName_Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Missions_pColStart_Header" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Missions_pColEnd_Header" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Missions_pColOrigin_Header" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="Missions_pColFromFaction_Header" xml:space="preserve">
+    <value>Faction</value>
+  </data>
+  <data name="Missions_pColDestSys_Header" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Missions_pColTargetFaction_Header" xml:space="preserve">
+    <value>Target Faction</value>
+  </data>
+  <data name="Missions_pColResult_Header" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Missions_pColInfo_Header" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Missions_vScrollBarCustomPrev" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Missions_label1" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="Missions_customDateTimePickerEnd" xml:space="preserve">
+    <value>customDateTimePicker1</value>
+  </data>
+  <data name="Missions_customDateTimePickerStart" xml:space="preserve">
+    <value>customDateTimePicker1</value>
+  </data>
+  <data name="Modules_SlotCol_Header" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="Modules_ItemCol_Header" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Modules_ItemLocalised_Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Modules_Ammo_Header" xml:space="preserve">
+    <value>Ammo</value>
+  </data>
+  <data name="Modules_BluePrint_Header" xml:space="preserve">
+    <value>BluePrint</value>
+  </data>
+  <data name="Modules_Value_Header" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Modules_PriorityEnable_Header" xml:space="preserve">
+    <value>P/E</value>
+  </data>
+  <data name="Modules_vScrollBarCustomMC" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Modules_labelVehicle" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Modules_LabelVehicleText" xml:space="preserve">
+    <value>Vehicle</value>
+  </data>
+  <data name="Modules_labelShip" xml:space="preserve">
+    <value>Ship</value>
+  </data>
+  <data name="Route_buttonExtTravelTo" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Route_buttonExtTravelFrom" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Route_buttonExtTargetTo" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="Route_buttonToEDSM" xml:space="preserve">
+    <value>EDSM</value>
+  </data>
+  <data name="Route_buttonFromEDSM" xml:space="preserve">
+    <value>EDSM</value>
+  </data>
+  <data name="Route_buttonTargetFrom" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="Route_cmd3DMap" xml:space="preserve">
+    <value>3D Map</value>
+  </data>
+  <data name="Route_label1" xml:space="preserve">
+    <value>ly</value>
+  </data>
+  <data name="Route_label9" xml:space="preserve">
+    <value>ly</value>
+  </data>
+  <data name="Route_label4" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Route_label2" xml:space="preserve">
+    <value>Max jump</value>
+  </data>
+  <data name="Route_label7" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Route_label6" xml:space="preserve">
+    <value>Metric</value>
+  </data>
+  <data name="Route_button_Route" xml:space="preserve">
+    <value>Find route</value>
+  </data>
+  <data name="Route_label3" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Route_SystemCol_Header" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Route_DistanceCol_Header" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Route_XCol_Header" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="Route_YCol_Header" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="Route_ZCol_Header" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="Route_WayPointDistCol_Header" xml:space="preserve">
+    <value>Dist. Waypoint</value>
+  </data>
+  <data name="Route_DeviationCol_Header" xml:space="preserve">
+    <value>Deviation</value>
+  </data>
+  <data name="Route_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Scan_vScrollBarCustom" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Scan_lblSystemInfo" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="ScanGrid_vScrollBarCustom2" xml:space="preserve">
+    <value>vScrollBarCustom2</value>
+  </data>
+  <data name="ScanGrid_ImageColumn_Header" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="ScanGrid_colName_Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ScanGrid_colClass_Header" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="ScanGrid_Distance_Header" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="ScanGrid_colBriefing_Header" xml:space="preserve">
+    <value>Briefing</value>
+  </data>
+  <data name="Settings_checkBoxKeepOnTop" xml:space="preserve">
+    <value>Keep on Top</value>
+  </data>
+  <data name="Settings_button_edittheme" xml:space="preserve">
+    <value>Edit Theme</value>
+  </data>
+  <data name="Settings_buttonSaveTheme" xml:space="preserve">
+    <value>Save Theme</value>
+  </data>
+  <data name="Settings_checkBoxMinimizeToNotifyIcon" xml:space="preserve">
+    <value>Minimize to notification area icon</value>
+  </data>
+  <data name="Settings_checkBoxUseNotifyIcon" xml:space="preserve">
+    <value>Show notification area icon</value>
+  </data>
+  <data name="Settings_checkBoxUTC" xml:space="preserve">
+    <value>Display Game time instead of local time</value>
+  </data>
+  <data name="Settings_checkBoxOrderRowsInverted" xml:space="preserve">
+    <value>Number Rows Lastest Entry Highest</value>
+  </data>
+  <data name="Settings_checkBoxEDSMLog" xml:space="preserve">
+    <value>Log HTTP requests</value>
+  </data>
+  <data name="Settings_ColumnCommander_Header" xml:space="preserve">
+    <value>Commander</value>
+  </data>
+  <data name="Settings_EdsmName_Header" xml:space="preserve">
+    <value>EDSM Name</value>
+  </data>
+  <data name="Settings_JournalDirCol_Header" xml:space="preserve">
+    <value>Journal Dir</value>
+  </data>
+  <data name="Settings_NotesCol_Header" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Settings_btnDeleteCommander" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Settings_buttonAddCommander" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Settings_buttonReloadSaved" xml:space="preserve">
+    <value>Open Saved Setup</value>
+  </data>
+  <data name="Settings_buttonSaveSetup" xml:space="preserve">
+    <value>Save Current Setup</value>
+  </data>
+  <data name="Settings_checkBoxAutoSave" xml:space="preserve">
+    <value>Save on Exit</value>
+  </data>
+  <data name="Settings_checkBoxAutoLoad" xml:space="preserve">
+    <value>Load at Start</value>
+  </data>
+  <data name="Settings_radioButtonHistorySelection" xml:space="preserve">
+    <value>History Grid Selection</value>
+  </data>
+  <data name="Settings_radioButtonCentreHome" xml:space="preserve">
+    <value>Home System</value>
+  </data>
+  <data name="Settings_buttonEditCommander" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Settings_checkBoxShowUIEvents" xml:space="preserve">
+    <value>Show Elite UI Events in history</value>
+  </data>
+  <data name="Settings_groupBoxPopOuts" xml:space="preserve">
+    <value>Pop Out Window Options</value>
+  </data>
+  <data name="Settings_labelTKey" xml:space="preserve">
+    <value>Key to activate transparent windows</value>
+  </data>
+  <data name="Settings_groupBoxTheme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Settings_groupBox3dmap" xml:space="preserve">
+    <value>3D Map Settings</value>
+  </data>
+  <data name="Settings_label17" xml:space="preserve">
+    <value>Default Map Color</value>
+  </data>
+  <data name="Settings_label5" xml:space="preserve">
+    <value>Default Zoom</value>
+  </data>
+  <data name="Settings_label4" xml:space="preserve">
+    <value>Open Centred On</value>
+  </data>
+  <data name="Settings_label3" xml:space="preserve">
+    <value>Home System</value>
+  </data>
+  <data name="Settings_groupBoxOptions" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Settings_groupBoxCommanders" xml:space="preserve">
+    <value>Commanders</value>
+  </data>
+  <data name="Settings_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Settings_groupBoxCustomScreenShots" xml:space="preserve">
+    <value>Screenshots</value>
+  </data>
+  <data name="Settings_checkBoxCustomCopyToClipboard" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="Settings_checkBoxCustomMarkHiRes" xml:space="preserve">
+    <value>Mark HiRes files</value>
+  </data>
+  <data name="Settings_checkBoxCustomRemoveOriginals" xml:space="preserve">
+    <value>Remove Originals</value>
+  </data>
+  <data name="Settings_buttonExtScreenshot" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="Settings_checkBoxCustomEnableScreenshots" xml:space="preserve">
+    <value>Enable screenshot conversion</value>
+  </data>
+  <data name="StarDistance_vScrollBarCustom2" xml:space="preserve">
+    <value>vScrollBarCustom2</value>
+  </data>
+  <data name="StarDistance_Col1_Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="StarDistance_Distance_Header" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="StarDistance_Visited_Header" xml:space="preserve">
+    <value>Visited</value>
+  </data>
+  <data name="StarList_checkBoxMoveToTop" xml:space="preserve">
+    <value>Cursor to Top</value>
+  </data>
+  <data name="StarList_labelSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="StarList_labelTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="StarList_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="StarList_ColumnTime_Header" xml:space="preserve">
+    <value>Last Visit</value>
+  </data>
+  <data name="StarList_Icon_Header" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="StarList_ColumnSystem_Header" xml:space="preserve">
+    <value>Visits</value>
+  </data>
+  <data name="StarList_ColumnDistance_Header" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Stats_ItemName_Header" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Stats_Information_Header" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Stats_mostVisited" xml:space="preserve">
+    <value>Most Visited</value>
+  </data>
+  <data name="Stats_vScrollBarCustom" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Stats_tabPageGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Stats_tabPageTravel" xml:space="preserve">
+    <value>Travel</value>
+  </data>
+  <data name="Stats_dataGridViewTextBoxColumn1_Header" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Stats_dataGridViewTextBoxColumn2_Header" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Stats_tabPageScan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="Stats_dataGridViewTextBoxColumn3_Header" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Stats_dataGridViewTextBoxColumn4_Header" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="StatsTime_CustomDateTimePickerTo" xml:space="preserve">
+    <value>customDateTimePicker2</value>
+  </data>
+  <data name="StatsTime_CustomDateTimePickerFrom" xml:space="preserve">
+    <value>customDateTimePicker1</value>
+  </data>
+  <data name="StatsTime_labelTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Synthesis_UpgradeCol_Header" xml:space="preserve">
+    <value>Upgrade/Mat</value>
+  </data>
+  <data name="Synthesis_Level_Header" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Synthesis_MaxCol_Header" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="Synthesis_WantedCol_Header" xml:space="preserve">
+    <value>Wanted</value>
+  </data>
+  <data name="Synthesis_Available_Header" xml:space="preserve">
+    <value>Avail.</value>
+  </data>
+  <data name="Synthesis_Notes_Header" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Synthesis_Recipe_Header" xml:space="preserve">
+    <value>Recipe</value>
+  </data>
+  <data name="Synthesis_vScrollBarCustomMC" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Synthesis_chkHistoric" xml:space="preserve">
+    <value>Use Cursor Position</value>
+  </data>
+  <data name="Synthesis_buttonMaterialFilter" xml:space="preserve">
+    <value>Filter By Material</value>
+  </data>
+  <data name="Synthesis_buttonFilterLevel" xml:space="preserve">
+    <value>Filter By Level</value>
+  </data>
+  <data name="Synthesis_buttonRecipeFilter" xml:space="preserve">
+    <value>Filter By Synthesis</value>
+  </data>
+  <data name="Synthesis_buttonClear" xml:space="preserve">
+    <value>Clear Wanted</value>
+  </data>
+  <data name="SysInfo_labelBodyName" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="SysInfo_labelPosition" xml:space="preserve">
+    <value>Pos</value>
+  </data>
+  <data name="SysInfo_labelVisits" xml:space="preserve">
+    <value>Visits</value>
+  </data>
+  <data name="SysInfo_labelAllegiance" xml:space="preserve">
+    <value>Allegiance</value>
+  </data>
+  <data name="SysInfo_labelEconomy" xml:space="preserve">
+    <value>Economy</value>
+  </data>
+  <data name="SysInfo_labelGov" xml:space="preserve">
+    <value>Gov</value>
+  </data>
+  <data name="SysInfo_labelState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="SysInfo_labelHomeDist" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="SysInfo_buttonEDSM_Image" xml:space="preserve">
+    <value>EDSM</value>
+  </data>
+  <data name="SysInfo_labelSolDist" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="SysInfo_labelNote" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="SysInfo_labelTarget" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="SysInfo_buttonEDSMTarget_Image" xml:space="preserve">
+    <value>EDSM</value>
+  </data>
+  <data name="SysInfo_labelSysName" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="SysInfo_labelOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="SysInfo_labelGamemode" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="SysInfo_labelTravel" xml:space="preserve">
+    <value>Travel</value>
+  </data>
+  <data name="SysInfo_labelCargo" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="SysInfo_labelMaterials" xml:space="preserve">
+    <value>Materials</value>
+  </data>
+  <data name="SysInfo_labelData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="SysInfo_labelShip" xml:space="preserve">
+    <value>Ship</value>
+  </data>
+  <data name="SysInfo_labelFuel" xml:space="preserve">
+    <value>Fuel</value>
+  </data>
+  <data name="SysInfo_labelCredits" xml:space="preserve">
+    <value>Credits</value>
+  </data>
+  <data name="TravelGrid_checkBoxMoveToTop" xml:space="preserve">
+    <value>Cursor to Top</value>
+  </data>
+  <data name="TravelGrid_buttonField" xml:space="preserve">
+    <value>Field Filter</value>
+  </data>
+  <data name="TravelGrid_buttonFilter" xml:space="preserve">
+    <value>Event Filter</value>
+  </data>
+  <data name="TravelGrid_labelSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="TravelGrid_labelTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TravelGrid_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="TravelGrid_ColumnTime_Header" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TravelGrid_Icon_Header" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="TravelGrid_ColumnSystem_Header" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TravelGrid_ColumnDistance_Header" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="TravelGrid_ColumnNote_Header" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="ContainerGrid_buttonExtTile_ToolTip" xml:space="preserve">
+    <value>Tile the grid panels</value>
+  </data>
+  <data name="ContainerGrid_buttonExtDelete_ToolTip" xml:space="preserve">
+    <value>Remove selected panel</value>
+  </data>
+  <data name="ContainerGrid_buttonExtPopOut_ToolTip" xml:space="preserve">
+    <value>Click to select a pop out panel to display</value>
+  </data>
+  <data name="EDSM_buttonExtExcel_ToolTip" xml:space="preserve">
+    <value>Send data on grid to excel</value>
+  </data>
+  <data name="EDSM_textBoxSystemName_ToolTip" xml:space="preserve">
+    <value>Enter text to search in any fields for an item</value>
+  </data>
+  <data name="Engineering_panelButtons_ToolTip" xml:space="preserve">
+    <value>Left click and drag on grid to reorder</value>
+  </data>
+  <data name="Engineering_buttonClear_ToolTip" xml:space="preserve">
+    <value>Set all wanted values to zero</value>
+  </data>
+  <data name="Engineering_buttonFilterMaterial_ToolTip" xml:space="preserve">
+    <value>Filter the table by material</value>
+  </data>
+  <data name="Engineering_buttonFilterUpgrade_ToolTip" xml:space="preserve">
+    <value>Filter the table by upgrade type</value>
+  </data>
+  <data name="Engineering_buttonFilterLevel_ToolTip" xml:space="preserve">
+    <value>Filter the table by level</value>
+  </data>
+  <data name="Engineering_buttonFilterEngineer_ToolTip" xml:space="preserve">
+    <value>Filter the table by engineer</value>
+  </data>
+  <data name="Engineering_buttonFilterModule_ToolTip" xml:space="preserve">
+    <value>Filter the table by module type</value>
+  </data>
+  <data name="JournalGrid_checkBoxMoveToTop_ToolTip" xml:space="preserve">
+    <value>Select if cursor moves to top entry when a new entry is received</value>
+  </data>
+  <data name="JournalGrid_buttonExtExcel_ToolTip" xml:space="preserve">
+    <value>Send data on grid to excel</value>
+  </data>
+  <data name="JournalGrid_drawnPanelPopOut_ToolTip" xml:space="preserve">
+    <value>Click to pop out another journal grid into a window</value>
+  </data>
+  <data name="JournalGrid_textBoxFilter_ToolTip" xml:space="preserve">
+    <value>Enter text to search in any fields for an item</value>
+  </data>
+  <data name="JournalGrid_buttonFilter_ToolTip" xml:space="preserve">
+    <value>Filter out entries based on event type</value>
+  </data>
+  <data name="JournalGrid_comboBoxJournalWindow_ToolTip" xml:space="preserve">
+    <value>Select the entries selected by age</value>
+  </data>
+  <data name="Ledger_buttonFilter_ToolTip" xml:space="preserve">
+    <value>Display entries matching this event type filter</value>
+  </data>
+  <data name="Ledger_textBoxFilter_ToolTip" xml:space="preserve">
+    <value>Search to particular items</value>
+  </data>
+  <data name="Ledger_comboBoxHistoryWindow_ToolTip" xml:space="preserve">
+    <value>Select the entries by age</value>
+  </data>
+  <data name="MarketData_checkBoxBuyOnly_ToolTip" xml:space="preserve">
+    <value>Show items you can buy only</value>
+  </data>
+  <data name="MarketData_comboBoxCustomTo_ToolTip" xml:space="preserve">
+    <value>Click to select a comparision market data set</value>
+  </data>
+  <data name="MarketData_comboBoxCustomFrom_ToolTip" xml:space="preserve">
+    <value>Click to select between tracking the cursor or a particular market data set</value>
+  </data>
+  <data name="MaterialCommodities_textBoxItems2_ToolTip" xml:space="preserve">
+    <value>Count of Items</value>
+  </data>
+  <data name="MaterialCommodities_textBoxItems1_ToolTip" xml:space="preserve">
+    <value>Count of Items</value>
+  </data>
+  <data name="MaterialCommodities_checkBoxClear_ToolTip" xml:space="preserve">
+    <value>Remove zero items the time after they go to zero</value>
+  </data>
+  <data name="Missions_panelButtons_ToolTip" xml:space="preserve">
+    <value>Left click and drag on grid to reorder</value>
+  </data>
+  <data name="Modules_buttonExtCoriolis_ToolTip" xml:space="preserve">
+    <value>Send to Corolis</value>
+  </data>
+  <data name="Modules_comboBoxShips_ToolTip" xml:space="preserve">
+    <value>Select ship to view</value>
+  </data>
+  <data name="Route_buttonExtExcel_ToolTip" xml:space="preserve">
+    <value>Send data on grid to excel</value>
+  </data>
+  <data name="Route_textBox_ToName_ToolTip" xml:space="preserve">
+    <value>Alternate Name</value>
+  </data>
+  <data name="Route_textBox_FromName_ToolTip" xml:space="preserve">
+    <value>Alternate name</value>
+  </data>
+  <data name="Route_comboBoxRoutingMetric_ToolTip" xml:space="preserve">
+    <value>Pick the metric to use when searching for a route</value>
+  </data>
+  <data name="Route_buttonExtTravelTo_ToolTip" xml:space="preserve">
+    <value>Copy the entry in the main travel grid to end route entry</value>
+  </data>
+  <data name="Route_buttonExtTravelFrom_ToolTip" xml:space="preserve">
+    <value>Copy the entry in the main travel grid to start route entry</value>
+  </data>
+  <data name="Route_buttonExtTargetTo_ToolTip" xml:space="preserve">
+    <value>Copy the target system to end route entry</value>
+  </data>
+  <data name="Route_buttonToEDSM_ToolTip" xml:space="preserve">
+    <value>Open this end route system in EDSM</value>
+  </data>
+  <data name="Route_buttonFromEDSM_ToolTip" xml:space="preserve">
+    <value>Open this start route system in EDSM</value>
+  </data>
+  <data name="Route_buttonTargetFrom_ToolTip" xml:space="preserve">
+    <value>Copy the target system to start route entry</value>
+  </data>
+  <data name="Route_cmd3DMap_ToolTip" xml:space="preserve">
+    <value>Show route on 3D Map</value>
+  </data>
+  <data name="Route_textBox_From_ToolTip" xml:space="preserve">
+    <value>Select system to start the route</value>
+  </data>
+  <data name="Route_textBox_Range_ToolTip" xml:space="preserve">
+    <value>Give your jump range, or search range for long jumps</value>
+  </data>
+  <data name="Route_textBox_To_ToolTip" xml:space="preserve">
+    <value>Select the system to end in</value>
+  </data>
+  <data name="Route_textBox_Distance_ToolTip" xml:space="preserve">
+    <value>Distance between start and end</value>
+  </data>
+  <data name="Route_textBox_ToZ_ToolTip" xml:space="preserve">
+    <value>Z Co-ord</value>
+  </data>
+  <data name="Route_textBox_ToY_ToolTip" xml:space="preserve">
+    <value>Y (Vertical) Co-ord</value>
+  </data>
+  <data name="Route_textBox_ToX_ToolTip" xml:space="preserve">
+    <value>X Co-Ord</value>
+  </data>
+  <data name="Route_textBox_FromZ_ToolTip" xml:space="preserve">
+    <value>Z Co-ord</value>
+  </data>
+  <data name="Route_button_Route_ToolTip" xml:space="preserve">
+    <value>Compute the route</value>
+  </data>
+  <data name="Route_textBox_FromY_ToolTip" xml:space="preserve">
+    <value>Y (Vertical) Co-ord</value>
+  </data>
+  <data name="Route_textBox_FromX_ToolTip" xml:space="preserve">
+    <value>X Co-ord</value>
+  </data>
+  <data name="Scan_checkBoxSmall_ToolTip" xml:space="preserve">
+    <value>Image size small</value>
+  </data>
+  <data name="Scan_checkBoxMedium_ToolTip" xml:space="preserve">
+    <value>Image size medium</value>
+  </data>
+  <data name="Scan_checkBoxLarge_ToolTip" xml:space="preserve">
+    <value>Image size large</value>
+  </data>
+  <data name="Scan_checkBoxMoons_ToolTip" xml:space="preserve">
+    <value>Show/Hide Moons</value>
+  </data>
+  <data name="Scan_checkBoxMaterials_ToolTip" xml:space="preserve">
+    <value>Show/Hide Materials</value>
+  </data>
+  <data name="Scan_checkBoxMaterialsRare_ToolTip" xml:space="preserve">
+    <value>Show rare materials only</value>
+  </data>
+  <data name="Scan_checkBoxTiny_ToolTip" xml:space="preserve">
+    <value>Image size teeny tiny</value>
+  </data>
+  <data name="Scan_panelControls_ToolTip" xml:space="preserve">
+    <value>Right click on panel to show/hide the toolbar</value>
+  </data>
+  <data name="Scan_buttonExtExcel_ToolTip" xml:space="preserve">
+    <value>Send data on grid to excel</value>
+  </data>
+  <data name="Scan_checkBoxEDSM_ToolTip" xml:space="preserve">
+    <value>Show/Hide Body data from EDSM</value>
+  </data>
+  <data name="Scan_chkShowOverlays_ToolTip" xml:space="preserve">
+    <value>Show/Hide body status icons</value>
+  </data>
+  <data name="Settings_checkBoxKeepOnTop_ToolTip" xml:space="preserve">
+    <value>This window, and its children, top</value>
+  </data>
+  <data name="Settings_comboBoxTheme_ToolTip" xml:space="preserve">
+    <value>Select the theme to use</value>
+  </data>
+  <data name="Settings_button_edittheme_ToolTip" xml:space="preserve">
+    <value>Edit theme and change colours fonts</value>
+  </data>
+  <data name="Settings_buttonSaveTheme_ToolTip" xml:space="preserve">
+    <value>Save theme to disk</value>
+  </data>
+  <data name="Settings_panel_defaultmapcolor_ToolTip" xml:space="preserve">
+    <value>New travel entries get this colour on the map</value>
+  </data>
+  <data name="Settings_checkBoxMinimizeToNotifyIcon_ToolTip" xml:space="preserve">
+    <value>Minimize the main window to the system notification area (system tray) icon.</value>
+  </data>
+  <data name="Settings_checkBoxUseNotifyIcon_ToolTip" xml:space="preserve">
+    <value>Show a system notification area (system tray) icon for EDDiscovery.</value>
+  </data>
+  <data name="Settings_checkBoxUTC_ToolTip" xml:space="preserve">
+    <value>Display game time (UTC) instead of your local time</value>
+  </data>
+  <data name="Settings_checkBoxOrderRowsInverted_ToolTip" xml:space="preserve">
+    <value>Number oldest entry 1, latest entry highest</value>
+  </data>
+  <data name="Settings_checkBoxEDSMLog_ToolTip" xml:space="preserve">
+    <value>Store EDSM queries in a log file</value>
+  </data>
+  <data name="Settings_dataGridViewCommanders_ToolTip" xml:space="preserve">
+    <value>Configure commanders</value>
+  </data>
+  <data name="Settings_btnDeleteCommander_ToolTip" xml:space="preserve">
+    <value>Delete selected commander</value>
+  </data>
+  <data name="Settings_buttonAddCommander_ToolTip" xml:space="preserve">
+    <value>Add a new commander</value>
+  </data>
+  <data name="Settings_textBoxDefaultZoom_ToolTip" xml:space="preserve">
+    <value>Set the zoom level of the map. 1 is normal</value>
+  </data>
+  <data name="Settings_textBoxHomeSystem_ToolTip" xml:space="preserve">
+    <value>Pick a home system</value>
+  </data>
+  <data name="Settings_buttonReloadSaved_ToolTip" xml:space="preserve">
+    <value>Open now the saved setup of pop outs</value>
+  </data>
+  <data name="Settings_buttonSaveSetup_ToolTip" xml:space="preserve">
+    <value>Save now the current pop out state</value>
+  </data>
+  <data name="Settings_checkBoxAutoSave_ToolTip" xml:space="preserve">
+    <value>Save pop out state on exit</value>
+  </data>
+  <data name="Settings_checkBoxAutoLoad_ToolTip" xml:space="preserve">
+    <value>Auto show pop outs</value>
+  </data>
+  <data name="Settings_radioButtonHistorySelection_ToolTip" xml:space="preserve">
+    <value>Select history entry as opening location</value>
+  </data>
+  <data name="Settings_radioButtonCentreHome_ToolTip" xml:space="preserve">
+    <value>Select home system as opening location</value>
+  </data>
+  <data name="Settings_buttonEditCommander_ToolTip" xml:space="preserve">
+    <value>Edit selected commander</value>
+  </data>
+  <data name="StarList_checkBoxMoveToTop_ToolTip" xml:space="preserve">
+    <value>Select if cursor moves to top entry when a new entry is received</value>
+  </data>
+  <data name="StarList_buttonExtExcel_ToolTip" xml:space="preserve">
+    <value>Send data on grid to excel</value>
+  </data>
+  <data name="StarList_textBoxFilter_ToolTip" xml:space="preserve">
+    <value>Enter text to search in any fields for an item</value>
+  </data>
+  <data name="StarList_comboBoxHistoryWindow_ToolTip" xml:space="preserve">
+    <value>Select the entries by age</value>
+  </data>
+  <data name="Synthesis_panelButtons_ToolTip" xml:space="preserve">
+    <value>Left click and drag on grid to reorder</value>
+  </data>
+  <data name="Synthesis_buttonMaterialFilter_ToolTip" xml:space="preserve">
+    <value>Filter the table by the material type</value>
+  </data>
+  <data name="Synthesis_buttonFilterLevel_ToolTip" xml:space="preserve">
+    <value>Filter the table by the synthesis level</value>
+  </data>
+  <data name="Synthesis_buttonRecipeFilter_ToolTip" xml:space="preserve">
+    <value>Filter the table by the synthesis type</value>
+  </data>
+  <data name="Synthesis_buttonClear_ToolTip" xml:space="preserve">
+    <value>Set all wanted values to zero</value>
+  </data>
+  <data name="SysInfo_textBoxTarget_ToolTip" xml:space="preserve">
+    <value>Sets the target</value>
+  </data>
+  <data name="SysInfo_textBoxTargetDist_ToolTip" xml:space="preserve">
+    <value>Distance to target</value>
+  </data>
+  <data name="TravelGrid_checkBoxMoveToTop_ToolTip" xml:space="preserve">
+    <value>Select if cursor moves to top entry when a new entry is received</value>
+  </data>
+  <data name="TravelGrid_buttonExtExcel_ToolTip" xml:space="preserve">
+    <value>Send data on grid to excel</value>
+  </data>
+  <data name="TravelGrid_drawnPanelPopOut_ToolTip" xml:space="preserve">
+    <value>Click to pop out another travel grid into a window</value>
+  </data>
+  <data name="TravelGrid_buttonField_ToolTip" xml:space="preserve">
+    <value>Filter out entries matching the field selection</value>
+  </data>
+  <data name="TravelGrid_buttonFilter_ToolTip" xml:space="preserve">
+    <value>Filter out entries based on event type</value>
+  </data>
+  <data name="TravelGrid_textBoxFilter_ToolTip" xml:space="preserve">
+    <value>Enter text to search in any fields for an item</value>
+  </data>
+  <data name="TravelGrid_comboBoxHistoryWindow_ToolTip" xml:space="preserve">
+    <value>Select the entries by age</value>
+  </data>
 </root>

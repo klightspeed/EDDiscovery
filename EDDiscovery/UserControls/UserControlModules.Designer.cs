@@ -103,7 +103,7 @@ namespace EDDiscovery.UserControls
             // 
             // SlotCol
             // 
-            this.SlotCol.HeaderText = "Slot";
+            this.SlotCol.HeaderText = Strings.Controls.Modules_SlotCol_Header;
             this.SlotCol.MinimumWidth = 50;
             this.SlotCol.Name = "SlotCol";
             this.SlotCol.ReadOnly = true;
@@ -111,14 +111,14 @@ namespace EDDiscovery.UserControls
             // ItemCol
             // 
             this.ItemCol.FillWeight = 120F;
-            this.ItemCol.HeaderText = "Item";
+            this.ItemCol.HeaderText = Strings.Controls.Modules_ItemCol_Header;
             this.ItemCol.MinimumWidth = 100;
             this.ItemCol.Name = "ItemCol";
             this.ItemCol.ReadOnly = true;
             // 
             // ItemLocalised
             // 
-            this.ItemLocalised.HeaderText = "Name";
+            this.ItemLocalised.HeaderText = Strings.Controls.Modules_ItemLocalised_Header;
             this.ItemLocalised.MinimumWidth = 100;
             this.ItemLocalised.Name = "ItemLocalised";
             this.ItemLocalised.ReadOnly = true;
@@ -126,7 +126,7 @@ namespace EDDiscovery.UserControls
             // Ammo
             // 
             this.Ammo.FillWeight = 50F;
-            this.Ammo.HeaderText = "Ammo";
+            this.Ammo.HeaderText = Strings.Controls.Modules_Ammo_Header;
             this.Ammo.MinimumWidth = 20;
             this.Ammo.Name = "Ammo";
             this.Ammo.ReadOnly = true;
@@ -134,7 +134,7 @@ namespace EDDiscovery.UserControls
             // BluePrint
             // 
             this.BluePrint.FillWeight = 50F;
-            this.BluePrint.HeaderText = "BluePrint";
+            this.BluePrint.HeaderText = Strings.Controls.Modules_BluePrint_Header;
             this.BluePrint.MinimumWidth = 20;
             this.BluePrint.Name = "BluePrint";
             this.BluePrint.ReadOnly = true;
@@ -142,7 +142,7 @@ namespace EDDiscovery.UserControls
             // Value
             // 
             this.Value.FillWeight = 50F;
-            this.Value.HeaderText = "Value";
+            this.Value.HeaderText = Strings.Controls.Modules_Value_Header;
             this.Value.MinimumWidth = 20;
             this.Value.Name = "Value";
             this.Value.ReadOnly = true;
@@ -150,7 +150,7 @@ namespace EDDiscovery.UserControls
             // PriorityEnable
             // 
             this.PriorityEnable.FillWeight = 50F;
-            this.PriorityEnable.HeaderText = "P/E";
+            this.PriorityEnable.HeaderText = Strings.Controls.Modules_PriorityEnable_Header;
             this.PriorityEnable.MinimumWidth = 20;
             this.PriorityEnable.Name = "PriorityEnable";
             // 
@@ -175,7 +175,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustomMC.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustomMC.SmallChange = 1;
             this.vScrollBarCustomMC.TabIndex = 0;
-            this.vScrollBarCustomMC.Text = "vScrollBarCustom1";
+            this.vScrollBarCustomMC.Text = Strings.Controls.Modules_vScrollBarCustomMC;
             this.vScrollBarCustomMC.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustomMC.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustomMC.ThumbColorScaling = 0.5F;
@@ -207,7 +207,7 @@ namespace EDDiscovery.UserControls
             this.buttonExtCoriolis.Name = "buttonExtCoriolis";
             this.buttonExtCoriolis.Size = new System.Drawing.Size(24, 24);
             this.buttonExtCoriolis.TabIndex = 29;
-            this.toolTip.SetToolTip(this.buttonExtCoriolis, "Send to Corolis");
+            this.toolTip.SetToolTip(this.buttonExtCoriolis, Strings.Controls.Modules_buttonExtCoriolis_ToolTip);
             this.buttonExtCoriolis.UseVisualStyleBackColor = false;
             this.buttonExtCoriolis.Click += new System.EventHandler(this.buttonExtCoriolis_Click);
             // 
@@ -218,7 +218,7 @@ namespace EDDiscovery.UserControls
             this.labelVehicle.Name = "labelVehicle";
             this.labelVehicle.Size = new System.Drawing.Size(53, 13);
             this.labelVehicle.TabIndex = 28;
-            this.labelVehicle.Text = "Unknown";
+            this.labelVehicle.Text = Strings.Controls.Modules_labelVehicle;
             // 
             // LabelVehicleText
             // 
@@ -227,7 +227,7 @@ namespace EDDiscovery.UserControls
             this.LabelVehicleText.Name = "LabelVehicleText";
             this.LabelVehicleText.Size = new System.Drawing.Size(42, 13);
             this.LabelVehicleText.TabIndex = 27;
-            this.LabelVehicleText.Text = "Vehicle";
+            this.LabelVehicleText.Text = Strings.Controls.Modules_LabelVehicleText;
             // 
             // labelShip
             // 
@@ -236,7 +236,7 @@ namespace EDDiscovery.UserControls
             this.labelShip.Name = "labelShip";
             this.labelShip.Size = new System.Drawing.Size(28, 13);
             this.labelShip.TabIndex = 26;
-            this.labelShip.Text = "Ship";
+            this.labelShip.Text = Strings.Controls.Modules_labelShip;
             // 
             // comboBoxShips
             // 
@@ -261,7 +261,7 @@ namespace EDDiscovery.UserControls
             this.comboBoxShips.SelectedValue = null;
             this.comboBoxShips.Size = new System.Drawing.Size(188, 21);
             this.comboBoxShips.TabIndex = 0;
-            this.toolTip.SetToolTip(this.comboBoxShips, "Select ship to view");
+            this.toolTip.SetToolTip(this.comboBoxShips, Strings.Controls.Modules_comboBoxShips_ToolTip);
             this.comboBoxShips.ValueMember = "";
             this.comboBoxShips.SelectedIndexChanged += new System.EventHandler(this.comboBoxHistoryWindow_SelectedIndexChanged);
             // 

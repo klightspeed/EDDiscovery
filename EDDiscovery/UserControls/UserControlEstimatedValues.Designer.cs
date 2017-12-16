@@ -87,7 +87,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom2.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom2.SmallChange = 1;
             this.vScrollBarCustom2.TabIndex = 24;
-            this.vScrollBarCustom2.Text = "vScrollBarCustom2";
+            this.vScrollBarCustom2.Text = Strings.Controls.EstimatedValues_vScrollBarCustom2;
             this.vScrollBarCustom2.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom2.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom2.ThumbColorScaling = 0.5F;
@@ -116,14 +116,14 @@ namespace EDDiscovery.UserControls
             // BodyName
             // 
             this.BodyName.FillWeight = 70F;
-            this.BodyName.HeaderText = "Body Name";
+            this.BodyName.HeaderText = Strings.Controls.EstimatedValues_BodyName_Header;
             this.BodyName.MinimumWidth = 50;
             this.BodyName.Name = "BodyName";
             // 
             // EstValue
             // 
             this.EstValue.FillWeight = 15F;
-            this.EstValue.HeaderText = "Est Value";
+            this.EstValue.HeaderText = Strings.Controls.EstimatedValues_EstValue_Header;
             this.EstValue.MinimumWidth = 50;
             this.EstValue.Name = "EstValue";
             // 

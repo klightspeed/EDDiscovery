@@ -162,6 +162,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\EDDStrings\Controls.Designer.cs">
+      <Link>Strings\Controls.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Controls.resx</DependentUpon>
+    </None>
     <Compile Include="2DMap\FGEImage.cs" />
     <Compile Include="2DMap\Form2DMap.cs">
       <SubType>Form</SubType>
@@ -755,14 +761,8 @@
     <None Include="..\EDDStrings\Controls.resx">
       <Link>Strings\Controls.resx</Link>
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Controls.Designer.cs</LastGenOutput>
       <CustomToolNamespace>EDDiscovery.Strings</CustomToolNamespace>
-    </None>
-    <None Include="..\EDDStrings\Controls.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Controls.resx</DependentUpon>
-      <Link>Strings\Controls.Designer.cs</Link>
+      <LastGenOutput>Controls.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
