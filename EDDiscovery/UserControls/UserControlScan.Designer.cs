@@ -97,7 +97,7 @@ namespace EDDiscovery.UserControls
             // 
             this.toolStripMenuItemToolbar.Name = "toolStripMenuItemToolbar";
             this.toolStripMenuItemToolbar.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemToolbar.Text = Properties.Strings.Scan_ShowHideToolbar;
+            this.toolStripMenuItemToolbar.Text = Strings.Controls.Scan_ShowHideToolbar;
             this.toolStripMenuItemToolbar.Click += new System.EventHandler(this.toolStripMenuItemToolbar_Click);
             // 
             // rtbNodeInfo

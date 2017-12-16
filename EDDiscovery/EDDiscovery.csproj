@@ -216,11 +216,6 @@
     <Compile Include="Forms\SafeModeForm.Designer.cs">
       <DependentUpon>SafeModeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Strings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
     <Compile Include="ScreenShots\ScreenShotConfigureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -573,10 +568,6 @@
     <EmbeddedResource Include="Forms\UserControlForm.resx">
       <DependentUpon>UserControlForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Strings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="ScreenShots\ScreenShotConfigureForm.resx">
       <DependentUpon>ScreenShotConfigureForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -761,6 +752,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\EDDStrings\Controls.resx">
+      <Link>Strings\Controls.resx</Link>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Controls.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>EDDiscovery.Strings</CustomToolNamespace>
+    </None>
+    <None Include="..\EDDStrings\Controls.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Controls.resx</DependentUpon>
+      <Link>Strings\Controls.Designer.cs</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -811,6 +816,10 @@
     <ProjectReference Include="..\EDDIcons\EDDIcons.csproj">
       <Project>{646f71be-f102-444e-9254-818e5a320ab8}</Project>
       <Name>EDDIcons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EDDStrings\EDDStrings.csproj">
+      <Project>{3754c9ca-39ab-4dbc-86c4-4ec61e8085a1}</Project>
+      <Name>EDDStrings</Name>
     </ProjectReference>
     <ProjectReference Include="..\EliteDangerous\EliteDangerous.csproj">
       <Project>{019917a4-7342-4f67-8aaf-9e20c016a935}</Project>

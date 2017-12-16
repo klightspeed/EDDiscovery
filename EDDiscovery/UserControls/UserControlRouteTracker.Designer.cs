@@ -75,7 +75,7 @@ namespace EDDiscovery.UserControls
             // 
             this.setRouteToolStripMenuItem.Name = "setRouteToolStripMenuItem";
             this.setRouteToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.setRouteToolStripMenuItem.Text = Properties.Strings.RouteTracker_SetRoute;
+            this.setRouteToolStripMenuItem.Text = Strings.Controls.RouteTracker_SetRoute;
             this.setRouteToolStripMenuItem.Click += new System.EventHandler(this.setRouteToolStripMenuItem_Click);
             // 
             // autoCopyWPToolStripMenuItem
@@ -83,7 +83,7 @@ namespace EDDiscovery.UserControls
             this.autoCopyWPToolStripMenuItem.CheckOnClick = true;
             this.autoCopyWPToolStripMenuItem.Name = "autoCopyWPToolStripMenuItem";
             this.autoCopyWPToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.autoCopyWPToolStripMenuItem.Text = Properties.Strings.RouteTracker_AutoCopy;
+            this.autoCopyWPToolStripMenuItem.Text = Strings.Controls.RouteTracker_AutoCopy;
             this.autoCopyWPToolStripMenuItem.CheckedChanged += new System.EventHandler(this.autoCopyWPToolStripMenuItem_CheckedChanged);
             // 
             // autoSetTargetToolStripMenuItem
@@ -91,7 +91,7 @@ namespace EDDiscovery.UserControls
             this.autoSetTargetToolStripMenuItem.CheckOnClick = true;
             this.autoSetTargetToolStripMenuItem.Name = "autoSetTargetToolStripMenuItem";
             this.autoSetTargetToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.autoSetTargetToolStripMenuItem.Text = Properties.Strings.RouteTracker_AutoSet;
+            this.autoSetTargetToolStripMenuItem.Text = Strings.Controls.RouteTracker_AutoSet;
             // 
             // UserControlRouteTracker
             // 

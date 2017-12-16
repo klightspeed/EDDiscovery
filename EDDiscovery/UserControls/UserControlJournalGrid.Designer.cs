@@ -189,42 +189,42 @@ namespace EDDiscovery.UserControls
             // 
             this.mapGotoStartoolStripMenuItem.Name = "mapGotoStartoolStripMenuItem";
             this.mapGotoStartoolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.mapGotoStartoolStripMenuItem.Text = Properties.Strings.JournalGrid_ShowOnMap;
+            this.mapGotoStartoolStripMenuItem.Text = Strings.Controls.JournalGrid_ShowOnMap;
             this.mapGotoStartoolStripMenuItem.Click += new System.EventHandler(this.mapGotoStartoolStripMenuItem_Click);
             // 
             // viewOnEDSMToolStripMenuItem
             // 
             this.viewOnEDSMToolStripMenuItem.Name = "viewOnEDSMToolStripMenuItem";
             this.viewOnEDSMToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.viewOnEDSMToolStripMenuItem.Text = Properties.Strings.JournalGrid_ViewOnEDSM;
+            this.viewOnEDSMToolStripMenuItem.Text = Strings.Controls.JournalGrid_ViewOnEDSM;
             this.viewOnEDSMToolStripMenuItem.Click += new System.EventHandler(this.viewOnEDSMToolStripMenuItem_Click);
             // 
             // toolStripMenuItemStartStop
             // 
             this.toolStripMenuItemStartStop.Name = "toolStripMenuItemStartStop";
             this.toolStripMenuItemStartStop.Size = new System.Drawing.Size(293, 22);
-            this.toolStripMenuItemStartStop.Text = Properties.Strings.JournalGrid_SetStartStop;
+            this.toolStripMenuItemStartStop.Text = Strings.Controls.JournalGrid_SetStartStop;
             this.toolStripMenuItemStartStop.Click += new System.EventHandler(this.toolStripMenuItemStartStop_Click);
             // 
             // sendUnsyncedScanToEDDNToolStripMenuItem
             // 
             this.sendUnsyncedScanToEDDNToolStripMenuItem.Name = "sendUnsyncedScanToEDDNToolStripMenuItem";
             this.sendUnsyncedScanToEDDNToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.sendUnsyncedScanToEDDNToolStripMenuItem.Text = Properties.Strings.JournalGrid_SendUnsyncedEDDN;
+            this.sendUnsyncedScanToEDDNToolStripMenuItem.Text = Strings.Controls.JournalGrid_SendUnsyncedEDDN;
             this.sendUnsyncedScanToEDDNToolStripMenuItem.Click += new System.EventHandler(this.sendUnsyncedScanToEDDNToolStripMenuItem_Click);
             // 
             // runActionsOnThisEntryToolStripMenuItem
             // 
             this.runActionsOnThisEntryToolStripMenuItem.Name = "runActionsOnThisEntryToolStripMenuItem";
             this.runActionsOnThisEntryToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.runActionsOnThisEntryToolStripMenuItem.Text = Properties.Strings.JournalGrid_RunActions;
+            this.runActionsOnThisEntryToolStripMenuItem.Text = Strings.Controls.JournalGrid_RunActions;
             this.runActionsOnThisEntryToolStripMenuItem.Click += new System.EventHandler(this.runActionsOnThisEntryToolStripMenuItem_Click);
             // 
             // copyJournalEntryToClipboardToolStripMenuItem
             // 
             this.copyJournalEntryToClipboardToolStripMenuItem.Name = "copyJournalEntryToClipboardToolStripMenuItem";
             this.copyJournalEntryToClipboardToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.copyJournalEntryToClipboardToolStripMenuItem.Text = Properties.Strings.JournalGrid_CopyEntry;
+            this.copyJournalEntryToClipboardToolStripMenuItem.Text = Strings.Controls.JournalGrid_CopyEntry;
             this.copyJournalEntryToClipboardToolStripMenuItem.Click += new System.EventHandler(this.copyJournalEntryToClipboardToolStripMenuItem_Click);
             // 
             // panel1

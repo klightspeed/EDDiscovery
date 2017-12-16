@@ -721,14 +721,14 @@
             // 
             this.showInEDSMToolStripMenuItem.Name = "showInEDSMToolStripMenuItem";
             this.showInEDSMToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.showInEDSMToolStripMenuItem.Text = Properties.Strings.Route_ShowOnEDSM;
+            this.showInEDSMToolStripMenuItem.Text = Strings.Controls.Route_ShowOnEDSM;
             this.showInEDSMToolStripMenuItem.Click += new System.EventHandler(this.showInEDSMToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.copyToolStripMenuItem.Text = Properties.Strings.Route_Copy;
+            this.copyToolStripMenuItem.Text = Strings.Controls.Route_Copy;
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // dataViewScrollerPanel1

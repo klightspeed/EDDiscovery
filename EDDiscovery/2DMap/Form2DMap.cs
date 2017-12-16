@@ -82,7 +82,7 @@ namespace EDDiscovery
             startDate = new DateTime(2010, 1, 1);
             if ( !AddImages() )
             {
-                ExtendedControls.MessageBoxTheme.Show(this, "2DMaps", Properties.Strings.Map2D_NoMapsAvailable, MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                ExtendedControls.MessageBoxTheme.Show(this, "2DMaps", Strings.Controls.Map2D_NoMapsAvailable, MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 Close();
                 return;
             }

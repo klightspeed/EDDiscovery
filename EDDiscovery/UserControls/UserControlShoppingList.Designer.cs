@@ -154,7 +154,7 @@ namespace EDDiscovery.UserControls
             this.showMaxFSDInjectionsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showMaxFSDInjectionsToolStripMenuItem.Name = "showMaxFSDInjectionsToolStripMenuItem";
             this.showMaxFSDInjectionsToolStripMenuItem.Size = new System.Drawing.Size(368, 22);
-            this.showMaxFSDInjectionsToolStripMenuItem.Text = Properties.Strings.ShoppingList_MaxFSDInjections;
+            this.showMaxFSDInjectionsToolStripMenuItem.Text = Strings.Controls.ShoppingList_MaxFSDInjections;
             this.showMaxFSDInjectionsToolStripMenuItem.Click += new System.EventHandler(this.showMaxFSDInjectionsToolStripMenuItem_Click);
             // 
             // showAllMaterialsWhenLandedToolStripMenuItem
@@ -162,7 +162,7 @@ namespace EDDiscovery.UserControls
             this.showAllMaterialsWhenLandedToolStripMenuItem.CheckOnClick = true;
             this.showAllMaterialsWhenLandedToolStripMenuItem.Name = "showAllMaterialsWhenLandedToolStripMenuItem";
             this.showAllMaterialsWhenLandedToolStripMenuItem.Size = new System.Drawing.Size(368, 22);
-            this.showAllMaterialsWhenLandedToolStripMenuItem.Text = Properties.Strings.ShoppingList_ShowLandedBodyMats;
+            this.showAllMaterialsWhenLandedToolStripMenuItem.Text = Strings.Controls.ShoppingList_ShowLandedBodyMats;
             this.showAllMaterialsWhenLandedToolStripMenuItem.Click += new System.EventHandler(this.showAllMaterialsWhenLandedToolStripMenuItem_Click);
             // 
             // showAvailableMaterialsInListWhenLandedToolStripMenuItem
@@ -170,7 +170,7 @@ namespace EDDiscovery.UserControls
             this.showAvailableMaterialsInListWhenLandedToolStripMenuItem.CheckOnClick = true;
             this.showAvailableMaterialsInListWhenLandedToolStripMenuItem.Name = "showAvailableMaterialsInListWhenLandedToolStripMenuItem";
             this.showAvailableMaterialsInListWhenLandedToolStripMenuItem.Size = new System.Drawing.Size(368, 22);
-            this.showAvailableMaterialsInListWhenLandedToolStripMenuItem.Text = Properties.Strings.ShoppingList_IncludeMaterialPercent;
+            this.showAvailableMaterialsInListWhenLandedToolStripMenuItem.Text = Strings.Controls.ShoppingList_IncludeMaterialPercent;
             this.showAvailableMaterialsInListWhenLandedToolStripMenuItem.Click += new System.EventHandler(this.showAvailableMaterialsInListWhenLandedToolStripMenuItem_Click);
             // 
             // useHistoricMaterialCountsToolStripMenuItem
@@ -178,7 +178,7 @@ namespace EDDiscovery.UserControls
             this.useHistoricMaterialCountsToolStripMenuItem.CheckOnClick = true;
             this.useHistoricMaterialCountsToolStripMenuItem.Name = "useHistoricMaterialCountsToolStripMenuItem";
             this.useHistoricMaterialCountsToolStripMenuItem.Size = new System.Drawing.Size(368, 22);
-            this.useHistoricMaterialCountsToolStripMenuItem.Text = Properties.Strings.ShoppingList_HistoricCounts;
+            this.useHistoricMaterialCountsToolStripMenuItem.Text = Strings.Controls.ShoppingList_HistoricCounts;
             this.useHistoricMaterialCountsToolStripMenuItem.Click += new System.EventHandler(this.useHistoricMaterialCountsToolStripMenuItem_Click);
             // 
             // UserControlShoppingList

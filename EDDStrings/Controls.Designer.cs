@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EDDiscovery.Properties {
+namespace EDDiscovery.Strings {
     using System;
     
     
@@ -22,24 +22,24 @@ namespace EDDiscovery.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Strings {
+    public class Controls {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Strings() {
+        internal Controls() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EDDiscovery.Properties.Strings", typeof(Strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EDDiscovery.Strings.Controls", typeof(Controls).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace EDDiscovery.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        internal static string Commander_Cancel {
+        public static string Commander_Cancel {
             get {
                 return ResourceManager.GetString("Commander_Cancel", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Commander Name:.
         /// </summary>
-        internal static string Commander_CMDRName {
+        public static string Commander_CMDRName {
             get {
                 return ResourceManager.GetString("Commander_CMDRName", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter commander name as used in Elite Dangerous.
         /// </summary>
-        internal static string Commander_CMDRName_ToolTip {
+        public static string Commander_CMDRName_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_CMDRName_ToolTip", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You have entered text in the CAPI login or password fields, do you want to abandon CAPI credential check?.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmAbandon {
+        public static string Commander_CompanionLogin_ConfirmAbandon {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmAbandon", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Warning CAPI Information.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmAbandon_Title {
+        public static string Commander_CompanionLogin_ConfirmAbandon_Title {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmAbandon_Title", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Confirm you wish to delete the credentials stored for this commander.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmClear {
+        public static string Commander_CompanionLogin_ConfirmClear {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmClear", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Companion API Clear Credentials.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmClear_Title {
+        public static string Commander_CompanionLogin_ConfirmClear_Title {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmClear_Title", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Confirm Code:.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmCode {
+        public static string Commander_CompanionLogin_ConfirmCode {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmCode", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter the confirmation code you just received via email from Frontier.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmCode_ToolTip {
+        public static string Commander_CompanionLogin_ConfirmCode_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmCode_ToolTip", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Confirm Failed:.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmFailed {
+        public static string Commander_CompanionLogin_ConfirmFailed {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmFailed", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Companion API Login.
         /// </summary>
-        internal static string Commander_CompanionLogin_ConfirmFailed_Title {
+        public static string Commander_CompanionLogin_ConfirmFailed_Title {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_ConfirmFailed_Title", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enable Login.
         /// </summary>
-        internal static string Commander_CompanionLogin_Enable {
+        public static string Commander_CompanionLogin_Enable {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Enable", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Frontier Companion API (optional).
         /// </summary>
-        internal static string Commander_CompanionLogin_Group {
+        public static string Commander_CompanionLogin_Group {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Group", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Failed to login to Frontier Companion API:.
         /// </summary>
-        internal static string Commander_CompanionLogin_LoginFailed {
+        public static string Commander_CompanionLogin_LoginFailed {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_LoginFailed", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Companion API Login.
         /// </summary>
-        internal static string Commander_CompanionLogin_LoginFailed_Title {
+        public static string Commander_CompanionLogin_LoginFailed_Title {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_LoginFailed_Title", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Login Password:.
         /// </summary>
-        internal static string Commander_CompanionLogin_Password {
+        public static string Commander_CompanionLogin_Password {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Password", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter your Frontier Password.
         /// </summary>
-        internal static string Commander_CompanionLogin_Password_ToolTip {
+        public static string Commander_CompanionLogin_Password_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Password_ToolTip", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Confirmed Credentials.
         /// </summary>
-        internal static string Commander_CompanionLogin_State_Confirmed {
+        public static string Commander_CompanionLogin_State_Confirmed {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_State_Confirmed", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Require Confirmation.
         /// </summary>
-        internal static string Commander_CompanionLogin_State_NeedConfirmation {
+        public static string Commander_CompanionLogin_State_NeedConfirmation {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_State_NeedConfirmation", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No Credentials.
         /// </summary>
-        internal static string Commander_CompanionLogin_State_NoCreds {
+        public static string Commander_CompanionLogin_State_NoCreds {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_State_NoCreds", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to CAPI current state.
         /// </summary>
-        internal static string Commander_CompanionLogin_State_None {
+        public static string Commander_CompanionLogin_State_None {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_State_None", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
-        internal static string Commander_CompanionLogin_Submit_Clear {
+        public static string Commander_CompanionLogin_Submit_Clear {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Submit_Clear", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Confirm.
         /// </summary>
-        internal static string Commander_CompanionLogin_Submit_Confirm {
+        public static string Commander_CompanionLogin_Submit_Confirm {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Submit_Confirm", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
-        internal static string Commander_CompanionLogin_Submit_Login {
+        public static string Commander_CompanionLogin_Submit_Login {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Submit_Login", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Login ID:.
         /// </summary>
-        internal static string Commander_CompanionLogin_Username {
+        public static string Commander_CompanionLogin_Username {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Username", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter you Frontier ID, which is the email you registered with Frontier. Does not work for Steam installs.
         /// </summary>
-        internal static string Commander_CompanionLogin_Username_ToolTip {
+        public static string Commander_CompanionLogin_Username_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_CompanionLogin_Username_ToolTip", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EDDN.
         /// </summary>
-        internal static string Commander_EDDN_Group {
+        public static string Commander_EDDN_Group {
             get {
                 return ResourceManager.GetString("Commander_EDDN_Group", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EDSM Information (optional).
         /// </summary>
-        internal static string Commander_EDSM_Group {
+        public static string Commander_EDSM_Group {
             get {
                 return ResourceManager.GetString("Commander_EDSM_Group", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EDSM API Key:.
         /// </summary>
-        internal static string Commander_EDSMApiKey {
+        public static string Commander_EDSMApiKey {
             get {
                 return ResourceManager.GetString("Commander_EDSMApiKey", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter the API key from the EDSM Website.
         /// </summary>
-        internal static string Commander_EDSMApiKey_ToolTip {
+        public static string Commander_EDSMApiKey_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_EDSMApiKey_ToolTip", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Get an EDSM API key from https://www.edsm.net in &quot;My account&quot; menu.
         /// </summary>
-        internal static string Commander_EDSMInfo {
+        public static string Commander_EDSMInfo {
             get {
                 return ResourceManager.GetString("Commander_EDSMInfo", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EDSM Name:.
         /// </summary>
-        internal static string Commander_EDSMName {
+        public static string Commander_EDSMName {
             get {
                 return ResourceManager.GetString("Commander_EDSMName", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Give the name this commander is known as in EDSM.
         /// </summary>
-        internal static string Commander_EDSMName_ToolTip {
+        public static string Commander_EDSMName_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_EDSMName_ToolTip", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Elite Galaxy Online Information (optional).
         /// </summary>
-        internal static string Commander_EGO_Info {
+        public static string Commander_EGO_Info {
             get {
                 return ResourceManager.GetString("Commander_EGO_Info", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EGO API Key:.
         /// </summary>
-        internal static string Commander_EGOApiKey {
+        public static string Commander_EGOApiKey {
             get {
                 return ResourceManager.GetString("Commander_EGOApiKey", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Get an EGO API key from https://www.elitegalaxyonline.com in the account menu.
         /// </summary>
-        internal static string Commander_EGOApiKey_Info {
+        public static string Commander_EGOApiKey_Info {
             get {
                 return ResourceManager.GetString("Commander_EGOApiKey_Info", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter the API key from the EGO Website.
         /// </summary>
-        internal static string Commander_EGOApiKey_ToolTip {
+        public static string Commander_EGOApiKey_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_EGOApiKey_ToolTip", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EGO Name:.
         /// </summary>
-        internal static string Commander_EGOName {
+        public static string Commander_EGOName {
             get {
                 return ResourceManager.GetString("Commander_EGOName", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Give the user name for this commander on EGO.
         /// </summary>
-        internal static string Commander_EGOName_ToolTip {
+        public static string Commander_EGOName_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_EGOName_ToolTip", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Journal Related Information.
         /// </summary>
-        internal static string Commander_Journal_Group {
+        public static string Commander_Journal_Group {
             get {
                 return ResourceManager.GetString("Commander_Journal_Group", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Browse.
         /// </summary>
-        internal static string Commander_JournalBrowse {
+        public static string Commander_JournalBrowse {
             get {
                 return ResourceManager.GetString("Commander_JournalBrowse", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Browse to the the journal folder.
         /// </summary>
-        internal static string Commander_JournalBrowse_ToolTip {
+        public static string Commander_JournalBrowse_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_JournalBrowse_ToolTip", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Journal Location:.
         /// </summary>
-        internal static string Commander_JournalDir {
+        public static string Commander_JournalDir {
             get {
                 return ResourceManager.GetString("Commander_JournalDir", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Select folder where Journal*.log files are stored by Frontier in.
         /// </summary>
-        internal static string Commander_JournalDir_Desc {
+        public static string Commander_JournalDir_Desc {
             get {
                 return ResourceManager.GetString("Commander_JournalDir_Desc", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Leave override journal location blank to use the standard Frontier location for journals.
         /// </summary>
-        internal static string Commander_JournalDir_Info {
+        public static string Commander_JournalDir_Info {
             get {
                 return ResourceManager.GetString("Commander_JournalDir_Info", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter the journal folder location.  Normally leave this field blank unless you are using EDD on another computer than your play computer.
         /// </summary>
-        internal static string Commander_JournalDir_ToolTip {
+        public static string Commander_JournalDir_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_JournalDir_ToolTip", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
-        internal static string Commander_OK {
+        public static string Commander_OK {
             get {
                 return ResourceManager.GetString("Commander_OK", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Send Event Information to EDDN.
         /// </summary>
-        internal static string Commander_SendToEDDN {
+        public static string Commander_SendToEDDN {
             get {
                 return ResourceManager.GetString("Commander_SendToEDDN", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Check to send journal information to EDDN. EDDN feeds tools such as EDDB, EDSM, Inara with data from commanders. All data is made anonymised.
         /// </summary>
-        internal static string Commander_SendToEDDN_ToolTip {
+        public static string Commander_SendToEDDN_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_SendToEDDN_ToolTip", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Sync From EDSM.
         /// </summary>
-        internal static string Commander_SyncFromEDSM {
+        public static string Commander_SyncFromEDSM {
             get {
                 return ResourceManager.GetString("Commander_SyncFromEDSM", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Receive any FSD jumps from EDSM that are on their database but not in EDDiscovery.
         /// </summary>
-        internal static string Commander_SyncFromEDSM_ToolTip {
+        public static string Commander_SyncFromEDSM_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_SyncFromEDSM_ToolTip", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Sync to EDSM.
         /// </summary>
-        internal static string Commander_SyncToEDSM {
+        public static string Commander_SyncToEDSM {
             get {
                 return ResourceManager.GetString("Commander_SyncToEDSM", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Send your travel and ship data to EDSM.
         /// </summary>
-        internal static string Commander_SyncToEDSM_ToolTip {
+        public static string Commander_SyncToEDSM_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_SyncToEDSM_ToolTip", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Sync to EGO.
         /// </summary>
-        internal static string Commander_SyncToEGO {
+        public static string Commander_SyncToEGO {
             get {
                 return ResourceManager.GetString("Commander_SyncToEGO", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Send your scan data to EGO.
         /// </summary>
-        internal static string Commander_SyncToEGO_ToolTip {
+        public static string Commander_SyncToEGO_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_SyncToEGO_ToolTip", resourceCulture);
             }
@@ -558,7 +558,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Commander Settings.
         /// </summary>
-        internal static string Commander_Title {
+        public static string Commander_Title {
             get {
                 return ResourceManager.GetString("Commander_Title", resourceCulture);
             }
@@ -567,7 +567,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to star on 3D Map.
         /// </summary>
-        internal static string EDSM_ShowOn3DMap {
+        public static string EDSM_ShowOn3DMap {
             get {
                 return ResourceManager.GetString("EDSM_ShowOn3DMap", resourceCulture);
             }
@@ -576,7 +576,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
-        internal static string EDSM_ViewOnEDSM {
+        public static string EDSM_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("EDSM_ViewOnEDSM", resourceCulture);
             }
@@ -585,7 +585,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Delete Route.
         /// </summary>
-        internal static string Expedition_Delete {
+        public static string Expedition_Delete {
             get {
                 return ResourceManager.GetString("Expedition_Delete", resourceCulture);
             }
@@ -594,7 +594,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
-        internal static string Expedition_Export {
+        public static string Expedition_Export {
             get {
                 return ResourceManager.GetString("Expedition_Export", resourceCulture);
             }
@@ -603,7 +603,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Export to file.
         /// </summary>
-        internal static string Expedition_Export_ToolTip {
+        public static string Expedition_Export_ToolTip {
             get {
                 return ResourceManager.GetString("Expedition_Export_ToolTip", resourceCulture);
             }
@@ -612,7 +612,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Import file.
         /// </summary>
-        internal static string Expedition_ImportFile {
+        public static string Expedition_ImportFile {
             get {
                 return ResourceManager.GetString("Expedition_ImportFile", resourceCulture);
             }
@@ -621,7 +621,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Import route.
         /// </summary>
-        internal static string Expedition_ImportRoute {
+        public static string Expedition_ImportRoute {
             get {
                 return ResourceManager.GetString("Expedition_ImportRoute", resourceCulture);
             }
@@ -630,7 +630,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Import from route tab.
         /// </summary>
-        internal static string Expedition_ImportRoute_ToolTip {
+        public static string Expedition_ImportRoute_ToolTip {
             get {
                 return ResourceManager.GetString("Expedition_ImportRoute_ToolTip", resourceCulture);
             }
@@ -639,7 +639,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to New Route.
         /// </summary>
-        internal static string Expedition_New {
+        public static string Expedition_New {
             get {
                 return ResourceManager.GetString("Expedition_New", resourceCulture);
             }
@@ -648,7 +648,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save Route.
         /// </summary>
-        internal static string Expedition_Save {
+        public static string Expedition_Save {
             get {
                 return ResourceManager.GetString("Expedition_Save", resourceCulture);
             }
@@ -657,7 +657,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show on 3D Map.
         /// </summary>
-        internal static string Expedition_ShowOnMap {
+        public static string Expedition_ShowOnMap {
             get {
                 return ResourceManager.GetString("Expedition_ShowOnMap", resourceCulture);
             }
@@ -666,7 +666,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Undelete.
         /// </summary>
-        internal static string Expedition_Undelete {
+        public static string Expedition_Undelete {
             get {
                 return ResourceManager.GetString("Expedition_Undelete", resourceCulture);
             }
@@ -675,7 +675,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        internal static string Exploration_Delete {
+        public static string Exploration_Delete {
             get {
                 return ResourceManager.GetString("Exploration_Delete", resourceCulture);
             }
@@ -684,7 +684,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
-        internal static string Exploration_Export {
+        public static string Exploration_Export {
             get {
                 return ResourceManager.GetString("Exploration_Export", resourceCulture);
             }
@@ -693,7 +693,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Export to file.
         /// </summary>
-        internal static string Exploration_Export_ToolTip {
+        public static string Exploration_Export_ToolTip {
             get {
                 return ResourceManager.GetString("Exploration_Export_ToolTip", resourceCulture);
             }
@@ -702,7 +702,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Import File.
         /// </summary>
-        internal static string Exploration_ImportFile {
+        public static string Exploration_ImportFile {
             get {
                 return ResourceManager.GetString("Exploration_ImportFile", resourceCulture);
             }
@@ -711,7 +711,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Import Sphere.
         /// </summary>
-        internal static string Exploration_ImportSphere {
+        public static string Exploration_ImportSphere {
             get {
                 return ResourceManager.GetString("Exploration_ImportSphere", resourceCulture);
             }
@@ -720,7 +720,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Load.
         /// </summary>
-        internal static string Exploration_Load {
+        public static string Exploration_Load {
             get {
                 return ResourceManager.GetString("Exploration_Load", resourceCulture);
             }
@@ -729,7 +729,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
-        internal static string Exploration_New {
+        public static string Exploration_New {
             get {
                 return ResourceManager.GetString("Exploration_New", resourceCulture);
             }
@@ -738,7 +738,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        internal static string Exploration_Save {
+        public static string Exploration_Save {
             get {
                 return ResourceManager.GetString("Exploration_Save", resourceCulture);
             }
@@ -747,7 +747,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Copy journal entry to clipboard.
         /// </summary>
-        internal static string JournalGrid_CopyEntry {
+        public static string JournalGrid_CopyEntry {
             get {
                 return ResourceManager.GetString("JournalGrid_CopyEntry", resourceCulture);
             }
@@ -756,7 +756,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Run Actions on this entry.
         /// </summary>
-        internal static string JournalGrid_RunActions {
+        public static string JournalGrid_RunActions {
             get {
                 return ResourceManager.GetString("JournalGrid_RunActions", resourceCulture);
             }
@@ -765,7 +765,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Send unsynced scan to EDDN.
         /// </summary>
-        internal static string JournalGrid_SendUnsyncedEDDN {
+        public static string JournalGrid_SendUnsyncedEDDN {
             get {
                 return ResourceManager.GetString("JournalGrid_SendUnsyncedEDDN", resourceCulture);
             }
@@ -774,7 +774,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set Start/Stop point for travel calculations.
         /// </summary>
-        internal static string JournalGrid_SetStartStop {
+        public static string JournalGrid_SetStartStop {
             get {
                 return ResourceManager.GetString("JournalGrid_SetStartStop", resourceCulture);
             }
@@ -783,7 +783,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to star on 3D Map.
         /// </summary>
-        internal static string JournalGrid_ShowOnMap {
+        public static string JournalGrid_ShowOnMap {
             get {
                 return ResourceManager.GetString("JournalGrid_ShowOnMap", resourceCulture);
             }
@@ -792,7 +792,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
-        internal static string JournalGrid_ViewOnEDSM {
+        public static string JournalGrid_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("JournalGrid_ViewOnEDSM", resourceCulture);
             }
@@ -801,7 +801,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to entry on grid.
         /// </summary>
-        internal static string Ledger_GoToEntry {
+        public static string Ledger_GoToEntry {
             get {
                 return ResourceManager.GetString("Ledger_GoToEntry", resourceCulture);
             }
@@ -810,7 +810,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Clear Log.
         /// </summary>
-        internal static string Log_Clear {
+        public static string Log_Clear {
             get {
                 return ResourceManager.GetString("Log_Clear", resourceCulture);
             }
@@ -819,7 +819,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Edit Add-On Action Files.
         /// </summary>
-        internal static string Main_Addons_ConfigureAddOnActions {
+        public static string Main_Addons_ConfigureAddOnActions {
             get {
                 return ResourceManager.GetString("Main_Addons_ConfigureAddOnActions", resourceCulture);
             }
@@ -828,7 +828,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Edit Last Action Pack.
         /// </summary>
-        internal static string Main_Addons_EditLastActionPack {
+        public static string Main_Addons_EditLastActionPack {
             get {
                 return ResourceManager.GetString("Main_Addons_EditLastActionPack", resourceCulture);
             }
@@ -837,7 +837,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Manage Add-Ons.
         /// </summary>
-        internal static string Main_Addons_ManageAddOns {
+        public static string Main_Addons_ManageAddOns {
             get {
                 return ResourceManager.GetString("Main_Addons_ManageAddOns", resourceCulture);
             }
@@ -846,7 +846,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Add-Ons.
         /// </summary>
-        internal static string Main_Addons_Menu {
+        public static string Main_Addons_Menu {
             get {
                 return ResourceManager.GetString("Main_Addons_Menu", resourceCulture);
             }
@@ -855,7 +855,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Stop current running Action Program.
         /// </summary>
-        internal static string Main_Addons_StopCurrentAction {
+        public static string Main_Addons_StopCurrentAction {
             get {
                 return ResourceManager.GetString("Main_Addons_StopCurrentAction", resourceCulture);
             }
@@ -864,7 +864,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Clear EDSM IDs assigned to all records for current commander.
         /// </summary>
-        internal static string Main_Admin_ClearEDSMIDs {
+        public static string Main_Admin_ClearEDSMIDs {
             get {
                 return ResourceManager.GetString("Main_Admin_ClearEDSMIDs", resourceCulture);
             }
@@ -873,7 +873,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Delete duplicate FSD Jump entries.
         /// </summary>
-        internal static string Main_Admin_DeleteDupFSDJumps {
+        public static string Main_Admin_DeleteDupFSDJumps {
             get {
                 return ResourceManager.GetString("Main_Admin_DeleteDupFSDJumps", resourceCulture);
             }
@@ -882,7 +882,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Synchronise with EDDB.
         /// </summary>
-        internal static string Main_Admin_EDDBSystemsSync {
+        public static string Main_Admin_EDDBSystemsSync {
             get {
                 return ResourceManager.GetString("Main_Admin_EDDBSystemsSync", resourceCulture);
             }
@@ -891,7 +891,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Synchronise with EDSM Stars.
         /// </summary>
-        internal static string Main_Admin_EDSMSystemsSync {
+        public static string Main_Admin_EDSMSystemsSync {
             get {
                 return ResourceManager.GetString("Main_Admin_EDSMSystemsSync", resourceCulture);
             }
@@ -900,7 +900,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Export Visited Stars List to Elite Dangerous.
         /// </summary>
-        internal static string Main_Admin_ExportVisitedStars {
+        public static string Main_Admin_ExportVisitedStars {
             get {
                 return ResourceManager.GetString("Main_Admin_ExportVisitedStars", resourceCulture);
             }
@@ -909,7 +909,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Force reload logs.
         /// </summary>
-        internal static string Main_Admin_ForceReadNetlogs {
+        public static string Main_Admin_ForceReadNetlogs {
             get {
                 return ResourceManager.GetString("Main_Admin_ForceReadNetlogs", resourceCulture);
             }
@@ -918,7 +918,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to A&amp;dmin.
         /// </summary>
-        internal static string Main_Admin_Menu {
+        public static string Main_Admin_Menu {
             get {
                 return ResourceManager.GetString("Main_Admin_Menu", resourceCulture);
             }
@@ -927,7 +927,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Read 2.1 and former log files.
         /// </summary>
-        internal static string Main_Admin_ReadNetLogs {
+        public static string Main_Admin_ReadNetLogs {
             get {
                 return ResourceManager.GetString("Main_Admin_ReadNetLogs", resourceCulture);
             }
@@ -936,7 +936,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Re-scan all journal files.
         /// </summary>
-        internal static string Main_Admin_RescanJournals {
+        public static string Main_Admin_RescanJournals {
             get {
                 return ResourceManager.GetString("Main_Admin_RescanJournals", resourceCulture);
             }
@@ -945,7 +945,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Reset all history to current commander.
         /// </summary>
-        internal static string Main_Admin_ResetHistory {
+        public static string Main_Admin_ResetHistory {
             get {
                 return ResourceManager.GetString("Main_Admin_ResetHistory", resourceCulture);
             }
@@ -954,7 +954,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Send unsynced EDDN events.
         /// </summary>
-        internal static string Main_Admin_SendUnsyncedEDDN {
+        public static string Main_Admin_SendUnsyncedEDDN {
             get {
                 return ResourceManager.GetString("Main_Admin_SendUnsyncedEDDN", resourceCulture);
             }
@@ -963,7 +963,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Send unsynced EGO scans.
         /// </summary>
-        internal static string Main_Admin_SendUnsyncedEGO {
+        public static string Main_Admin_SendUnsyncedEGO {
             get {
                 return ResourceManager.GetString("Main_Admin_SendUnsyncedEGO", resourceCulture);
             }
@@ -972,7 +972,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show journal files directory of current commander.
         /// </summary>
-        internal static string Main_Admin_ShowLogFiles {
+        public static string Main_Admin_ShowLogFiles {
             get {
                 return ResourceManager.GetString("Main_Admin_ShowLogFiles", resourceCulture);
             }
@@ -981,7 +981,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;About.
         /// </summary>
-        internal static string Main_Help_About {
+        public static string Main_Help_About {
             get {
                 return ResourceManager.GetString("Main_Help_About", resourceCulture);
             }
@@ -990,7 +990,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Check for Updates.
         /// </summary>
-        internal static string Main_Help_CheckForNewRelease {
+        public static string Main_Help_CheckForNewRelease {
             get {
                 return ResourceManager.GetString("Main_Help_CheckForNewRelease", resourceCulture);
             }
@@ -999,7 +999,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Discord - EDD Community Chat.
         /// </summary>
-        internal static string Main_Help_DiscordChat {
+        public static string Main_Help_DiscordChat {
             get {
                 return ResourceManager.GetString("Main_Help_DiscordChat", resourceCulture);
             }
@@ -1008,7 +1008,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Frontier Forum Thread.
         /// </summary>
-        internal static string Main_Help_FrontierForumThread {
+        public static string Main_Help_FrontierForumThread {
             get {
                 return ResourceManager.GetString("Main_Help_FrontierForumThread", resourceCulture);
             }
@@ -1017,7 +1017,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Project Page (GitHub).
         /// </summary>
-        internal static string Main_Help_Github {
+        public static string Main_Help_Github {
             get {
                 return ResourceManager.GetString("Main_Help_Github", resourceCulture);
             }
@@ -1026,7 +1026,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;View Help.
         /// </summary>
-        internal static string Main_Help_Help {
+        public static string Main_Help_Help {
             get {
                 return ResourceManager.GetString("Main_Help_Help", resourceCulture);
             }
@@ -1035,7 +1035,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Help.
         /// </summary>
-        internal static string Main_Help_Menu {
+        public static string Main_Help_Menu {
             get {
                 return ResourceManager.GetString("Main_Help_Menu", resourceCulture);
             }
@@ -1044,7 +1044,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Report Issue / Idea.
         /// </summary>
-        internal static string Main_Help_ReportIssue {
+        public static string Main_Help_ReportIssue {
             get {
                 return ResourceManager.GetString("Main_Help_ReportIssue", resourceCulture);
             }
@@ -1053,7 +1053,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to How to Run in Safe Mode to reset various parameters.
         /// </summary>
-        internal static string Main_Help_SafeModeHelp {
+        public static string Main_Help_SafeModeHelp {
             get {
                 return ResourceManager.GetString("Main_Help_SafeModeHelp", resourceCulture);
             }
@@ -1062,7 +1062,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Insert Tab with panel...
         /// </summary>
-        internal static string Main_Tabs_AddTab {
+        public static string Main_Tabs_AddTab {
             get {
                 return ResourceManager.GetString("Main_Tabs_AddTab", resourceCulture);
             }
@@ -1071,7 +1071,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove Tab.
         /// </summary>
-        internal static string Main_Tabs_RemoveTab {
+        public static string Main_Tabs_RemoveTab {
             get {
                 return ResourceManager.GetString("Main_Tabs_RemoveTab", resourceCulture);
             }
@@ -1080,7 +1080,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EDDiscovery.
         /// </summary>
-        internal static string Main_Title {
+        public static string Main_Title {
             get {
                 return ResourceManager.GetString("Main_Title", resourceCulture);
             }
@@ -1089,7 +1089,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to E&amp;xit.
         /// </summary>
-        internal static string Main_Tools_Exit {
+        public static string Main_Tools_Exit {
             get {
                 return ResourceManager.GetString("Main_Tools_Exit", resourceCulture);
             }
@@ -1098,7 +1098,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Tools.
         /// </summary>
-        internal static string Main_Tools_Menu {
+        public static string Main_Tools_Menu {
             get {
                 return ResourceManager.GetString("Main_Tools_Menu", resourceCulture);
             }
@@ -1107,7 +1107,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Turn Off All Transparency.
         /// </summary>
-        internal static string Main_Tools_Popouts_DisableTransparency {
+        public static string Main_Tools_Popouts_DisableTransparency {
             get {
                 return ResourceManager.GetString("Main_Tools_Popouts_DisableTransparency", resourceCulture);
             }
@@ -1116,7 +1116,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Pop-outs.
         /// </summary>
-        internal static string Main_Tools_Popouts_Menu {
+        public static string Main_Tools_Popouts_Menu {
             get {
                 return ResourceManager.GetString("Main_Tools_Popouts_Menu", resourceCulture);
             }
@@ -1125,7 +1125,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Show All In Task Bar.
         /// </summary>
-        internal static string Main_Tools_Popouts_ShowInTaskbar {
+        public static string Main_Tools_Popouts_ShowInTaskbar {
             get {
                 return ResourceManager.GetString("Main_Tools_Popouts_ShowInTaskbar", resourceCulture);
             }
@@ -1134,7 +1134,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
-        internal static string Main_Tools_Settings {
+        public static string Main_Tools_Settings {
             get {
                 return ResourceManager.GetString("Main_Tools_Settings", resourceCulture);
             }
@@ -1143,7 +1143,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show &amp;2D maps.
         /// </summary>
-        internal static string Main_Tools_Show2DMaps {
+        public static string Main_Tools_Show2DMaps {
             get {
                 return ResourceManager.GetString("Main_Tools_Show2DMaps", resourceCulture);
             }
@@ -1152,7 +1152,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show &amp;3D maps.
         /// </summary>
-        internal static string Main_Tools_Show3DMaps {
+        public static string Main_Tools_Show3DMaps {
             get {
                 return ResourceManager.GetString("Main_Tools_Show3DMaps", resourceCulture);
             }
@@ -1161,7 +1161,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to E&amp;xit.
         /// </summary>
-        internal static string Main_TrayIcon_Exit {
+        public static string Main_TrayIcon_Exit {
             get {
                 return ResourceManager.GetString("Main_TrayIcon_Exit", resourceCulture);
             }
@@ -1170,7 +1170,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Hide Tray Icon.
         /// </summary>
-        internal static string Main_TrayIcon_Hide {
+        public static string Main_TrayIcon_Hide {
             get {
                 return ResourceManager.GetString("Main_TrayIcon_Hide", resourceCulture);
             }
@@ -1179,7 +1179,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Open EDDiscovery.
         /// </summary>
-        internal static string Main_TrayIcon_Open {
+        public static string Main_TrayIcon_Open {
             get {
                 return ResourceManager.GetString("Main_TrayIcon_Open", resourceCulture);
             }
@@ -1188,7 +1188,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Zoom to best fit.
         /// </summary>
-        internal static string Map2D_BestFit {
+        public static string Map2D_BestFit {
             get {
                 return ResourceManager.GetString("Map2D_BestFit", resourceCulture);
             }
@@ -1197,7 +1197,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Zoom to best fit.
         /// </summary>
-        internal static string Map2D_BestFit_ToolTip {
+        public static string Map2D_BestFit_ToolTip {
             get {
                 return ResourceManager.GetString("Map2D_BestFit_ToolTip", resourceCulture);
             }
@@ -1206,7 +1206,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No maps available.
         /// </summary>
-        internal static string Map2D_NoMapsAvailable {
+        public static string Map2D_NoMapsAvailable {
             get {
                 return ResourceManager.GetString("Map2D_NoMapsAvailable", resourceCulture);
             }
@@ -1215,7 +1215,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to PNG Image|*.png|Bitmap Image|*.bmp|JPEG Image|*.jpg.
         /// </summary>
-        internal static string Map2D_SaveFilter {
+        public static string Map2D_SaveFilter {
             get {
                 return ResourceManager.GetString("Map2D_SaveFilter", resourceCulture);
             }
@@ -1224,7 +1224,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show all stars.
         /// </summary>
-        internal static string Map2D_ShowAllStars {
+        public static string Map2D_ShowAllStars {
             get {
                 return ResourceManager.GetString("Map2D_ShowAllStars", resourceCulture);
             }
@@ -1233,7 +1233,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show all stars.
         /// </summary>
-        internal static string Map2D_ShowAllStars_ToolTip {
+        public static string Map2D_ShowAllStars_ToolTip {
             get {
                 return ResourceManager.GetString("Map2D_ShowAllStars_ToolTip", resourceCulture);
             }
@@ -1242,7 +1242,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 2D Map.
         /// </summary>
-        internal static string Map2D_Title {
+        public static string Map2D_Title {
             get {
                 return ResourceManager.GetString("Map2D_Title", resourceCulture);
             }
@@ -1251,7 +1251,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Zoom in.
         /// </summary>
-        internal static string Map2D_ZoomIn {
+        public static string Map2D_ZoomIn {
             get {
                 return ResourceManager.GetString("Map2D_ZoomIn", resourceCulture);
             }
@@ -1260,7 +1260,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Zoom in.
         /// </summary>
-        internal static string Map2D_ZoomIn_ToolTip {
+        public static string Map2D_ZoomIn_ToolTip {
             get {
                 return ResourceManager.GetString("Map2D_ZoomIn_ToolTip", resourceCulture);
             }
@@ -1269,7 +1269,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Zoom out.
         /// </summary>
-        internal static string Map2D_ZoomOut {
+        public static string Map2D_ZoomOut {
             get {
                 return ResourceManager.GetString("Map2D_ZoomOut", resourceCulture);
             }
@@ -1278,7 +1278,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Zoom out.
         /// </summary>
-        internal static string Map2D_ZoomOut_ToolTip {
+        public static string Map2D_ZoomOut_ToolTip {
             get {
                 return ResourceManager.GetString("Map2D_ZoomOut_ToolTip", resourceCulture);
             }
@@ -1287,7 +1287,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to New Region Bookmark.
         /// </summary>
-        internal static string Map3D_Bookmarks_AddRegionBookmark {
+        public static string Map3D_Bookmarks_AddRegionBookmark {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_AddRegionBookmark", resourceCulture);
             }
@@ -1296,7 +1296,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to New Region Bookmark.
         /// </summary>
-        internal static string Map3D_Bookmarks_AddRegionBookmark_ToolTip {
+        public static string Map3D_Bookmarks_AddRegionBookmark_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_AddRegionBookmark_ToolTip", resourceCulture);
             }
@@ -1305,7 +1305,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bookmarks.
         /// </summary>
-        internal static string Map3D_Bookmarks_Menu {
+        public static string Map3D_Bookmarks_Menu {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_Menu", resourceCulture);
             }
@@ -1314,7 +1314,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display or disable display of bookmarks and add a new region bookmark.
         /// </summary>
-        internal static string Map3D_Bookmarks_Menu_ToolTip {
+        public static string Map3D_Bookmarks_Menu_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_Menu_ToolTip", resourceCulture);
             }
@@ -1323,7 +1323,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Bookmarks.
         /// </summary>
-        internal static string Map3D_Bookmarks_ShowBookmarks {
+        public static string Map3D_Bookmarks_ShowBookmarks {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_ShowBookmarks", resourceCulture);
             }
@@ -1332,7 +1332,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Bookmarks.
         /// </summary>
-        internal static string Map3D_Bookmarks_ShowBookmarks_ToolTip {
+        public static string Map3D_Bookmarks_ShowBookmarks_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_ShowBookmarks_ToolTip", resourceCulture);
             }
@@ -1341,7 +1341,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Note marks.
         /// </summary>
-        internal static string Map3D_Bookmarks_ShowNotemarks {
+        public static string Map3D_Bookmarks_ShowNotemarks {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_ShowNotemarks", resourceCulture);
             }
@@ -1350,7 +1350,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Note marks.
         /// </summary>
-        internal static string Map3D_Bookmarks_ShowNotemarks_ToolTip {
+        public static string Map3D_Bookmarks_ShowNotemarks_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Bookmarks_ShowNotemarks_ToolTip", resourceCulture);
             }
@@ -1359,7 +1359,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enter system to centre on.
         /// </summary>
-        internal static string Map3D_CenterSystemName_ToolTip {
+        public static string Map3D_CenterSystemName_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_CenterSystemName_ToolTip", resourceCulture);
             }
@@ -1368,7 +1368,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No centre system.
         /// </summary>
-        internal static string Map3D_CentreSystemCoords_NoSystem {
+        public static string Map3D_CentreSystemCoords_NoSystem {
             get {
                 return ResourceManager.GetString("Map3D_CentreSystemCoords_NoSystem", resourceCulture);
             }
@@ -1377,7 +1377,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Click a star to select/copy, double-click to center.
         /// </summary>
-        internal static string Map3D_ClickedSystemCoords_Help {
+        public static string Map3D_ClickedSystemCoords_Help {
             get {
                 return ResourceManager.GetString("Map3D_ClickedSystemCoords_Help", resourceCulture);
             }
@@ -1386,7 +1386,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Elite Movement.
         /// </summary>
-        internal static string Map3D_EliteMovement {
+        public static string Map3D_EliteMovement {
             get {
                 return ResourceManager.GetString("Map3D_EliteMovement", resourceCulture);
             }
@@ -1395,7 +1395,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to W/A/S/D move within plane; R/F move perpendicular to plane (perspective mode only).
         /// </summary>
-        internal static string Map3D_EliteMovement_ToolTip {
+        public static string Map3D_EliteMovement_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_EliteMovement_ToolTip", resourceCulture);
             }
@@ -1404,7 +1404,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Filter Stars.
         /// </summary>
-        internal static string Map3D_Filter_Menu {
+        public static string Map3D_Filter_Menu {
             get {
                 return ResourceManager.GetString("Map3D_Filter_Menu", resourceCulture);
             }
@@ -1413,7 +1413,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Select what stars to display.
         /// </summary>
-        internal static string Map3D_Filter_Menu_ToolTip {
+        public static string Map3D_Filter_Menu_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Filter_Menu_ToolTip", resourceCulture);
             }
@@ -1422,7 +1422,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show All Stars.
         /// </summary>
-        internal static string Map3D_Filter_ShowAllStars {
+        public static string Map3D_Filter_ShowAllStars {
             get {
                 return ResourceManager.GetString("Map3D_Filter_ShowAllStars", resourceCulture);
             }
@@ -1431,7 +1431,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show all stars.
         /// </summary>
-        internal static string Map3D_Filter_ShowAllStars_ToolTip {
+        public static string Map3D_Filter_ShowAllStars_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Filter_ShowAllStars_ToolTip", resourceCulture);
             }
@@ -1440,7 +1440,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Populated Systems.
         /// </summary>
-        internal static string Map3D_Filter_ShowPopSystems {
+        public static string Map3D_Filter_ShowPopSystems {
             get {
                 return ResourceManager.GetString("Map3D_Filter_ShowPopSystems", resourceCulture);
             }
@@ -1449,7 +1449,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show populated systems.
         /// </summary>
-        internal static string Map3D_Filter_ShowPopSystems_ToolTip {
+        public static string Map3D_Filter_ShowPopSystems_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Filter_ShowPopSystems_ToolTip", resourceCulture);
             }
@@ -1458,7 +1458,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Date Range.
         /// </summary>
-        internal static string Map3D_FilterDate {
+        public static string Map3D_FilterDate {
             get {
                 return ResourceManager.GetString("Map3D_FilterDate", resourceCulture);
             }
@@ -1467,7 +1467,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Filter by Expedition or date.
         /// </summary>
-        internal static string Map3D_FilterDate_ToolTip {
+        public static string Map3D_FilterDate_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_FilterDate_ToolTip", resourceCulture);
             }
@@ -1476,7 +1476,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Points of Interest.
         /// </summary>
-        internal static string Map3D_GalObjects {
+        public static string Map3D_GalObjects {
             get {
                 return ResourceManager.GetString("Map3D_GalObjects", resourceCulture);
             }
@@ -1485,7 +1485,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Toggle All.
         /// </summary>
-        internal static string Map3D_GalObjects_ToggleAll {
+        public static string Map3D_GalObjects_ToggleAll {
             get {
                 return ResourceManager.GetString("Map3D_GalObjects_ToggleAll", resourceCulture);
             }
@@ -1494,7 +1494,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Toggle Region Colouring.
         /// </summary>
-        internal static string Map3D_GalObjects_ToggleRegionColours {
+        public static string Map3D_GalObjects_ToggleRegionColours {
             get {
                 return ResourceManager.GetString("Map3D_GalObjects_ToggleRegionColours", resourceCulture);
             }
@@ -1503,7 +1503,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Toggle Star Naming.
         /// </summary>
-        internal static string Map3D_GalObjects_ToggleStarNaming {
+        public static string Map3D_GalObjects_ToggleStarNaming {
             get {
                 return ResourceManager.GetString("Map3D_GalObjects_ToggleStarNaming", resourceCulture);
             }
@@ -1512,7 +1512,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display or Disable the Display of Galactic Objects and other POIs.
         /// </summary>
-        internal static string Map3D_GalObjects_ToolTip {
+        public static string Map3D_GalObjects_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_GalObjects_ToolTip", resourceCulture);
             }
@@ -1521,7 +1521,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Coordinates.
         /// </summary>
-        internal static string Map3D_Grid_Coords {
+        public static string Map3D_Grid_Coords {
             get {
                 return ResourceManager.GetString("Map3D_Grid_Coords", resourceCulture);
             }
@@ -1530,7 +1530,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Grid Coordinates.
         /// </summary>
-        internal static string Map3D_Grid_Coords_ToolTip {
+        public static string Map3D_Grid_Coords_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Grid_Coords_ToolTip", resourceCulture);
             }
@@ -1539,7 +1539,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Fine Grid.
         /// </summary>
-        internal static string Map3D_Grid_FineGrid {
+        public static string Map3D_Grid_FineGrid {
             get {
                 return ResourceManager.GetString("Map3D_Grid_FineGrid", resourceCulture);
             }
@@ -1548,7 +1548,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Fine Grid.
         /// </summary>
-        internal static string Map3D_Grid_FineGrid_ToolTip {
+        public static string Map3D_Grid_FineGrid_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Grid_FineGrid_ToolTip", resourceCulture);
             }
@@ -1557,7 +1557,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Grid.
         /// </summary>
-        internal static string Map3D_Grid_Grid {
+        public static string Map3D_Grid_Grid {
             get {
                 return ResourceManager.GetString("Map3D_Grid_Grid", resourceCulture);
             }
@@ -1566,7 +1566,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Coarse Grid.
         /// </summary>
-        internal static string Map3D_Grid_Grid_ToolTip {
+        public static string Map3D_Grid_Grid_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Grid_Grid_ToolTip", resourceCulture);
             }
@@ -1575,7 +1575,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
-        internal static string Map3D_Help {
+        public static string Map3D_Help {
             get {
                 return ResourceManager.GetString("Map3D_Help", resourceCulture);
             }
@@ -1584,7 +1584,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 3D Map Help.
         /// </summary>
-        internal static string Map3D_Help_Title {
+        public static string Map3D_Help_Title {
             get {
                 return ResourceManager.GetString("Map3D_Help_Title", resourceCulture);
             }
@@ -1593,7 +1593,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Help.
         /// </summary>
-        internal static string Map3D_Help_ToolTip {
+        public static string Map3D_Help_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Help_ToolTip", resourceCulture);
             }
@@ -1602,7 +1602,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Allegiance: {0}.
         /// </summary>
-        internal static string Map3D_Info_Allegiance {
+        public static string Map3D_Info_Allegiance {
             get {
                 return ResourceManager.GetString("Map3D_Info_Allegiance", resourceCulture);
             }
@@ -1611,7 +1611,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bookmark Notes: {0}.
         /// </summary>
-        internal static string Map3D_Info_BookmarkNotes {
+        public static string Map3D_Info_BookmarkNotes {
             get {
                 return ResourceManager.GetString("Map3D_Info_BookmarkNotes", resourceCulture);
             }
@@ -1620,7 +1620,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Distance from {0}: {1:0.0}.
         /// </summary>
-        internal static string Map3D_Info_DistanceFrom {
+        public static string Map3D_Info_DistanceFrom {
             get {
                 return ResourceManager.GetString("Map3D_Info_DistanceFrom", resourceCulture);
             }
@@ -1629,7 +1629,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Economy: {0}.
         /// </summary>
-        internal static string Map3D_Info_Economy {
+        public static string Map3D_Info_Economy {
             get {
                 return ResourceManager.GetString("Map3D_Info_Economy", resourceCulture);
             }
@@ -1638,7 +1638,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Government: {0}.
         /// </summary>
-        internal static string Map3D_Info_Government {
+        public static string Map3D_Info_Government {
             get {
                 return ResourceManager.GetString("Map3D_Info_Government", resourceCulture);
             }
@@ -1647,7 +1647,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Notes: {0}.
         /// </summary>
-        internal static string Map3D_Info_Notes {
+        public static string Map3D_Info_Notes {
             get {
                 return ResourceManager.GetString("Map3D_Info_Notes", resourceCulture);
             }
@@ -1656,7 +1656,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Population: {0}.
         /// </summary>
-        internal static string Map3D_Info_Population {
+        public static string Map3D_Info_Population {
             get {
                 return ResourceManager.GetString("Map3D_Info_Population", resourceCulture);
             }
@@ -1665,7 +1665,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to State: {0}.
         /// </summary>
-        internal static string Map3D_Info_State {
+        public static string Map3D_Info_State {
             get {
                 return ResourceManager.GetString("Map3D_Info_State", resourceCulture);
             }
@@ -1674,7 +1674,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Select Maps.
         /// </summary>
-        internal static string Map3D_MapNames {
+        public static string Map3D_MapNames {
             get {
                 return ResourceManager.GetString("Map3D_MapNames", resourceCulture);
             }
@@ -1683,7 +1683,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Select which 2D maps to display.
         /// </summary>
-        internal static string Map3D_MapNames_ToolTip {
+        public static string Map3D_MapNames_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_MapNames_ToolTip", resourceCulture);
             }
@@ -1692,7 +1692,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Centre map on system.
         /// </summary>
-        internal static string Map3D_Navigation_CenterOnSystem_ToolTip {
+        public static string Map3D_Navigation_CenterOnSystem_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_CenterOnSystem_ToolTip", resourceCulture);
             }
@@ -1701,7 +1701,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
-        internal static string Map3D_Navigation_GoBackward {
+        public static string Map3D_Navigation_GoBackward {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoBackward", resourceCulture);
             }
@@ -1710,7 +1710,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go Backward in Travel History.
         /// </summary>
-        internal static string Map3D_Navigation_GoBackward_ToolTip {
+        public static string Map3D_Navigation_GoBackward_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoBackward_ToolTip", resourceCulture);
             }
@@ -1719,7 +1719,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
-        internal static string Map3D_Navigation_GoForward {
+        public static string Map3D_Navigation_GoForward {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoForward", resourceCulture);
             }
@@ -1728,7 +1728,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go Forward in Travel History.
         /// </summary>
-        internal static string Map3D_Navigation_GoForward_ToolTip {
+        public static string Map3D_Navigation_GoForward_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoForward_ToolTip", resourceCulture);
             }
@@ -1737,7 +1737,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Auto.
         /// </summary>
-        internal static string Map3D_Navigation_GoForwardOnJump {
+        public static string Map3D_Navigation_GoForwardOnJump {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoForwardOnJump", resourceCulture);
             }
@@ -1746,7 +1746,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go Forward Automatically on Jump.
         /// </summary>
-        internal static string Map3D_Navigation_GoForwardOnJump_ToolTip {
+        public static string Map3D_Navigation_GoForwardOnJump_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoForwardOnJump_ToolTip", resourceCulture);
             }
@@ -1755,7 +1755,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Selected.
         /// </summary>
-        internal static string Map3D_Navigation_GoToHistorySelection {
+        public static string Map3D_Navigation_GoToHistorySelection {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoToHistorySelection", resourceCulture);
             }
@@ -1764,7 +1764,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to system selected in travelled history window.
         /// </summary>
-        internal static string Map3D_Navigation_GoToHistorySelection_ToolTip {
+        public static string Map3D_Navigation_GoToHistorySelection_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoToHistorySelection_ToolTip", resourceCulture);
             }
@@ -1773,7 +1773,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
-        internal static string Map3D_Navigation_GoToHomeSystem {
+        public static string Map3D_Navigation_GoToHomeSystem {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoToHomeSystem", resourceCulture);
             }
@@ -1782,7 +1782,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to Home System.
         /// </summary>
-        internal static string Map3D_Navigation_GoToHomeSystem_ToolTip {
+        public static string Map3D_Navigation_GoToHomeSystem_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoToHomeSystem_ToolTip", resourceCulture);
             }
@@ -1791,7 +1791,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Target.
         /// </summary>
-        internal static string Map3D_Navigation_GoToTarget {
+        public static string Map3D_Navigation_GoToTarget {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoToTarget", resourceCulture);
             }
@@ -1800,7 +1800,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to target designator.
         /// </summary>
-        internal static string Map3D_Navigation_GoToTarget_ToolTip {
+        public static string Map3D_Navigation_GoToTarget_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_GoToTarget_ToolTip", resourceCulture);
             }
@@ -1809,7 +1809,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Last.
         /// </summary>
-        internal static string Map3D_Navigation_LastKnownPosition {
+        public static string Map3D_Navigation_LastKnownPosition {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_LastKnownPosition", resourceCulture);
             }
@@ -1818,7 +1818,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to latest position from travel history.
         /// </summary>
-        internal static string Map3D_Navigation_LastKnownPosition_ToolTip {
+        public static string Map3D_Navigation_LastKnownPosition_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_LastKnownPosition_ToolTip", resourceCulture);
             }
@@ -1827,7 +1827,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Look at System.
         /// </summary>
-        internal static string Map3D_Navigation_LookAtSystem_ToolTip {
+        public static string Map3D_Navigation_LookAtSystem_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Navigation_LookAtSystem_ToolTip", resourceCulture);
             }
@@ -1836,7 +1836,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No target designated, create a bookmark or region mark, or use a Note mark, right click on it and set it as the target.
         /// </summary>
-        internal static string Map3D_NoTarget {
+        public static string Map3D_NoTarget {
             get {
                 return ResourceManager.GetString("Map3D_NoTarget", resourceCulture);
             }
@@ -1845,7 +1845,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No travel history is available.
         /// </summary>
-        internal static string Map3D_NoTravelHistory {
+        public static string Map3D_NoTravelHistory {
             get {
                 return ResourceManager.GetString("Map3D_NoTravelHistory", resourceCulture);
             }
@@ -1854,7 +1854,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to No stars with defined co-ordinates available in travel history.
         /// </summary>
-        internal static string Map3D_NoTravelHistoryWithCoords {
+        public static string Map3D_NoTravelHistoryWithCoords {
             get {
                 return ResourceManager.GetString("Map3D_NoTravelHistoryWithCoords", resourceCulture);
             }
@@ -1863,7 +1863,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Centre map on this system.
         /// </summary>
-        internal static string Map3D_OrangeDot_ToolTip {
+        public static string Map3D_OrangeDot_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_OrangeDot_ToolTip", resourceCulture);
             }
@@ -1872,7 +1872,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Perspective.
         /// </summary>
-        internal static string Map3D_Perspective {
+        public static string Map3D_Perspective {
             get {
                 return ResourceManager.GetString("Map3D_Perspective", resourceCulture);
             }
@@ -1881,7 +1881,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Perspective View.
         /// </summary>
-        internal static string Map3D_Perspective_ToolTip {
+        public static string Map3D_Perspective_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Perspective_ToolTip", resourceCulture);
             }
@@ -1890,7 +1890,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Clear Recording.
         /// </summary>
-        internal static string Map3D_Recorder_Clear {
+        public static string Map3D_Recorder_Clear {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Clear", resourceCulture);
             }
@@ -1899,7 +1899,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Confirm you wish to clear the current recording.
         /// </summary>
-        internal static string Map3D_Recorder_Clear_Confirm {
+        public static string Map3D_Recorder_Clear_Confirm {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Clear_Confirm", resourceCulture);
             }
@@ -1908,7 +1908,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to WARNING.
         /// </summary>
-        internal static string Map3D_Recorder_Clear_Confirm_Title {
+        public static string Map3D_Recorder_Clear_Confirm_Title {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Clear_Confirm_Title", resourceCulture);
             }
@@ -1917,7 +1917,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Clear Recording.
         /// </summary>
-        internal static string Map3D_Recorder_Clear_ToolTip {
+        public static string Map3D_Recorder_Clear_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Clear_ToolTip", resourceCulture);
             }
@@ -1926,7 +1926,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Load flight from file.
         /// </summary>
-        internal static string Map3D_Recorder_Load {
+        public static string Map3D_Recorder_Load {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Load", resourceCulture);
             }
@@ -1935,7 +1935,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Load flight from file.
         /// </summary>
-        internal static string Map3D_Recorder_Load_ToolTip {
+        public static string Map3D_Recorder_Load_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Load_ToolTip", resourceCulture);
             }
@@ -1944,7 +1944,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Failed to load flight {0}. Check file path and file contents.
         /// </summary>
-        internal static string Map3D_Recorder_LoadFailed {
+        public static string Map3D_Recorder_LoadFailed {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_LoadFailed", resourceCulture);
             }
@@ -1953,7 +1953,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Recorder.
         /// </summary>
-        internal static string Map3D_Recorder_Menu {
+        public static string Map3D_Recorder_Menu {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Menu", resourceCulture);
             }
@@ -1962,7 +1962,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Record or Playback animations.
         /// </summary>
-        internal static string Map3D_Recorder_Menu_ToolTip {
+        public static string Map3D_Recorder_Menu_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Menu_ToolTip", resourceCulture);
             }
@@ -1971,7 +1971,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to New Record Step (F7).
         /// </summary>
-        internal static string Map3D_Recorder_NewRecordStep {
+        public static string Map3D_Recorder_NewRecordStep {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_NewRecordStep", resourceCulture);
             }
@@ -1980,7 +1980,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to New Record Step (F7).
         /// </summary>
-        internal static string Map3D_Recorder_NewRecordStep_ToolTip {
+        public static string Map3D_Recorder_NewRecordStep_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_NewRecordStep_ToolTip", resourceCulture);
             }
@@ -1989,7 +1989,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pause Record (F8).
         /// </summary>
-        internal static string Map3D_Recorder_Pause {
+        public static string Map3D_Recorder_Pause {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Pause", resourceCulture);
             }
@@ -1998,7 +1998,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pause Record (F8).
         /// </summary>
-        internal static string Map3D_Recorder_Pause_ToolTip {
+        public static string Map3D_Recorder_Pause_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Pause_ToolTip", resourceCulture);
             }
@@ -2007,7 +2007,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pause Playback (F8).
         /// </summary>
-        internal static string Map3D_Recorder_PausePlay {
+        public static string Map3D_Recorder_PausePlay {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_PausePlay", resourceCulture);
             }
@@ -2016,7 +2016,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pause Playback (F8).
         /// </summary>
-        internal static string Map3D_Recorder_PausePlay_ToolTip {
+        public static string Map3D_Recorder_PausePlay_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_PausePlay_ToolTip", resourceCulture);
             }
@@ -2025,7 +2025,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pause Recording (F8).
         /// </summary>
-        internal static string Map3D_Recorder_PauseRecord {
+        public static string Map3D_Recorder_PauseRecord {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_PauseRecord", resourceCulture);
             }
@@ -2034,7 +2034,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pause Recording (F8).
         /// </summary>
-        internal static string Map3D_Recorder_PauseRecord_ToolTip {
+        public static string Map3D_Recorder_PauseRecord_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_PauseRecord_ToolTip", resourceCulture);
             }
@@ -2043,7 +2043,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start Playback (F9).
         /// </summary>
-        internal static string Map3D_Recorder_Play {
+        public static string Map3D_Recorder_Play {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Play", resourceCulture);
             }
@@ -2052,7 +2052,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start Playback (F9).
         /// </summary>
-        internal static string Map3D_Recorder_Play_ToolTip {
+        public static string Map3D_Recorder_Play_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Play_ToolTip", resourceCulture);
             }
@@ -2061,7 +2061,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start Recording (F5).
         /// </summary>
-        internal static string Map3D_Recorder_Record {
+        public static string Map3D_Recorder_Record {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Record", resourceCulture);
             }
@@ -2070,7 +2070,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start Recording (F5).
         /// </summary>
-        internal static string Map3D_Recorder_Record_ToolTip {
+        public static string Map3D_Recorder_Record_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Record_ToolTip", resourceCulture);
             }
@@ -2079,7 +2079,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start Step Recording (F6).
         /// </summary>
-        internal static string Map3D_Recorder_RecordStep {
+        public static string Map3D_Recorder_RecordStep {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_RecordStep", resourceCulture);
             }
@@ -2088,7 +2088,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start Step Recording (F6).
         /// </summary>
-        internal static string Map3D_Recorder_RecordStep_ToolTip {
+        public static string Map3D_Recorder_RecordStep_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_RecordStep_ToolTip", resourceCulture);
             }
@@ -2097,7 +2097,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Recording (F5).
         /// </summary>
-        internal static string Map3D_Recorder_ResumeRecord {
+        public static string Map3D_Recorder_ResumeRecord {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_ResumeRecord", resourceCulture);
             }
@@ -2106,7 +2106,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Recording (F5).
         /// </summary>
-        internal static string Map3D_Recorder_ResumeRecord_ToolTip {
+        public static string Map3D_Recorder_ResumeRecord_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_ResumeRecord_ToolTip", resourceCulture);
             }
@@ -2115,7 +2115,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Step Recording (F6).
         /// </summary>
-        internal static string Map3D_Recorder_ResumeRecordStep {
+        public static string Map3D_Recorder_ResumeRecordStep {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_ResumeRecordStep", resourceCulture);
             }
@@ -2124,7 +2124,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Step Recording (F6).
         /// </summary>
-        internal static string Map3D_Recorder_ResumeRecordStep_ToolTip {
+        public static string Map3D_Recorder_ResumeRecordStep_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_ResumeRecordStep_ToolTip", resourceCulture);
             }
@@ -2133,7 +2133,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save flight to file.
         /// </summary>
-        internal static string Map3D_Recorder_Save {
+        public static string Map3D_Recorder_Save {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Save", resourceCulture);
             }
@@ -2142,7 +2142,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save flight to file.
         /// </summary>
-        internal static string Map3D_Recorder_Save_ToolTip {
+        public static string Map3D_Recorder_Save_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_Save_ToolTip", resourceCulture);
             }
@@ -2151,7 +2151,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Stop Playback (F9).
         /// </summary>
-        internal static string Map3D_Recorder_StopPlay {
+        public static string Map3D_Recorder_StopPlay {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_StopPlay", resourceCulture);
             }
@@ -2160,7 +2160,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Stop Playback (F9).
         /// </summary>
-        internal static string Map3D_Recorder_StopPlay_ToolTip {
+        public static string Map3D_Recorder_StopPlay_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_StopPlay_ToolTip", resourceCulture);
             }
@@ -2169,7 +2169,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Stop Recording (F5).
         /// </summary>
-        internal static string Map3D_Recorder_StopRecord {
+        public static string Map3D_Recorder_StopRecord {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_StopRecord", resourceCulture);
             }
@@ -2178,7 +2178,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Stop Recording (F5).
         /// </summary>
-        internal static string Map3D_Recorder_StopRecord_ToolTip {
+        public static string Map3D_Recorder_StopRecord_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_StopRecord_ToolTip", resourceCulture);
             }
@@ -2187,7 +2187,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Stop Step Recording (F6).
         /// </summary>
-        internal static string Map3D_Recorder_StopRecordStep {
+        public static string Map3D_Recorder_StopRecordStep {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_StopRecordStep", resourceCulture);
             }
@@ -2196,7 +2196,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Stop Step Recording (F6).
         /// </summary>
-        internal static string Map3D_Recorder_StopRecordStep_ToolTip {
+        public static string Map3D_Recorder_StopRecordStep_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_StopRecordStep_ToolTip", resourceCulture);
             }
@@ -2205,7 +2205,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Playback (F8).
         /// </summary>
-        internal static string Map3D_Recorder_UnpausePlay {
+        public static string Map3D_Recorder_UnpausePlay {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_UnpausePlay", resourceCulture);
             }
@@ -2214,7 +2214,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Playback (F8).
         /// </summary>
-        internal static string Map3D_Recorder_UnpausePlay_ToolTip {
+        public static string Map3D_Recorder_UnpausePlay_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_UnpausePlay_ToolTip", resourceCulture);
             }
@@ -2223,7 +2223,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Recording (F8).
         /// </summary>
-        internal static string Map3D_Recorder_UnpauseRecord {
+        public static string Map3D_Recorder_UnpauseRecord {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_UnpauseRecord", resourceCulture);
             }
@@ -2232,7 +2232,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Resume Recording (F8).
         /// </summary>
-        internal static string Map3D_Recorder_UnpauseRecord_ToolTip {
+        public static string Map3D_Recorder_UnpauseRecord_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Recorder_UnpauseRecord_ToolTip", resourceCulture);
             }
@@ -2241,7 +2241,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Colours.
         /// </summary>
-        internal static string Map3D_Stars_DisplayColours {
+        public static string Map3D_Stars_DisplayColours {
             get {
                 return ResourceManager.GetString("Map3D_Stars_DisplayColours", resourceCulture);
             }
@@ -2250,7 +2250,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show star colours.
         /// </summary>
-        internal static string Map3D_Stars_DisplayColours_ToolTip {
+        public static string Map3D_Stars_DisplayColours_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Stars_DisplayColours_ToolTip", resourceCulture);
             }
@@ -2259,7 +2259,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Star Display.
         /// </summary>
-        internal static string Map3D_Stars_Menu {
+        public static string Map3D_Stars_Menu {
             get {
                 return ResourceManager.GetString("Map3D_Stars_Menu", resourceCulture);
             }
@@ -2268,7 +2268,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Select how stars are displayed.
         /// </summary>
-        internal static string Map3D_Stars_Menu_ToolTip {
+        public static string Map3D_Stars_Menu_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Stars_Menu_ToolTip", resourceCulture);
             }
@@ -2277,7 +2277,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Discs.
         /// </summary>
-        internal static string Map3D_Stars_ShowDiscs {
+        public static string Map3D_Stars_ShowDiscs {
             get {
                 return ResourceManager.GetString("Map3D_Stars_ShowDiscs", resourceCulture);
             }
@@ -2286,7 +2286,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show discs for nearby stars.
         /// </summary>
-        internal static string Map3D_Stars_ShowDiscs_ToolTip {
+        public static string Map3D_Stars_ShowDiscs_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Stars_ShowDiscs_ToolTip", resourceCulture);
             }
@@ -2295,7 +2295,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Names.
         /// </summary>
-        internal static string Map3D_Stars_ShowNames {
+        public static string Map3D_Stars_ShowNames {
             get {
                 return ResourceManager.GetString("Map3D_Stars_ShowNames", resourceCulture);
             }
@@ -2304,7 +2304,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show names for nearby systems.
         /// </summary>
-        internal static string Map3D_Stars_ShowNames_ToolTip {
+        public static string Map3D_Stars_ShowNames_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Stars_ShowNames_ToolTip", resourceCulture);
             }
@@ -2313,7 +2313,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Direction x={0,-6:0.0} y={1,-6:0.0} z={2,-6:0.0}.
         /// </summary>
-        internal static string Map3D_Status_Direction {
+        public static string Map3D_Status_Direction {
             get {
                 return ResourceManager.GetString("Map3D_Status_Direction", resourceCulture);
             }
@@ -2322,7 +2322,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to x:{0,-6:0} y:{1,-6:0} z:{2,-6:0} Zoom:{3,-4:0.00} FOV:{4,-3:0} Use F1 for help.
         /// </summary>
-        internal static string Map3D_Status_FPSoff {
+        public static string Map3D_Status_FPSoff {
             get {
                 return ResourceManager.GetString("Map3D_Status_FPSoff", resourceCulture);
             }
@@ -2331,7 +2331,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to x:{0,-6:0} y:{1,-6:0} z:{2,-6:0} Zoom:{3,-4:0.00} FOV:{4,-3:0} FPS:{5,-4:0.0} Use F1 for help.
         /// </summary>
-        internal static string Map3D_Status_FPSon {
+        public static string Map3D_Status_FPSon {
             get {
                 return ResourceManager.GetString("Map3D_Status_FPSon", resourceCulture);
             }
@@ -2340,7 +2340,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to System or Object {0} not found.
         /// </summary>
-        internal static string Map3D_SystemOrObjectNotFound {
+        public static string Map3D_SystemOrObjectNotFound {
             get {
                 return ResourceManager.GetString("Map3D_SystemOrObjectNotFound", resourceCulture);
             }
@@ -2349,7 +2349,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 3D Star Map.
         /// </summary>
-        internal static string Map3D_Title {
+        public static string Map3D_Title {
             get {
                 return ResourceManager.GetString("Map3D_Title", resourceCulture);
             }
@@ -2358,7 +2358,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Draw lines.
         /// </summary>
-        internal static string Map3D_Travel_DrawLines {
+        public static string Map3D_Travel_DrawLines {
             get {
                 return ResourceManager.GetString("Map3D_Travel_DrawLines", resourceCulture);
             }
@@ -2367,7 +2367,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Lines connect, in the Map Colour, the stars with known position.
         /// </summary>
-        internal static string Map3D_Travel_DrawLines_ToolTip {
+        public static string Map3D_Travel_DrawLines_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Travel_DrawLines_ToolTip", resourceCulture);
             }
@@ -2376,7 +2376,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Draw stars.
         /// </summary>
-        internal static string Map3D_Travel_DrawStars {
+        public static string Map3D_Travel_DrawStars {
             get {
                 return ResourceManager.GetString("Map3D_Travel_DrawStars", resourceCulture);
             }
@@ -2385,7 +2385,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Stars with position are shown as discs.
         /// </summary>
-        internal static string Map3D_Travel_DrawStars_ToolTip {
+        public static string Map3D_Travel_DrawStars_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Travel_DrawStars_ToolTip", resourceCulture);
             }
@@ -2394,7 +2394,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Travel.
         /// </summary>
-        internal static string Map3D_Travel_Menu {
+        public static string Map3D_Travel_Menu {
             get {
                 return ResourceManager.GetString("Map3D_Travel_Menu", resourceCulture);
             }
@@ -2403,7 +2403,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Select how your travel history is displayed.
         /// </summary>
-        internal static string Map3D_Travel_Menu_ToolTip {
+        public static string Map3D_Travel_Menu_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Travel_Menu_ToolTip", resourceCulture);
             }
@@ -2412,7 +2412,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to White stars.
         /// </summary>
-        internal static string Map3D_Travel_WhiteStars {
+        public static string Map3D_Travel_WhiteStars {
             get {
                 return ResourceManager.GetString("Map3D_Travel_WhiteStars", resourceCulture);
             }
@@ -2421,7 +2421,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Instead of using the map colour, use white. Useful when you have the lines on at the same time.
         /// </summary>
-        internal static string Map3D_Travel_WhiteStars_ToolTip {
+        public static string Map3D_Travel_WhiteStars_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_Travel_WhiteStars_ToolTip", resourceCulture);
             }
@@ -2430,7 +2430,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
-        internal static string Map3D_ViewOnEDSM {
+        public static string Map3D_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("Map3D_ViewOnEDSM", resourceCulture);
             }
@@ -2439,7 +2439,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Centre map on this system.
         /// </summary>
-        internal static string Map3D_YellowDot_ToolTip {
+        public static string Map3D_YellowDot_ToolTip {
             get {
                 return ResourceManager.GetString("Map3D_YellowDot_ToolTip", resourceCulture);
             }
@@ -2448,7 +2448,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display galactic mapping notes.
         /// </summary>
-        internal static string NotePanel_DisplayGMPNotes {
+        public static string NotePanel_DisplayGMPNotes {
             get {
                 return ResourceManager.GetString("NotePanel_DisplayGMPNotes", resourceCulture);
             }
@@ -2457,7 +2457,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display system notes.
         /// </summary>
-        internal static string NotePanel_DisplaySystemNotes {
+        public static string NotePanel_DisplaySystemNotes {
             get {
                 return ResourceManager.GetString("NotePanel_DisplaySystemNotes", resourceCulture);
             }
@@ -2466,7 +2466,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
-        internal static string Route_Copy {
+        public static string Route_Copy {
             get {
                 return ResourceManager.GetString("Route_Copy", resourceCulture);
             }
@@ -2475,7 +2475,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show in EDSM.
         /// </summary>
-        internal static string Route_ShowOnEDSM {
+        public static string Route_ShowOnEDSM {
             get {
                 return ResourceManager.GetString("Route_ShowOnEDSM", resourceCulture);
             }
@@ -2484,7 +2484,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Auto copy waypoint.
         /// </summary>
-        internal static string RouteTracker_AutoCopy {
+        public static string RouteTracker_AutoCopy {
             get {
                 return ResourceManager.GetString("RouteTracker_AutoCopy", resourceCulture);
             }
@@ -2493,7 +2493,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Auto set target.
         /// </summary>
-        internal static string RouteTracker_AutoSet {
+        public static string RouteTracker_AutoSet {
             get {
                 return ResourceManager.GetString("RouteTracker_AutoSet", resourceCulture);
             }
@@ -2502,7 +2502,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set route.
         /// </summary>
-        internal static string RouteTracker_SetRoute {
+        public static string RouteTracker_SetRoute {
             get {
                 return ResourceManager.GetString("RouteTracker_SetRoute", resourceCulture);
             }
@@ -2511,7 +2511,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show/Hide Toolbar.
         /// </summary>
-        internal static string Scan_ShowHideToolbar {
+        public static string Scan_ShowHideToolbar {
             get {
                 return ResourceManager.GetString("Scan_ShowHideToolbar", resourceCulture);
             }
@@ -2520,7 +2520,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Use Historic Material Counts.
         /// </summary>
-        internal static string ShoppingList_HistoricCounts {
+        public static string ShoppingList_HistoricCounts {
             get {
                 return ResourceManager.GetString("ShoppingList_HistoricCounts", resourceCulture);
             }
@@ -2529,7 +2529,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Include Material percentage on Landed Body in Shopping List.
         /// </summary>
-        internal static string ShoppingList_IncludeMaterialPercent {
+        public static string ShoppingList_IncludeMaterialPercent {
             get {
                 return ResourceManager.GetString("ShoppingList_IncludeMaterialPercent", resourceCulture);
             }
@@ -2538,7 +2538,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Max FSD Injections.
         /// </summary>
-        internal static string ShoppingList_MaxFSDInjections {
+        public static string ShoppingList_MaxFSDInjections {
             get {
                 return ResourceManager.GetString("ShoppingList_MaxFSDInjections", resourceCulture);
             }
@@ -2547,7 +2547,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Body Materials When Landed.
         /// </summary>
-        internal static string ShoppingList_ShowLandedBodyMats {
+        public static string ShoppingList_ShowLandedBodyMats {
             get {
                 return ResourceManager.GetString("ShoppingList_ShowLandedBodyMats", resourceCulture);
             }
@@ -2556,7 +2556,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show black box around text.
         /// </summary>
-        internal static string SPanel_BlackBorder {
+        public static string SPanel_BlackBorder {
             get {
                 return ResourceManager.GetString("SPanel_BlackBorder", resourceCulture);
             }
@@ -2565,7 +2565,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Default.
         /// </summary>
-        internal static string SPanel_ColumnOrder_Default {
+        public static string SPanel_ColumnOrder_Default {
             get {
                 return ResourceManager.GetString("SPanel_ColumnOrder_Default", resourceCulture);
             }
@@ -2574,7 +2574,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Target Distance,XYZ,Notes.
         /// </summary>
-        internal static string SPanel_ColumnOrder_DistCoordNotes {
+        public static string SPanel_ColumnOrder_DistCoordNotes {
             get {
                 return ResourceManager.GetString("SPanel_ColumnOrder_DistCoordNotes", resourceCulture);
             }
@@ -2583,7 +2583,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Column Order...
         /// </summary>
-        internal static string SPanel_ColumnOrder_Menu {
+        public static string SPanel_ColumnOrder_Menu {
             get {
                 return ResourceManager.GetString("SPanel_ColumnOrder_Menu", resourceCulture);
             }
@@ -2592,7 +2592,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Notes after XYZ.
         /// </summary>
-        internal static string SPanel_ColumnOrder_NotesAfterCoords {
+        public static string SPanel_ColumnOrder_NotesAfterCoords {
             get {
                 return ResourceManager.GetString("SPanel_ColumnOrder_NotesAfterCoords", resourceCulture);
             }
@@ -2601,7 +2601,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .. when in Galaxy Panel.
         /// </summary>
-        internal static string SPanel_DontShow_GalMap {
+        public static string SPanel_DontShow_GalMap {
             get {
                 return ResourceManager.GetString("SPanel_DontShow_GalMap", resourceCulture);
             }
@@ -2610,7 +2610,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .. when docked or landed.
         /// </summary>
-        internal static string SPanel_DontShow_Landed {
+        public static string SPanel_DontShow_Landed {
             get {
                 return ResourceManager.GetString("SPanel_DontShow_Landed", resourceCulture);
             }
@@ -2619,7 +2619,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Don&apos;t show information when...
         /// </summary>
-        internal static string SPanel_DontShow_Menu {
+        public static string SPanel_DontShow_Menu {
             get {
                 return ResourceManager.GetString("SPanel_DontShow_Menu", resourceCulture);
             }
@@ -2628,7 +2628,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .. when in System Map Panel.
         /// </summary>
-        internal static string SPanel_DontShow_SysMap {
+        public static string SPanel_DontShow_SysMap {
             get {
                 return ResourceManager.GetString("SPanel_DontShow_SysMap", resourceCulture);
             }
@@ -2637,7 +2637,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EDSM Button.
         /// </summary>
-        internal static string SPanel_EDSM {
+        public static string SPanel_EDSM {
             get {
                 return ResourceManager.GetString("SPanel_EDSM", resourceCulture);
             }
@@ -2646,7 +2646,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure Event Filter...
         /// </summary>
-        internal static string SPanel_EventFilter {
+        public static string SPanel_EventFilter {
             get {
                 return ResourceManager.GetString("SPanel_EventFilter", resourceCulture);
             }
@@ -2655,7 +2655,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Event Icon.
         /// </summary>
-        internal static string SPanel_EventIcon {
+        public static string SPanel_EventIcon {
             get {
                 return ResourceManager.GetString("SPanel_EventIcon", resourceCulture);
             }
@@ -2664,7 +2664,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Expand text over empty columns.
         /// </summary>
-        internal static string SPanel_ExpandText {
+        public static string SPanel_ExpandText {
             get {
                 return ResourceManager.GetString("SPanel_ExpandText", resourceCulture);
             }
@@ -2673,7 +2673,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure Field Filter...
         /// </summary>
-        internal static string SPanel_FieldFilter {
+        public static string SPanel_FieldFilter {
             get {
                 return ResourceManager.GetString("SPanel_FieldFilter", resourceCulture);
             }
@@ -2682,7 +2682,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Distances/Coords on FSD Jumps Only.
         /// </summary>
-        internal static string SPanel_FSDCoords {
+        public static string SPanel_FSDCoords {
             get {
                 return ResourceManager.GetString("SPanel_FSDCoords", resourceCulture);
             }
@@ -2691,7 +2691,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show for 15s.
         /// </summary>
-        internal static string SPanel_ScanDisplay_15s {
+        public static string SPanel_ScanDisplay_15s {
             get {
                 return ResourceManager.GetString("SPanel_ScanDisplay_15s", resourceCulture);
             }
@@ -2700,7 +2700,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show for 30s.
         /// </summary>
-        internal static string SPanel_ScanDisplay_30s {
+        public static string SPanel_ScanDisplay_30s {
             get {
                 return ResourceManager.GetString("SPanel_ScanDisplay_30s", resourceCulture);
             }
@@ -2709,7 +2709,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show for 60s.
         /// </summary>
-        internal static string SPanel_ScanDisplay_60s {
+        public static string SPanel_ScanDisplay_60s {
             get {
                 return ResourceManager.GetString("SPanel_ScanDisplay_60s", resourceCulture);
             }
@@ -2718,7 +2718,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Do Not Show.
         /// </summary>
-        internal static string SPanel_ScanDisplay_DontShow {
+        public static string SPanel_ScanDisplay_DontShow {
             get {
                 return ResourceManager.GetString("SPanel_ScanDisplay_DontShow", resourceCulture);
             }
@@ -2727,7 +2727,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Configure Scan Display...
         /// </summary>
-        internal static string SPanel_ScanDisplay_Menu {
+        public static string SPanel_ScanDisplay_Menu {
             get {
                 return ResourceManager.GetString("SPanel_ScanDisplay_Menu", resourceCulture);
             }
@@ -2736,7 +2736,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show until next scan.
         /// </summary>
-        internal static string SPanel_ScanDisplay_UntilNext {
+        public static string SPanel_ScanDisplay_UntilNext {
             get {
                 return ResourceManager.GetString("SPanel_ScanDisplay_UntilNext", resourceCulture);
             }
@@ -2745,7 +2745,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Above.
         /// </summary>
-        internal static string SPanel_ScanPosition_Above {
+        public static string SPanel_ScanPosition_Above {
             get {
                 return ResourceManager.GetString("SPanel_ScanPosition_Above", resourceCulture);
             }
@@ -2754,7 +2754,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Below.
         /// </summary>
-        internal static string SPanel_ScanPosition_Below {
+        public static string SPanel_ScanPosition_Below {
             get {
                 return ResourceManager.GetString("SPanel_ScanPosition_Below", resourceCulture);
             }
@@ -2763,7 +2763,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set Scan Position...
         /// </summary>
-        internal static string SPanel_ScanPosition_Menu {
+        public static string SPanel_ScanPosition_Menu {
             get {
                 return ResourceManager.GetString("SPanel_ScanPosition_Menu", resourceCulture);
             }
@@ -2772,7 +2772,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to On top.
         /// </summary>
-        internal static string SPanel_ScanPosition_OnTop {
+        public static string SPanel_ScanPosition_OnTop {
             get {
                 return ResourceManager.GetString("SPanel_ScanPosition_OnTop", resourceCulture);
             }
@@ -2781,7 +2781,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to To left.
         /// </summary>
-        internal static string SPanel_ScanPosition_ToLeft {
+        public static string SPanel_ScanPosition_ToLeft {
             get {
                 return ResourceManager.GetString("SPanel_ScanPosition_ToLeft", resourceCulture);
             }
@@ -2790,7 +2790,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to To right.
         /// </summary>
-        internal static string SPanel_ScanPosition_ToRight {
+        public static string SPanel_ScanPosition_ToRight {
             get {
                 return ResourceManager.GetString("SPanel_ScanPosition_ToRight", resourceCulture);
             }
@@ -2799,7 +2799,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Description.
         /// </summary>
-        internal static string SPanel_ShowDesc {
+        public static string SPanel_ShowDesc {
             get {
                 return ResourceManager.GetString("SPanel_ShowDesc", resourceCulture);
             }
@@ -2808,7 +2808,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Habitation Minimum and Maximum Distance.
         /// </summary>
-        internal static string SPanel_ShowHabitZone {
+        public static string SPanel_ShowHabitZone {
             get {
                 return ResourceManager.GetString("SPanel_ShowHabitZone", resourceCulture);
             }
@@ -2817,7 +2817,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Information.
         /// </summary>
-        internal static string SPanel_ShowInfo {
+        public static string SPanel_ShowInfo {
             get {
                 return ResourceManager.GetString("SPanel_ShowInfo", resourceCulture);
             }
@@ -2826,7 +2826,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Notes.
         /// </summary>
-        internal static string SPanel_ShowNotes {
+        public static string SPanel_ShowNotes {
             get {
                 return ResourceManager.GetString("SPanel_ShowNotes", resourceCulture);
             }
@@ -2835,7 +2835,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show System Information.
         /// </summary>
-        internal static string SPanel_ShowSysInfo {
+        public static string SPanel_ShowSysInfo {
             get {
                 return ResourceManager.GetString("SPanel_ShowSysInfo", resourceCulture);
             }
@@ -2844,7 +2844,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Target Line.
         /// </summary>
-        internal static string SPanel_ShowTargetLine {
+        public static string SPanel_ShowTargetLine {
             get {
                 return ResourceManager.GetString("SPanel_ShowTargetLine", resourceCulture);
             }
@@ -2853,7 +2853,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show XYZ.
         /// </summary>
-        internal static string SPanel_ShowXYZ {
+        public static string SPanel_ShowXYZ {
             get {
                 return ResourceManager.GetString("SPanel_ShowXYZ", resourceCulture);
             }
@@ -2862,7 +2862,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Target Distance per Star.
         /// </summary>
-        internal static string SPanel_TargetDist {
+        public static string SPanel_TargetDist {
             get {
                 return ResourceManager.GetString("SPanel_TargetDist", resourceCulture);
             }
@@ -2871,7 +2871,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show Time.
         /// </summary>
-        internal static string SPanel_Time {
+        public static string SPanel_Time {
             get {
                 return ResourceManager.GetString("SPanel_Time", resourceCulture);
             }
@@ -2880,7 +2880,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Add to Trilateration.
         /// </summary>
-        internal static string StarDistance_AddToTrilat {
+        public static string StarDistance_AddToTrilat {
             get {
                 return ResourceManager.GetString("StarDistance_AddToTrilat", resourceCulture);
             }
@@ -2889,7 +2889,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
-        internal static string StarDistance_ViewOnEDSM {
+        public static string StarDistance_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("StarDistance_ViewOnEDSM", resourceCulture);
             }
@@ -2898,7 +2898,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set Note.
         /// </summary>
-        internal static string StarList_SetNote {
+        public static string StarList_SetNote {
             get {
                 return ResourceManager.GetString("StarList_SetNote", resourceCulture);
             }
@@ -2907,7 +2907,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to star on 3D Map.
         /// </summary>
-        internal static string StarList_ShowOnMap {
+        public static string StarList_ShowOnMap {
             get {
                 return ResourceManager.GetString("StarList_ShowOnMap", resourceCulture);
             }
@@ -2916,7 +2916,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
-        internal static string StarList_ViewOnEDSM {
+        public static string StarList_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("StarList_ViewOnEDSM", resourceCulture);
             }
@@ -2925,7 +2925,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove All.
         /// </summary>
-        internal static string SysInfo_RemoveAll {
+        public static string SysInfo_RemoveAll {
             get {
                 return ResourceManager.GetString("SysInfo_RemoveAll", resourceCulture);
             }
@@ -2934,7 +2934,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Reset.
         /// </summary>
-        internal static string SysInfo_Reset {
+        public static string SysInfo_Reset {
             get {
                 return ResourceManager.GetString("SysInfo_Reset", resourceCulture);
             }
@@ -2943,7 +2943,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Body Name.
         /// </summary>
-        internal static string SysInfo_ShowBody {
+        public static string SysInfo_ShowBody {
             get {
                 return ResourceManager.GetString("SysInfo_ShowBody", resourceCulture);
             }
@@ -2952,7 +2952,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Cargo Count.
         /// </summary>
-        internal static string SysInfo_ShowCargo {
+        public static string SysInfo_ShowCargo {
             get {
                 return ResourceManager.GetString("SysInfo_ShowCargo", resourceCulture);
             }
@@ -2961,7 +2961,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Position.
         /// </summary>
-        internal static string SysInfo_ShowCoords {
+        public static string SysInfo_ShowCoords {
             get {
                 return ResourceManager.GetString("SysInfo_ShowCoords", resourceCulture);
             }
@@ -2970,7 +2970,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Credits.
         /// </summary>
-        internal static string SysInfo_ShowCredits {
+        public static string SysInfo_ShowCredits {
             get {
                 return ResourceManager.GetString("SysInfo_ShowCredits", resourceCulture);
             }
@@ -2979,7 +2979,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Data Count.
         /// </summary>
-        internal static string SysInfo_ShowData {
+        public static string SysInfo_ShowData {
             get {
                 return ResourceManager.GetString("SysInfo_ShowData", resourceCulture);
             }
@@ -2988,7 +2988,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Distance From.
         /// </summary>
-        internal static string SysInfo_ShowDist {
+        public static string SysInfo_ShowDist {
             get {
                 return ResourceManager.GetString("SysInfo_ShowDist", resourceCulture);
             }
@@ -2997,7 +2997,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display EDSM Buttons.
         /// </summary>
-        internal static string SysInfo_ShowEDSM {
+        public static string SysInfo_ShowEDSM {
             get {
                 return ResourceManager.GetString("SysInfo_ShowEDSM", resourceCulture);
             }
@@ -3006,7 +3006,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to EDSM buttons on separate line.
         /// </summary>
-        internal static string SysInfo_ShowEDSMSepLine {
+        public static string SysInfo_ShowEDSMSepLine {
             get {
                 return ResourceManager.GetString("SysInfo_ShowEDSMSepLine", resourceCulture);
             }
@@ -3015,7 +3015,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Fuel Level.
         /// </summary>
-        internal static string SysInfo_ShowFuel {
+        public static string SysInfo_ShowFuel {
             get {
                 return ResourceManager.GetString("SysInfo_ShowFuel", resourceCulture);
             }
@@ -3024,7 +3024,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Material Count.
         /// </summary>
-        internal static string SysInfo_ShowMats {
+        public static string SysInfo_ShowMats {
             get {
                 return ResourceManager.GetString("SysInfo_ShowMats", resourceCulture);
             }
@@ -3033,7 +3033,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Game Mode.
         /// </summary>
-        internal static string SysInfo_ShowMode {
+        public static string SysInfo_ShowMode {
             get {
                 return ResourceManager.GetString("SysInfo_ShowMode", resourceCulture);
             }
@@ -3042,7 +3042,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Notes.
         /// </summary>
-        internal static string SysInfo_ShowNotes {
+        public static string SysInfo_ShowNotes {
             get {
                 return ResourceManager.GetString("SysInfo_ShowNotes", resourceCulture);
             }
@@ -3051,7 +3051,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Ship Information.
         /// </summary>
-        internal static string SysInfo_ShowShipInfo {
+        public static string SysInfo_ShowShipInfo {
             get {
                 return ResourceManager.GetString("SysInfo_ShowShipInfo", resourceCulture);
             }
@@ -3060,7 +3060,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display System State.
         /// </summary>
-        internal static string SysInfo_ShowState {
+        public static string SysInfo_ShowState {
             get {
                 return ResourceManager.GetString("SysInfo_ShowState", resourceCulture);
             }
@@ -3069,7 +3069,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display System Name.
         /// </summary>
-        internal static string SysInfo_ShowSysName {
+        public static string SysInfo_ShowSysName {
             get {
                 return ResourceManager.GetString("SysInfo_ShowSysName", resourceCulture);
             }
@@ -3078,7 +3078,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Target.
         /// </summary>
-        internal static string SysInfo_ShowTarget {
+        public static string SysInfo_ShowTarget {
             get {
                 return ResourceManager.GetString("SysInfo_ShowTarget", resourceCulture);
             }
@@ -3087,7 +3087,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Travel Trip Statistics.
         /// </summary>
-        internal static string SysInfo_ShowTrip {
+        public static string SysInfo_ShowTrip {
             get {
                 return ResourceManager.GetString("SysInfo_ShowTrip", resourceCulture);
             }
@@ -3096,7 +3096,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Display Visits.
         /// </summary>
-        internal static string SysInfo_ShowVisits {
+        public static string SysInfo_ShowVisits {
             get {
                 return ResourceManager.GetString("SysInfo_ShowVisits", resourceCulture);
             }
@@ -3105,7 +3105,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to When transparent, use skinny look.
         /// </summary>
-        internal static string SysInfo_Skinny {
+        public static string SysInfo_Skinny {
             get {
                 return ResourceManager.GetString("SysInfo_Skinny", resourceCulture);
             }
@@ -3114,7 +3114,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
-        internal static string Table_Copy {
+        public static string Table_Copy {
             get {
                 return ResourceManager.GetString("Table_Copy", resourceCulture);
             }
@@ -3123,7 +3123,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Delete Rows.
         /// </summary>
-        internal static string Table_DeleteRows {
+        public static string Table_DeleteRows {
             get {
                 return ResourceManager.GetString("Table_DeleteRows", resourceCulture);
             }
@@ -3132,7 +3132,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Edit bookmark.
         /// </summary>
-        internal static string Table_EditBookmark {
+        public static string Table_EditBookmark {
             get {
                 return ResourceManager.GetString("Table_EditBookmark", resourceCulture);
             }
@@ -3141,7 +3141,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Insert Copied Rows.
         /// </summary>
-        internal static string Table_InsertCopiedRows {
+        public static string Table_InsertCopiedRows {
             get {
                 return ResourceManager.GetString("Table_InsertCopiedRows", resourceCulture);
             }
@@ -3150,7 +3150,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        internal static string Table_Paste {
+        public static string Table_Paste {
             get {
                 return ResourceManager.GetString("Table_Paste", resourceCulture);
             }
@@ -3159,7 +3159,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set Target.
         /// </summary>
-        internal static string Table_SetTarget {
+        public static string Table_SetTarget {
             get {
                 return ResourceManager.GetString("Table_SetTarget", resourceCulture);
             }
@@ -3168,7 +3168,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
-        internal static string TimeRange_All {
+        public static string TimeRange_All {
             get {
                 return ResourceManager.GetString("TimeRange_All", resourceCulture);
             }
@@ -3177,7 +3177,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Custom.
         /// </summary>
-        internal static string TimeRange_Custom {
+        public static string TimeRange_Custom {
             get {
                 return ResourceManager.GetString("TimeRange_Custom", resourceCulture);
             }
@@ -3186,7 +3186,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Distant Worlds Expedition.
         /// </summary>
-        internal static string TimeRange_DistantWorlds {
+        public static string TimeRange_DistantWorlds {
             get {
                 return ResourceManager.GetString("TimeRange_DistantWorlds", resourceCulture);
             }
@@ -3195,7 +3195,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to FGE Expedition start.
         /// </summary>
-        internal static string TimeRange_FGE_Start {
+        public static string TimeRange_FGE_Start {
             get {
                 return ResourceManager.GetString("TimeRange_FGE_Start", resourceCulture);
             }
@@ -3204,7 +3204,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Last Month.
         /// </summary>
-        internal static string TimeRange_LastMonth {
+        public static string TimeRange_LastMonth {
             get {
                 return ResourceManager.GetString("TimeRange_LastMonth", resourceCulture);
             }
@@ -3213,7 +3213,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Last Week.
         /// </summary>
-        internal static string TimeRange_LastWeek {
+        public static string TimeRange_LastWeek {
             get {
                 return ResourceManager.GetString("TimeRange_LastWeek", resourceCulture);
             }
@@ -3222,7 +3222,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Last Year.
         /// </summary>
-        internal static string TimeRange_LastYear {
+        public static string TimeRange_LastYear {
             get {
                 return ResourceManager.GetString("TimeRange_LastYear", resourceCulture);
             }
@@ -3231,7 +3231,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Expedition Panel.
         /// </summary>
-        internal static string TravelGrid_AddTo_Expedition {
+        public static string TravelGrid_AddTo_Expedition {
             get {
                 return ResourceManager.GetString("TravelGrid_AddTo_Expedition", resourceCulture);
             }
@@ -3240,7 +3240,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Add to ....
         /// </summary>
-        internal static string TravelGrid_AddTo_Menu {
+        public static string TravelGrid_AddTo_Menu {
             get {
                 return ResourceManager.GetString("TravelGrid_AddTo_Menu", resourceCulture);
             }
@@ -3249,7 +3249,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to System on Trilateration Panel.
         /// </summary>
-        internal static string TravelGrid_AddTo_Trilat {
+        public static string TravelGrid_AddTo_Trilat {
             get {
                 return ResourceManager.GetString("TravelGrid_AddTo_Trilat", resourceCulture);
             }
@@ -3258,7 +3258,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Both of the above.
         /// </summary>
-        internal static string TravelGrid_AddTo_TrilatAndWanted {
+        public static string TravelGrid_AddTo_TrilatAndWanted {
             get {
                 return ResourceManager.GetString("TravelGrid_AddTo_TrilatAndWanted", resourceCulture);
             }
@@ -3267,7 +3267,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Wanted Systems on Trilateration Panel.
         /// </summary>
-        internal static string TravelGrid_AddTo_Wanted {
+        public static string TravelGrid_AddTo_Wanted {
             get {
                 return ResourceManager.GetString("TravelGrid_AddTo_Wanted", resourceCulture);
             }
@@ -3276,7 +3276,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Assign new system.
         /// </summary>
-        internal static string TravelGrid_AssignSystem {
+        public static string TravelGrid_AssignSystem {
             get {
                 return ResourceManager.GetString("TravelGrid_AssignSystem", resourceCulture);
             }
@@ -3285,7 +3285,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Move Entries to another Commander.
         /// </summary>
-        internal static string TravelGrid_ChangeCmdr {
+        public static string TravelGrid_ChangeCmdr {
             get {
                 return ResourceManager.GetString("TravelGrid_ChangeCmdr", resourceCulture);
             }
@@ -3294,7 +3294,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Star Map Colour....
         /// </summary>
-        internal static string TravelGrid_Colour {
+        public static string TravelGrid_Colour {
             get {
                 return ResourceManager.GetString("TravelGrid_Colour", resourceCulture);
             }
@@ -3303,7 +3303,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Copy journal entry to clipboard.
         /// </summary>
-        internal static string TravelGrid_CopyEntry {
+        public static string TravelGrid_CopyEntry {
             get {
                 return ResourceManager.GetString("TravelGrid_CopyEntry", resourceCulture);
             }
@@ -3312,7 +3312,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hide Entries.
         /// </summary>
-        internal static string TravelGrid_HideEntries {
+        public static string TravelGrid_HideEntries {
             get {
                 return ResourceManager.GetString("TravelGrid_HideEntries", resourceCulture);
             }
@@ -3321,7 +3321,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove Journal Entry.
         /// </summary>
-        internal static string TravelGrid_Remove {
+        public static string TravelGrid_Remove {
             get {
                 return ResourceManager.GetString("TravelGrid_Remove", resourceCulture);
             }
@@ -3330,7 +3330,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Run Actions on this entry.
         /// </summary>
-        internal static string TravelGrid_RunActions {
+        public static string TravelGrid_RunActions {
             get {
                 return ResourceManager.GetString("TravelGrid_RunActions", resourceCulture);
             }
@@ -3339,7 +3339,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Send unsynced scan to EDDN.
         /// </summary>
-        internal static string TravelGrid_SendToEDDN {
+        public static string TravelGrid_SendToEDDN {
             get {
                 return ResourceManager.GetString("TravelGrid_SendToEDDN", resourceCulture);
             }
@@ -3348,7 +3348,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set Note.
         /// </summary>
-        internal static string TravelGrid_SetNote {
+        public static string TravelGrid_SetNote {
             get {
                 return ResourceManager.GetString("TravelGrid_SetNote", resourceCulture);
             }
@@ -3357,7 +3357,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set Start/Stop point for travel calculations.
         /// </summary>
-        internal static string TravelGrid_SetStartStop {
+        public static string TravelGrid_SetStartStop {
             get {
                 return ResourceManager.GetString("TravelGrid_SetStartStop", resourceCulture);
             }
@@ -3366,7 +3366,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Go to star on 3D Map.
         /// </summary>
-        internal static string TravelGrid_ShowOnMap {
+        public static string TravelGrid_ShowOnMap {
             get {
                 return ResourceManager.GetString("TravelGrid_ShowOnMap", resourceCulture);
             }
@@ -3375,7 +3375,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
-        internal static string TravelGrid_ViewOnEDSM {
+        public static string TravelGrid_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("TravelGrid_ViewOnEDSM", resourceCulture);
             }
@@ -3384,7 +3384,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Write event info to Log (Debug).
         /// </summary>
-        internal static string TravelGrid_WriteToLog {
+        public static string TravelGrid_WriteToLog {
             get {
                 return ResourceManager.GetString("TravelGrid_WriteToLog", resourceCulture);
             }
@@ -3393,7 +3393,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Add 20.
         /// </summary>
-        internal static string Trilateration_Add20 {
+        public static string Trilateration_Add20 {
             get {
                 return ResourceManager.GetString("Trilateration_Add20", resourceCulture);
             }
@@ -3402,7 +3402,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Add the oldest 20 unknown systems from history to wanted list.
         /// </summary>
-        internal static string Trilateration_Add20_ToolTip {
+        public static string Trilateration_Add20_ToolTip {
             get {
                 return ResourceManager.GetString("Trilateration_Add20_ToolTip", resourceCulture);
             }
@@ -3411,7 +3411,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Add all EDSM systems.
         /// </summary>
-        internal static string Trilateration_AddEDSM {
+        public static string Trilateration_AddEDSM {
             get {
                 return ResourceManager.GetString("Trilateration_AddEDSM", resourceCulture);
             }
@@ -3420,7 +3420,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Add all local systems.
         /// </summary>
-        internal static string Trilateration_AddLocal {
+        public static string Trilateration_AddLocal {
             get {
                 return ResourceManager.GetString("Trilateration_AddLocal", resourceCulture);
             }
@@ -3429,7 +3429,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Add to wanted systems.
         /// </summary>
-        internal static string Trilateration_AddToWanted {
+        public static string Trilateration_AddToWanted {
             get {
                 return ResourceManager.GetString("Trilateration_AddToWanted", resourceCulture);
             }
@@ -3438,7 +3438,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Delete all with known position.
         /// </summary>
-        internal static string Trilateration_DeleteKnown {
+        public static string Trilateration_DeleteKnown {
             get {
                 return ResourceManager.GetString("Trilateration_DeleteKnown", resourceCulture);
             }
@@ -3447,7 +3447,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to From System:.
         /// </summary>
-        internal static string Trilateration_FromSystem {
+        public static string Trilateration_FromSystem {
             get {
                 return ResourceManager.GetString("Trilateration_FromSystem", resourceCulture);
             }
@@ -3456,7 +3456,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        internal static string Trilateration_Paste {
+        public static string Trilateration_Paste {
             get {
                 return ResourceManager.GetString("Trilateration_Paste", resourceCulture);
             }
@@ -3465,7 +3465,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove All.
         /// </summary>
-        internal static string Trilateration_RemoveAll {
+        public static string Trilateration_RemoveAll {
             get {
                 return ResourceManager.GetString("Trilateration_RemoveAll", resourceCulture);
             }
@@ -3474,7 +3474,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove all.
         /// </summary>
-        internal static string Trilateration_RemoveAll_ToolTip {
+        public static string Trilateration_RemoveAll_ToolTip {
             get {
                 return ResourceManager.GetString("Trilateration_RemoveAll_ToolTip", resourceCulture);
             }
@@ -3483,7 +3483,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove from wanted systems.
         /// </summary>
-        internal static string Trilateration_RemoveFromWanted {
+        public static string Trilateration_RemoveFromWanted {
             get {
                 return ResourceManager.GetString("Trilateration_RemoveFromWanted", resourceCulture);
             }
@@ -3492,7 +3492,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove Unused.
         /// </summary>
-        internal static string Trilateration_RemoveUnused {
+        public static string Trilateration_RemoveUnused {
             get {
                 return ResourceManager.GetString("Trilateration_RemoveUnused", resourceCulture);
             }
@@ -3501,7 +3501,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remove unused.
         /// </summary>
-        internal static string Trilateration_RemoveUnused_ToolTip {
+        public static string Trilateration_RemoveUnused_ToolTip {
             get {
                 return ResourceManager.GetString("Trilateration_RemoveUnused_ToolTip", resourceCulture);
             }
@@ -3510,7 +3510,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 3d map.
         /// </summary>
-        internal static string Trilateration_ShowOnMap {
+        public static string Trilateration_ShowOnMap {
             get {
                 return ResourceManager.GetString("Trilateration_ShowOnMap", resourceCulture);
             }
@@ -3519,7 +3519,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Show 3d map.
         /// </summary>
-        internal static string Trilateration_ShowOnMap_ToolTip {
+        public static string Trilateration_ShowOnMap_ToolTip {
             get {
                 return ResourceManager.GetString("Trilateration_ShowOnMap_ToolTip", resourceCulture);
             }
@@ -3528,7 +3528,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start &amp;new.
         /// </summary>
-        internal static string Trilateration_StartNew {
+        public static string Trilateration_StartNew {
             get {
                 return ResourceManager.GetString("Trilateration_StartNew", resourceCulture);
             }
@@ -3537,7 +3537,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Calculate coordinates for current system.
         /// </summary>
-        internal static string Trilateration_StartNew_ToolTip {
+        public static string Trilateration_StartNew_ToolTip {
             get {
                 return ResourceManager.GetString("Trilateration_StartNew_ToolTip", resourceCulture);
             }
@@ -3546,7 +3546,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Submit Distances.
         /// </summary>
-        internal static string Trilateration_SubmitDistances {
+        public static string Trilateration_SubmitDistances {
             get {
                 return ResourceManager.GetString("Trilateration_SubmitDistances", resourceCulture);
             }
@@ -3555,7 +3555,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to View on EDSM.
         /// </summary>
-        internal static string Trilateration_ViewOnEDSM {
+        public static string Trilateration_ViewOnEDSM {
             get {
                 return ResourceManager.GetString("Trilateration_ViewOnEDSM", resourceCulture);
             }
@@ -3564,7 +3564,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Visited without coordinates:.
         /// </summary>
-        internal static string Trilateration_VisitedWithoutCoords {
+        public static string Trilateration_VisitedWithoutCoords {
             get {
                 return ResourceManager.GetString("Trilateration_VisitedWithoutCoords", resourceCulture);
             }
@@ -3573,7 +3573,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Start New to update count.
         /// </summary>
-        internal static string Trilateration_VisitedWithoutCoords_ToolTip {
+        public static string Trilateration_VisitedWithoutCoords_ToolTip {
             get {
                 return ResourceManager.GetString("Trilateration_VisitedWithoutCoords_ToolTip", resourceCulture);
             }
@@ -3582,7 +3582,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Refresh.
         /// </summary>
-        internal static string TripPanel_Refresh {
+        public static string TripPanel_Refresh {
             get {
                 return ResourceManager.GetString("TripPanel_Refresh", resourceCulture);
             }
@@ -3591,7 +3591,7 @@ namespace EDDiscovery.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Set ship details.
         /// </summary>
-        internal static string TripPanel_ShipDetails {
+        public static string TripPanel_ShipDetails {
             get {
                 return ResourceManager.GetString("TripPanel_ShipDetails", resourceCulture);
             }

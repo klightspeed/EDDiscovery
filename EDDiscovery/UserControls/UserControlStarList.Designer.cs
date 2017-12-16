@@ -305,21 +305,21 @@ namespace EDDiscovery.UserControls
             // 
             this.mapGotoStartoolStripMenuItem.Name = "mapGotoStartoolStripMenuItem";
             this.mapGotoStartoolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.mapGotoStartoolStripMenuItem.Text = Properties.Strings.StarList_ShowOnMap;
+            this.mapGotoStartoolStripMenuItem.Text = Strings.Controls.StarList_ShowOnMap;
             this.mapGotoStartoolStripMenuItem.Click += new System.EventHandler(this.mapGotoStartoolStripMenuItem_Click);
             // 
             // viewOnEDSMToolStripMenuItem
             // 
             this.viewOnEDSMToolStripMenuItem.Name = "viewOnEDSMToolStripMenuItem";
             this.viewOnEDSMToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.viewOnEDSMToolStripMenuItem.Text = Properties.Strings.StarList_ViewOnEDSM;
+            this.viewOnEDSMToolStripMenuItem.Text = Strings.Controls.StarList_ViewOnEDSM;
             this.viewOnEDSMToolStripMenuItem.Click += new System.EventHandler(this.viewOnEDSMToolStripMenuItem_Click);
             // 
             // setNoteToolStripMenuItem
             // 
             this.setNoteToolStripMenuItem.Name = "setNoteToolStripMenuItem";
             this.setNoteToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.setNoteToolStripMenuItem.Text = Properties.Strings.StarList_SetNote;
+            this.setNoteToolStripMenuItem.Text = Strings.Controls.StarList_SetNote;
             this.setNoteToolStripMenuItem.Click += new System.EventHandler(this.setNoteToolStripMenuItem_Click);
             // 
             // toolTip

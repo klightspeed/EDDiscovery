@@ -143,7 +143,7 @@ namespace EDDiscovery.UserControls
             this.showSystemInformationToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showSystemInformationToolStripMenuItem.Name = "showSystemInformationToolStripMenuItem";
             this.showSystemInformationToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showSystemInformationToolStripMenuItem.Text = Properties.Strings.SPanel_ShowSysInfo;
+            this.showSystemInformationToolStripMenuItem.Text = Strings.Controls.SPanel_ShowSysInfo;
             this.showSystemInformationToolStripMenuItem.Click += new System.EventHandler(this.showSystemInformationToolStripMenuItem_Click);
             // 
             // showHabitationMinimumAndMaximumDistanceToolStripMenuItem
@@ -153,7 +153,7 @@ namespace EDDiscovery.UserControls
             this.showHabitationMinimumAndMaximumDistanceToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showHabitationMinimumAndMaximumDistanceToolStripMenuItem.Name = "showHabitationMinimumAndMaximumDistanceToolStripMenuItem";
             this.showHabitationMinimumAndMaximumDistanceToolStripMenuItem.Size = new System.Drawing.Size(346, 44);
-            this.showHabitationMinimumAndMaximumDistanceToolStripMenuItem.Text = Properties.Strings.SPanel_ShowHabitZone;
+            this.showHabitationMinimumAndMaximumDistanceToolStripMenuItem.Text = Strings.Controls.SPanel_ShowHabitZone;
             this.showHabitationMinimumAndMaximumDistanceToolStripMenuItem.Click += new System.EventHandler(this.showHabitationMinimumAndMaximumDistanceToolStripMenuItem_Click);
             // 
             // toolStripMenuItemTargetLine
@@ -163,7 +163,7 @@ namespace EDDiscovery.UserControls
             this.toolStripMenuItemTargetLine.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemTargetLine.Name = "toolStripMenuItemTargetLine";
             this.toolStripMenuItemTargetLine.Size = new System.Drawing.Size(346, 22);
-            this.toolStripMenuItemTargetLine.Text = Properties.Strings.SPanel_ShowTargetLine;
+            this.toolStripMenuItemTargetLine.Text = Strings.Controls.SPanel_ShowTargetLine;
             this.toolStripMenuItemTargetLine.Click += new System.EventHandler(this.toolStripMenuItemTargetLine_Click);
             // 
             // EDSMButtonToolStripMenuItem
@@ -173,7 +173,7 @@ namespace EDDiscovery.UserControls
             this.EDSMButtonToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.EDSMButtonToolStripMenuItem.Name = "EDSMButtonToolStripMenuItem";
             this.EDSMButtonToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.EDSMButtonToolStripMenuItem.Text = Properties.Strings.SPanel_EDSM;
+            this.EDSMButtonToolStripMenuItem.Text = Strings.Controls.SPanel_EDSM;
             this.EDSMButtonToolStripMenuItem.Click += new System.EventHandler(this.EDSMButtonToolStripMenuItem_Click);
             // 
             // toolStripMenuItemTime
@@ -183,7 +183,7 @@ namespace EDDiscovery.UserControls
             this.toolStripMenuItemTime.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemTime.Name = "toolStripMenuItemTime";
             this.toolStripMenuItemTime.Size = new System.Drawing.Size(346, 22);
-            this.toolStripMenuItemTime.Text = Properties.Strings.SPanel_Time;
+            this.toolStripMenuItemTime.Text = Strings.Controls.SPanel_Time;
             this.toolStripMenuItemTime.Click += new System.EventHandler(this.toolStripMenuItemTime_Click);
             // 
             // iconToolStripMenuItem
@@ -193,7 +193,7 @@ namespace EDDiscovery.UserControls
             this.iconToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.iconToolStripMenuItem.Name = "iconToolStripMenuItem";
             this.iconToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.iconToolStripMenuItem.Text = Properties.Strings.SPanel_EventFilter;
+            this.iconToolStripMenuItem.Text = Strings.Controls.SPanel_EventFilter;
             this.iconToolStripMenuItem.Click += new System.EventHandler(this.iconToolStripMenuItem_Click);
             // 
             // showDescriptionToolStripMenuItem
@@ -203,7 +203,7 @@ namespace EDDiscovery.UserControls
             this.showDescriptionToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showDescriptionToolStripMenuItem.Name = "showDescriptionToolStripMenuItem";
             this.showDescriptionToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showDescriptionToolStripMenuItem.Text = Properties.Strings.SPanel_ShowDesc;
+            this.showDescriptionToolStripMenuItem.Text = Strings.Controls.SPanel_ShowDesc;
             this.showDescriptionToolStripMenuItem.Click += new System.EventHandler(this.showDescriptionToolStripMenuItem_Click);
             // 
             // showInformationToolStripMenuItem
@@ -213,7 +213,7 @@ namespace EDDiscovery.UserControls
             this.showInformationToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showInformationToolStripMenuItem.Name = "showInformationToolStripMenuItem";
             this.showInformationToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showInformationToolStripMenuItem.Text = Properties.Strings.SPanel_ShowInfo;
+            this.showInformationToolStripMenuItem.Text = Strings.Controls.SPanel_ShowInfo;
             this.showInformationToolStripMenuItem.Click += new System.EventHandler(this.showInformationToolStripMenuItem_Click);
             // 
             // showNotesToolStripMenuItem
@@ -223,7 +223,7 @@ namespace EDDiscovery.UserControls
             this.showNotesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showNotesToolStripMenuItem.Name = "showNotesToolStripMenuItem";
             this.showNotesToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showNotesToolStripMenuItem.Text = Properties.Strings.SPanel_ShowNotes;
+            this.showNotesToolStripMenuItem.Text = Strings.Controls.SPanel_ShowNotes;
             this.showNotesToolStripMenuItem.Click += new System.EventHandler(this.showNotesToolStripMenuItem_Click);
             // 
             // showXYZToolStripMenuItem
@@ -233,7 +233,7 @@ namespace EDDiscovery.UserControls
             this.showXYZToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showXYZToolStripMenuItem.Name = "showXYZToolStripMenuItem";
             this.showXYZToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showXYZToolStripMenuItem.Text = Properties.Strings.SPanel_ShowXYZ;
+            this.showXYZToolStripMenuItem.Text = Strings.Controls.SPanel_ShowXYZ;
             this.showXYZToolStripMenuItem.Click += new System.EventHandler(this.showXYZToolStripMenuItem_Click);
             // 
             // showTargetToolStripMenuItem
@@ -243,7 +243,7 @@ namespace EDDiscovery.UserControls
             this.showTargetToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showTargetToolStripMenuItem.Name = "showTargetToolStripMenuItem";
             this.showTargetToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showTargetToolStripMenuItem.Text = Properties.Strings.SPanel_TargetDist;
+            this.showTargetToolStripMenuItem.Text = Strings.Controls.SPanel_TargetDist;
             this.showTargetToolStripMenuItem.Click += new System.EventHandler(this.showTargetToolStripMenuItem_Click);
             // 
             // blackBoxAroundTextToolStripMenuItem
@@ -253,7 +253,7 @@ namespace EDDiscovery.UserControls
             this.blackBoxAroundTextToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.blackBoxAroundTextToolStripMenuItem.Name = "blackBoxAroundTextToolStripMenuItem";
             this.blackBoxAroundTextToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.blackBoxAroundTextToolStripMenuItem.Text = Properties.Strings.SPanel_BlackBorder;
+            this.blackBoxAroundTextToolStripMenuItem.Text = Strings.Controls.SPanel_BlackBorder;
             this.blackBoxAroundTextToolStripMenuItem.Click += new System.EventHandler(this.blackBoxAroundTextToolStripMenuItem_Click);
             // 
             // showDistancesOnFSDJumpsOnlyToolStripMenuItem
@@ -263,7 +263,7 @@ namespace EDDiscovery.UserControls
             this.showDistancesOnFSDJumpsOnlyToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showDistancesOnFSDJumpsOnlyToolStripMenuItem.Name = "showDistancesOnFSDJumpsOnlyToolStripMenuItem";
             this.showDistancesOnFSDJumpsOnlyToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showDistancesOnFSDJumpsOnlyToolStripMenuItem.Text = Properties.Strings.SPanel_FSDCoords;
+            this.showDistancesOnFSDJumpsOnlyToolStripMenuItem.Text = Strings.Controls.SPanel_FSDCoords;
             this.showDistancesOnFSDJumpsOnlyToolStripMenuItem.Click += new System.EventHandler(this.showDistancesOnFSDJumpsOnlyToolStripMenuItem_Click);
             // 
             // expandTextOverEmptyColumnsToolStripMenuItem
@@ -273,7 +273,7 @@ namespace EDDiscovery.UserControls
             this.expandTextOverEmptyColumnsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.expandTextOverEmptyColumnsToolStripMenuItem.Name = "expandTextOverEmptyColumnsToolStripMenuItem";
             this.expandTextOverEmptyColumnsToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.expandTextOverEmptyColumnsToolStripMenuItem.Text = Properties.Strings.SPanel_ExpandText;
+            this.expandTextOverEmptyColumnsToolStripMenuItem.Text = Strings.Controls.SPanel_ExpandText;
             this.expandTextOverEmptyColumnsToolStripMenuItem.Click += new System.EventHandler(this.expandTextOverEmptyColumnsToolStripMenuItem_Click);
             // 
             // dontShowInformationWhenToolStripMenuItem
@@ -284,7 +284,7 @@ namespace EDDiscovery.UserControls
             this.dontshowwhenInSystemMapPanelToolStripMenuItem});
             this.dontShowInformationWhenToolStripMenuItem.Name = "dontShowInformationWhenToolStripMenuItem";
             this.dontShowInformationWhenToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.dontShowInformationWhenToolStripMenuItem.Text = Properties.Strings.SPanel_DontShow_Menu;
+            this.dontShowInformationWhenToolStripMenuItem.Text = Strings.Controls.SPanel_DontShow_Menu;
             // 
             // showNothingWhenDockedtoolStripMenuItem
             // 
@@ -293,7 +293,7 @@ namespace EDDiscovery.UserControls
             this.showNothingWhenDockedtoolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showNothingWhenDockedtoolStripMenuItem.Name = "showNothingWhenDockedtoolStripMenuItem";
             this.showNothingWhenDockedtoolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.showNothingWhenDockedtoolStripMenuItem.Text = Properties.Strings.SPanel_DontShow_Landed;
+            this.showNothingWhenDockedtoolStripMenuItem.Text = Strings.Controls.SPanel_DontShow_Landed;
             this.showNothingWhenDockedtoolStripMenuItem.Click += new System.EventHandler(this.showNothingWhenDockedtoolStripMenuItem_Click);
             // 
             // dontshowwhenInGalaxyPanelToolStripMenuItem
@@ -303,7 +303,7 @@ namespace EDDiscovery.UserControls
             this.dontshowwhenInGalaxyPanelToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.dontshowwhenInGalaxyPanelToolStripMenuItem.Name = "dontshowwhenInGalaxyPanelToolStripMenuItem";
             this.dontshowwhenInGalaxyPanelToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.dontshowwhenInGalaxyPanelToolStripMenuItem.Text = Properties.Strings.SPanel_DontShow_GalMap;
+            this.dontshowwhenInGalaxyPanelToolStripMenuItem.Text = Strings.Controls.SPanel_DontShow_GalMap;
             this.dontshowwhenInGalaxyPanelToolStripMenuItem.Click += new System.EventHandler(this.dontshowwhenInGalaxyPanelToolStripMenuItem_Click);
             // 
             // dontshowwhenInSystemMapPanelToolStripMenuItem
@@ -313,7 +313,7 @@ namespace EDDiscovery.UserControls
             this.dontshowwhenInSystemMapPanelToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.dontshowwhenInSystemMapPanelToolStripMenuItem.Name = "dontshowwhenInSystemMapPanelToolStripMenuItem";
             this.dontshowwhenInSystemMapPanelToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.dontshowwhenInSystemMapPanelToolStripMenuItem.Text = Properties.Strings.SPanel_DontShow_SysMap;
+            this.dontshowwhenInSystemMapPanelToolStripMenuItem.Text = Strings.Controls.SPanel_DontShow_SysMap;
             this.dontshowwhenInSystemMapPanelToolStripMenuItem.Click += new System.EventHandler(this.dontshowwhenInSystemPanelToolStripMenuItem_Click);
             // 
             // OrdertoolStripMenuItem
@@ -324,41 +324,41 @@ namespace EDDiscovery.UserControls
             this.orderTargetDistanceXYZNotesToolStripMenuItem});
             this.OrdertoolStripMenuItem.Name = "OrdertoolStripMenuItem";
             this.OrdertoolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.OrdertoolStripMenuItem.Text = Properties.Strings.SPanel_ColumnOrder_Menu;
+            this.OrdertoolStripMenuItem.Text = Strings.Controls.SPanel_ColumnOrder_Menu;
             // 
             // orderDefaultToolStripMenuItem
             // 
             this.orderDefaultToolStripMenuItem.Name = "orderDefaultToolStripMenuItem";
             this.orderDefaultToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.orderDefaultToolStripMenuItem.Text = Properties.Strings.SPanel_ColumnOrder_Default;
+            this.orderDefaultToolStripMenuItem.Text = Strings.Controls.SPanel_ColumnOrder_Default;
             this.orderDefaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // orderNotesAfterXYZToolStripMenuItem
             // 
             this.orderNotesAfterXYZToolStripMenuItem.Name = "orderNotesAfterXYZToolStripMenuItem";
             this.orderNotesAfterXYZToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.orderNotesAfterXYZToolStripMenuItem.Text = Properties.Strings.SPanel_ColumnOrder_NotesAfterCoords;
+            this.orderNotesAfterXYZToolStripMenuItem.Text = Strings.Controls.SPanel_ColumnOrder_NotesAfterCoords;
             this.orderNotesAfterXYZToolStripMenuItem.Click += new System.EventHandler(this.notesAfterXYZToolStripMenuItem_Click);
             // 
             // orderTargetDistanceXYZNotesToolStripMenuItem
             // 
             this.orderTargetDistanceXYZNotesToolStripMenuItem.Name = "orderTargetDistanceXYZNotesToolStripMenuItem";
             this.orderTargetDistanceXYZNotesToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.orderTargetDistanceXYZNotesToolStripMenuItem.Text = Properties.Strings.SPanel_ColumnOrder_DistCoordNotes;
+            this.orderTargetDistanceXYZNotesToolStripMenuItem.Text = Strings.Controls.SPanel_ColumnOrder_DistCoordNotes;
             this.orderTargetDistanceXYZNotesToolStripMenuItem.Click += new System.EventHandler(this.targetDistanceXYZNotesToolStripMenuItem_Click);
             // 
             // configureEventFilterToolStripMenuItem
             // 
             this.configureEventFilterToolStripMenuItem.Name = "configureEventFilterToolStripMenuItem";
             this.configureEventFilterToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.configureEventFilterToolStripMenuItem.Text = Properties.Strings.SPanel_EventFilter;
+            this.configureEventFilterToolStripMenuItem.Text = Strings.Controls.SPanel_EventFilter;
             this.configureEventFilterToolStripMenuItem.Click += new System.EventHandler(this.configureEventFilterToolStripMenuItem_Click);
             // 
             // configureFieldFilterToolStripMenuItem
             // 
             this.configureFieldFilterToolStripMenuItem.Name = "configureFieldFilterToolStripMenuItem";
             this.configureFieldFilterToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.configureFieldFilterToolStripMenuItem.Text = Properties.Strings.SPanel_FieldFilter;
+            this.configureFieldFilterToolStripMenuItem.Text = Strings.Controls.SPanel_FieldFilter;
             this.configureFieldFilterToolStripMenuItem.Click += new System.EventHandler(this.configureFieldFilterToolStripMenuItem_Click);
             // 
             // surfaceScanDetailsToolStripMenuItem
@@ -371,7 +371,7 @@ namespace EDDiscovery.UserControls
             this.scanUntilNextToolStripMenuItem});
             this.surfaceScanDetailsToolStripMenuItem.Name = "surfaceScanDetailsToolStripMenuItem";
             this.surfaceScanDetailsToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.surfaceScanDetailsToolStripMenuItem.Text = Properties.Strings.SPanel_ScanDisplay_Menu;
+            this.surfaceScanDetailsToolStripMenuItem.Text = Strings.Controls.SPanel_ScanDisplay_Menu;
             // 
             // scanNoToolStripMenuItem
             // 
@@ -380,7 +380,7 @@ namespace EDDiscovery.UserControls
             this.scanNoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.scanNoToolStripMenuItem.Name = "scanNoToolStripMenuItem";
             this.scanNoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.scanNoToolStripMenuItem.Text = Properties.Strings.SPanel_ScanDisplay_DontShow;
+            this.scanNoToolStripMenuItem.Text = Strings.Controls.SPanel_ScanDisplay_DontShow;
             this.scanNoToolStripMenuItem.Click += new System.EventHandler(this.scanNoToolStripMenuItem_Click);
             // 
             // scan15sToolStripMenuItem
@@ -388,7 +388,7 @@ namespace EDDiscovery.UserControls
             this.scan15sToolStripMenuItem.CheckOnClick = true;
             this.scan15sToolStripMenuItem.Name = "scan15sToolStripMenuItem";
             this.scan15sToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.scan15sToolStripMenuItem.Text = Properties.Strings.SPanel_ScanDisplay_15s;
+            this.scan15sToolStripMenuItem.Text = Strings.Controls.SPanel_ScanDisplay_15s;
             this.scan15sToolStripMenuItem.Click += new System.EventHandler(this.scan15sToolStripMenuItem_Click);
             // 
             // scan30sToolStripMenuItem
@@ -396,7 +396,7 @@ namespace EDDiscovery.UserControls
             this.scan30sToolStripMenuItem.CheckOnClick = true;
             this.scan30sToolStripMenuItem.Name = "scan30sToolStripMenuItem";
             this.scan30sToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.scan30sToolStripMenuItem.Text = Properties.Strings.SPanel_ScanDisplay_30s;
+            this.scan30sToolStripMenuItem.Text = Strings.Controls.SPanel_ScanDisplay_30s;
             this.scan30sToolStripMenuItem.Click += new System.EventHandler(this.scan30sToolStripMenuItem_Click);
             // 
             // scan60sToolStripMenuItem
@@ -404,7 +404,7 @@ namespace EDDiscovery.UserControls
             this.scan60sToolStripMenuItem.CheckOnClick = true;
             this.scan60sToolStripMenuItem.Name = "scan60sToolStripMenuItem";
             this.scan60sToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.scan60sToolStripMenuItem.Text = Properties.Strings.SPanel_ScanDisplay_60s;
+            this.scan60sToolStripMenuItem.Text = Strings.Controls.SPanel_ScanDisplay_60s;
             this.scan60sToolStripMenuItem.Click += new System.EventHandler(this.scan60sToolStripMenuItem_Click);
             // 
             // scanUntilNextToolStripMenuItem
@@ -412,7 +412,7 @@ namespace EDDiscovery.UserControls
             this.scanUntilNextToolStripMenuItem.CheckOnClick = true;
             this.scanUntilNextToolStripMenuItem.Name = "scanUntilNextToolStripMenuItem";
             this.scanUntilNextToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.scanUntilNextToolStripMenuItem.Text = Properties.Strings.SPanel_ScanDisplay_UntilNext;
+            this.scanUntilNextToolStripMenuItem.Text = Strings.Controls.SPanel_ScanDisplay_UntilNext;
             this.scanUntilNextToolStripMenuItem.Click += new System.EventHandler(this.scanUntilNextToolStripMenuItem_Click);
             // 
             // showInPositionToolStripMenuItem
@@ -425,20 +425,20 @@ namespace EDDiscovery.UserControls
             this.scanOnTopMenuItem});
             this.showInPositionToolStripMenuItem.Name = "showInPositionToolStripMenuItem";
             this.showInPositionToolStripMenuItem.Size = new System.Drawing.Size(346, 22);
-            this.showInPositionToolStripMenuItem.Text = Properties.Strings.SPanel_ScanPosition_Menu;
+            this.showInPositionToolStripMenuItem.Text = Strings.Controls.SPanel_ScanPosition_Menu;
             // 
             // scanRightMenuItem
             // 
             this.scanRightMenuItem.Name = "scanRightMenuItem";
             this.scanRightMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.scanRightMenuItem.Text = Properties.Strings.SPanel_ScanPosition_ToRight;
+            this.scanRightMenuItem.Text = Strings.Controls.SPanel_ScanPosition_ToRight;
             this.scanRightMenuItem.Click += new System.EventHandler(this.scanRightMenuItem_Click);
             // 
             // scanLeftMenuItem
             // 
             this.scanLeftMenuItem.Name = "scanLeftMenuItem";
             this.scanLeftMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.scanLeftMenuItem.Text = Properties.Strings.SPanel_ScanPosition_ToLeft;
+            this.scanLeftMenuItem.Text = Strings.Controls.SPanel_ScanPosition_ToLeft;
             this.scanLeftMenuItem.Click += new System.EventHandler(this.scanLeftMenuItem_Click);
             // 
             // scanAboveMenuItem
@@ -446,21 +446,21 @@ namespace EDDiscovery.UserControls
             this.scanAboveMenuItem.DoubleClickEnabled = true;
             this.scanAboveMenuItem.Name = "scanAboveMenuItem";
             this.scanAboveMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.scanAboveMenuItem.Text = Properties.Strings.SPanel_ScanPosition_Above;
+            this.scanAboveMenuItem.Text = Strings.Controls.SPanel_ScanPosition_Above;
             this.scanAboveMenuItem.Click += new System.EventHandler(this.scanAboveMenuItem_Click);
             // 
             // scanBelowMenuItem
             // 
             this.scanBelowMenuItem.Name = "scanBelowMenuItem";
             this.scanBelowMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.scanBelowMenuItem.Text = Properties.Strings.SPanel_ScanPosition_Below;
+            this.scanBelowMenuItem.Text = Strings.Controls.SPanel_ScanPosition_Below;
             this.scanBelowMenuItem.Click += new System.EventHandler(this.scanBelowMenuItem_Click);
             // 
             // scanOnTopMenuItem
             // 
             this.scanOnTopMenuItem.Name = "scanOnTopMenuItem";
             this.scanOnTopMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.scanOnTopMenuItem.Text = Properties.Strings.SPanel_ScanPosition_OnTop;
+            this.scanOnTopMenuItem.Text = Strings.Controls.SPanel_ScanPosition_OnTop;
             this.scanOnTopMenuItem.Click += new System.EventHandler(this.scanOnTopMenuItem_Click);
             // 
             // buttonExt0

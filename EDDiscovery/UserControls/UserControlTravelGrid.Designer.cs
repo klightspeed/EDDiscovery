@@ -389,28 +389,28 @@ namespace EDDiscovery.UserControls
             // 
             this.mapGotoStartoolStripMenuItem.Name = "mapGotoStartoolStripMenuItem";
             this.mapGotoStartoolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.mapGotoStartoolStripMenuItem.Text = Properties.Strings.TravelGrid_ShowOnMap;
+            this.mapGotoStartoolStripMenuItem.Text = Strings.Controls.TravelGrid_ShowOnMap;
             this.mapGotoStartoolStripMenuItem.Click += new System.EventHandler(this.mapGotoStartoolStripMenuItem_Click);
             // 
             // starMapColourToolStripMenuItem
             // 
             this.starMapColourToolStripMenuItem.Name = "starMapColourToolStripMenuItem";
             this.starMapColourToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.starMapColourToolStripMenuItem.Text = Properties.Strings.TravelGrid_Colour;
+            this.starMapColourToolStripMenuItem.Text = Strings.Controls.TravelGrid_Colour;
             this.starMapColourToolStripMenuItem.Click += new System.EventHandler(this.starMapColourToolStripMenuItem_Click);
             // 
             // hideSystemToolStripMenuItem
             // 
             this.hideSystemToolStripMenuItem.Name = "hideSystemToolStripMenuItem";
             this.hideSystemToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.hideSystemToolStripMenuItem.Text = Properties.Strings.TravelGrid_HideEntries;
+            this.hideSystemToolStripMenuItem.Text = Strings.Controls.TravelGrid_HideEntries;
             this.hideSystemToolStripMenuItem.Click += new System.EventHandler(this.hideSystemToolStripMenuItem_Click);
             // 
             // moveToAnotherCommanderToolStripMenuItem
             // 
             this.moveToAnotherCommanderToolStripMenuItem.Name = "moveToAnotherCommanderToolStripMenuItem";
             this.moveToAnotherCommanderToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.moveToAnotherCommanderToolStripMenuItem.Text = Properties.Strings.TravelGrid_ChangeCmdr;
+            this.moveToAnotherCommanderToolStripMenuItem.Text = Strings.Controls.TravelGrid_ChangeCmdr;
             this.moveToAnotherCommanderToolStripMenuItem.Click += new System.EventHandler(this.moveToAnotherCommanderToolStripMenuItem_Click);
             // 
             // addToTrilaterationToolStripMenuItem
@@ -422,97 +422,97 @@ namespace EDDiscovery.UserControls
             this.routeToolStripMenuItem});
             this.addToTrilaterationToolStripMenuItem.Name = "addToTrilaterationToolStripMenuItem";
             this.addToTrilaterationToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.addToTrilaterationToolStripMenuItem.Text = Properties.Strings.TravelGrid_AddTo_Menu;
+            this.addToTrilaterationToolStripMenuItem.Text = Strings.Controls.TravelGrid_AddTo_Menu;
             // 
             // trilaterationToolStripMenuItem
             // 
             this.trilaterationToolStripMenuItem.Name = "trilaterationToolStripMenuItem";
             this.trilaterationToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.trilaterationToolStripMenuItem.Text = Properties.Strings.TravelGrid_AddTo_Trilat;
+            this.trilaterationToolStripMenuItem.Text = Strings.Controls.TravelGrid_AddTo_Trilat;
             this.trilaterationToolStripMenuItem.Click += new System.EventHandler(this.trilaterationToolStripMenuItem_Click);
             // 
             // wantedSystemsToolStripMenuItem
             // 
             this.wantedSystemsToolStripMenuItem.Name = "wantedSystemsToolStripMenuItem";
             this.wantedSystemsToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.wantedSystemsToolStripMenuItem.Text = Properties.Strings.TravelGrid_AddTo_Wanted;
+            this.wantedSystemsToolStripMenuItem.Text = Strings.Controls.TravelGrid_AddTo_Wanted;
             this.wantedSystemsToolStripMenuItem.Click += new System.EventHandler(this.wantedSystemsToolStripMenuItem_Click);
             // 
             // bothToolStripMenuItem
             // 
             this.bothToolStripMenuItem.Name = "bothToolStripMenuItem";
             this.bothToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.bothToolStripMenuItem.Text = Properties.Strings.TravelGrid_AddTo_TrilatAndWanted;
+            this.bothToolStripMenuItem.Text = Strings.Controls.TravelGrid_AddTo_TrilatAndWanted;
             this.bothToolStripMenuItem.Click += new System.EventHandler(this.bothToolStripMenuItem_Click);
             // 
             // routeToolStripMenuItem
             // 
             this.routeToolStripMenuItem.Name = "routeToolStripMenuItem";
             this.routeToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.routeToolStripMenuItem.Text = Properties.Strings.TravelGrid_AddTo_Expedition;
+            this.routeToolStripMenuItem.Text = Strings.Controls.TravelGrid_AddTo_Expedition;
             this.routeToolStripMenuItem.Click += new System.EventHandler(this.routeToolStripMenuItem_Click);
             // 
             // viewOnEDSMToolStripMenuItem
             // 
             this.viewOnEDSMToolStripMenuItem.Name = "viewOnEDSMToolStripMenuItem";
             this.viewOnEDSMToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.viewOnEDSMToolStripMenuItem.Text = Properties.Strings.TravelGrid_ViewOnEDSM;
+            this.viewOnEDSMToolStripMenuItem.Text = Strings.Controls.TravelGrid_ViewOnEDSM;
             this.viewOnEDSMToolStripMenuItem.Click += new System.EventHandler(this.viewOnEDSMToolStripMenuItem_Click);
             // 
             // selectCorrectSystemToolStripMenuItem
             // 
             this.selectCorrectSystemToolStripMenuItem.Name = "selectCorrectSystemToolStripMenuItem";
             this.selectCorrectSystemToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.selectCorrectSystemToolStripMenuItem.Text = Properties.Strings.TravelGrid_AssignSystem;
+            this.selectCorrectSystemToolStripMenuItem.Text = Strings.Controls.TravelGrid_AssignSystem;
             this.selectCorrectSystemToolStripMenuItem.Click += new System.EventHandler(this.selectCorrectSystemToolStripMenuItem_Click);
             // 
             // toolStripMenuItemStartStop
             // 
             this.toolStripMenuItemStartStop.Name = "toolStripMenuItemStartStop";
             this.toolStripMenuItemStartStop.Size = new System.Drawing.Size(293, 22);
-            this.toolStripMenuItemStartStop.Text = Properties.Strings.TravelGrid_SetStartStop;
+            this.toolStripMenuItemStartStop.Text = Strings.Controls.TravelGrid_SetStartStop;
             this.toolStripMenuItemStartStop.Click += new System.EventHandler(this.toolStripMenuItemStartStop_Click);
             // 
             // removeJournalEntryToolStripMenuItem
             // 
             this.removeJournalEntryToolStripMenuItem.Name = "removeJournalEntryToolStripMenuItem";
             this.removeJournalEntryToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.removeJournalEntryToolStripMenuItem.Text = Properties.Strings.TravelGrid_Remove;
+            this.removeJournalEntryToolStripMenuItem.Text = Strings.Controls.TravelGrid_Remove;
             this.removeJournalEntryToolStripMenuItem.Click += new System.EventHandler(this.removeJournalEntryToolStripMenuItem_Click);
             // 
             // sendUnsyncedScanToEDDNToolStripMenuItem
             // 
             this.sendUnsyncedScanToEDDNToolStripMenuItem.Name = "sendUnsyncedScanToEDDNToolStripMenuItem";
             this.sendUnsyncedScanToEDDNToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.sendUnsyncedScanToEDDNToolStripMenuItem.Text = Properties.Strings.TravelGrid_SendToEDDN;
+            this.sendUnsyncedScanToEDDNToolStripMenuItem.Text = Strings.Controls.TravelGrid_SendToEDDN;
             this.sendUnsyncedScanToEDDNToolStripMenuItem.Click += new System.EventHandler(this.sendUnsyncedScanToEDDNToolStripMenuItem_Click);
             // 
             // runActionsOnThisEntryToolStripMenuItem
             // 
             this.runActionsOnThisEntryToolStripMenuItem.Name = "runActionsOnThisEntryToolStripMenuItem";
             this.runActionsOnThisEntryToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.runActionsOnThisEntryToolStripMenuItem.Text = Properties.Strings.TravelGrid_RunActions;
+            this.runActionsOnThisEntryToolStripMenuItem.Text = Strings.Controls.TravelGrid_RunActions;
             this.runActionsOnThisEntryToolStripMenuItem.Click += new System.EventHandler(this.runActionsOnThisEntryToolStripMenuItem_Click);
             // 
             // setNoteToolStripMenuItem
             // 
             this.setNoteToolStripMenuItem.Name = "setNoteToolStripMenuItem";
             this.setNoteToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.setNoteToolStripMenuItem.Text = Properties.Strings.TravelGrid_SetNote;
+            this.setNoteToolStripMenuItem.Text = Strings.Controls.TravelGrid_SetNote;
             this.setNoteToolStripMenuItem.Click += new System.EventHandler(this.setNoteToolStripMenuItem_Click);
             // 
             // writeEventInfoToLogDebugToolStripMenuItem
             // 
             this.writeEventInfoToLogDebugToolStripMenuItem.Name = "writeEventInfoToLogDebugToolStripMenuItem";
             this.writeEventInfoToLogDebugToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.writeEventInfoToLogDebugToolStripMenuItem.Text = Properties.Strings.TravelGrid_WriteToLog;
+            this.writeEventInfoToLogDebugToolStripMenuItem.Text = Strings.Controls.TravelGrid_WriteToLog;
             this.writeEventInfoToLogDebugToolStripMenuItem.Click += new System.EventHandler(this.writeEventInfoToLogDebugToolStripMenuItem_Click);
             // 
             // copyJournalEntryToClipboardToolStripMenuItem
             // 
             this.copyJournalEntryToClipboardToolStripMenuItem.Name = "copyJournalEntryToClipboardToolStripMenuItem";
             this.copyJournalEntryToClipboardToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.copyJournalEntryToClipboardToolStripMenuItem.Text = Properties.Strings.TravelGrid_CopyEntry;
+            this.copyJournalEntryToClipboardToolStripMenuItem.Text = Strings.Controls.TravelGrid_CopyEntry;
             this.copyJournalEntryToClipboardToolStripMenuItem.Click += new System.EventHandler(this.copyJournalEntryToClipboardToolStripMenuItem_Click);
             // 
             // toolTip

@@ -191,9 +191,9 @@
             this.checkBoxCustomEDDNTo.Name = "checkBoxCustomEDDNTo";
             this.checkBoxCustomEDDNTo.Size = new System.Drawing.Size(183, 17);
             this.checkBoxCustomEDDNTo.TabIndex = 4;
-            this.checkBoxCustomEDDNTo.Text = Properties.Strings.Commander_SendToEDDN;
+            this.checkBoxCustomEDDNTo.Text = Strings.Controls.Commander_SendToEDDN;
             this.checkBoxCustomEDDNTo.TickBoxReductionSize = 10;
-            this.toolTip1.SetToolTip(this.checkBoxCustomEDDNTo, Properties.Strings.Commander_SendToEDDN_ToolTip);
+            this.toolTip1.SetToolTip(this.checkBoxCustomEDDNTo, Strings.Controls.Commander_SendToEDDN_ToolTip);
             this.checkBoxCustomEDDNTo.UseVisualStyleBackColor = true;
             // 
             // checkBoxCustomEDSMFrom
@@ -209,9 +209,9 @@
             this.checkBoxCustomEDSMFrom.Name = "checkBoxCustomEDSMFrom";
             this.checkBoxCustomEDSMFrom.Size = new System.Drawing.Size(110, 17);
             this.checkBoxCustomEDSMFrom.TabIndex = 4;
-            this.checkBoxCustomEDSMFrom.Text = Properties.Strings.Commander_SyncFromEDSM;
+            this.checkBoxCustomEDSMFrom.Text = Strings.Controls.Commander_SyncFromEDSM;
             this.checkBoxCustomEDSMFrom.TickBoxReductionSize = 10;
-            this.toolTip1.SetToolTip(this.checkBoxCustomEDSMFrom, Properties.Strings.Commander_SyncFromEDSM_ToolTip);
+            this.toolTip1.SetToolTip(this.checkBoxCustomEDSMFrom, Strings.Controls.Commander_SyncFromEDSM_ToolTip);
             this.checkBoxCustomEDSMFrom.UseVisualStyleBackColor = true;
             // 
             // checkBoxCustomEDSMTo
@@ -227,9 +227,9 @@
             this.checkBoxCustomEDSMTo.Name = "checkBoxCustomEDSMTo";
             this.checkBoxCustomEDSMTo.Size = new System.Drawing.Size(96, 17);
             this.checkBoxCustomEDSMTo.TabIndex = 4;
-            this.checkBoxCustomEDSMTo.Text = Properties.Strings.Commander_SyncToEDSM;
+            this.checkBoxCustomEDSMTo.Text = Strings.Controls.Commander_SyncToEDSM;
             this.checkBoxCustomEDSMTo.TickBoxReductionSize = 10;
-            this.toolTip1.SetToolTip(this.checkBoxCustomEDSMTo, Properties.Strings.Commander_SyncToEDSM_ToolTip);
+            this.toolTip1.SetToolTip(this.checkBoxCustomEDSMTo, Strings.Controls.Commander_SyncToEDSM_ToolTip);
             this.checkBoxCustomEDSMTo.UseVisualStyleBackColor = true;
             // 
             // buttonExtBrowse
@@ -241,8 +241,8 @@
             this.buttonExtBrowse.Name = "buttonExtBrowse";
             this.buttonExtBrowse.Size = new System.Drawing.Size(75, 23);
             this.buttonExtBrowse.TabIndex = 4;
-            this.buttonExtBrowse.Text = Properties.Strings.Commander_JournalBrowse;
-            this.toolTip1.SetToolTip(this.buttonExtBrowse, Properties.Strings.Commander_JournalBrowse_ToolTip);
+            this.buttonExtBrowse.Text = Strings.Controls.Commander_JournalBrowse;
+            this.toolTip1.SetToolTip(this.buttonExtBrowse, Strings.Controls.Commander_JournalBrowse_ToolTip);
             this.buttonExtBrowse.UseVisualStyleBackColor = true;
             this.buttonExtBrowse.Click += new System.EventHandler(this.buttonExtBrowse_Click);
             // 
@@ -259,9 +259,9 @@
             this.checkBoxEGOSync.Name = "checkBoxEGOSync";
             this.checkBoxEGOSync.Size = new System.Drawing.Size(88, 17);
             this.checkBoxEGOSync.TabIndex = 4;
-            this.checkBoxEGOSync.Text = Properties.Strings.Commander_SyncToEGO;
+            this.checkBoxEGOSync.Text = Strings.Controls.Commander_SyncToEGO;
             this.checkBoxEGOSync.TickBoxReductionSize = 10;
-            this.toolTip1.SetToolTip(this.checkBoxEGOSync, Properties.Strings.Commander_SyncToEGO_ToolTip);
+            this.toolTip1.SetToolTip(this.checkBoxEGOSync, Strings.Controls.Commander_SyncToEGO_ToolTip);
             this.checkBoxEGOSync.UseVisualStyleBackColor = true;
             // 
             // textBoxEGOName
@@ -282,7 +282,7 @@
             this.textBoxEGOName.Size = new System.Drawing.Size(231, 20);
             this.textBoxEGOName.TabIndex = 3;
             this.textBoxEGOName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxEGOName, Properties.Strings.Commander_EGOName_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxEGOName, Strings.Controls.Commander_EGOName_ToolTip);
             this.textBoxEGOName.WordWrap = true;
             // 
             // textBoxEGOAPI
@@ -303,7 +303,7 @@
             this.textBoxEGOAPI.Size = new System.Drawing.Size(231, 20);
             this.textBoxEGOAPI.TabIndex = 3;
             this.textBoxEGOAPI.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxEGOAPI, Properties.Strings.Commander_EGOApiKey_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxEGOAPI, Strings.Controls.Commander_EGOApiKey_ToolTip);
             this.textBoxEGOAPI.WordWrap = true;
             // 
             // textBoxBorderCompanionPassword
@@ -324,7 +324,7 @@
             this.textBoxBorderCompanionPassword.Size = new System.Drawing.Size(231, 20);
             this.textBoxBorderCompanionPassword.TabIndex = 7;
             this.textBoxBorderCompanionPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxBorderCompanionPassword, Properties.Strings.Commander_CompanionLogin_Password_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxBorderCompanionPassword, Strings.Controls.Commander_CompanionLogin_Password_ToolTip);
             this.textBoxBorderCompanionPassword.WordWrap = true;
             this.textBoxBorderCompanionPassword.TextChanged += new System.EventHandler(this.textBoxBorderCompanionPassword_TextChanged);
             // 
@@ -346,7 +346,7 @@
             this.textBoxBorderCompanionLogin.Size = new System.Drawing.Size(231, 20);
             this.textBoxBorderCompanionLogin.TabIndex = 5;
             this.textBoxBorderCompanionLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxBorderCompanionLogin, Properties.Strings.Commander_CompanionLogin_Username_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxBorderCompanionLogin, Strings.Controls.Commander_CompanionLogin_Username_ToolTip);
             this.textBoxBorderCompanionLogin.WordWrap = true;
             this.textBoxBorderCompanionLogin.TextChanged += new System.EventHandler(this.textBoxBorderCompanionLogin_TextChanged);
             // 
@@ -368,7 +368,7 @@
             this.textBoxBorderEDSMName.Size = new System.Drawing.Size(231, 20);
             this.textBoxBorderEDSMName.TabIndex = 3;
             this.textBoxBorderEDSMName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxBorderEDSMName, Properties.Strings.Commander_EDSMName_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxBorderEDSMName, Strings.Controls.Commander_EDSMName_ToolTip);
             this.textBoxBorderEDSMName.WordWrap = true;
             // 
             // textBoxBorderEDSMAPI
@@ -389,7 +389,7 @@
             this.textBoxBorderEDSMAPI.Size = new System.Drawing.Size(231, 20);
             this.textBoxBorderEDSMAPI.TabIndex = 3;
             this.textBoxBorderEDSMAPI.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxBorderEDSMAPI, Properties.Strings.Commander_EDSMApiKey_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxBorderEDSMAPI, Strings.Controls.Commander_EDSMApiKey_ToolTip);
             this.textBoxBorderEDSMAPI.WordWrap = true;
             // 
             // textBoxBorderJournal
@@ -410,7 +410,7 @@
             this.textBoxBorderJournal.Size = new System.Drawing.Size(310, 20);
             this.textBoxBorderJournal.TabIndex = 3;
             this.textBoxBorderJournal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxBorderJournal, Properties.Strings.Commander_JournalDir_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxBorderJournal, Strings.Controls.Commander_JournalDir_ToolTip);
             this.textBoxBorderJournal.WordWrap = true;
             // 
             // textBoxBorderCmdr
@@ -431,7 +431,7 @@
             this.textBoxBorderCmdr.Size = new System.Drawing.Size(231, 20);
             this.textBoxBorderCmdr.TabIndex = 3;
             this.textBoxBorderCmdr.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.toolTip1.SetToolTip(this.textBoxBorderCmdr, Properties.Strings.Commander_CMDRName_ToolTip);
+            this.toolTip1.SetToolTip(this.textBoxBorderCmdr, Strings.Controls.Commander_CMDRName_ToolTip);
             this.textBoxBorderCmdr.WordWrap = true;
             // 
             // groupBoxCustom4
@@ -454,7 +454,7 @@
             this.groupBoxCustom4.Size = new System.Drawing.Size(606, 125);
             this.groupBoxCustom4.TabIndex = 6;
             this.groupBoxCustom4.TabStop = false;
-            this.groupBoxCustom4.Text = Properties.Strings.Commander_CompanionLogin_Group;
+            this.groupBoxCustom4.Text = Strings.Controls.Commander_CompanionLogin_Group;
             this.groupBoxCustom4.TextPadding = 0;
             this.groupBoxCustom4.TextStartPosition = -1;
             // 
@@ -471,7 +471,7 @@
             this.checkBoxCAPIEnable.Name = "checkBoxCAPIEnable";
             this.checkBoxCAPIEnable.Size = new System.Drawing.Size(88, 17);
             this.checkBoxCAPIEnable.TabIndex = 4;
-            this.checkBoxCAPIEnable.Text = Properties.Strings.Commander_CompanionLogin_Enable;
+            this.checkBoxCAPIEnable.Text = Strings.Controls.Commander_CompanionLogin_Enable;
             this.checkBoxCAPIEnable.TickBoxReductionSize = 10;
             this.checkBoxCAPIEnable.UseVisualStyleBackColor = true;
             this.checkBoxCAPIEnable.CheckedChanged += new System.EventHandler(this.checkBoxCAPIEnable_CheckedChanged);
@@ -483,7 +483,7 @@
             this.labelCAPIState.Name = "labelCAPIState";
             this.labelCAPIState.Size = new System.Drawing.Size(93, 13);
             this.labelCAPIState.TabIndex = 9;
-            this.labelCAPIState.Text = Properties.Strings.Commander_CompanionLogin_State_None;
+            this.labelCAPIState.Text = Strings.Controls.Commander_CompanionLogin_State_None;
             // 
             // labelCAPIPassword
             // 
@@ -492,7 +492,7 @@
             this.labelCAPIPassword.Name = "labelCAPIPassword";
             this.labelCAPIPassword.Size = new System.Drawing.Size(85, 13);
             this.labelCAPIPassword.TabIndex = 6;
-            this.labelCAPIPassword.Text = Properties.Strings.Commander_CompanionLogin_Password;
+            this.labelCAPIPassword.Text = Strings.Controls.Commander_CompanionLogin_Password;
             // 
             // labelCAPILogin
             // 
@@ -501,7 +501,7 @@
             this.labelCAPILogin.Name = "labelCAPILogin";
             this.labelCAPILogin.Size = new System.Drawing.Size(50, 13);
             this.labelCAPILogin.TabIndex = 4;
-            this.labelCAPILogin.Text = Properties.Strings.Commander_CompanionLogin_Username;
+            this.labelCAPILogin.Text = Strings.Controls.Commander_CompanionLogin_Username;
             // 
             // groupBoxCustom3
             // 
@@ -517,7 +517,7 @@
             this.groupBoxCustom3.Size = new System.Drawing.Size(606, 66);
             this.groupBoxCustom3.TabIndex = 5;
             this.groupBoxCustom3.TabStop = false;
-            this.groupBoxCustom3.Text = Properties.Strings.Commander_EDDN_Group;
+            this.groupBoxCustom3.Text = Strings.Controls.Commander_EDDN_Group;
             this.groupBoxCustom3.TextPadding = 0;
             this.groupBoxCustom3.TextStartPosition = -1;
             // 
@@ -542,7 +542,7 @@
             this.groupBoxCustom2.Size = new System.Drawing.Size(606, 133);
             this.groupBoxCustom2.TabIndex = 4;
             this.groupBoxCustom2.TabStop = false;
-            this.groupBoxCustom2.Text = Properties.Strings.Commander_EDSM_Group;
+            this.groupBoxCustom2.Text = Strings.Controls.Commander_EDSM_Group;
             this.groupBoxCustom2.TextPadding = 0;
             this.groupBoxCustom2.TextStartPosition = -1;
             // 
@@ -553,7 +553,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 2;
-            this.label5.Text = Properties.Strings.Commander_EDSMName;
+            this.label5.Text = Strings.Controls.Commander_EDSMName;
             // 
             // label6
             // 
@@ -562,7 +562,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 2;
-            this.label6.Text = Properties.Strings.Commander_EDSMApiKey;
+            this.label6.Text = Strings.Controls.Commander_EDSMApiKey;
             // 
             // label1
             // 
@@ -571,7 +571,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = Properties.Strings.Commander_EDSMInfo;
+            this.label1.Text = Strings.Controls.Commander_EDSMInfo;
             // 
             // groupBoxCustom1
             // 
@@ -592,7 +592,7 @@
             this.groupBoxCustom1.Size = new System.Drawing.Size(606, 126);
             this.groupBoxCustom1.TabIndex = 3;
             this.groupBoxCustom1.TabStop = false;
-            this.groupBoxCustom1.Text = Properties.Strings.Commander_Journal_Group;
+            this.groupBoxCustom1.Text = Strings.Controls.Commander_Journal_Group;
             this.groupBoxCustom1.TextPadding = 0;
             this.groupBoxCustom1.TextStartPosition = -1;
             // 
@@ -603,7 +603,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = Properties.Strings.Commander_CMDRName;
+            this.label3.Text = Strings.Controls.Commander_CMDRName;
             // 
             // label4
             // 
@@ -612,7 +612,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = Properties.Strings.Commander_JournalDir;
+            this.label4.Text = Strings.Controls.Commander_JournalDir;
             // 
             // label2
             // 
@@ -621,7 +621,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(407, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = Properties.Strings.Commander_JournalDir_Info;
+            this.label2.Text = Strings.Controls.Commander_JournalDir_Info;
             // 
             // buttonCancel
             // 
@@ -633,7 +633,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = Properties.Strings.Commander_Cancel;
+            this.buttonCancel.Text = Strings.Controls.Commander_Cancel;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -647,7 +647,7 @@
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
-            this.buttonOK.Text = Properties.Strings.Commander_OK;
+            this.buttonOK.Text = Strings.Controls.Commander_OK;
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
@@ -679,7 +679,7 @@
             this.groupBoxCustom5.Size = new System.Drawing.Size(606, 133);
             this.groupBoxCustom5.TabIndex = 33;
             this.groupBoxCustom5.TabStop = false;
-            this.groupBoxCustom5.Text = Properties.Strings.Commander_EGO_Info;
+            this.groupBoxCustom5.Text = Strings.Controls.Commander_EGO_Info;
             this.groupBoxCustom5.TextPadding = 0;
             this.groupBoxCustom5.TextStartPosition = -1;
             // 
@@ -690,7 +690,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 2;
-            this.label7.Text = Properties.Strings.Commander_EGOName;
+            this.label7.Text = Strings.Controls.Commander_EGOName;
             // 
             // label8
             // 
@@ -699,7 +699,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 2;
-            this.label8.Text = Properties.Strings.Commander_EGOApiKey;
+            this.label8.Text = Strings.Controls.Commander_EGOApiKey;
             // 
             // label9
             // 
@@ -708,7 +708,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(394, 13);
             this.label9.TabIndex = 1;
-            this.label9.Text = Properties.Strings.Commander_EGOApiKey_Info;
+            this.label9.Text = Strings.Controls.Commander_EGOApiKey_Info;
             // 
             // CommanderForm
             // 
@@ -731,7 +731,7 @@
             this.Icon = global::EDDiscovery.Properties.Resources.edlogo_3mo_icon;
             this.Name = "CommanderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = Properties.Strings.Commander_Title;
+            this.Text = Strings.Controls.Commander_Title;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CommanderForm_FormClosed);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
