@@ -67,7 +67,7 @@ namespace EDDiscovery.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 33);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Locating Ship";
+            this.label1.Text = Strings.Controls.Splash_label1;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_version
@@ -77,7 +77,7 @@ namespace EDDiscovery.Forms
             this.label_version.Name = "label_version";
             this.label_version.Size = new System.Drawing.Size(293, 41);
             this.label_version.TabIndex = 21;
-            this.label_version.Text = "EDDiscovery";
+            this.label_version.Text = Strings.Controls.Splash_label_version;
             this.label_version.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SplashForm

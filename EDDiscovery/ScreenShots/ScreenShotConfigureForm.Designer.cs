@@ -102,7 +102,7 @@
             this.buttonExtCancel.Name = "buttonExtCancel";
             this.buttonExtCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonExtCancel.TabIndex = 32;
-            this.buttonExtCancel.Text = "Cancel";
+            this.buttonExtCancel.Text = Strings.Controls.ScreenShotConfigure_buttonExtCancel;
             this.buttonExtCancel.UseVisualStyleBackColor = true;
             this.buttonExtCancel.Click += new System.EventHandler(this.buttonExtCancel_Click);
             // 
@@ -115,7 +115,7 @@
             this.buttonExtOK.Name = "buttonExtOK";
             this.buttonExtOK.Size = new System.Drawing.Size(75, 23);
             this.buttonExtOK.TabIndex = 31;
-            this.buttonExtOK.Text = "OK";
+            this.buttonExtOK.Text = Strings.Controls.ScreenShotConfigure_buttonExtOK;
             this.buttonExtOK.UseVisualStyleBackColor = true;
             this.buttonExtOK.Click += new System.EventHandler(this.buttonExtOK_Click);
             // 
@@ -139,7 +139,7 @@
             this.groupBoxCropSettings.Size = new System.Drawing.Size(126, 143);
             this.groupBoxCropSettings.TabIndex = 30;
             this.groupBoxCropSettings.TabStop = false;
-            this.groupBoxCropSettings.Text = "Crop Settings";
+            this.groupBoxCropSettings.Text = Strings.Controls.ScreenShotConfigure_groupBoxCropSettings;
             this.groupBoxCropSettings.TextPadding = 0;
             this.groupBoxCropSettings.TextStartPosition = -1;
             // 
@@ -155,7 +155,7 @@
             this.numericUpDownHeight.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownHeight.SpinnerSize = 16;
             this.numericUpDownHeight.TabIndex = 4;
-            this.numericUpDownHeight.Text = "0";
+            this.numericUpDownHeight.Text = Strings.Controls.ScreenShotConfigure_numericUpDownHeight;
             this.numericUpDownHeight.TextBoxBackColor = System.Drawing.SystemColors.Window;
             this.numericUpDownHeight.TextBoxForeColor = System.Drawing.SystemColors.WindowText;
             this.numericUpDownHeight.Value = 0;
@@ -172,7 +172,7 @@
             this.numericUpDownWidth.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownWidth.SpinnerSize = 16;
             this.numericUpDownWidth.TabIndex = 3;
-            this.numericUpDownWidth.Text = "0";
+            this.numericUpDownWidth.Text = Strings.Controls.ScreenShotConfigure_numericUpDownWidth;
             this.numericUpDownWidth.TextBoxBackColor = System.Drawing.SystemColors.Window;
             this.numericUpDownWidth.TextBoxForeColor = System.Drawing.SystemColors.WindowText;
             this.numericUpDownWidth.Value = 0;
@@ -189,7 +189,7 @@
             this.numericUpDownLeft.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownLeft.SpinnerSize = 16;
             this.numericUpDownLeft.TabIndex = 2;
-            this.numericUpDownLeft.Text = "0";
+            this.numericUpDownLeft.Text = Strings.Controls.ScreenShotConfigure_numericUpDownLeft;
             this.numericUpDownLeft.TextBoxBackColor = System.Drawing.SystemColors.Window;
             this.numericUpDownLeft.TextBoxForeColor = System.Drawing.SystemColors.WindowText;
             this.numericUpDownLeft.Value = 0;
@@ -206,7 +206,7 @@
             this.numericUpDownTop.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownTop.SpinnerSize = 16;
             this.numericUpDownTop.TabIndex = 1;
-            this.numericUpDownTop.Text = "0";
+            this.numericUpDownTop.Text = Strings.Controls.ScreenShotConfigure_numericUpDownTop;
             this.numericUpDownTop.TextBoxBackColor = System.Drawing.SystemColors.Window;
             this.numericUpDownTop.TextBoxForeColor = System.Drawing.SystemColors.WindowText;
             this.numericUpDownTop.Value = 0;
@@ -218,7 +218,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Height";
+            this.label8.Text = Strings.Controls.ScreenShotConfigure_label8;
             // 
             // label7
             // 
@@ -227,7 +227,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Width";
+            this.label7.Text = Strings.Controls.ScreenShotConfigure_label7;
             // 
             // label6
             // 
@@ -236,7 +236,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(25, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Left";
+            this.label6.Text = Strings.Controls.ScreenShotConfigure_label6;
             // 
             // label5
             // 
@@ -245,7 +245,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Top";
+            this.label5.Text = Strings.Controls.ScreenShotConfigure_label5;
             // 
             // checkBoxCropImage
             // 
@@ -260,7 +260,7 @@
             this.checkBoxCropImage.Name = "checkBoxCropImage";
             this.checkBoxCropImage.Size = new System.Drawing.Size(80, 17);
             this.checkBoxCropImage.TabIndex = 29;
-            this.checkBoxCropImage.Text = "Crop Image";
+            this.checkBoxCropImage.Text = Strings.Controls.ScreenShotConfigure_checkBoxCropImage;
             this.checkBoxCropImage.TickBoxReductionSize = 10;
             this.checkBoxCropImage.UseVisualStyleBackColor = true;
             this.checkBoxCropImage.CheckedChanged += new System.EventHandler(this.checkBoxCropImage_CheckedChanged);
@@ -295,7 +295,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 13);
             this.label1.TabIndex = 15;
-            this.label1.Text = "ED/Steam Screenshot folder";
+            this.label1.Text = Strings.Controls.ScreenShotConfigure_label1;
             // 
             // textBoxFileNameExample
             // 
@@ -328,7 +328,7 @@
             this.buttonChangeScreenshotsFolder.Name = "buttonChangeScreenshotsFolder";
             this.buttonChangeScreenshotsFolder.Size = new System.Drawing.Size(57, 23);
             this.buttonChangeScreenshotsFolder.TabIndex = 16;
-            this.buttonChangeScreenshotsFolder.Text = "Browse";
+            this.buttonChangeScreenshotsFolder.Text = Strings.Controls.ScreenShotConfigure_buttonChangeScreenshotsFolder;
             this.buttonChangeScreenshotsFolder.UseVisualStyleBackColor = true;
             this.buttonChangeScreenshotsFolder.Click += new System.EventHandler(this.buttonChangeEDScreenshot_Click);
             // 
@@ -339,7 +339,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 13);
             this.label11.TabIndex = 26;
-            this.label11.Text = "In Sub folder";
+            this.label11.Text = Strings.Controls.ScreenShotConfigure_label11;
             // 
             // label4
             // 
@@ -348,7 +348,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 27;
-            this.label4.Text = "In Filename format";
+            this.label4.Text = Strings.Controls.ScreenShotConfigure_label4;
             // 
             // textBoxOutputDir
             // 
@@ -429,7 +429,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 13);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Store Converted pictures";
+            this.label2.Text = Strings.Controls.ScreenShotConfigure_label2;
             // 
             // buttonEDChangeOutputFolder
             // 
@@ -440,7 +440,7 @@
             this.buttonEDChangeOutputFolder.Name = "buttonEDChangeOutputFolder";
             this.buttonEDChangeOutputFolder.Size = new System.Drawing.Size(57, 23);
             this.buttonEDChangeOutputFolder.TabIndex = 18;
-            this.buttonEDChangeOutputFolder.Text = "Browse";
+            this.buttonEDChangeOutputFolder.Text = Strings.Controls.ScreenShotConfigure_buttonEDChangeOutputFolder;
             this.buttonEDChangeOutputFolder.UseVisualStyleBackColor = true;
             this.buttonEDChangeOutputFolder.Click += new System.EventHandler(this.buttonChangeOutputFolder_Click);
             // 
@@ -451,7 +451,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 24;
-            this.label9.Text = "Scan for";
+            this.label9.Text = Strings.Controls.ScreenShotConfigure_label9;
             // 
             // label3
             // 
@@ -460,7 +460,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Save as";
+            this.label3.Text = Strings.Controls.ScreenShotConfigure_label3;
             // 
             // comboBoxScanFor
             // 
@@ -556,7 +556,7 @@
             this.label_index.Name = "label_index";
             this.label_index.Size = new System.Drawing.Size(109, 13);
             this.label_index.TabIndex = 23;
-            this.label_index.Text = "Screenshot Configure";
+            this.label_index.Text = Strings.Controls.ScreenShotConfigure_label_index;
             this.label_index.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_index_MouseDown);
             // 
             // ScreenShotConfigureForm

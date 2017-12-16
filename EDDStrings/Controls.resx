@@ -2436,4 +2436,565 @@
   <data name="TravelGrid_comboBoxHistoryWindow_ToolTip" xml:space="preserve">
     <value>Select the entries by age</value>
   </data>
+  <data name="Form2DMap_toolStrip1" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="FormMap_textboxFrom" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="FormMap_labelSystemCoords" xml:space="preserve">
+    <value>Sol x=0.00</value>
+  </data>
+  <data name="FormMap_toolStripShowAllStars" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="FormMap_statusStrip" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="FormMap_statusLabel" xml:space="preserve">
+    <value>x=0.0</value>
+  </data>
+  <data name="FormMap_labelClickedSystemCoords" xml:space="preserve">
+    <value>Sol x=0.00</value>
+  </data>
+  <data name="About_labelVersion" xml:space="preserve">
+    <value>EDDiscovery v4.3.2.1</value>
+  </data>
+  <data name="About_buttonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="About_linkLabelDeveloperChat" xml:space="preserve">
+    <value>Developer Chat</value>
+  </data>
+  <data name="About_linkLabelHelp" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="About_linkLabelLicense" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="About_linkLabelFDForum" xml:space="preserve">
+    <value>Frontier Forum</value>
+  </data>
+  <data name="About_linkLabelGitHubIssue" xml:space="preserve">
+    <value>Submit Feedback</value>
+  </data>
+  <data name="About_linkLabelGitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="About_linkLabelEDSM" xml:space="preserve">
+    <value>EDSM</value>
+  </data>
+  <data name="About_linkLabelEDDB" xml:space="preserve">
+    <value>EDDB</value>
+  </data>
+  <data name="About_linkLabelEliteDangerous" xml:space="preserve">
+    <value>Elite Dangerous</value>
+  </data>
+  <data name="About_labelLinks" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="About_labelDevelopers" xml:space="preserve">
+    <value>Developers</value>
+  </data>
+  <data name="AddOnManager_label_index" xml:space="preserve">
+    <value>Add-On Manager</value>
+  </data>
+  <data name="AddOnManager_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="AddOnManager_buttonMore" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="AddOnManager_buttonExtGlobals" xml:space="preserve">
+    <value>Globals</value>
+  </data>
+  <data name="AddOnManager_buttonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="AddOnManager_statusStripCustom" xml:space="preserve">
+    <value>statusStripCustom1</value>
+  </data>
+  <data name="AssignTravelLogSystem_label1" xml:space="preserve">
+    <value>Travel Log System Name:</value>
+  </data>
+  <data name="AssignTravelLogSystem_label2" xml:space="preserve">
+    <value>Date Visited:</value>
+  </data>
+  <data name="AssignTravelLogSystem_label3" xml:space="preserve">
+    <value>New system name:</value>
+  </data>
+  <data name="AssignTravelLogSystem_label4" xml:space="preserve">
+    <value>Travel Log Coordinates:</value>
+  </data>
+  <data name="AssignTravelLogSystem_label5" xml:space="preserve">
+    <value>System Coordinates</value>
+  </data>
+  <data name="AssignTravelLogSystem_label6" xml:space="preserve">
+    <value>EDSM Link:</value>
+  </data>
+  <data name="AssignTravelLogSystem_lblEDSMLink" xml:space="preserve">
+    <value>EDSMLink</value>
+  </data>
+  <data name="AssignTravelLogSystem_btnFindSystem" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="AssignTravelLogSystem_btnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AssignTravelLogSystem_btnOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Bookmark_label1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Bookmark_label2" xml:space="preserve">
+    <value>Co-ordinates</value>
+  </data>
+  <data name="Bookmark_labelBookmarkNotes" xml:space="preserve">
+    <value>Bookmark Notes</value>
+  </data>
+  <data name="Bookmark_labelTimeMade" xml:space="preserve">
+    <value>Time Made</value>
+  </data>
+  <data name="Bookmark_label3" xml:space="preserve">
+    <value>x:</value>
+  </data>
+  <data name="Bookmark_label6" xml:space="preserve">
+    <value>y:</value>
+  </data>
+  <data name="Bookmark_label7" xml:space="preserve">
+    <value>z:</value>
+  </data>
+  <data name="Bookmark_buttonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Bookmark_buttonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Bookmark_buttonDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Bookmark_labelTravelNote" xml:space="preserve">
+    <value>Travel History Note</value>
+  </data>
+  <data name="Bookmark_labelTravelNoteEdit" xml:space="preserve">
+    <value>(Edit on Travel Screen)</value>
+  </data>
+  <data name="Bookmark_checkBoxTarget" xml:space="preserve">
+    <value>Make Target</value>
+  </data>
+  <data name="Bookmark_buttonEDSM" xml:space="preserve">
+    <value>EDSM</value>
+  </data>
+  <data name="Commander_label_index" xml:space="preserve">
+    <value>Commander Configure</value>
+  </data>
+  <data name="Commander_buttonExtCAPI" xml:space="preserve">
+    <value>CAPI State</value>
+  </data>
+  <data name="Export_buttonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Export_label1" xml:space="preserve">
+    <value>CVS Seperator</value>
+  </data>
+  <data name="Export_radioButtonSemiColon" xml:space="preserve">
+    <value>Semicolon</value>
+  </data>
+  <data name="Export_buttonExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Export_radioButtonComma" xml:space="preserve">
+    <value>Comma</value>
+  </data>
+  <data name="Export_checkBoxIncludeHeader" xml:space="preserve">
+    <value>Include Header</value>
+  </data>
+  <data name="Export_checkBoxCustomAutoOpen" xml:space="preserve">
+    <value>Open in excel</value>
+  </data>
+  <data name="Export_label_index" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ImportSphere_buttonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ImportSphere_buttonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ImportSphere_labelExt8" xml:space="preserve">
+    <value>Radius</value>
+  </data>
+  <data name="ImportSphere_btnExportTravel" xml:space="preserve">
+    <value>Current system</value>
+  </data>
+  <data name="ImportSphere_labelExt9" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="MoveToCommander_label1" xml:space="preserve">
+    <value>Move selected history to commander.</value>
+  </data>
+  <data name="MoveToCommander_buttonTransfer" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="MoveToCommander_buttonExtCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="NewRelease_labelName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewRelease_label1" xml:space="preserve">
+    <value>GitHub url</value>
+  </data>
+  <data name="NewRelease_buttonUrlOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="NewRelease_label2" xml:space="preserve">
+    <value>Release info</value>
+  </data>
+  <data name="NewRelease_buttonExeInstaller" xml:space="preserve">
+    <value>Exe installer</value>
+  </data>
+  <data name="NewRelease_buttonPortablezip" xml:space="preserve">
+    <value>Portable Zip</value>
+  </data>
+  <data name="NewRelease_label3" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="NewRelease_buttonMsiInstaller" xml:space="preserve">
+    <value>Msi installer</value>
+  </data>
+  <data name="NewRelease_buttonExtCancel" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RecordStep_label1" xml:space="preserve">
+    <value>Go to</value>
+  </data>
+  <data name="RecordStep_label2" xml:space="preserve">
+    <value>Pointing At</value>
+  </data>
+  <data name="RecordStep_label3" xml:space="preserve">
+    <value>Time to take to change pos</value>
+  </data>
+  <data name="RecordStep_label4" xml:space="preserve">
+    <value>Time to take to change direction</value>
+  </data>
+  <data name="RecordStep_label6" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="RecordStep_buttonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RecordStep_buttonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RecordStep_label7" xml:space="preserve">
+    <value>Message to display</value>
+  </data>
+  <data name="RecordStep_label8" xml:space="preserve">
+    <value>Wait for this time before action</value>
+  </data>
+  <data name="RecordStep_label11" xml:space="preserve">
+    <value>Time to take to Zoom</value>
+  </data>
+  <data name="RecordStep_label12" xml:space="preserve">
+    <value>Message on screen time</value>
+  </data>
+  <data name="RecordStep_checkBoxWaitForSlew" xml:space="preserve">
+    <value>Wait for slew</value>
+  </data>
+  <data name="RecordStep_checkBoxPos" xml:space="preserve">
+    <value>Go To</value>
+  </data>
+  <data name="RecordStep_checkBoxPan" xml:space="preserve">
+    <value>Change Dir</value>
+  </data>
+  <data name="RecordStep_checkBoxChangeZoom" xml:space="preserve">
+    <value>Change Zoom</value>
+  </data>
+  <data name="RecordStep_label13" xml:space="preserve">
+    <value>0=default time</value>
+  </data>
+  <data name="RecordStep_checkBoxWaitComplete" xml:space="preserve">
+    <value>Wait for actions to complete</value>
+  </data>
+  <data name="RecordStep_checkBoxDisplayMessageWhenComplete" xml:space="preserve">
+    <value>Display Message with complete</value>
+  </data>
+  <data name="SafeMode_buttonDbs" xml:space="preserve">
+    <value>Move Databases</value>
+  </data>
+  <data name="SafeMode_buttonNormal" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="SafeMode_buttonPositions" xml:space="preserve">
+    <value>Reset Window Positions</value>
+  </data>
+  <data name="SafeMode_buttonResetTheme" xml:space="preserve">
+    <value>Reset Theme</value>
+  </data>
+  <data name="SafeMode_buttonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SetNote_label1" xml:space="preserve">
+    <value>Timestamp:</value>
+  </data>
+  <data name="SetNote_labelForSystem" xml:space="preserve">
+    <value>System:</value>
+  </data>
+  <data name="SetNote_label2" xml:space="preserve">
+    <value>Summary:</value>
+  </data>
+  <data name="SetNote_labelTimestamp" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="SetNote_labelSystem" xml:space="preserve">
+    <value>SysName</value>
+  </data>
+  <data name="SetNote_labelSummary" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="SetNote_label3" xml:space="preserve">
+    <value>Details:</value>
+  </data>
+  <data name="SetNote_labelDetails" xml:space="preserve">
+    <value>Detailsrn1rn2rn3</value>
+  </data>
+  <data name="SetNote_buttonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SetNote_buttonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ShipDetails_label1" xml:space="preserve">
+    <value>Current Cargo</value>
+  </data>
+  <data name="ShipDetails_label2" xml:space="preserve">
+    <value>Tank Size</value>
+  </data>
+  <data name="ShipDetails_label3" xml:space="preserve">
+    <value>FSD Drive</value>
+  </data>
+  <data name="ShipDetails_label4" xml:space="preserve">
+    <value>Unladen Mass</value>
+  </data>
+  <data name="ShipDetails_label5" xml:space="preserve">
+    <value>FSD Optimal Mass </value>
+  </data>
+  <data name="ShipDetails_label6" xml:space="preserve">
+    <value>FSD Linear constant</value>
+  </data>
+  <data name="ShipDetails_label7" xml:space="preserve">
+    <value>FSD Power Constant</value>
+  </data>
+  <data name="ShipDetails_btnUpdateFSD" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ShipDetails_label8" xml:space="preserve">
+    <value>FSD Max Fuel Per Jump</value>
+  </data>
+  <data name="ShipDetails_label9" xml:space="preserve">
+    <value>FSD Jump Range</value>
+  </data>
+  <data name="ShipDetails_btnCalculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="ShipDetails_btnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ShipDetails_btnOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ShipDetails_label10" xml:space="preserve">
+    <value>Tank warning</value>
+  </data>
+  <data name="ShipDetails_label11" xml:space="preserve">
+    <value>This screen tries to ESTIMATE fuel values</value>
+  </data>
+  <data name="Splash_label1" xml:space="preserve">
+    <value>Locating Ship</value>
+  </data>
+  <data name="Splash_label_version" xml:space="preserve">
+    <value>EDDiscovery</value>
+  </data>
+  <data name="TimedMessage_labelMessage" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="UCF_label_index" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="UCF_labelControlText" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="UCF_statusStripBottom" xml:space="preserve">
+    <value>statusStripCustom1</value>
+  </data>
+  <data name="ScreenShotConfigure_buttonExtCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ScreenShotConfigure_buttonExtOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ScreenShotConfigure_groupBoxCropSettings" xml:space="preserve">
+    <value>Crop Settings</value>
+  </data>
+  <data name="ScreenShotConfigure_numericUpDownHeight" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ScreenShotConfigure_numericUpDownWidth" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ScreenShotConfigure_numericUpDownLeft" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ScreenShotConfigure_numericUpDownTop" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ScreenShotConfigure_label8" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="ScreenShotConfigure_label7" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="ScreenShotConfigure_label6" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="ScreenShotConfigure_label5" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ScreenShotConfigure_checkBoxCropImage" xml:space="preserve">
+    <value>Crop Image</value>
+  </data>
+  <data name="ScreenShotConfigure_label1" xml:space="preserve">
+    <value>ED/Steam Screenshot folder</value>
+  </data>
+  <data name="ScreenShotConfigure_buttonChangeScreenshotsFolder" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="ScreenShotConfigure_label11" xml:space="preserve">
+    <value>In Sub folder</value>
+  </data>
+  <data name="ScreenShotConfigure_label4" xml:space="preserve">
+    <value>In Filename format</value>
+  </data>
+  <data name="ScreenShotConfigure_label2" xml:space="preserve">
+    <value>Store Converted pictures</value>
+  </data>
+  <data name="ScreenShotConfigure_buttonEDChangeOutputFolder" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="ScreenShotConfigure_label9" xml:space="preserve">
+    <value>Scan for</value>
+  </data>
+  <data name="ScreenShotConfigure_label3" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="ScreenShotConfigure_label_index" xml:space="preserve">
+    <value>Screenshot Configure</value>
+  </data>
+  <data name="Trilateration_toolStrip1" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="Trilateration_vScrollBarCustom1" xml:space="preserve">
+    <value>vScrollBarCustom1</value>
+  </data>
+  <data name="Trilateration_ColumnSystem_Header" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Trilateration_ColumnDistance_Header" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Trilateration_ColumnCalculated_Header" xml:space="preserve">
+    <value>Calculated</value>
+  </data>
+  <data name="Trilateration_ColumnStatus_Header" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Trilateration_vScrollBarCustom2" xml:space="preserve">
+    <value>vScrollBarCustom2</value>
+  </data>
+  <data name="Trilateration_Source_Header" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Trilateration_dataGridViewTextBoxColumnClosestSystemsSystem_Header" xml:space="preserve">
+    <value>Wanted System</value>
+  </data>
+  <data name="Main_menuStrip1" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="Main_labelInfoBoxTop" xml:space="preserve">
+    <value>Loading. Please wait!</value>
+  </data>
+  <data name="Main_label_version" xml:space="preserve">
+    <value>Version Label</value>
+  </data>
+  <data name="Main_buttonReloadActions" xml:space="preserve">
+    <value>Reload-A</value>
+  </data>
+  <data name="Main_statusStrip1" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="Main_notifyIcon1" xml:space="preserve">
+    <value>EDDiscovery</value>
+  </data>
+  <data name="Main_comboBoxCommander" xml:space="preserve">
+    <value>Cmdr</value>
+  </data>
+  <data name="Main_buttonExt2dmap" xml:space="preserve">
+    <value>2D</value>
+  </data>
+  <data name="Main_buttonExt3dmap" xml:space="preserve">
+    <value>3D</value>
+  </data>
+  <data name="Main_tabPageTravelHistory" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="Commander_buttonExtCAPI_ToolTip" xml:space="preserve">
+    <value>Perform operation indicated</value>
+  </data>
+  <data name="UCF_panel_minimize_ToolTip" xml:space="preserve">
+    <value>Minimise</value>
+  </data>
+  <data name="UCF_panel_ontop_ToolTip" xml:space="preserve">
+    <value>Toggle window on top of others</value>
+  </data>
+  <data name="UCF_panel_close_ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="UCF_panel_taskbaricon_ToolTip" xml:space="preserve">
+    <value>Toggle show taskbar icon for this window</value>
+  </data>
+  <data name="UCF_panel_showtitle_ToolTip" xml:space="preserve">
+    <value>Toggle title visibility for this window when transparent</value>
+  </data>
+  <data name="Main_buttonReloadActions_ToolTip" xml:space="preserve">
+    <value>DEBUG reload action system</value>
+  </data>
+  <data name="Main_comboBoxCommander_ToolTip" xml:space="preserve">
+    <value>Select the commander to view</value>
+  </data>
+  <data name="Main_buttonExtEDSMSync_ToolTip" xml:space="preserve">
+    <value>Synchronize with EDSM, To and From</value>
+  </data>
+  <data name="Main_buttonExtPopOut_ToolTip" xml:space="preserve">
+    <value>Click to select a pop out panel to display</value>
+  </data>
+  <data name="Main_buttonExtEditAddOns_ToolTip" xml:space="preserve">
+    <value>Edit Add-Ons</value>
+  </data>
+  <data name="Main_buttonExtManageAddOns_ToolTip" xml:space="preserve">
+    <value>Manage Add-Ons</value>
+  </data>
+  <data name="Main_buttonExtRefresh_ToolTip" xml:space="preserve">
+    <value>Refresh the history</value>
+  </data>
+  <data name="Main_buttonExt2dmap_ToolTip" xml:space="preserve">
+    <value>Open the 2D Map</value>
+  </data>
+  <data name="Main_buttonExt3dmap_ToolTip" xml:space="preserve">
+    <value>Open the 3D Map</value>
+  </data>
+  <data name="Main_tabControlMain_ToolTip" xml:space="preserve">
+    <value>Right click to add/remove tabs, Left click drag to reorder</value>
+  </data>
 </root>

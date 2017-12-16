@@ -73,7 +73,7 @@ namespace EDDiscovery.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.label1.Text = Strings.Controls.Bookmark_label1;
             // 
             // label2
             // 
@@ -82,7 +82,7 @@ namespace EDDiscovery.Forms
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Co-ordinates";
+            this.label2.Text = Strings.Controls.Bookmark_label2;
             // 
             // labelBookmarkNotes
             // 
@@ -91,7 +91,7 @@ namespace EDDiscovery.Forms
             this.labelBookmarkNotes.Name = "labelBookmarkNotes";
             this.labelBookmarkNotes.Size = new System.Drawing.Size(86, 13);
             this.labelBookmarkNotes.TabIndex = 0;
-            this.labelBookmarkNotes.Text = "Bookmark Notes";
+            this.labelBookmarkNotes.Text = Strings.Controls.Bookmark_labelBookmarkNotes;
             // 
             // labelTimeMade
             // 
@@ -100,7 +100,7 @@ namespace EDDiscovery.Forms
             this.labelTimeMade.Name = "labelTimeMade";
             this.labelTimeMade.Size = new System.Drawing.Size(60, 13);
             this.labelTimeMade.TabIndex = 0;
-            this.labelTimeMade.Text = "Time Made";
+            this.labelTimeMade.Text = Strings.Controls.Bookmark_labelTimeMade;
             // 
             // textBoxNotes
             // 
@@ -154,7 +154,7 @@ namespace EDDiscovery.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "x:";
+            this.label3.Text = Strings.Controls.Bookmark_label3;
             // 
             // label6
             // 
@@ -163,7 +163,7 @@ namespace EDDiscovery.Forms
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(15, 13);
             this.label6.TabIndex = 0;
-            this.label6.Text = "y:";
+            this.label6.Text = Strings.Controls.Bookmark_label6;
             // 
             // label7
             // 
@@ -172,7 +172,7 @@ namespace EDDiscovery.Forms
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(15, 13);
             this.label7.TabIndex = 0;
-            this.label7.Text = "z:";
+            this.label7.Text = Strings.Controls.Bookmark_label7;
             // 
             // textBoxTime
             // 
@@ -188,7 +188,7 @@ namespace EDDiscovery.Forms
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 1;
-            this.buttonOK.Text = "OK";
+            this.buttonOK.Text = Strings.Controls.Bookmark_buttonOK;
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
@@ -198,7 +198,7 @@ namespace EDDiscovery.Forms
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = Strings.Controls.Bookmark_buttonCancel;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -208,7 +208,7 @@ namespace EDDiscovery.Forms
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 9;
-            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.Text = Strings.Controls.Bookmark_buttonDelete;
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
@@ -219,7 +219,7 @@ namespace EDDiscovery.Forms
             this.labelTravelNote.Name = "labelTravelNote";
             this.labelTravelNote.Size = new System.Drawing.Size(98, 13);
             this.labelTravelNote.TabIndex = 0;
-            this.labelTravelNote.Text = "Travel History Note";
+            this.labelTravelNote.Text = Strings.Controls.Bookmark_labelTravelNote;
             // 
             // labelTravelNoteEdit
             // 
@@ -227,7 +227,7 @@ namespace EDDiscovery.Forms
             this.labelTravelNoteEdit.Name = "labelTravelNoteEdit";
             this.labelTravelNoteEdit.Size = new System.Drawing.Size(79, 38);
             this.labelTravelNoteEdit.TabIndex = 0;
-            this.labelTravelNoteEdit.Text = "(Edit on Travel Screen)";
+            this.labelTravelNoteEdit.Text = Strings.Controls.Bookmark_labelTravelNoteEdit;
             // 
             // textBoxTravelNote
             // 
@@ -245,7 +245,7 @@ namespace EDDiscovery.Forms
             this.checkBoxTarget.Name = "checkBoxTarget";
             this.checkBoxTarget.Size = new System.Drawing.Size(87, 17);
             this.checkBoxTarget.TabIndex = 10;
-            this.checkBoxTarget.Text = "Make Target";
+            this.checkBoxTarget.Text = Strings.Controls.Bookmark_checkBoxTarget;
             this.checkBoxTarget.UseVisualStyleBackColor = true;
             // 
             // buttonEDSM
@@ -254,7 +254,7 @@ namespace EDDiscovery.Forms
             this.buttonEDSM.Name = "buttonEDSM";
             this.buttonEDSM.Size = new System.Drawing.Size(75, 23);
             this.buttonEDSM.TabIndex = 11;
-            this.buttonEDSM.Text = "EDSM";
+            this.buttonEDSM.Text = Strings.Controls.Bookmark_buttonEDSM;
             this.buttonEDSM.UseVisualStyleBackColor = true;
             this.buttonEDSM.Click += new System.EventHandler(this.buttonEDSM_Click);
             // 

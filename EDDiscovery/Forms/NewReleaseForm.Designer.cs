@@ -76,7 +76,7 @@ namespace EDDiscovery.Forms
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(35, 13);
             this.labelName.TabIndex = 1;
-            this.labelName.Text = "Name";
+            this.labelName.Text = Strings.Controls.NewRelease_labelName;
             this.labelName.Click += new System.EventHandler(this.labelName_Click);
             // 
             // label1
@@ -86,7 +86,7 @@ namespace EDDiscovery.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "GitHub url";
+            this.label1.Text = Strings.Controls.NewRelease_label1;
             // 
             // textBoxGitHubURL
             // 
@@ -107,7 +107,7 @@ namespace EDDiscovery.Forms
             this.buttonUrlOpen.Name = "buttonUrlOpen";
             this.buttonUrlOpen.Size = new System.Drawing.Size(75, 23);
             this.buttonUrlOpen.TabIndex = 4;
-            this.buttonUrlOpen.Text = "Open";
+            this.buttonUrlOpen.Text = Strings.Controls.NewRelease_buttonUrlOpen;
             this.buttonUrlOpen.UseVisualStyleBackColor = true;
             this.buttonUrlOpen.Click += new System.EventHandler(this.buttonUrlOpen_Click);
             // 
@@ -130,7 +130,7 @@ namespace EDDiscovery.Forms
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Release info";
+            this.label2.Text = Strings.Controls.NewRelease_label2;
             // 
             // buttonExeInstaller
             // 
@@ -141,7 +141,7 @@ namespace EDDiscovery.Forms
             this.buttonExeInstaller.Name = "buttonExeInstaller";
             this.buttonExeInstaller.Size = new System.Drawing.Size(107, 23);
             this.buttonExeInstaller.TabIndex = 7;
-            this.buttonExeInstaller.Text = "Exe installer";
+            this.buttonExeInstaller.Text = Strings.Controls.NewRelease_buttonExeInstaller;
             this.buttonExeInstaller.UseVisualStyleBackColor = true;
             this.buttonExeInstaller.Click += new System.EventHandler(this.buttonExeInstaller_Click);
             // 
@@ -154,7 +154,7 @@ namespace EDDiscovery.Forms
             this.buttonPortablezip.Name = "buttonPortablezip";
             this.buttonPortablezip.Size = new System.Drawing.Size(132, 23);
             this.buttonPortablezip.TabIndex = 8;
-            this.buttonPortablezip.Text = "Portable Zip";
+            this.buttonPortablezip.Text = Strings.Controls.NewRelease_buttonPortablezip;
             this.buttonPortablezip.UseVisualStyleBackColor = true;
             this.buttonPortablezip.Click += new System.EventHandler(this.buttonPortablezip_Click);
             // 
@@ -165,7 +165,7 @@ namespace EDDiscovery.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Download";
+            this.label3.Text = Strings.Controls.NewRelease_label3;
             // 
             // buttonMsiInstaller
             // 
@@ -176,7 +176,7 @@ namespace EDDiscovery.Forms
             this.buttonMsiInstaller.Name = "buttonMsiInstaller";
             this.buttonMsiInstaller.Size = new System.Drawing.Size(107, 23);
             this.buttonMsiInstaller.TabIndex = 10;
-            this.buttonMsiInstaller.Text = "Msi installer";
+            this.buttonMsiInstaller.Text = Strings.Controls.NewRelease_buttonMsiInstaller;
             this.buttonMsiInstaller.UseVisualStyleBackColor = true;
             this.buttonMsiInstaller.Click += new System.EventHandler(this.buttonMsiInstaller_Click);
             // 
@@ -189,7 +189,7 @@ namespace EDDiscovery.Forms
             this.buttonExtCancel.Name = "buttonExtCancel";
             this.buttonExtCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonExtCancel.TabIndex = 11;
-            this.buttonExtCancel.Text = "Close";
+            this.buttonExtCancel.Text = Strings.Controls.NewRelease_buttonExtCancel;
             this.buttonExtCancel.UseVisualStyleBackColor = true;
             this.buttonExtCancel.Click += new System.EventHandler(this.buttonExtCancel_Click);
             // 

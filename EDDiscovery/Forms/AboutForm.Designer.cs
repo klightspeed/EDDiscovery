@@ -78,7 +78,7 @@ namespace EDDiscovery.Forms
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(187, 24);
             this.labelVersion.TabIndex = 0;
-            this.labelVersion.Text = "EDDiscovery v4.3.2.1";
+            this.labelVersion.Text = Strings.Controls.About_labelVersion;
             // 
             // labelDevelopersEnum
             // 
@@ -98,7 +98,7 @@ namespace EDDiscovery.Forms
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 6;
-            this.buttonOK.Text = "OK";
+            this.buttonOK.Text = Strings.Controls.About_buttonOK;
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
@@ -143,7 +143,7 @@ namespace EDDiscovery.Forms
             this.linkLabelDeveloperChat.Size = new System.Drawing.Size(81, 13);
             this.linkLabelDeveloperChat.TabIndex = 2;
             this.linkLabelDeveloperChat.TabStop = true;
-            this.linkLabelDeveloperChat.Text = "Developer Chat";
+            this.linkLabelDeveloperChat.Text = Strings.Controls.About_linkLabelDeveloperChat;
             this.linkLabelDeveloperChat.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelHelp
@@ -154,7 +154,7 @@ namespace EDDiscovery.Forms
             this.linkLabelHelp.Size = new System.Drawing.Size(29, 13);
             this.linkLabelHelp.TabIndex = 7;
             this.linkLabelHelp.TabStop = true;
-            this.linkLabelHelp.Text = "Help";
+            this.linkLabelHelp.Text = Strings.Controls.About_linkLabelHelp;
             this.linkLabelHelp.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelLicense
@@ -166,7 +166,7 @@ namespace EDDiscovery.Forms
             this.linkLabelLicense.Size = new System.Drawing.Size(44, 13);
             this.linkLabelLicense.TabIndex = 8;
             this.linkLabelLicense.TabStop = true;
-            this.linkLabelLicense.Text = "License";
+            this.linkLabelLicense.Text = Strings.Controls.About_linkLabelLicense;
             this.linkLabelLicense.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelFDForum
@@ -178,7 +178,7 @@ namespace EDDiscovery.Forms
             this.linkLabelFDForum.Size = new System.Drawing.Size(74, 13);
             this.linkLabelFDForum.TabIndex = 5;
             this.linkLabelFDForum.TabStop = true;
-            this.linkLabelFDForum.Text = "Frontier Forum";
+            this.linkLabelFDForum.Text = Strings.Controls.About_linkLabelFDForum;
             this.linkLabelFDForum.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelGitHubIssue
@@ -190,7 +190,7 @@ namespace EDDiscovery.Forms
             this.linkLabelGitHubIssue.Size = new System.Drawing.Size(90, 13);
             this.linkLabelGitHubIssue.TabIndex = 9;
             this.linkLabelGitHubIssue.TabStop = true;
-            this.linkLabelGitHubIssue.Text = "Submit Feedback";
+            this.linkLabelGitHubIssue.Text = Strings.Controls.About_linkLabelGitHubIssue;
             this.linkLabelGitHubIssue.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelGitHub
@@ -202,7 +202,7 @@ namespace EDDiscovery.Forms
             this.linkLabelGitHub.Size = new System.Drawing.Size(40, 13);
             this.linkLabelGitHub.TabIndex = 6;
             this.linkLabelGitHub.TabStop = true;
-            this.linkLabelGitHub.Text = "GitHub";
+            this.linkLabelGitHub.Text = Strings.Controls.About_linkLabelGitHub;
             this.linkLabelGitHub.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelEDSM
@@ -214,7 +214,7 @@ namespace EDDiscovery.Forms
             this.linkLabelEDSM.Size = new System.Drawing.Size(38, 13);
             this.linkLabelEDSM.TabIndex = 4;
             this.linkLabelEDSM.TabStop = true;
-            this.linkLabelEDSM.Text = "EDSM";
+            this.linkLabelEDSM.Text = Strings.Controls.About_linkLabelEDSM;
             this.linkLabelEDSM.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelEDDB
@@ -226,7 +226,7 @@ namespace EDDiscovery.Forms
             this.linkLabelEDDB.Size = new System.Drawing.Size(37, 13);
             this.linkLabelEDDB.TabIndex = 3;
             this.linkLabelEDDB.TabStop = true;
-            this.linkLabelEDDB.Text = "EDDB";
+            this.linkLabelEDDB.Text = Strings.Controls.About_linkLabelEDDB;
             this.linkLabelEDDB.Click += new System.EventHandler(this.link_Click);
             // 
             // linkLabelEliteDangerous
@@ -238,7 +238,7 @@ namespace EDDiscovery.Forms
             this.linkLabelEliteDangerous.Size = new System.Drawing.Size(82, 13);
             this.linkLabelEliteDangerous.TabIndex = 1;
             this.linkLabelEliteDangerous.TabStop = true;
-            this.linkLabelEliteDangerous.Text = "Elite Dangerous";
+            this.linkLabelEliteDangerous.Text = Strings.Controls.About_linkLabelEliteDangerous;
             this.linkLabelEliteDangerous.Click += new System.EventHandler(this.link_Click);
             // 
             // labelLinks
@@ -250,7 +250,7 @@ namespace EDDiscovery.Forms
             this.labelLinks.Name = "labelLinks";
             this.labelLinks.Size = new System.Drawing.Size(53, 24);
             this.labelLinks.TabIndex = 0;
-            this.labelLinks.Text = "Links";
+            this.labelLinks.Text = Strings.Controls.About_labelLinks;
             // 
             // labelDevelopers
             // 
@@ -261,7 +261,7 @@ namespace EDDiscovery.Forms
             this.labelDevelopers.Name = "labelDevelopers";
             this.labelDevelopers.Size = new System.Drawing.Size(106, 24);
             this.labelDevelopers.TabIndex = 7;
-            this.labelDevelopers.Text = "Developers";
+            this.labelDevelopers.Text = Strings.Controls.About_labelDevelopers;
             // 
             // tableLayoutPanel1
             // 

@@ -66,7 +66,7 @@ namespace EDDiscovery.Forms
             this.label_index.Name = "label_index";
             this.label_index.Size = new System.Drawing.Size(27, 13);
             this.label_index.TabIndex = 23;
-            this.label_index.Text = "N/A";
+            this.label_index.Text = Strings.Controls.UCF_label_index;
             this.label_index.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_index_MouseDown);
             // 
             // labelControlText
@@ -76,7 +76,7 @@ namespace EDDiscovery.Forms
             this.labelControlText.Name = "labelControlText";
             this.labelControlText.Size = new System.Drawing.Size(27, 13);
             this.labelControlText.TabIndex = 23;
-            this.labelControlText.Text = "N/A";
+            this.labelControlText.Text = Strings.Controls.UCF_labelControlText;
             this.labelControlText.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelControlText_MouseDown);
             // 
             // toolTip1
@@ -94,7 +94,7 @@ namespace EDDiscovery.Forms
             this.panel_minimize.Name = "panel_minimize";
             this.panel_minimize.Size = new System.Drawing.Size(24, 24);
             this.panel_minimize.TabIndex = 24;
-            this.toolTip1.SetToolTip(this.panel_minimize, "Minimise");
+            this.toolTip1.SetToolTip(this.panel_minimize, Strings.Controls.UCF_panel_minimize_ToolTip);
             this.panel_minimize.Click += new System.EventHandler(this.panel_minimize_Click);
             // 
             // panel_ontop
@@ -108,7 +108,7 @@ namespace EDDiscovery.Forms
             this.panel_ontop.Name = "panel_ontop";
             this.panel_ontop.Size = new System.Drawing.Size(24, 24);
             this.panel_ontop.TabIndex = 24;
-            this.toolTip1.SetToolTip(this.panel_ontop, "Toggle window on top of others");
+            this.toolTip1.SetToolTip(this.panel_ontop, Strings.Controls.UCF_panel_ontop_ToolTip);
             this.panel_ontop.Click += new System.EventHandler(this.panel_ontop_Click);
             // 
             // panel_transparent
@@ -135,7 +135,7 @@ namespace EDDiscovery.Forms
             this.panel_close.Name = "panel_close";
             this.panel_close.Size = new System.Drawing.Size(24, 24);
             this.panel_close.TabIndex = 25;
-            this.toolTip1.SetToolTip(this.panel_close, "Close");
+            this.toolTip1.SetToolTip(this.panel_close, Strings.Controls.UCF_panel_close_ToolTip);
             this.panel_close.Click += new System.EventHandler(this.panel_close_Click);
             // 
             // panel_taskbaricon
@@ -149,7 +149,7 @@ namespace EDDiscovery.Forms
             this.panel_taskbaricon.Name = "panel_taskbaricon";
             this.panel_taskbaricon.Size = new System.Drawing.Size(24, 24);
             this.panel_taskbaricon.TabIndex = 24;
-            this.toolTip1.SetToolTip(this.panel_taskbaricon, "Toggle show taskbar icon for this window");
+            this.toolTip1.SetToolTip(this.panel_taskbaricon, Strings.Controls.UCF_panel_taskbaricon_ToolTip);
             this.panel_taskbaricon.Click += new System.EventHandler(this.panel_taskbaricon_Click);
             // 
             // panel_showtitle
@@ -161,7 +161,7 @@ namespace EDDiscovery.Forms
             this.panel_showtitle.Name = "panel_showtitle";
             this.panel_showtitle.Size = new System.Drawing.Size(24, 24);
             this.panel_showtitle.TabIndex = 26;
-            this.toolTip1.SetToolTip(this.panel_showtitle, "Toggle title visibility for this window when transparent");
+            this.toolTip1.SetToolTip(this.panel_showtitle, Strings.Controls.UCF_panel_showtitle_ToolTip);
             this.panel_showtitle.Click += new System.EventHandler(this.panel_showtitle_Click);
             // 
             // panelTop
@@ -189,7 +189,7 @@ namespace EDDiscovery.Forms
             this.statusStripBottom.Name = "statusStripBottom";
             this.statusStripBottom.Size = new System.Drawing.Size(634, 22);
             this.statusStripBottom.TabIndex = 26;
-            this.statusStripBottom.Text = "statusStripCustom1";
+            this.statusStripBottom.Text = Strings.Controls.UCF_statusStripBottom;
             // 
             // UserControlForm
             // 

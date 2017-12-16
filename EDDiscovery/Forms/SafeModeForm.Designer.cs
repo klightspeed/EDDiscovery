@@ -41,7 +41,7 @@
             this.buttonDbs.Name = "buttonDbs";
             this.buttonDbs.Size = new System.Drawing.Size(193, 23);
             this.buttonDbs.TabIndex = 0;
-            this.buttonDbs.Text = "Move Databases";
+            this.buttonDbs.Text = Strings.Controls.SafeMode_buttonDbs;
             this.buttonDbs.UseVisualStyleBackColor = true;
             this.buttonDbs.Click += new System.EventHandler(this.buttonDbs_Click);
             // 
@@ -51,7 +51,7 @@
             this.buttonNormal.Name = "buttonNormal";
             this.buttonNormal.Size = new System.Drawing.Size(193, 23);
             this.buttonNormal.TabIndex = 0;
-            this.buttonNormal.Text = "Run";
+            this.buttonNormal.Text = Strings.Controls.SafeMode_buttonNormal;
             this.buttonNormal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonNormal.UseVisualStyleBackColor = true;
             this.buttonNormal.Click += new System.EventHandler(this.Run_Click);
@@ -62,7 +62,7 @@
             this.buttonPositions.Name = "buttonPositions";
             this.buttonPositions.Size = new System.Drawing.Size(193, 23);
             this.buttonPositions.TabIndex = 0;
-            this.buttonPositions.Text = "Reset Window Positions";
+            this.buttonPositions.Text = Strings.Controls.SafeMode_buttonPositions;
             this.buttonPositions.UseVisualStyleBackColor = true;
             this.buttonPositions.Click += new System.EventHandler(this.buttonPositions_Click);
             // 
@@ -72,7 +72,7 @@
             this.buttonResetTheme.Name = "buttonResetTheme";
             this.buttonResetTheme.Size = new System.Drawing.Size(193, 23);
             this.buttonResetTheme.TabIndex = 0;
-            this.buttonResetTheme.Text = "Reset Theme";
+            this.buttonResetTheme.Text = Strings.Controls.SafeMode_buttonResetTheme;
             this.buttonResetTheme.UseVisualStyleBackColor = true;
             this.buttonResetTheme.Click += new System.EventHandler(this.buttonResetTheme_Click);
             // 
@@ -82,7 +82,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(193, 23);
             this.buttonCancel.TabIndex = 0;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = Strings.Controls.SafeMode_buttonCancel;
             this.buttonCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);

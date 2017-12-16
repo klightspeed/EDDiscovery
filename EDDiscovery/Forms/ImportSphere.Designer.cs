@@ -59,7 +59,7 @@ namespace EDDiscovery.Forms
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 22;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = Strings.Controls.ImportSphere_buttonCancel;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -70,7 +70,7 @@ namespace EDDiscovery.Forms
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 21;
-            this.buttonOK.Text = "OK";
+            this.buttonOK.Text = Strings.Controls.ImportSphere_buttonOK;
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
@@ -92,7 +92,7 @@ namespace EDDiscovery.Forms
             this.labelExt8.Name = "labelExt8";
             this.labelExt8.Size = new System.Drawing.Size(40, 13);
             this.labelExt8.TabIndex = 20;
-            this.labelExt8.Text = "Radius";
+            this.labelExt8.Text = Strings.Controls.ImportSphere_labelExt8;
             // 
             // txtExportVisited
             // 
@@ -123,7 +123,7 @@ namespace EDDiscovery.Forms
             this.btnExportTravel.Name = "btnExportTravel";
             this.btnExportTravel.Size = new System.Drawing.Size(111, 23);
             this.btnExportTravel.TabIndex = 17;
-            this.btnExportTravel.Text = "Current system";
+            this.btnExportTravel.Text = Strings.Controls.ImportSphere_btnExportTravel;
             this.btnExportTravel.UseVisualStyleBackColor = true;
             this.btnExportTravel.Click += new System.EventHandler(this.btnExportTravel_Click);
             // 
@@ -134,7 +134,7 @@ namespace EDDiscovery.Forms
             this.labelExt9.Name = "labelExt9";
             this.labelExt9.Size = new System.Drawing.Size(41, 13);
             this.labelExt9.TabIndex = 18;
-            this.labelExt9.Text = "System";
+            this.labelExt9.Text = Strings.Controls.ImportSphere_labelExt9;
             // 
             // ImportSphere
             // 

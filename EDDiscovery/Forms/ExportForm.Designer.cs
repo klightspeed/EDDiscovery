@@ -70,7 +70,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = Strings.Controls.Export_buttonCancel;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -81,7 +81,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "CVS Seperator";
+            this.label1.Text = Strings.Controls.Export_label1;
             // 
             // radioButtonSemiColon
             // 
@@ -97,7 +97,7 @@
             this.radioButtonSemiColon.Size = new System.Drawing.Size(74, 17);
             this.radioButtonSemiColon.TabIndex = 1;
             this.radioButtonSemiColon.TabStop = true;
-            this.radioButtonSemiColon.Text = "Semicolon";
+            this.radioButtonSemiColon.Text = Strings.Controls.Export_radioButtonSemiColon;
             this.radioButtonSemiColon.UseVisualStyleBackColor = true;
             // 
             // buttonExport
@@ -109,7 +109,7 @@
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(75, 23);
             this.buttonExport.TabIndex = 5;
-            this.buttonExport.Text = "Export";
+            this.buttonExport.Text = Strings.Controls.Export_buttonExport;
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
@@ -127,7 +127,7 @@
             this.radioButtonComma.Size = new System.Drawing.Size(60, 17);
             this.radioButtonComma.TabIndex = 0;
             this.radioButtonComma.TabStop = true;
-            this.radioButtonComma.Text = "Comma";
+            this.radioButtonComma.Text = Strings.Controls.Export_radioButtonComma;
             this.radioButtonComma.UseVisualStyleBackColor = true;
             // 
             // checkBoxIncludeHeader
@@ -143,7 +143,7 @@
             this.checkBoxIncludeHeader.Name = "checkBoxIncludeHeader";
             this.checkBoxIncludeHeader.Size = new System.Drawing.Size(99, 17);
             this.checkBoxIncludeHeader.TabIndex = 1;
-            this.checkBoxIncludeHeader.Text = "Include Header";
+            this.checkBoxIncludeHeader.Text = Strings.Controls.Export_checkBoxIncludeHeader;
             this.checkBoxIncludeHeader.TickBoxReductionSize = 10;
             this.checkBoxIncludeHeader.UseVisualStyleBackColor = true;
             // 
@@ -160,7 +160,7 @@
             this.checkBoxCustomAutoOpen.Name = "checkBoxCustomAutoOpen";
             this.checkBoxCustomAutoOpen.Size = new System.Drawing.Size(91, 17);
             this.checkBoxCustomAutoOpen.TabIndex = 1;
-            this.checkBoxCustomAutoOpen.Text = "Open in excel";
+            this.checkBoxCustomAutoOpen.Text = Strings.Controls.Export_checkBoxCustomAutoOpen;
             this.checkBoxCustomAutoOpen.TickBoxReductionSize = 10;
             this.checkBoxCustomAutoOpen.UseVisualStyleBackColor = true;
             // 
@@ -255,7 +255,7 @@
             this.label_index.Name = "label_index";
             this.label_index.Size = new System.Drawing.Size(37, 13);
             this.label_index.TabIndex = 28;
-            this.label_index.Text = "Export";
+            this.label_index.Text = Strings.Controls.Export_label_index;
             this.label_index.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_index_MouseDown);
             // 
             // panelOuter

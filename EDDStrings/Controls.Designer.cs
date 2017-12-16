@@ -61,6 +61,411 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string About_buttonOK {
+            get {
+                return ResourceManager.GetString("About_buttonOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Developers.
+        /// </summary>
+        public static string About_labelDevelopers {
+            get {
+                return ResourceManager.GetString("About_labelDevelopers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Links.
+        /// </summary>
+        public static string About_labelLinks {
+            get {
+                return ResourceManager.GetString("About_labelLinks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDDiscovery v4.3.2.1.
+        /// </summary>
+        public static string About_labelVersion {
+            get {
+                return ResourceManager.GetString("About_labelVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Developer Chat.
+        /// </summary>
+        public static string About_linkLabelDeveloperChat {
+            get {
+                return ResourceManager.GetString("About_linkLabelDeveloperChat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDDB.
+        /// </summary>
+        public static string About_linkLabelEDDB {
+            get {
+                return ResourceManager.GetString("About_linkLabelEDDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM.
+        /// </summary>
+        public static string About_linkLabelEDSM {
+            get {
+                return ResourceManager.GetString("About_linkLabelEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elite Dangerous.
+        /// </summary>
+        public static string About_linkLabelEliteDangerous {
+            get {
+                return ResourceManager.GetString("About_linkLabelEliteDangerous", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frontier Forum.
+        /// </summary>
+        public static string About_linkLabelFDForum {
+            get {
+                return ResourceManager.GetString("About_linkLabelFDForum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub.
+        /// </summary>
+        public static string About_linkLabelGitHub {
+            get {
+                return ResourceManager.GetString("About_linkLabelGitHub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit Feedback.
+        /// </summary>
+        public static string About_linkLabelGitHubIssue {
+            get {
+                return ResourceManager.GetString("About_linkLabelGitHubIssue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string About_linkLabelHelp {
+            get {
+                return ResourceManager.GetString("About_linkLabelHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to License.
+        /// </summary>
+        public static string About_linkLabelLicense {
+            get {
+                return ResourceManager.GetString("About_linkLabelLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Globals.
+        /// </summary>
+        public static string AddOnManager_buttonExtGlobals {
+            get {
+                return ResourceManager.GetString("AddOnManager_buttonExtGlobals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +.
+        /// </summary>
+        public static string AddOnManager_buttonMore {
+            get {
+                return ResourceManager.GetString("AddOnManager_buttonMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string AddOnManager_buttonOK {
+            get {
+                return ResourceManager.GetString("AddOnManager_buttonOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add-On Manager.
+        /// </summary>
+        public static string AddOnManager_label_index {
+            get {
+                return ResourceManager.GetString("AddOnManager_label_index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to statusStripCustom1.
+        /// </summary>
+        public static string AddOnManager_statusStripCustom {
+            get {
+                return ResourceManager.GetString("AddOnManager_statusStripCustom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string AddOnManager_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("AddOnManager_vScrollBarCustom1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string AssignTravelLogSystem_btnCancel {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_btnCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find.
+        /// </summary>
+        public static string AssignTravelLogSystem_btnFindSystem {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_btnFindSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string AssignTravelLogSystem_btnOK {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_btnOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travel Log System Name:.
+        /// </summary>
+        public static string AssignTravelLogSystem_label1 {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Visited:.
+        /// </summary>
+        public static string AssignTravelLogSystem_label2 {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New system name:.
+        /// </summary>
+        public static string AssignTravelLogSystem_label3 {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travel Log Coordinates:.
+        /// </summary>
+        public static string AssignTravelLogSystem_label4 {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_label4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System Coordinates.
+        /// </summary>
+        public static string AssignTravelLogSystem_label5 {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_label5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM Link:.
+        /// </summary>
+        public static string AssignTravelLogSystem_label6 {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_label6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSMLink.
+        /// </summary>
+        public static string AssignTravelLogSystem_lblEDSMLink {
+            get {
+                return ResourceManager.GetString("AssignTravelLogSystem_lblEDSMLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Bookmark_buttonCancel {
+            get {
+                return ResourceManager.GetString("Bookmark_buttonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string Bookmark_buttonDelete {
+            get {
+                return ResourceManager.GetString("Bookmark_buttonDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDSM.
+        /// </summary>
+        public static string Bookmark_buttonEDSM {
+            get {
+                return ResourceManager.GetString("Bookmark_buttonEDSM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string Bookmark_buttonOK {
+            get {
+                return ResourceManager.GetString("Bookmark_buttonOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make Target.
+        /// </summary>
+        public static string Bookmark_checkBoxTarget {
+            get {
+                return ResourceManager.GetString("Bookmark_checkBoxTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Bookmark_label1 {
+            get {
+                return ResourceManager.GetString("Bookmark_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Co-ordinates.
+        /// </summary>
+        public static string Bookmark_label2 {
+            get {
+                return ResourceManager.GetString("Bookmark_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to x:.
+        /// </summary>
+        public static string Bookmark_label3 {
+            get {
+                return ResourceManager.GetString("Bookmark_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to y:.
+        /// </summary>
+        public static string Bookmark_label6 {
+            get {
+                return ResourceManager.GetString("Bookmark_label6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to z:.
+        /// </summary>
+        public static string Bookmark_label7 {
+            get {
+                return ResourceManager.GetString("Bookmark_label7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bookmark Notes.
+        /// </summary>
+        public static string Bookmark_labelBookmarkNotes {
+            get {
+                return ResourceManager.GetString("Bookmark_labelBookmarkNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time Made.
+        /// </summary>
+        public static string Bookmark_labelTimeMade {
+            get {
+                return ResourceManager.GetString("Bookmark_labelTimeMade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travel History Note.
+        /// </summary>
+        public static string Bookmark_labelTravelNote {
+            get {
+                return ResourceManager.GetString("Bookmark_labelTravelNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Edit on Travel Screen).
+        /// </summary>
+        public static string Bookmark_labelTravelNoteEdit {
+            get {
+                return ResourceManager.GetString("Bookmark_labelTravelNoteEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CAPI State.
+        /// </summary>
+        public static string Commander_buttonExtCAPI {
+            get {
+                return ResourceManager.GetString("Commander_buttonExtCAPI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perform operation indicated.
+        /// </summary>
+        public static string Commander_buttonExtCAPI_ToolTip {
+            get {
+                return ResourceManager.GetString("Commander_buttonExtCAPI_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Commander_Cancel {
@@ -471,6 +876,15 @@ namespace EDDiscovery.Strings {
         public static string Commander_JournalDir_ToolTip {
             get {
                 return ResourceManager.GetString("Commander_JournalDir_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commander Configure.
+        /// </summary>
+        public static string Commander_label_index {
+            get {
+                return ResourceManager.GetString("Commander_label_index", resourceCulture);
             }
         }
         
@@ -1330,6 +1744,186 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Export_buttonCancel {
+            get {
+                return ResourceManager.GetString("Export_buttonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        public static string Export_buttonExport {
+            get {
+                return ResourceManager.GetString("Export_buttonExport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open in excel.
+        /// </summary>
+        public static string Export_checkBoxCustomAutoOpen {
+            get {
+                return ResourceManager.GetString("Export_checkBoxCustomAutoOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Include Header.
+        /// </summary>
+        public static string Export_checkBoxIncludeHeader {
+            get {
+                return ResourceManager.GetString("Export_checkBoxIncludeHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        public static string Export_label_index {
+            get {
+                return ResourceManager.GetString("Export_label_index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CVS Seperator.
+        /// </summary>
+        public static string Export_label1 {
+            get {
+                return ResourceManager.GetString("Export_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comma.
+        /// </summary>
+        public static string Export_radioButtonComma {
+            get {
+                return ResourceManager.GetString("Export_radioButtonComma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semicolon.
+        /// </summary>
+        public static string Export_radioButtonSemiColon {
+            get {
+                return ResourceManager.GetString("Export_radioButtonSemiColon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to toolStrip1.
+        /// </summary>
+        public static string Form2DMap_toolStrip1 {
+            get {
+                return ResourceManager.GetString("Form2DMap_toolStrip1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sol x=0.00.
+        /// </summary>
+        public static string FormMap_labelClickedSystemCoords {
+            get {
+                return ResourceManager.GetString("FormMap_labelClickedSystemCoords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sol x=0.00.
+        /// </summary>
+        public static string FormMap_labelSystemCoords {
+            get {
+                return ResourceManager.GetString("FormMap_labelSystemCoords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to x=0.0.
+        /// </summary>
+        public static string FormMap_statusLabel {
+            get {
+                return ResourceManager.GetString("FormMap_statusLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to statusStrip1.
+        /// </summary>
+        public static string FormMap_statusStrip {
+            get {
+                return ResourceManager.GetString("FormMap_statusStrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sol.
+        /// </summary>
+        public static string FormMap_textboxFrom {
+            get {
+                return ResourceManager.GetString("FormMap_textboxFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to toolStrip1.
+        /// </summary>
+        public static string FormMap_toolStripShowAllStars {
+            get {
+                return ResourceManager.GetString("FormMap_toolStripShowAllStars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current system.
+        /// </summary>
+        public static string ImportSphere_btnExportTravel {
+            get {
+                return ResourceManager.GetString("ImportSphere_btnExportTravel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string ImportSphere_buttonCancel {
+            get {
+                return ResourceManager.GetString("ImportSphere_buttonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string ImportSphere_buttonOK {
+            get {
+                return ResourceManager.GetString("ImportSphere_buttonOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Radius.
+        /// </summary>
+        public static string ImportSphere_labelExt8 {
+            get {
+                return ResourceManager.GetString("ImportSphere_labelExt8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        public static string ImportSphere_labelExt9 {
+            get {
+                return ResourceManager.GetString("ImportSphere_labelExt9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Send data on grid to excel.
         /// </summary>
         public static string JournalGrid_buttonExtExcel_ToolTip {
@@ -1843,6 +2437,123 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2D.
+        /// </summary>
+        public static string Main_buttonExt2dmap {
+            get {
+                return ResourceManager.GetString("Main_buttonExt2dmap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open the 2D Map.
+        /// </summary>
+        public static string Main_buttonExt2dmap_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonExt2dmap_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3D.
+        /// </summary>
+        public static string Main_buttonExt3dmap {
+            get {
+                return ResourceManager.GetString("Main_buttonExt3dmap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open the 3D Map.
+        /// </summary>
+        public static string Main_buttonExt3dmap_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonExt3dmap_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Add-Ons.
+        /// </summary>
+        public static string Main_buttonExtEditAddOns_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonExtEditAddOns_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Synchronize with EDSM, To and From.
+        /// </summary>
+        public static string Main_buttonExtEDSMSync_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonExtEDSMSync_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Add-Ons.
+        /// </summary>
+        public static string Main_buttonExtManageAddOns_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonExtManageAddOns_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click to select a pop out panel to display.
+        /// </summary>
+        public static string Main_buttonExtPopOut_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonExtPopOut_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh the history.
+        /// </summary>
+        public static string Main_buttonExtRefresh_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonExtRefresh_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reload-A.
+        /// </summary>
+        public static string Main_buttonReloadActions {
+            get {
+                return ResourceManager.GetString("Main_buttonReloadActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DEBUG reload action system.
+        /// </summary>
+        public static string Main_buttonReloadActions_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_buttonReloadActions_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cmdr.
+        /// </summary>
+        public static string Main_comboBoxCommander {
+            get {
+                return ResourceManager.GetString("Main_comboBoxCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the commander to view.
+        /// </summary>
+        public static string Main_comboBoxCommander_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_comboBoxCommander_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;About.
         /// </summary>
         public static string Main_Help_About {
@@ -1920,6 +2631,69 @@ namespace EDDiscovery.Strings {
         public static string Main_Help_SafeModeHelp {
             get {
                 return ResourceManager.GetString("Main_Help_SafeModeHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version Label.
+        /// </summary>
+        public static string Main_label_version {
+            get {
+                return ResourceManager.GetString("Main_label_version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading. Please wait!.
+        /// </summary>
+        public static string Main_labelInfoBoxTop {
+            get {
+                return ResourceManager.GetString("Main_labelInfoBoxTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to menuStrip1.
+        /// </summary>
+        public static string Main_menuStrip1 {
+            get {
+                return ResourceManager.GetString("Main_menuStrip1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDDiscovery.
+        /// </summary>
+        public static string Main_notifyIcon1 {
+            get {
+                return ResourceManager.GetString("Main_notifyIcon1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to statusStrip1.
+        /// </summary>
+        public static string Main_statusStrip1 {
+            get {
+                return ResourceManager.GetString("Main_statusStrip1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Right click to add/remove tabs, Left click drag to reorder.
+        /// </summary>
+        public static string Main_tabControlMain_ToolTip {
+            get {
+                return ResourceManager.GetString("Main_tabControlMain_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        public static string Main_tabPageTravelHistory {
+            get {
+                return ResourceManager.GetString("Main_tabPageTravelHistory", resourceCulture);
             }
         }
         
@@ -3922,6 +4696,114 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string MoveToCommander_buttonExtCancel {
+            get {
+                return ResourceManager.GetString("MoveToCommander_buttonExtCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transfer.
+        /// </summary>
+        public static string MoveToCommander_buttonTransfer {
+            get {
+                return ResourceManager.GetString("MoveToCommander_buttonTransfer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move selected history to commander..
+        /// </summary>
+        public static string MoveToCommander_label1 {
+            get {
+                return ResourceManager.GetString("MoveToCommander_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exe installer.
+        /// </summary>
+        public static string NewRelease_buttonExeInstaller {
+            get {
+                return ResourceManager.GetString("NewRelease_buttonExeInstaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string NewRelease_buttonExtCancel {
+            get {
+                return ResourceManager.GetString("NewRelease_buttonExtCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Msi installer.
+        /// </summary>
+        public static string NewRelease_buttonMsiInstaller {
+            get {
+                return ResourceManager.GetString("NewRelease_buttonMsiInstaller", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portable Zip.
+        /// </summary>
+        public static string NewRelease_buttonPortablezip {
+            get {
+                return ResourceManager.GetString("NewRelease_buttonPortablezip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string NewRelease_buttonUrlOpen {
+            get {
+                return ResourceManager.GetString("NewRelease_buttonUrlOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub url.
+        /// </summary>
+        public static string NewRelease_label1 {
+            get {
+                return ResourceManager.GetString("NewRelease_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Release info.
+        /// </summary>
+        public static string NewRelease_label2 {
+            get {
+                return ResourceManager.GetString("NewRelease_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        public static string NewRelease_label3 {
+            get {
+                return ResourceManager.GetString("NewRelease_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string NewRelease_labelName {
+            get {
+                return ResourceManager.GetString("NewRelease_labelName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Display galactic mapping notes.
         /// </summary>
         public static string NotePanel_DisplayGMPNotes {
@@ -3936,6 +4818,168 @@ namespace EDDiscovery.Strings {
         public static string NotePanel_DisplaySystemNotes {
             get {
                 return ResourceManager.GetString("NotePanel_DisplaySystemNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string RecordStep_buttonCancel {
+            get {
+                return ResourceManager.GetString("RecordStep_buttonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string RecordStep_buttonOK {
+            get {
+                return ResourceManager.GetString("RecordStep_buttonOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Zoom.
+        /// </summary>
+        public static string RecordStep_checkBoxChangeZoom {
+            get {
+                return ResourceManager.GetString("RecordStep_checkBoxChangeZoom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display Message with complete.
+        /// </summary>
+        public static string RecordStep_checkBoxDisplayMessageWhenComplete {
+            get {
+                return ResourceManager.GetString("RecordStep_checkBoxDisplayMessageWhenComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Dir.
+        /// </summary>
+        public static string RecordStep_checkBoxPan {
+            get {
+                return ResourceManager.GetString("RecordStep_checkBoxPan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go To.
+        /// </summary>
+        public static string RecordStep_checkBoxPos {
+            get {
+                return ResourceManager.GetString("RecordStep_checkBoxPos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wait for actions to complete.
+        /// </summary>
+        public static string RecordStep_checkBoxWaitComplete {
+            get {
+                return ResourceManager.GetString("RecordStep_checkBoxWaitComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wait for slew.
+        /// </summary>
+        public static string RecordStep_checkBoxWaitForSlew {
+            get {
+                return ResourceManager.GetString("RecordStep_checkBoxWaitForSlew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to.
+        /// </summary>
+        public static string RecordStep_label1 {
+            get {
+                return ResourceManager.GetString("RecordStep_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time to take to Zoom.
+        /// </summary>
+        public static string RecordStep_label11 {
+            get {
+                return ResourceManager.GetString("RecordStep_label11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message on screen time.
+        /// </summary>
+        public static string RecordStep_label12 {
+            get {
+                return ResourceManager.GetString("RecordStep_label12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0=default time.
+        /// </summary>
+        public static string RecordStep_label13 {
+            get {
+                return ResourceManager.GetString("RecordStep_label13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pointing At.
+        /// </summary>
+        public static string RecordStep_label2 {
+            get {
+                return ResourceManager.GetString("RecordStep_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time to take to change pos.
+        /// </summary>
+        public static string RecordStep_label3 {
+            get {
+                return ResourceManager.GetString("RecordStep_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time to take to change direction.
+        /// </summary>
+        public static string RecordStep_label4 {
+            get {
+                return ResourceManager.GetString("RecordStep_label4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zoom.
+        /// </summary>
+        public static string RecordStep_label6 {
+            get {
+                return ResourceManager.GetString("RecordStep_label6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message to display.
+        /// </summary>
+        public static string RecordStep_label7 {
+            get {
+                return ResourceManager.GetString("RecordStep_label7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wait for this time before action.
+        /// </summary>
+        public static string RecordStep_label8 {
+            get {
+                return ResourceManager.GetString("RecordStep_label8", resourceCulture);
             }
         }
         
@@ -4390,6 +5434,51 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string SafeMode_buttonCancel {
+            get {
+                return ResourceManager.GetString("SafeMode_buttonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move Databases.
+        /// </summary>
+        public static string SafeMode_buttonDbs {
+            get {
+                return ResourceManager.GetString("SafeMode_buttonDbs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Run.
+        /// </summary>
+        public static string SafeMode_buttonNormal {
+            get {
+                return ResourceManager.GetString("SafeMode_buttonNormal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Window Positions.
+        /// </summary>
+        public static string SafeMode_buttonPositions {
+            get {
+                return ResourceManager.GetString("SafeMode_buttonPositions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Theme.
+        /// </summary>
+        public static string SafeMode_buttonResetTheme {
+            get {
+                return ResourceManager.GetString("SafeMode_buttonResetTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Send data on grid to excel.
         /// </summary>
         public static string Scan_buttonExtExcel_ToolTip {
@@ -4566,6 +5655,285 @@ namespace EDDiscovery.Strings {
         public static string ScanGrid_vScrollBarCustom2 {
             get {
                 return ResourceManager.GetString("ScanGrid_vScrollBarCustom2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse.
+        /// </summary>
+        public static string ScreenShotConfigure_buttonChangeScreenshotsFolder {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_buttonChangeScreenshotsFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse.
+        /// </summary>
+        public static string ScreenShotConfigure_buttonEDChangeOutputFolder {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_buttonEDChangeOutputFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string ScreenShotConfigure_buttonExtCancel {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_buttonExtCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string ScreenShotConfigure_buttonExtOK {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_buttonExtOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crop Image.
+        /// </summary>
+        public static string ScreenShotConfigure_checkBoxCropImage {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_checkBoxCropImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crop Settings.
+        /// </summary>
+        public static string ScreenShotConfigure_groupBoxCropSettings {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_groupBoxCropSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Screenshot Configure.
+        /// </summary>
+        public static string ScreenShotConfigure_label_index {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label_index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ED/Steam Screenshot folder.
+        /// </summary>
+        public static string ScreenShotConfigure_label1 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Sub folder.
+        /// </summary>
+        public static string ScreenShotConfigure_label11 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Store Converted pictures.
+        /// </summary>
+        public static string ScreenShotConfigure_label2 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save as.
+        /// </summary>
+        public static string ScreenShotConfigure_label3 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In Filename format.
+        /// </summary>
+        public static string ScreenShotConfigure_label4 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top.
+        /// </summary>
+        public static string ScreenShotConfigure_label5 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Left.
+        /// </summary>
+        public static string ScreenShotConfigure_label6 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Width.
+        /// </summary>
+        public static string ScreenShotConfigure_label7 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height.
+        /// </summary>
+        public static string ScreenShotConfigure_label8 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scan for.
+        /// </summary>
+        public static string ScreenShotConfigure_label9 {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_label9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        public static string ScreenShotConfigure_numericUpDownHeight {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_numericUpDownHeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        public static string ScreenShotConfigure_numericUpDownLeft {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_numericUpDownLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        public static string ScreenShotConfigure_numericUpDownTop {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_numericUpDownTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        public static string ScreenShotConfigure_numericUpDownWidth {
+            get {
+                return ResourceManager.GetString("ScreenShotConfigure_numericUpDownWidth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string SetNote_buttonCancel {
+            get {
+                return ResourceManager.GetString("SetNote_buttonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string SetNote_buttonSave {
+            get {
+                return ResourceManager.GetString("SetNote_buttonSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timestamp:.
+        /// </summary>
+        public static string SetNote_label1 {
+            get {
+                return ResourceManager.GetString("SetNote_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary:.
+        /// </summary>
+        public static string SetNote_label2 {
+            get {
+                return ResourceManager.GetString("SetNote_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details:.
+        /// </summary>
+        public static string SetNote_label3 {
+            get {
+                return ResourceManager.GetString("SetNote_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detailsrn1rn2rn3.
+        /// </summary>
+        public static string SetNote_labelDetails {
+            get {
+                return ResourceManager.GetString("SetNote_labelDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System:.
+        /// </summary>
+        public static string SetNote_labelForSystem {
+            get {
+                return ResourceManager.GetString("SetNote_labelForSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string SetNote_labelSummary {
+            get {
+                return ResourceManager.GetString("SetNote_labelSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SysName.
+        /// </summary>
+        public static string SetNote_labelSystem {
+            get {
+                return ResourceManager.GetString("SetNote_labelSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timestamp.
+        /// </summary>
+        public static string SetNote_labelTimestamp {
+            get {
+                return ResourceManager.GetString("SetNote_labelTimestamp", resourceCulture);
             }
         }
         
@@ -5119,6 +6487,141 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Calculate.
+        /// </summary>
+        public static string ShipDetails_btnCalculate {
+            get {
+                return ResourceManager.GetString("ShipDetails_btnCalculate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string ShipDetails_btnCancel {
+            get {
+                return ResourceManager.GetString("ShipDetails_btnCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string ShipDetails_btnOK {
+            get {
+                return ResourceManager.GetString("ShipDetails_btnOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string ShipDetails_btnUpdateFSD {
+            get {
+                return ResourceManager.GetString("ShipDetails_btnUpdateFSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Cargo.
+        /// </summary>
+        public static string ShipDetails_label1 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tank warning.
+        /// </summary>
+        public static string ShipDetails_label10 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This screen tries to ESTIMATE fuel values.
+        /// </summary>
+        public static string ShipDetails_label11 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tank Size.
+        /// </summary>
+        public static string ShipDetails_label2 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FSD Drive.
+        /// </summary>
+        public static string ShipDetails_label3 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unladen Mass.
+        /// </summary>
+        public static string ShipDetails_label4 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FSD Optimal Mass .
+        /// </summary>
+        public static string ShipDetails_label5 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FSD Linear constant.
+        /// </summary>
+        public static string ShipDetails_label6 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FSD Power Constant.
+        /// </summary>
+        public static string ShipDetails_label7 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FSD Max Fuel Per Jump.
+        /// </summary>
+        public static string ShipDetails_label8 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FSD Jump Range.
+        /// </summary>
+        public static string ShipDetails_label9 {
+            get {
+                return ResourceManager.GetString("ShipDetails_label9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use Historic Material Counts.
         /// </summary>
         public static string ShoppingList_HistoricCounts {
@@ -5475,6 +6978,24 @@ namespace EDDiscovery.Strings {
         public static string SPanel_Time {
             get {
                 return ResourceManager.GetString("SPanel_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDDiscovery.
+        /// </summary>
+        public static string Splash_label_version {
+            get {
+                return ResourceManager.GetString("Splash_label_version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locating Ship.
+        /// </summary>
+        public static string Splash_label1 {
+            get {
+                return ResourceManager.GetString("Splash_label1", resourceCulture);
             }
         }
         
@@ -6424,6 +7945,15 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        public static string TimedMessage_labelMessage {
+            get {
+                return ResourceManager.GetString("TimedMessage_labelMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string TimeRange_All {
@@ -6856,6 +8386,51 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Calculated.
+        /// </summary>
+        public static string Trilateration_ColumnCalculated_Header {
+            get {
+                return ResourceManager.GetString("Trilateration_ColumnCalculated_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance.
+        /// </summary>
+        public static string Trilateration_ColumnDistance_Header {
+            get {
+                return ResourceManager.GetString("Trilateration_ColumnDistance_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Trilateration_ColumnStatus_Header {
+            get {
+                return ResourceManager.GetString("Trilateration_ColumnStatus_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        public static string Trilateration_ColumnSystem_Header {
+            get {
+                return ResourceManager.GetString("Trilateration_ColumnSystem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wanted System.
+        /// </summary>
+        public static string Trilateration_dataGridViewTextBoxColumnClosestSystemsSystem_Header {
+            get {
+                return ResourceManager.GetString("Trilateration_dataGridViewTextBoxColumnClosestSystemsSystem_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete all with known position.
         /// </summary>
         public static string Trilateration_DeleteKnown {
@@ -6946,6 +8521,15 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Source.
+        /// </summary>
+        public static string Trilateration_Source_Header {
+            get {
+                return ResourceManager.GetString("Trilateration_Source_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start &amp;new.
         /// </summary>
         public static string Trilateration_StartNew {
@@ -6969,6 +8553,15 @@ namespace EDDiscovery.Strings {
         public static string Trilateration_SubmitDistances {
             get {
                 return ResourceManager.GetString("Trilateration_SubmitDistances", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to toolStrip1.
+        /// </summary>
+        public static string Trilateration_toolStrip1 {
+            get {
+                return ResourceManager.GetString("Trilateration_toolStrip1", resourceCulture);
             }
         }
         
@@ -7000,6 +8593,24 @@ namespace EDDiscovery.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom1.
+        /// </summary>
+        public static string Trilateration_vScrollBarCustom1 {
+            get {
+                return ResourceManager.GetString("Trilateration_vScrollBarCustom1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vScrollBarCustom2.
+        /// </summary>
+        public static string Trilateration_vScrollBarCustom2 {
+            get {
+                return ResourceManager.GetString("Trilateration_vScrollBarCustom2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Refresh.
         /// </summary>
         public static string TripPanel_Refresh {
@@ -7014,6 +8625,78 @@ namespace EDDiscovery.Strings {
         public static string TripPanel_ShipDetails {
             get {
                 return ResourceManager.GetString("TripPanel_ShipDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N/A.
+        /// </summary>
+        public static string UCF_label_index {
+            get {
+                return ResourceManager.GetString("UCF_label_index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N/A.
+        /// </summary>
+        public static string UCF_labelControlText {
+            get {
+                return ResourceManager.GetString("UCF_labelControlText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        public static string UCF_panel_close_ToolTip {
+            get {
+                return ResourceManager.GetString("UCF_panel_close_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimise.
+        /// </summary>
+        public static string UCF_panel_minimize_ToolTip {
+            get {
+                return ResourceManager.GetString("UCF_panel_minimize_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle window on top of others.
+        /// </summary>
+        public static string UCF_panel_ontop_ToolTip {
+            get {
+                return ResourceManager.GetString("UCF_panel_ontop_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle title visibility for this window when transparent.
+        /// </summary>
+        public static string UCF_panel_showtitle_ToolTip {
+            get {
+                return ResourceManager.GetString("UCF_panel_showtitle_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle show taskbar icon for this window.
+        /// </summary>
+        public static string UCF_panel_taskbaricon_ToolTip {
+            get {
+                return ResourceManager.GetString("UCF_panel_taskbaricon_ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to statusStripCustom1.
+        /// </summary>
+        public static string UCF_statusStripBottom {
+            get {
+                return ResourceManager.GetString("UCF_statusStripBottom", resourceCulture);
             }
         }
     }

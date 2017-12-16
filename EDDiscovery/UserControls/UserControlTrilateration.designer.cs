@@ -210,7 +210,7 @@ namespace EDDiscovery.UserControls
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(924, 25);
             this.toolStrip1.TabIndex = 24;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Text = Strings.Controls.Trilateration_toolStrip1;
             // 
             // toolStripButtonSubmitDistances
             // 
@@ -378,7 +378,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 1;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.Trilateration_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;
@@ -413,21 +413,21 @@ namespace EDDiscovery.UserControls
             // 
             this.ColumnSystem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnSystem.FillWeight = 250F;
-            this.ColumnSystem.HeaderText = "System";
+            this.ColumnSystem.HeaderText = Strings.Controls.Trilateration_ColumnSystem_Header;
             this.ColumnSystem.MinimumWidth = 75;
             this.ColumnSystem.Name = "ColumnSystem";
             // 
             // ColumnDistance
             // 
             this.ColumnDistance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnDistance.HeaderText = "Distance";
+            this.ColumnDistance.HeaderText = Strings.Controls.Trilateration_ColumnDistance_Header;
             this.ColumnDistance.MinimumWidth = 75;
             this.ColumnDistance.Name = "ColumnDistance";
             // 
             // ColumnCalculated
             // 
             this.ColumnCalculated.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnCalculated.HeaderText = "Calculated";
+            this.ColumnCalculated.HeaderText = Strings.Controls.Trilateration_ColumnCalculated_Header;
             this.ColumnCalculated.MinimumWidth = 75;
             this.ColumnCalculated.Name = "ColumnCalculated";
             this.ColumnCalculated.ReadOnly = true;
@@ -436,7 +436,7 @@ namespace EDDiscovery.UserControls
             // ColumnStatus
             // 
             this.ColumnStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnStatus.HeaderText = "Status";
+            this.ColumnStatus.HeaderText = Strings.Controls.Trilateration_ColumnStatus_Header;
             this.ColumnStatus.MinimumWidth = 75;
             this.ColumnStatus.Name = "ColumnStatus";
             this.ColumnStatus.ReadOnly = true;
@@ -502,7 +502,7 @@ namespace EDDiscovery.UserControls
             this.vScrollBarCustom2.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom2.SmallChange = 1;
             this.vScrollBarCustom2.TabIndex = 14;
-            this.vScrollBarCustom2.Text = "vScrollBarCustom2";
+            this.vScrollBarCustom2.Text = Strings.Controls.Trilateration_vScrollBarCustom2;
             this.vScrollBarCustom2.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom2.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom2.ThumbColorScaling = 0.5F;
@@ -542,14 +542,14 @@ namespace EDDiscovery.UserControls
             // 
             // Source
             // 
-            this.Source.HeaderText = "Source";
+            this.Source.HeaderText = Strings.Controls.Trilateration_Source_Header;
             this.Source.Name = "Source";
             this.Source.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumnClosestSystemsSystem
             // 
             this.dataGridViewTextBoxColumnClosestSystemsSystem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumnClosestSystemsSystem.HeaderText = "Wanted System";
+            this.dataGridViewTextBoxColumnClosestSystemsSystem.HeaderText = Strings.Controls.Trilateration_dataGridViewTextBoxColumnClosestSystemsSystem_Header;
             this.dataGridViewTextBoxColumnClosestSystemsSystem.MinimumWidth = 100;
             this.dataGridViewTextBoxColumnClosestSystemsSystem.Name = "dataGridViewTextBoxColumnClosestSystemsSystem";
             this.dataGridViewTextBoxColumnClosestSystemsSystem.ReadOnly = true;

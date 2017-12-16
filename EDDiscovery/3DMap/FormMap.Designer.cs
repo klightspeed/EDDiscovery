@@ -141,7 +141,7 @@ namespace EDDiscovery
             this.textboxFrom.Size = new System.Drawing.Size(125, 20);
             this.textboxFrom.TabIndex = 16;
             this.textboxFrom.TabStop = false;
-            this.textboxFrom.Text = "Sol";
+            this.textboxFrom.Text = Strings.Controls.FormMap_textboxFrom;
             this.toolTip1.SetToolTip(this.textboxFrom, Strings.Controls.Map3D_CenterSystemName_ToolTip);
             // 
             // labelSystemCoords
@@ -151,7 +151,7 @@ namespace EDDiscovery
             this.labelSystemCoords.Name = "labelSystemCoords";
             this.labelSystemCoords.Size = new System.Drawing.Size(57, 13);
             this.labelSystemCoords.TabIndex = 18;
-            this.labelSystemCoords.Text = "Sol x=0.00";
+            this.labelSystemCoords.Text = Strings.Controls.FormMap_labelSystemCoords;
             // 
             // toolStripShowAllStars
             // 
@@ -191,7 +191,7 @@ namespace EDDiscovery
             this.toolStripShowAllStars.Name = "toolStripShowAllStars";
             this.toolStripShowAllStars.Size = new System.Drawing.Size(589, 40);
             this.toolStripShowAllStars.TabIndex = 19;
-            this.toolStripShowAllStars.Text = "toolStrip1";
+            this.toolStripShowAllStars.Text = Strings.Controls.FormMap_toolStripShowAllStars;
             // 
             // toolStripButtonGoBackward
             // 
@@ -688,13 +688,13 @@ namespace EDDiscovery
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1114, 22);
             this.statusStrip.TabIndex = 21;
-            this.statusStrip.Text = "statusStrip1";
+            this.statusStrip.Text = Strings.Controls.FormMap_statusStrip;
             // 
             // statusLabel
             // 
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(35, 17);
-            this.statusLabel.Text = "x=0.0";
+            this.statusLabel.Text = Strings.Controls.FormMap_statusLabel;
             // 
             // dotSelectedSystemCoords
             // 
@@ -750,7 +750,7 @@ namespace EDDiscovery
             this.labelClickedSystemCoords.Name = "labelClickedSystemCoords";
             this.labelClickedSystemCoords.Size = new System.Drawing.Size(57, 13);
             this.labelClickedSystemCoords.TabIndex = 24;
-            this.labelClickedSystemCoords.Text = "Sol x=0.00";
+            this.labelClickedSystemCoords.Text = Strings.Controls.FormMap_labelClickedSystemCoords;
             this.labelClickedSystemCoords.Click += new System.EventHandler(this.labelClickedSystemCoords_Click);
             // 
             // systemselectionMenuStrip

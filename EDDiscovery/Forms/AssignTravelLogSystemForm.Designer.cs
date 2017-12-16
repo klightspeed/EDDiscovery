@@ -74,7 +74,7 @@ namespace EDDiscovery.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Travel Log System Name:";
+            this.label1.Text = Strings.Controls.AssignTravelLogSystem_label1;
             // 
             // label2
             // 
@@ -83,7 +83,7 @@ namespace EDDiscovery.Forms
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Date Visited:";
+            this.label2.Text = Strings.Controls.AssignTravelLogSystem_label2;
             // 
             // label3
             // 
@@ -92,7 +92,7 @@ namespace EDDiscovery.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "New system name:";
+            this.label3.Text = Strings.Controls.AssignTravelLogSystem_label3;
             // 
             // label4
             // 
@@ -101,7 +101,7 @@ namespace EDDiscovery.Forms
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Travel Log Coordinates:";
+            this.label4.Text = Strings.Controls.AssignTravelLogSystem_label4;
             // 
             // label5
             // 
@@ -110,7 +110,7 @@ namespace EDDiscovery.Forms
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 13);
             this.label5.TabIndex = 16;
-            this.label5.Text = "System Coordinates";
+            this.label5.Text = Strings.Controls.AssignTravelLogSystem_label5;
             // 
             // label6
             // 
@@ -119,7 +119,7 @@ namespace EDDiscovery.Forms
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 13);
             this.label6.TabIndex = 20;
-            this.label6.Text = "EDSM Link:";
+            this.label6.Text = Strings.Controls.AssignTravelLogSystem_label6;
             // 
             // lblEDSMLink
             // 
@@ -129,7 +129,7 @@ namespace EDDiscovery.Forms
             this.lblEDSMLink.Size = new System.Drawing.Size(58, 13);
             this.lblEDSMLink.TabIndex = 21;
             this.lblEDSMLink.TabStop = true;
-            this.lblEDSMLink.Text = "EDSMLink";
+            this.lblEDSMLink.Text = Strings.Controls.AssignTravelLogSystem_lblEDSMLink;
             this.lblEDSMLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEDSMLink_LinkClicked);
             // 
             // panel1
@@ -170,7 +170,7 @@ namespace EDDiscovery.Forms
             this.btnFindSystem.Name = "btnFindSystem";
             this.btnFindSystem.Size = new System.Drawing.Size(75, 23);
             this.btnFindSystem.TabIndex = 19;
-            this.btnFindSystem.Text = "Find";
+            this.btnFindSystem.Text = Strings.Controls.AssignTravelLogSystem_btnFindSystem;
             this.btnFindSystem.UseVisualStyleBackColor = true;
             this.btnFindSystem.Click += new System.EventHandler(this.btnFindSystem_Click);
             // 
@@ -209,7 +209,7 @@ namespace EDDiscovery.Forms
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 18;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = Strings.Controls.AssignTravelLogSystem_btnCancel;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -222,7 +222,7 @@ namespace EDDiscovery.Forms
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 17;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = Strings.Controls.AssignTravelLogSystem_btnOK;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 

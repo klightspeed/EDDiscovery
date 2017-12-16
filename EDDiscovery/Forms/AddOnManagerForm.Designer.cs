@@ -113,7 +113,7 @@ namespace EDDiscovery.Forms
             this.label_index.Name = "label_index";
             this.label_index.Size = new System.Drawing.Size(88, 13);
             this.label_index.TabIndex = 23;
-            this.label_index.Text = "Add-On Manager";
+            this.label_index.Text = Strings.Controls.AddOnManager_label_index;
             this.label_index.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_index_MouseDown);
             this.label_index.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label_index_MouseUp);
             // 
@@ -180,7 +180,7 @@ namespace EDDiscovery.Forms
             this.vScrollBarCustom1.SliderColor = System.Drawing.Color.DarkGray;
             this.vScrollBarCustom1.SmallChange = 1;
             this.vScrollBarCustom1.TabIndex = 0;
-            this.vScrollBarCustom1.Text = "vScrollBarCustom1";
+            this.vScrollBarCustom1.Text = Strings.Controls.AddOnManager_vScrollBarCustom1;
             this.vScrollBarCustom1.ThumbBorderColor = System.Drawing.Color.Yellow;
             this.vScrollBarCustom1.ThumbButtonColor = System.Drawing.Color.DarkBlue;
             this.vScrollBarCustom1.ThumbColorScaling = 0.5F;
@@ -194,7 +194,7 @@ namespace EDDiscovery.Forms
             this.buttonMore.Name = "buttonMore";
             this.buttonMore.Size = new System.Drawing.Size(24, 24);
             this.buttonMore.TabIndex = 5;
-            this.buttonMore.Text = "+";
+            this.buttonMore.Text = Strings.Controls.AddOnManager_buttonMore;
             this.buttonMore.UseVisualStyleBackColor = true;
             this.buttonMore.Click += new System.EventHandler(this.buttonMore_Click);
             // 
@@ -242,7 +242,7 @@ namespace EDDiscovery.Forms
             this.buttonExtGlobals.Name = "buttonExtGlobals";
             this.buttonExtGlobals.Size = new System.Drawing.Size(75, 23);
             this.buttonExtGlobals.TabIndex = 7;
-            this.buttonExtGlobals.Text = "Globals";
+            this.buttonExtGlobals.Text = Strings.Controls.AddOnManager_buttonExtGlobals;
             this.buttonExtGlobals.UseVisualStyleBackColor = true;
             this.buttonExtGlobals.Click += new System.EventHandler(this.buttonExtGlobals_Click);
             // 
@@ -253,7 +253,7 @@ namespace EDDiscovery.Forms
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 7;
-            this.buttonOK.Text = "OK";
+            this.buttonOK.Text = Strings.Controls.AddOnManager_buttonOK;
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
@@ -263,7 +263,7 @@ namespace EDDiscovery.Forms
             this.statusStripCustom.Name = "statusStripCustom";
             this.statusStripCustom.Size = new System.Drawing.Size(1087, 22);
             this.statusStripCustom.TabIndex = 31;
-            this.statusStripCustom.Text = "statusStripCustom1";
+            this.statusStripCustom.Text = Strings.Controls.AddOnManager_statusStripCustom;
             // 
             // AddOnManagerForm
             // 

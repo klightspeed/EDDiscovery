@@ -77,7 +77,7 @@ namespace EDDiscovery.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Current Cargo";
+            this.label1.Text = Strings.Controls.ShipDetails_label1;
             // 
             // currentCargo
             // 
@@ -100,7 +100,7 @@ namespace EDDiscovery.Forms
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Tank Size";
+            this.label2.Text = Strings.Controls.ShipDetails_label2;
             // 
             // label3
             // 
@@ -109,7 +109,7 @@ namespace EDDiscovery.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "FSD Drive";
+            this.label3.Text = Strings.Controls.ShipDetails_label3;
             // 
             // unladenMass
             // 
@@ -125,7 +125,7 @@ namespace EDDiscovery.Forms
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Unladen Mass";
+            this.label4.Text = Strings.Controls.ShipDetails_label4;
             // 
             // fsdOptimalMass
             // 
@@ -141,7 +141,7 @@ namespace EDDiscovery.Forms
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "FSD Optimal Mass ";
+            this.label5.Text = Strings.Controls.ShipDetails_label5;
             // 
             // fsdLinearConstant
             // 
@@ -157,7 +157,7 @@ namespace EDDiscovery.Forms
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "FSD Linear constant";
+            this.label6.Text = Strings.Controls.ShipDetails_label6;
             // 
             // fsdPowerConstant
             // 
@@ -173,7 +173,7 @@ namespace EDDiscovery.Forms
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 13);
             this.label7.TabIndex = 14;
-            this.label7.Text = "FSD Power Constant";
+            this.label7.Text = Strings.Controls.ShipDetails_label7;
             // 
             // fsdDrive
             // 
@@ -190,7 +190,7 @@ namespace EDDiscovery.Forms
             this.btnUpdateFSD.Name = "btnUpdateFSD";
             this.btnUpdateFSD.Size = new System.Drawing.Size(75, 23);
             this.btnUpdateFSD.TabIndex = 17;
-            this.btnUpdateFSD.Text = "Update";
+            this.btnUpdateFSD.Text = Strings.Controls.ShipDetails_btnUpdateFSD;
             this.btnUpdateFSD.UseVisualStyleBackColor = true;
             this.btnUpdateFSD.Click += new System.EventHandler(this.btnUpdateFSD_Click);
             // 
@@ -201,7 +201,7 @@ namespace EDDiscovery.Forms
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 13);
             this.label8.TabIndex = 18;
-            this.label8.Text = "FSD Max Fuel Per Jump";
+            this.label8.Text = Strings.Controls.ShipDetails_label8;
             // 
             // fsdMaxFuelPerJump
             // 
@@ -224,7 +224,7 @@ namespace EDDiscovery.Forms
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 13);
             this.label9.TabIndex = 21;
-            this.label9.Text = "FSD Jump Range";
+            this.label9.Text = Strings.Controls.ShipDetails_label9;
             // 
             // btnCalculate
             // 
@@ -232,7 +232,7 @@ namespace EDDiscovery.Forms
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(75, 23);
             this.btnCalculate.TabIndex = 22;
-            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.Text = Strings.Controls.ShipDetails_btnCalculate;
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
@@ -246,7 +246,7 @@ namespace EDDiscovery.Forms
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = Strings.Controls.ShipDetails_btnCancel;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -260,7 +260,7 @@ namespace EDDiscovery.Forms
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = Strings.Controls.ShipDetails_btnOK;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -278,7 +278,7 @@ namespace EDDiscovery.Forms
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 24;
-            this.label10.Text = "Tank warning";
+            this.label10.Text = Strings.Controls.ShipDetails_label10;
             // 
             // label11
             // 
@@ -287,7 +287,7 @@ namespace EDDiscovery.Forms
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(207, 13);
             this.label11.TabIndex = 25;
-            this.label11.Text = "This screen tries to ESTIMATE fuel values";
+            this.label11.Text = Strings.Controls.ShipDetails_label11;
             // 
             // ShipDetails
             // 

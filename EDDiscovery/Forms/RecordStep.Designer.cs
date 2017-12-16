@@ -79,7 +79,7 @@ namespace EDDiscovery.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Go to";
+            this.label1.Text = Strings.Controls.RecordStep_label1;
             // 
             // label2
             // 
@@ -88,7 +88,7 @@ namespace EDDiscovery.Forms
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Pointing At";
+            this.label2.Text = Strings.Controls.RecordStep_label2;
             // 
             // label3
             // 
@@ -97,7 +97,7 @@ namespace EDDiscovery.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Time to take to change pos";
+            this.label3.Text = Strings.Controls.RecordStep_label3;
             // 
             // label4
             // 
@@ -106,7 +106,7 @@ namespace EDDiscovery.Forms
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(160, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Time to take to change direction";
+            this.label4.Text = Strings.Controls.RecordStep_label4;
             // 
             // label6
             // 
@@ -115,7 +115,7 @@ namespace EDDiscovery.Forms
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Zoom";
+            this.label6.Text = Strings.Controls.RecordStep_label6;
             // 
             // textBoxPos
             // 
@@ -171,7 +171,7 @@ namespace EDDiscovery.Forms
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 5;
-            this.buttonOK.Text = "OK";
+            this.buttonOK.Text = Strings.Controls.RecordStep_buttonOK;
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
@@ -181,7 +181,7 @@ namespace EDDiscovery.Forms
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 6;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = Strings.Controls.RecordStep_buttonCancel;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -199,7 +199,7 @@ namespace EDDiscovery.Forms
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 20);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Message to display";
+            this.label7.Text = Strings.Controls.RecordStep_label7;
             // 
             // label8
             // 
@@ -208,7 +208,7 @@ namespace EDDiscovery.Forms
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 13);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Wait for this time before action";
+            this.label8.Text = Strings.Controls.RecordStep_label8;
             // 
             // textBoxZoomTime
             // 
@@ -225,7 +225,7 @@ namespace EDDiscovery.Forms
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(108, 13);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Time to take to Zoom";
+            this.label11.Text = Strings.Controls.RecordStep_label11;
             // 
             // label12
             // 
@@ -234,7 +234,7 @@ namespace EDDiscovery.Forms
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(122, 13);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Message on screen time";
+            this.label12.Text = Strings.Controls.RecordStep_label12;
             // 
             // textBoxMsgTime
             // 
@@ -251,7 +251,7 @@ namespace EDDiscovery.Forms
             this.checkBoxWaitForSlew.Name = "checkBoxWaitForSlew";
             this.checkBoxWaitForSlew.Size = new System.Drawing.Size(87, 17);
             this.checkBoxWaitForSlew.TabIndex = 7;
-            this.checkBoxWaitForSlew.Text = "Wait for slew";
+            this.checkBoxWaitForSlew.Text = Strings.Controls.RecordStep_checkBoxWaitForSlew;
             this.checkBoxWaitForSlew.UseVisualStyleBackColor = true;
             this.checkBoxWaitForSlew.CheckedChanged += new System.EventHandler(this.checkBoxWaitForSlew_CheckedChanged);
             // 
@@ -262,7 +262,7 @@ namespace EDDiscovery.Forms
             this.checkBoxPos.Name = "checkBoxPos";
             this.checkBoxPos.Size = new System.Drawing.Size(56, 17);
             this.checkBoxPos.TabIndex = 7;
-            this.checkBoxPos.Text = "Go To";
+            this.checkBoxPos.Text = Strings.Controls.RecordStep_checkBoxPos;
             this.checkBoxPos.UseVisualStyleBackColor = true;
             this.checkBoxPos.CheckedChanged += new System.EventHandler(this.checkBoxGoTo_CheckedChanged);
             // 
@@ -273,7 +273,7 @@ namespace EDDiscovery.Forms
             this.checkBoxPan.Name = "checkBoxPan";
             this.checkBoxPan.Size = new System.Drawing.Size(79, 17);
             this.checkBoxPan.TabIndex = 7;
-            this.checkBoxPan.Text = "Change Dir";
+            this.checkBoxPan.Text = Strings.Controls.RecordStep_checkBoxPan;
             this.checkBoxPan.UseVisualStyleBackColor = true;
             this.checkBoxPan.CheckedChanged += new System.EventHandler(this.checkBoxChangeDir_CheckedChanged);
             // 
@@ -284,7 +284,7 @@ namespace EDDiscovery.Forms
             this.checkBoxChangeZoom.Name = "checkBoxChangeZoom";
             this.checkBoxChangeZoom.Size = new System.Drawing.Size(93, 17);
             this.checkBoxChangeZoom.TabIndex = 7;
-            this.checkBoxChangeZoom.Text = "Change Zoom";
+            this.checkBoxChangeZoom.Text = Strings.Controls.RecordStep_checkBoxChangeZoom;
             this.checkBoxChangeZoom.UseVisualStyleBackColor = true;
             this.checkBoxChangeZoom.CheckedChanged += new System.EventHandler(this.checkBoxChangeZoom_CheckedChanged);
             // 
@@ -295,7 +295,7 @@ namespace EDDiscovery.Forms
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 13);
             this.label13.TabIndex = 0;
-            this.label13.Text = "0=default time";
+            this.label13.Text = Strings.Controls.RecordStep_label13;
             // 
             // checkBoxWaitComplete
             // 
@@ -304,7 +304,7 @@ namespace EDDiscovery.Forms
             this.checkBoxWaitComplete.Name = "checkBoxWaitComplete";
             this.checkBoxWaitComplete.Size = new System.Drawing.Size(158, 17);
             this.checkBoxWaitComplete.TabIndex = 7;
-            this.checkBoxWaitComplete.Text = "Wait for actions to complete";
+            this.checkBoxWaitComplete.Text = Strings.Controls.RecordStep_checkBoxWaitComplete;
             this.checkBoxWaitComplete.UseVisualStyleBackColor = true;
             this.checkBoxWaitComplete.CheckedChanged += new System.EventHandler(this.checkBoxWaitForSlew_CheckedChanged);
             // 
@@ -315,7 +315,7 @@ namespace EDDiscovery.Forms
             this.checkBoxDisplayMessageWhenComplete.Name = "checkBoxDisplayMessageWhenComplete";
             this.checkBoxDisplayMessageWhenComplete.Size = new System.Drawing.Size(174, 17);
             this.checkBoxDisplayMessageWhenComplete.TabIndex = 7;
-            this.checkBoxDisplayMessageWhenComplete.Text = "Display Message with complete";
+            this.checkBoxDisplayMessageWhenComplete.Text = Strings.Controls.RecordStep_checkBoxDisplayMessageWhenComplete;
             this.checkBoxDisplayMessageWhenComplete.UseVisualStyleBackColor = true;
             this.checkBoxDisplayMessageWhenComplete.CheckedChanged += new System.EventHandler(this.checkBoxWaitForSlew_CheckedChanged);
             // 

@@ -50,7 +50,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Timestamp:";
+            this.label1.Text = Strings.Controls.SetNote_label1;
             // 
             // labelForSystem
             // 
@@ -59,7 +59,7 @@
             this.labelForSystem.Name = "labelForSystem";
             this.labelForSystem.Size = new System.Drawing.Size(44, 13);
             this.labelForSystem.TabIndex = 2;
-            this.labelForSystem.Text = "System:";
+            this.labelForSystem.Text = Strings.Controls.SetNote_labelForSystem;
             // 
             // label2
             // 
@@ -68,7 +68,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Summary:";
+            this.label2.Text = Strings.Controls.SetNote_label2;
             // 
             // labelTimestamp
             // 
@@ -77,7 +77,7 @@
             this.labelTimestamp.Name = "labelTimestamp";
             this.labelTimestamp.Size = new System.Drawing.Size(58, 13);
             this.labelTimestamp.TabIndex = 7;
-            this.labelTimestamp.Text = "Timestamp";
+            this.labelTimestamp.Text = Strings.Controls.SetNote_labelTimestamp;
             // 
             // labelSystem
             // 
@@ -86,7 +86,7 @@
             this.labelSystem.Name = "labelSystem";
             this.labelSystem.Size = new System.Drawing.Size(52, 13);
             this.labelSystem.TabIndex = 8;
-            this.labelSystem.Text = "SysName";
+            this.labelSystem.Text = Strings.Controls.SetNote_labelSystem;
             // 
             // labelSummary
             // 
@@ -94,7 +94,7 @@
             this.labelSummary.Name = "labelSummary";
             this.labelSummary.Size = new System.Drawing.Size(292, 13);
             this.labelSummary.TabIndex = 9;
-            this.labelSummary.Text = "Summary";
+            this.labelSummary.Text = Strings.Controls.SetNote_labelSummary;
             // 
             // label3
             // 
@@ -103,7 +103,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Details:";
+            this.label3.Text = Strings.Controls.SetNote_label3;
             // 
             // labelDetails
             // 
@@ -111,7 +111,7 @@
             this.labelDetails.Name = "labelDetails";
             this.labelDetails.Size = new System.Drawing.Size(271, 76);
             this.labelDetails.TabIndex = 11;
-            this.labelDetails.Text = "Details\r\n1\r\n2\r\n3";
+            this.labelDetails.Text = Strings.Controls.SetNote_labelDetails;
             // 
             // panel1
             // 
@@ -142,7 +142,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = Strings.Controls.SetNote_buttonCancel;
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -155,7 +155,7 @@
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 4;
-            this.buttonSave.Text = "Save";
+            this.buttonSave.Text = Strings.Controls.SetNote_buttonSave;
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 

@@ -58,7 +58,7 @@ namespace EDDiscovery.Forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Move selected history to commander.";
+            this.label1.Text = Strings.Controls.MoveToCommander_label1;
             // 
             // panel1
             // 
@@ -82,7 +82,7 @@ namespace EDDiscovery.Forms
             this.buttonTransfer.Name = "buttonTransfer";
             this.buttonTransfer.Size = new System.Drawing.Size(75, 23);
             this.buttonTransfer.TabIndex = 3;
-            this.buttonTransfer.Text = "Transfer";
+            this.buttonTransfer.Text = Strings.Controls.MoveToCommander_buttonTransfer;
             this.buttonTransfer.UseVisualStyleBackColor = true;
             this.buttonTransfer.Click += new System.EventHandler(this.buttonTransfer_Click);
             // 
@@ -121,7 +121,7 @@ namespace EDDiscovery.Forms
             this.buttonExtCancel.Name = "buttonExtCancel";
             this.buttonExtCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonExtCancel.TabIndex = 4;
-            this.buttonExtCancel.Text = "Cancel";
+            this.buttonExtCancel.Text = Strings.Controls.MoveToCommander_buttonExtCancel;
             this.buttonExtCancel.UseVisualStyleBackColor = true;
             this.buttonExtCancel.Click += new System.EventHandler(this.buttonExtCancel_Click);
             // 

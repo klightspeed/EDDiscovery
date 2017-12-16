@@ -125,7 +125,7 @@
             this.label_index.Name = "label_index";
             this.label_index.Size = new System.Drawing.Size(111, 13);
             this.label_index.TabIndex = 23;
-            this.label_index.Text = "Commander Configure";
+            this.label_index.Text = Strings.Controls.Commander_label_index;
             this.label_index.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_index_MouseDown);
             // 
             // panel1
@@ -173,8 +173,8 @@
             this.buttonExtCAPI.Name = "buttonExtCAPI";
             this.buttonExtCAPI.Size = new System.Drawing.Size(102, 23);
             this.buttonExtCAPI.TabIndex = 8;
-            this.buttonExtCAPI.Text = "CAPI State";
-            this.toolTip1.SetToolTip(this.buttonExtCAPI, "Perform operation indicated");
+            this.buttonExtCAPI.Text = Strings.Controls.Commander_buttonExtCAPI;
+            this.toolTip1.SetToolTip(this.buttonExtCAPI, Strings.Controls.Commander_buttonExtCAPI_ToolTip);
             this.buttonExtCAPI.UseVisualStyleBackColor = true;
             this.buttonExtCAPI.Click += new System.EventHandler(this.buttonExtCAPI_Click);
             // 

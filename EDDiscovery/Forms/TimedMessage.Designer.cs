@@ -52,7 +52,7 @@ namespace EDDiscovery.Forms
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(366, 47);
             this.labelMessage.TabIndex = 0;
-            this.labelMessage.Text = "0";
+            this.labelMessage.Text = Strings.Controls.TimedMessage_labelMessage;
             // 
             // TimedMessage
             // 
