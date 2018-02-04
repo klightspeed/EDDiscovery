@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Version;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -221,6 +221,7 @@
     <Compile Include="Forms\SafeModeForm.Designer.cs">
       <DependentUpon>SafeModeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\ExtraVersion.cs" />
     <Compile Include="ScreenShots\ScreenShotConfigureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -916,5 +917,25 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
+  </Target>
+  <Import Project="$(MSBuildProjectDirectory)\..\packages\MSBuildTasks.1.5.0.235\tools\MSBuild.Community.Tasks.targets" Condition="Exists('$(MSBuildProjectDirectory)/../packages/MSBuildTasks.1.5.0.235/tools/MSBuild.Community.Tasks.targets')" />
+  <Target Name="Version">
+    <PropertyGroup>
+      <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\..\packages\MSBuildTasks.1.5.0.235\tools</MSBuildCommunityTasksPath>
+      <GitPath Condition=" '$(OS)' != 'Unix' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\GitForWindows@InstallPath)</GitPath>
+      <GitPath Condition=" '$(OS)' != 'Unix' And '$(GitPath)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\GitForWindows', 'InstallPath', null, RegistryView.Registry64))</GitPath>
+      <GitPath Condition=" '$(OS)' != 'Unix' And '$(GitPath)' != '' ">$(GitPath)\bin</GitPath>
+      <GitPath Condition=" '$(OS)' != 'Unix' And '$(GitPath)' != '' And !Exists('$(GitPath)\git.exe') "></GitPath>
+      <GitPath Condition=" '$(OS)' == 'Unix' And Exists('/usr/bin/git') ">/usr/bin</GitPath>
+    </PropertyGroup>
+    <PropertyGroup>
+      <In>$([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)/Properties/AssemblyInfo.cs')</In>
+      <Pattern>^\s*\[assembly: AssemblyVersion\(\D*(\d+\.\d+\.\d+)</Pattern>
+      <AssemblyVersion>$([System.Text.RegularExpressions.Regex]::Match($(In), $(Pattern), System.Text.RegularExpressions.RegexOptions.Multiline).Groups[1].Value)</AssemblyVersion>
+    </PropertyGroup>
+    <GitVersion LocalPath="$(MSBuildProjectDirectory)" ToolPath="$(GitPath)" Short="true">
+      <Output TaskParameter="CommitHash" PropertyName="GitCommitHash" />
+    </GitVersion>
+    <AssemblyInfo CodeLanguage="CS" OutputFile="Properties\ExtraVersion.cs" AssemblyInformationalVersion="$(AssemblyVersion)-$(GitCommitHash)" />
   </Target>
 </Project>
