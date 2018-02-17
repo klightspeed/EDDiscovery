@@ -664,6 +664,25 @@ namespace EliteDangerousCore
 
         static public JObject GetJson(long journalid, SQLiteConnectionUser cn, DbTransaction tn = null)
         {
+            string EDataString = GetJsonString(journalid, cn, tn);
+            return EDataString == null ? null : JObject.Parse(EDataString);
+        }
+
+        public string GetJsonString()
+        {
+            return GetJsonString(Id);
+        }
+
+        static public string GetJsonString(long journalid)
+        {
+            using (SQLiteConnectionUser cn = new SQLiteConnectionUser(utc: true))
+            {
+                return GetJsonString(journalid, cn);
+            }
+        }
+
+        static public string GetJsonString(long journalid, SQLiteConnectionUser cn, DbTransaction tn = null)
+        {
             using (DbCommand cmd = cn.CreateCommand("select EventData from JournalEntries where ID=@journalid", tn))
             {
                 cmd.AddParameterWithValue("@journalid", journalid);
@@ -672,8 +691,7 @@ namespace EliteDangerousCore
                 {
                     while (reader.Read())
                     {
-                        string EDataString = (string)reader["EventData"];
-                        return JObject.Parse(EDataString);
+                        return (string)reader["EventData"];
                     }
                 }
             }
