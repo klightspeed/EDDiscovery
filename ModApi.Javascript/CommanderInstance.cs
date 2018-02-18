@@ -12,9 +12,13 @@ namespace EDDiscovery.ModApi.Javascript
     {
         private EliteDangerousCore.EDCommander Commander;
 
-        public CommanderInstance(ScriptEngine engine, EliteDangerousCore.EDCommander cmdr) : base(engine)
+        public CommanderInstance(ScriptEngine engine) : base(engine.Object.InstancePrototype)
         {
-            this.PopulateFields();
+            PopulateFunctions();
+        }
+
+        public CommanderInstance(ScriptEnvironment env, EliteDangerousCore.EDCommander cmdr) : base(env.CommanderPrototype)
+        {
             this.Name = cmdr.Name;
             this.Index = cmdr.Nr;
             Commander = cmdr;

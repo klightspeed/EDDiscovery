@@ -13,8 +13,9 @@ namespace EDDiscovery.ModApi.Javascript
     {
         private string Prefix;
 
-        public ConfigInstance(ScriptEngine engine, string prefix) : base(engine)
+        public ConfigInstance(ScriptEnvironment env, string prefix) : base(env.Engine.Object.InstancePrototype)
         {
+            PopulateFunctions();
             Prefix = prefix;
         }
 

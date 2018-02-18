@@ -19,13 +19,14 @@ namespace EDDiscovery.ModApi.Javascript
             public FunctionInstance Handler;
         }
 
+        private ScriptEnvironment Environment;
         private ConcurrentDictionary<string, List<JournalEntryHandler>> EventHandlers = new ConcurrentDictionary<string, List<JournalEntryHandler>>();
 
-        public JournalInstance(ScriptEngine engine) : base(engine)
+        public JournalInstance(ScriptEnvironment env) : base(env.Engine.Object.InstancePrototype)
         {
+            Environment = env;
             this.PopulateFunctions();
-            this.PopulateFields();
-            this.CurrentCommander = new CommanderInstance(Engine, EDCommander.Current);
+            this.CurrentCommander = new CommanderInstance(env, EDCommander.Current);
         }
 
         #region Javascript-visible methods
@@ -80,14 +81,14 @@ namespace EDDiscovery.ModApi.Javascript
         [JSFunction(Name = "getAllEntries")]
         public ArrayInstance GetAll(DateTime? start = null, DateTime? stop = null)
         {
-            return Engine.Array.Construct(JournalEntry.GetAll(CurrentCommander.Index, start, stop).Select(e => new JournalEntryInstance(Engine, e)).ToArray());
+            return Engine.Array.Construct(JournalEntry.GetAll(CurrentCommander.Index, start, stop).Select(e => new JournalEntryInstance(Environment, e)).ToArray());
         }
 
         [JSFunction(Name = "getByEventType")]
         public ArrayInstance GetByEventType(string type, DateTime? start = null, DateTime? stop = null)
         {
             JournalTypeEnum entrytype = (JournalTypeEnum)Enum.Parse(typeof(JournalTypeEnum), type);
-            return Engine.Array.Construct(JournalEntry.GetByEventType(entrytype, CurrentCommander.Index, start ?? new DateTime(2014, 1, 1), stop ?? DateTime.UtcNow).Select(e => new JournalEntryInstance(Engine, e)).ToArray());
+            return Engine.Array.Construct(JournalEntry.GetByEventType(entrytype, CurrentCommander.Index, start ?? new DateTime(2014, 1, 1), stop ?? DateTime.UtcNow).Select(e => new JournalEntryInstance(Environment, e)).ToArray());
         }
 
         [JSFunction(Name = "getLastEvent")]
@@ -96,10 +97,10 @@ namespace EDDiscovery.ModApi.Javascript
             Func<JournalEntry, bool> xfilter = je => true;
 
             if (filter != null)
-                xfilter = je => TypeConverter.ToBoolean(filter.Call(this, new JournalEntryInstance(Engine, je)));
+                xfilter = je => TypeConverter.ToBoolean(filter.Call(this, new JournalEntryInstance(Environment, je)));
 
             JournalEntry ret = JournalEntry.GetLast(CurrentCommander.Index, end ?? DateTime.UtcNow, xfilter);
-            return ret == null ? null : new JournalEntryInstance(Engine, ret);
+            return ret == null ? null : new JournalEntryInstance(Environment, ret);
         }
 
         [JSFunction(Name = "changeCommander")]
@@ -108,7 +109,7 @@ namespace EDDiscovery.ModApi.Javascript
             var cmdr = EDCommander.GetCommander(name);
             if (cmdr != null)
             {
-                CurrentCommander = new CommanderInstance(Engine, cmdr);
+                CurrentCommander = new CommanderInstance(Environment, cmdr);
             }
         }
 
@@ -118,7 +119,7 @@ namespace EDDiscovery.ModApi.Javascript
             var cmdr = EDCommander.GetCommander(nr);
             if (cmdr != null)
             {
-                CurrentCommander = new CommanderInstance(Engine, cmdr);
+                CurrentCommander = new CommanderInstance(Environment, cmdr);
             }
         }
         #endregion
@@ -141,7 +142,7 @@ namespace EDDiscovery.ModApi.Javascript
             List<JournalEntryHandler> handlers;
             if (EventHandlers.TryGetValue(eventtype, out handlers))
             {
-                JournalEntryInstance ji = je == null ? null : new JournalEntryInstance(this.Engine, je);
+                JournalEntryInstance ji = je == null ? null : new JournalEntryInstance(Environment, je);
                 JournalEntryHandler[] handlerlist;
 
                 lock (handlers)

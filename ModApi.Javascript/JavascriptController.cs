@@ -19,16 +19,6 @@ namespace EDDiscovery.ModApi.Javascript
             public ActionCoreController Controller;
             public HistoryList History;
             public string ConfigPrefix;
-            public string ScriptFile;
-            public string ScriptString;
-        }
-
-        private class ScriptEnvironment
-        {
-            public JournalInstance Journal;
-            public AudioInstance Audio;
-            public HistoryInstance History;
-            public ConfigInstance Config;
         }
 
         private ConcurrentQueue<Action<ScriptEnvironment>> ActionQueue = new ConcurrentQueue<Action<ScriptEnvironment>>();
@@ -62,29 +52,7 @@ namespace EDDiscovery.ModApi.Javascript
                 ManualResetEvent exitRequestedEvent = ExitRequestedEvent;
                 ConcurrentQueue<Action<ScriptEnvironment>> actionQueue = ActionQueue;
 
-                ScriptEngine engine = new ScriptEngine();
-                ScriptEnvironment env = new ScriptEnvironment
-                {
-                    Journal = new JournalInstance(engine),
-                    Audio = new AudioInstance(engine, args.Controller),
-                    History = new HistoryInstance(engine, args.History),
-                    Config = new ConfigInstance(engine, args.ConfigPrefix)
-                };
-
-                engine.SetGlobalValue("Journal", env.Journal);
-                engine.SetGlobalValue("Audio", env.Audio);
-                engine.SetGlobalValue("History", env.History);
-                engine.SetGlobalValue("Config", env.Config);
-
-                if (args.ScriptString != null)
-                {
-                    engine.Execute(new StringScriptSource(args.ScriptString));
-                }
-
-                if (args.ScriptFile != null)
-                {
-                    engine.Execute(new FileScriptSource(args.ScriptFile));
-                }
+                ScriptEnvironment env = new ScriptEnvironment(args.History, args.Controller, args.ConfigPrefix, a => Enqueue(a));
 
                 while (!exitRequestedEvent.WaitOne(0))
                 {
@@ -136,6 +104,21 @@ namespace EDDiscovery.ModApi.Javascript
 
                 ProcessorThread.Start(ProcessorArgs);
             }
+        }
+
+        public void ExecuteFile(string filename)
+        {
+            Enqueue(e => e.Engine.ExecuteFile(filename));
+        }
+
+        public void Execute(string script)
+        {
+            Enqueue(e => e.Engine.Execute(script));
+        }
+
+        public void Evaluate<T>(string script, Action<T> callback)
+        {
+            Enqueue(e => callback(e.Engine.Evaluate<T>(script)));
         }
 
         public void OnNewJournalEntry(JournalEntry je)

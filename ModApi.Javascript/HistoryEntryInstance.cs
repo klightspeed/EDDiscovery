@@ -13,7 +13,13 @@ namespace EDDiscovery.ModApi.Javascript
     {
         private HistoryEntry _HistoryEntry;
 
-        public HistoryEntryInstance(ScriptEngine engine, HistoryEntry he) : base(engine)
+        public HistoryEntryInstance(ScriptEngine engine) : base(engine.Object.InstancePrototype)
+        {
+            this.PopulateFunctions();
+            this.System = new SystemInstance(engine);
+        }
+
+        public HistoryEntryInstance(ScriptEnvironment env, HistoryEntry he) : base(env.HistoryEntryPrototype)
         {
             this._HistoryEntry = he;
             this.JournalEntryID = he.Journalid;
@@ -21,12 +27,11 @@ namespace EDDiscovery.ModApi.Javascript
             this.Timestamp = he.EventTimeUTC;
             this.EdsmID = he.journalEntry?.EdsmID ?? 0;
             this.Event = he.EntryType.ToString();
-            this.JournalEntry = he.journalEntry == null ? null : new JournalEntryInstance(Engine, he.journalEntry);
+            this.JournalEntry = he.journalEntry == null ? null : new JournalEntryInstance(env, he.journalEntry);
             this.EventDescription = he.EventDescription;
             this.EventDetailedInfo = he.EventDetailedInfo;
             this.EventSummary = he.EventSummary;
-            this.System = new SystemInstance(Engine, he.System);
-            this.PopulateFields();
+            this.System = new SystemInstance(env, he.System);
         }
 
         #region Javascript-visible properties

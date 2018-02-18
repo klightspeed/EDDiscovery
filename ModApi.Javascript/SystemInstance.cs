@@ -13,7 +13,12 @@ namespace EDDiscovery.ModApi.Javascript
     {
         public class CoordsInstance : ObjectInstance
         {
-            public CoordsInstance(ScriptEngine engine, double x, double y, double z) : base(engine)
+            public CoordsInstance(ScriptEngine engine) : base(engine.Object.InstancePrototype)
+            {
+                this.PopulateFunctions();
+            }
+
+            public CoordsInstance(ScriptEnvironment env, double x, double y, double z) : base(env.SystemPrototype.Coords)
             {
                 this.X = x;
                 this.Y = y;
@@ -31,13 +36,18 @@ namespace EDDiscovery.ModApi.Javascript
             public double Z { get; set; }
         }
 
-        public SystemInstance(ScriptEngine engine, ISystem system) : base(engine)
+        public SystemInstance(ScriptEngine engine) : base(engine.Object.InstancePrototype)
+        {
+            this.PopulateFunctions();
+            this.Coords = new CoordsInstance(engine);
+        }
+
+        public SystemInstance(ScriptEnvironment env, ISystem system) : base(env.SystemPrototype)
         {
             this.Name = system.Name;
             this.SystemAddress = system.SystemAddress;
             this.EdsmId = system.EDSMID;
-            this.Coords = system.HasCoordinate ? null : new CoordsInstance(Engine, system.X, system.Y, system.Z);
-            this.PopulateFields();
+            this.Coords = system.HasCoordinate ? null : new CoordsInstance(env, system.X, system.Y, system.Z);
         }
 
         [JSProperty(Name = "name")]

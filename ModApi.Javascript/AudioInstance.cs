@@ -13,11 +13,15 @@ namespace EDDiscovery.ModApi.Javascript
 {
     public class AudioInstance : ObjectInstance
     {
-        private ActionCoreController Controller;
+        private ActionCoreController ActionController;
+        private ScriptEnvironment Environment;
 
-        public AudioInstance(ScriptEngine engine, ActionCoreController controller) : base(engine)
+        public AudioInstance(ScriptEnvironment env, ActionCoreController actionController) : base(env.Engine.Object.InstancePrototype)
         {
-            Controller = controller;
+            PopulateFunctions();
+
+            ActionController = actionController;
+            Environment = env;
 
             SpeechDefaults = Engine.Object.Construct();
             SpeechDefaults["culture"] = "Default";
@@ -88,7 +92,7 @@ namespace EDDiscovery.ModApi.Javascript
 
             if (maxdelay > 0)
             {
-                int queue = Controller.AudioQueueSpeech.InQueuems();
+                int queue = ActionController.AudioQueueSpeech.InQueuems();
 
                 if (queue >= maxdelay)
                 {
@@ -96,14 +100,14 @@ namespace EDDiscovery.ModApi.Javascript
                 }
             }
 
-            var ms = Controller.SpeechSynthesizer.Speak(text, culture, voice, rate);
+            var ms = ActionController.SpeechSynthesizer.Speak(text, culture, voice, rate);
 
             if (ms == null)
             {
                 throw new JavaScriptException(Engine, "SayError", "Unable to render speech");
             }
 
-            AudioQueue.AudioSample audio = Controller.AudioQueueSpeech.Generate(ms, effects, true);
+            AudioQueue.AudioSample audio = ActionController.AudioQueueSpeech.Generate(ms, effects, true);
 
             if (audio == null)
             {
@@ -112,51 +116,51 @@ namespace EDDiscovery.ModApi.Javascript
 
             if (mixsound != null)
             {
-                AudioQueue.AudioSample mix = Controller.AudioQueueSpeech.Generate(mixsound);
+                AudioQueue.AudioSample mix = ActionController.AudioQueueSpeech.Generate(mixsound);
 
                 if (audio == null)
                 {
                     throw new JavaScriptException(Engine, "SayError", "Say could not create mix audio, check audio file format is supported and effects settings");
                 }
 
-                audio = Controller.AudioQueueSpeech.Mix(audio, mix);     // audio in MIX format
+                audio = ActionController.AudioQueueSpeech.Mix(audio, mix);     // audio in MIX format
             }
 
             if (prefixsound != null)
             {
-                AudioQueue.AudioSample p = Controller.AudioQueueSpeech.Generate(prefixsound);
+                AudioQueue.AudioSample p = ActionController.AudioQueueSpeech.Generate(prefixsound);
 
                 if (p == null)
                 {
                     throw new JavaScriptException(Engine, "SayError", "Say could not create prefix audio, check audio file format is supported and effects settings");
                 }
 
-                audio = Controller.AudioQueueSpeech.Append(p, audio);        // audio in AUDIO format.
+                audio = ActionController.AudioQueueSpeech.Append(p, audio);        // audio in AUDIO format.
             }
 
             if (postfixsound != null)
             {
-                AudioQueue.AudioSample p = Controller.AudioQueueSpeech.Generate(postfixsound);
+                AudioQueue.AudioSample p = ActionController.AudioQueueSpeech.Generate(postfixsound);
 
                 if (p == null)
                 {
                     throw new JavaScriptException(Engine, "SayError", "Say could not create postfix audio, check audio file format is supported and effects settings");
                 }
 
-                audio = Controller.AudioQueueSpeech.Append(audio, p);         // Audio in P format
+                audio = ActionController.AudioQueueSpeech.Append(audio, p);         // Audio in P format
             }
 
             if (onstart != null)
             {
-                audio.sampleStartEvent += (s, o) => onstart.Call(this, settings);
+                audio.sampleStartEvent += (s, o) => Environment.CallbackProcessor(e => onstart.Call(this, settings));
             }
 
             if (onfinish != null)
             {
-                audio.sampleOverEvent += (s, o) => onfinish.Call(this, settings);
+                audio.sampleOverEvent += (s, o) => Environment.CallbackProcessor(e => onfinish.Call(this, settings));
             }
 
-            Controller.AudioQueueSpeech.Submit(audio, volume, priority);
+            ActionController.AudioQueueSpeech.Submit(audio, volume, priority);
         }
 
         [JSFunction(Name = "playAudio")]
@@ -169,7 +173,7 @@ namespace EDDiscovery.ModApi.Javascript
             FunctionInstance onstart = settings?.GetPropertyValue("onstart") as FunctionInstance;
             FunctionInstance onfinish = settings?.GetPropertyValue("onfinish") as FunctionInstance;
 
-            AudioQueue.AudioSample audio = Controller.AudioQueueWave.Generate(name, effects);
+            AudioQueue.AudioSample audio = ActionController.AudioQueueWave.Generate(name, effects);
 
             if (audio == null)
             {
@@ -178,15 +182,15 @@ namespace EDDiscovery.ModApi.Javascript
 
             if (onstart != null)
             {
-                audio.sampleStartEvent += (s, o) => onstart.Call(this, settings);
+                audio.sampleStartEvent += (s, o) => Environment.CallbackProcessor(e => onstart.Call(this, settings));
             }
 
             if (onfinish != null)
             {
-                audio.sampleOverEvent += (s, o) => onfinish.Call(this, settings);
+                audio.sampleOverEvent += (s, o) => Environment.CallbackProcessor(e => onfinish.Call(this, settings));
             }
 
-            Controller.AudioQueueWave.Submit(audio, volume, priority);
+            ActionController.AudioQueueWave.Submit(audio, volume, priority);
         }
     }
 }

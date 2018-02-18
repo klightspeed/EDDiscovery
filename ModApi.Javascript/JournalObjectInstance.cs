@@ -17,13 +17,27 @@ namespace EDDiscovery.ModApi.Javascript
     {
         private static ConcurrentDictionary<Type, Action<JournalObjectInstance<T>, T>> PropertyPopulators = new ConcurrentDictionary<Type, Action<JournalObjectInstance<T>, T>>();
         protected static HashSet<string> ExcludeProperties { get; set; } = new HashSet<string>();
+        protected static JournalObjectInstance<T> ObjectPrototype { get; set; }
 
-        public JournalObjectInstance(ScriptEngine engine, T obj) : base(engine)
+        public JournalObjectInstance(ScriptEngine engine) : base(engine.Object.InstancePrototype)
         {
-            this.PopulateFields();
             this.PopulateFunctions();
-            var populator = PropertyPopulators.GetOrAdd(obj.GetType(), t => GetPopulator(t));
-            populator(this, obj);
+        }
+
+        public JournalObjectInstance(JournalObjectInstance<T> prototype, T val) : base(prototype)
+        {
+            var populator = PropertyPopulators.GetOrAdd(val.GetType(), t => GetPopulator(t));
+            populator(this, val);
+        }
+
+        public static JournalObjectInstance<T> Create(ScriptEngine engine, T val)
+        {
+            if (ObjectPrototype == null)
+            {
+                ObjectPrototype = new JournalObjectInstance<T>(engine);
+            }
+
+            return new JournalObjectInstance<T>(ObjectPrototype, val);
         }
 
         #region Conversion builders
@@ -184,7 +198,7 @@ namespace EDDiscovery.ModApi.Javascript
 
         private ArrayInstance EnumObjectArray<TVal>(IEnumerable<TVal> vals)
         {
-            return Engine.Array.Construct(vals.Select(v => new JournalObjectInstance<TVal>(Engine, v)).ToArray());
+            return Engine.Array.Construct(vals.Select(v => JournalObjectInstance<TVal>.Create(Engine, v)).ToArray());
         }
         #endregion
     }

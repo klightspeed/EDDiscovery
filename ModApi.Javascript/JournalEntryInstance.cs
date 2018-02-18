@@ -14,7 +14,6 @@ using Newtonsoft.Json.Linq;
 
 namespace EDDiscovery.ModApi.Javascript
 {
-
     public class JournalEntryInstance : JournalObjectInstance<JournalEntry>
     {
         private JournalEntry _JournalEntry;
@@ -27,7 +26,11 @@ namespace EDDiscovery.ModApi.Javascript
             };
         }
 
-        public JournalEntryInstance(ScriptEngine engine, JournalEntry je) : base(engine, je)
+        public JournalEntryInstance(ScriptEngine engine) : base(engine)
+        {
+        }
+
+        public JournalEntryInstance(ScriptEnvironment env, JournalEntry je) : base(env.JournalEntryPrototype, je)
         {
             _JournalEntry = je;
             JournalEntryID = je.Id;

@@ -13,12 +13,15 @@ namespace EDDiscovery.ModApi.Javascript
 {
     public class HistoryInstance : ObjectInstance
     {
-        private HistoryList _History;
+        private HistoryList History;
         private ConcurrentDictionary<string, List<FunctionInstance>> EventHandlers = new ConcurrentDictionary<string, List<FunctionInstance>>();
+        private ScriptEnvironment Environment;
 
-        public HistoryInstance(ScriptEngine engine, HistoryList hl) : base(engine)
+        public HistoryInstance(ScriptEnvironment env, HistoryList hl) : base(env.Engine.Object.InstancePrototype)
         {
-            _History = hl;
+            PopulateFunctions();
+            Environment = env;
+            History = hl;
         }
 
         #region Javascript-visible methods
@@ -71,14 +74,14 @@ namespace EDDiscovery.ModApi.Javascript
         [JSFunction(Name = "getAllEntries")]
         public ArrayInstance GetAll(DateTime? start = null, DateTime? stop = null)
         {
-            return Engine.Array.Construct(_History.EntryOrder.Where(e => (start == null || e.EventTimeUTC >= start) && (stop == null || e.EventTimeUTC <= stop)).Select(e => new HistoryEntryInstance(Engine, e)).ToArray());
+            return Engine.Array.Construct(History.EntryOrder.Where(e => (start == null || e.EventTimeUTC >= start) && (stop == null || e.EventTimeUTC <= stop)).Select(e => new HistoryEntryInstance(Environment, e)).ToArray());
         }
 
         [JSFunction(Name = "getByEventType")]
         public ArrayInstance GetByEventType(string type, DateTime? start = null, DateTime? stop = null)
         {
             JournalTypeEnum entrytype = (JournalTypeEnum)Enum.Parse(typeof(JournalTypeEnum), type);
-            return Engine.Array.Construct(_History.EntryOrder.Where(e => e.EntryType == entrytype && (start == null || e.EventTimeUTC >= start) && (stop == null || e.EventTimeUTC <= stop)).Select(e => new HistoryEntryInstance(Engine, e)).ToArray());
+            return Engine.Array.Construct(History.EntryOrder.Where(e => e.EntryType == entrytype && (start == null || e.EventTimeUTC >= start) && (stop == null || e.EventTimeUTC <= stop)).Select(e => new HistoryEntryInstance(Environment, e)).ToArray());
         }
 
         [JSFunction(Name = "getLastEvent")]
@@ -87,10 +90,10 @@ namespace EDDiscovery.ModApi.Javascript
             Func<HistoryEntry, bool> xfilter = je => true;
 
             if (filter != null)
-                xfilter = je => TypeConverter.ToBoolean(filter.Call(this, new HistoryEntryInstance(Engine, je)));
+                xfilter = je => TypeConverter.ToBoolean(filter.Call(this, new HistoryEntryInstance(Environment, je)));
 
-            HistoryEntry ret = _History.GetLastHistoryEntry(e => (end == null || e.EventTimeUTC <= end) && xfilter(e));
-            return ret == null ? null : new HistoryEntryInstance(Engine, ret);
+            HistoryEntry ret = History.GetLastHistoryEntry(e => (end == null || e.EventTimeUTC <= end) && xfilter(e));
+            return ret == null ? null : new HistoryEntryInstance(Environment, ret);
         }
         #endregion
 
@@ -106,7 +109,7 @@ namespace EDDiscovery.ModApi.Javascript
             List<FunctionInstance> handlers;
             if (EventHandlers.TryGetValue(eventtype, out handlers))
             {
-                HistoryEntryInstance ji = he == null ? null : new HistoryEntryInstance(this.Engine, he);
+                HistoryEntryInstance ji = he == null ? null : new HistoryEntryInstance(Environment, he);
                 FunctionInstance[] handlerlist;
 
                 lock (handlers)
@@ -167,7 +170,7 @@ namespace EDDiscovery.ModApi.Javascript
 
         public void OnRefresh(HistoryList hl)
         {
-            _History = hl;
+            History = hl;
             OnNewHistoryEntry(null, "@Refresh");
         }
     }
