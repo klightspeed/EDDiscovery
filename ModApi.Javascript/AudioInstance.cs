@@ -42,31 +42,6 @@ namespace EDDiscovery.ModApi.Javascript
             AudioDefaults["effects"] = null;
         }
 
-        private SoundEffectSettings GetSoundEffects(ObjectInstance settings)
-        {
-            ConditionVariables local = new ConditionVariables();
-
-            if (settings != null)
-            {
-                foreach (var kvp in settings.Properties)
-                {
-                    local[kvp.Name] = kvp.Value?.ToString();
-                }
-            }
-
-            ConditionVariables global = new ConditionVariables();
-
-            var globalsettings = SpeechDefaults["effects"] as ObjectInstance;
-            if (globalsettings != null)
-            {
-                foreach (var kvp in globalsettings.Properties)
-                {
-                    global[kvp.Name] = kvp.Value?.ToString();
-                }
-            }
-
-            return SoundEffectSettings.Set(global, local);
-        }
 
         [JSProperty(Name = "speechDefaults")]
         public ObjectInstance SpeechDefaults { get; private set; }
@@ -74,123 +49,217 @@ namespace EDDiscovery.ModApi.Javascript
         [JSProperty(Name = "audioDefaults")]
         public ObjectInstance AudioDefaults { get; private set; }
 
+        private class AudioSettings
+        {
+            public int volume;
+            public int maxdelay;
+            public AudioQueue.Priority priority;
+            public SoundEffectSettings effects;
+            public FunctionInstance onstart;
+            public FunctionInstance onfinish;
+            public FunctionInstance onerror;
+
+            protected ObjectInstance settings;
+            protected AudioInstance audio;
+
+            public AudioSettings(AudioInstance audio, ObjectInstance settings, ObjectInstance defaults)
+            {
+                this.audio = audio;
+                this.settings = settings;
+
+                volume = TypeConverter.ToInteger(settings?.GetPropertyValue("volume") ?? 60);
+                maxdelay = TypeConverter.ToInteger(settings?.GetPropertyValue("maxdelay") ?? 0);
+                priority = AudioQueue.GetPriority(settings?.GetPropertyValue("priority") as string ?? "Normal");
+                effects = GetSoundEffects(settings, defaults);
+                onstart = settings?.GetPropertyValue("onstart") as FunctionInstance;
+                onfinish = settings?.GetPropertyValue("onfinish") as FunctionInstance;
+                onerror = settings?.GetPropertyValue("onerror") as FunctionInstance;
+            }
+
+            protected SoundEffectSettings GetSoundEffects(ObjectInstance settings, ObjectInstance defaults)
+            {
+                var localsettings = settings?.GetPropertyValue("effects") as ObjectInstance;
+                ConditionVariables local = new ConditionVariables();
+
+                if (localsettings != null)
+                {
+                    foreach (var kvp in settings.Properties)
+                    {
+                        local[kvp.Name] = kvp.Value?.ToString();
+                    }
+                }
+
+                ConditionVariables global = new ConditionVariables();
+
+                var globalsettings = defaults["effects"] as ObjectInstance;
+                if (globalsettings != null)
+                {
+                    foreach (var kvp in globalsettings.Properties)
+                    {
+                        global[kvp.Name] = kvp.Value?.ToString();
+                    }
+                }
+
+                return SoundEffectSettings.Set(global, local);
+            }
+
+            public void RaiseError(string message)
+            {
+                if (onerror != null)
+                {
+                    audio.Environment.CallbackProcessor(e => onerror.Call(settings, message));
+                }
+            }
+        }
+
+        private class SaySettings : AudioSettings
+        {
+            public string text;
+            public string culture;
+            public string voice;
+            public int rate;
+            public string prefixsound;
+            public string postfixsound;
+            public string mixsound;
+
+            public SaySettings(string text, AudioInstance audio, ObjectInstance settings, ObjectInstance defaults)
+                : base(audio, settings, defaults)
+            {
+                this.text = text;
+                culture = TypeConverter.ToString(settings?.GetPropertyValue("culture") ?? defaults["culture"] ?? "Default");
+                voice = TypeConverter.ToString(settings?.GetPropertyValue("voice") ?? defaults["voice"] ?? "Default");
+                rate = TypeConverter.ToInteger(settings?.GetPropertyValue("rate") ?? defaults["rate"] ?? 0);
+                prefixsound = settings?.GetPropertyValue("prefix") as string;
+                postfixsound = settings?.GetPropertyValue("postfix") as string;
+                mixsound = settings?.GetPropertyValue("mix") as string;
+            }
+        }
+
+        private class PlaySettings : AudioSettings
+        {
+            public string sound;
+
+            public PlaySettings(string sound, AudioInstance audio, ObjectInstance settings, ObjectInstance defaults)
+                : base(audio, settings, defaults)
+            {
+                this.sound = sound;
+            }
+        }
+
         [JSFunction(Name = "say")]
         public void Say(string text, ObjectInstance settings = null)
         {
-            string culture = TypeConverter.ToString(settings?.GetPropertyValue("culture") ?? SpeechDefaults["culture"] ?? "Default");
-            string voice = TypeConverter.ToString(settings?.GetPropertyValue("voice") ?? SpeechDefaults["voice"] ?? "Default");
-            int rate = TypeConverter.ToInteger(settings?.GetPropertyValue("rate") ?? SpeechDefaults["rate"] ?? 0);
-            string prefixsound = settings?.GetPropertyValue("prefix") as string;
-            string postfixsound = settings?.GetPropertyValue("postfix") as string;
-            string mixsound = settings?.GetPropertyValue("mix") as string;
-            int volume = TypeConverter.ToInteger(settings?.GetPropertyValue("volume") ?? 60);
-            int maxdelay = TypeConverter.ToInteger(settings?.GetPropertyValue("maxdelay") ?? 0);
-            AudioQueue.Priority priority = AudioQueue.GetPriority(settings?.GetPropertyValue("priority") as string ?? "Normal");
-            SoundEffectSettings effects = GetSoundEffects(settings?.GetPropertyValue("effects") as ObjectInstance);
-            FunctionInstance onstart = settings?.GetPropertyValue("onstart") as FunctionInstance;
-            FunctionInstance onfinish = settings?.GetPropertyValue("onfinish") as FunctionInstance;
+            ActionController.Form.BeginInvoke(new Action<SaySettings>(DoSay), new SaySettings(text, this, settings, SpeechDefaults));
+        }
 
-            if (maxdelay > 0)
+        private void DoSay(SaySettings settings)
+        {
+            if (settings.maxdelay > 0)
             {
                 int queue = ActionController.AudioQueueSpeech.InQueuems();
 
-                if (queue >= maxdelay)
+                if (queue >= settings.maxdelay)
                 {
-                    throw new JavaScriptException(Engine, "SayError", "Abort say due to queue being at " + queue);
+                    settings.RaiseError("Abort say due to queue being at " + queue);
+                    return;
                 }
             }
 
-            var ms = ActionController.SpeechSynthesizer.Speak(text, culture, voice, rate);
+            var ms = ActionController.SpeechSynthesizer.Speak(settings.text, settings.culture, settings.voice, settings.rate);
 
             if (ms == null)
             {
-                throw new JavaScriptException(Engine, "SayError", "Unable to render speech");
+                settings.RaiseError("Unable to render speech");
+                return;
             }
 
-            AudioQueue.AudioSample audio = ActionController.AudioQueueSpeech.Generate(ms, effects, true);
+            AudioQueue.AudioSample audio = ActionController.AudioQueueSpeech.Generate(ms, settings.effects, true);
 
             if (audio == null)
             {
-                throw new JavaScriptException(Engine, "SayError", "Say could not create audio, check Effects settings");
+                settings.RaiseError("Say could not create audio, check Effects settings");
+                return;
             }
 
-            if (mixsound != null)
+            if (settings.mixsound != null)
             {
-                AudioQueue.AudioSample mix = ActionController.AudioQueueSpeech.Generate(mixsound);
+                AudioQueue.AudioSample mix = ActionController.AudioQueueSpeech.Generate(settings.mixsound);
 
-                if (audio == null)
+                if (mix == null)
                 {
-                    throw new JavaScriptException(Engine, "SayError", "Say could not create mix audio, check audio file format is supported and effects settings");
+                    settings.RaiseError("Say could not create mix audio, check audio file format is supported and effects settings");
+                    return;
                 }
 
                 audio = ActionController.AudioQueueSpeech.Mix(audio, mix);     // audio in MIX format
             }
 
-            if (prefixsound != null)
+            if (settings.prefixsound != null)
             {
-                AudioQueue.AudioSample p = ActionController.AudioQueueSpeech.Generate(prefixsound);
+                AudioQueue.AudioSample p = ActionController.AudioQueueSpeech.Generate(settings.prefixsound);
 
                 if (p == null)
                 {
-                    throw new JavaScriptException(Engine, "SayError", "Say could not create prefix audio, check audio file format is supported and effects settings");
+                    settings.RaiseError("Say could not create prefix audio, check audio file format is supported and effects settings");
+                    return;
                 }
 
                 audio = ActionController.AudioQueueSpeech.Append(p, audio);        // audio in AUDIO format.
             }
 
-            if (postfixsound != null)
+            if (settings.postfixsound != null)
             {
-                AudioQueue.AudioSample p = ActionController.AudioQueueSpeech.Generate(postfixsound);
+                AudioQueue.AudioSample p = ActionController.AudioQueueSpeech.Generate(settings.postfixsound);
 
                 if (p == null)
                 {
-                    throw new JavaScriptException(Engine, "SayError", "Say could not create postfix audio, check audio file format is supported and effects settings");
+                    settings.RaiseError("Say could not create postfix audio, check audio file format is supported and effects settings");
+                    return;
                 }
 
                 audio = ActionController.AudioQueueSpeech.Append(audio, p);         // Audio in P format
             }
 
-            if (onstart != null)
+            if (settings.onstart != null)
             {
-                audio.sampleStartEvent += (s, o) => Environment.CallbackProcessor(e => onstart.Call(this, settings));
+                audio.sampleStartEvent += (s, o) => Environment.CallbackProcessor(e => settings.onstart.Call(this, settings));
             }
 
-            if (onfinish != null)
+            if (settings.onfinish != null)
             {
-                audio.sampleOverEvent += (s, o) => Environment.CallbackProcessor(e => onfinish.Call(this, settings));
+                audio.sampleOverEvent += (s, o) => Environment.CallbackProcessor(e => settings.onfinish.Call(this, settings));
             }
 
-            ActionController.AudioQueueSpeech.Submit(audio, volume, priority);
+            ActionController.AudioQueueSpeech.Submit(audio, settings.volume, settings.priority);
         }
 
         [JSFunction(Name = "playAudio")]
         public void PlayAudio(string name, ObjectInstance settings = null)
         {
-            int volume = TypeConverter.ToInteger(settings?.GetPropertyValue("volume") ?? 60);
-            int maxdelay = TypeConverter.ToInteger(settings?.GetPropertyValue("maxdelay") ?? 0);
-            AudioQueue.Priority priority = AudioQueue.GetPriority(settings?.GetPropertyValue("priority") as string ?? "Normal");
-            SoundEffectSettings effects = GetSoundEffects(settings?.GetPropertyValue("effects") as ObjectInstance);
-            FunctionInstance onstart = settings?.GetPropertyValue("onstart") as FunctionInstance;
-            FunctionInstance onfinish = settings?.GetPropertyValue("onfinish") as FunctionInstance;
+            ActionController.Form.BeginInvoke(new Action<PlaySettings>(DoPlay), new PlaySettings(name, this, settings, AudioDefaults));
+        }
 
-            AudioQueue.AudioSample audio = ActionController.AudioQueueWave.Generate(name, effects);
+        private void DoPlay(PlaySettings settings)
+        {
+            AudioQueue.AudioSample audio = ActionController.AudioQueueWave.Generate(settings.sound, settings.effects);
 
             if (audio == null)
             {
-                throw new JavaScriptException(Engine, "AudioError", "Unable to create audio, check audio file format is supported and effects settings");
+                settings.RaiseError("Unable to create audio, check audio file format is supported and effects settings");
+                return;
             }
 
-            if (onstart != null)
+            if (settings.onstart != null)
             {
-                audio.sampleStartEvent += (s, o) => Environment.CallbackProcessor(e => onstart.Call(this, settings));
+                audio.sampleStartEvent += (s, o) => Environment.CallbackProcessor(e => settings.onstart.Call(this, settings));
             }
 
-            if (onfinish != null)
+            if (settings.onfinish != null)
             {
-                audio.sampleOverEvent += (s, o) => Environment.CallbackProcessor(e => onfinish.Call(this, settings));
+                audio.sampleOverEvent += (s, o) => Environment.CallbackProcessor(e => settings.onfinish.Call(this, settings));
             }
 
-            ActionController.AudioQueueWave.Submit(audio, volume, priority);
+            ActionController.AudioQueueWave.Submit(audio, settings.volume, settings.priority);
         }
     }
 }
