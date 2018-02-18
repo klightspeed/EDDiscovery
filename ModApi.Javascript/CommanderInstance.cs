@@ -10,11 +10,14 @@ namespace EDDiscovery.ModApi.Javascript
 {
     public class CommanderInstance : ObjectInstance
     {
+        private EliteDangerousCore.EDCommander Commander;
+
         public CommanderInstance(ScriptEngine engine, EliteDangerousCore.EDCommander cmdr) : base(engine)
         {
             this.PopulateFields();
             this.Name = cmdr.Name;
             this.Index = cmdr.Nr;
+            Commander = cmdr;
         }
 
         [JSProperty(Name = "index")]

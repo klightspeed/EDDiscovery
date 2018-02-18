@@ -11,11 +11,11 @@ using AudioExtensions;
 
 namespace EDDiscovery.ModApi.Javascript
 {
-    public class Actions : ObjectInstance
+    public class AudioInstance : ObjectInstance
     {
         private ActionCoreController Controller;
 
-        public Actions(ScriptEngine engine, ActionCoreController controller) : base(engine)
+        public AudioInstance(ScriptEngine engine, ActionCoreController controller) : base(engine)
         {
             Controller = controller;
 

@@ -11,7 +11,7 @@ using EliteDangerousCore.JournalEvents;
 
 namespace EDDiscovery.ModApi.Javascript
 {
-    public class Journal : ObjectInstance
+    public class JournalInstance : ObjectInstance
     {
         private struct JournalEntryHandler
         {
@@ -21,7 +21,7 @@ namespace EDDiscovery.ModApi.Javascript
 
         private ConcurrentDictionary<string, List<JournalEntryHandler>> EventHandlers = new ConcurrentDictionary<string, List<JournalEntryHandler>>();
 
-        public Journal(ScriptEngine engine) : base(engine)
+        public JournalInstance(ScriptEngine engine) : base(engine)
         {
             this.PopulateFunctions();
             this.PopulateFields();
@@ -87,7 +87,7 @@ namespace EDDiscovery.ModApi.Javascript
         public ArrayInstance GetByEventType(string type, DateTime? start = null, DateTime? stop = null)
         {
             JournalTypeEnum entrytype = (JournalTypeEnum)Enum.Parse(typeof(JournalTypeEnum), type);
-            return Engine.Array.Construct(JournalEntry.GetByEventType(entrytype, CurrentCommander.Index, start ?? new DateTime(2014, 1, 1), stop ?? DateTime.UtcNow));
+            return Engine.Array.Construct(JournalEntry.GetByEventType(entrytype, CurrentCommander.Index, start ?? new DateTime(2014, 1, 1), stop ?? DateTime.UtcNow).Select(e => new JournalEntryInstance(Engine, e)).ToArray());
         }
 
         [JSFunction(Name = "getLastEvent")]
@@ -131,9 +131,11 @@ namespace EDDiscovery.ModApi.Javascript
         #region Event subscription
         protected void OnNewJournalEntry(JournalEntry je, string eventtype)
         {
-            if (eventtype == null)
+            string evtype = eventtype;
+
+            if (evtype == null)
             {
-                eventtype = je.EventTypeStr;
+                evtype = je.EventTypeStr;
             }
 
             List<JournalEntryHandler> handlers;

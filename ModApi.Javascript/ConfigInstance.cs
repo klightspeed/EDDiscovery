@@ -9,11 +9,11 @@ using EliteDangerousCore.DB;
 
 namespace EDDiscovery.ModApi.Javascript
 {
-    public class Config : ObjectInstance
+    public class ConfigInstance : ObjectInstance
     {
         private string Prefix;
 
-        public Config(ScriptEngine engine, string prefix) : base(engine)
+        public ConfigInstance(ScriptEngine engine, string prefix) : base(engine)
         {
             Prefix = prefix;
         }
