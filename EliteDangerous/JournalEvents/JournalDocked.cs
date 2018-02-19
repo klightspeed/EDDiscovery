@@ -50,7 +50,7 @@ namespace EliteDangerousCore.JournalEvents
     SearchAndRescue, 
      */
     [JournalEntryType(JournalTypeEnum.Docked)]
-    public class JournalDocked : JournalEntry, ISystemStationEntry
+    public class JournalDocked : JournalEntry, ISystemStationEntry, IStationEntry, ISystemStationMarket
     {
         public JournalDocked(JObject evt ) : base(evt, JournalTypeEnum.Docked)
         {

@@ -27,7 +27,7 @@ namespace EDDiscovery.ModApi.Javascript
             this.Timestamp = he.EventTimeUTC;
             this.EdsmID = he.journalEntry?.EdsmID ?? 0;
             this.Event = he.EntryType.ToString();
-            this.JournalEntry = he.journalEntry == null ? null : new JournalEntryInstance(env, he.journalEntry);
+            this.JournalEntry = he.journalEntry == null ? null : JournalEntryInstance.Create(env, he.journalEntry);
             this.EventDescription = he.EventDescription;
             this.EventDetailedInfo = he.EventDetailedInfo;
             this.EventSummary = he.EventSummary;

@@ -34,7 +34,7 @@ namespace EliteDangerousCore.JournalEvents
     //o   EngineerModifications(only present if modified)
 
     [JournalEntryType(JournalTypeEnum.StoredModules)]
-    public class JournalStoredModules : JournalEntry
+    public class JournalStoredModules : JournalEntry, ISystemStationMarket
     {
         public JournalStoredModules(JObject evt) : base(evt, JournalTypeEnum.StoredModules)
         {

@@ -30,7 +30,7 @@ namespace EliteDangerousCore.JournalEvents
     //o   BuyPrice
 
     [JournalEntryType(JournalTypeEnum.Outfitting)]
-    public class JournalOutfitting : JournalEntry, IAdditionalFiles
+    public class JournalOutfitting : JournalEntry, IAdditionalFiles, ISystemStationMarket
     {
         public JournalOutfitting(JObject evt) : base(evt, JournalTypeEnum.Outfitting)
         {

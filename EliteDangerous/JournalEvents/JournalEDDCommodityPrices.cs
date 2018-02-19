@@ -25,7 +25,7 @@ namespace EliteDangerousCore.JournalEvents
     {
         public JournalEDDCommodityPrices(JObject evt) : base(evt, JournalTypeEnum.EDDCommodityPrices)
         {
-            Station = evt["station"].Str();
+            StationName = evt["station"].Str();
             Faction = evt["faction"].Str();
             Commodities = new List<CCommodities>();
 
@@ -52,7 +52,7 @@ namespace EliteDangerousCore.JournalEvents
         {
         }
 
-        public string Station { get; protected set; }
+        public string StationName { get; protected set; }
         public string Faction { get; protected set; }
         public string StarSystem { get; set; }
         public long? MarketID { get; set; }
@@ -61,7 +61,7 @@ namespace EliteDangerousCore.JournalEvents
         public override void FillInformation(out string summary, out string info, out string detailed) //V
         {
             summary = EventTypeStr.SplitCapsWord();
-            info = BaseUtils.FieldBuilder.Build("Prices on ; items", Commodities.Count, "< at " , Station , "< in " , StarSystem);
+            info = BaseUtils.FieldBuilder.Build("Prices on ; items", Commodities.Count, "< at " , StationName , "< in " , StarSystem);
 
             int col = 0;
             int maxcol = Commodities.Count > 60 ? 2 : 1;

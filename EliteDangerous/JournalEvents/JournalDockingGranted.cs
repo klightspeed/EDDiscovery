@@ -19,7 +19,7 @@ using System.Linq;
 namespace EliteDangerousCore.JournalEvents
 {
     [JournalEntryType(JournalTypeEnum.DockingGranted)]
-    public class JournalDockingGranted : JournalEntry
+    public class JournalDockingGranted : JournalEntry, IStationEntry
     {
         public JournalDockingGranted(JObject evt ) : base(evt, JournalTypeEnum.DockingGranted)
         {

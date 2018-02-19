@@ -55,7 +55,6 @@
     <Compile Include="JavascriptController.cs" />
     <Compile Include="JournalInstance.cs" />
     <Compile Include="JournalEntryInstance.cs" />
-    <Compile Include="JournalObjectInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptEnvironment.cs" />
     <Compile Include="SystemInstance.cs" />
@@ -71,6 +70,10 @@
     <ProjectReference Include="..\Audio\Audio.csproj">
       <Project>{59F99A05-CE16-4FB8-BE99-F1A24F019CB8}</Project>
       <Name>Audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseUtils\BaseUtils.csproj">
+      <Project>{C657C881-F3E1-45BA-ACA5-966348010414}</Project>
+      <Name>BaseUtils</Name>
     </ProjectReference>
     <ProjectReference Include="..\Conditions\Conditions.csproj">
       <Project>{f76451e6-926d-4e03-b721-99fcd1ec4eed}</Project>

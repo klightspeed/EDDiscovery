@@ -22,7 +22,7 @@ namespace EliteDangerousCore.JournalEvents
     //Parameters:
     //•	StationName: name of station
     [JournalEntryType(JournalTypeEnum.DockingRequested)]
-    public class JournalDockingRequested : JournalEntry
+    public class JournalDockingRequested : JournalEntry, IStationEntry
     {
         public JournalDockingRequested(JObject evt ) : base(evt, JournalTypeEnum.DockingRequested)
         {

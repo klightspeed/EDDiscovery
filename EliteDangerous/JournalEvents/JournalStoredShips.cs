@@ -38,7 +38,7 @@ namespace EliteDangerousCore.JournalEvents
     //o   Value
 
     [JournalEntryType(JournalTypeEnum.StoredShips)]
-    public class JournalStoredShips : JournalEntry
+    public class JournalStoredShips : JournalEntry, ISystemStationMarket
     {
         public JournalStoredShips(JObject evt) : base(evt, JournalTypeEnum.StoredShips)
         {

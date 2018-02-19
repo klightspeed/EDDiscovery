@@ -48,6 +48,20 @@ namespace EliteDangerousCore
         long? SystemAddress { get; }
     }
 
+    public interface IStationEntry
+    {
+        string StationName { get; }
+        string StationType { get; }
+        long? MarketID { get; }
+    }
+
+    public interface ISystemStationMarket
+    {
+        string StarSystem { get; }
+        string StationName { get; }
+        long? MarketID { get; }
+    }
+
     public interface IMissions
     {
         void UpdateMissions(MissionListAccumulator mlist, ISystem sys, string body, SQLiteConnectionUser conn);

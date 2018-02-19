@@ -36,7 +36,7 @@ namespace EliteDangerousCore.JournalEvents
     //•	Government
     //•	Security
     [JournalEntryType(JournalTypeEnum.Location)]
-    public class JournalLocation : JournalLocOrJump, ISystemStationEntry, IBodyNameAndID
+    public class JournalLocation : JournalLocOrJump, ISystemStationEntry, IBodyNameAndID, IStationEntry, ISystemStationMarket
     {
         public JournalLocation(JObject evt) : base(evt, JournalTypeEnum.Location)      // all have evidence 16/3/2017
         {
@@ -48,6 +48,7 @@ namespace EliteDangerousCore.JournalEvents
             Body = evt["Body"].Str();
             BodyID = evt["BodyID"].IntNull();
             BodyType = evt["BodyType"].Str();
+            MarketID = evt["MarketID"].LongNull();
 
             Latitude = evt["Latitude"].DoubleNull();
             Longitude = evt["Longitude"].DoubleNull();
@@ -60,6 +61,7 @@ namespace EliteDangerousCore.JournalEvents
         public int? BodyID { get; set; }
         public string BodyType { get; set; }
         public string BodyDesignation { get; set; }
+        public long? MarketID { get; set; }
 
         public double? Latitude { get; set; }
         public double? Longitude { get; set; }

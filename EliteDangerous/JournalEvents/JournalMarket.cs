@@ -40,7 +40,7 @@ namespace EliteDangerousCore.JournalEvents
     //o   Rare
 
     [JournalEntryType(JournalTypeEnum.Market)]
-    public class JournalMarket : JournalCommodityPricesBase, IAdditionalFiles
+    public class JournalMarket : JournalCommodityPricesBase, IAdditionalFiles, ISystemStationMarket
     {
         public JournalMarket(JObject evt) : base(evt, JournalTypeEnum.Market)
         {
@@ -49,7 +49,7 @@ namespace EliteDangerousCore.JournalEvents
 
         public void Rescan(JObject evt)
         {
-            Station = evt["StationName"].Str();
+            StationName = evt["StationName"].Str();
             StarSystem = evt["StarSystem"].Str();
             MarketID = evt["MarketID"].LongNull();
             Commodities = new List<CCommodities>(); // always made..

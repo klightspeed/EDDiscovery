@@ -81,14 +81,14 @@ namespace EDDiscovery.ModApi.Javascript
         [JSFunction(Name = "getAllEntries")]
         public ArrayInstance GetAll(DateTime? start = null, DateTime? stop = null)
         {
-            return Engine.Array.Construct(JournalEntry.GetAll(CurrentCommander.Index, start, stop).Select(e => new JournalEntryInstance(Environment, e)).ToArray());
+            return Engine.Array.Construct(JournalEntry.GetAll(CurrentCommander.Index, start, stop).Select(e => JournalEntryInstance.Create(Environment, e)).ToArray());
         }
 
         [JSFunction(Name = "getByEventType")]
         public ArrayInstance GetByEventType(string type, DateTime? start = null, DateTime? stop = null)
         {
             JournalTypeEnum entrytype = (JournalTypeEnum)Enum.Parse(typeof(JournalTypeEnum), type);
-            return Engine.Array.Construct(JournalEntry.GetByEventType(entrytype, CurrentCommander.Index, start ?? new DateTime(2014, 1, 1), stop ?? DateTime.UtcNow).Select(e => new JournalEntryInstance(Environment, e)).ToArray());
+            return Engine.Array.Construct(JournalEntry.GetByEventType(entrytype, CurrentCommander.Index, start ?? new DateTime(2014, 1, 1), stop ?? DateTime.UtcNow).Select(e => JournalEntryInstance.Create(Environment, e)).ToArray());
         }
 
         [JSFunction(Name = "getLastEvent")]
@@ -97,10 +97,10 @@ namespace EDDiscovery.ModApi.Javascript
             Func<JournalEntry, bool> xfilter = je => true;
 
             if (filter != null)
-                xfilter = je => TypeConverter.ToBoolean(filter.Call(this, new JournalEntryInstance(Environment, je)));
+                xfilter = je => TypeConverter.ToBoolean(filter.Call(this, JournalEntryInstance.Create(Environment, je)));
 
             JournalEntry ret = JournalEntry.GetLast(CurrentCommander.Index, end ?? DateTime.UtcNow, xfilter);
-            return ret == null ? null : new JournalEntryInstance(Environment, ret);
+            return ret == null ? null : JournalEntryInstance.Create(Environment, ret);
         }
 
         [JSFunction(Name = "changeCommander")]
@@ -142,7 +142,7 @@ namespace EDDiscovery.ModApi.Javascript
             List<JournalEntryHandler> handlers;
             if (EventHandlers.TryGetValue(eventtype, out handlers))
             {
-                JournalEntryInstance ji = je == null ? null : new JournalEntryInstance(Environment, je);
+                JournalEntryInstance ji = je == null ? null : JournalEntryInstance.Create(Environment, je);
                 JournalEntryHandler[] handlerlist;
 
                 lock (handlers)
@@ -190,6 +190,11 @@ namespace EDDiscovery.ModApi.Javascript
                 if (je is IShipInformation)
                 {
                     OnNewJournalEntry(je, "@ShipInformation");
+                }
+
+                if (je is IBodyNameAndID)
+                {
+                    OnNewJournalEntry(je, "@WithSystem");
                 }
 
                 OnNewJournalEntry(je, "@Any");

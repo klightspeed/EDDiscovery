@@ -97,6 +97,11 @@ namespace EDDiscovery.ModApi.Javascript
         }
         #endregion
 
+        #region Javascript-visible properties
+        [JSProperty(Name = "currentCommander")]
+        public CommanderInstance CurrentCommander { get; private set; }
+        #endregion
+
         private void OnNewHistoryEntry(HistoryEntry he, string eventtype)
         {
             string evtype = eventtype;
@@ -158,6 +163,11 @@ namespace EDDiscovery.ModApi.Javascript
                     OnNewHistoryEntry(he, "@ShipInformation");
                 }
 
+                if (je is IBodyNameAndID)
+                {
+                    OnNewHistoryEntry(he, "@WithSystem");
+                }
+
                 OnNewHistoryEntry(he, "@Any");
             }
 
@@ -171,6 +181,7 @@ namespace EDDiscovery.ModApi.Javascript
         public void OnRefresh(HistoryList hl)
         {
             History = hl;
+            CurrentCommander = new CommanderInstance(Environment, EDCommander.GetCommander(hl.CommanderId));
             OnNewHistoryEntry(null, "@Refresh");
         }
     }

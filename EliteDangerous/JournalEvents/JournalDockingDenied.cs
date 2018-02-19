@@ -25,7 +25,7 @@ namespace EliteDangerousCore.JournalEvents
     //
     //Reasons include: NoSpace, TooLarge, Hostile, Offences, Distance, ActiveFighter, NoReason
     [JournalEntryType(JournalTypeEnum.DockingDenied)]
-    public class JournalDockingDenied : JournalEntry
+    public class JournalDockingDenied : JournalEntry, IStationEntry
     {
         public JournalDockingDenied(JObject evt ) : base(evt, JournalTypeEnum.DockingDenied)
         {

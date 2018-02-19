@@ -24,7 +24,7 @@ namespace EliteDangerousCore.JournalEvents
 
     //•	Security
     [JournalEntryType(JournalTypeEnum.Undocked)]
-    public class JournalUndocked : JournalEntry
+    public class JournalUndocked : JournalEntry, IStationEntry
     {
         public JournalUndocked(JObject evt ) : base(evt, JournalTypeEnum.Undocked)
         {

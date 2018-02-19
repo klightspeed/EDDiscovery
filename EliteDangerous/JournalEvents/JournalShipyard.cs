@@ -29,7 +29,7 @@ namespace EliteDangerousCore.JournalEvents
     //o   ShipPrice
 
     [JournalEntryType(JournalTypeEnum.Shipyard)]
-    public class JournalShipyard : JournalEntry, IAdditionalFiles
+    public class JournalShipyard : JournalEntry, IAdditionalFiles, ISystemStationMarket
     {
         public JournalShipyard(JObject evt) : base(evt, JournalTypeEnum.Shipyard)
         {
