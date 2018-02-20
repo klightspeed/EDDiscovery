@@ -20,7 +20,7 @@ namespace EDDiscovery.ModApi.Javascript
         }
 
         private ScriptEnvironment Environment;
-        private ConcurrentDictionary<string, List<JournalEntryHandler>> EventListeners = new ConcurrentDictionary<string, List<JournalEntryHandler>>();
+        private Dictionary<string, List<JournalEntryHandler>> EventListeners = new Dictionary<string, List<JournalEntryHandler>>();
 
         public JournalInstance(ScriptEnvironment env) : base(env.JournalPrototype ?? env.Engine.Object.InstancePrototype)
         {
@@ -39,8 +39,10 @@ namespace EDDiscovery.ModApi.Javascript
         {
             if (Environment != null)
             {
-                List<JournalEntryHandler> handlers = EventListeners.GetOrAdd(entry, (e) => new List<JournalEntryHandler>());
-                handlers.Add(new JournalEntryHandler { FilterCommander = filtercmdr, Handler = func });
+                if (!EventListeners.ContainsKey(entry))
+                    EventListeners[entry] = new List<JournalEntryHandler>();
+
+                EventListeners[entry].Add(new JournalEntryHandler { FilterCommander = filtercmdr, Handler = func });
             }
         }
 

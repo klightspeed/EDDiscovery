@@ -28,11 +28,10 @@ namespace EDDiscovery.ModApi.Javascript
         [JSFunction(Name = "addEventListener")]
         public void AddEventListener(string entry, bool filtercmdr, FunctionInstance func)
         {
-            List<FunctionInstance> handlers = EventListeners.GetOrAdd(entry, (e) => new List<FunctionInstance>());
-            lock (handlers)
-            {
-                handlers.Add(func);
-            }
+            if (!EventListeners.ContainsKey(entry))
+                EventListeners[entry] = new List<FunctionInstance>();
+
+            EventListeners[entry].Add(func);
         }
 
         [JSFunction(Name = "removeEventListener")]
@@ -41,20 +40,17 @@ namespace EDDiscovery.ModApi.Javascript
             List<FunctionInstance> handlers;
             if (EventListeners.TryGetValue(entry, out handlers))
             {
-                lock (handlers)
+                if (func != null)
                 {
-                    if (func != null)
+                    int index = handlers.IndexOf(func);
+                    if (index >= 0)
                     {
-                        int index = handlers.IndexOf(func);
-                        if (index >= 0)
-                        {
-                            handlers.RemoveAt(index);
-                        }
+                        handlers.RemoveAt(index);
                     }
-                    else
-                    {
-                        handlers.Clear();
-                    }
+                }
+                else
+                {
+                    handlers.Clear();
                 }
             }
         }
