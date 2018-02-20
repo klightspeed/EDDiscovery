@@ -15,7 +15,6 @@ namespace EDDiscovery.ModApi.Javascript
         {
             Engine = new ScriptEngine();
             CallbackProcessor = callbackProcessor;
-            Journal = new JournalInstance(this);
             Audio = new AudioInstance(this, actionController);
             Config = new ConfigInstance(this, configPrefix);
             History = new HistoryInstance(this, history);
@@ -23,6 +22,8 @@ namespace EDDiscovery.ModApi.Javascript
             HistoryEntryPrototype = new HistoryEntryInstance(Engine);
             JournalEntryPrototype = new JournalEntryInstance(Engine);
             SystemPrototype = new SystemInstance(Engine);
+            JournalPrototype = new JournalInstance(this);
+            Journal = new JournalInstance(this);
 
             Engine.SetGlobalValue("Journal", Journal);
             Engine.SetGlobalValue("Audio", Audio);
@@ -41,5 +42,6 @@ namespace EDDiscovery.ModApi.Javascript
         public HistoryEntryInstance HistoryEntryPrototype { get; private set; }
         public JournalEntryInstance JournalEntryPrototype { get; private set; }
         public SystemInstance SystemPrototype { get; private set; }
+        public JournalInstance JournalPrototype { get; private set; }
     }
 }

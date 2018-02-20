@@ -14,7 +14,7 @@ namespace EDDiscovery.ModApi.Javascript
     public class HistoryInstance : ObjectInstance
     {
         private HistoryList History;
-        private ConcurrentDictionary<string, List<FunctionInstance>> EventHandlers = new ConcurrentDictionary<string, List<FunctionInstance>>();
+        private Dictionary<string, List<FunctionInstance>> EventListeners = new Dictionary<string, List<FunctionInstance>>();
         private ScriptEnvironment Environment;
 
         public HistoryInstance(ScriptEnvironment env, HistoryList hl) : base(env.Engine.Object.InstancePrototype)
@@ -25,21 +25,21 @@ namespace EDDiscovery.ModApi.Javascript
         }
 
         #region Javascript-visible methods
-        [JSFunction(Name = "addEventHandler")]
-        public void AddEventHandler(string entry, bool filtercmdr, FunctionInstance func)
+        [JSFunction(Name = "addEventListener")]
+        public void AddEventListener(string entry, bool filtercmdr, FunctionInstance func)
         {
-            List<FunctionInstance> handlers = EventHandlers.GetOrAdd(entry, (e) => new List<FunctionInstance>());
+            List<FunctionInstance> handlers = EventListeners.GetOrAdd(entry, (e) => new List<FunctionInstance>());
             lock (handlers)
             {
                 handlers.Add(func);
             }
         }
 
-        [JSFunction(Name = "removeEventHandler")]
-        public void RemoveEventHandler(string entry, bool filtercmdr, FunctionInstance func = null)
+        [JSFunction(Name = "removeEventListener")]
+        public void RemoveEventListener(string entry, bool filtercmdr, FunctionInstance func = null)
         {
             List<FunctionInstance> handlers;
-            if (EventHandlers.TryGetValue(entry, out handlers))
+            if (EventListeners.TryGetValue(entry, out handlers))
             {
                 lock (handlers)
                 {
@@ -59,16 +59,16 @@ namespace EDDiscovery.ModApi.Javascript
             }
         }
 
-        [JSFunction(Name = "addEventHandler")]
-        public void AddEventHandler(string entry, FunctionInstance func)
+        [JSFunction(Name = "addEventListener")]
+        public void AddEventListener(string entry, FunctionInstance func)
         {
-            AddEventHandler(entry, true, func);
+            AddEventListener(entry, true, func);
         }
 
-        [JSFunction(Name = "removeEventHandler")]
-        public void RemoveEventHandler(string entry, FunctionInstance func = null)
+        [JSFunction(Name = "removeEventListener")]
+        public void RemoveEventListener(string entry, FunctionInstance func = null)
         {
-            RemoveEventHandler(entry, true, func);
+            RemoveEventListener(entry, true, func);
         }
 
         [JSFunction(Name = "getAllEntries")]
@@ -102,87 +102,97 @@ namespace EDDiscovery.ModApi.Javascript
         public CommanderInstance CurrentCommander { get; private set; }
         #endregion
 
-        private void OnNewHistoryEntry(HistoryEntry he, string eventtype)
+        private void InvokeListener(string eventtype)
         {
-            string evtype = eventtype;
-
-            if (evtype == null)
+            if (EventListeners.ContainsKey(eventtype))
             {
-                evtype = he.EntryType.ToString();
-            }
-
-            List<FunctionInstance> handlers;
-            if (EventHandlers.TryGetValue(eventtype, out handlers))
-            {
-                HistoryEntryInstance ji = he == null ? null : new HistoryEntryInstance(Environment, he);
-                FunctionInstance[] handlerlist;
-
-                lock (handlers)
+                foreach (FunctionInstance handler in EventListeners[eventtype])
                 {
-                    handlerlist = new FunctionInstance[handlers.Count];
-                    handlers.CopyTo(handlerlist);
+                    handler.Call(this);
                 }
+            }
+        }
 
-                foreach (FunctionInstance handler in handlerlist)
+        private void InvokeListener(HistoryEntry he, ref HistoryEntryInstance ji, string eventtype)
+        {
+            if (EventListeners.ContainsKey(eventtype))
+            {
+                foreach (FunctionInstance handler in EventListeners[eventtype])
                 {
+                    if (ji == null && he != null)
+                    {
+                        ji = new HistoryEntryInstance(Environment, he);
+                    }
+
                     handler.Call(this, ji);
                 }
             }
-
-            if (eventtype == null)
-            {
-                JournalEntry je = he.journalEntry;
-
-                if (je is JournalLocOrJump)
-                {
-                    OnNewHistoryEntry(he, "@Location");
-                }
-                
-                if (je is IMaterialCommodityJournalEntry)
-                {
-                    OnNewHistoryEntry(he, "@MaterialCommodity");
-                }
-
-                if (je is ILedgerJournalEntry)
-                {
-                    OnNewHistoryEntry(he, "@Ledger");
-                }
-
-                if (je is ILedgerNoCashJournalEntry)
-                {
-                    OnNewHistoryEntry(he, "@LedgerNoCash");
-                }
-
-                if (je is IMissions)
-                {
-                    OnNewHistoryEntry(he, "@Missions");
-                }
-
-                if (je is IShipInformation)
-                {
-                    OnNewHistoryEntry(he, "@ShipInformation");
-                }
-
-                if (je is IBodyNameAndID)
-                {
-                    OnNewHistoryEntry(he, "@WithSystem");
-                }
-
-                OnNewHistoryEntry(he, "@Any");
-            }
-
         }
 
         public void OnNewHistoryEntry(HistoryEntry he)
         {
-            OnNewHistoryEntry(he, null);
+            HistoryEntryInstance ji = null;
+
+            InvokeListener(he, ref ji, he.EntryType.ToString());
+
+            JournalEntry je = he.journalEntry;
+
+            if (je != null)
+            {
+                if (je is JournalLocOrJump)
+                {
+                    InvokeListener(he, ref ji, "@Location");
+                }
+
+                if (je is IMaterialCommodityJournalEntry)
+                {
+                    InvokeListener(he, ref ji, "@MaterialCommodity");
+                }
+
+                if (je is ILedgerJournalEntry)
+                {
+                    InvokeListener(he, ref ji, "@Ledger");
+                }
+
+                if (je is ILedgerNoCashJournalEntry)
+                {
+                    InvokeListener(he, ref ji, "@LedgerNoCash");
+                }
+
+                if (je is IMissions)
+                {
+                    InvokeListener(he, ref ji, "@Missions");
+                }
+
+                if (je is IShipInformation)
+                {
+                    InvokeListener(he, ref ji, "@ShipInformation");
+                }
+
+                if (je is IBodyNameAndID)
+                {
+                    InvokeListener(he, ref ji, "@WithSystem");
+                }
+
+                if (je is ISystemStationMarket)
+                {
+                    InvokeListener(he, ref ji, "@WithStationSystem");
+                }
+
+                if (je is IStationEntry)
+                {
+                    InvokeListener(he, ref ji, "@WithStationType");
+                }
+            }
+
+            InvokeListener(he, ref ji, "@Any");
         }
 
         public void OnRefresh(HistoryList hl)
         {
             History = hl;
             CurrentCommander = new CommanderInstance(Environment, EDCommander.GetCommander(hl.CommanderId));
-            OnNewHistoryEntry(null, "@Refresh");
+            InvokeListener("@Refresh");
         }
     }
 }

@@ -5,23 +5,50 @@ using System.Text;
 using System.Threading.Tasks;
 using Jurassic;
 using Jurassic.Library;
+using EliteDangerousCore;
 
 namespace EDDiscovery.ModApi.Javascript
 {
     public class CommanderInstance : ObjectInstance
     {
-        private EliteDangerousCore.EDCommander Commander;
+        private EDCommander Commander;
 
         public CommanderInstance(ScriptEngine engine) : base(engine.Object.InstancePrototype)
         {
             PopulateFunctions();
         }
 
-        public CommanderInstance(ScriptEnvironment env, EliteDangerousCore.EDCommander cmdr) : base(env.CommanderPrototype)
+        public CommanderInstance(ScriptEnvironment env, EDCommander cmdr) : base(env.CommanderPrototype)
         {
             this.Name = cmdr.Name;
             this.Index = cmdr.Nr;
             Commander = cmdr;
+        }
+
+        public static CommanderInstance GetCommander(ScriptEnvironment env, int cmdrid)
+        {
+            EDCommander cmdr = EDCommander.GetCommander(cmdrid);
+            if (cmdr == null)
+            {
+                return null;
+            }
+            else
+            {
+                return new CommanderInstance(env, cmdr);
+            }
+        }
+
+        public static CommanderInstance GetCommander(ScriptEnvironment env, string name)
+        {
+            EDCommander cmdr = EDCommander.GetCommander(name);
+            if (cmdr == null)
+            {
+                return null;
+            }
+            else
+            {
+                return new CommanderInstance(env, cmdr);
+            }
         }
 
         [JSProperty(Name = "index")]

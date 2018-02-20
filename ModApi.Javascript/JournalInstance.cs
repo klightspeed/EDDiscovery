@@ -20,35 +20,37 @@ namespace EDDiscovery.ModApi.Javascript
         }
 
         private ScriptEnvironment Environment;
-        private ConcurrentDictionary<string, List<JournalEntryHandler>> EventHandlers = new ConcurrentDictionary<string, List<JournalEntryHandler>>();
+        private ConcurrentDictionary<string, List<JournalEntryHandler>> EventListeners = new ConcurrentDictionary<string, List<JournalEntryHandler>>();
 
-        public JournalInstance(ScriptEnvironment env) : base(env.Engine.Object.InstancePrototype)
+        public JournalInstance(ScriptEnvironment env) : base(env.JournalPrototype ?? env.Engine.Object.InstancePrototype)
         {
-            Environment = env;
             this.PopulateFunctions();
+        }
+
+        public JournalInstance(ScriptEnvironment env, JournalInstance prototype) : base(prototype)
+        {
+            this.Environment = env;
             this.CurrentCommander = new CommanderInstance(env, EDCommander.Current);
         }
 
         #region Javascript-visible methods
-        [JSFunction(Name = "addEventHandler")]
-        public void AddEventHandler(string entry, bool filtercmdr, FunctionInstance func)
+        [JSFunction(Name = "addEventListener")]
+        public void AddEventListener(string entry, bool filtercmdr, FunctionInstance func)
         {
-            func["FilterCommander"] = filtercmdr;
-            List<JournalEntryHandler> handlers = EventHandlers.GetOrAdd(entry, (e) => new List<JournalEntryHandler>());
-            lock (handlers)
+            if (Environment != null)
             {
+                List<JournalEntryHandler> handlers = EventListeners.GetOrAdd(entry, (e) => new List<JournalEntryHandler>());
                 handlers.Add(new JournalEntryHandler { FilterCommander = filtercmdr, Handler = func });
             }
         }
 
-        [JSFunction(Name = "removeEventHandler")]
-        public void RemoveEventHandler(string entry, bool filtercmdr, FunctionInstance func = null)
+        [JSFunction(Name = "removeEventListener")]
+        public void RemoveEventListener(string entry, bool filtercmdr, FunctionInstance func = null)
         {
-            func["FilterCommander"] = filtercmdr;
-            List<JournalEntryHandler> handlers;
-            if (EventHandlers.TryGetValue(entry, out handlers))
+            if (Environment != null)
             {
-                lock (handlers)
+                List<JournalEntryHandler> handlers;
+                if (EventListeners.TryGetValue(entry, out handlers))
                 {
                     if (func != null)
                     {
@@ -66,27 +68,33 @@ namespace EDDiscovery.ModApi.Javascript
             }
         }
 
-        [JSFunction(Name = "addEventHandler")]
-        public void AddEventHandler(string entry, FunctionInstance func)
+        [JSFunction(Name = "addEventListener")]
+        public void AddEventListener(string entry, FunctionInstance func)
         {
-            AddEventHandler(entry, true, func);
+            AddEventListener(entry, true, func);
         }
 
-        [JSFunction(Name = "removeEventHandler")]
-        public void RemoveEventHandler(string entry, FunctionInstance func = null)
+        [JSFunction(Name = "removeEventListener")]
+        public void RemoveEventListener(string entry, FunctionInstance func = null)
         {
-            RemoveEventHandler(entry, true, func);
+            RemoveEventListener(entry, true, func);
         }
 
         [JSFunction(Name = "getAllEntries")]
         public ArrayInstance GetAll(DateTime? start = null, DateTime? stop = null)
         {
+            if (Environment == null)
+                return null;
+
             return Engine.Array.Construct(JournalEntry.GetAll(CurrentCommander.Index, start, stop).Select(e => JournalEntryInstance.Create(Environment, e)).ToArray());
         }
 
         [JSFunction(Name = "getByEventType")]
         public ArrayInstance GetByEventType(string type, DateTime? start = null, DateTime? stop = null)
         {
+            if (Environment == null)
+                return null;
+
             JournalTypeEnum entrytype = (JournalTypeEnum)Enum.Parse(typeof(JournalTypeEnum), type);
             return Engine.Array.Construct(JournalEntry.GetByEventType(entrytype, CurrentCommander.Index, start ?? new DateTime(2014, 1, 1), stop ?? DateTime.UtcNow).Select(e => JournalEntryInstance.Create(Environment, e)).ToArray());
         }
@@ -94,6 +102,9 @@ namespace EDDiscovery.ModApi.Javascript
         [JSFunction(Name = "getLastEvent")]
         public JournalEntryInstance GetLastEvent(DateTime? end, FunctionInstance filter)
         {
+            if (Environment == null)
+                return null;
+
             Func<JournalEntry, bool> xfilter = je => true;
 
             if (filter != null)
@@ -106,6 +117,9 @@ namespace EDDiscovery.ModApi.Javascript
         [JSFunction(Name = "changeCommander")]
         public void ChangeCommander(string name)
         {
+            if (Environment == null)
+                return;
+
             var cmdr = EDCommander.GetCommander(name);
             if (cmdr != null)
             {
@@ -116,11 +130,23 @@ namespace EDDiscovery.ModApi.Javascript
         [JSFunction(Name = "changeCommander")]
         public void ChangeCommander(int nr)
         {
+            if (Environment == null)
+                return;
+
             var cmdr = EDCommander.GetCommander(nr);
             if (cmdr != null)
             {
                 CurrentCommander = new CommanderInstance(Environment, cmdr);
             }
+        }
+
+        [JSFunction(Name = "createNewListener")]
+        public JournalInstance CreateNewListener()
+        {
+            if (Environment == null)
+                return null;
+
+            return new JournalInstance(Environment);
         }
         #endregion
 
@@ -130,85 +156,94 @@ namespace EDDiscovery.ModApi.Javascript
         #endregion
 
         #region Event subscription
-        protected void OnNewJournalEntry(JournalEntry je, string eventtype)
+
+        protected void InvokeListener(object obj, string eventtype)
         {
-            string evtype = eventtype;
-
-            if (evtype == null)
+            if (EventListeners.ContainsKey(eventtype))
             {
-                evtype = je.EventTypeStr;
-            }
-
-            List<JournalEntryHandler> handlers;
-            if (EventHandlers.TryGetValue(eventtype, out handlers))
-            {
-                JournalEntryInstance ji = je == null ? null : JournalEntryInstance.Create(Environment, je);
-                JournalEntryHandler[] handlerlist;
-
-                lock (handlers)
+                foreach (JournalEntryHandler handler in EventListeners[eventtype])
                 {
-                    handlerlist = new JournalEntryHandler[handlers.Count];
-                    handlers.CopyTo(handlerlist);
+                    handler.Handler.Call(this, obj);
                 }
+            }
+        }
 
-                foreach (JournalEntryHandler handler in handlerlist)
+        protected void InvokeListener(JournalEntry je, ref JournalEntryInstance ji, string eventtype)
+        {
+            if (EventListeners.ContainsKey(eventtype))
+            {
+                foreach (JournalEntryHandler handler in EventListeners[eventtype])
                 {
-                    if (CurrentCommander.Index == je.CommanderId || handler.FilterCommander == false)
+                    if (!handler.FilterCommander || je.CommanderId == this.CurrentCommander.Index)
                     {
+                        if (ji == null && je != null)
+                        {
+                            ji = JournalEntryInstance.Create(Environment, je);
+                        }
+
                         handler.Handler.Call(this, ji);
                     }
                 }
-            }
-
-            if (eventtype == null)
-            {
-                if (je is JournalLocOrJump)
-                {
-                    OnNewJournalEntry(je, "@Location");
-                }
-                
-                if (je is IMaterialCommodityJournalEntry)
-                {
-                    OnNewJournalEntry(je, "@MaterialCommodity");
-                }
-
-                if (je is ILedgerJournalEntry)
-                {
-                    OnNewJournalEntry(je, "@Ledger");
-                }
-
-                if (je is ILedgerNoCashJournalEntry)
-                {
-                    OnNewJournalEntry(je, "@LedgerNoCash");
-                }
-
-                if (je is IMissions)
-                {
-                    OnNewJournalEntry(je, "@Missions");
-                }
-
-                if (je is IShipInformation)
-                {
-                    OnNewJournalEntry(je, "@ShipInformation");
-                }
-
-                if (je is IBodyNameAndID)
-                {
-                    OnNewJournalEntry(je, "@WithSystem");
-                }
-
-                OnNewJournalEntry(je, "@Any");
             }
         }
 
         public void OnNewJournalEntry(JournalEntry je)
         {
-            OnNewJournalEntry(je, null);
+            JournalEntryInstance ji = null;
+
+            InvokeListener(je, ref ji, null);
+
+            if (je is JournalLocOrJump)
+            {
+                InvokeListener(je, ref ji, "@Location");
+            }
+
+            if (je is IMaterialCommodityJournalEntry)
+            {
+                InvokeListener(je, ref ji, "@MaterialCommodity");
+            }
+
+            if (je is ILedgerJournalEntry)
+            {
+                InvokeListener(je, ref ji, "@Ledger");
+            }
+
+            if (je is ILedgerNoCashJournalEntry)
+            {
+                InvokeListener(je, ref ji, "@LedgerNoCash");
+            }
+
+            if (je is IMissions)
+            {
+                InvokeListener(je, ref ji, "@Missions");
+            }
+
+            if (je is IShipInformation)
+            {
+                InvokeListener(je, ref ji, "@ShipInformation");
+            }
+
+            if (je is IBodyNameAndID)
+            {
+                InvokeListener(je, ref ji, "@WithSystem");
+            }
+
+            if (je is ISystemStationMarket)
+            {
+                InvokeListener(je, ref ji, "@WithStationSystem");
+            }
+
+            if (je is IStationEntry)
+            {
+                InvokeListener(je, ref ji, "@WithStationType");
+            }
+
+            InvokeListener(je, ref ji, "@Any");
         }
 
         public void OnRefresh(HistoryList hl)
         {
-            OnNewJournalEntry(null, "@Refresh");
+            InvokeListener(CommanderInstance.GetCommander(Environment, hl.CommanderId), "@Refresh");
         }
         #endregion
     }
