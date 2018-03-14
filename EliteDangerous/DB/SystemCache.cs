@@ -11,23 +11,24 @@ namespace EliteDangerousCore
     {
         private static Dictionary<long, ISystem> systemsByEdsmId = new Dictionary<long, ISystem>();
         private static Dictionary<string, List<ISystem>> systemsByName = new Dictionary<string, List<ISystem>>(StringComparer.InvariantCultureIgnoreCase);
+        private static SortedSet<string> systemNames = new SortedSet<string>(StringComparer.OrdinalIgnoreCase);
 
         // may return null if not found
         // by design, it keeps on trying.  Rob thought about caching the misses but the problem is, this is done at start up
         // the system db may not be full at that point.  So a restart would be required to clear the misses..
         // difficult
 
-        public static ISystem FindSystem(long edsmid, DB.SQLiteConnectionSystem conn = null)
+        public static ISystem FindSystem(long edsmid, DB.SQLiteConnectionSystem conn = null, bool addToCache = false, bool useCacheOnly = false)
         {
-            return FindSystem(new SystemClass(edsmid), conn);
+            return FindSystem(new SystemClass(edsmid), conn, addToCache, useCacheOnly);
         }
 
-        public static ISystem FindSystem(string name, DB.SQLiteConnectionSystem conn = null)
+        public static ISystem FindSystem(string name, DB.SQLiteConnectionSystem conn = null, bool addToCache = false, bool useCacheOnly = false)
         {
-            return FindSystem(new SystemClass(name), conn);
+            return FindSystem(new SystemClass(name), conn, addToCache, useCacheOnly);
         }
 
-        public static ISystem FindSystem(ISystem find, DB.SQLiteConnectionSystem conn = null)
+        public static ISystem FindSystem(ISystem find, DB.SQLiteConnectionSystem conn = null, bool addToCache = false, bool useCacheOnly = false)
         {
             lock (systemsByEdsmId)          // Rob seen instances of it being locked together in multiple star distance threads, we need to serialise the whole thing
             {                               // Concurrent dictionary no good, they could both be about to add the same thing at the same time and pass the contains test.
@@ -55,7 +56,9 @@ namespace EliteDangerousCore
                 if (found == null && foundlist.Count == 1 && !find.HasCoordinate) // if we did not find one, but we have only 1 candidate, use it.
                     found = foundlist[0];
 
-                if (found == null)                                    // nope, no cache, so use the db
+                ISystem cached = found;
+
+                if (!useCacheOnly && (found == null || found.status != SystemStatusEnum.EDSM)) // nope, no cache, so use the db
                 {
                     //System.Diagnostics.Debug.WriteLine("Look up from DB " + sys.name + " " + sys.id_edsm);
 
@@ -115,9 +118,19 @@ namespace EliteDangerousCore
                             systemsByEdsmId[found.EDSMID] = found;         // must be definition the best ID found.. and if the update date of sys is better, its now been updated
                         }
 
+                        if (!systemNames.Contains(found.Name))
+                        {
+                            systemNames.Add(found.Name);
+                        }
+
                         if (systemsByName.ContainsKey(orgsys.Name))    // use the original name we looked it up in, if we found one.. remove it
                         {
                             systemsByName[orgsys.Name].Remove(orgsys);  // and remove 
+                        }
+
+                        if (cached != null && systemsByName.ContainsKey(cached.Name))
+                        {
+                            systemsByName[cached.Name].Remove(cached);
                         }
 
                         if (systemsByName.ContainsKey(found.Name))
@@ -129,16 +142,39 @@ namespace EliteDangerousCore
 
                         return found;
                     }
-                    else
+                }
+
+                if (cached == null || (cached.status != SystemStatusEnum.EDSM && orgsys.status != SystemStatusEnum.Unknown && orgsys.UpdateDate > cached.UpdateDate))
+                {
+                    if (addToCache && orgsys.HasCoordinate && orgsys.Name != null && orgsys.status != SystemStatusEnum.Unknown)
                     {
-                        //System.Diagnostics.Trace.WriteLine($"DB NOT found {find.name} {find.id_edsm} ");
-                        return null;
+                        if (!systemNames.Contains(orgsys.Name))
+                        {
+                            systemNames.Add(orgsys.Name);
+                        }
+
+                        if (!systemsByName.ContainsKey(orgsys.Name))
+                        {
+                            systemsByName[orgsys.Name] = new List<ISystem> { orgsys };
+                        }
+                        else
+                        {
+                            if (cached != null)
+                            {
+                                systemsByName[orgsys.Name].Remove(cached);
+                            }
+
+                            systemsByName[orgsys.Name].Add(orgsys);
+                        }
                     }
+
+                    //System.Diagnostics.Trace.WriteLine($"DB NOT found {find.name} {find.id_edsm} ");
+                    return null;
                 }
                 else
                 {                                               // FROM CACHE
                     //System.Diagnostics.Trace.WriteLine($"Cached reference to {found.name} {found.id_edsm}");
-                    return found;       // no need for extra work.
+                    return cached;       // no need for extra work.
                 }
             }
 

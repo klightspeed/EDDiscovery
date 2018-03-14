@@ -203,6 +203,13 @@ namespace EliteDangerousCore
                         SystemAddress = jl.SystemAddress,
                     };
 
+                    var cachesys = SystemCache.FindSystem(newsys, null, true, true);
+
+                    if (cachesys != null && cachesys.UpdateDate > newsys.UpdateDate)
+                    {
+                        newsys = cachesys;
+                    }
+
                     // If it was a new system, pass the coords back to the StartJump
                     if (prev != null && prev.journalEntry is JournalStartJump )
                     {
