@@ -268,7 +268,7 @@ namespace EliteDangerousCore.DB
 
             for (int i = 0; i < Systems.Count; i++)
             {
-                ISystem s = SystemClassDB.GetSystem(Systems[i]);
+                ISystem s = SystemCache.FindSystem(Systems[i]);
                 if (s != null)
                 {
                     if (last != null)
@@ -289,7 +289,7 @@ namespace EliteDangerousCore.DB
 
             for (int i = 0; i < Systems.Count; i++)
             {
-                ISystem s = SystemClassDB.GetSystem(Systems[i]);
+                ISystem s = SystemCache.FindSystem(Systems[i]);
                 if (s != null)
                 {
                     if (last != null)
@@ -325,7 +325,7 @@ namespace EliteDangerousCore.DB
 
             for (int i = 0; i < Systems.Count; i++)
             {
-                ISystem s = SystemClassDB.GetSystem(Systems[i]);
+                ISystem s = SystemCache.FindSystem(Systems[i]);
 
                 if (s != null)
                 {

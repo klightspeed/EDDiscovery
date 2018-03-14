@@ -143,7 +143,7 @@ namespace EDDiscovery.UserControls
         private void textBoxHomeSystem_Validated(object sender, EventArgs e)
         {
             string t = textBoxHomeSystem.Text.Trim();
-            ISystem s = SystemClassDB.GetSystem(t);
+            ISystem s = SystemCache.FindSystem(t);
 
             if (s != null)
             {

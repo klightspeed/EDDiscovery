@@ -146,7 +146,7 @@ namespace EDDiscovery.UserControls
                         return;
                     }
 
-                    var system = SystemClassDB.GetSystem(value);
+                    var system = SystemCache.FindSystem(value);
                     var enteredSystems = GetEnteredSystems();
                     if (cell.Value != null)
                     {
@@ -557,7 +557,7 @@ namespace EDDiscovery.UserControls
                 sysName = r.Cells[1].Value.ToString();
                 if (r.Cells[0].Value.ToString() == "Local")
                 {
-                    var sys = SystemClassDB.GetSystem(sysName);
+                    var sys = SystemCache.FindSystem(sysName);
                     if (sys == null)
                         edsmCheckNames.Add(sysName);
                     else
@@ -816,7 +816,7 @@ namespace EDDiscovery.UserControls
          * it creates a new System entity, otherwise logs it and returns null. */
         private ISystem getSystemForTrilateration(string systemName, bool fromEDSM)
         {
-            var system = SystemClassDB.GetSystem(systemName);
+            var system = SystemCache.FindSystem(systemName);
 
             if (system == null)
             {
@@ -864,7 +864,7 @@ namespace EDDiscovery.UserControls
             {
                 foreach (WantedSystemClass sys in wanted)
                 {
-                    ISystem star = SystemClassDB.GetSystem(sys.system);
+                    ISystem star = SystemCache.FindSystem(sys.system);
                     if (star == null)
                         star = new SystemClass(sys.system);
 
@@ -889,7 +889,7 @@ namespace EDDiscovery.UserControls
 
                 foreach (String system in pushed)
                 {
-                    ISystem star = SystemClassDB.GetSystem(system);
+                    ISystem star = SystemCache.FindSystem(system);
                     if (star == null)
                         star = new SystemClass(system);
 
@@ -947,7 +947,7 @@ namespace EDDiscovery.UserControls
                 if (oldSystem != null && !oldSystem.HasCoordinate)
                 {
                     var value = systemCell.Value as string;
-                    var newSystem = SystemClassDB.GetSystem(value);
+                    var newSystem = SystemCache.FindSystem(value);
                     if (newSystem != null && newSystem.HasCoordinate)
                     {
                         systemCell.Tag = newSystem;
@@ -1026,7 +1026,7 @@ namespace EDDiscovery.UserControls
 
                 wanted.Add(toAdd);
 
-                ISystem star = SystemClassDB.GetSystem(sysName);
+                ISystem star = SystemCache.FindSystem(sysName);
                 if (star == null)
                     star = new SystemClass(sysName);
 

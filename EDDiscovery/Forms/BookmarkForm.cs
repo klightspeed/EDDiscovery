@@ -105,7 +105,7 @@ namespace EDDiscovery.Forms
 
             if (!bk.isRegion)
             {
-                ISystem s = SystemClassDB.GetSystem(bk.StarName);
+                ISystem s = SystemCache.FindSystem(bk.StarName);
                 if ( s != null )    // paranoia
                     InitialisePos(s);
 

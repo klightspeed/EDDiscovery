@@ -1827,7 +1827,7 @@ namespace EDDiscovery
                 info = hoversystem.Name + Environment.NewLine + string.Format("x:{0} y:{1} z:{2}", hoversystem.X.ToString("0.00"), hoversystem.Y.ToString("0.00"), hoversystem.Z.ToString("0.00"));
                 pos = new Vector3d(hoversystem.X, hoversystem.Y, hoversystem.Z);
 
-                ISystem sysclass = (hoversystem.ID != 0) ? SystemClassDB.GetSystem(hoversystem.ID, name: hoversystem.Name) : SystemClassDB.GetSystem(hoversystem.Name);
+                ISystem sysclass = (hoversystem.ID != 0) ? SystemClassDB.GetSystem(hoversystem.ID, name: hoversystem.Name) : SystemCache.FindSystem(hoversystem.Name);
 
                 if (sysclass != null)
                 {
@@ -2209,7 +2209,7 @@ namespace EDDiscovery
                     return sys.System;
             }
 
-            ISystem isys = SystemClassDB.GetSystem(name,cn);
+            ISystem isys = SystemCache.FindSystem(name,cn);
             return isys;
         }
 

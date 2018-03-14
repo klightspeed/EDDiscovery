@@ -123,7 +123,7 @@ namespace EDDiscovery.UserControls
 
             string topline = "";
 
-            ISystem finalSystem = SystemClassDB.GetSystem(currentRoute.Systems[currentRoute.Systems.Count - 1]);
+            ISystem finalSystem = SystemCache.FindSystem(currentRoute.Systems[currentRoute.Systems.Count - 1]);
 
             if (finalSystem != null && cursys.HasCoordinate)
             {

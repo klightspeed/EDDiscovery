@@ -125,7 +125,7 @@ namespace EDDiscovery.UserControls
 
         private ISystem GetSystem(string sysname)
         {
-            ISystem sys = SystemClassDB.GetSystem(sysname);
+            ISystem sys = SystemCache.FindSystem(sysname);
 
             if (sys == null)
             {
@@ -381,7 +381,7 @@ namespace EDDiscovery.UserControls
                 var row = dataGridViewExplore.Rows[e.RowIndex];
                 var cell = dataGridViewExplore[e.ColumnIndex, e.RowIndex];
 
-                ISystem sys = SystemClassDB.GetSystem(sysname);
+                ISystem sys = SystemCache.FindSystem(sysname);
 
                 if (sysname != "" && sys == null && !edsm.IsKnownSystem(sysname))
                 {
@@ -764,7 +764,7 @@ namespace EDDiscovery.UserControls
 
             if (obj == null)
                 return;
-            ISystem sc = SystemClassDB.GetSystem((string)obj);
+            ISystem sc = SystemCache.FindSystem((string)obj);
             if (sc == null)
             {
                 ExtendedControls.MessageBoxTheme.Show(FindForm(), "Unknown system, system is without co-ordinates", "Edit bookmark", MessageBoxButtons.OK);
