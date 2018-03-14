@@ -739,7 +739,7 @@ namespace EDDiscovery.UserControls
         private ISystem GetSystem(string sysname)
         {
             ISystem sys;
-            SystemClassDB.TryGetSystem(sysname, out sys, true);
+            SystemCache.TryGetSystem(sysname, out sys, true);
             return sys;
         }
 

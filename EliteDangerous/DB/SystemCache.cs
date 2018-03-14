@@ -230,6 +230,20 @@ namespace EliteDangerousCore
 
             return systems.Take(1000).ToList();
         }
+
+        public static bool TryGetSystem(string systemName, out ISystem result, bool checkMergers = false, DB.SQLiteConnectionSystem cn = null)
+        {
+            result = null;
+            if (string.IsNullOrWhiteSpace(systemName))  // No way José.
+                return false;
+
+            result = FindSystem(systemName, cn);
+            ISystem s;
+            if (result == null && checkMergers && DB.SystemClassDB.TryGetMergedSystem(systemName, out s, cn))
+                result = s;
+
+            return (result != null);
+        }
     }
 }
 

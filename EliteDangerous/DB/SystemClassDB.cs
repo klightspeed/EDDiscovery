@@ -1073,7 +1073,7 @@ namespace EliteDangerousCore.DB
 
             result = GetSystem(systemName, cn);
             ISystem s;
-            if (result == null && checkMergers && privTryGetMergedSystem(systemName, out s, cn))
+            if (result == null && checkMergers && TryGetMergedSystem(systemName, out s, cn))
                 result = s;
 
             return (result != null);
@@ -1086,7 +1086,7 @@ namespace EliteDangerousCore.DB
         /// <param name="result">Will be <c>null</c> if the return value is <c>false</c>. Otherwise, will be the system that was once named <paramref name="systemName"/>.</param>
         /// <param name="cn">The database connection to use.</param>
         /// <returns><c>true</c> if the system is known by a different name (with the system in <paramref name="result"/>), <c>false</c> otherwise.</returns>
-        private static bool privTryGetMergedSystem(string systemName, out ISystem result, SQLiteConnectionSystem cn = null)
+        public static bool TryGetMergedSystem(string systemName, out ISystem result, SQLiteConnectionSystem cn = null)
         {
             result = null;
             bool createdCn = false;
