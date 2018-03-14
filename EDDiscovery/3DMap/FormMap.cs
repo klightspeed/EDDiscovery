@@ -360,7 +360,7 @@ namespace EDDiscovery
 
             SetCenterSystemTo(_centerSystem);                   // move to this..
 
-            textboxFrom.SetAutoCompletor(SystemClassDB.ReturnSystemListForAutoComplete);
+            textboxFrom.SetAutoCompletor(SystemCache.ReturnSystemListForAutoComplete);
         }
 
         protected override void OnShown(EventArgs e)

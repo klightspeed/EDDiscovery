@@ -53,7 +53,7 @@ namespace EDDiscovery.Forms
             InitializeComponent();
             this.discoveryForm = discoveryForm;
             txtsphereRadius.ValidityChanged = ValidityChanged;
-            txtExportVisited.SetAutoCompletor(SystemClassDB.ReturnSystemListForAutoComplete);
+            txtExportVisited.SetAutoCompletor(SystemCache.ReturnSystemListForAutoComplete);
         }
 
         private void ValidityChanged(bool v)

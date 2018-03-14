@@ -48,7 +48,7 @@ namespace EDDiscovery.UserControls
         {
             InitializeComponent();
             var corner = dataGridViewRouteSystems.TopLeftHeaderCell; // work around #1487
-            SystemName.AutoCompleteGenerator = SystemClassDB.ReturnOnlySystemsListForAutoComplete;
+            SystemName.AutoCompleteGenerator = SystemCache.ReturnOnlySystemsListForAutoComplete;
             currentroute = new SavedRouteClass("");
             savedroute = new List<SavedRouteClass>();
         }

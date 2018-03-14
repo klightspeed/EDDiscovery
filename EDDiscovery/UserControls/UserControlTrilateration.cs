@@ -48,7 +48,7 @@ namespace EDDiscovery.UserControls
 
         public override void Init()
         {
-            ColumnSystem.AutoCompleteGenerator = SystemClassDB.ReturnOnlySystemsListForAutoComplete;
+            ColumnSystem.AutoCompleteGenerator = SystemCache.ReturnOnlySystemsListForAutoComplete;
             FreezeTrilaterationUI();
             toolStripTextBoxSystem.Text = "Press Start New";
 

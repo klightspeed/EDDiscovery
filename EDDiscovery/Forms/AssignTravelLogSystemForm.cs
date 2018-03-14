@@ -89,7 +89,7 @@ namespace EDDiscovery.Forms
             tbManualSystemName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             tbManualSystemName.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
-            tbManualSystemName.SetAutoCompletor(SystemClassDB.ReturnSystemListForAutoComplete);
+            tbManualSystemName.SetAutoCompletor(SystemCache.ReturnSystemListForAutoComplete);
 
             EDDiscovery.EDDTheme theme = EDDiscovery.EDDTheme.Instance;
             theme.ApplyToFormStandardFontSize(this);

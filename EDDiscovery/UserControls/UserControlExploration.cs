@@ -53,7 +53,7 @@ namespace EDDiscovery.UserControls
         {
             InitializeComponent();
             var corner = dataGridViewExplore.TopLeftHeaderCell; // work around #1487
-            ColumnSystemName.AutoCompleteGenerator = SystemClassDB.ReturnOnlySystemsListForAutoComplete;
+            ColumnSystemName.AutoCompleteGenerator = SystemCache.ReturnOnlySystemsListForAutoComplete;
             _currentExplorationSet = new ExplorationSetClass();
         }
 
