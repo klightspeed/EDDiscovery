@@ -118,10 +118,7 @@ namespace EliteDangerousCore
                             systemsByEdsmId[found.EDSMID] = found;         // must be definition the best ID found.. and if the update date of sys is better, its now been updated
                         }
 
-                        if (!systemNames.Contains(found.Name))
-                        {
-                            systemNames.Add(found.Name);
-                        }
+                        systemNames.Add(found.Name);
 
                         if (systemsByName.ContainsKey(orgsys.Name))    // use the original name we looked it up in, if we found one.. remove it
                         {
@@ -148,10 +145,7 @@ namespace EliteDangerousCore
                 {
                     if (addToCache && orgsys.HasCoordinate && orgsys.Name != null && orgsys.status != SystemStatusEnum.Unknown)
                     {
-                        if (!systemNames.Contains(orgsys.Name))
-                        {
-                            systemNames.Add(orgsys.Name);
-                        }
+                        systemNames.Add(orgsys.Name);
 
                         if (!systemsByName.ContainsKey(orgsys.Name))
                         {
@@ -207,10 +201,7 @@ namespace EliteDangerousCore
 
             lock (systemsByEdsmId)
             {
-                foreach (string sysname in systemNames.GetViewBetween(input, input + "\uFFFF"))
-                {
-                    systems.Add(sysname);
-                }
+                systems.UnionWith(systemNames.GetViewBetween(input, input + "\uFFFF"));
             }
 
             return systems.Take(1000).ToList();
@@ -222,10 +213,7 @@ namespace EliteDangerousCore
 
             lock (systemsByEdsmId)
             {
-                foreach (string sysname in systemNames.GetViewBetween(input, input + "\uFFFF"))
-                {
-                    systems.Add(sysname);
-                }
+                systems.UnionWith(systemNames.GetViewBetween(input, input + "\uFFFF"));
             }
 
             return systems.Take(1000).ToList();
