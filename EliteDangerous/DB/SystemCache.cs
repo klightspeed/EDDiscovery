@@ -200,6 +200,36 @@ namespace EliteDangerousCore
 
             return dbsys;
         }
+
+        public static List<string> ReturnSystemListForAutoComplete(string input, Object ctrl)
+        {
+            SortedSet<string> systems = new SortedSet<string>(DB.SystemClassDB.ReturnSystemListForAutoComplete(input, ctrl), StringComparer.OrdinalIgnoreCase);
+
+            lock (systemsByEdsmId)
+            {
+                foreach (string sysname in systemNames.GetViewBetween(input, input + "\uFFFF"))
+                {
+                    systems.Add(sysname);
+                }
+            }
+
+            return systems.Take(1000).ToList();
+        }
+
+        public static List<string> ReturnOnlySystemsListForAutoComplete(string input, Object ctrl)
+        {
+            SortedSet<string> systems = new SortedSet<string>(DB.SystemClassDB.ReturnOnlySystemsListForAutoComplete(input, ctrl), StringComparer.OrdinalIgnoreCase);
+
+            lock (systemsByEdsmId)
+            {
+                foreach (string sysname in systemNames.GetViewBetween(input, input + "\uFFFF"))
+                {
+                    systems.Add(sysname);
+                }
+            }
+
+            return systems.Take(1000).ToList();
+        }
     }
 }
 
