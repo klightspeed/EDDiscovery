@@ -38,6 +38,7 @@ namespace EliteDangerousCore.DB
         {
             InitializeIfNeeded(() =>
             {
+                DbFactory = GetDbProviderFactory(EDDSqlDbSelection.EDDSystem);
                 UpgradeSystemsDB();
             });
         }

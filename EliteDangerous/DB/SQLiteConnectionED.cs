@@ -83,7 +83,10 @@ namespace EliteDangerousCore.DB
                     using (var slock = new SchemaLock())
                     {
                         _initbarrier.Set();
-                        initializer();
+                        if (ConnectionString == null)
+                        {
+                            initializer();
+                        }
                         _initialized = true;
                     }
                 }
@@ -125,7 +128,7 @@ namespace EliteDangerousCore.DB
                 _cn = DbFactory.CreateConnection();
 
                 // Use the database selected by maindb as the 'main' database
-                _cn.ConnectionString = "Data Source=" + DBFile.Replace("\\", "\\\\") + ";Pooling=true;";
+                _cn.ConnectionString = ConnectionString ?? ("Data Source=" + DBFile.Replace("\\", "\\\\") + ";Pooling=true;");
 
                 if (utctimeindicator)   // indicate treat dates as UTC.
                     _cn.ConnectionString += "DateTimeKind=Utc;";
@@ -374,6 +377,7 @@ namespace EliteDangerousCore.DB
         protected Thread _owningThread;
         protected static List<SQLiteConnectionED> _openConnections = new List<SQLiteConnectionED>();
         protected static DbProviderFactory DbFactory = GetSqliteProviderFactory();
+        protected static string ConnectionString = null;
 
         protected SQLiteConnectionED(bool initializing)
         {
@@ -382,6 +386,24 @@ namespace EliteDangerousCore.DB
                 _openConnections.Add(this);
             }
             _owningThread = Thread.CurrentThread;
+        }
+
+        protected static DbProviderFactory GetDbProviderFactory(EDDSqlDbSelection dbsel)
+        {
+            string connstringname = dbsel == EDDSqlDbSelection.EDDSystem ? "EDDSystems" : "EDDUser";
+            var connstring = System.Configuration.ConfigurationManager.ConnectionStrings[connstringname];
+
+            if (connstring != null)
+            {
+                string provider = connstring.ProviderName;
+                if (provider != null)
+                {
+                    ConnectionString = connstring.ConnectionString;
+                    return DbProviderFactories.GetFactory(provider);
+                }
+            }
+
+            return GetSqliteProviderFactory();
         }
 
         private static DbProviderFactory GetSqliteProviderFactory()

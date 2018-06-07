@@ -42,6 +42,8 @@ namespace EliteDangerousCore.DB
         {
             InitializeIfNeeded(() =>
             {
+                DbFactory = GetDbProviderFactory(EDDSqlDbSelection.EDDUser);
+
                 using (SQLiteConnectionUser conn = new SQLiteConnectionUser(true, true, EDDbAccessMode.Writer))
                 {
                     UpgradeUserDB(conn);
