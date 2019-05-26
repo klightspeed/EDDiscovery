@@ -64,10 +64,10 @@ namespace EDDiscovery.UserControls
             dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
 
-            dateTimePickerStartDate.Value = SQLiteConnectionUser.GetSettingDate(DbStartDate, new DateTime(2014, 12, 14));
-            dateTimePickerStartDate.Checked = SQLiteConnectionUser.GetSettingBool(DbStartDateOn, false);
-            dateTimePickerEndDate.Value = SQLiteConnectionUser.GetSettingDate(DbEndDate, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
-            dateTimePickerEndDate.Checked = SQLiteConnectionUser.GetSettingBool(DbEndDateOn, false);
+            dateTimePickerStartDate.Value = UserDatabase.Instance.GetSettingDate(DbStartDate, new DateTime(2014, 12, 14));
+            dateTimePickerStartDate.Checked = UserDatabase.Instance.GetSettingBool(DbStartDateOn, false);
+            dateTimePickerEndDate.Value = UserDatabase.Instance.GetSettingDate(DbEndDate, new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
+            dateTimePickerEndDate.Checked = UserDatabase.Instance.GetSettingBool(DbEndDateOn, false);
             dateTimePickerStartDate.ValueChanged += (s, e) => { if (!updateprogramatically) Display(); };
             dateTimePickerEndDate.ValueChanged += (s, e) => { if (!updateprogramatically) Display(); };
 
@@ -84,10 +84,10 @@ namespace EDDiscovery.UserControls
         {
             DGVSaveColumnLayout(dataGridView, DbColumnSave);
 
-            SQLiteConnectionUser.PutSettingDate(DbStartDate, dateTimePickerStartDate.Value);
-            SQLiteConnectionUser.PutSettingDate(DbEndDate, dateTimePickerEndDate.Value);
-            SQLiteConnectionUser.PutSettingBool(DbStartDateOn, dateTimePickerStartDate.Checked);
-            SQLiteConnectionUser.PutSettingBool(DbEndDateOn, dateTimePickerEndDate.Checked);
+            UserDatabase.Instance.PutSettingDate(DbStartDate, dateTimePickerStartDate.Value);
+            UserDatabase.Instance.PutSettingDate(DbEndDate, dateTimePickerEndDate.Value);
+            UserDatabase.Instance.PutSettingBool(DbStartDateOn, dateTimePickerStartDate.Checked);
+            UserDatabase.Instance.PutSettingBool(DbEndDateOn, dateTimePickerEndDate.Checked);
 
             searchtimer.Dispose();
             GlobalCaptainsLogList.Instance.OnLogEntryChanged -= LogChanged;
@@ -663,7 +663,7 @@ namespace EDDiscovery.UserControls
         //{
         //    OpenFileDialog dlg = new OpenFileDialog();
 
-        //    dlg.InitialDirectory = SQLiteConnectionUser.GetSettingString("BookmarkFormImportExcelFolder", "c:\\");
+        //    dlg.InitialDirectory = UserDatabase.Instance.GetSettingString("BookmarkFormImportExcelFolder", "c:\\");
 
         //    if (!System.IO.Directory.Exists(dlg.InitialDirectory))
         //        System.IO.Directory.CreateDirectory(dlg.InitialDirectory);
@@ -752,7 +752,7 @@ namespace EDDiscovery.UserControls
         //                }
         //            }
 
-        //            SQLiteConnectionUser.PutSettingString("BookmarkFormImportExcelFolder", System.IO.Path.GetDirectoryName(path));
+        //            UserDatabase.Instance.PutSettingString("BookmarkFormImportExcelFolder", System.IO.Path.GetDirectoryName(path));
         //        }
         //        else
         //            ExtendedControls.MessageBoxTheme.Show(FindForm(), "Failed to read " + path, "Import Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

@@ -84,7 +84,7 @@ namespace EDDiscovery.UserControls
 
         public override void Init()
         {
-            checkBoxCursorToTop.Checked = SQLiteConnectionUser.GetSettingBool(DbAutoTop, true);
+            checkBoxCursorToTop.Checked = UserDatabase.Instance.GetSettingBool(DbAutoTop, true);
 
          
             dataGridViewStarList.MakeDoubleBuffered();
@@ -98,10 +98,10 @@ namespace EDDiscovery.UserControls
             checkBoxEDSM.Checked = SQLiteDBClass.GetSettingBool(DbEDSM, false);
             this.checkBoxEDSM.CheckedChanged += new System.EventHandler(this.checkBoxEDSM_CheckedChanged);
 
-            checkBoxBodyClasses.Checked = SQLiteConnectionUser.GetSettingBool(DbShowClasses, true);
+            checkBoxBodyClasses.Checked = UserDatabase.Instance.GetSettingBool(DbShowClasses, true);
             this.checkBoxBodyClasses.CheckedChanged += new System.EventHandler(this.buttonBodyClasses_CheckedChanged);
 
-            checkBoxJumponium.Checked = SQLiteConnectionUser.GetSettingBool(DbShowJumponium, true);
+            checkBoxJumponium.Checked = UserDatabase.Instance.GetSettingBool(DbShowJumponium, true);
             this.checkBoxJumponium.CheckedChanged += new System.EventHandler(this.buttonJumponium_CheckedChanged);
 
             discoveryform.OnHistoryChange += HistoryChanged;
@@ -134,7 +134,7 @@ namespace EDDiscovery.UserControls
             DGVSaveColumnLayout(dataGridViewStarList, DbColumnSave);
             discoveryform.OnHistoryChange -= HistoryChanged;
             discoveryform.OnNewEntry -= AddNewEntry;
-            SQLiteConnectionUser.PutSettingBool(DbAutoTop, checkBoxCursorToTop.Checked);
+            UserDatabase.Instance.PutSettingBool(DbAutoTop, checkBoxCursorToTop.Checked);
         }
 
         #endregion
@@ -819,13 +819,13 @@ namespace EDDiscovery.UserControls
 
         private void buttonBodyClasses_CheckedChanged(object sender, EventArgs e)
         {
-            SQLiteConnectionUser.PutSettingBool(DbShowClasses, checkBoxBodyClasses.Checked);
+            UserDatabase.Instance.PutSettingBool(DbShowClasses, checkBoxBodyClasses.Checked);
             HistoryChanged(current_historylist);
         }
 
         private void buttonJumponium_CheckedChanged(object sender, EventArgs e)
         {
-            SQLiteConnectionUser.PutSettingBool(DbShowJumponium, checkBoxJumponium.Checked);
+            UserDatabase.Instance.PutSettingBool(DbShowJumponium, checkBoxJumponium.Checked);
             HistoryChanged(current_historylist);
         }
 
