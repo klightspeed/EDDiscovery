@@ -2213,7 +2213,7 @@ namespace EDDiscovery
 
         #region Misc
 
-        public ISystem FindSystem(string name, SQLiteConnectionSystem cn = null)    // nice wrapper for this
+        public ISystem FindSystem(string name)    // nice wrapper for this
         {
             if (systemlist != null)
             {
@@ -2223,11 +2223,11 @@ namespace EDDiscovery
                     return sys.System;
             }
 
-            ISystem isys = SystemCache.FindSystem(name,cn);
+            ISystem isys = SystemCache.FindSystem(name);
             return isys;
         }
 
-        public ISystem FindSystem(Vector3 pos, SQLiteConnectionSystem cn = null )
+        public ISystem FindSystem(Vector3 pos)
         {
             if (systemlist != null)
             {
@@ -2237,7 +2237,7 @@ namespace EDDiscovery
                     return vsc.System;
             }
 
-            return SystemCache.GetSystemByPosition(pos.X, pos.Y, pos.Z, cn);
+            return SystemCache.GetSystemByPosition(pos.X, pos.Y, pos.Z);
         }
 
         private ISystem SafeSystem(ISystem s)
