@@ -69,13 +69,13 @@ namespace EDDiscovery.UserControls
             var list = (from x in itemlist select x.Name + " (" + x.Category + ", " + x.Type + ((x.Rarity) ? ", Rare Commodity".Tx(this):"") + ")");
 
             comboBoxCustomCM1.Items.AddRange(list);
-            comboBoxCustomCM1.SelectedIndex = Math.Min(SQLiteConnectionUser.GetSettingInt(DbCM1, 0), list.Count() - 1);
+            comboBoxCustomCM1.SelectedIndex = Math.Min(UserDatabase.Instance.GetSettingInt(DbCM1, 0), list.Count() - 1);
             comboBoxCustomCM2.Items.Add("----");
             comboBoxCustomCM2.Items.AddRange(list);
-            comboBoxCustomCM2.SelectedIndex = Math.Min(SQLiteConnectionUser.GetSettingInt(DbCM2, 0), list.Count() - 1);
+            comboBoxCustomCM2.SelectedIndex = Math.Min(UserDatabase.Instance.GetSettingInt(DbCM2, 0), list.Count() - 1);
 
             comboBoxCustomCMANDOR.Items.AddRange(new string[] { "AND".Tx(this), "OR".Tx(this) });
-            comboBoxCustomCMANDOR.SelectedIndex = SQLiteConnectionUser.GetSettingInt(DbCMANDOR, 0);
+            comboBoxCustomCMANDOR.SelectedIndex = UserDatabase.Instance.GetSettingInt(DbCMANDOR, 0);
 
         }
 
@@ -87,9 +87,9 @@ namespace EDDiscovery.UserControls
         public override void Closing()
         {
             DGVSaveColumnLayout(dataGridView, DbColumnSave);
-            SQLiteConnectionUser.PutSettingInt(DbCM1, comboBoxCustomCM1.SelectedIndex);
-            SQLiteConnectionUser.PutSettingInt(DbCM2, comboBoxCustomCM2.SelectedIndex);
-            SQLiteConnectionUser.PutSettingInt(DbCMANDOR, comboBoxCustomCMANDOR.SelectedIndex);
+            UserDatabase.Instance.PutSettingInt(DbCM1, comboBoxCustomCM1.SelectedIndex);
+            UserDatabase.Instance.PutSettingInt(DbCM2, comboBoxCustomCM2.SelectedIndex);
+            UserDatabase.Instance.PutSettingInt(DbCMANDOR, comboBoxCustomCMANDOR.SelectedIndex);
         }
 
         #endregion

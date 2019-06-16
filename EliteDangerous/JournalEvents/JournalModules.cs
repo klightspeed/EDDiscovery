@@ -105,7 +105,7 @@ namespace EliteDangerousCore.JournalEvents
 
         public List<ShipModule> ShipModules;
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.Loadout(ShipId, Ship, ShipFD, ShipName, ShipIdent, ShipModules, HullValue ?? 0, ModulesValue ?? 0, Rebuy ?? 0, Hot);
         }
@@ -179,14 +179,14 @@ namespace EliteDangerousCore.JournalEvents
 
         public long? MarketID { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             string s = (BuyItemLocalised.Length > 0) ? BuyItemLocalised : BuyItem;
 
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, s + " on " + Ship, -BuyPrice + ( SellPrice??0) );
         }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.ModuleBuy(this);
         }
@@ -237,14 +237,14 @@ namespace EliteDangerousCore.JournalEvents
         public int ShipId { get; set; }
         public long? MarketID { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             string s = (SellItemLocalised.Length > 0) ? SellItemLocalised : SellItem;
 
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, s + " on " + Ship, SellPrice);
         }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.ModuleSell(this);
         }
@@ -287,14 +287,14 @@ namespace EliteDangerousCore.JournalEvents
         public int ShipId { get; set; }
         public int ServerId { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             string s = (SellItemLocalised.Length > 0) ? SellItemLocalised : SellItem;
 
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, SellItemLocalised + " on " + Ship, SellPrice);
         }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.ModuleSellRemote(this);
         }
@@ -356,14 +356,14 @@ namespace EliteDangerousCore.JournalEvents
         public bool? Hot { get; set; }
         public long? MarketID { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             string s = (RetrievedItemLocalised.Length > 0) ? RetrievedItemLocalised : RetrievedItem;
 
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, s + " on " + Ship, -Cost);
         }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.ModuleRetrieve(this);
         }
@@ -433,13 +433,13 @@ namespace EliteDangerousCore.JournalEvents
         public bool? Hot { get; set; }
         public long? MarketID { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             string s = (StoredItemLocalised.Length > 0) ? StoredItemLocalised : StoredItem;
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, s + " on ".Txb(this) + Ship, -Cost);
         }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.ModuleStore(this);
         }
@@ -498,7 +498,7 @@ namespace EliteDangerousCore.JournalEvents
         public int ShipId { get; set; }
         public long? MarketID { get; set; }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.ModuleSwap(this);
         }
@@ -610,7 +610,7 @@ namespace EliteDangerousCore.JournalEvents
 
         public ModulesInStore.StoredModule[] ModuleItems { get; set; }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.UpdateStoredModules(this);
         }
@@ -664,7 +664,7 @@ namespace EliteDangerousCore.JournalEvents
 
         public ModuleItem[] ModuleItems { get; set; }
 
-        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.SQLiteConnectionUser conn)
+        public void ShipInformation(ShipInformationList shp, string whereami, ISystem system, DB.IUserDatabase conn)
         {
             shp.MassModuleStore(this);
         }
@@ -728,7 +728,7 @@ namespace EliteDangerousCore.JournalEvents
         public int? nTransferTime { get; set; }
         public string FriendlyTransferTime { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, StoredItemLocalised + " on " + Ship, -TransferCost);
         }

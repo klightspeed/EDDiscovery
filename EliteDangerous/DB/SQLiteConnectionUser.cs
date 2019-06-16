@@ -23,15 +23,15 @@ using SQLLiteExtensions;
 
 namespace EliteDangerousCore.DB
 {
-    public class SQLiteConnectionUser : SQLExtConnectionWithLockRegister<SQLiteConnectionUser>
+    public class UserDBUpgradeException : Exception
     {
-        public class UserDBUpgradeException : Exception
+        public UserDBUpgradeException(Exception ex) : base("UpgradeUserDB error: " + ex.Message, ex)
         {
-            public UserDBUpgradeException(Exception ex) : base("UpgradeUserDB error: " + ex.Message, ex)
-            {
-            }
         }
+    }
 
+    internal class SQLiteConnectionUser : SQLExtConnectionWithLockRegister<SQLiteConnectionUser>
+    {
         protected static List<EDCommander> EarlyCommanders;
 
         public SQLiteConnectionUser() : base(EliteDangerousCore.EliteConfigInstance.InstanceOptions.UserDatabasePath, false, Initialize, AccessMode.ReaderWriter)
@@ -496,56 +496,6 @@ namespace EliteDangerousCore.DB
                     cmd.ExecuteNonQuery();
                 }
             }
-        }
-    }
-
-    // very old class used everywhere to get register stuff from user DB. its easier for now to keep this so we don't change 1000's of files.
-
-    public static class SQLiteDBClass 
-    {
-        static public bool keyExists(string sKey)
-        {
-            return SQLiteConnectionUser.keyExists(sKey);
-        }
-
-        static public int GetSettingInt(string key, int defaultvalue)
-        {
-            return SQLiteConnectionUser.GetSettingInt(key, defaultvalue);
-        }
-
-        static public bool PutSettingInt(string key, int intvalue)
-        {
-            return SQLiteConnectionUser.PutSettingInt(key, intvalue);
-        }
-
-        static public double GetSettingDouble(string key, double defaultvalue)
-        {
-            return SQLiteConnectionUser.GetSettingDouble(key, defaultvalue);
-        }
-
-        static public bool PutSettingDouble(string key, double doublevalue)
-        {
-            return SQLiteConnectionUser.PutSettingDouble(key, doublevalue);
-        }
-
-        static public bool GetSettingBool(string key, bool defaultvalue)
-        {
-            return SQLiteConnectionUser.GetSettingBool(key, defaultvalue);
-        }
-
-        static public bool PutSettingBool(string key, bool boolvalue)
-        {
-            return SQLiteConnectionUser.PutSettingBool(key, boolvalue);
-        }
-
-        static public string GetSettingString(string key, string defaultvalue)
-        {
-            return SQLiteConnectionUser.GetSettingString(key, defaultvalue);
-        }
-
-        static public bool PutSettingString(string key, string strvalue)
-        {
-            return SQLiteConnectionUser.PutSettingString(key, strvalue);
         }
     }
 }

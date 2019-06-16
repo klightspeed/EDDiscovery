@@ -88,7 +88,7 @@ namespace EDDiscovery
             set
             {
                 useNotifyIcon = value;
-                SQLiteConnectionUser.PutSettingBool("UseNotifyIcon", value);
+                UserDatabase.Instance.PutSettingBool("UseNotifyIcon", value);
             }
         }
 
@@ -101,7 +101,7 @@ namespace EDDiscovery
             set
             {
                 orderrowsinverted = value;
-                SQLiteConnectionUser.PutSettingBool("OrderRowsInverted", value);
+                UserDatabase.Instance.PutSettingBool("OrderRowsInverted", value);
             }
         }
 
@@ -119,7 +119,7 @@ namespace EDDiscovery
             set
             {
                 minimizeToNotifyIcon = value;
-                SQLiteConnectionUser.PutSettingBool("MinimizeToNotifyIcon", value);
+                UserDatabase.Instance.PutSettingBool("MinimizeToNotifyIcon", value);
             }
         }
 
@@ -132,7 +132,7 @@ namespace EDDiscovery
             set
             {
                 keepOnTop = value;
-                SQLiteConnectionUser.PutSettingBool("KeepOnTop", value);
+                UserDatabase.Instance.PutSettingBool("KeepOnTop", value);
             }
         }
 
@@ -145,7 +145,7 @@ namespace EDDiscovery
             set
             {
                 displayUTC = value;
-                SQLiteConnectionUser.PutSettingBool("DisplayUTC", value);
+                UserDatabase.Instance.PutSettingBool("DisplayUTC", value);
             }
         }
 
@@ -158,7 +158,7 @@ namespace EDDiscovery
             set
             {
                 defaultwavedevice = value;
-                SQLiteConnectionUser.PutSettingString("WaveAudioDevice", value);
+                UserDatabase.Instance.PutSettingString("WaveAudioDevice", value);
             }
         }
 
@@ -171,7 +171,7 @@ namespace EDDiscovery
             set
             {
                 defaultvoicedevice = value;
-                SQLiteConnectionUser.PutSettingString("VoiceAudioDevice", value);
+                UserDatabase.Instance.PutSettingString("VoiceAudioDevice", value);
             }
         }
 
@@ -184,7 +184,7 @@ namespace EDDiscovery
             set
             {
                 clickthrukey = value;
-                SQLiteConnectionUser.PutSettingInt("ClickThruKey", (int)value);
+                UserDatabase.Instance.PutSettingInt("ClickThruKey", (int)value);
             }
         }
 
@@ -197,7 +197,7 @@ namespace EDDiscovery
             set
             {
                 edsmeddbdownload = value;
-                SQLiteConnectionUser.PutSettingBool("EDSMEDDBDownloadData", value);
+                UserDatabase.Instance.PutSettingBool("EDSMEDDBDownloadData", value);
             }
         }
 
@@ -210,7 +210,7 @@ namespace EDDiscovery
             set
             {
                 edsmgridids = value;
-                SQLiteConnectionSystem.PutSettingString("EDSMGridIDs", value);
+                SystemsDatabase.Instance.SetEDSMGridIDs(value);
             }
         }
 
@@ -223,7 +223,7 @@ namespace EDDiscovery
             set
             {
                 fullhistoryloaddaylimit = value;
-                SQLiteConnectionUser.PutSettingInt("FullHistoryLoadDayLimit", value);
+                UserDatabase.Instance.PutSettingInt("FullHistoryLoadDayLimit", value);
             }
         }
 
@@ -236,7 +236,7 @@ namespace EDDiscovery
             set
             {
                 essentialeventtype = value;
-                SQLiteConnectionUser.PutSettingString("EssentialEventType", value);
+                UserDatabase.Instance.PutSettingString("EssentialEventType", value);
             }
         }
 
@@ -249,7 +249,7 @@ namespace EDDiscovery
             set
             {
                 coriolisURL = value;
-                SQLiteConnectionUser.PutSettingString("CorolisURL", value);
+                UserDatabase.Instance.PutSettingString("CorolisURL", value);
             }
         }
 
@@ -262,7 +262,7 @@ namespace EDDiscovery
             set
             {
                 eddshipyardURL = value;
-                SQLiteConnectionUser.PutSettingString("EDDShipyardURL", value);
+                UserDatabase.Instance.PutSettingString("EDDShipyardURL", value);
             }
         }
 
@@ -275,7 +275,7 @@ namespace EDDiscovery
             set
             {
                 language = value;
-                SQLiteConnectionUser.PutSettingString("DefaultLanguage", value);
+                UserDatabase.Instance.PutSettingString("DefaultLanguage", value);
             }
         }
 
@@ -288,7 +288,7 @@ namespace EDDiscovery
             set
             {
                 drawduringresize = value;
-                SQLiteConnectionUser.PutSettingBool("DrawDuringResizeWindow", value);
+                UserDatabase.Instance.PutSettingBool("DrawDuringResizeWindow", value);
             }
         }
 
@@ -301,7 +301,7 @@ namespace EDDiscovery
             set
             {
                 sortpanelsalpha = value;
-                SQLiteConnectionUser.PutSettingBool("PanelsSortedByName", value); 
+                UserDatabase.Instance.PutSettingBool("PanelsSortedByName", value); 
             }
         }
 
@@ -317,7 +317,7 @@ namespace EDDiscovery
             set
             {
                 edsmfullsystemsurl = value;
-                SQLiteConnectionUser.PutSettingString("EDSMFullSystemsURL", value);
+                UserDatabase.Instance.PutSettingString("EDSMFullSystemsURL", value);
             }
         }
 
@@ -333,7 +333,7 @@ namespace EDDiscovery
             set
             {
                 eddbsystemsurl = value;
-                SQLiteConnectionUser.PutSettingString("EDDBSystemsURL", value);
+                UserDatabase.Instance.PutSettingString("EDDBSystemsURL", value);
             }
         }
 
@@ -363,7 +363,7 @@ namespace EDDiscovery
                 // write back what is correct. Incorrect icons will be removed.
                 string[] list = (from x in captainslogtaglist select (x.Key + "=" + (string)x.Value.Tag)).ToArray();
                 string setting = string.Join(";", list);
-                SQLiteConnectionUser.PutSettingString("CaptainsLogPanelTagNames", setting);
+                UserDatabase.Instance.PutSettingString("CaptainsLogPanelTagNames", setting);
             }
         }
 
@@ -378,7 +378,7 @@ namespace EDDiscovery
                 captainslogtaglist = value;
                 string[] list = (from x in captainslogtaglist select (x.Key + "=" + (string)x.Value.Tag)).ToArray();
                 string setting = string.Join(";", list);
-                SQLiteConnectionUser.PutSettingString("CaptainsLogPanelTagNames", setting);
+                UserDatabase.Instance.PutSettingString("CaptainsLogPanelTagNames", setting);
             }
         }
 
@@ -386,32 +386,32 @@ namespace EDDiscovery
 
         #region Update at start
 
-        public void Update(bool write = true, SQLiteConnectionUser conn = null)     // call at start to populate above
+        public void Update(bool write = true)     // call at start to populate above
         {
             try
             {
-                useNotifyIcon = SQLiteConnectionUser.GetSettingBool("UseNotifyIcon", false, conn);
-                orderrowsinverted = SQLiteConnectionUser.GetSettingBool("OrderRowsInverted", false, conn);
-                minimizeToNotifyIcon = SQLiteConnectionUser.GetSettingBool("MinimizeToNotifyIcon", false, conn);
-                keepOnTop = SQLiteConnectionUser.GetSettingBool("KeepOnTop", false, conn);
-                displayUTC = SQLiteConnectionUser.GetSettingBool("DisplayUTC", false, conn);
-                defaultvoicedevice = SQLiteConnectionUser.GetSettingString("VoiceAudioDevice", "Default", conn);
-                defaultwavedevice = SQLiteConnectionUser.GetSettingString("WaveAudioDevice", "Default", conn);
-                clickthrukey = (System.Windows.Forms.Keys)SQLiteConnectionUser.GetSettingInt("ClickThruKey", (int)System.Windows.Forms.Keys.ShiftKey, conn);
-                edsmeddbdownload = SQLiteConnectionUser.GetSettingBool("EDSMEDDBDownloadData", true, conn);    // this goes with the USER on purpose, so its kept over a system db delete
-                edsmgridids = SQLiteConnectionSystem.GetSettingString("EDSMGridIDs", "Not Set"); // from system database, not user, to keep setting with system data
-                fullhistoryloaddaylimit = SQLiteConnectionUser.GetSettingInt("FullHistoryLoadDayLimit", 0);
-                language = SQLiteConnectionUser.GetSettingString("DefaultLanguage", "Auto");
-                drawduringresize = SQLiteConnectionUser.GetSettingBool("DrawDuringResizeWindow", true);
-                sortpanelsalpha = SQLiteConnectionUser.GetSettingBool("PanelsSortedByName", false);
-                essentialeventtype = SQLiteConnectionUser.GetSettingString("EssentialEventType", "Default");
-                coriolisURL = SQLiteConnectionUser.GetSettingString("CorolisURL", Properties.Resources.URLCoriolis);
-                eddshipyardURL = SQLiteConnectionUser.GetSettingString("EDDShipyardURL", Properties.Resources.URLEDShipyard);
-                edsmfullsystemsurl = SQLiteConnectionUser.GetSettingString("EDSMFullSystemsURL", "Default");
-                eddbsystemsurl = SQLiteConnectionUser.GetSettingString("EDDBSystemsURL", "Default");
-                CaptainsLogTags = SQLiteConnectionUser.GetSettingString("CaptainsLogPanelTagNames", "Expedition=Journal.FSDJump;Died=Journal.Died");
+                useNotifyIcon = UserDatabase.Instance.GetSettingBool("UseNotifyIcon", false);
+                orderrowsinverted = UserDatabase.Instance.GetSettingBool("OrderRowsInverted", false);
+                minimizeToNotifyIcon = UserDatabase.Instance.GetSettingBool("MinimizeToNotifyIcon", false);
+                keepOnTop = UserDatabase.Instance.GetSettingBool("KeepOnTop", false);
+                displayUTC = UserDatabase.Instance.GetSettingBool("DisplayUTC", false);
+                defaultvoicedevice = UserDatabase.Instance.GetSettingString("VoiceAudioDevice", "Default");
+                defaultwavedevice = UserDatabase.Instance.GetSettingString("WaveAudioDevice", "Default");
+                clickthrukey = (System.Windows.Forms.Keys)UserDatabase.Instance.GetSettingInt("ClickThruKey", (int)System.Windows.Forms.Keys.ShiftKey);
+                edsmeddbdownload = UserDatabase.Instance.GetSettingBool("EDSMEDDBDownloadData", true);    // this goes with the USER on purpose, so its kept over a system db delete
+                edsmgridids = SystemsDatabase.Instance.GetEDSMGridIDs(); // from system database, not user, to keep setting with system data
+                fullhistoryloaddaylimit = UserDatabase.Instance.GetSettingInt("FullHistoryLoadDayLimit", 0);
+                language = UserDatabase.Instance.GetSettingString("DefaultLanguage", "Auto");
+                drawduringresize = UserDatabase.Instance.GetSettingBool("DrawDuringResizeWindow", true);
+                sortpanelsalpha = UserDatabase.Instance.GetSettingBool("PanelsSortedByName", false);
+                essentialeventtype = UserDatabase.Instance.GetSettingString("EssentialEventType", "Default");
+                coriolisURL = UserDatabase.Instance.GetSettingString("CorolisURL", Properties.Resources.URLCoriolis);
+                eddshipyardURL = UserDatabase.Instance.GetSettingString("EDDShipyardURL", Properties.Resources.URLEDShipyard);
+                edsmfullsystemsurl = UserDatabase.Instance.GetSettingString("EDSMFullSystemsURL", "Default");
+                eddbsystemsurl = UserDatabase.Instance.GetSettingString("EDDBSystemsURL", "Default");
+                CaptainsLogTags = UserDatabase.Instance.GetSettingString("CaptainsLogPanelTagNames", "Expedition=Journal.FSDJump;Died=Journal.Died");
 
-                EliteDangerousCore.EDCommander.Load(write, conn);
+                EliteDangerousCore.EDCommander.Load(write);
             }
             catch (Exception ex)
             {
@@ -430,12 +430,12 @@ namespace EDDiscovery
             get
             {
                 if (defmapcolour == null)
-                    defmapcolour = SQLiteConnectionUser.GetSettingInt("DefaultMap", System.Drawing.Color.Red.ToArgb());
+                    defmapcolour = UserDatabase.Instance.GetSettingInt("DefaultMap", System.Drawing.Color.Red.ToArgb());
                 return defmapcolour.Value;
             }
             set
             {
-                SQLiteConnectionUser.PutSettingInt("DefaultMap", value);
+                UserDatabase.Instance.PutSettingInt("DefaultMap", value);
                 defmapcolour = value;
             }
         }

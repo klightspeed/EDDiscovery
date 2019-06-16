@@ -149,15 +149,15 @@ namespace EDDiscovery
             Trace.WriteLine(BaseUtils.AppTicks.TickCountLap() + " Initializing database");
             try
             {
-                SQLiteConnectionUser.Initialize();
+                UserDatabase.Instance.Initialize();
             }
-            catch (SQLiteConnectionUser.UserDBUpgradeException ex)
+            catch (UserDBUpgradeException ex)
             {
                 ExtendedControls.MessageBoxTheme.Show(ex.Message + Environment.NewLine + ex.StackTrace);
                 Environment.Exit(1);
             }
 
-            SQLiteConnectionSystem.Initialize();
+            SystemsDatabase.Instance.Initialize();
             Trace.WriteLine(BaseUtils.AppTicks.TickCountLap() + " Database initialization complete");
 
             HttpCom.LogPath = logpath;
@@ -349,13 +349,13 @@ namespace EDDiscovery
             {
                 // New Galmap load - it was not doing a refresh if EDSM sync kept on happening. Now has its own timer
 
-                DateTime galmaptime = SQLiteConnectionSystem.GetSettingDate("EDSMGalMapLast", DateTime.MinValue); // Latest time from RW file.
+                DateTime galmaptime = SystemsDatabase.Instance.GetEDSMGalMapLast(); // Latest time from RW file.
 
                 if (DateTime.Now.Subtract(galmaptime).TotalDays > 14 || !galacticMapping.GalMapFilePresent())  // Over 14 days do a sync from EDSM for galmap
                 {
                     LogLine("Get galactic mapping from EDSM.".Tx(this, "EDSM"));
                     if (galacticMapping.DownloadFromEDSM())
-                        SQLiteConnectionSystem.PutSettingDate("EDSMGalMapLast", DateTime.UtcNow);
+                        SystemsDatabase.Instance.SetEDSMGalMapLast(DateTime.UtcNow);
                 }
 
                 Debug.WriteLine(BaseUtils.AppTicks.TickCountLap() + " Check systems complete");

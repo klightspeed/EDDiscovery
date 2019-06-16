@@ -62,7 +62,7 @@ namespace EliteDangerousCore.JournalEvents
         public bool SharedWithOthers { get; set; }
         public BountyReward[] Rewards { get; set; }
 
-        public void LedgerNC(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void LedgerNC(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEventNoCash(Id, EventTimeUTC, EventTypeID, string.Format("{0} total {1:N0}".Txb(this,"LegBounty"), VictimFactionLocalised, TotalReward));
         }
@@ -105,7 +105,7 @@ namespace EliteDangerousCore.JournalEvents
 
         public long Reward { get; set; }
 
-        public void LedgerNC(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void LedgerNC(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEventNoCash(Id, EventTimeUTC, EventTypeID, AwardingFaction_Localised.Alt(AwardingFaction) + " " + Reward);
         }
@@ -138,7 +138,7 @@ namespace EliteDangerousCore.JournalEvents
         public long? Bounty { get; set; }
         public long Cost { get { return (Fine.HasValue ? Fine.Value : 0) + (Bounty.HasValue ? Bounty.Value : 0); } }
 
-        public void LedgerNC(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void LedgerNC(Ledger mcl, DB.IUserDatabase conn)
         {
             string v = (VictimLocalised.Length > 0) ? VictimLocalised : Victim;
 
@@ -201,7 +201,7 @@ namespace EliteDangerousCore.JournalEvents
         public string VictimFaction_Localised { get; set; }         // may be empty
         public long Reward { get; set; }
 
-        public void LedgerNC(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void LedgerNC(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEventNoCash(Id, EventTimeUTC, EventTypeID, AwardingFaction_Localised.Alt(AwardingFaction) + " " + Reward.ToString("N0"));
         }
@@ -236,7 +236,7 @@ namespace EliteDangerousCore.JournalEvents
         public string Faction_Localised { get; set; }    // may be blank
         public int ShipId { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, (Faction_Localised.Length > 0 ? "Faction " + Faction_Localised : "") + " Broker " + BrokerPercentage.ToString("0.0") + "%", -Amount);
         }
@@ -271,7 +271,7 @@ namespace EliteDangerousCore.JournalEvents
         public string Faction_Localised { get; set; }       // may be blank
         public int ShipId { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, (Faction_Localised.Length > 0 ? "Faction " + Faction_Localised : "") + " Broker " + BrokerPercentage.ToString("0.0") + "%", -Amount);
         }
@@ -297,7 +297,7 @@ namespace EliteDangerousCore.JournalEvents
         public long Amount { get; set; }
         public double BrokerPercentage { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, "Broker " + BrokerPercentage.ToString("0.0") + "%", -Amount);
         }
@@ -327,7 +327,7 @@ namespace EliteDangerousCore.JournalEvents
         public string Faction { get; set; }
         public double BrokerPercentage { get; set; }
 
-        public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
+        public void Ledger(Ledger mcl, DB.IUserDatabase conn)
         {
             mcl.AddEvent(Id, EventTimeUTC, EventTypeID, Type + " Broker " + BrokerPercentage.ToString("0.0") + "%", Amount);
         }
