@@ -43,6 +43,12 @@ namespace EliteDangerousCore.JournalEvents
         }
     }
 
+    public class JournalSellDiscovered
+    {
+        public string SystemName { get; set; }
+        public int NumBodies { get; set; }
+    }
+
     [JournalEntryType(JournalTypeEnum.SellExplorationData)]
     public class JournalSellExplorationData : JournalEntry, ILedgerJournalEntry
     {
@@ -51,7 +57,7 @@ namespace EliteDangerousCore.JournalEvents
         public JournalSellExplorationData(JObject evt) : base(evt, JournalTypeEnum.SellExplorationData)
         {
             Systems = evt["Systems"]?.ToObjectProtected<string[]>() ?? new string[0];
-            Discovered = evt["Discovered"]?.ToObjectProtected<string[]>() ?? new string[0];
+            Discovered = ParseDiscovered(evt["Discovered"]);
             BaseValue = evt["BaseValue"].Long();
             Bonus = evt["Bonus"].Long();
             TotalEarnings = evt["TotalEarnings"].Long(0);        // may not be present - get 0. also 3.02 has a bug with incorrect value - actually fed from the FD web server so may not be version tied
@@ -60,10 +66,17 @@ namespace EliteDangerousCore.JournalEvents
         }
 
         public string[] Systems { get; set; }
-        public string[] Discovered { get; set; }
+        public JournalSellDiscovered[] Discovered { get; set; }
         public long BaseValue { get; set; }
         public long Bonus { get; set; }
         public long TotalEarnings { get; set; }        // 3.0
+
+        public JournalSellDiscovered[] ParseDiscovered(JToken token)
+        {
+            return token?.ToObjectProtected<JournalSellDiscovered[]>() ?? 
+                   token?.ToObjectProtected<string[]>()?.Select(e => new JournalSellDiscovered { SystemName = e }).ToArray() ?? 
+                   new JournalSellDiscovered[0];
+        }
 
         public void Ledger(Ledger mcl, DB.SQLiteConnectionUser conn)
         {
@@ -82,11 +95,11 @@ namespace EliteDangerousCore.JournalEvents
                 foreach (string s in Systems)
                     detailed += s + " ";
             }
-            if (Discovered != null)
+            if (Discovered != null && Discovered.Length != 0)
             {
                 detailed += System.Environment.NewLine + "Discovered:".Txb(this);
-                foreach (string s in Discovered)
-                    detailed += s + " ";
+                foreach (JournalSellDiscovered s in Discovered)
+                    detailed += s.SystemName + " ";
             }
         }
     }
@@ -97,19 +110,13 @@ namespace EliteDangerousCore.JournalEvents
     {
         public JournalMultiSellExplorationData(JObject evt) : base(evt, JournalTypeEnum.MultiSellExplorationData)   // 3.3
         {
-            Systems = evt["Discovered"]?.ToObjectProtected<Discovered[]>();
+            Systems = evt["Discovered"]?.ToObjectProtected<JournalSellDiscovered[]>();
             BaseValue = evt["BaseValue"].Long();
             Bonus = evt["Bonus"].Long();
             TotalEarnings = evt["TotalEarnings"].Long(0);       
         }
 
-        public class Discovered
-        {
-            public string SystemName { get; set; }
-            public int NumBodies { get; set; }
-        }
-
-        public Discovered[] Systems { get; set; }
+        public JournalSellDiscovered[] Systems { get; set; }
         public long BaseValue { get; set; }
         public long Bonus { get; set; }
         public long TotalEarnings { get; set; }      

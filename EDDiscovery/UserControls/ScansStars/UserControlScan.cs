@@ -472,10 +472,10 @@ namespace EDDiscovery.UserControls
                                 JournalSellExplorationData jsed = he.journalEntry as JournalSellExplorationData;
                                 if (jsed == null || jsed.Discovered == null)
                                     continue;
-                                foreach (String system in jsed.Discovered)
+                                foreach (var discovery in jsed.Discovered)
                                 {
                                     writer.Write(csv.Format(jsed.EventTimeLocal));
-                                    writer.Write(csv.Format(system));
+                                    writer.Write(csv.Format(discovery.SystemName));
 
                                     EDStar star = EDStar.Unknown;
                                     EDPlanet planet = EDPlanet.Unknown;
@@ -483,7 +483,7 @@ namespace EDDiscovery.UserControls
                                     foreach (HistoryEntry scanhe in scans)
                                     {
                                         JournalScan scan = scanhe.journalEntry as JournalScan;
-                                        if (scan.BodyName.Equals(system, StringComparison.OrdinalIgnoreCase))
+                                        if (scan.BodyName.Equals(discovery.SystemName, StringComparison.OrdinalIgnoreCase))
                                         {
                                             star = scan.StarTypeID;
                                             planet = scan.PlanetTypeID;
