@@ -170,15 +170,15 @@ namespace EliteDangerousCore.DB
         {
             try
             {
-                return UserDatabase.Instance.ExecuteWithDatabase<bool>(cn =>
+                return UserDatabase.Instance.ExecuteWithDatabase<bool>(async cn =>
                 {
                     using (DbCommand cmd = cn.Connection.CreateCommand("select * from SystemNote"))
                     {
                         List<SystemNoteClass> notes = new List<SystemNoteClass>();
 
-                        using (DbDataReader rdr = cmd.ExecuteReader())
+                        using (DbDataReader rdr = await cmd.ExecuteReaderAsync())
                         {
-                            while (rdr.Read())
+                            while (await rdr.ReadAsync())
                             {
                                 notes.Add(new SystemNoteClass(rdr));
                             }

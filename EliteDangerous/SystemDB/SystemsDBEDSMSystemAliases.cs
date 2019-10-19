@@ -20,6 +20,7 @@ using System.Data.Common;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System;
+using System.Threading.Tasks;
 
 namespace EliteDangerousCore.DB
 {
@@ -140,7 +141,7 @@ namespace EliteDangerousCore.DB
             });
         }
 
-        internal static long FindAlias(long edsmid, string name, SQLiteConnectionSystem cn)
+        internal static async Task<long> FindAlias(long edsmid, string name, SQLiteConnectionSystem cn)
         {
             string query = "edsmid = @edsmid OR name = @name";
             if (edsmid < 1)
@@ -152,7 +153,7 @@ namespace EliteDangerousCore.DB
             {
                 selectCmd.Parameters[0].Value = edsmid;
                 selectCmd.Parameters[1].Value = name;
-                return selectCmd.ExecuteScalar<long>(-1);
+                return await selectCmd.ExecuteScalarAsync<long>(-1);
             }
         }
 
@@ -164,7 +165,7 @@ namespace EliteDangerousCore.DB
             });
         }
 
-        internal static List<ISystem> FindAliasWildcard(string name, SQLiteConnectionSystem cn)
+        internal static async Task<List<ISystem>> FindAliasWildcard(string name, SQLiteConnectionSystem cn)
         {
             List<ISystem> ret = new List<ISystem>();
 
@@ -175,9 +176,9 @@ namespace EliteDangerousCore.DB
             {
                 //System.Diagnostics.Debug.WriteLine( cn.ExplainQueryPlanString(selectSysCmd));
 
-                using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                 {
-                    while (reader.Read())
+                    while (await reader.ReadAsync())
                     {
                         ret.Add(MakeSystem(reader));
                     }

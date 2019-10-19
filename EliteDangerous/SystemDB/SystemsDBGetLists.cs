@@ -39,7 +39,7 @@ namespace EliteDangerousCore.DB
         public static List<ISystem> ListStars(string where = null, string orderby = null, string limit = null, bool eddbinfo = false, 
                                                 Action<ISystem> starreport = null)
         {
-            return SystemsDatabase.Instance.ExecuteWithDatabase(db =>
+            return SystemsDatabase.Instance.ExecuteWithDatabase(async db =>
             {
                 List<ISystem> ret = new List<ISystem>();
 
@@ -50,9 +50,9 @@ namespace EliteDangerousCore.DB
                 using (DbCommand selectSysCmd = cn.CreateSelect("Systems s", eddbinfo ? MakeSystemQueryEDDB : MakeSystemQueryNoEDDB, where, orderby, limit: limit,
                     joinlist: (eddbinfo ? MakeSystemQueryEDDBJoinList : MakeSystemQueryJoinList)))
                 {
-                    using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                    using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())      // if there..
+                        while (await reader.ReadAsync())      // if there..
                         {
                             SystemClass s = MakeSystem(reader, eddbinfo);
                             if (starreport != null)
@@ -71,7 +71,7 @@ namespace EliteDangerousCore.DB
         // randimised id % 100 < sercentage
         public static List<V> GetStarPositions<V>(int percentage, Func<int, int, int, V> tovect)  // return all star positions..
         {
-            return SystemsDatabase.Instance.ExecuteWithDatabase(db =>
+            return SystemsDatabase.Instance.ExecuteWithDatabase(async db =>
             {
                 List<V> ret = new List<V>();
 
@@ -82,9 +82,9 @@ namespace EliteDangerousCore.DB
                                                        where: "((s.edsmid*2333)%100) <" + percentage.ToStringInvariant()
                                                        ))
                 {
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             ret.Add(tovect(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2)));
                         }

@@ -343,7 +343,7 @@ namespace EliteDangerousCore
             try
             {
                 cmd = UserDatabase.Instance.ExecuteWithDatabase(cn => cn.Connection.CreateCommand("select * from JournalEntries"));
-                reader = UserDatabase.Instance.ExecuteWithDatabase(cn =>
+                reader = UserDatabase.Instance.ExecuteWithDatabase(async cn =>
                 {
                     string cnd = "";
                     if (commander != -999)
@@ -380,18 +380,18 @@ namespace EliteDangerousCore
 
                     cmd.CommandText += " Order By EventTime ASC";
 
-                    return cmd.ExecuteReader();
+                    return await cmd.ExecuteReaderAsync();
                 });
 
                 List<JournalEntry> retlist = null;
 
                 do
                 {
-                    retlist = UserDatabase.Instance.ExecuteWithDatabase(cn =>
+                    retlist = UserDatabase.Instance.ExecuteWithDatabase(async cn =>
                     {
                         List<JournalEntry> list = new List<JournalEntry>();
 
-                        while (list.Count < 1000 && reader.Read())
+                        while (list.Count < 1000 && await reader.ReadAsync())
                         {
                             JournalEntry sys = JournalEntry.CreateJournalEntry(reader);
                             sys.beta = tlus.ContainsKey(sys.TLUId) ? tlus[sys.TLUId].Beta : false;
@@ -431,24 +431,24 @@ namespace EliteDangerousCore
             try
             {
                 cmd = UserDatabase.Instance.ExecuteWithDatabase(cn => cn.Connection.CreateCommand("SELECT * FROM JournalEntries WHERE EventTypeID = @eventtype and  CommanderID=@commander and  EventTime >=@start and EventTime<=@Stop ORDER BY EventTime ASC"));
-                reader = UserDatabase.Instance.ExecuteWithDatabase(cn =>
+                reader = UserDatabase.Instance.ExecuteWithDatabase(async cn =>
                 {
                     cmd.AddParameterWithValue("@eventtype", (int)eventtype);
                     cmd.AddParameterWithValue("@commander", (int)commanderid);
                     cmd.AddParameterWithValue("@start", start);
                     cmd.AddParameterWithValue("@stop", stop);
-                    return cmd.ExecuteReader();
+                    return await cmd.ExecuteReaderAsync();
                 });
 
                 List<JournalEntry> retlist = null;
 
                 do
                 {
-                    retlist = UserDatabase.Instance.ExecuteWithDatabase(cn =>
+                    retlist = UserDatabase.Instance.ExecuteWithDatabase(async cn =>
                     {
                         List<JournalEntry> vsc = new List<JournalEntry>();
 
-                        while (vsc.Count < 1000 && reader.Read())
+                        while (vsc.Count < 1000 && await reader.ReadAsync())
                         {
                             JournalEntry je = CreateJournalEntry(reader);
                             je.beta = tlus.ContainsKey(je.TLUId) ? tlus[je.TLUId].Beta : false;
@@ -482,14 +482,14 @@ namespace EliteDangerousCore
             TravelLogUnit tlu = TravelLogUnit.Get(tluid);
             List<JournalEntry> vsc = new List<JournalEntry>();
 
-            return UserDatabase.Instance.ExecuteWithDatabase<List<JournalEntry>>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<List<JournalEntry>>(async cn =>
             {
                 using (DbCommand cmd = cn.Connection.CreateCommand("SELECT * FROM JournalEntries WHERE TravelLogId = @source ORDER BY EventTime ASC"))
                 {
                     cmd.AddParameterWithValue("@source", tluid);
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             JournalEntry je = CreateJournalEntry(reader);
                             je.beta = tlu?.Beta ?? false;
@@ -503,15 +503,15 @@ namespace EliteDangerousCore
 
         public static JournalEntry GetLast(int cmdrid, DateTime before, Func<JournalEntry, bool> filter)
         {
-            return UserDatabase.Instance.ExecuteWithDatabase<JournalEntry>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<JournalEntry>(async cn =>
             {
                 using (DbCommand cmd = cn.Connection.CreateCommand("SELECT * FROM JournalEntries WHERE CommanderId = @cmdrid AND EventTime < @time ORDER BY EventTime DESC"))
                 {
                     cmd.AddParameterWithValue("@cmdrid", cmdrid);
                     cmd.AddParameterWithValue("@time", before);
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             JournalEntry ent = CreateJournalEntry(reader);
                             if (filter(ent))
@@ -527,14 +527,14 @@ namespace EliteDangerousCore
 
         public static JournalEntry GetLast(DateTime before, Func<JournalEntry, bool> filter)
         {
-            return UserDatabase.Instance.ExecuteWithDatabase<JournalEntry>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<JournalEntry>(async cn =>
             {
                 using (DbCommand cmd = cn.Connection.CreateCommand("SELECT * FROM JournalEntries WHERE EventTime < @time ORDER BY EventTime DESC"))
                 {
                     cmd.AddParameterWithValue("@time", before);
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             JournalEntry ent = CreateJournalEntry(reader);
                             if (filter(ent))
@@ -569,7 +569,7 @@ namespace EliteDangerousCore
 
             entjo = RemoveEDDGeneratedKeys(entjo);
 
-            return UserDatabase.Instance.ExecuteWithDatabase<List<JournalEntry>>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<List<JournalEntry>>(async cn =>
             {
                 List<JournalEntry> entries = new List<JournalEntry>();
 
@@ -579,9 +579,9 @@ namespace EliteDangerousCore
                     cmd.AddParameterWithValue("@time", ent.EventTimeUTC);
                     cmd.AddParameterWithValue("@tluid", ent.TLUId);
                     cmd.AddParameterWithValue("@evttype", ent.EventTypeID);
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             JournalEntry jent = CreateJournalEntry(reader);
                             if (AreSameEntry(ent, jent, entjo))

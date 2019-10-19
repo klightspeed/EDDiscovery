@@ -568,7 +568,7 @@ namespace EliteDangerousCore
 
             if (!SystemsDatabase.Instance.RebuildRunning)       // only run this when the system db is stable.. this prevents the UI from slowing to a standstill
             {
-                SystemsDatabase.Instance.ExecuteWithDatabase(cn =>
+                SystemsDatabase.Instance.ExecuteWithDatabase(async cn =>
                 {
                     foreach (HistoryEntry he in historylist)
                     {
@@ -576,7 +576,7 @@ namespace EliteDangerousCore
                         {           // done in two IFs for debugging, in case your wondering why!
                             if (he.System.status != SystemStatusEnum.EDSM && he.System.EDSMID == 0)   // and its not from EDSM and we have not already tried
                             {
-                                ISystem found = SystemCache.FindSystem(he.System, cn);
+                                ISystem found = await SystemCache.FindSystem(he.System, cn);
                                 if (found != null)
                                     updatesystems.Add(new Tuple<HistoryEntry, ISystem>(he, found));
                             }

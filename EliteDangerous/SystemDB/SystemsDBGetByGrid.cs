@@ -17,6 +17,7 @@
 using System;
 using System.Data.Common;
 using System.Drawing;
+using System.Threading.Tasks;
 
 namespace EliteDangerousCore.DB
 {
@@ -36,38 +37,42 @@ namespace EliteDangerousCore.DB
         // ask = AllStars/UnpopulatedStars/PopulatedStars = only v1/c1 is returned..
         // ask = SplitPopulatedStars = vertices1 is populated, 2 is unpopulated stars
 
-        private static void GetSystemVector<V>(int gridid, ref V[] vertices1, ref uint[] colours1,
-                                                          ref V[] vertices2, ref uint[] colours2,
-                                                          int percentage, Func<int, int, int, V> tovect,
-                                                          SystemAskType ask = SystemAskType.SplitPopulatedStars)
+        private struct SystemVectorResult<V>
         {
-            V[] cpvertices1 = vertices1;
-            uint[] cpcolours1 = colours1;
-            V[] cpvertices2 = vertices2;
-            uint[] cpcolours2 = colours2;
-
-            SystemsDatabase.Instance.ExecuteWithDatabase(db =>
-            {
-                GetSystemVector<V>(gridid, ref cpvertices1, ref cpcolours1, ref cpvertices2, ref cpcolours2, percentage, tovect, db.Connection, ask);
-            },warnthreshold:5000);
-
-            vertices1 = cpvertices1;
-            colours1 = cpcolours1;
-            vertices2 = cpvertices2;
-            colours2 = cpcolours2;
+            public V[] vertices1;
+            public uint[] colours1;
+            public V[] vertices2;
+            public uint[] colours2;
         }
 
         private static void GetSystemVector<V>(int gridid, ref V[] vertices1, ref uint[] colours1,
                                                           ref V[] vertices2, ref uint[] colours2,
                                                           int percentage, Func<int, int, int, V> tovect,
+                                                          SystemAskType ask = SystemAskType.SplitPopulatedStars)
+        {
+            var query = SystemsDatabase.Instance.ExecuteWithDatabase(db =>
+            {
+                return GetSystemVector<V>(gridid, percentage, tovect, db.Connection, ask);
+            },warnthreshold:5000);
+
+            vertices1 = query.vertices1;
+            colours1 = query.colours1;
+            vertices2 = query.vertices2;
+            colours2 = query.colours2;
+        }
+
+        private static async Task<SystemVectorResult<V>> GetSystemVector<V>(int gridid,
+                                                          int percentage, Func<int, int, int, V> tovect,
                                                           SQLiteConnectionSystem cn,
                                                           SystemAskType ask = SystemAskType.SplitPopulatedStars)
         {
             int numvertices1 = 0;
-            vertices1 = vertices2 = null;
+            V[] vertices1 = null;
+            uint[] colours1 = null;
 
             int numvertices2 = 0;
-            colours1 = colours2 = null;
+            V[] vertices2 = null;
+            uint[] colours2 = null;
 
             Color[] fixedc = new Color[4];
             fixedc[0] = Color.Red;
@@ -99,13 +104,13 @@ namespace EliteDangerousCore.DB
                     colours2 = new uint[250000];
                 }
                 
-                using (DbDataReader reader = cmd.ExecuteReader())
+                using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                 {
                     //System.Diagnostics.Debug.WriteLine("sysLapStart : " + BaseUtils.AppTicks.TickCountLap());
 
                     Object[] data = new Object[4];
 
-                    while (reader.Read())
+                    while (await reader.ReadAsync())
                     {
                         long id = reader.GetInt64(0);       // quicker than cast
                         int x = reader.GetInt32(1);
@@ -163,6 +168,14 @@ namespace EliteDangerousCore.DB
                         colours1[solindex] = 0x00ffff;   //yellow
                 }
             }
+
+            return new SystemVectorResult<V>
+            {
+                vertices1 = vertices1,
+                vertices2 = vertices2,
+                colours1 = colours1,
+                colours2 = colours2
+            };
         }
     }
 }

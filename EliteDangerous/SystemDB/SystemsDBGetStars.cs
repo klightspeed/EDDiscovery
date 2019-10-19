@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Threading.Tasks;
 
 namespace EliteDangerousCore.DB
 {
@@ -29,7 +30,7 @@ namespace EliteDangerousCore.DB
             return SystemsDatabase.Instance.ExecuteWithDatabase(cn => FindStar(name, cn.Connection));
         }
 
-        internal static ISystem FindStar(string name, SQLiteConnectionSystem cn)
+        internal static async Task<ISystem> FindStar(string name, SQLiteConnectionSystem cn)
         {
             EliteNameClassifier ec = new EliteNameClassifier(name);
 
@@ -44,9 +45,9 @@ namespace EliteDangerousCore.DB
                 {
                     // System.Diagnostics.Debug.WriteLine( cn.ExplainQueryPlanString(selectSysCmd));
 
-                    using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                    using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                     {
-                        if (reader.Read())
+                        if (await reader.ReadAsync())
                         {
                             return MakeSystem(reader);        // read back and make name from db info due to case problems.
                         }
@@ -66,9 +67,9 @@ namespace EliteDangerousCore.DB
                 {
                   //  System.Diagnostics.Debug.WriteLine( cn.ExplainQueryPlanString(selectSysCmd));
 
-                    using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                    using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                     {
-                        if (reader.Read())
+                        if (await reader.ReadAsync())
                         {
                             return MakeSystem(reader, ec.ID); // read back .. sector name is taken from DB for case reasons
                         }
@@ -87,7 +88,7 @@ namespace EliteDangerousCore.DB
             return SystemsDatabase.Instance.ExecuteWithDatabase(cn => FindStar(edsmid, cn.Connection));
         }
 
-        internal static ISystem FindStar(long edsmid, SQLiteConnectionSystem cn)
+        internal static async Task<ISystem> FindStar(long edsmid, SQLiteConnectionSystem cn)
         {
             // No indexes needed- edsmid is primary key
 
@@ -98,9 +99,9 @@ namespace EliteDangerousCore.DB
             {
                 //System.Diagnostics.Debug.WriteLine( cn.ExplainQueryPlanString(selectSysCmd));
 
-                using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                 {
-                    if (reader.Read())
+                    if (await reader.ReadAsync())
                     {
                         return MakeSystem(reader); 
                     }
@@ -116,7 +117,7 @@ namespace EliteDangerousCore.DB
             return SystemsDatabase.Instance.ExecuteWithDatabase(cn => FindStarWildcard(name, cn.Connection, limit));
         }
 
-        internal static List<ISystem> FindStarWildcard(string name, SQLiteConnectionSystem cn, int limit = int.MaxValue)
+        internal static async Task<List<ISystem>> FindStarWildcard(string name, SQLiteConnectionSystem cn, int limit = int.MaxValue)
         {
             EliteNameClassifier ec = new EliteNameClassifier(name);
 
@@ -134,9 +135,9 @@ namespace EliteDangerousCore.DB
                 {
                     //System.Diagnostics.Debug.WriteLine( cn.ExplainQueryPlanString(selectSysCmd));
 
-                    using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                    using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             SystemClass sc = MakeSystem(reader);
                             ret.Add(sc);
@@ -159,9 +160,9 @@ namespace EliteDangerousCore.DB
 
                     //System.Diagnostics.Debug.WriteLine( cn.ExplainQueryPlanString(selectSysCmd));
 
-                    using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                    using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             SystemClass sc = MakeSystem(reader);
                             ret.Add(sc);
@@ -183,9 +184,9 @@ namespace EliteDangerousCore.DB
                     {
                         //System.Diagnostics.Debug.WriteLine(cn.ExplainQueryPlanString(selectSysCmd));
 
-                        using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                        using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                         {
-                            while (reader.Read())
+                            while (await reader.ReadAsync())
                             {
                                 SystemClass sc = MakeSystem(reader);
                                 ret.Add(sc);
@@ -210,9 +211,9 @@ namespace EliteDangerousCore.DB
                     {
                        // System.Diagnostics.Debug.WriteLine(cn.ExplainQueryPlanString(selectSysCmd));
 
-                        using (DbDataReader reader = selectSysCmd.ExecuteReader())
+                        using (DbDataReader reader = await selectSysCmd.ExecuteReaderAsync())
                         {
-                            while (reader.Read())
+                            while (await reader.ReadAsync())
                             {
                                 SystemClass sc = MakeSystem(reader);
                                 ret.Add(sc);
@@ -283,14 +284,30 @@ namespace EliteDangerousCore.DB
             }
         }
 
-        static IEnumerable<SystemClass> MakeSystemEnumerable(DbDataReader reader, bool eddbinfo = true, Action<ISystem> callback = null)
+        static IEnumerable<Task<ISystem>> MakeSystemEnumerable(DbDataReader reader, bool eddbinfo = true, Action<ISystem> callback = null)
         {
-            while (reader.Read())
+            ISystem sys = null;
+
+            do
             {
-                var sys = MakeSystem(reader, eddbinfo);
-                callback?.Invoke(sys);
-                yield return sys;
+                var sysres = reader.ReadAsync().ContinueWith<ISystem>(c =>
+                {
+                    if (c.Result)
+                    {
+                        var s = MakeSystem(reader, eddbinfo);
+                        callback?.Invoke(s);
+                        return s;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                });
+
+                yield return sysres;
+                sys = sysres.Result;
             }
+            while (sys != null);
         }
 
         #endregion

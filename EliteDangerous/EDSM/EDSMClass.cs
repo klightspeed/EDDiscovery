@@ -26,6 +26,7 @@ using System.Net;
 using System.Reflection;
 using System.Web;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace EliteDangerousCore.EDSM
 {
@@ -452,7 +453,7 @@ namespace EliteDangerousCore.EDSM
                     if (enddatestr == null || !DateTime.TryParseExact(enddatestr, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal, out logendtime))
                         logendtime = DateTime.MinValue;
 
-                    log = SystemsDatabase.Instance.ExecuteWithDatabase(db =>
+                    log = SystemsDatabase.Instance.ExecuteWithDatabase(async db =>
                     {
                         var xlog = new List<JournalFSDJump>();
 
@@ -464,12 +465,12 @@ namespace EliteDangerousCore.EDSM
                             bool firstdiscover = jo["firstDiscover"].Value<bool>();
                             DateTime etutc = DateTime.ParseExact(ts, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal | DateTimeStyles.AssumeUniversal); // UTC time
 
-                            ISystem sc = DB.SystemCache.FindSystem(name, id, db);
+                            ISystem sc = await DB.SystemCache.FindSystem(name, id, db);
 
                             if (sc == null)
                             {
                                 if (DateTime.UtcNow.Subtract(etutc).TotalHours < 6) // Avoid running into the rate limit
-                                    sc = GetSystemsByName(name)?.FirstOrDefault(s => s.EDSMID == id);
+                                    sc = (await GetSystemsByName(name))?.FirstOrDefault(s => s.EDSMID == id);
 
                                 if (sc == null)
                                 {
@@ -497,11 +498,11 @@ namespace EliteDangerousCore.EDSM
             }
         }
 
-        private List<ISystem> GetSystemsByName(string systemName, bool uselike = false)     // Protect yourself against bad JSON
+        private async Task<List<ISystem>> GetSystemsByName(string systemName, bool uselike = false)     // Protect yourself against bad JSON
         {
             string query = String.Format("api-v1/systems?systemName={0}&showCoordinates=1&showId=1&showInformation=1&showPermit=1", Uri.EscapeDataString(systemName));
 
-            var response = RequestGet(query, handleException: true);
+            var response = await RequestGetAsync(query, handleException: true);
             if (response.Error)
                 return null;
 

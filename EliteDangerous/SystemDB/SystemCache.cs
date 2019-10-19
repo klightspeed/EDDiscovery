@@ -51,7 +51,7 @@ namespace EliteDangerousCore.DB
         {
             if (SystemsDatabase.Instance.RebuildRunning) // Find the system in the cache if a rebuild is running
             {
-                return FindSystem(find, null);
+                return FindSystem(find, null).GetAwaiter().GetResult();
             }
             else 
             {
@@ -59,12 +59,12 @@ namespace EliteDangerousCore.DB
             }
         }
 
-        internal static ISystem FindSystem(string name, long edsmid, SystemsDatabaseConnection cn)
+        internal static Task<ISystem> FindSystem(string name, long edsmid, SystemsDatabaseConnection cn)
         {
             return FindSystem(new SystemClass(name, edsmid), cn);
         }
 
-        internal static ISystem FindSystem(ISystem find, SystemsDatabaseConnection cn)
+        internal static async Task<ISystem> FindSystem(ISystem find, SystemsDatabaseConnection cn)
         {
             ISystem orgsys = find;
 
@@ -100,21 +100,21 @@ namespace EliteDangerousCore.DB
 
                 if (find.EDSMID > 0)        // if we have an ID, look it up
                 {
-                    found = DB.SystemsDB.FindStar(find.EDSMID,cn.Connection);
+                    found = await DB.SystemsDB.FindStar(find.EDSMID,cn.Connection);
 
                     if (found != null && find.Name.HasChars() && find.Name != "UnKnown")      // if we find it, use the find name in the return as the EDSM name may be out of date..
                         found.Name = find.Name;
                 }
 
                 if (found == null && find.Name.HasChars() && find.Name != "UnKnown")      // if not found by has a name
-                    found = DB.SystemsDB.FindStar(find.Name,cn.Connection);   // find by name, no wildcards
+                    found = await DB.SystemsDB.FindStar(find.Name,cn.Connection);   // find by name, no wildcards
 
                 if (found == null && find.HasCoordinate)        // finally, not found, but we have a co-ord, find it from the db  by distance
-                    found = DB.SystemsDB.GetSystemByPosition(find.X, find.Y, find.Z, cn.Connection);
+                    found = await DB.SystemsDB.GetSystemByPosition(find.X, find.Y, find.Z, cn.Connection);
 
                 if (found == null)
                 {
-                    long newid = DB.SystemsDB.FindAlias(find.EDSMID, find.Name , cn.Connection);   // is there a named alias in there due to a system being renamed..
+                    long newid = await DB.SystemsDB.FindAlias(find.EDSMID, find.Name , cn.Connection);   // is there a named alias in there due to a system being renamed..
                     if (newid >= 0)
                         found = DB.SystemsDB.FindStar(newid);  // find it using the new id
                 }
@@ -167,9 +167,9 @@ namespace EliteDangerousCore.DB
             }
         }
 
-        static private List<ISystem> FindSystemWildcard(string name, SystemsDatabaseConnection cn, int limit = int.MaxValue)
+        static private async Task<List<ISystem>> FindSystemWildcard(string name, SystemsDatabaseConnection cn, int limit = int.MaxValue)
         {
-            var list = DB.SystemsDB.FindStarWildcard(name, cn.Connection, limit);
+            var list = await DB.SystemsDB.FindStarWildcard(name, cn.Connection, limit);
             if (list != null)
             {
                 foreach (var x in list)
@@ -215,11 +215,11 @@ namespace EliteDangerousCore.DB
             }
         }
 
-        private static void GetSystemListBySqDistancesFrom(BaseUtils.SortedListDoubleDuplicate<ISystem> distlist, double x, double y, double z,
+        private static Task GetSystemListBySqDistancesFrom(BaseUtils.SortedListDoubleDuplicate<ISystem> distlist, double x, double y, double z,
                                                     int maxitems,
                                                     double mindist, double maxdist, bool spherical, SystemsDatabaseConnection cn)
         {
-            DB.SystemsDB.GetSystemListBySqDistancesFrom(distlist, x, y, z, maxitems, mindist, maxdist, spherical, cn.Connection, (s) => AddToCache(s));
+            return DB.SystemsDB.GetSystemListBySqDistancesFrom(distlist, x, y, z, maxitems, mindist, maxdist, spherical, cn.Connection, (s) => AddToCache(s));
         }
 
         public static ISystem GetSystemByPosition(double x, double y, double z, int warnthreshold = 500)
@@ -245,9 +245,9 @@ namespace EliteDangerousCore.DB
             }
         }
 
-        private static ISystem FindNearestSystemTo(double x, double y, double z, double maxdistance, SystemsDatabaseConnection cn)
+        private static async Task<ISystem> FindNearestSystemTo(double x, double y, double z, double maxdistance, SystemsDatabaseConnection cn)
         {
-            ISystem s = DB.SystemsDB.GetSystemByPosition(x, y, z, cn.Connection, maxdistance);
+            ISystem s = await DB.SystemsDB.GetSystemByPosition(x, y, z, cn.Connection, maxdistance);
             if (s != null)
                 AddToCache(s);
             return s;
@@ -275,10 +275,10 @@ namespace EliteDangerousCore.DB
                                      })
                                      .Where(s => s.dw < maxfromwanted && s.dc < maxfromcurpos)
                                      .OrderBy(s => s.dw)
-                                     .Select(s => s.sys)
+                                     .Select(s => Task.FromResult(s.sys))
                                      .ToList();
 
-                    return DB.SystemsDB.GetSystemNearestTo(candidates, currentpos, wantedpos, maxfromcurpos, maxfromwanted, routemethod);
+                    return DB.SystemsDB.GetSystemNearestTo(candidates, currentpos, wantedpos, maxfromcurpos, maxfromwanted, routemethod).GetAwaiter().GetResult();
                 }
             }
             else
@@ -287,7 +287,7 @@ namespace EliteDangerousCore.DB
             }
         }
 
-        private static ISystem GetSystemNearestTo(Point3D currentpos,
+        private static async Task<ISystem> GetSystemNearestTo(Point3D currentpos,
                                                  Point3D wantedpos,
                                                  double maxfromcurpos,
                                                  double maxfromwanted,
@@ -295,7 +295,7 @@ namespace EliteDangerousCore.DB
                                                  int limitto, 
                                                  SystemsDatabaseConnection cn)
         {
-            ISystem sys = DB.SystemsDB.GetSystemNearestTo(currentpos, wantedpos, maxfromcurpos, maxfromwanted, routemethod, cn.Connection, (s) => AddToCache(s), limitto);
+            ISystem sys = await DB.SystemsDB.GetSystemNearestTo(currentpos, wantedpos, maxfromcurpos, maxfromwanted, routemethod, cn.Connection, (s) => AddToCache(s), limitto);
 
             return sys;
         }

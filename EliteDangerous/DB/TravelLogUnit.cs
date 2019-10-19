@@ -136,15 +136,15 @@ namespace EliteDangerousCore.DB
         
         static public List<TravelLogUnit> GetAll()
         {
-            return UserDatabase.Instance.ExecuteWithDatabase<List<TravelLogUnit>>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<List<TravelLogUnit>>(async cn =>
             {
                 List<TravelLogUnit> list = new List<TravelLogUnit>();
 
                 using (DbCommand cmd = cn.Connection.CreateCommand("select * from TravelLogUnit"))
                 {
-                    using (DbDataReader rdr = cmd.ExecuteReader())
+                    using (DbDataReader rdr = await cmd.ExecuteReaderAsync())
                     {
-                        while (rdr.Read())
+                        while (await rdr.ReadAsync())
                         {
                             TravelLogUnit sys = new TravelLogUnit(rdr);
                             list.Add(sys);
@@ -159,15 +159,15 @@ namespace EliteDangerousCore.DB
 
         public static List<string> GetAllNames()
         {
-            return UserDatabase.Instance.ExecuteWithDatabase<List<string>>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<List<string>>(async cn =>
             {
                 List<string> names = new List<string>();
 
                 using (DbCommand cmd = cn.Connection.CreateCommand("SELECT DISTINCT Name FROM TravelLogUnit"))
                 {
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        while (reader.Read())
+                        while (await reader.ReadAsync())
                         {
                             names.Add((string)reader["Name"]);
                         }
@@ -179,14 +179,14 @@ namespace EliteDangerousCore.DB
 
         public static TravelLogUnit Get(string name)
         {
-            return UserDatabase.Instance.ExecuteWithDatabase<TravelLogUnit>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<TravelLogUnit>(async cn =>
             {
                 using (DbCommand cmd = cn.Connection.CreateCommand("SELECT * FROM TravelLogUnit WHERE Name = @name ORDER BY Id DESC"))
                 {
                     cmd.AddParameterWithValue("@name", name);
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        if (reader.Read())
+                        if (await reader.ReadAsync())
                         {
                             return new TravelLogUnit(reader);
                         }
@@ -205,14 +205,14 @@ namespace EliteDangerousCore.DB
 
         public static TravelLogUnit Get(long id)
         {
-            return UserDatabase.Instance.ExecuteWithDatabase<TravelLogUnit>(cn =>
+            return UserDatabase.Instance.ExecuteWithDatabase<TravelLogUnit>(async cn =>
             {
                 using (DbCommand cmd = cn.Connection.CreateCommand("SELECT * FROM TravelLogUnit WHERE Id = @id ORDER BY Id DESC"))
                 {
                     cmd.AddParameterWithValue("@id", id);
-                    using (DbDataReader reader = cmd.ExecuteReader())
+                    using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                        if (reader.Read())
+                        if (await reader.ReadAsync())
                         {
                             return new TravelLogUnit(reader);
                         }

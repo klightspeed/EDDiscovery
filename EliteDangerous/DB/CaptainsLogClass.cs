@@ -166,15 +166,15 @@ namespace EliteDangerousCore.DB
 
             try
             {
-                return UserDatabase.Instance.ExecuteWithDatabase<bool>(cn =>
+                return UserDatabase.Instance.ExecuteWithDatabase<bool>(async cn =>
                 {
                     using (DbCommand cmd = cn.Connection.CreateCommand("select * from CaptainsLog"))
                     {
                         List<CaptainsLogClass> logs = new List<CaptainsLogClass>();
 
-                        using (DbDataReader rdr = cmd.ExecuteReader())
+                        using (DbDataReader rdr = await cmd.ExecuteReaderAsync())
                         {
-                            while (rdr.Read())
+                            while (await rdr.ReadAsync())
                             {
                                 logs.Add(new CaptainsLogClass(rdr));
                             }

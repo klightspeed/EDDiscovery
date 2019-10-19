@@ -93,6 +93,7 @@ namespace EliteDangerousCore
                             if (!stardistreq.IgnoreOnDuplicate || closestsystem_queue.Count == 0)
                             {
                                 StardistRequest req = stardistreq;
+                                System.Diagnostics.Trace.WriteLine($"Requesting distances with pos=({req.System.X}, {req.System.Y}, {req.System.Z}) maxitems={req.MaxItems} mindist={req.MinDistance} maxdist={req.MaxDistance} spherical={req.Spherical}");
                                 ISystem sys = req.System;
                                 BaseUtils.SortedListDoubleDuplicate<ISystem> closestsystemlist = new BaseUtils.SortedListDoubleDuplicate<ISystem>(); //lovely list allowing duplicate keys - can only iterate in it.
 
@@ -100,6 +101,8 @@ namespace EliteDangerousCore
 
                                 DB.SystemCache.GetSystemListBySqDistancesFrom(closestsystemlist, sys.X, sys.Y, sys.Z, req.MaxItems , 
                                               req.MinDistance, req.MaxDistance , req.Spherical);
+
+                                System.Diagnostics.Trace.WriteLine($"Requested distances returned {closestsystemlist.Count} systems with pos=({req.System.X}, {req.System.Y}, {req.System.Z}) maxitems={req.MaxItems} mindist={req.MinDistance} maxdist={req.MaxDistance} spherical={req.Spherical}");
 
                                 if (!PendingClose)
                                 {

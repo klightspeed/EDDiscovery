@@ -80,15 +80,15 @@ namespace EliteDangerousCore.DB
         {
             try
             {
-                return UserDatabase.Instance.ExecuteWithDatabase<List<WantedSystemClass>>(cn =>
+                return UserDatabase.Instance.ExecuteWithDatabase<List<WantedSystemClass>>(async cn =>
                 {
                     using (DbCommand cmd = cn.Connection.CreateCommand("select * from wanted_systems"))
                     {
                         List<WantedSystemClass> retVal = new List<WantedSystemClass>();
 
-                        using (DbDataReader rdr = cmd.ExecuteReader())
+                        using (DbDataReader rdr = await cmd.ExecuteReaderAsync())
                         {
-                            while (rdr.Read())
+                            while (await rdr.ReadAsync())
                             {
                                 WantedSystemClass sys = new WantedSystemClass(rdr);
                                 retVal.Add(sys);

@@ -19,6 +19,7 @@ using System.Linq;
 using System.Data.Common;
 using EMK.LightGeometry;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace EliteDangerousCore.DB
 {
@@ -26,19 +27,7 @@ namespace EliteDangerousCore.DB
     {
         ///////////////////////////////////////// List of systems near xyz between mindist and maxdist
 
-        private static void GetSystemListBySqDistancesFrom(BaseUtils.SortedListDoubleDuplicate<ISystem> distlist, double x, double y, double z,
-                                                    int maxitems,
-                                                    double mindist, double maxdist, bool spherical,
-                                                    Action<ISystem> LookedUp = null
-                                                    )
-        {
-            SystemsDatabase.Instance.ExecuteWithDatabase(db =>
-            {
-                GetSystemListBySqDistancesFrom(distlist, x, y, z, maxitems, mindist, maxdist, spherical, db.Connection, LookedUp);
-            });
-        }
-
-        internal static void GetSystemListBySqDistancesFrom(BaseUtils.SortedListDoubleDuplicate<ISystem> distlist, // MUST use duplicate double list to protect against EDSM having two at the same point
+        internal static async Task GetSystemListBySqDistancesFrom(BaseUtils.SortedListDoubleDuplicate<ISystem> distlist, // MUST use duplicate double list to protect against EDSM having two at the same point
                                                             double x, double y, double z,
                                                             int maxitems,
                                                             double mindist,         // 0 = no min dist, always spherical
@@ -89,11 +78,11 @@ namespace EliteDangerousCore.DB
                 long maxdistsqi = (long)SystemClass.DoubleToInt(maxdist) * (long)SystemClass.DoubleToInt(maxdist);
 
                 long count = 0;
-                using (DbDataReader reader = cmd.ExecuteReader())
+                using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                 {
                   //  System.Diagnostics.Debug.WriteLine("Time1.5 " + BaseUtils.AppTicks.TickCountLap("SDC"));
 
-                    while (reader.Read())// && distlist.Count < maxitems)           // already sorted, and already limited to max items
+                    while (await reader.ReadAsync())// && distlist.Count < maxitems)           // already sorted, and already limited to max items
                     {
                         int sxi = reader.GetInt32(0);
                         int syi = reader.GetInt32(1);
@@ -116,18 +105,10 @@ namespace EliteDangerousCore.DB
             }
         }
 
-        private static ISystem GetSystemByPosition(double x, double y, double z, double maxdist = 0.125)
-        {
-            return SystemsDatabase.Instance.ExecuteWithDatabase(db =>
-            {
-                return GetSystemByPosition(x, y, z, db.Connection, maxdist);
-            });
-        }
-
-        internal static ISystem GetSystemByPosition(double x, double y, double z, SQLiteConnectionSystem cn, double maxdist = 0.125)
+        internal static async Task<ISystem> GetSystemByPosition(double x, double y, double z, SQLiteConnectionSystem cn, double maxdist = 0.125)
         {
             BaseUtils.SortedListDoubleDuplicate<ISystem> distlist = new BaseUtils.SortedListDoubleDuplicate<ISystem>();
-            GetSystemListBySqDistancesFrom(distlist, x, y, z, 1, 0, maxdist, true, cn); // return 1 item, min dist 0, maxdist
+            await GetSystemListBySqDistancesFrom(distlist, x, y, z, 1, 0, maxdist, true, cn); // return 1 item, min dist 0, maxdist
             return (distlist.Count > 0) ? distlist.First().Value : null;
         }
 
@@ -140,7 +121,7 @@ namespace EliteDangerousCore.DB
         public const int metric_maximum500ly = 4;
         public const int metric_waypointdev2 = 5;
 
-        internal static ISystem GetSystemNearestTo(Point3D currentpos,
+        internal static async Task<ISystem> GetSystemNearestTo(Point3D currentpos,
                                                   Point3D wantedpos,
                                                   double maxfromcurpos,
                                                   double maxfromwanted,
@@ -179,16 +160,16 @@ namespace EliteDangerousCore.DB
 
                 //System.Diagnostics.Debug.WriteLine(cn.ExplainQueryPlanString(cmd));
 
-                using (DbDataReader reader = cmd.ExecuteReader())
+                using (DbDataReader reader = await cmd.ExecuteReaderAsync())
                 {
                     var systems = MakeSystemEnumerable(reader, callback: LookedUp);
 
-                    return GetSystemNearestTo(systems, currentpos, wantedpos, maxfromcurpos, maxfromwanted, routemethod);
+                    return await GetSystemNearestTo(systems, currentpos, wantedpos, maxfromcurpos, maxfromwanted, routemethod);
                 }
             }
         }
 
-        internal static ISystem GetSystemNearestTo(IEnumerable<ISystem> systems,            // non database helper function
+        internal static async Task<ISystem> GetSystemNearestTo(IEnumerable<Task<ISystem>> systems,            // non database helper function
                                                    Point3D currentpos,
                                                    Point3D wantedpos,
                                                    double maxfromcurpos,
@@ -198,8 +179,9 @@ namespace EliteDangerousCore.DB
             double bestmindistance = double.MaxValue;
             ISystem nearestsystem = null;
 
-            foreach (var s in systems)
+            foreach (var t in systems)
             {
+                var s = await t;
                 Point3D syspos = new Point3D(s.X, s.Y, s.Z);
                 double distancefromwantedx2 = Point3D.DistanceBetweenX2(wantedpos, syspos); // range between the wanted point and this, ^2
                 double distancefromcurposx2 = Point3D.DistanceBetweenX2(currentpos, syspos);    // range between the wanted point and this, ^2
