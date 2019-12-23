@@ -113,11 +113,7 @@ namespace EDDiscovery.ScreenShots
 
         private void CallWithConverter(Action<ScreenShotImageConverter> cb)           // called by Watcher with a function to run in the UI main thread..
         {
-            if (discoveryform.InvokeRequired) // on discovery form UI thread, action..
-            {
-                discoveryform.Invoke(new Action(() => CallWithConverter(cb)));
-            }
-            else
+            discoveryform.InvokeIfRequired(() => // on discovery form UI thread, action..
             {
                 if (AutoConvert)
                 {
@@ -138,7 +134,7 @@ namespace EDDiscovery.ScreenShots
 
                     cb(p);                                  // call the processor the system wants. Function needs an image converter.  Back to processScreenshot
                 }
-            }
+            });
         }
 
         private void ConvertCompleted(ScreenShotImageConverter cp) // Called by the watcher when a convert had completed, in UI thread

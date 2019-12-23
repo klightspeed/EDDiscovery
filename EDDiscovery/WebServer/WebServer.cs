@@ -247,11 +247,7 @@ namespace EDDiscovery.WebServer
 
             private JToken MakeResponse(int startindex, int length, string rt)     // generate a response over this range
             {
-                if (discoveryform.InvokeRequired)
-                {
-                    return (JToken)discoveryform.Invoke(new Func<JToken>(() => MakeResponse(startindex, length, rt)));
-                }
-                else
+                return discoveryform.InvokeIfRequired(() =>
                 {
                     JToken response;
 
@@ -273,7 +269,7 @@ namespace EDDiscovery.WebServer
                     response["Commander"] = EDCommander.Current.Name;
 
                     return response;
-                }
+                });
             }
 
             public JToken NewJRec(HistoryList hl, string type, int startindex, int length)
@@ -331,11 +327,7 @@ namespace EDDiscovery.WebServer
 
             private JToken MakeResponse(int entry, string rt)
             {
-                if (discoveryform.InvokeRequired)
-                {
-                    return (JToken)discoveryform.Invoke(new Func<JToken>(() => MakeResponse(entry, rt)));
-                }
-                else
+                return discoveryform.InvokeIfRequired(() =>
                 {
                     JToken response = null;
 
@@ -355,7 +347,7 @@ namespace EDDiscovery.WebServer
                     }
 
                     return response;
-                }
+                });
             }
 
             public JToken NewSRec(EliteDangerousCore.HistoryList hl, string type, int entry)       // entry = -1 means latest

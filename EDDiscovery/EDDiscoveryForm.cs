@@ -31,6 +31,7 @@ using EliteDangerousCore;
 using EliteDangerousCore.DB;
 using EliteDangerousCore.JournalEvents;
 using EDDiscovery.Icons;
+using System.Threading;
 
 namespace EDDiscovery
 {
@@ -65,6 +66,8 @@ namespace EDDiscovery
         BaseUtils.GitHubRelease newRelease;
 
         public PopOutControl PopOuts;
+
+        private ManualResetEvent CloseRequested = new ManualResetEvent(false);
 
         #endregion
 
@@ -766,6 +769,7 @@ namespace EDDiscovery
 
         private void EDDiscoveryForm_FormClosing(object sender, FormClosingEventArgs e)     // when user asks for a close
         {
+            CloseRequested.Set();
             edsmRefreshTimer.Enabled = false;
             if (!Controller.PendingClose)       // only allow 1 close attempt..
             {
@@ -809,6 +813,41 @@ namespace EDDiscovery
 
             Close();
             Application.Exit();
+        }
+
+        public T InvokeIfRequired<T>(Func<T> func)
+        {
+            if (InvokeRequired)
+            {
+                var ar = BeginInvoke(func);
+
+                if (WaitHandle.WaitAny(new WaitHandle[] { CloseRequested, ar.AsyncWaitHandle }) == 0)
+                {
+                    throw new OperationCanceledException();
+                }
+
+                return (T)EndInvoke(ar);
+            }
+            else
+            {
+                return func();
+            }
+        }
+
+        public void InvokeIfRequired(Action action)
+        {
+            if (InvokeRequired)
+            {
+                var ar = BeginInvoke(action);
+                if (WaitHandle.WaitAny(new WaitHandle[] { CloseRequested, ar.AsyncWaitHandle }) == 0)
+                {
+                    throw new OperationCanceledException();
+                }
+            }
+            else
+            {
+                action();
+            }
         }
      
 #endregion
