@@ -186,7 +186,9 @@ namespace EDDiscovery.UserControls
             DrawSystem();
         }
 
-        async void DrawSystem()   // draw showing_system (may be null), showing_matcomds (may be null)
+        private Guid DrawSystemUpdateId;
+
+        private void DrawSystem()   // draw showing_system (may be null), showing_matcomds (may be null)
         {
             panelStars.HideInfo();
 
@@ -195,44 +197,63 @@ namespace EDDiscovery.UserControls
             //   showing_system = new SystemClass("Borann");
             //showing_system = new SystemClass("Skaudai AM-B d14-138");
             //showing_system = new SystemClass("Eorgh Prou JH-V e2-1979");
-           //  showing_system = new SystemClass("HYPAA FLYIAE CB-O D6-8");
+            //  showing_system = new SystemClass("HYPAA FLYIAE CB-O D6-8");
 
-#if PLAYTHRU
-            StarScan.SystemNode data = showing_system != null ? await discoveryform.history.starscan.FindSystemAsync(showing_system, false, byname: true) : null;
-#else
-            StarScan.SystemNode data = showing_system != null ? await discoveryform.history.starscan.FindSystemAsync(showing_system, panelStars.CheckEDSM) : null;
-#endif
-            string control_text = "No System";
+            var updateid = DrawSystemUpdateId = Guid.NewGuid();
 
-            if (showing_system != null)
+            if (showing_system == null)
             {
-                control_text = showing_system.Name;
-
-                if (data != null)
-                {
-                    long value = data.ScanValue(checkBoxEDSM.Checked);
-                    control_text += " ~ " + value.ToString("N0") + " cr";
-
-                    int scanned = data.StarPlanetsScanned();
-
-                    if (scanned > 0)
-                    {
-                        control_text += " " + "Scan".T(EDTx.UserControlSurveyor_Scan) + " " + scanned.ToString() + (data.FSSTotalBodies != null ? (" / " + data.FSSTotalBodies.Value.ToString()) : "");
-                    }
-                }
-                else
-                    control_text += " " + "No Scan".T(EDTx.NoScan);
-
-
+                EndDrawSystem(null, updateid);
             }
-
-            panelStars.DrawSystem(data, showing_matcomds, discoveryform.history, (HasControlTextArea() && !displayfilters.Contains("sys")) ? null : control_text, bodyfilters);
-            SetControlText(control_text);
+            else
+            {
+#if PLAYTHRU
+                discoveryform.history.starscan.FindSystemAsync(showing_system, false, data => EndDrawSystem(data, updateid)); //, byname: true);
+#else
+                discoveryform.history.starscan.FindSystemAsync(showing_system, panelStars.CheckEDSM, data => EndDrawSystem(data, updateid));
+#endif
+            }
         }
 
-#endregion
+        private void EndDrawSystem(StarScan.SystemNode data, Guid updateid)
+        {
+            this.BeginInvoke(new Action(() =>
+            {
+                if (updateid == DrawSystemUpdateId)
+                {
+                    string control_text = "No System";
 
-#region User interaction
+                    if (showing_system != null)
+                    {
+                        control_text = showing_system.Name;
+
+                        if (data != null)
+                        {
+                            long value = data.ScanValue(checkBoxEDSM.Checked);
+                            control_text += " ~ " + value.ToString("N0") + " cr";
+
+                            int scanned = data.StarPlanetsScanned();
+
+                            if (scanned > 0)
+                            {
+                                control_text += " " + "Scan".T(EDTx.UserControlSurveyor_Scan) + " " + scanned.ToString() + (data.FSSTotalBodies != null ? (" / " + data.FSSTotalBodies.Value.ToString()) : "");
+                            }
+                        }
+                        else
+                            control_text += " " + "No Scan".T(EDTx.NoScan);
+
+
+                    }
+
+                    panelStars.DrawSystem(data, showing_matcomds, discoveryform.history, (HasControlTextArea() && !displayfilters.Contains("sys")) ? null : control_text, bodyfilters);
+                    SetControlText(control_text);
+                }
+            }));
+        }
+
+        #endregion
+
+        #region User interaction
 
         private void extCheckBoxStar_Click(object sender, EventArgs e)
         {

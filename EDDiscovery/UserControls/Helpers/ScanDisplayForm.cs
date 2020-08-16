@@ -24,7 +24,7 @@ namespace EDDiscovery.UserControls
 {
     public static class ScanDisplayForm
     {
-        public static async void ShowScanOrMarketForm(Form parent, Object tag, bool checkedsm, HistoryList hl)     // tag can be a Isystem or an He.. output depends on it.
+        public static void ShowScanOrMarketForm(Form parent, Object tag, bool checkedsm, HistoryList hl)     // tag can be a Isystem or an He.. output depends on it.
         {
             if (tag == null)
                 return;
@@ -49,6 +49,17 @@ namespace EDDiscovery.UserControls
                 f.Add(new ExtendedControls.ConfigurableForm.Entry("RTB", typeof(ExtendedControls.ExtRichTextBox), detailed, new Point(0, topmargin), infosize, null));
 
                 title += ", " +"Station".T(EDTx.ScanDisplayForm_Station) + ": " + jm.Station;
+
+                f.AddOK(new Point(infosize.Width - 120, topmargin + infosize.Height + 10));
+
+                f.Trigger += (dialogname, controlname, ttag) =>
+                {
+                    f.ReturnResult(DialogResult.OK);
+                };
+
+                f.InitCentred(parent, parent.Icon, title, null, null, asm, closeicon: true);
+
+                f.Show(parent);
             }
             else
             {      
@@ -58,36 +69,40 @@ namespace EDDiscovery.UserControls
                 sd.SetSize( selsize );
                 sd.Size = infosize;
 
-                StarScan.SystemNode data = await hl.starscan.FindSystemAsync(sys, sd.CheckEDSM);    // look up system async
-                    
-                if ( data != null )
+                hl.starscan.FindSystemAsync(sys, sd.CheckEDSM, data =>    // look up system async
                 {
-                    long value = data.ScanValue(sd.CheckEDSM);
-                    title += " ~ " + value.ToString("N0") + " cr";
-                }
+                    parent.BeginInvoke(new Action(() =>
+                    {
+                        if (data != null)
+                        {
+                            long value = data.ScanValue(sd.CheckEDSM);
+                            title += " ~ " + value.ToString("N0") + " cr";
+                        }
 
-                sd.BackColor = EDDTheme.Instance.Form;
-                sd.DrawSystem( data, null , hl);
+                        sd.BackColor = EDDTheme.Instance.Form;
+                        sd.DrawSystem(data, null, hl);
 
-                int wastedh = infosize.Height - sd.DisplayAreaUsed.Y - 10 - 40;
-                if (wastedh > 0)
-                    infosize.Height -= wastedh;
+                        int wastedh = infosize.Height - sd.DisplayAreaUsed.Y - 10 - 40;
+                        if (wastedh > 0)
+                            infosize.Height -= wastedh;
 
-                asm = AutoScaleMode.None;   // because we are using a picture box, it does not autoscale, so we can't use that logic on it.
+                        asm = AutoScaleMode.None;   // because we are using a picture box, it does not autoscale, so we can't use that logic on it.
 
-                f.Add(new ExtendedControls.ConfigurableForm.Entry("Sys", null, null, new Point(0, topmargin), infosize, null) { control = sd });
+                        f.Add(new ExtendedControls.ConfigurableForm.Entry("Sys", null, null, new Point(0, topmargin), infosize, null) { control = sd });
+
+                        f.AddOK(new Point(infosize.Width - 120, topmargin + infosize.Height + 10));
+
+                        f.Trigger += (dialogname, controlname, ttag) =>
+                        {
+                            f.ReturnResult(DialogResult.OK);
+                        };
+
+                        f.InitCentred(parent, parent.Icon, title, null, null, asm, closeicon: true);
+
+                        f.Show(parent);
+                    }));
+                });
             }
-
-            f.AddOK(new Point(infosize.Width - 120, topmargin + infosize.Height + 10));
-
-            f.Trigger += (dialogname, controlname, ttag) =>
-            {
-                f.ReturnResult(DialogResult.OK);
-            };
-
-            f.InitCentred( parent, parent.Icon, title, null, null, asm , closeicon:true);
-
-            f.Show(parent);
         }
     }
 }

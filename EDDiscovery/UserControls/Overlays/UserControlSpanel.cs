@@ -233,7 +233,9 @@ namespace EDDiscovery.UserControls
             Display(discoveryform.history);
         }
 
-        private async void Display(HistoryList hl)            
+        private Guid DisplayUpdateId;
+
+        private void Display(HistoryList hl)            
         {
             pictureBox.ClearImageList();
 
@@ -245,7 +247,7 @@ namespace EDDiscovery.UserControls
 
                 int ftotal;         // event filter
                 result = HistoryList.FilterByJournalEvent(result, EliteDangerousCore.DB.UserDatabase.Instance.GetSettingString(DbFilterSave, "All"), out ftotal);
-                result = FilterHelpers.FilterHistory(result, fieldfilter , discoveryform.Globals, out ftotal); // and the field filter..
+                result = FilterHelpers.FilterHistory(result, fieldfilter, discoveryform.Globals, out ftotal); // and the field filter..
 
                 RevertToNormalSize();                                           // ensure size is back to normal..
                 scanpostextoffset = new Point(0, 0);                            // left/ top used by scan display
@@ -263,35 +265,29 @@ namespace EDDiscovery.UserControls
 
                     int rowmargin = displayfont.ScalePixels(4);
 
-					// Check if need to hide the UI
-                    if (Config(Configuration.showNothingWhenDocked) && 
-						(hl.IsCurrentlyDocked || hl.IsCurrentlyLanded))
+                    // Check if need to hide the UI
+                    if (Config(Configuration.showNothingWhenDocked) &&
+                        (hl.IsCurrentlyDocked || hl.IsCurrentlyLanded))
                     {
-						if (!Config(Configuration.showNoTitleWhenHidden))
-						{
-							AddColText(0, 0, rowpos, (hl.IsCurrentlyDocked) ? "Docked" : "Landed",
-									   textcolour, backcolour, null);
-						}
-					}
-                    else if ( uistate != EliteDangerousCore.UIEvents.UIGUIFocus.Focus.NoFocus && Config(Configuration.showNothingWhenPanel))
+                        if (!Config(Configuration.showNoTitleWhenHidden))
+                        {
+                            AddColText(0, 0, rowpos, (hl.IsCurrentlyDocked) ? "Docked" : "Landed",
+                                       textcolour, backcolour, null);
+                        }
+                    }
+                    else if (uistate != EliteDangerousCore.UIEvents.UIGUIFocus.Focus.NoFocus && Config(Configuration.showNothingWhenPanel))
                     {
-						if (!Config(Configuration.showNoTitleWhenHidden))
-						{
-							AddColText(0, 0, rowpos, uistate.ToString().SplitCapsWord(),
-									   textcolour, backcolour, null);
-						}
-					}
+                        if (!Config(Configuration.showNoTitleWhenHidden))
+                        {
+                            AddColText(0, 0, rowpos, uistate.ToString().SplitCapsWord(),
+                                       textcolour, backcolour, null);
+                        }
+                    }
                     else
                     {
-                        string name;
-                        Point3D tpos;
-                        bool targetpresent = TargetClass.GetTargetPosition(out name, out tpos);
-
-                        ISystem currentsystem = hl.CurrentSystem; // may be null
-
                         HistoryEntry last = hl.GetLast;
 
-                      // last = hl.FindByName("Myeia Thaa QY-H c23-0");
+                        // last = hl.FindByName("Myeia Thaa QY-H c23-0");
 
                         if (Config(Configuration.showSystemInformation) && last != null)
                         {
@@ -311,74 +307,117 @@ namespace EDDiscovery.UserControls
                             HistoryEntry lastfsd = hl.GetLastHistoryEntry(x => x.journalEntry is EliteDangerousCore.JournalEvents.JournalFSDJump, last);
                             bool firstdiscovery = (lastfsd != null && (lastfsd.journalEntry as EliteDangerousCore.JournalEvents.JournalFSDJump).EDSMFirstDiscover);
 
-                            rowpos = rowmargin + AddColText(0, 0, rowpos, str, textcolour, backcolour, null , firstdiscovery ? EDDiscovery.Icons.Controls.firstdiscover : null, "Shows if EDSM indicates your it's first discoverer").Location.Bottom;
+                            rowpos = rowmargin + AddColText(0, 0, rowpos, str, textcolour, backcolour, null, firstdiscovery ? EDDiscovery.Icons.Controls.firstdiscover : null, "Shows if EDSM indicates your it's first discoverer").Location.Bottom;
                         }
 
                         if (Config(Configuration.showHabInformation) && last != null)
                         {
                             StarScan scan = hl.starscan;
 
-                            StarScan.SystemNode sn = await scan.FindSystemAsync(last.System, true);    // EDSM look up here..
+                            var updateid = DisplayUpdateId = Guid.NewGuid();
 
-                            StringBuilder res = new StringBuilder();
-
-                            if (sn != null && sn.starnodes.Count > 0 && sn.starnodes.Values[0].ScanData != null)
+                            scan.FindSystemAsync(last.System, true, sn =>    // EDSM look up here..
                             {
-                                JournalScan js = sn.starnodes.Values[0].ScanData;
-
-                                if (showCircumstellarZonesToolStripMenuItem.Checked)
+                                this.BeginInvoke(new Action(() =>
                                 {
-                                    res.AppendFormat("Goldilocks, {0} ({1}-{2} AU),\n".T(EDTx.UserControlSpanel_Goldilocks),
-                                                     js.GetHabZoneStringLs(),
-                                                     (js.HabitableZoneInner.Value / JournalScan.oneAU_LS).ToString("N2"),
-                                                     (js.HabitableZoneOuter.Value / JournalScan.oneAU_LS).ToString("N2"));
-                                }
+                                    if (updateid == this.DisplayUpdateId)
+                                    {
+                                        EndDisplay(hl, false, sn, rowpos, rowmargin, result);
+                                    }
+                                }));
+                            });
+                        }
+                        else
+                        {
+                            EndDisplay(hl, false, null, rowpos, rowmargin, result);
+                        }
+                    }
+                }
+                else
+                {
+                    EndDisplay(hl, true, null, 0, 0, null);
+                }
+            }
+            else
+            {
+                pictureBox.Render();
+            }
+        }
 
-                                if (showMetalRichPlanetsToolStripMenuItem.Checked)
-                                {
-                                    res.Append(js.MetalRichZoneString());
-                                }
+        private void EndDisplay(HistoryList hl, bool drawnootherstuff, StarScan.SystemNode sn, int rowpos, int rowmargin, List<HistoryEntry> result)
+        {
+            if (hl != null && hl.Count > 0)     // just for safety
+            {
+                Color textcolour = IsTransparent ? discoveryform.theme.SPanelColor : discoveryform.theme.LabelColor;
+                Color backcolour = IsTransparent ? (Config(Configuration.showBlackBoxAroundText) ? Color.Black : Color.Transparent) : this.BackColor;
 
-                                if (showWaterWorldsToolStripMenuItem.Checked)
-                                {
-                                    res.Append(js.WaterWorldZoneString());
-                                }
+                if (!drawnootherstuff)
+                {
+                    if (sn != null)
+                    {
+                        StringBuilder res = new StringBuilder();
 
-                                if (showEarthLikeToolStripMenuItem.Checked)
-                                {
-                                    res.Append(js.EarthLikeZoneString());
-                                }
+                        if (sn != null && sn.starnodes.Count > 0 && sn.starnodes.Values[0].ScanData != null)
+                        {
+                            JournalScan js = sn.starnodes.Values[0].ScanData;
 
-                                if (showAmmoniaWorldsToolStripMenuItem.Checked)
-                                {
-                                    res.Append(js.AmmoniaWorldZoneString());
-                                }
-
-                                if (showIcyPlanetsToolStripMenuItem.Checked)
-                                {
-                                    res.Append(js.IcyPlanetsZoneString());
-                                }
+                            if (showCircumstellarZonesToolStripMenuItem.Checked)
+                            {
+                                res.AppendFormat("Goldilocks, {0} ({1}-{2} AU),\n".T(EDTx.UserControlSpanel_Goldilocks),
+                                                 js.GetHabZoneStringLs(),
+                                                 (js.HabitableZoneInner.Value / JournalScan.oneAU_LS).ToString("N2"),
+                                                 (js.HabitableZoneOuter.Value / JournalScan.oneAU_LS).ToString("N2"));
                             }
 
-                            if (res.ToString().HasChars())
+                            if (showMetalRichPlanetsToolStripMenuItem.Checked)
                             {
-                                rowpos = rowmargin + AddColText(0, 0, rowpos, res.ToString(), textcolour, backcolour, null).Location.Bottom;
+                                res.Append(js.MetalRichZoneString());
+                            }
+
+                            if (showWaterWorldsToolStripMenuItem.Checked)
+                            {
+                                res.Append(js.WaterWorldZoneString());
+                            }
+
+                            if (showEarthLikeToolStripMenuItem.Checked)
+                            {
+                                res.Append(js.EarthLikeZoneString());
+                            }
+
+                            if (showAmmoniaWorldsToolStripMenuItem.Checked)
+                            {
+                                res.Append(js.AmmoniaWorldZoneString());
+                            }
+
+                            if (showIcyPlanetsToolStripMenuItem.Checked)
+                            {
+                                res.Append(js.IcyPlanetsZoneString());
                             }
                         }
 
-                        if (targetpresent && Config(Configuration.showTargetLine) && currentsystem != null)
+                        if (res.ToString().HasChars())
                         {
-                            string dist = (currentsystem.HasCoordinate) ? currentsystem.Distance(tpos.X, tpos.Y, tpos.Z).ToString("0.00") : "Unknown".T(EDTx.Unknown);
-                            rowpos = rowmargin + AddColText(0, 0, rowpos, "Target".T(EDTx.UserControlSpanel_Target) + ": " + name + " @ " + dist +" ly", textcolour, backcolour, null).Location.Bottom;
+                            rowpos = rowmargin + AddColText(0, 0, rowpos, res.ToString(), textcolour, backcolour, null).Location.Bottom;
                         }
+                    }
 
-                        foreach (HistoryEntry rhe in result)
-                        {
-                            rowpos = rowmargin + DrawHistoryEntry(rhe, rowpos, tpos, textcolour, backcolour);
+                    string name;
+                    Point3D tpos;
+                    bool targetpresent = TargetClass.GetTargetPosition(out name, out tpos);
+                    ISystem currentsystem = hl.CurrentSystem; // may be null
 
-                            if (rowpos > ClientRectangle.Height)                // stop when off of screen
-                                break;
-                        }
+                    if (targetpresent && Config(Configuration.showTargetLine) && currentsystem != null)
+                    {
+                        string dist = (currentsystem.HasCoordinate) ? currentsystem.Distance(tpos.X, tpos.Y, tpos.Z).ToString("0.00") : "Unknown".T(EDTx.Unknown);
+                        rowpos = rowmargin + AddColText(0, 0, rowpos, "Target".T(EDTx.UserControlSpanel_Target) + ": " + name + " @ " + dist + " ly", textcolour, backcolour, null).Location.Bottom;
+                    }
+
+                    foreach (HistoryEntry rhe in result)
+                    {
+                        rowpos = rowmargin + DrawHistoryEntry(rhe, rowpos, tpos, textcolour, backcolour);
+
+                        if (rowpos > ClientRectangle.Height)                // stop when off of screen
+                            break;
                     }
                 }
 

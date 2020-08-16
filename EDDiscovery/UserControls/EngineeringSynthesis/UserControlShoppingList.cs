@@ -182,8 +182,10 @@ namespace EDDiscovery.UserControls
             SynthesisWanted = wanted;
             Display();
         }
-        
-        private async void Display()
+
+        private Guid DisplayUpdateId;
+
+        private void Display()
         {
             HistoryEntry last_he = userControlSynthesis.CurrentHistoryEntry;        // sync with what its showing
 
@@ -193,8 +195,6 @@ namespace EDDiscovery.UserControls
 
                 var totals = MaterialCommoditiesRecipe.TotalList(mcl);                  // start with totals present
 
-                Color textcolour = IsTransparent ? discoveryform.theme.SPanelColor : discoveryform.theme.LabelColor;
-                Color backcolour = this.BackColor;
                 List<Tuple<Recipes.Recipe, int>> totalWanted = EngineeringWanted.Concat(SynthesisWanted).ToList();
 
                 string techBrokers = EliteDangerousCore.DB.UserDatabase.Instance.GetSettingString(DBTechBrokerFilterSave, "None");
@@ -219,19 +219,42 @@ namespace EDDiscovery.UserControls
                     }
                 }
 
-                var shoppinglist = MaterialCommoditiesRecipe.GetShoppingList(totalWanted, mcl);
+                List<Tuple<MaterialCommodities, int>> shoppinglist = MaterialCommoditiesRecipe.GetShoppingList(totalWanted, mcl);
 
                 JournalScan sd = null;
-                StarScan.SystemNode last_sn = null;
 
                 if (last_he.IsLanded && (showListAvailability || showPlanetMats))
                 {
                     sd = discoveryform.history.GetScans(last_he.System.Name).Where(sc => sc.BodyName == last_he.WhereAmI).FirstOrDefault();
                 }
+
                 if (!last_he.IsLanded && showSystemAvailability)
                 {
-                    last_sn = await discoveryform.history.starscan.FindSystemAsync(last_he.System, useEDSMForSystemAvailability);
+                    var updateid = DisplayUpdateId = Guid.NewGuid();
+
+                    discoveryform.history.starscan.FindSystemAsync(last_he.System, useEDSMForSystemAvailability, sn =>
+                    {
+                        this.BeginInvoke(new Action(() => EndDisplay(updateid, shoppinglist, sd, sn, mcl, last_he)));
+                    });
                 }
+                else
+                {
+                    EndDisplay(DisplayUpdateId, shoppinglist, sd, null, mcl, last_he);
+                }
+            }
+
+            // if transparent, we don't show the eng/synth panels
+            userControlEngineering.Visible = userControlSynthesis.Visible = !IsTransparent;
+            userControlEngineering.Enabled = userControlSynthesis.Enabled = !IsTransparent;
+            buttonTechBroker.Visible = buttonSpecialEffects.Visible = !IsTransparent;
+        }
+
+        private void EndDisplay(Guid updateid, List<Tuple<MaterialCommodities, int>> shoppinglist, JournalScan sd, StarScan.SystemNode last_sn, List<MaterialCommodities> mcl, HistoryEntry last_he)
+        {
+            if (updateid == DisplayUpdateId)
+            {
+                Color textcolour = IsTransparent ? discoveryform.theme.SPanelColor : discoveryform.theme.LabelColor;
+                Color backcolour = this.BackColor;
 
                 StringBuilder wantedList = new StringBuilder();
 
@@ -360,11 +383,6 @@ namespace EDDiscovery.UserControls
                 }
 
             }
-
-            // if transparent, we don't show the eng/synth panels
-            userControlEngineering.Visible = userControlSynthesis.Visible = !IsTransparent;
-            userControlEngineering.Enabled = userControlSynthesis.Enabled = !IsTransparent;
-            buttonTechBroker.Visible = buttonSpecialEffects.Visible = !IsTransparent;
 
         }
 

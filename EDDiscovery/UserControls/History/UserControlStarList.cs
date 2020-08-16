@@ -629,13 +629,18 @@ namespace EDDiscovery.UserControls
                 CheckEDSM(dataGridViewStarList.CurrentRow);
         }
 
-        public async void CheckEDSM(DataGridViewRow row)
+        public void CheckEDSM(DataGridViewRow row)
         {
             List<HistoryEntry> syslist = row.Tag as List<HistoryEntry>;
 
-            var node = await discoveryform.history.starscan?.FindSystemAsync(syslist[0].System, true);  // try an EDSM lookup, cache data, then redisplay.
-            row.Cells[Columns.OtherInformation].Value = Infoline(syslist,node);
-            row.Cells[Columns.SystemValue].Value = node?.ScanValue(true).ToString("N0") ?? "";
+            discoveryform.history.starscan?.FindSystemAsync(syslist[0].System, true, node =>  // try an EDSM lookup, cache data, then redisplay.
+            {
+                this.BeginInvoke(new Action(() =>
+                {
+                    row.Cells[Columns.OtherInformation].Value = Infoline(syslist, node);
+                    row.Cells[Columns.SystemValue].Value = node?.ScanValue(true).ToString("N0") ?? "";
+                }));
+            });
         }
 
         private void Autoupdateedsm_Tick(object sender, EventArgs e)            // tick tock to get edsm data very slowly!

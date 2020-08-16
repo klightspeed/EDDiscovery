@@ -200,7 +200,9 @@ namespace EDDiscovery.UserControls
 
         #region Main
 
-        async private void DrawSystem(ISystem sys, string tt = null)
+        private Guid DrawSystemUpdateId;
+
+        private void DrawSystem(ISystem sys, string tt = null)
         {
             if ( tt != null )
             {
@@ -235,32 +237,113 @@ namespace EDDiscovery.UserControls
                     vpos += i.Location.Height;
                 }
 
-                StarScan.SystemNode systemnode = await discoveryform.history.starscan.FindSystemAsync(sys, checkEDSMForInformationToolStripMenuItem.Checked);        // get data with EDSM
-
-                if (systemnode != null)     // no data, clear display, clear any last_he so samesys is false next time
+                var updateid = DrawSystemUpdateId = Guid.NewGuid();
+                discoveryform.history.starscan.FindSystemAsync(sys, checkEDSMForInformationToolStripMenuItem.Checked, systemnode =>        // get data with EDSM
                 {
-                    string infoline = "";
-
-                    int scanned = systemnode.StarPlanetsScanned();
-
-                    if (scanned > 0)
+                    this.BeginInvoke(new Action(() =>
                     {
-                        infoline = "Scan".T(EDTx.UserControlSurveyor_Scan) + " " + scanned.ToString() + (systemnode.FSSTotalBodies != null ? (" / " + systemnode.FSSTotalBodies.Value.ToString()) : "");
+                        if (updateid == DrawSystemUpdateId)
+                        {
+                            EndDrawSystem(systemnode, vpos, frmt);
+                        }
+                    }));
+                });
+
+            }
+            else
+            {
+                pictureBoxSurveyor.Render();
+            }
+        }
+
+        private void EndDrawSystem(StarScan.SystemNode systemnode, int vpos, StringFormat frmt)
+        {
+            if (systemnode != null)     // no data, clear display, clear any last_he so samesys is false next time
+            {
+                var textcolour = IsTransparent ? discoveryform.theme.SPanelColor : discoveryform.theme.LabelColor;
+                var backcolour = IsTransparent ? Color.Transparent : this.BackColor;
+
+                string infoline = "";
+
+                int scanned = systemnode.StarPlanetsScanned();
+
+                if (scanned > 0)
+                {
+                    infoline = "Scan".T(EDTx.UserControlSurveyor_Scan) + " " + scanned.ToString() + (systemnode.FSSTotalBodies != null ? (" / " + systemnode.FSSTotalBodies.Value.ToString()) : "");
+                }
+
+                long value = systemnode.ScanValue(false);
+
+                if (value > 0 && showValuesToolStripMenuItem.Checked)
+                {
+                    infoline = infoline.AppendPrePad("~ " + value.ToString("N0") + " cr", "; ");
+                }
+
+                if (infoline.HasChars())
+                {
+                    var i = pictureBoxSurveyor.AddTextAutoSize(
+                        new Point(3, vpos),
+                        new Size(Math.Max(pictureBoxSurveyor.Width - 6, 24), 1000),
+                        infoline,
+                        Font,
+                        textcolour,
+                        backcolour,
+                        1.0F,
+                        frmt: frmt);
+                    vpos += i.Location.Height;
+                }
+
+                var all_nodes = systemnode.Bodies.ToList();
+
+                if (all_nodes != null)
+                {
+                    value = 0;
+
+                    foreach (StarScan.ScanNode sn in all_nodes)
+                    {
+                        if (sn.ScanData != null && sn.ScanData?.BodyName != null)
+                        {
+                            var sd = sn.ScanData;
+
+                            if (
+                                (sd.IsLandable && landableToolStripMenuItem.Checked) ||
+                                (sd.AmmoniaWorld && ammoniaWorldToolStripMenuItem.Checked) ||
+                                (sd.Earthlike && earthlikeWorldToolStripMenuItem.Checked) ||
+                                (sd.WaterWorld && waterWorldToolStripMenuItem.Checked) ||
+                                (sd.HasRings && !sd.AmmoniaWorld && !sd.Earthlike && !sd.WaterWorld && hasRingsToolStripMenuItem.Checked) ||
+                                (sd.HasMeaningfulVolcanism && hasVolcanismToolStripMenuItem.Checked) ||
+                                (sd.Terraformable && terraformableToolStripMenuItem.Checked) ||
+                                (lowRadiusToolStripMenuItem.Checked && sd.nRadius.HasValue && sd.nRadius < lowRadiusLimit) ||
+                                (sn.Signals != null && hasSignalsToolStripMenuItem.Checked) ||
+                                (sd.IsStar && showAllStarsToolStripMenuItem.Checked) ||
+                                (sd.IsPlanet && showAllPlanetsToolStripMenuItem.Checked) ||
+                                (sd.IsBeltCluster && showBeltClustersToolStripMenuItem.Checked))
+                            {
+                                if (!sd.Mapped || hideAlreadyMappedBodiesToolStripMenuItem.Checked == false)      // if not mapped, or show mapped
+                                {
+                                    var i = pictureBoxSurveyor.AddTextAutoSize(
+                                            new Point(3, vpos),
+                                            new Size(Math.Max(pictureBoxSurveyor.Width - 6, 24), 1000),
+                                            InfoLine(last_sys, sn, sd),
+                                            Font,
+                                            textcolour,
+                                            backcolour,
+                                            1.0F,
+                                            frmt: frmt);
+
+                                    vpos += i.Location.Height;
+                                    value += sd.EstimatedValue;
+                                }
+                            }
+                        }
                     }
 
-                    long value = systemnode.ScanValue(false);
-
-                    if ( value > 0  && showValuesToolStripMenuItem.Checked )
+                    if (value > 0 && showValuesToolStripMenuItem.Checked)
                     {
-                        infoline = infoline.AppendPrePad("~ " + value.ToString("N0") + " cr", "; ");
-                    }
-
-                    if (infoline.HasChars())
-                    {
-                        var  i = pictureBoxSurveyor.AddTextAutoSize(
+                        var i = pictureBoxSurveyor.AddTextAutoSize(
                             new Point(3, vpos),
                             new Size(Math.Max(pictureBoxSurveyor.Width - 6, 24), 1000),
-                            infoline,
+                            "^^ ~ " + value.ToString("N0") + " cr",
                             Font,
                             textcolour,
                             backcolour,
@@ -269,70 +352,8 @@ namespace EDDiscovery.UserControls
                         vpos += i.Location.Height;
                     }
 
-                    var all_nodes = systemnode.Bodies.ToList();
-
-                    if (all_nodes != null)
-                    {
-                        value = 0;
-
-                        foreach (StarScan.ScanNode sn in all_nodes)
-                        {
-                            if (sn.ScanData != null && sn.ScanData?.BodyName != null )
-                            {
-                                var sd = sn.ScanData;
-
-                                if  (                                    
-                                    (sd.IsLandable && landableToolStripMenuItem.Checked) ||
-                                    (sd.AmmoniaWorld && ammoniaWorldToolStripMenuItem.Checked) ||
-                                    (sd.Earthlike && earthlikeWorldToolStripMenuItem.Checked) ||
-                                    (sd.WaterWorld && waterWorldToolStripMenuItem.Checked) ||
-                                    (sd.HasRings && !sd.AmmoniaWorld && !sd.Earthlike && !sd.WaterWorld && hasRingsToolStripMenuItem.Checked) ||
-                                    (sd.HasMeaningfulVolcanism && hasVolcanismToolStripMenuItem.Checked) ||
-                                    (sd.Terraformable && terraformableToolStripMenuItem.Checked) ||
-                                    (lowRadiusToolStripMenuItem.Checked && sd.nRadius.HasValue && sd.nRadius < lowRadiusLimit) ||
-                                    (sn.Signals != null && hasSignalsToolStripMenuItem.Checked) ||
-                                    (sd.IsStar && showAllStarsToolStripMenuItem.Checked) ||
-                                    (sd.IsPlanet && showAllPlanetsToolStripMenuItem.Checked) ||
-                                    (sd.IsBeltCluster && showBeltClustersToolStripMenuItem.Checked))
-                                {
-                                    if (!sd.Mapped || hideAlreadyMappedBodiesToolStripMenuItem.Checked == false)      // if not mapped, or show mapped
-                                    {
-                                        var i = pictureBoxSurveyor.AddTextAutoSize(
-                                                new Point(3, vpos),
-                                                new Size(Math.Max(pictureBoxSurveyor.Width - 6, 24), 1000),
-                                                InfoLine(last_sys, sn, sd),
-                                                Font,
-                                                textcolour,
-                                                backcolour,
-                                                1.0F,
-                                                frmt: frmt);
-
-                                        vpos += i.Location.Height;
-                                        value += sd.EstimatedValue;
-                                    }
-                                }
-                            }
-                        }
-
-                        if (value > 0 && showValuesToolStripMenuItem.Checked )
-                        {
-                            var i = pictureBoxSurveyor.AddTextAutoSize(
-                                new Point(3, vpos),
-                                new Size(Math.Max(pictureBoxSurveyor.Width - 6, 24), 1000),
-                                "^^ ~ " + value.ToString("N0") + " cr",
-                                Font,
-                                textcolour,
-                                backcolour,
-                                1.0F,
-                                frmt: frmt);
-                            vpos += i.Location.Height;
-                        }
-
-                    }
                 }
             }
-
-            pictureBoxSurveyor.Render();
         }
 
         private string InfoLine(ISystem sys, StarScan.ScanNode sn, JournalScan js)

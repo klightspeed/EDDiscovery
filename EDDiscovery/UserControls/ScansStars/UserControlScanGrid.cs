@@ -163,10 +163,10 @@ namespace EDDiscovery.UserControls
             public bool landable, materials, volcanism, mapped;     // all false on creation
         }
 
-        private async void DrawSystem(HistoryEntry he, bool force)
-        {
-            StarScan.SystemNode scannode = null;
+        private Guid DrawSystemUpdateId;
 
+        private void DrawSystem(HistoryEntry he, bool force)
+        {
             var samesys = last_he?.System != null && he?.System != null && he.System.Name == last_he.System.Name;
 
             //System.Diagnostics.Debug.WriteLine("Scan grid " + samesys + " F:" + force);
@@ -180,19 +180,35 @@ namespace EDDiscovery.UserControls
             }
             else
             {
-                scannode = await discoveryform.history.starscan.FindSystemAsync(he.System, true);        // get data with EDSM
+                var updateid = DrawSystemUpdateId = Guid.NewGuid();
 
-                if (scannode == null)     // no data, clear display, clear any last_he so samesys is false next time
+                discoveryform.history.starscan.FindSystemAsync(he.System, true, scannode =>        // get data with EDSM
                 {
-                    last_he = null;
-                    dataGridViewScangrid.Rows.Clear();
-                    SetControlText("No Scan".T(EDTx.NoScan));
-                    return;
-                }
-
-                if (samesys && !force)      // same system, no force, no redisplay
-                    return;
+                    this.BeginInvoke(new Action(() =>
+                    {
+                        if (updateid == DrawSystemUpdateId)
+                        {
+                            EndDrawSystem(scannode, he, samesys, force);
+                        }
+                    }));
+                });
             }
+
+        }
+
+        private void EndDrawSystem(StarScan.SystemNode scannode, HistoryEntry he, bool samesys, bool force)
+        {
+
+            if (scannode == null)     // no data, clear display, clear any last_he so samesys is false next time
+            {
+                last_he = null;
+                dataGridViewScangrid.Rows.Clear();
+                SetControlText("No Scan".T(EDTx.NoScan));
+                return;
+            }
+
+            if (samesys && !force)      // same system, no force, no redisplay
+                return;
 
             last_he = he;
 
@@ -202,7 +218,7 @@ namespace EDDiscovery.UserControls
             dataGridViewScangrid.RowTemplate.MinimumHeight = Font.ScalePixels(64);        // based on icon size
             bodysize = dataGridViewScangrid.RowTemplate.MinimumHeight;
             iconsize = bodysize / 4;
-          
+
 
             dataGridViewScangrid.Rows.Clear();
 
@@ -220,7 +236,7 @@ namespace EDDiscovery.UserControls
                 var bdClass = new StringBuilder();
                 var bdDist = new StringBuilder();
                 var bdDetails = new StringBuilder();
-                
+
                 if (sn.type == StarScan.ScanNodeType.ring)
                 {
                     // do nothing, by now
@@ -414,7 +430,7 @@ namespace EDDiscovery.UserControls
                                 bdDetails.Append(Environment.NewLine).Append("Surface mapped".T(EDTx.UserControlScanGrid_Surfacemapped)).Append(". ");
                                 overlays.mapped = true;
                             }
-                            
+
                             // materials                        
                             if (sn.ScanData.HasMaterials)
                             {
@@ -435,7 +451,7 @@ namespace EDDiscovery.UserControls
                                 {
                                     bdDetails.Append(Environment.NewLine).Append("This body contains: ".T(EDTx.UserControlScanGrid_BC)).Append(ret);
                                 }
-                                                                
+
                                 ReportJumponium(ret);
                             }
                         }
@@ -515,14 +531,14 @@ namespace EDDiscovery.UserControls
                 if (firstdisplayedrow >= 0 && firstdisplayedrow < dataGridViewScangrid.RowCount)
                     dataGridViewScangrid.SafeFirstDisplayedScrollingRowIndex(firstdisplayedrow);
 
-                toolStripStatusTotalValue.Text = "~"+ scannode.ScanValue(true).ToString() + " cr";
+                toolStripStatusTotalValue.Text = "~" + scannode.ScanValue(true).ToString() + " cr";
             }
         }
 
         #endregion
 
         #region global_functions
-                
+
         private void ReportJumponium(string ret)
         {
             if (!hasArsenic && ret.Contains("Arsenic"))

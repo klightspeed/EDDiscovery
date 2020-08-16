@@ -148,14 +148,31 @@ namespace EDDiscovery.Forms
             }
         }
 
-        private async void UpdateComboBox(string systemName, HistoryList helist)
+        private Guid ComboBoxUpdateId;
+
+        private void UpdateComboBox(string systemName, HistoryList helist)
         {
             ISystem thisSystem = helist.FindSystem(systemName);
 
             BodyName.Items.Clear();
             if (thisSystem != null)
             {
-                var lookup = await helist.starscan.FindSystemAsync(thisSystem, true);
+                var updateid = ComboBoxUpdateId = Guid.NewGuid();
+
+                helist.starscan.FindSystemAsync(thisSystem, true, lookup =>
+                {
+                    this.BeginInvoke(new Action(() =>
+                    {
+                        EndUpdateComboBox(lookup, updateid);
+                    }));
+                });
+            }
+        }
+
+        private void EndUpdateComboBox(StarScan.SystemNode lookup, Guid updateid)
+        {
+            if (ComboBoxUpdateId == updateid)
+            {
                 var landables = lookup?.Bodies?.Where(b => b.ScanData != null && b.ScanData.IsLandable)?.Select(b => b.fullname);
 
                 if (landables != null)

@@ -14,6 +14,7 @@
  * EDDiscovery is not affiliated with Frontier Developments plc.
  */
 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -95,7 +96,9 @@ namespace EDDiscovery.UserControls
             }
         }
 
-        async void DrawSystem()   // draw last_he
+        private Guid DrawSystemUpdateId;
+
+        private void DrawSystem()   // draw last_he
         {
             dataGridViewEstimatedValues.Rows.Clear();
 
@@ -105,17 +108,31 @@ namespace EDDiscovery.UserControls
                 return;
             }
 
-            StarScan.SystemNode last_sn = await discoveryform.history.starscan.FindSystemAsync(last_he.System, checkBoxEDSM.Checked);
+            var updateid = DrawSystemUpdateId = Guid.NewGuid();
 
+            discoveryform.history.starscan.FindSystemAsync(last_he.System, checkBoxEDSM.Checked, last_sn =>
+            {
+                this.BeginInvoke(new Action(() =>
+                {
+                    if (updateid == DrawSystemUpdateId)
+                    {
+                        EndDrawSystem(last_sn);
+                    }
+                }));
+            });
+        }
+
+        private void EndDrawSystem(StarScan.SystemNode last_sn)
+        {
             SetControlText((last_sn == null) ? "No Scan".T(EDTx.NoScan) : string.Format("Estimated Scan Values for {0}".T(EDTx.UserControlEstimatedValues_SV), last_sn.system.Name));
 
             if (last_sn != null)
             {
-                foreach( var bodies in last_sn.Bodies )
+                foreach (var bodies in last_sn.Bodies)
                 {
-                    if ( bodies.ScanData != null && bodies.ScanData.BodyName != null && (checkBoxEDSM.Checked || !bodies.ScanData.IsEDSMBody))     // if check edsm, or not edsm body, with scandata
+                    if (bodies.ScanData != null && bodies.ScanData.BodyName != null && (checkBoxEDSM.Checked || !bodies.ScanData.IsEDSMBody))     // if check edsm, or not edsm body, with scandata
                     {
-                         dataGridViewEstimatedValues.Rows.Add(new object[] { bodies.ScanData.BodyName, bodies.ScanData.PlanetClass, bodies.ScanData.IsEDSMBody ? "EDSM" : "", (bodies.IsMapped ? Icons.Controls.Scan_Bodies_Mapped : null), (bodies.ScanData.WasMapped == true? Icons.Controls.Scan_Bodies_Mapped : null), (bodies.ScanData.WasDiscovered == true ? Icons.Controls.Scan_DisplaySystemAlways : null), bodies.ScanData.EstimatedValue });
+                        dataGridViewEstimatedValues.Rows.Add(new object[] { bodies.ScanData.BodyName, bodies.ScanData.PlanetClass, bodies.ScanData.IsEDSMBody ? "EDSM" : "", (bodies.IsMapped ? Icons.Controls.Scan_Bodies_Mapped : null), (bodies.ScanData.WasMapped == true ? Icons.Controls.Scan_Bodies_Mapped : null), (bodies.ScanData.WasDiscovered == true ? Icons.Controls.Scan_DisplaySystemAlways : null), bodies.ScanData.EstimatedValue });
                     }
                 }
                 dataGridViewEstimatedValues.Sort(this.EstValue, ListSortDirection.Descending);
