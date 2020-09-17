@@ -768,7 +768,7 @@ namespace EDDiscovery.UserControls
             if (collapseExpand.Length < 13)
                 collapseExpand += new string('Y', 13);
 
-            HistoryEntry hestats = hl.GetLastHistoryEntry(x => x.EntryType == JournalTypeEnum.Statistics, he);
+            HistoryEntry hestats = hl.GetLastHistoryEntry(x => x.journalEntry is JournalStatistics, he);
 
             JournalStatistics stats = hestats?.journalEntry as JournalStatistics;
 

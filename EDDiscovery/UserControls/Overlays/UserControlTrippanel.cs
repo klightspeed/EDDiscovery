@@ -109,7 +109,7 @@ namespace EDDiscovery.UserControls
         private void Display(HistoryList hl)            // when user clicks around..  HE may be null here
         {
             HistoryEntry lfs = hl.GetLastHistoryEntry(x => x.IsFuelScoop);
-            HistoryEntry fsd = hl.GetLastHistoryEntry(x => x.journalEntry.EventTypeID == JournalTypeEnum.FSDJump);      // fsd is presumed to be JournalFSDJump below
+            HistoryEntry fsd = hl.GetLastHistoryEntry(x => x.journalEntry is EliteDangerousCore.JournalEvents.JournalFSDJump);      // fsd is presumed to be JournalFSDJump below
             HistoryEntry fuel = hl.GetLastHistoryEntry(x => x.journalEntry.EventTypeID == JournalTypeEnum.RefuelAll
                     || x.journalEntry.EventTypeID == JournalTypeEnum.RefuelPartial);
             HistoryEntry hex = fsd;
@@ -232,7 +232,7 @@ namespace EDDiscovery.UserControls
 
                     if ( ji != null )
                     { 
-                        HistoryEntry lastJet = discoveryform.history.GetLastHistoryEntry(x => x.journalEntry.EventTypeID == JournalTypeEnum.JetConeBoost);
+                        HistoryEntry lastJet = discoveryform.history.GetLastHistoryEntry(x => x.journalEntry is EliteDangerousCore.JournalEvents.JournalJetConeBoost);
 
                         double boostval = 1;
 

@@ -421,7 +421,7 @@ namespace EDDiscovery.UserControls
 
         private void toolStripButtonImportNavRoute_Click(object sender, EventArgs e)
         {
-            var route = discoveryform.history.GetLastHistoryEntry(x => x.EntryType == JournalTypeEnum.NavRoute)?.journalEntry as EliteDangerousCore.JournalEvents.JournalNavRoute;
+            var route = discoveryform.history.GetLastHistoryEntry(x => x.journalEntry is EliteDangerousCore.JournalEvents.JournalNavRoute)?.journalEntry as EliteDangerousCore.JournalEvents.JournalNavRoute;
             if ( route != null ) 
             {
                 foreach (var s in route.Route)

@@ -126,13 +126,13 @@ namespace EDDiscovery.UserControls
                 Tuple<HistoryEntry, string> found = null;
                 bool checkstation = false;
 
-                if (he.EntryType == JournalTypeEnum.Scan)
+                if (he.journalEntry is JournalScan)
                 {
                     var je = he.journalEntry as JournalScan;
                     if (je.HasMaterial(cm.FDName))
                         found = new Tuple<HistoryEntry, string>(he, prefix + je.BodyName);
                 }
-                else if (he.EntryType == JournalTypeEnum.Market)
+                else if (he.journalEntry is JournalMarket)
                 {
                     var je = he.journalEntry as JournalMarket;
                     if (je.HasCommodityToBuy(cm.FDName))
@@ -141,7 +141,7 @@ namespace EDDiscovery.UserControls
                         checkstation = true;
                     }
                 }
-                else if (he.EntryType == JournalTypeEnum.EDDCommodityPrices)
+                else if (he.journalEntry is JournalEDDCommodityPrices)
                 {
                     var je = he.journalEntry as JournalEDDCommodityPrices;
                     if (je.HasCommodityToBuy(cm.FDName))
@@ -150,27 +150,27 @@ namespace EDDiscovery.UserControls
                         checkstation = true;
                     }
                 }
-                else if (he.EntryType == JournalTypeEnum.MaterialDiscovered)
+                else if (he.journalEntry is JournalMaterialDiscovered)
                 {
                     var je = he.journalEntry as JournalMaterialDiscovered;
                     if (je.Name.Equals(cm.FDName))
                         found = new Tuple<HistoryEntry, string>(he, prefix + "Discovered at ".T(EDTx.SearchMaterialsCommodities_DIS) + he.WhereAmI);
                 }
-                else if (he.EntryType == JournalTypeEnum.MaterialCollected)
+                else if (he.journalEntry is JournalMaterialCollected)
                 {
                     var je = he.journalEntry as JournalMaterialCollected;
                     if (je.Name.Equals(cm.FDName))
                         found = new Tuple<HistoryEntry, string>(he, prefix + "Collected at ".T(EDTx.SearchMaterialsCommodities_COL) + he.WhereAmI);
                 }
 
-                else if (he.EntryType == JournalTypeEnum.MissionCompleted)
+                else if (he.journalEntry is JournalMissionCompleted)
                 {
                     var je = he.journalEntry as JournalMissionCompleted;
                     if (je.HasReceivedReward(cm.FDName))
                         found = new Tuple<HistoryEntry, string>(he, prefix + "Mission Reward at ".T(EDTx.SearchMaterialsCommodities_MR) + he.WhereAmI);
                 }
 
-                else if (he.EntryType == JournalTypeEnum.SAASignalsFound)
+                else if (he.journalEntry is JournalSAASignalsFound)
                 {
                     var je = he.journalEntry as JournalSAASignalsFound;
                     if (je.Contains(cm.FDName) > 0)

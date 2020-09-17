@@ -211,68 +211,71 @@ namespace EDDiscovery.UserControls
             {
                 //System.Diagnostics.Debug.WriteLine("{0} {1} {2}", e.Indexno, e.EventTimeUTC, e.EventSummary);
 
-                switch (e.EntryType)
+                if (e.journalEntry is JournalAsteroidCracked)
                 {
-                    case JournalTypeEnum.AsteroidCracked:
-                        asteroidscracked++;
-                        break;
-                    case JournalTypeEnum.ProspectedAsteroid:
-                        prospected++;
-                        var pa = e.journalEntry as JournalProspectedAsteroid;
-                        if (pa.Materials != null)
+                    asteroidscracked++;
+                }
+                else if (e.journalEntry is JournalProspectedAsteroid)
+                {
+                    prospected++;
+                    var pa = e.journalEntry as JournalProspectedAsteroid;
+                    if (pa.Materials != null)
+                    {
+                        foreach (var m in pa.Materials)
                         {
-                            foreach (var m in pa.Materials)
-                            {
-                                var matpa = MaterialsFound.Find(m.Name, found);
-                                matpa.prospectednoasteroids++;
-                                matpa.prospectedamounts.Add(m.Proportion);
-                                matpa.content[0] += pa.Content == JournalProspectedAsteroid.AsteroidContent.High ? 1 : 0;
-                                matpa.content[1] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Medium ? 1 : 0;
-                                matpa.content[2] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Low ? 1 : 0;
+                            var matpa = MaterialsFound.Find(m.Name, found);
+                            matpa.prospectednoasteroids++;
+                            matpa.prospectedamounts.Add(m.Proportion);
+                            matpa.content[0] += pa.Content == JournalProspectedAsteroid.AsteroidContent.High ? 1 : 0;
+                            matpa.content[1] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Medium ? 1 : 0;
+                            matpa.content[2] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Low ? 1 : 0;
 
-                                //System.Diagnostics.Debug.WriteLine("Prospected {0} {1} {2}", m.Name, m.Proportion, pa.Content );
-                            }
-
-                            if (pa.MotherlodeMaterial.HasChars())
-                            {
-                                var matpa = MaterialsFound.Find(pa.MotherlodeMaterial, found);
-                                matpa.motherloadasteroids++;
-                            }
+                            //System.Diagnostics.Debug.WriteLine("Prospected {0} {1} {2}", m.Name, m.Proportion, pa.Content );
                         }
 
-                        content[0] += pa.Content == JournalProspectedAsteroid.AsteroidContent.High ? 1 : 0;
-                        content[1] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Medium ? 1 : 0;
-                        content[2] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Low ? 1 : 0;
+                        if (pa.MotherlodeMaterial.HasChars())
+                        {
+                            var matpa = MaterialsFound.Find(pa.MotherlodeMaterial, found);
+                            matpa.motherloadasteroids++;
+                        }
+                    }
 
-                        break;
-                    case JournalTypeEnum.LaunchDrone:
-                        var ld = e.journalEntry as JournalLaunchDrone;
-                        if (ld.Type == JournalLaunchDrone.DroneType.Collection)
-                            collectorsused++;
-                        else if (ld.Type == JournalLaunchDrone.DroneType.Prospector)
-                            prospectorsused++;
-                        break;
-                    case JournalTypeEnum.MiningRefined:
-                        var mr = e.journalEntry as JournalMiningRefined;
-                        var matmr = MaterialsFound.Find(mr.Type, found);
-                        matmr.amountrefined++;
-                        break;
-                    case JournalTypeEnum.MaterialCollected:
-                        var mc = e.journalEntry as JournalMaterialCollected;
-                        var matmc = MaterialsFound.Find(mc.Name, found);
-                        matmc.amountcollected += mc.Count;
-                        //System.Diagnostics.Debug.WriteLine("Collected {0} {1}", mc.Count, matmc.amountcollected);
-                        break;
-                    case JournalTypeEnum.MaterialDiscarded:
-                        var md = e.journalEntry as JournalMaterialDiscarded;
-                        var matmd = MaterialsFound.Find(md.Name, found);
-                        matmd.amountdiscarded += md.Count;
-                        break;
-                    case JournalTypeEnum.MaterialDiscovered:
-                        var mdi = e.journalEntry as JournalMaterialDiscovered;
-                        var matdi = MaterialsFound.Find(mdi.Name, found);
-                        matdi.discovered = true;
-                        break;
+                    content[0] += pa.Content == JournalProspectedAsteroid.AsteroidContent.High ? 1 : 0;
+                    content[1] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Medium ? 1 : 0;
+                    content[2] += pa.Content == JournalProspectedAsteroid.AsteroidContent.Low ? 1 : 0;
+                }
+                else if (e.journalEntry is JournalLaunchDrone)
+                {
+                    var ld = e.journalEntry as JournalLaunchDrone;
+                    if (ld.Type == JournalLaunchDrone.DroneType.Collection)
+                        collectorsused++;
+                    else if (ld.Type == JournalLaunchDrone.DroneType.Prospector)
+                        prospectorsused++;
+                }
+                else if (e.journalEntry is JournalMiningRefined)
+                {
+                    var mr = e.journalEntry as JournalMiningRefined;
+                    var matmr = MaterialsFound.Find(mr.Type, found);
+                    matmr.amountrefined++;
+                }
+                else if (e.journalEntry is JournalMaterialCollected)
+                {
+                    var mc = e.journalEntry as JournalMaterialCollected;
+                    var matmc = MaterialsFound.Find(mc.Name, found);
+                    matmc.amountcollected += mc.Count;
+                    //System.Diagnostics.Debug.WriteLine("Collected {0} {1}", mc.Count, matmc.amountcollected);
+                }
+                else if (e.journalEntry is JournalMaterialDiscarded)
+                {
+                    var md = e.journalEntry as JournalMaterialDiscarded;
+                    var matmd = MaterialsFound.Find(md.Name, found);
+                    matmd.amountdiscarded += md.Count;
+                }
+                else if (e.journalEntry is JournalMaterialDiscovered)
+                {
+                    var mdi = e.journalEntry as JournalMaterialDiscovered;
+                    var matdi = MaterialsFound.Find(mdi.Name, found);
+                    matdi.discovered = true;
                 }
             }
 
@@ -759,7 +762,7 @@ namespace EDDiscovery.UserControls
                             return null;
                     });
 
-                    var proslist = curlist.Where(x => x.EntryType == JournalTypeEnum.ProspectedAsteroid).ToList();
+                    var proslist = curlist.Where(x => x.journalEntry is JournalProspectedAsteroid).ToList();
 
                     grd.GetSetsData.Add(delegate (int s, int r)
                     {

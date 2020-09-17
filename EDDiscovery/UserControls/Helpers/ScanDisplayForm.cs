@@ -41,7 +41,7 @@ namespace EDDiscovery.UserControls
 
             AutoScaleMode asm = AutoScaleMode.Font;
 
-            if (he != null && (he.EntryType == JournalTypeEnum.Market || he.EntryType == JournalTypeEnum.EDDCommodityPrices))  // station data..
+            if (he != null && he.journalEntry is JournalCommodityPricesBase)  // station data..
             {
                 JournalCommodityPricesBase jm = he.journalEntry as JournalCommodityPricesBase;
                 jm.FillInformation(out string info, out string detailed,1);

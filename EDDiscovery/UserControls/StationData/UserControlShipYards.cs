@@ -150,7 +150,7 @@ namespace EDDiscovery.UserControls
 
             if (comboBoxYards.SelectedIndex == 0 || comboBoxYards.Text.Length == 0)  // second is due to the order History gets called vs this on start
             {
-                HistoryEntry lastshipyard = discoveryform.history.GetLastHistoryEntry(x => x.EntryType == JournalTypeEnum.Shipyard, last_he);
+                HistoryEntry lastshipyard = discoveryform.history.GetLastHistoryEntry(x => x.journalEntry is EliteDangerousCore.JournalEvents.JournalShipyard, last_he);
                 if (lastshipyard != null)
                     yard = (lastshipyard.journalEntry as EliteDangerousCore.JournalEvents.JournalShipyard).Yard;
             }

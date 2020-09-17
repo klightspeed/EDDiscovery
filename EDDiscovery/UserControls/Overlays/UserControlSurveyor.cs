@@ -152,23 +152,23 @@ namespace EDDiscovery.UserControls
                     last_sys = he.System;
                     DrawSystem(last_sys, last_sys.Name);
                 }
-                else if (he.EntryType == JournalTypeEnum.StartJump)  // we ignore start jump if overriden      
+                else if (he.journalEntry is JournalStartJump)  // we ignore start jump if overriden      
                 {
                     JournalStartJump jsj = he.journalEntry as JournalStartJump;
                     last_sys = new SystemClass(jsj.StarSystem);
                     DrawSystem(last_sys, last_sys.Name);
                 }
-                else if (he.EntryType == JournalTypeEnum.FSSAllBodiesFound)
+                else if (he.journalEntry is JournalFSSAllBodiesFound)
                 {
                     DrawSystem(last_sys, last_sys.Name + " " + "System scan complete.".T(EDTx.UserControlSurveyor_Systemscancomplete));
                 }
-                else if (he.EntryType == JournalTypeEnum.FSSDiscoveryScan)
+                else if (he.journalEntry is JournalFSSDiscoveryScan)
                 {
                     var je = he.journalEntry as JournalFSSDiscoveryScan;
                     var bodies_found = je.BodyCount;
                     DrawSystem( last_sys, last_sys.Name + " " + bodies_found + " bodies found.".T(EDTx.UserControlSurveyor_bodiesfound));
                 }
-                else if (he.EntryType == JournalTypeEnum.Scan)
+                else if (he.journalEntry is JournalScan)
                 {
                     DrawSystem(last_sys);
                 }

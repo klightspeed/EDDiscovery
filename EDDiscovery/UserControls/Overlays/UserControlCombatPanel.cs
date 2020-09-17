@@ -380,13 +380,13 @@ namespace EDDiscovery.UserControls
             MissionState ml = current.MissionKey != null && he.MissionList.Missions.ContainsKey(current.MissionKey) ? he.MissionList.Missions[current.MissionKey] : null;
 
             if ( ml != null &&
-                 ((he.EntryType == JournalTypeEnum.MissionAccepted && (he.journalEntry as EliteDangerousCore.JournalEvents.JournalMissionAccepted).MissionId == ml.Mission.MissionId)
-                 || (he.EntryType == JournalTypeEnum.MissionCompleted && (he.journalEntry as EliteDangerousCore.JournalEvents.JournalMissionCompleted).MissionId == ml.Mission.MissionId)
-                 || (he.EntryType == JournalTypeEnum.MissionRedirected && (he.journalEntry as EliteDangerousCore.JournalEvents.JournalMissionRedirected).MissionId == ml.Mission.MissionId)
+                 ((he.journalEntry is EliteDangerousCore.JournalEvents.JournalMissionAccepted && (he.journalEntry as EliteDangerousCore.JournalEvents.JournalMissionAccepted).MissionId == ml.Mission.MissionId)
+                 || (he.journalEntry is EliteDangerousCore.JournalEvents.JournalMissionCompleted && (he.journalEntry as EliteDangerousCore.JournalEvents.JournalMissionCompleted).MissionId == ml.Mission.MissionId)
+                 || (he.journalEntry is EliteDangerousCore.JournalEvents.JournalMissionRedirected && (he.journalEntry as EliteDangerousCore.JournalEvents.JournalMissionRedirected).MissionId == ml.Mission.MissionId)
                ))
             { 
             }
-            else if (he.EntryType == JournalTypeEnum.Bounty)
+            else if (he.journalEntry is EliteDangerousCore.JournalEvents.JournalBounty)
             {
                 var c = he.journalEntry as EliteDangerousCore.JournalEvents.JournalBounty;
                 rewardcol = c.TotalReward.ToString("N0");
@@ -401,14 +401,14 @@ namespace EDDiscovery.UserControls
                     faction_kills++;
                 }
             }
-            else if (he.EntryType == JournalTypeEnum.CommitCrime)
+            else if (he.journalEntry is EliteDangerousCore.JournalEvents.JournalCommitCrime)
             {
                 var c = he.journalEntry as EliteDangerousCore.JournalEvents.JournalCommitCrime;
                 rewardcol = (-c.Cost).ToString("N0");
                 balance -= c.Cost;
                 total_crimes++;
             }
-            else if (he.EntryType == JournalTypeEnum.FactionKillBond)
+            else if (he.journalEntry is EliteDangerousCore.JournalEvents.JournalFactionKillBond)
             {
                 var c = he.journalEntry as EliteDangerousCore.JournalEvents.JournalFactionKillBond;
                 rewardcol = c.Reward.ToString("N0");
@@ -421,7 +421,7 @@ namespace EDDiscovery.UserControls
                     faction_kills++;
                 }
             }
-            else if (he.EntryType == JournalTypeEnum.CapShipBond)
+            else if (he.journalEntry is EliteDangerousCore.JournalEvents.JournalCapShipBond)
             {
                 var c = he.journalEntry as EliteDangerousCore.JournalEvents.JournalCapShipBond;
                 rewardcol = c.Reward.ToString("N0");
@@ -434,7 +434,7 @@ namespace EDDiscovery.UserControls
                     faction_kills++;
                 }
             }
-            else if (he.EntryType == JournalTypeEnum.Resurrect)
+            else if (he.journalEntry is EliteDangerousCore.JournalEvents.JournalResurrect)
             {
                 var c = he.journalEntry as EliteDangerousCore.JournalEvents.JournalResurrect;
                 rewardcol = (-c.Cost).ToString("N0");

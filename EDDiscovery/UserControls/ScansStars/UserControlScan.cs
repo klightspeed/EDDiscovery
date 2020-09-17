@@ -149,7 +149,7 @@ namespace EDDiscovery.UserControls
             if (he != null)
             {
                 // new scan, new materials (for the count display), new SAA Signals all can cause display to change.
-                if (he.EntryType == JournalTypeEnum.Scan || he.journalEntry is IMaterialJournalEntry || he.journalEntry is JournalSAASignalsFound ||
+                if (he.journalEntry is JournalScan || he.journalEntry is IMaterialJournalEntry || he.journalEntry is JournalSAASignalsFound ||
                     he.journalEntry is JournalFSSDiscoveryScan || 
                                 last_he == null || last_he.System != he.System) //  or not presenting or diff sys
                 {
