@@ -1283,7 +1283,20 @@ namespace EDDiscovery.UserControls
 
         private void runSelectionThroughEDAstroDebugToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (rightclickhe != null)
+            if (dataGridViewTravel.SelectedRows.Count > 0)
+            {
+                var entries =
+                    dataGridViewTravel
+                        .SelectedRows
+                        .OfType<DataGridViewRow>()
+                        .Where(r => r.Visible)
+                        .OrderBy(r => r.Index)
+                        .Select(r => r.Tag as HistoryEntry)
+                        .Where(r => r != null)
+                        .ToList();
+                EliteDangerousCore.EDAstro.EDAstroSync.SendEDAstroEvents(entries);
+            }
+            else if (rightclickhe != null)
             {
                 EliteDangerousCore.EDAstro.EDAstroSync.SendEDAstroEvents(new List<HistoryEntry>() { rightclickhe });
             }
