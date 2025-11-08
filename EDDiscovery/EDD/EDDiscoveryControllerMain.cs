@@ -95,6 +95,10 @@ namespace EDDiscovery
 
         private int commanderaddorupdatecount;                         // this is set at history read and allows detection of new commanders during reading
 
+        private System.IO.Pipes.NamedPipeServerStream CAPIAuthNamedPipe;
+        private Thread CAPIAuthPipeThread;
+
+
         #endregion
 
         #region Accessors
@@ -133,6 +137,59 @@ namespace EDDiscovery
             DDEServer = new BaseUtils.DDE.DDEServer();          // will be started in shown
         }
 
+        private void StartAuthPipe()
+        {
+
+            CAPIAuthPipeThread = new Thread(CAPIAuthNamedPipeThreadProc)
+            {
+                IsBackground = true,
+                Name = "CAPIAuthPipe"
+            };
+
+            CAPIAuthPipeThread.Start();
+        }
+
+        private void CAPIAuthNamedPipeThreadProc()
+        {
+            var allowAnyoneRule = new System.IO.Pipes.PipeAccessRule(
+                new System.Security.Principal.SecurityIdentifier(System.Security.Principal.WellKnownSidType.WorldSid, null),
+                System.IO.Pipes.PipeAccessRights.WriteData,
+                System.Security.AccessControl.AccessControlType.Allow
+            );
+
+            var pipeSecurity = new System.IO.Pipes.PipeSecurity();
+            pipeSecurity.AddAccessRule(allowAnyoneRule);
+
+            using (var namedpipe = new System.IO.Pipes.NamedPipeServerStream(
+                $"EDDiscovery_CAPIAuth_{Process.GetCurrentProcess().Id}",
+                System.IO.Pipes.PipeDirection.In,
+                1,
+                System.IO.Pipes.PipeTransmissionMode.Message,
+                System.IO.Pipes.PipeOptions.None,
+                0,
+                0,
+                pipeSecurity,
+                HandleInheritability.None
+            ))
+            {
+                var buffer = new byte[65536];
+
+                while (true)
+                {
+                    namedpipe.WaitForConnection();
+                    var readlen = namedpipe.Read(buffer, 0, buffer.Length);
+                    namedpipe.Disconnect();
+
+                    var url = System.Text.Encoding.UTF8.GetString(buffer, 0, readlen);
+
+                    if (url.Length != 0 && url.StartsWith($"{FrontierCAPI.URI}://auth/"))
+                    {
+                        FrontierCAPI.URLCallBack(url);
+                    }
+                }
+            }
+        }
+
         // called by EDDForm during shown
         public void PostInit_Shown()        
         {
@@ -162,6 +219,8 @@ namespace EDDiscovery
                         }
                     }
                 }
+
+                StartAuthPipe();
 
                 LogLine(ok ? "CAPI Installed" : "CAPI Failed to register");
 

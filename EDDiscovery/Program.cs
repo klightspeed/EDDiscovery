@@ -14,6 +14,7 @@
 
 using System;
 using System.Globalization;
+using System.Linq;
 using System.Threading;                 // Tasks and Mutex
 using System.Windows.Forms;
 
@@ -21,9 +22,53 @@ namespace EDDiscovery
 {
     static class Program
     {
-        [STAThread]
-        static void Main()
+        static bool PassCAPIAuth(string url)
         {
+            try
+            {
+                var currentProcess = System.Diagnostics.Process.GetCurrentProcess();
+                var processes =
+                    System.Diagnostics
+                          .Process
+                          .GetProcessesByName(currentProcess.ProcessName)
+                          .Where(e => e.Id != currentProcess.Id)
+                          .ToArray();
+
+                if (processes.Length > 1 && processes.Any(e => e.MainModule.FileName == currentProcess.MainModule.FileName))
+                {
+                    processes = processes.Where(e => e.MainModule.FileName == currentProcess.MainModule.FileName).ToArray();
+                }
+
+                if (processes.Length == 1)
+                {
+                    using (var pipe = new System.IO.Pipes.NamedPipeClientStream(
+                        ".",
+                        $"EDDiscovery_CAPIAuth_{processes[0].Id}",
+                        System.IO.Pipes.PipeDirection.Out
+                    ))
+                    {
+                        pipe.Connect();
+                        using (var writer = new System.IO.StreamWriter(pipe))
+                        {
+                            writer.WriteLine(url);
+                            return true;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+            return false;
+        }
+
+        [STAThread]
+        static void Main(string[] args)
+        {
+            if (args.Length == 1 && args[0].StartsWith("eddiscovery://auth/") && PassCAPIAuth(args[0]))
+                return;
+
             using (OpenTK.Toolkit.Init(new OpenTK.ToolkitOptions { EnableHighResolution = false, Backend = OpenTK.PlatformBackend.PreferNative }))
             {
                 Application.EnableVisualStyles();
