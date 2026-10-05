@@ -1,0 +1,76 @@
+name: Build
+
+on:
+  push:
+  release:
+  workflow_dispatch:
+  pull_request:
+
+env:
+  DOTNET_SDK_VERSION: 10.0.401
+  USE_DOTNET_SDK: false
+  SOLUTION_FILE: "EDDiscovery.sln"
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-2204 # Converting to SDK projects will allow using ubuntu-latest and dotnet sdk
+          - windows-latest
+        BUILD_CONFIGURATION:
+          - Debug
+          - Release
+
+    runs-on: ${{ matrix.os }}
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup .NET
+        if: env.USE_DOTNET_SDK == 'true'
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: ${{ env.DOTNET_SDK_VERSION }}
+
+      - name: Setup MSBuild
+        if: matrix.os == 'windows-latest' && env.USE_DOTNET_SDK == 'false'
+        uses: microsoft/setup-msbuild@30375c66a4eea26614e0d39710365f22f8b0af57 # v3.0.0
+        with:
+          msbuild-architecture: x64
+
+      - name: Restore dependencies
+        run: |
+          if [[ "${{ env.USE_DOTNET_SDK }}" == "true" ]]; then
+            dotnet restore
+          else
+            nuget restore
+          fi
+
+      - name: Build solution
+        run: |
+          if [[ "${{ env.USE_DOTNET_SDK }}" == "true" ]]; then
+            dotnet build ${{ env.SOLUTION_FILE }} -p:Configuration=${{ matrix.BUILD_CONFIGURATION }} 
+          else
+            msbuild ${{ env.SOLUTION_FILE }} -p:Configuration=${{ matrix.BUILD_CONFIGURATION }}
+          fi
+
+      - name: Upload portable zip
+        if: |
+          github.event_name != 'pull_request' &&
+          matrix.os == 'windows-latest' &&
+          matrix.BUILD_CONFIGURATION == 'Release'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: portable-zip
+          if-no-files-found: error
+          overwrite: true
+          path: |
+            EDDiscovery/bin/Release/EDDiscovery.Portable.zip
